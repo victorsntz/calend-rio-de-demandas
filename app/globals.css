@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/*
+  Fortunato Estúdio — identidade visual
+  Fundo off-white (#f5f3f1), texto preto, tipografia serifada, estética editorial.
+  (Sem dark mode: o estúdio é sempre claro, por decisão de marca.)
+*/
+
+:root {
+  --background: #f5f3f1;
+  --foreground: #111111;
+  --muted: #6f6f6f;
+  --line: #e6e3dd;
+  --line-strong: #111111;
+  --card: #fdfcfb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-card: var(--card);
+  --font-serif: var(--font-eb-garamond), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-eb-garamond), Georgia, serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-serif);
+  font-feature-settings: "liga" 1, "kern" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Confete da meta batida */
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(720deg);
+    opacity: 0.6;
+  }
+}
+
+.confetti-piece {
+  position: fixed;
+  top: 0;
+  width: 10px;
+  height: 14px;
+  z-index: 100;
+  pointer-events: none;
+  animation: confetti-fall linear forwards;
+}
+
+/* Aparição suave de painéis */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise-in {
+  animation: rise-in 180ms ease-out both;
+}
