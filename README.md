@@ -12,9 +12,11 @@ off-white `#f5f3f1`, EB Garamond, sem dark mode.
   **2 carrosséis/dia + 2 tweets/dia** (dias úteis, seg–sáb).
 - **Tweets são produzidos em lote semanal** — não entram dia a dia no
   calendário; toda segunda o app (e um lembrete no celular) cobra o lote novo.
-- **Exceções**: Gabriel Bussiki (1 carrossel/dia, contrato de 40, ~31 já
-  entregues — o app mostra a contagem regressiva e a data projetada de
-  término) e Tio Huli (3 carrosséis/dia).
+- **Clientes ativos** (lista fechada em ago/2026): Julia Lazari, Eric Roza,
+  Kelvin Cleto, Fabrício Amorin e Felipe Venâncio no pacote padrão, mais as
+  exceções — Gabriel Bussiki (1 carrossel/dia, contrato de 40, ~31 já
+  entregues; o app mostra a contagem regressiva e a data projetada de
+  término) e Tio Huli / Hulisses Dias (3 carrosséis/dia).
 - Os demais clientes ficam cadastrados e **inativos**, já com o pacote padrão
   pré-preenchido: fechou contrato de carrossel, é um clique em "Ativo".
 

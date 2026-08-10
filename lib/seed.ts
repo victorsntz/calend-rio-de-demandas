@@ -2,17 +2,18 @@ import type { AppState, Client } from "./types";
 
 /**
  * Clientes do estúdio (portal de carrosséis + Fortunato Hub). O calendário é
- * EXCLUSIVO dos clientes de carrossel, então só quem tem contrato de
- * carrossel começa ativo:
+ * EXCLUSIVO dos clientes de carrossel — a lista fechada pelo Victor
+ * (10/ago/2026) começa ativa:
  *
  *   - Gabriel Bussiki — 1 carrossel/dia, contrato de 40 (31 já entregues
  *     antes do calendário — ajuste em "Feitos antes" se for 32).
- *   - Tio Huli — 3 carrosséis/dia.
+ *   - Tio Huli (Hulisses Dias) — 3 carrosséis/dia.
+ *   - Julia Lazari, Eric Roza, Kelvin Cleto, Fabrício, Felipe Venâncio —
+ *     pacote padrão: 2 carrosséis + 2 tweets/dia (60 + 60 no total).
  *
- * Os demais ficam cadastrados e inativos, já com o pacote padrão pré-definido
- * (2 carrosséis/dia + 2 tweets/dia; 120 conteúdos = 60 carrosséis + 60
- * tweets). Quando o Victor fechar/confirmar um cliente de carrossel, é um
- * clique em "Ativo" na aba Teia de clientes.
+ * Os demais ficam cadastrados e inativos, já com o pacote padrão pré-definido.
+ * Quando o Victor fechar um cliente de carrossel, é um clique em "Ativo" na
+ * aba Teia de clientes.
  */
 
 const PALETTE = [
@@ -69,12 +70,19 @@ const SEED_CLIENTS: SeedClient[] = [
     deliveredBefore: 31,
   },
   {
+    // Hulisses Dias
     id: "tio-huli",
     name: "Tio Huli",
     active: true,
     daily: { carrossel: 3, tweets: 0 },
     contract: { carrossel: 0, tweets: 0 }, // sem teto definido — ajustar quando fechar
   },
+  // Clientes de carrossel no pacote padrão (2+2/dia, 60+60)
+  { id: "julia-lazari", name: "Julia Lazari", active: true },
+  { id: "eric-roza", name: "Eric Roza", active: true }, // no portal: "Eric Delivery"
+  { id: "kelvin-cleto", name: "Kelvin Cleto", active: true },
+  { id: "fabricio-amorin", name: "Fabrício Amorin", active: true },
+  { id: "felipe-venancio", name: "Felipe Venâncio", active: true },
   // Demais clientes do portal (inativos até virarem cliente de carrossel)
   { id: "victor-fortunato", name: "Victor Fortunato", hubId: "victor-fortunato" },
   { id: "gorayeb-advocacia", name: "Gorayeb Advocacia", hubId: "gorayeb" },
@@ -87,12 +95,7 @@ const SEED_CLIENTS: SeedClient[] = [
   { id: "isabel-ciribelli", name: "Dra. Isabel Ciribelli" },
   { id: "lucas-reis", name: "Lucas Reis" },
   { id: "benetro", name: "Benetro Importação" },
-  { id: "felipe-venancio", name: "Felipe Venâncio" },
-  { id: "fabricio-amorin", name: "Fabrício Amorin" },
   { id: "bela-brasao", name: "Bela Brasão" },
-  { id: "julia-lazari", name: "Julia Lazari" },
-  { id: "eric-delivery", name: "Eric Delivery" },
-  { id: "kelvin-cleto", name: "Kelvin Cleto" },
   { id: "gu-alonge", name: "Gu Alonge" },
   // Clientes que só existem no Fortunato Hub
   { id: "lotus", name: "Lotus", hubId: "lotus" },
@@ -122,8 +125,9 @@ export function initialState(): AppState {
     demands: [],
     blocked: [],
     goal: {
-      // Bussiki (1/dia) + Tio Huli (3/dia) × 6 dias úteis
-      weeklyTarget: 24,
+      // Ritmo contratado: Bussiki 1 + Huli 3 + 5 clientes × 2 = 14 carrosséis
+      // por dia × 6 dias úteis. Ajuste em "Editar meta" se quiser começar menor.
+      weeklyTarget: 84,
       reward: "Um jantar especial no fim de semana 🍕",
     },
     comments: [],

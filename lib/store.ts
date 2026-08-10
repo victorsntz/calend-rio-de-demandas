@@ -85,7 +85,12 @@ export function useAppState() {
 
   useEffect(() => {
     if (loaded.current && state) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch {
+        // Navegador sem armazenamento (aba anônima etc.) — o app segue
+        // funcionando na sessão; o backup manual continua disponível.
+      }
     }
   }, [state]);
 
