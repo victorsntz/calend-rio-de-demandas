@@ -155,7 +155,13 @@ export default function Calendar({
           {tips.map((tip, i) => (
             <li key={i} className="text-sm text-muted">
               <span className="mr-1">
-                {tip.kind === "sobrecarga" ? "◍" : tip.kind === "atrasada" ? "⏲" : "◌"}
+                {tip.kind === "sobrecarga"
+                  ? "◍"
+                  : tip.kind === "atrasada"
+                    ? "⏲"
+                    : tip.kind === "lote-tweets"
+                      ? "🐦"
+                      : "✦"}
               </span>
               {tip.date ? (
                 <button
@@ -251,9 +257,10 @@ export default function Calendar({
             ) : (
               <>
                 <p className="mt-2 text-sm text-muted">
-                  Serão criadas <strong>{planPreview.length}</strong> demandas nos dias úteis
-                  menos carregados, respeitando a quota semanal de cada cliente e pulando os
-                  dias em que você marcou que estará ocupado.
+                  Serão criados <strong>{planPreview.length}</strong> carrosséis, completando o
+                  ritmo diário de cada cliente (seg–sáb) sem passar do teto do contrato e
+                  pulando os dias em que você marcou que estará ocupado. Tweets ficam de fora —
+                  são o lote de segunda.
                 </p>
                 <ul className="mt-3 space-y-1 text-sm">
                   {planByClient.map(({ client, n }) => (

@@ -5,6 +5,7 @@ import { useAppState } from "@/lib/store";
 import Calendar from "./Calendar";
 import DayPanel from "./DayPanel";
 import GoalsBar from "./GoalsBar";
+import TodayPanel from "./TodayPanel";
 import ClientWeb from "./ClientWeb";
 import Comments from "./Comments";
 import Confetti from "./Confetti";
@@ -97,8 +98,9 @@ export default function App() {
         </div>
       </header>
 
-      <div className="mt-5">
+      <div className="mt-5 space-y-4">
         <GoalsBar state={state} store={store} />
+        <TodayPanel state={state} store={store} />
       </div>
 
       <nav className="mt-6 flex gap-1 border-b border-line">

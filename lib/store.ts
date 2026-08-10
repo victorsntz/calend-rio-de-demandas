@@ -13,22 +13,55 @@ import { initialState } from "./seed";
 import { mondayOf, todayKey } from "./dates";
 import { planDilution, weekProgress, type PlannedDemand } from "./planner";
 
-const STORAGE_KEY = "fortunato-calendario-v1";
+const STORAGE_KEY = "fortunato-calendario-v2";
+const STORAGE_KEY_V1 = "fortunato-calendario-v1";
 
 function uid(): string {
   return Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
 }
 
+/** Garante os campos novos em clientes salvos por versões anteriores do app. */
+function normalizeClients(clients: Client[]): Client[] {
+  return clients.map((c) => ({
+    ...c,
+    dailyQuota: c.dailyQuota ?? { carrossel: 2, tweets: 2 },
+    contract: c.contract ?? { carrossel: 60, tweets: 60 },
+    deliveredBefore: c.deliveredBefore ?? 0,
+  }));
+}
+
 function load(): AppState | null {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as AppState;
-    if (!Array.isArray(parsed.clients) || !Array.isArray(parsed.demands)) {
-      return null;
+    if (raw) {
+      const parsed = JSON.parse(raw) as AppState;
+      if (!Array.isArray(parsed.clients) || !Array.isArray(parsed.demands)) {
+        return null;
+      }
+      // Campos novos ganham default ao carregar estados antigos.
+      return {
+        ...initialState(),
+        ...parsed,
+        clients: normalizeClients(parsed.clients),
+      };
     }
-    // Campos novos ganham default ao carregar estados antigos.
-    return { ...initialState(), ...parsed };
+    // Migração do v1 (quotas semanais): demandas, bloqueios, metas e
+    // comentários sobrevivem; a lista de clientes é re-semeada no modelo novo
+    // (quota diária + contrato), exclusivo dos clientes de carrossel.
+    const rawV1 = localStorage.getItem(STORAGE_KEY_V1);
+    if (rawV1) {
+      const old = JSON.parse(rawV1) as Partial<AppState>;
+      return {
+        ...initialState(),
+        demands: Array.isArray(old.demands) ? old.demands : [],
+        blocked: Array.isArray(old.blocked) ? old.blocked : [],
+        goal: old.goal ?? initialState().goal,
+        comments: Array.isArray(old.comments) ? old.comments : [],
+        celebratedWeeks: old.celebratedWeeks ?? [],
+        claimedWeeks: old.claimedWeeks ?? [],
+      };
+    }
+    return null;
   } catch {
     return null;
   }
@@ -208,6 +241,19 @@ export function useAppState() {
     [update],
   );
 
+  /** Marca/desmarca o lote de tweets da semana (chave = segunda-feira). */
+  const toggleTweetBatch = useCallback(
+    (monday: string) => {
+      update((s) => ({
+        ...s,
+        tweetBatchWeeks: s.tweetBatchWeeks.includes(monday)
+          ? s.tweetBatchWeeks.filter((w) => w !== monday)
+          : [...s.tweetBatchWeeks, monday],
+      }));
+    },
+    [update],
+  );
+
   const upsertClient = useCallback(
     (client: Client) => {
       update((s) => {
@@ -268,6 +314,7 @@ export function useAppState() {
     claimReward,
     addComment,
     deleteComment,
+    toggleTweetBatch,
     upsertClient,
     applyPlan,
     importState,

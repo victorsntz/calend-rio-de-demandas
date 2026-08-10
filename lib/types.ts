@@ -1,10 +1,15 @@
 /**
- * Modelo de dados do Calendário de Demandas.
+ * Modelo de dados do Calendário de Demandas — exclusivo dos clientes de
+ * carrossel do estúdio.
  *
- * Os tipos e status espelham o vocabulário já usado no Fortunato Hub e no
- * portal de carrosséis (Carrossel, Estático, Reels/Corte, Tweets; "Aprovar
- * Criação", "Fazer Postagem", "Postado"), para que uma integração futura seja
- * um mapeamento direto.
+ * Os tipos e status espelham o vocabulário do Fortunato Hub e do portal de
+ * carrosséis (Carrossel, Tweets; "Aprovar Criação", "Fazer Postagem",
+ * "Postado"), para que uma integração futura seja um mapeamento direto.
+ *
+ * O produto padrão é o pacote de 120 conteúdos: 60 carrosséis + 60 tweets,
+ * entregues a 2 carrosséis/dia e 2 tweets/dia. Carrosséis são agendados um a
+ * um no calendário; tweets são produzidos em LOTE semanal (cobrado toda
+ * segunda), então não entram dia a dia.
  */
 
 export type DemandType =
@@ -41,8 +46,17 @@ export const STATUS_LABEL: Record<DemandStatus, string> = {
   postado: "Postado",
 };
 
-/** Quota semanal de produção por tipo de conteúdo. */
-export type Quota = Partial<Record<DemandType, number>>;
+/** Ritmo diário contratado (dias úteis, seg–sáb). */
+export interface DailyQuota {
+  carrossel: number;
+  tweets: number;
+}
+
+/** Totais do contrato. 0 = sem limite definido. */
+export interface ContractTotals {
+  carrossel: number;
+  tweets: number;
+}
 
 export interface Client {
   /** Slug estável (mesmo do portal, quando o cliente existe lá). */
@@ -53,7 +67,12 @@ export interface Client {
   active: boolean;
   /** Id do cliente no Fortunato Hub (integração futura). */
   hubId?: string;
-  quota: Quota;
+  /** Quantos conteúdos por dia o contrato prevê. */
+  dailyQuota: DailyQuota;
+  /** Total contratado (pacote padrão: 60 carrosséis + 60 tweets). */
+  contract: ContractTotals;
+  /** Carrosséis entregues ANTES de o calendário começar a contar (ex.: Bussiki 31). */
+  deliveredBefore: number;
   notes?: string;
 }
 
@@ -102,4 +121,6 @@ export interface AppState {
   celebratedWeeks: string[];
   /** Semanas cujo prêmio o Victor marcou como resgatado. */
   claimedWeeks: string[];
+  /** Semanas (chave = segunda-feira) em que o lote de tweets já foi feito. */
+  tweetBatchWeeks: string[];
 }
