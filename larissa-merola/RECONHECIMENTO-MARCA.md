@@ -194,3 +194,71 @@ instagram`, `torn paper collage`: isso é o carrossel atual.
 - [ ] Slide final com a Dra. em primeira pessoa + "Link na bio" + @dralarissamerola.
 - [ ] Zero promessa, zero antes/depois, zero preço de remédio.
 - [ ] Celebridade como gancho, nunca como alvo.
+
+## 8. Caminho de pesquisa: Pinterest e perfis de referência
+
+### Como buscar no Pinterest sem cair na colagem de sempre
+
+O Pinterest responde melhor a buscas em inglês, de 2 a 4 palavras, com um
+substantivo de formato (`layout`, `poster`, `carousel`, `branding`) e um
+adjetivo de estilo (`editorial`, `minimal`, `botanical`). Use os chips de
+filtro que aparecem no topo e, quando achar um pin bom, clique em "mais
+como este". Salve tudo num board só, separado por seção.
+
+**Direção A, Prontuário**
+`medical report layout design`, `clinical form typography`,
+`prescription pad editorial design`, `lab results poster typography`,
+`stamp texture branding green`, `off white paper brand identity`,
+`swiss grid medical infographic`, `archive document aesthetic design`.
+
+**Direção B, Botânico de laboratório**
+`botanical line illustration branding`, `herbarium editorial layout`,
+`scientific botanical plate design`, `sage green bronze brand identity`,
+`butterfly line art logo minimal`, `wellness clinic branding botanical`,
+`olive green editorial design`, `moss green serif branding`.
+
+**Direção C, Manchete tipográfica**
+`typographic carousel serif`, `big number poster typography`,
+`newspaper headline layout design`, `serif italic pull quote design`,
+`editorial typography instagram green`, `statement typography poster minimal`,
+`text only instagram carousel design`, `data journalism layout design`.
+
+**Pra calibrar o conjunto**
+`women's health campaign design`, `menopause brand identity`,
+`nutrition clinic branding serif`, `science communication poster`,
+`health editorial design sage`, `medical branding serif minimal`.
+
+**Evitar** (é o que já fazemos): `celebrity collage instagram`,
+`magazine cutout aesthetic`, `torn paper collage`, `scrapbook post`.
+
+### Perfis de médicos gringos pra observar
+
+Identificadores confirmados por fontes externas (podcasts, editoras,
+rastreadores de audiência). Instagram não abre neste ambiente, então a
+leitura estética de cada um vem de memória, não de inspeção: confira o feed
+antes de usar como referência.
+
+| Perfil | Quem | Por que olhar |
+| --- | --- | --- |
+| @dr_mosconi | Lisa Mosconi, neurocientista, Weill Cornell | Dado científico traduzido com visual limpo. Menopausa e cérebro. |
+| @heatherhirschmd | Heather Hirsch, internista, menopausa | Feed minimalista, neutro, texto em primeiro plano. |
+| @jessicashepherdmd | Jessica Shepherd, OB/GYN, Modern Menopause | Editorial, tons quentes e neutros, autoridade sem gritar. |
+| @saragottfriedmd | Sara Gottfried, OB/GYN, hormônios | Serifa, dado, pouca cor. Mesmo público 35 a 55. |
+| @dr_jenna_macciochi | Jenna Macciochi, imunologista (PhD) | Verde sálvia, tipografia serifada, ciência com calma. Referência forte pra direção B. |
+| @doctors_kitchen | Rupy Aujla, GP britânico | Editorial quente, comida como ciência. Referência de "revista" sem colagem. |
+| @dr.avivaromm (ou @avivaromm, conferir) | Aviva Romm, MD e herbalista | Botânico, terroso, feminino. Direção B. |
+| @kellycaspersonmd | Kelly Casperson, urologista | Frases diretas, humor seco, mesmo tom de "desmonta a culpa". |
+| @dr_naomipotter | Naomi Potter, GP britânica, menopausa | Educação em pílulas, sem alarme. |
+| @menopause_doctor | Louise Newson, GP britânica | Maior voz de TRH no Reino Unido. Conteúdo, não estética. |
+| @drmaryclaire | Mary Claire Haver, OB/GYN | Maior audiência do nicho. Visual mais forte e colorido que o nosso: ver estrutura, não paleta. |
+| @drvondawright | Vonda Wright, ortopedista | Menopausa e músculo. Estética esportiva. |
+| @drgabriellelyon | Gabrielle Lyon, DO | Músculo como órgão. Preto, branco, dado grande. |
+| @weightdoc | Jennah Siwak, medicina da obesidade | GLP-1 explicado, público parecido com o da Dra. |
+| @drnadolsky | Spencer Nadolsky, medicina da obesidade | Referência de tema (canetas), não de visual: ele vive de meme. |
+| @drjengunter | Jen Gunter, OB/GYN | Desmonte de mito com ciência. Tom. |
+| @dr_idz e @drkaranrajan | NHS, caçadores de mito | Vídeo em primeiro lugar. Só pra ganchos. |
+| @alexandrasowamd (não confirmado) | Alexandra Sowa, SoWell | Marca própria de GLP-1 com design minimalista. |
+
+Marcas de saúde com design editorial, pra referência de sistema:
+@myalloy (Alloy, menopausa, EUA) e a ZOE (zoe.com, rebrand da Ragged Edge:
+precisão científica com calor, grade que imita folha de exame).
