@@ -48,6 +48,24 @@ Pra cada carrossel novo, a ilustração precisa vir de banco vetorial ou geraç�
 com este brief: figura humana completa, estilo flat ou ilustração médica, paleta de pele
 quente, sem fundo, sem texto, sem abstração geométrica.
 
+## Montar um carrossel inteiro
+
+```bash
+node montar.mjs ../carrosseis/exemplo-lipedema.json
+# -> saida/<slug>/index.html e saida/<slug>/<slug>-01.png ... -NN.png
+```
+
+O JSON tem `capa` (linha1, linha2, ilustracao) e `slides` com tipo A, B, C, D ou E
+(E = foto inteira com faixa de texto). `foto: "post"` sorteia do banco de imagens de
+post, `foto: "doutora"` sorteia das fotos da Dra.; o sorteio não repete uma foto até
+usar todas (estado em `banco/uso.json`). O tipo D (fechamento) usa foto da Dra. por
+padrão e é sempre o último. Nem todo slide precisa de foto: B e C são só texto de
+propósito, pra dar respiro.
+
+Viúvas: `tipografia.js` junta as duas últimas palavras de todo título com espaço
+inquebrável, e os títulos usam `text-wrap: balance`. Nenhuma linha final fica com
+uma palavra só.
+
 ## Imagens pros slides internos
 
 Duas fontes, que se somam:
