@@ -55,7 +55,11 @@ node montar.mjs ../carrosseis/exemplo-lipedema.json
 # -> saida/<slug>/index.html e saida/<slug>/<slug>-01.png ... -NN.png
 ```
 
-O JSON tem `capa` (linha1, linha2, ilustracao) e `slides` com tipo A, B, C, D ou E
+Cada rodada gera também `legenda.txt` (primeira linha `Siga @larissamerola`, depois os
+parágrafos de `legenda` no JSON, sem emoji) e `<slug>.zip` com os PNGs numerados e a
+legenda, pronto pra entregar.
+
+O JSON tem `capa` (linha1, linha2, ilustracao), `legenda` (lista de parágrafos) e `slides` com tipo A, B, C, D ou E
 (E = foto inteira com faixa de texto). `foto: "post"` sorteia do banco de imagens de
 post, `foto: "doutora"` sorteia das fotos da Dra.; o sorteio não repete uma foto até
 usar todas (estado em `banco/uso.json`). O tipo D (fechamento) usa foto da Dra. por

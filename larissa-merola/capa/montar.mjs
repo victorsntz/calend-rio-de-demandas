@@ -130,4 +130,14 @@ const htmlPath = join(saida, 'index.html');
 await writeFile(htmlPath, html);
 await writeFile(usoPath, JSON.stringify(uso, null, 2));
 execFileSync('node', [join(aqui, 'render.mjs'), htmlPath, join(saida, slug)], { stdio: 'inherit' });
+
+// legenda.txt: primeira linha "Siga @arroba", depois os parágrafos do JSON. Sem emoji.
+const arroba = dados.arroba ?? '@larissamerola';
+const legenda = [`Siga ${arroba}`, '', ...(dados.legenda ?? []).flatMap(p => [p, ''])].join('\n').trimEnd() + '\n';
+await writeFile(join(saida, 'legenda.txt'), legenda);
+
+// zip de entrega: só os PNGs numerados + legenda.txt
+const zipPath = join(saida, `${slug}.zip`);
+try { execFileSync('rm', ['-f', zipPath]); execFileSync('zip', ['-j', '-q', zipPath, ...dados.slides.map((_, i) => join(saida, `${slug}-${String(i + 2).padStart(2, '0')}.png`)), join(saida, `${slug}-01.png`), join(saida, 'legenda.txt')]); console.log('zip:', zipPath); }
+catch (e) { console.warn('zip não gerado:', e.message); }
 console.log('pronto:', saida);
