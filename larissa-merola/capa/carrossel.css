@@ -97,3 +97,23 @@ p { margin: 0; font-size: 31px; line-height: 1.42; font-weight: 400; }
 /* barra lateral fina como acento nos slides de papel, pra não ficar só branco */
 .t-papel::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 18px; background: var(--saude); }
 .t-papel.a::before, .t-papel.e::before { display: none; }
+
+/* ---- Marrons (Figma Posts Larissa). O verde claro sai do rodízio; fica só como opção manual. */
+.t-marrom { background: var(--marrom); color: var(--branco); }
+.t-marromclaro { background: var(--marrom-claro); color: var(--musgo); }
+.t-marrom .deslize { color: rgba(255,255,255,.72); }
+.t-marromclaro .deslize { color: var(--musgo); opacity: .7; }
+.t-marrom .grifo { background: linear-gradient(transparent 58%, var(--saude) 58%); color: var(--musgo); }
+.t-marromclaro .grifo { background: linear-gradient(transparent 58%, var(--saude) 58%); }
+.t-marrom.b li { border-color: rgba(255,255,255,.28); }
+.t-marromclaro.b li { border-color: rgba(52,59,48,.28); }
+.t-marrom.b li i { background: var(--saude); border-color: var(--branco); }
+.t-marromclaro.b li i { background: var(--saude); border-color: var(--musgo); }
+.t-marrom.c .numero { color: var(--saude); }
+.t-marromclaro.c .numero { color: var(--marrom); }
+.t-marrom.c .fonte { color: rgba(255,255,255,.7); }
+.t-marromclaro.c .fonte { color: var(--marrom); opacity: .8; }
+.t-marrom.a .foto, .t-marromclaro.a .foto { background: var(--musgo); }
+.t-marrom.e .faixa-texto { background: var(--marrom); }
+.t-marromclaro.e .faixa-texto { background: var(--marrom-claro); }
+.t-papel::before { background: var(--marrom); }

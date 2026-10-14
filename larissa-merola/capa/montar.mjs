@@ -71,8 +71,8 @@ partes.push(`
 </section>`);
 
 const deslize = '<div class="deslize">Deslize para o lado</div>';
-// Tema de cor: o JSON pode fixar `tema` ("papel"|"claro"|"musgo"|"saude"); senão a gente mescla.
-const ciclo = ['claro', 'papel', 'saude', 'musgo', 'papel', 'saude'];
+// Tema de cor: o JSON pode fixar `tema` ("papel"|"marrom"|"marromclaro"|"musgo"|"saude"|"claro"); senão a gente mescla.
+const ciclo = ['marrom', 'papel', 'saude', 'musgo', 'papel', 'marromclaro'];
 function temaDe(s, i, n) {
   if (s.tema) return s.tema;
   if (s.tipo === 'D') return 'musgo';
@@ -80,7 +80,7 @@ function temaDe(s, i, n) {
   if (i === n - 2 && t === 'musgo') t = 'saude';   // não emendar dois musgos antes do fechamento
   return t;
 }
-const rodapeDe = t => `<div class="rodape"><img src="${rel(t === 'claro' || t === 'musgo' ? 'logo-branca.png' : 'logo.png')}" alt=""></div>`;
+const rodapeDe = t => `<div class="rodape"><img src="${rel(['claro', 'musgo', 'marrom'].includes(t) ? 'logo-branca.png' : 'logo.png')}" alt=""></div>`;
 dados.slides.forEach((s, i) => {
   const ultimo = i === dados.slides.length - 1;
   const tema = temaDe(s, i, dados.slides.length);
