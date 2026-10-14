@@ -62,6 +62,11 @@ usar todas (estado em `banco/uso.json`). O tipo D (fechamento) usa foto da Dra. 
 padrão e é sempre o último. Nem todo slide precisa de foto: B e C são só texto de
 propósito, pra dar respiro.
 
+Cor: cada slide tem um `tema` (`papel`, `claro`, `musgo`, `saude`). Sem `tema` no JSON
+o gerador mescla sozinho (claro, papel, saúde, musgo, papel, saúde...), o fechamento é
+sempre musgo, e fundo escuro usa texto branco e a logo branca. Slides de papel levam
+uma barra fina em verde saúde na borda esquerda.
+
 Viúvas: `tipografia.js` junta as duas últimas palavras de todo título com espaço
 inquebrável, e os títulos usam `text-wrap: balance`. Nenhuma linha final fica com
 uma palavra só.

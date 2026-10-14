@@ -71,36 +71,48 @@ partes.push(`
 </section>`);
 
 const deslize = '<div class="deslize">Deslize para o lado</div>';
-const rodape = `<div class="rodape"><img src="${rel('logo.png')}" alt=""></div>`;
+// Tema de cor: o JSON pode fixar `tema` ("papel"|"claro"|"musgo"|"saude"); senão a gente mescla.
+const ciclo = ['claro', 'papel', 'saude', 'musgo', 'papel', 'saude'];
+function temaDe(s, i, n) {
+  if (s.tema) return s.tema;
+  if (s.tipo === 'D') return 'musgo';
+  let t = ciclo[i % ciclo.length];
+  if (i === n - 2 && t === 'musgo') t = 'saude';   // não emendar dois musgos antes do fechamento
+  return t;
+}
+const rodapeDe = t => `<div class="rodape"><img src="${rel(t === 'claro' || t === 'musgo' ? 'logo-branca.png' : 'logo.png')}" alt=""></div>`;
 dados.slides.forEach((s, i) => {
   const ultimo = i === dados.slides.length - 1;
+  const tema = temaDe(s, i, dados.slides.length);
+  const cls = `t-${tema}`;
+  const rodape = rodapeDe(tema);
   if (s.tipo === 'A') {
     const f = foto(s.foto, 'post');
-    partes.push(`<section class="slide a">
+    partes.push(`<section class="slide a ${cls}">
   <div class="texto"><h2>${esc(s.titulo)}</h2><p>${esc(s.texto)}</p></div>
   <div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div>${ultimo ? '' : deslize}
 </section>`);
   } else if (s.tipo === 'B') {
-    partes.push(`<section class="slide b">
+    partes.push(`<section class="slide b ${cls}">
   <div class="texto"><h2>${s.titulo}</h2>
     <ul>${s.itens.map(it => `<li><i></i>${esc(it)}</li>`).join('')}</ul>
     ${s.texto ? `<p>${esc(s.texto)}</p>` : ''}</div>${ultimo ? '' : deslize}${rodape}
 </section>`);
   } else if (s.tipo === 'C') {
-    partes.push(`<section class="slide c">
+    partes.push(`<section class="slide c ${cls}">
   <div class="texto"><div class="numero">${esc(s.numero)}</div><h2>${esc(s.titulo)}</h2>
     ${s.texto ? `<p style="margin-top:36px">${esc(s.texto)}</p>` : ''}
     ${s.fonte ? `<div class="fonte">Fonte: ${esc(s.fonte)}</div>` : ''}</div>${ultimo ? '' : deslize}${rodape}
 </section>`);
   } else if (s.tipo === 'E') {
     const f = foto(s.foto, 'post');
-    partes.push(`<section class="slide e">
+    partes.push(`<section class="slide e ${cls}">
   <div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div>
   <div class="faixa-texto"><h2>${esc(s.titulo)}</h2>${s.texto ? `<p>${esc(s.texto)}</p>` : ''}</div>${ultimo ? '' : deslize}
 </section>`);
   } else if (s.tipo === 'D') {
     const f = foto(s.foto, 'doutora');
-    partes.push(`<section class="slide d">
+    partes.push(`<section class="slide d t-musgo">
   <div class="texto"><h2>${esc(s.titulo)}</h2><p>${esc(s.texto)}</p><div class="cta">${esc(s.cta ?? 'Link na bio')}</div></div>
   <div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div>
   <div class="logo"><img src="${rel('logo-branca.png')}" alt=""></div>

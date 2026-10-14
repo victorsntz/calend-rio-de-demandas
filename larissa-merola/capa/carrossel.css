@@ -64,3 +64,36 @@ p { margin: 0; font-size: 31px; line-height: 1.42; font-weight: 400; }
 .d .logo { position: absolute; left: 96px; bottom: 96px; }
 .d .logo img { height: 96px; }
 .d .arroba { position: absolute; left: 96px; bottom: 212px; font-size: 24px; color: var(--saude); font-weight: 500; }
+
+/* ---- Temas de cor por slide: papel (padrão), claro, musgo, saude ------------- */
+.t-claro { background: var(--claro); color: var(--branco); }
+.t-musgo { background: var(--musgo); color: var(--branco); }
+.t-saude { background: var(--saude); color: var(--musgo); }
+
+.t-claro .deslize, .t-musgo .deslize { color: rgba(255,255,255,.72); }
+.t-saude .deslize { color: var(--claro); }
+.t-claro .grifo { background: linear-gradient(transparent 58%, var(--saude) 58%); color: var(--musgo); }
+.t-musgo .grifo { background: linear-gradient(transparent 58%, var(--saude) 58%); color: var(--musgo); }
+.t-saude .grifo { background: linear-gradient(transparent 58%, var(--branco) 58%); }
+
+.t-claro.b li, .t-musgo.b li { border-color: rgba(255,255,255,.28); }
+.t-saude.b li { border-color: rgba(52,59,48,.28); }
+.t-claro.b li i, .t-musgo.b li i { background: var(--saude); border-color: var(--branco); }
+.t-saude.b li i { background: var(--branco); border-color: var(--musgo); }
+
+.t-musgo.c .numero { color: var(--saude); }
+.t-claro.c .numero { color: var(--branco); }
+.t-saude.c .numero { color: var(--musgo); }
+.t-claro.c .fonte, .t-musgo.c .fonte { color: rgba(255,255,255,.7); }
+.t-saude.c .fonte { color: var(--claro); }
+
+.t-claro.a .foto { background: var(--musgo); }
+.t-musgo.a .foto { background: var(--claro); }
+.t-saude.a .foto { background: var(--claro); }
+.t-claro.e .faixa-texto { background: var(--claro); }
+.t-musgo.e .faixa-texto { background: var(--musgo); }
+.t-saude.e .faixa-texto { background: var(--saude); }
+
+/* barra lateral fina como acento nos slides de papel, pra não ficar só branco */
+.t-papel::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 18px; background: var(--saude); }
+.t-papel.a::before, .t-papel.e::before { display: none; }
