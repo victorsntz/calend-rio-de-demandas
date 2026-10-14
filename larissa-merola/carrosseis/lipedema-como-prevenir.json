@@ -1,0 +1,61 @@
+{
+  "slug": "lipedema-como-prevenir",
+  "arroba": "@larissamerola",
+  "capa": {
+    "linha1": "Como prevenir o",
+    "linha2": "Lipedema?",
+    "ilustracao": "../capa/ilustracoes/lipedema-estagios.jpg"
+  },
+  "slides": [
+    {
+      "tipo": "E",
+      "titulo": "Inchaço nas pernas que não melhora com dieta e exercício",
+      "texto": "Não é sempre gordura comum. Pode ser lipedema, uma doença do tecido adiposo com influência hormonal.",
+      "foto": "post:lipedema"
+    },
+    {
+      "tipo": "B",
+      "titulo": "O que diferencia o <span class=\"grifo\">lipedema</span>",
+      "itens": [
+        "Gordura desproporcional em pernas e braços",
+        "Dor e sensibilidade ao toque",
+        "Não responde a dieta e exercício convencionais",
+        "Piora em fases hormonais"
+      ],
+      "texto": "Quase sempre em mulheres. Quase sempre diagnosticado tarde."
+    },
+    {
+      "tipo": "C",
+      "numero": "20%",
+      "titulo": "das mulheres no mundo podem ter lipedema",
+      "texto": "A maioria ouve a vida inteira que é falta de disciplina.",
+      "fonte": "Lipedema World Alliance, consenso internacional, 2026"
+    },
+    {
+      "tipo": "A",
+      "titulo": "Dieta restritiva não funciona aqui",
+      "texto": "Cortar caloria sem critério faz perder músculo e a gordura do lipedema fica. O que funciona é reduzir inflamação: ômega 3, vegetais crucíferos, menos ultraprocessado.",
+      "foto": "post:pernas"
+    },
+    {
+      "tipo": "B",
+      "titulo": "Como a gente investiga em consulta",
+      "itens": [
+        "História clínica e exame físico",
+        "Composição corporal, não só a balança",
+        "Tireoide, insulina, ferritina e ciclo",
+        "Plano de nutrição anti-inflamatória"
+      ]
+    },
+    {
+      "tipo": "D",
+      "titulo": "Se você se reconheceu, não normalize a dor.",
+      "texto": "Lipedema precisa de nutrição inteligente, não de dieta restritiva. O primeiro passo é investigar.",
+      "cta": "Link na bio"
+    }
+  ],
+  "legenda": [
+    "Lipedema não é gordura comum e não é falta de disciplina. É uma doença do tecido adiposo, com influência genética e hormonal, que acumula gordura de forma desproporcional em pernas e braços, dói ao toque e não responde a dieta e exercício convencionais. Por isso tantas mulheres passam anos cortando caloria, treinando e ouvindo que precisam se esforçar mais, enquanto o problema de verdade nunca foi investigado. O consenso internacional publicado em 2026 formalizou isso: o diagnóstico é clínico, feito por história e exame físico, e o objetivo do tratamento é controlar dor, preservar mobilidade e evitar progressão.",
+    "Prevenir, aqui, significa chegar cedo. Quanto antes o lipedema é reconhecido, mais dá pra fazer com nutrição anti-inflamatória, atividade física orientada e acompanhamento do peso e dos hormônios, sem passar por restrição que tira músculo e deixa a gordura do lipedema no lugar. Se você se reconheceu nos sinais do carrossel, não normalize a dor nem o inchaço. Investigar é o primeiro passo, e ele começa numa consulta que olha composição corporal, tireoide, insulina, ferritina, sono e ciclo antes de qualquer conduta."
+  ]
+}

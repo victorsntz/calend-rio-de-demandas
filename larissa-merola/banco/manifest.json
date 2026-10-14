@@ -1,0 +1,221 @@
+[
+  {
+    "arquivo": "doutora/doutora-01.jpg",
+    "grupo": "doutora",
+    "origem": "DSC09317.jpg",
+    "drive_id": "1zwf6vx_MFSmRJsdtdMgJqTzkgcHT2_ld",
+    "largura": 1200,
+    "altura": 1800,
+    "orientacao": "retrato",
+    "tags": [
+      "consultorio",
+      "corpo inteiro"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "doutora/doutora-02.jpg",
+    "grupo": "doutora",
+    "origem": "DSC09346.jpg",
+    "drive_id": "1Ci0qwJm5RN46Dt1h1Oe-nLCfujwK670k",
+    "largura": 1200,
+    "altura": 1800,
+    "orientacao": "retrato",
+    "tags": [
+      "consultorio",
+      "sorriso",
+      "meio corpo"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "doutora/doutora-03.jpg",
+    "grupo": "doutora",
+    "origem": "DSC09316.jpg",
+    "drive_id": "12E7G4WP15S_7fPRuo-B3VJBPMc2OXgtX",
+    "largura": 1200,
+    "altura": 1800,
+    "orientacao": "retrato",
+    "tags": [
+      "consultorio",
+      "corpo inteiro"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "doutora/doutora-04.jpg",
+    "grupo": "doutora",
+    "origem": "DSC09330.jpg",
+    "drive_id": "1T2-ijf4j0LgYZpV1rKQSTg1OhTM9AMHM",
+    "largura": 1200,
+    "altura": 1800,
+    "orientacao": "retrato",
+    "tags": [
+      "consultorio",
+      "corpo inteiro"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-05.jpg",
+    "grupo": "post",
+    "origem": "4a1730f5fd847ca3e67957e6df150754.jpg",
+    "drive_id": "1UaD5LLXnEahNPOo810LG_5-Y1Z7nNjQo",
+    "largura": 1012,
+    "altura": 1800,
+    "orientacao": "retrato",
+    "tags": [
+      "coxa",
+      "celulite",
+      "lipedema"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-06.jpg",
+    "grupo": "post",
+    "origem": "8b5a217e03c9c21f221f705c1b49806a.jpg",
+    "drive_id": "1V_gfYePSxLhPedjhCrQ171IQXd0-uvco",
+    "largura": 1200,
+    "altura": 1800,
+    "orientacao": "retrato",
+    "tags": [
+      "pernas",
+      "lipedema",
+      "celulite"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-07.jpg",
+    "grupo": "post",
+    "origem": "5bbc5c260ba6c00cfddac22365c97b18.jpg",
+    "drive_id": "1r9-HCMGwA_GZKAQVKJuZ4COjwTL35cQm",
+    "largura": 736,
+    "altura": 981,
+    "orientacao": "retrato",
+    "tags": [
+      "coxa",
+      "celulite"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-08.jpg",
+    "grupo": "post",
+    "origem": "download.png",
+    "drive_id": "1mqqOtjzD65OnOzienm3GhqaGLAiyeZoj",
+    "largura": 1012,
+    "altura": 1800,
+    "orientacao": "retrato",
+    "tags": [
+      "pernas",
+      "varizes"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-09.jpg",
+    "grupo": "post",
+    "origem": "dce56a1c5fef8ce9d1df89b391cf69fc.jpg",
+    "drive_id": "1CmO4irDL5Q77XB9_e5HglEkVCUhaF9ng",
+    "largura": 736,
+    "altura": 1066,
+    "orientacao": "retrato",
+    "tags": [
+      "barriga",
+      "abdomen",
+      "peso"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-10.jpg",
+    "grupo": "post",
+    "origem": "fe953d571a9cae923ded7928c18f7d40.jpg",
+    "drive_id": "1NyX7HSag9iz1bo9-w9Sxf05rDMvxtmie",
+    "largura": 400,
+    "altura": 600,
+    "orientacao": "retrato",
+    "tags": [
+      "coxa",
+      "celulite",
+      "pele"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-11.jpg",
+    "grupo": "post",
+    "origem": "51f99b2bd6a575a2a280d3f75c7b61e7.jpg",
+    "drive_id": "1IrBCA7ShMvpIHJF5OJBf1P4JHf1XZjk0",
+    "largura": 736,
+    "altura": 1313,
+    "orientacao": "retrato",
+    "tags": [
+      "pele madura",
+      "pescoco",
+      "menopausa"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-12.jpg",
+    "grupo": "post",
+    "origem": "8dd3577a7b495ccc6a4522dda8cfe75f.jpg",
+    "drive_id": "1StLbgRZMgi0xxuzW641ieTcgTg5f1GkK",
+    "largura": 736,
+    "altura": 1104,
+    "orientacao": "retrato",
+    "tags": [
+      "ombro",
+      "pele madura",
+      "menopausa"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-13.jpg",
+    "grupo": "post",
+    "origem": "46c8364831f566945aaec58ab338428b.jpg",
+    "drive_id": "1_L5mQXnNe9lc_d3v7V-SUtqdntkLL6E0",
+    "largura": 600,
+    "altura": 900,
+    "orientacao": "retrato",
+    "tags": [
+      "pernas",
+      "lipedema"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-14.jpg",
+    "grupo": "post",
+    "origem": "5b29ccf49327505deeddb09fe49fb315.jpg",
+    "drive_id": "13MNXE26hyNAjNJdOLLJJv6eBjeDvXd0W",
+    "largura": 736,
+    "altura": 1308,
+    "orientacao": "retrato",
+    "tags": [
+      "pernas",
+      "varizes",
+      "dor"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-15.jpg",
+    "grupo": "post",
+    "origem": "Die 10 besten Tipps gegen Wassereinlagerungen.jpeg",
+    "drive_id": "1DeMjV47HQ8AojztogC-u6Jmtb_z5NKVj",
+    "largura": 736,
+    "altura": 1104,
+    "orientacao": "retrato",
+    "tags": [
+      "pernas",
+      "pes",
+      "inchaco"
+    ],
+    "usar": true
+  }
+]
