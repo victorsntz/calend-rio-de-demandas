@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Slides internos</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  html, body { margin: 0; background: #ddd; }
+  .slide {
+    position: relative; width: 1080px; height: 1350px; overflow: hidden; margin: 0 0 40px;
+    background: var(--papel); color: var(--musgo); font-family: var(--sans);
+  }
+  .deslize {
+    position: absolute; left: 96px; bottom: 96px; font-size: 20px; font-weight: 500;
+    letter-spacing: 0.28em; text-transform: uppercase; color: var(--claro);
+  }
+  .rodape {
+    position: absolute; right: 96px; bottom: 90px; display: flex; align-items: center; gap: 14px;
+    font-size: 20px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--claro);
+  }
+  .rodape img { height: 34px; opacity: .9; }
+  h2 {
+    margin: 0; font-weight: 300; font-size: 54px; line-height: 1.12; letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+  p { margin: 0; font-size: 31px; line-height: 1.42; font-weight: 400; }
+  .grifo { background: linear-gradient(transparent 58%, var(--saude) 58%); }
+
+  /* A: foto + texto */
+  .a .texto { position: absolute; left: 96px; top: 300px; width: 440px; display: flex; flex-direction: column; gap: 36px; }
+  .a .foto {
+    position: absolute; right: 0; top: 0; width: 460px; height: 1350px; background: var(--claro);
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+  }
+  .a .foto img { height: 70%; opacity: .9; }
+
+  /* B: lista */
+  .b .texto { position: absolute; left: 96px; top: 200px; width: 888px; display: flex; flex-direction: column; gap: 44px; }
+  .b ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .b li {
+    display: flex; gap: 28px; align-items: flex-start; padding: 30px 0; border-top: 1.5px solid #D9D6CF;
+    font-size: 33px; line-height: 1.35;
+  }
+  .b li:last-child { border-bottom: 1.5px solid #D9D6CF; }
+  .b li i {
+    flex: none; width: 18px; height: 18px; margin-top: 14px; border-radius: 50% 0 50% 0;
+    background: var(--saude); border: 2px solid var(--musgo);
+  }
+
+  /* C: dado */
+  .c .texto { position: absolute; left: 96px; top: 240px; width: 888px; }
+  .c .numero {
+    font-family: var(--serif); font-size: 300px; line-height: .9; letter-spacing: -0.03em; margin: 0 0 24px -8px;
+  }
+  .c .fonte { margin-top: 48px; font-size: 20px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--claro); font-weight: 500; }
+
+  /* D: fechamento */
+  .d { background: var(--musgo); color: var(--branco); }
+  .d .texto { position: absolute; left: 96px; top: 230px; width: 888px; display: flex; flex-direction: column; gap: 40px; }
+  .d h2 { font-family: var(--serif); text-transform: none; font-size: 84px; line-height: 1.05; font-weight: 400; letter-spacing: -0.01em; }
+  .d p { font-size: 32px; }
+  .d .cta { margin-top: 24px; display: inline-block; padding: 22px 36px; border: 2px solid var(--saude); color: var(--saude);
+    font-size: 24px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; width: max-content; }
+  .d .logo { position: absolute; left: 96px; bottom: 96px; }
+  .d .logo img { height: 96px; }
+  .d .arroba { position: absolute; right: 96px; bottom: 112px; font-size: 24px; color: var(--saude); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<!-- A: foto + texto (metade e metade) -->
+<section class="slide a">
+  <div class="texto">
+    <h2>Seu intestino pode estar sabotando</h2>
+    <p>Intestino inflamado, disbiose ou problemas digestivos prejudicam a absorção. O que você toma não vira o que o seu corpo usa.</p>
+  </div>
+  <div class="foto"><img src="ilustracoes/silhueta-01.svg" alt=""></div>
+  <div class="deslize">Deslize para o lado</div>
+</section>
+
+<!-- B: lista -->
+<section class="slide b">
+  <div class="texto">
+    <h2>Antes de comparar, <span class="grifo">a gente mede</span></h2>
+    <ul>
+      <li><i></i>Composição corporal, não só o número da balança</li>
+      <li><i></i>Tireoide, insulina e ferritina</li>
+      <li><i></i>Sono: quantas horas e de que qualidade</li>
+      <li><i></i>Ciclo menstrual e fase hormonal</li>
+    </ul>
+    <p>Boa parte do peso que não responde tem explicação nesses exames.</p>
+  </div>
+  <div class="deslize">Deslize para o lado</div>
+  <div class="rodape"><img src="logo.png" alt=""></div>
+</section>
+
+<!-- C: dado em destaque -->
+<section class="slide c">
+  <div class="texto">
+    <div class="numero">26,7%</div>
+    <h2>das mulheres brasileiras vivem com obesidade</h2>
+    <p style="margin-top:36px">Em 2006 eram 12,1%. Um número não dobra em 18 anos por preguiça coletiva.</p>
+    <div class="fonte">Fonte: Vigitel, Ministério da Saúde, 2024</div>
+  </div>
+  <div class="deslize">Deslize para o lado</div>
+  <div class="rodape"><img src="logo.png" alt=""></div>
+</section>
+
+<!-- D: fechamento -->
+<section class="slide d">
+  <div class="texto">
+    <h2>Eu não trato peso. Eu trato o que faz o peso não responder.</h2>
+    <p>Se você quer investigar antes de tentar de novo, o primeiro passo é a consulta.</p>
+    <div class="cta">Link na bio</div>
+  </div>
+  <div class="logo"><img src="logo-branca.png" alt="Dra. Larissa Merola"></div>
+  <div class="arroba">@dralarissamerola</div>
+</section>
+
+</body>
+</html>

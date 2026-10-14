@@ -262,3 +262,28 @@ antes de usar como referência.
 Marcas de saúde com design editorial, pra referência de sistema:
 @myalloy (Alloy, menopausa, EUA) e a ZOE (zoe.com, rebrand da Ragged Edge:
 precisão científica com calor, grade que imita folha de exame).
+
+## 9. Sistema de capa fixa e slides internos (14/out/2026)
+
+Decisão do Victor: a capa volta ao padrão antigo (2025) e fica fixa; do segundo
+slide em diante a referência é o Figma "Posts Larissa", em ordem livre.
+O Figma não abre deste ambiente (proxy bloqueia), então a leitura dos slides
+internos veio dos carrosséis exportados no Drive em 2025 (`CRIATIVOS/2025/ABRIL`
+a `JULHO`, produção do Philipe): fundo off-white quente, título em caixa alta
+numa sans leve, corpo curto, foto ocupando metade do slide, "DESLIZE PARA O
+LADO" em versalete espaçado, último slide com foto da Dra. e chamada pra DM.
+
+Templates em `capa/` (ver `capa/README.md`). Pré-visualização em
+`capa/preview/`.
+
+**Tipografia confirmada.** O SVG da logo (`MARCA/ENTREGÁVEIS/Logo Editável`)
+declara as fontes da identidade: **The Seasons** (serifa) e **Sora** (sans).
+A capa antiga usa The Seasons na palavra-chave da pergunta. Os templates usam
+Sora e, no lugar de The Seasons, a Gloock até o arquivo da fonte entrar no repositório.
+
+**Regra da capa:** faixa verde no topo, @ pequeno, pergunta em duas linhas (sans +
+serifa) terminando em interrogação, ilustração figurativa grande, logo horizontal
+menor embaixo. Sem emoji em nenhum slide.
+
+**Pendência:** o @ da capa antiga é `@larissamerola`; os carrosséis de set/2026
+assinam `@dralarissamerola`. Confirmar qual vale antes do primeiro carrossel.

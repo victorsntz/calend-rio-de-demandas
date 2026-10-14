@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Capa padrão</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  html, body { margin: 0; background: #ddd; }
+  /* Formato feed 4:5 (1080 x 1350) */
+  .capa {
+    position: relative; width: 1080px; height: 1350px; overflow: hidden;
+    background: var(--branco); color: var(--musgo); font-family: var(--sans);
+  }
+  .faixa { position: absolute; top: 0; left: 0; width: 1080px; height: 26px; }
+  .arroba {
+    position: absolute; top: 60px; left: 0; width: 100%; text-align: center;
+    font-size: 24px; font-weight: 500; letter-spacing: 0.02em; color: #8a8f86;
+  }
+  .titulo {
+    position: absolute; top: 215px; left: 90px; width: 900px; text-align: center;
+  }
+  .titulo .linha1 {
+    display: block; font-size: 62px; font-weight: 600; line-height: 1.1;
+    letter-spacing: -0.01em; margin-bottom: 6px;
+  }
+  .titulo .linha2 {
+    display: block; font-family: var(--serif); font-size: 150px; line-height: 1.0;
+    letter-spacing: -0.02em; font-weight: 400;
+  }
+  .ilustracao {
+    position: absolute; top: 520px; left: 0; width: 1080px; height: 640px;
+    display: flex; align-items: flex-end; justify-content: center;
+  }
+  .ilustracao img, .ilustracao svg { max-height: 620px; max-width: 980px; width: auto; }
+  .legenda {
+    position: absolute; top: 1140px; left: 0; width: 100%; text-align: center;
+    font-size: 24px; font-weight: 600; letter-spacing: 0.01em;
+  }
+  .logo {
+    position: absolute; bottom: 64px; left: 0; width: 100%;
+    display: flex; justify-content: center;
+  }
+  .logo img { height: 92px; width: auto; }
+</style>
+</head>
+<body>
+<div class="capa slide" id="capa">
+  <svg class="faixa" viewBox="0 0 1080 26" preserveAspectRatio="none" aria-hidden="true">
+    <rect width="1080" height="26" fill="#78856F"/>
+    <path d="M0 26 C 120 -30, 260 -30, 380 26 Z" fill="#CCD77F"/>
+    <path d="M300 26 C 420 -34, 560 -34, 690 26 Z" fill="#343B30"/>
+    <path d="M620 26 C 740 -30, 880 -30, 1000 26 Z" fill="#CCD77F"/>
+    <path d="M900 26 C 980 -24, 1060 -24, 1140 26 Z" fill="#343B30"/>
+    <rect y="22" width="1080" height="4" fill="#343B30"/>
+  </svg>
+
+  <div class="arroba">@larissamerola</div>
+
+  <h1 class="titulo">
+    <span class="linha1" id="linha1">Como prevenir o</span>
+    <span class="linha2" id="linha2">Lipedema?</span>
+  </h1>
+
+  <div class="ilustracao" id="ilustracao">
+    <img src="ilustracoes/lipedema-estagios.jpg" alt="">
+  </div>
+
+  <div class="legenda" id="legenda"></div>
+
+  <div class="logo">
+    <img src="logo.png" alt="Dra. Larissa Merola, Nutrologia e bem-estar">
+  </div>
+</div>
+</body>
+</html>
