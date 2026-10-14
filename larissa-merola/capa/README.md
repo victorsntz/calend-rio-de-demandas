@@ -66,6 +66,18 @@ Viúvas: `tipografia.js` junta as duas últimas palavras de todo título com esp
 inquebrável, e os títulos usam `text-wrap: balance`. Nenhuma linha final fica com
 uma palavra só.
 
+## Banco de imagens (`../banco/`)
+
+Vem da pasta do Drive `Larissa Médica / BANCO DE ARQUIVOS`: `FOTOS DOUTORA` vira
+`banco/doutora/`, `IMAGENS POST` vira `banco/post/`. As cópias no repositório são
+redimensionadas a 1800 px; `banco/manifest.json` lista cada uma com `tags` e `usar`
+(ponha `false` pra tirar uma foto de circulação sem apagar). `banco/uso.json` guarda
+o que já foi sorteado; apague pra zerar o rodízio.
+
+Limite do Drive por aqui: arquivo acima de ~8 MB não baixa. As fotos de câmera da
+Dra. (DSC, 8 a 18 MB) ficaram de fora; basta exportar versões em JPG de até 2000 px
+na mesma pasta que entram no próximo ciclo.
+
 ## Imagens pros slides internos
 
 Duas fontes, que se somam:

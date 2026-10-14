@@ -1,7 +1,7 @@
 // Monta um carrossel a partir de um JSON e renderiza em PNG.
 // Uso: node montar.mjs ../carrosseis/exemplo.json
 // JSON: { slug, arroba, capa: { linha1, linha2, ilustracao }, slides: [ { tipo: "A"|"B"|"C"|"D"|"E", ... } ] }
-//   A foto + texto      { titulo, texto, foto?: "post"|"doutora"|caminho }
+//   A foto + texto      { titulo, texto, foto?: "post"|"post:tag"|"doutora"|caminho }
 //   B lista             { titulo, itens: [...], texto? }
 //   C dado              { numero, titulo, texto, fonte }
 //   E foto inteira      { titulo, texto?, foto?: "post"|"doutora"|caminho }  (foto ocupa o slide, faixa de texto embaixo)
@@ -28,8 +28,10 @@ const usoPath = join(bancoDir, 'uso.json');
 const manifest = existsSync(manifestPath) ? JSON.parse(await readFile(manifestPath, 'utf8')) : [];
 const uso = existsSync(usoPath) ? JSON.parse(await readFile(usoPath, 'utf8')) : { doutora: [], post: [] };
 const usadasNeste = new Set();
-function sortear(grupo) {
-  const todas = manifest.filter(m => m.grupo === grupo && m.usar !== false).map(m => m.arquivo);
+function sortear(grupo, tag) {
+  let candidatas = manifest.filter(m => m.grupo === grupo && m.usar !== false);
+  if (tag) { const comTag = candidatas.filter(m => (m.tags ?? []).includes(tag)); if (comTag.length) candidatas = comTag; }
+  const todas = candidatas.map(m => m.arquivo);
   if (!todas.length) return null;
   let livres = todas.filter(a => !uso[grupo].includes(a) && !usadasNeste.has(a));
   if (!livres.length) { uso[grupo] = []; livres = todas.filter(a => !usadasNeste.has(a)); }
@@ -40,8 +42,9 @@ function sortear(grupo) {
 function foto(ref, padrao) {
   if (!ref) ref = padrao;
   if (!ref) return null;
-  if (ref === 'post' || ref === 'doutora') {
-    const a = sortear(ref);
+  const [grupo, tag] = String(ref).split(':');
+  if (grupo === 'post' || grupo === 'doutora') {
+    const a = sortear(grupo, tag);
     return a ? relative(saida, join(bancoDir, a)) : null;
   }
   return relative(saida, resolve(dirname(entrada), ref));

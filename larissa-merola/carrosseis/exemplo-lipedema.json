@@ -1,13 +1,57 @@
 {
   "slug": "exemplo-lipedema",
   "arroba": "@larissamerola",
-  "capa": { "linha1": "Como prevenir o", "linha2": "Lipedema?", "ilustracao": "../capa/ilustracoes/lipedema-estagios.jpg" },
+  "capa": {
+    "linha1": "Como prevenir o",
+    "linha2": "Lipedema?",
+    "ilustracao": "../capa/ilustracoes/lipedema-estagios.jpg"
+  },
   "slides": [
-    { "tipo": "E", "titulo": "Inchaço nas pernas que não melhora com dieta e exercício", "texto": "Não é sempre gordura comum. Pode ser lipedema, uma doença do tecido adiposo com influência hormonal." },
-    { "tipo": "B", "titulo": "O que diferencia o <span class=\"grifo\">lipedema</span>", "itens": ["Gordura desproporcional em pernas e braços", "Dor e sensibilidade ao toque", "Não responde a dieta e exercício convencionais", "Piora em fases hormonais"], "texto": "Quase sempre em mulheres. Quase sempre diagnosticado tarde." },
-    { "tipo": "C", "numero": "20%", "titulo": "das mulheres no mundo podem ter lipedema", "texto": "A maioria ouve a vida inteira que é falta de disciplina.", "fonte": "Lipedema World Alliance, consenso internacional, 2026" },
-    { "tipo": "A", "titulo": "Dieta restritiva não funciona aqui", "texto": "Cortar caloria sem critério faz perder músculo e a gordura do lipedema fica. O que funciona é reduzir inflamação: ômega 3, vegetais crucíferos, menos ultraprocessado." },
-    { "tipo": "B", "titulo": "Como a gente investiga em consulta", "itens": ["História clínica e exame físico", "Composição corporal, não só a balança", "Tireoide, insulina, ferritina e ciclo", "Plano de nutrição anti-inflamatória"] },
-    { "tipo": "D", "titulo": "Se você se reconheceu, não normalize a dor.", "texto": "Lipedema precisa de nutrição inteligente, não de dieta restritiva. O primeiro passo é investigar.", "cta": "Link na bio" }
+    {
+      "tipo": "E",
+      "titulo": "Inchaço nas pernas que não melhora com dieta e exercício",
+      "texto": "Não é sempre gordura comum. Pode ser lipedema, uma doença do tecido adiposo com influência hormonal.",
+      "foto": "post:lipedema"
+    },
+    {
+      "tipo": "B",
+      "titulo": "O que diferencia o <span class=\"grifo\">lipedema</span>",
+      "itens": [
+        "Gordura desproporcional em pernas e braços",
+        "Dor e sensibilidade ao toque",
+        "Não responde a dieta e exercício convencionais",
+        "Piora em fases hormonais"
+      ],
+      "texto": "Quase sempre em mulheres. Quase sempre diagnosticado tarde."
+    },
+    {
+      "tipo": "C",
+      "numero": "20%",
+      "titulo": "das mulheres no mundo podem ter lipedema",
+      "texto": "A maioria ouve a vida inteira que é falta de disciplina.",
+      "fonte": "Lipedema World Alliance, consenso internacional, 2026"
+    },
+    {
+      "tipo": "A",
+      "titulo": "Dieta restritiva não funciona aqui",
+      "texto": "Cortar caloria sem critério faz perder músculo e a gordura do lipedema fica. O que funciona é reduzir inflamação: ômega 3, vegetais crucíferos, menos ultraprocessado.",
+      "foto": "post:pernas"
+    },
+    {
+      "tipo": "B",
+      "titulo": "Como a gente investiga em consulta",
+      "itens": [
+        "História clínica e exame físico",
+        "Composição corporal, não só a balança",
+        "Tireoide, insulina, ferritina e ciclo",
+        "Plano de nutrição anti-inflamatória"
+      ]
+    },
+    {
+      "tipo": "D",
+      "titulo": "Se você se reconheceu, não normalize a dor.",
+      "texto": "Lipedema precisa de nutrição inteligente, não de dieta restritiva. O primeiro passo é investigar.",
+      "cta": "Link na bio"
+    }
   ]
 }
