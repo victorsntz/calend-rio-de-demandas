@@ -47,3 +47,19 @@ logo no Drive declara as duas. The Seasons é paga e não está aqui: `tokens.cs
 Pra cada carrossel novo, a ilustração precisa vir de banco vetorial ou geração de imagem
 com este brief: figura humana completa, estilo flat ou ilustração médica, paleta de pele
 quente, sem fundo, sem texto, sem abstração geométrica.
+
+## Imagens pros slides internos
+
+Duas fontes, que se somam:
+
+1. **Pasta no Drive** (`Larissa Médica / CRIATIVOS / BANCO DE IMAGENS`, a criar):
+   o Victor curadoria fotos da Dra. e imagens escolhidas; o agente lê a pasta,
+   distribui nos slides e anota em `imagens/creditos.json` de onde veio cada uma.
+   Funciona hoje, sem mexer em rede.
+2. **Bancos livres** via `buscar-imagens.mjs` (Openverse sem chave, Pexels com
+   `PEXELS_API_KEY`). Depende de liberar na rede do ambiente:
+   `api.openverse.org`, `api.pexels.com`, `images.pexels.com` e os domínios
+   das imagens que o Openverse devolver (varia por foto; Wikimedia e Flickr são
+   os mais comuns: `upload.wikimedia.org`, `live.staticflickr.com`).
+
+Pinterest não serve como ponte: o domínio é bloqueado aqui e não tem API aberta.
