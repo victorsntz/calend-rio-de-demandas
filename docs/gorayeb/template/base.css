@@ -370,12 +370,23 @@
 /* ======================================================================
    CAPA DE FOTO — foto sangrando, marca no alto, categoria e título no pé.
    ====================================================================== */
-.capa-foto { padding: var(--margem); }
+ /* grid de quatro faixas horizontais: as duas de cima ficam com a foto,
+    o título mora no meio da terceira e a logo na quarta, na sombra. */
+.capa-foto {
+  padding: var(--margem);
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+.capa-foto .faixa-vazia { grid-row: span 2; }
+.capa-foto .faixa-titulo { grid-row: 3; align-self: center; }
+.capa-foto .faixa-marca  { grid-row: 4; align-self: center; }
 .capa-foto .veu-capa {
   position: absolute; inset: 0; z-index: 0;
+  /* a sombra cobre as duas faixas de baixo, onde moram título e logo */
   background:
-    linear-gradient(180deg, rgba(16,22,13,.62) 0%, rgba(16,22,13,.18) 22%, rgba(16,22,13,0) 40%),
-    linear-gradient(0deg,   rgba(16,22,13,.92) 0%, rgba(16,22,13,.74) 24%, rgba(16,22,13,.26) 48%, rgba(16,22,13,0) 68%);
+    linear-gradient(180deg, rgba(16,22,13,.34) 0%, rgba(16,22,13,.10) 16%, rgba(16,22,13,0) 34%),
+    linear-gradient(0deg,   rgba(16,22,13,.95) 0%, rgba(16,22,13,.90) 22%, rgba(16,22,13,.74) 42%, rgba(16,22,13,.22) 62%, rgba(16,22,13,0) 76%);
 }
 .capa-foto .etiqueta {
   display: inline-flex; align-items: center; gap: 16px;
@@ -391,7 +402,7 @@
 .capa-foto .titulo-capa {
   font-family: "Arvo", Georgia, serif; font-weight: 700;
   font-size: 92px; line-height: 1.04; letter-spacing: -.02em;
-  margin-top: 26px;
+  margin-top: 24px;
 }
 .capa-foto .titulo-capa.menor { font-size: 76px; }
 .capa-foto .sub-capa {

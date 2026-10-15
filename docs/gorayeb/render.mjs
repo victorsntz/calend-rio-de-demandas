@@ -185,11 +185,13 @@ function monta(s) {
     case "capa-foto":
       corpo = `
         <div class="veu-capa"></div>
-        ${LOGO(66)}
-        <div class="empurra"></div>
-        ${s.etiqueta ? `<span class="etiqueta"><span class="bolota"></span>${esc(s.etiqueta)}</span>` : ""}
-        <h1 class="titulo-capa ${s.escala || ""}">${titulo(s.titulo)}</h1>
-        ${s.sub ? `<p class="sub-capa">${titulo(s.sub)}</p>` : ""}`;
+        <div class="faixa-vazia"></div>
+        <div class="faixa-titulo">
+          ${s.etiqueta ? `<span class="etiqueta"><span class="bolota"></span>${esc(s.etiqueta)}</span>` : ""}
+          <h1 class="titulo-capa ${s.escala || ""}">${titulo(s.titulo)}</h1>
+          ${s.sub ? `<p class="sub-capa">${titulo(s.sub)}</p>` : ""}
+        </div>
+        <div class="faixa-marca">${LOGO(78)}</div>`;
       break;
 
     /* corpo de foto: foto em cima, chapa embaixo com a marca d'água da casa */
