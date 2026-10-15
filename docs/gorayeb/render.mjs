@@ -8,6 +8,7 @@
 import playwright from "/opt/node-tools/node_modules/playwright/index.js";
 const { chromium } = playwright;
 import { readFileSync, mkdirSync, writeFileSync } from "node:fs";
+import { FIGURAS } from "./figuras.mjs";
 import { basename, dirname, resolve, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -22,10 +23,11 @@ const rico = (s = "") =>
 
 const ARROBA = '<div class="arroba">@gorayebadvocacia</div>';
 const ASSINA = (classe = "") => `<div class="assinatura ${classe}">Do agro, pelo agro.</div>`;
-const MARCA = (tam = 58) =>
-  `<span class="marca" style="--marca-tam:${tam}px"><span class="f">F</span><span class="g">G</span><img class="jugo" src="../assets/ftg-marca.png" alt=""></span>`;
-const LOCKUP = (tam = 58) =>
-  `<div class="lockup">${MARCA(tam)}<span class="nome">Gorayeb<br>Advocacia</span></div>`;
+/* Logos oficiais da pasta ENTREGA > LOGOS E SÍMBOLOS do Drive. Nunca
+   redesenhar: é só escolher a versão certa pro fundo. */
+const LOCKUP = (altura = 74, claro = true) =>
+  `<img class="logo" style="height:${altura}px" alt="Gorayeb Advocacia"
+     src="../assets/logo-horizontal-${claro ? "claro" : "escuro"}.png">`;
 
 function foto(s) {
   if (!s.foto) return "";
@@ -34,6 +36,8 @@ function foto(s) {
 }
 
 function monta(s) {
+  const claro = !(s.fundo === "creme" || s.fundo === "areia") || !!s.foto;
+  const LOGO = (h) => LOCKUP(h, claro);
   const cls = ["slide"];
   if (s.foto) cls.push("bg-foto");
   else if (s.fundo === "creme") cls.push("bg-creme");
@@ -46,7 +50,7 @@ function monta(s) {
     /* capa: foto + título grande + gancho + pílula de arraste + lockup */
     case "capa":
       corpo = `
-        ${LOCKUP(54)}
+        ${LOGO(70)}
         <div class="espaco-lg"></div>
         <h1 class="titulo ${s.escala || ""}">${rico(s.titulo)}</h1>
         ${s.gancho ? `<div class="espaco"></div><div class="caixa-fina corpo menor">${rico(s.gancho)}</div>` : ""}
@@ -122,10 +126,22 @@ function monta(s) {
         <div class="centro" style="text-align:center">
           <p class="titulo menor" style="font-size:34px">Do agro, pelo agro.</p>
           <div class="espaco"></div>
-          <div style="display:flex;justify-content:center">${LOCKUP(50)}</div>
+          <div style="display:flex;justify-content:center">${LOGO(66)}</div>
         </div>
         <div class="empurra"></div>`;
       break;
+
+    /* figura: donut, barras, mapa ou números em diagonal */
+    case "figura": {
+      const fab = FIGURAS[s.figura];
+      if (!fab) throw new Error(`figura desconhecida: ${s.figura}`);
+      corpo = `
+        ${ARROBA}
+        ${s.titulo ? `<div class="espaco"></div><h2 class="titulo menor">${rico(s.titulo)}</h2>` : ""}
+        <div class="meio">${fab(s)}</div>
+        <div class="rodape"><span></span>${ASSINA()}</div>`;
+      break;
+    }
 
     default:
       throw new Error(`tipo de slide desconhecido: ${s.tipo}`);

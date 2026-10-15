@@ -30,7 +30,22 @@ na mesma linguagem, sem repetir o que já foi publicado.
 
 Formato único: **1080 × 1350 px (4:5)**, PNG.
 
-### Paleta (hex medidos nas peças)
+### Paleta oficial (`ENTREGA › PALETA DE CORES › hex.pdf`)
+
+| Papel | Hex |
+| --- | --- |
+| Verde escuro, a base | `#1b2316` |
+| Areia, o claro da marca | `#d4c9aa` |
+| Bordô | `#63260f` |
+| Marrom | `#6c4d2e` |
+| Dourado | `#b8943d` |
+| Verde claro, acento | `#6ebb50` |
+
+As peças usam ainda um creme mais claro que a areia no texto sobre chapa escura,
+medido em `#ebe3c8`, e um passo mais claro do bordô, `#a8552c`, que serve de
+segundo dado nos gráficos.
+
+### Medições anteriores, tiradas das peças
 
 | Papel | Cor | Hex |
 | --- | --- | --- |
@@ -50,8 +65,10 @@ claro 213. Em peça de 1080 px isso vira um período de 234 px. Está montado em
 `template/base.css` na classe `.listras`.
 
 **Marca F.T.G.**: o jugo dourado arqueia sobre as letras F e G, e a haste
-vertical faz o traço entre elas. O símbolo isolado está em
-`assets/ftg-marca.png`, extraído do mesmo arquivo da marca.
+vertical faz o traço entre elas. **A logo nunca é redesenhada.** Os arquivos
+oficiais estão em `ENTREGA › LOGOS E SÍMBOLOS` no Drive e copiados em
+`assets/`: horizontal clara (chapa escura e foto), horizontal escura (creme e
+areia), empilhada e o símbolo isolado.
 
 Regras de uso observadas:
 - O verde é a base. Creme e bordô entram para quebrar o ritmo (1 a 2 slides

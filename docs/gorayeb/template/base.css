@@ -11,17 +11,20 @@
 @font-face { font-family: "HelveticaNeue"; src: url("../fontes/helvetica/HelveticaNeueBold.otf"); font-weight: 700; }
 
 :root {
-  /* paleta medida nas peças */
-  --verde: #162211;
-  --verde-listra-clara: #1b2217;
+  /* paleta OFICIAL da marca (ENTREGA > PALETA DE CORES > hex.pdf) */
+  --verde: #1b2316;
+  --areia: #d4c9aa;
+  --bordo: #63260f;
+  --marrom: #6c4d2e;
+  --dourado: #b8943d;
+  --verde-claro: #6ebb50;
+
+  /* derivadas, pro uso em peça */
+  --creme: #ebe3c8;              /* tinta clara do texto sobre chapa escura */
+  --verde-listra-clara: #1b2217; /* as listras do Asset 51 */
   --verde-listra-escura: #121610;
-  --creme: #ebe3c8;
-  --areia: #d4c8a8;
-  --dourado: #b9953e;
   --dourado-caixa: #8a6f32;
-  --bordo: #380f00;
-  --marrom: #431a0a;
-  --terracota: #6b2d14;
+  --terracota: #a8552c;          /* passo mais claro do bordô, pro 2º dado */
 
   /* grid: 1080 × 1350, margem de 84px */
   --margem: 84px;
@@ -192,3 +195,67 @@
 
 /* bloco que fica no centro vertical do slide, entre o @ e o rodapé */
 .meio { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+/* ======================================================================
+   INFOGRAFIA — gráficos, mapas e números
+   Paleta de dados validada contra a chapa verde #1b2316:
+   dourado #b8943d · terracota #a8552c · areia #d4c9aa (o "resto", neutro).
+   Toda fatia e toda barra leva rótulo direto, nunca só cor.
+   ====================================================================== */
+:root {
+  --dado-1: #b8943d;   /* o destaque */
+  --dado-2: #a8552c;   /* o contraponto */
+  --dado-3: #d4c9aa;   /* o resto, neutro */
+  --dado-base: rgba(212, 201, 170, .16);  /* trilho e silhueta apagada */
+  --fio-fino: rgba(212, 201, 170, .45);
+}
+
+.figura { display: flex; flex-direction: column; gap: 30px; }
+.figura svg { display: block; width: 100%; height: auto; overflow: visible; }
+.figura-legenda {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 25px; line-height: 1.4; opacity: .82;
+}
+.fonte {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 21px; opacity: .6;
+}
+
+/* rótulos dentro das figuras */
+.rot-num {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  fill: var(--creme); font-size: 46px;
+}
+.rot-txt {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 400;
+  fill: var(--creme); font-size: 25px; opacity: .85;
+}
+.bg-creme .rot-num, .bg-areia .rot-num { fill: var(--verde); }
+.bg-creme .rot-txt, .bg-areia .rot-txt { fill: var(--verde); }
+
+/* barras: marca fina, ponta arredondada só do lado do dado */
+.barra-trilho { fill: var(--dado-base); }
+.barra { fill: var(--dado-1); }
+.barra-2 { fill: var(--dado-2); }
+
+/* mapa: silhueta apagada, recorte em destaque por cima */
+.mapa-base { fill: var(--dado-base); stroke: var(--fio-fino); stroke-width: 1.5; }
+.mapa-destaque { fill: var(--dado-1); }
+.mapa-anel { fill: none; stroke: var(--fio-fino); stroke-width: 2; }
+
+/* números em diagonal sobre foto, no espírito da peça de referência */
+.diag { position: relative; flex: 1; display: flex; align-items: center; }
+.diag-item { display: flex; align-items: baseline; gap: 18px; }
+.diag-item .n {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 92px; line-height: .92;
+}
+.diag-item .r {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 28px; line-height: 1.25; max-width: 330px;
+}
+.diag-linhas { position: absolute; inset: 0; pointer-events: none; }
+
+/* logo oficial: só muda de versão conforme o fundo, nunca de desenho */
+.logo { display: block; width: auto; flex: none; align-self: flex-start; }
+.centro .logo, .rodape .logo { align-self: center; }
