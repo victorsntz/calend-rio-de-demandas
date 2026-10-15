@@ -79,10 +79,10 @@ function monta(s) {
     case "tese":
       corpo = `
         ${ARROBA}
-        <div class="empurra"></div>
-        <div class="entre-fios"><p class="tese ${s.centro ? "centro" : ""}">${rico(s.tese)}</p></div>
-        ${s.texto ? `<div class="espaco"></div><p class="corpo">${rico(s.texto)}</p>` : ""}
-        <div class="empurra"></div>
+        <div class="meio">
+          <div class="entre-fios"><p class="tese ${s.centro ? "centro" : ""}">${rico(s.tese)}</p></div>
+          ${s.texto ? `<div class="espaco"></div><p class="corpo">${rico(s.texto)}</p>` : ""}
+        </div>
         <div class="rodape"><span></span>${ASSINA()}</div>`;
       break;
 

@@ -1,7 +1,7 @@
 {
   "id": "cerca-divisoria",
   "titulo": "Cerca divisória: quem paga a conta",
-  "nota": "Teste do template. Sem fotos ainda: o CDN de imagens do Pinterest segue bloqueado nesta sessão.",
+  "nota": "Fotos achadas via Pinterest, para aprovação. Conferir licença antes de publicar: ver docs/gorayeb/img/_creditos.json.",
   "legenda_instagram": "A cerca caiu. E agora, quem paga?\n\nNo meio rural essa conta sempre vira discussão de vizinho. Mas o Código Civil já respondeu isso faz tempo: a cerca que separa duas propriedades é dos dois. Construir, consertar e manter é despesa dividida meio a meio (art. 1.297).\n\nTem um detalhe que muda tudo: isso vale pra cerca que fica em cima da divisa. Se você levantou a cerca dentro da sua terra, ela é sua e a conta também.\n\nE se o vizinho se recusa a pagar a parte dele? Dá pra cobrar. Mas antes de chamar advogado, junte o que prova: orçamento, foto, nota do material e a conversa onde vocês combinaram.\n\nCerca é limite de terra, não de relação. Resolve cedo, enquanto ainda dá pra conversar na porteira.\n\nDo agro. Pelo agro.",
   "slides": [
     {
@@ -10,7 +10,7 @@
       "escala": "menor",
       "gancho": "A resposta tá no Código Civil. E quase ninguém leu.",
       "arraste": "Arrasta pro lado",
-      "foto": "../img/substituto-campo.jpg",
+      "foto": "../img/capa-cerca-entardecer.jpg",
       "veu": "topo"
     },
     {
@@ -39,10 +39,10 @@
     },
     {
       "tipo": "foto-texto",
-      "titulo": "Cerca dentro da sua terra\né sua. E a conta também.",
+      "titulo": "Cerca pra dentro\né sua. A conta também.",
       "texto": "Quem recua e levanta a cerca para dentro do próprio imóvel perde o direito de dividir a despesa. O vizinho não tem obrigação sobre o que está fora da divisa.",
-      "fundo": "bordo",
-      "borda": "dourada"
+      "foto": "../img/terra-arada.jpg",
+      "veu": "marrom"
     },
     {
       "tipo": "lista",
@@ -54,7 +54,7 @@
       ],
       "remate": "Sem prova, a cobrança vira a sua palavra contra a dele.",
       "meiaFoto": true,
-      "foto": "../img/substituto-campo.jpg"
+      "foto": "../img/faixa-porteira-pasto.jpg"
     },
     {
       "tipo": "fecho",
