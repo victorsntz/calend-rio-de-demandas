@@ -259,11 +259,28 @@
 .mapa-destaque { fill: var(--dado-1); }
 .mapa-anel { fill: none; stroke: var(--fio-fino); stroke-width: 2; }
 /* legenda dos pontos do mapa, uma linha por destaque */
-.mapa-chaves { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.mapa-num {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 46px; fill: var(--verde);
+}
+.mapa-chaves { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+/* a partir de quatro destaques a legenda quebra em duas colunas */
+.mapa-chaves.duas {
+  display: grid; grid-template-columns: 1fr 1fr;
+  column-gap: 40px; row-gap: 14px;
+}
 .mapa-chaves li {
-  display: flex; align-items: center; gap: 18px;
+  display: flex; align-items: center; gap: 14px;
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-weight: 400; font-size: 29px;
+  font-weight: 300; font-size: 28px;
+}
+.mapa-chaves .nome { flex: 1; }
+.mapa-chaves b { font-weight: 700; white-space: nowrap; }
+.mapa-chaves .ordem {
+  width: 36px; height: 36px; border-radius: 50%; flex: none;
+  background: var(--dado-1); color: var(--verde);
+  font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 20px;
+  display: flex; align-items: center; justify-content: center;
 }
 .mapa-chaves .ponto {
   width: 20px; height: 20px; border-radius: 50%;
@@ -272,7 +289,9 @@
 
 /* números em diagonal sobre foto, no espírito da peça de referência */
 .diag { position: relative; flex: 1; display: flex; align-items: center; }
-.diag-item { display: flex; align-items: baseline; gap: 18px; }
+/* o ícone fica em cima e a cifra com o rótulo embaixo, na mesma linha de base */
+.diag-item { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.diag-linha { display: flex; align-items: baseline; gap: 18px; }
 .diag-item .n {
   font-family: "Arvo", Georgia, serif; font-weight: 700;
   font-size: 92px; line-height: .92; white-space: nowrap;
@@ -281,6 +300,15 @@
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: 300; font-size: 28px; line-height: 1.25; max-width: 330px;
 }
+/* ícone de linha ao lado da cifra: mesma espessura de traço em toda a peça */
+/* precisa ser mais específico que .figura svg, que estica tudo pra 100% */
+.figura svg.icone, .icone {
+  width: 80px; height: 80px; flex: none;
+  fill: none; stroke: var(--dado-1); stroke-width: 2.6;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.bg-offwhite svg.icone, .bg-branco svg.icone,
+.bg-creme svg.icone, .bg-areia svg.icone { stroke: var(--dourado-caixa); }
 .diag-linhas { position: absolute; inset: 0; pointer-events: none; }
 
 /* logo oficial: só muda de versão conforme o fundo, nunca de desenho */

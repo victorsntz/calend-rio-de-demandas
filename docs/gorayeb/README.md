@@ -89,10 +89,13 @@ Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
 | --- | --- | --- |
 | `donut` | `valor` (0–100), `destaque`, `rotulo`, `resto` | uma proporção só |
 | `barras` | `itens` de `{rotulo, valor, valorTexto, destaque}` | comparar 2 a 5 grandezas |
-| `mapa` | `mapa` (`brasil`), `pontos` de `{lon, lat, raio, rotulo}` | situar no território |
-| `numeros` | `itens` de `{numero, rotulo}` | até 4 cifras em diagonal |
+| `mapa` | `mapa` (`brasil`), `altura`, `pontos` de `{lon, lat, valor, rotulo}` | situar no território; com `valor` a bolha cresce pela raiz e os pontos viram lista numerada |
+| `numeros` | `itens` de `{numero, rotulo, icone}` | até 4 cifras em diagonal |
 | `tabela` | `colunas` (2) e `linhas` de `{criterio, a, b}` | comparar dois cenários |
 | `cerca` | `rotuloA`, `rotuloB` | meio a meio de uma divisa, desenhado como cerca |
+
+Ícones de linha disponíveis em `ICONES`: `boi`, `navio`, `dinheiro`, `mapa`,
+`documento`. Entram pelo campo `icone` de cada item de `numeros`.
 
 Todas aceitam `legenda` (a frase que explica), `fonte` (de onde veio o número) e
 `alt` (a descrição pra quem usa leitor de tela).

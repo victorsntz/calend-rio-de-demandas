@@ -255,7 +255,7 @@ function monta(s) {
       if (!fab) throw new Error(`figura desconhecida: ${s.figura}`);
       corpo = `
         ${ARROBA}
-        ${s.titulo ? `<div class="espaco"></div><h2 class="titulo menor">${titulo(s.titulo)}</h2>` : ""}
+        ${s.titulo ? `<div class="espaco"></div><h2 class="titulo menor">${titulo(s.titulo)}</h2><div class="espaco"></div>` : ""}
         <div class="meio">${fab(s)}</div>
         <div class="rodape"></div>`;
       break;

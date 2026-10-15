@@ -22,7 +22,8 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Marca d'água** | A chapa do `corpo-foto` fica em **cor sólida**. A marca ao fundo só entra se for pedida. |
 | **Listras** | Textura, não padrão. Escala grande, contraste baixo, esmaecendo na diagonal. Nunca em todo slide do carrossel. |
 | **Viúvas** | Palavra sozinha fechando linha **não passa**. O render costura sozinho; se ainda ficar feia, encurtar a frase. |
-| **Respiro** | Corpo em 34 px, entrelinha 1,58, medida de 19 caracteres. Nada espremido. |
+| **Respiro** | Corpo em 34 px, entrelinha 1,58, medida de 19 caracteres. Nada espremido. Todo slide de figura leva folga entre o título e o desenho. |
+| **Fecho** | Honra quem faz, não vende serviço. A chamada pede marcação, que puxa mais comentário que pergunta. |
 
 ## A capa
 
@@ -45,6 +46,12 @@ Alternar. Nenhum fundo repete dentro do mesmo carrossel.
   carrossel, que é o que diferencia o nosso do que já estava sendo publicado.
   Quando a pauta tem uma coisa concreta (uma cerca, uma porteira, uma divisa),
   desenhar a coisa vale mais que um gráfico genérico.
+- **Ícones de linha** (`boi`, `navio`, `dinheiro`, `mapa`, `documento`) em cima
+  de cada cifra, pra dar o assunto num relance. Nunca sozinhos, sempre com o
+  número.
+- **Mapa com mais de um destaque** vira bolha proporcional numerada, com a
+  legenda embaixo repetindo o número. Texto solto dentro do desenho estoura a
+  margem da peça.
 
 ## Linguagem
 

@@ -93,29 +93,44 @@ export function mapa(f) {
   const merc = (lat) => (180 / Math.PI) * Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 180 / 2));
   const proj = (lon, lat) => [((lon - lon0) / (lon1 - lon0)) * W, ((my1 - merc(lat)) / (my1 - my0)) * H];
 
-  const pontos = (f.pontos || [])
-    .map((p) => {
+  const its = f.pontos || [];
+  /* a bolha cresce pela raiz do valor: é a área que conta, não o raio */
+  const maior = Math.max(...its.map((p) => Number(p.valor) || 0), 0);
+  const raio = (p) =>
+    p.raio ?? (maior > 0 && p.valor ? 26 + 36 * Math.sqrt(Number(p.valor) / maior) : 44);
+
+  const pontos = its
+    .map((p, k) => {
       const [x, y] = proj(p.lon, p.lat);
-      const r = p.raio || 46;
+      const r = raio(p);
+      /* numera na ordem da lista e repete o número na legenda embaixo */
+      const num = its.length > 1 && p.valor
+        ? `<text x="${n2(x)}" y="${n2(y + 16)}" class="mapa-num" text-anchor="middle">${k + 1}</text>`
+        : "";
       return `
-      <circle cx="${n2(x)}" cy="${n2(y)}" r="${r}" class="mapa-destaque" opacity=".9"/>
-      <circle cx="${n2(x)}" cy="${n2(y)}" r="${r + 30}" class="mapa-anel"/>`;
+      <circle cx="${n2(x)}" cy="${n2(y)}" r="${n2(r)}" class="mapa-destaque" opacity=".92"/>
+      <circle cx="${n2(x)}" cy="${n2(y)}" r="${n2(r + 24)}" class="mapa-anel"/>
+      ${num}`;
     })
     .join("");
 
-  /* o rótulo de cada ponto vira linha de legenda embaixo do mapa: dentro do
-     desenho ele estourava a margem da peça */
-  const chaves = (f.pontos || []).some((p) => p.rotulo)
-    ? `<ul class="mapa-chaves">${(f.pontos || [])
-        .filter((p) => p.rotulo)
-        .map((p) => `<li><span class="ponto"></span>${ec(p.rotulo)}</li>`)
+  const chaves = its.some((p) => p.rotulo)
+    ? `<ul class="mapa-chaves${its.length > 3 ? " duas" : ""}">${its
+        .map((p, k) => {
+          if (!p.rotulo) return "";
+          const marca = p.valor
+            ? `<span class="ordem">${k + 1}</span>`
+            : `<span class="ponto"></span>`;
+          const valor = p.valor ? `<b>${esc(p.valor)}</b>` : "";
+          return `<li>${marca}<span class="nome">${ec(p.rotulo)}</span>${valor}</li>`;
+        })
         .join("")}</ul>`
     : "";
 
   return `
   <div class="figura">
     <svg viewBox="${m.viewBox}" role="img" aria-label="${esc(f.alt || "Mapa do Brasil com destaque")}"
-         style="max-height:600px;margin:0 auto">
+         style="max-height:${f.altura || 600}px;margin:0 auto">
       <path d="${m.d}" class="mapa-base"/>
       ${pontos}
     </svg>
@@ -125,6 +140,36 @@ export function mapa(f) {
   </div>`;
 }
 
+
+/* ---- ícones ------------------------------------------------------------
+   Desenho de linha, traço único, no mesmo peso da marca. Entram ao lado da
+   cifra pra dar o assunto num relance, nunca sozinhos.                    */
+export const ICONES = {
+  boi: `<path d="M20 25c0-7 24-7 24 0l-2 15c0 8-20 8-20 0z"/>
+        <path d="M21 27c-6-3-12-2-15 2 3 5 11 6 15 3"/>
+        <path d="M43 27c6-3 12-2 15 2-3 5-11 6-15 3"/>
+        <path d="M24 23c-3-8-9-11-14-10"/>
+        <path d="M40 23c3-8 9-11 14-10"/>
+        <ellipse cx="32" cy="42" rx="6" ry="4"/>`,
+  navio: `<path d="M8 40h48l-7 12H15z"/>
+          <path d="M22 40V28h10v12"/>
+          <path d="M32 40V22h10v18"/>
+          <path d="M42 40v-7h6v7"/>
+          <path d="M4 57c4 0 4-3 8-3s4 3 8 3 4-3 8-3 4 3 8 3 4-3 8-3 4 3 8 3"/>`,
+  dinheiro: `<rect x="6" y="16" width="52" height="32" rx="4"/>
+             <circle cx="32" cy="32" r="8"/>
+             <path d="M16 24h4M44 40h4"/>`,
+  mapa: `<path d="M8 18l16-6 16 6 16-6v34l-16 6-16-6-16 6z"/>
+         <path d="M24 12v34M40 18v34"/>`,
+  documento: `<path d="M16 8h20l12 12v36H16z"/>
+              <path d="M36 8v12h12"/>
+              <path d="M24 32h16M24 42h16"/>`,
+};
+const icone = (nome) =>
+  ICONES[nome]
+    ? `<svg class="icone" viewBox="0 0 64 64" aria-hidden="true">${ICONES[nome]}</svg>`
+    : "";
+
 /* ---- números em diagonal ----------------------------------------------
    Até quatro figuras escalonadas na diagonal, cada uma com seu rótulo,
    como na peça de referência da lavoura.                                 */
@@ -133,9 +178,12 @@ export function numeros(f) {
   const linhas = itens
     .map(
       (it, k) => `
-      <div class="diag-item" style="margin-left:${k * 92}px">
-        <span class="n dourado">${esc(it.numero)}</span>
-        <span class="r">${esc(it.rotulo)}</span>
+      <div class="diag-item" style="margin-left:${k * 70}px">
+        ${icone(it.icone)}
+        <div class="diag-linha">
+          <span class="n dourado">${esc(it.numero)}</span>
+          <span class="r">${esc(it.rotulo)}</span>
+        </div>
       </div>`
     )
     .join("");
