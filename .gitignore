@@ -27,3 +27,6 @@ next-env.d.ts
 # artifact build outputs
 /artifact/app.js
 /artifact/calendario.html
+
+# html intermediário do render dos carrosséis
+docs/gorayeb/template/_*.html

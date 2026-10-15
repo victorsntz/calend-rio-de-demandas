@@ -1,0 +1,174 @@
+/* Renderiza um carrossel da Gorayeb a partir de um JSON de slides.
+ *
+ *   node docs/gorayeb/render.mjs docs/gorayeb/carrosseis/<nome>.json
+ *
+ * Sai em docs/gorayeb/saida/<nome>/pag-01.png ... (1080×1350).
+ * Cada slide do JSON tem { tipo, ...campos }. Tipos em `monta()`.
+ */
+import playwright from "/opt/node-tools/node_modules/playwright/index.js";
+const { chromium } = playwright;
+import { readFileSync, mkdirSync, writeFileSync } from "node:fs";
+import { basename, dirname, resolve, join } from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
+
+const AQUI = dirname(fileURLToPath(import.meta.url));
+const esc = (s = "") => String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+/* _texto_ sublinha, *texto* engrossa, quebra de linha vira <br> */
+const rico = (s = "") =>
+  esc(s)
+    .replace(/_([^_]+)_/g, '<span class="marca-texto">$1</span>')
+    .replace(/\*([^*]+)\*/g, "<strong>$1</strong>")
+    .replace(/\n/g, "<br>");
+
+const ARROBA = '<div class="arroba">@gorayebadvocacia</div>';
+const ASSINA = (classe = "") => `<div class="assinatura ${classe}">Do agro, pelo agro.</div>`;
+const MARCA = (tam = 58) =>
+  `<span class="marca" style="--marca-tam:${tam}px"><span class="f">F</span><span class="g">G</span><img class="jugo" src="../assets/ftg-marca.png" alt=""></span>`;
+const LOCKUP = (tam = 58) =>
+  `<div class="lockup">${MARCA(tam)}<span class="nome">Gorayeb<br>Advocacia</span></div>`;
+
+function foto(s) {
+  if (!s.foto) return "";
+  const veu = s.veu === "marrom" ? "veu-marrom" : s.veu === "topo" ? "veu-topo" : "veu-verde";
+  return `<img class="foto" src="${esc(s.foto)}" alt=""><div class="${veu}"></div>`;
+}
+
+function monta(s) {
+  const cls = ["slide"];
+  if (s.foto) cls.push("bg-foto");
+  else if (s.fundo === "creme") cls.push("bg-creme");
+  else if (s.fundo === "areia") cls.push("bg-areia");
+  else if (s.fundo === "bordo") cls.push("bg-bordo");
+  else cls.push("bg-verde", "listras");
+
+  let corpo = "";
+  switch (s.tipo) {
+    /* capa: foto + título grande + gancho + pílula de arraste + lockup */
+    case "capa":
+      corpo = `
+        ${LOCKUP(54)}
+        <div class="espaco-lg"></div>
+        <h1 class="titulo ${s.escala || ""}">${rico(s.titulo)}</h1>
+        ${s.gancho ? `<div class="espaco"></div><div class="caixa-fina corpo menor">${rico(s.gancho)}</div>` : ""}
+        <div class="rodape">
+          <div class="pilula">${esc(s.arraste || "Arrasta pro lado")} <span>▶</span></div>
+          ${ASSINA()}
+        </div>`;
+      break;
+
+    /* tese: a frase-chave entre dois fios dourados, com um parágrafo abaixo */
+    case "tese":
+      corpo = `
+        ${ARROBA}
+        <div class="empurra"></div>
+        <div class="entre-fios"><p class="tese ${s.centro ? "centro" : ""}">${rico(s.tese)}</p></div>
+        ${s.texto ? `<div class="espaco"></div><p class="corpo">${rico(s.texto)}</p>` : ""}
+        <div class="empurra"></div>
+        <div class="rodape"><span></span>${ASSINA()}</div>`;
+      break;
+
+    /* foto com um bloco de texto embaixo */
+    case "foto-texto":
+      corpo = `
+        ${ARROBA}
+        <div class="empurra"></div>
+        ${s.titulo ? `<h2 class="titulo menor">${rico(s.titulo)}</h2><div class="espaco"></div>` : ""}
+        ${s.texto ? `<p class="corpo">${rico(s.texto)}</p>` : ""}
+        <div class="espaco-lg"></div>
+        <div class="rodape"><span></span>${ASSINA()}</div>`;
+      break;
+
+    /* citação em itálico dentro de caixa de borda fina, centrada no slide */
+    case "citacao":
+      corpo = `
+        ${ARROBA}
+        <div class="meio"><div class="caixa-fina"><p class="citacao">${rico(s.citacao)}</p></div></div>
+        <div class="rodape"><span></span>${ASSINA()}</div>`;
+      break;
+
+    /* lista curta: até 4 itens, um por linha */
+    case "lista":
+      corpo = `
+        ${ARROBA}
+        <div class="empurra"></div>
+        ${s.titulo ? `<h2 class="titulo menor">${rico(s.titulo)}</h2><div class="espaco"></div>` : ""}
+        <ul class="lista">${(s.itens || []).map((i) => `<li><span>${rico(i)}</span></li>`).join("")}</ul>
+        ${s.remate ? `<div class="espaco"></div><p class="tese">${rico(s.remate)}</p>` : ""}
+        <div class="empurra"></div>
+        <div class="rodape"><span></span>${ASSINA()}</div>`;
+      break;
+
+    /* dado: um número grande com a leitura embaixo */
+    case "dado":
+      corpo = `
+        ${ARROBA}
+        <div class="empurra"></div>
+        <p class="titulo maior dourado">${rico(s.numero)}</p>
+        <div class="espaco-sm"></div>
+        <p class="tese">${rico(s.leitura)}</p>
+        ${s.texto ? `<div class="espaco"></div><p class="corpo">${rico(s.texto)}</p>` : ""}
+        <div class="empurra"></div>
+        <div class="rodape"><span></span>${ASSINA()}</div>`;
+      break;
+
+    /* fecho: síntese + CTA + assinatura + lockup */
+    case "fecho":
+      corpo = `
+        ${ARROBA}
+        <div class="empurra"></div>
+        <p class="titulo menor centro" style="text-align:center">${rico(s.sintese)}</p>
+        ${s.cta ? `<div class="espaco"></div><div class="centro" style="text-align:center"><span class="cta">${rico(s.cta)}</span></div>` : ""}
+        <div class="espaco-lg"></div>
+        <div class="centro" style="text-align:center">
+          <p class="titulo menor" style="font-size:34px">Do agro, pelo agro.</p>
+          <div class="espaco"></div>
+          <div style="display:flex;justify-content:center">${LOCKUP(50)}</div>
+        </div>
+        <div class="empurra"></div>`;
+      break;
+
+    default:
+      throw new Error(`tipo de slide desconhecido: ${s.tipo}`);
+  }
+  return `<div class="${cls.join(" ")}">${foto(s)}${corpo}</div>`;
+}
+
+const specPath = resolve(process.argv[2] || "");
+if (!specPath) {
+  console.error("uso: node docs/gorayeb/render.mjs <spec.json>");
+  process.exit(1);
+}
+const spec = JSON.parse(readFileSync(specPath, "utf8"));
+const nome = spec.id || basename(specPath).replace(/\.json$/, "");
+const saida = join(AQUI, "saida", nome);
+mkdirSync(saida, { recursive: true });
+
+const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"></head><body style="background:#333">
+${spec.slides.map(monta).join("\n")}
+</body></html>`;
+const htmlPath = join(AQUI, "template", `_${nome}.html`);
+writeFileSync(htmlPath, html);
+
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
+await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "networkidle" });
+await page.evaluate(() => document.fonts.ready);
+/* centra o jugo exatamente no vão entre o F e o G de cada lockup */
+await page.evaluate(() => {
+  for (const m of document.querySelectorAll(".marca")) {
+    const f = m.querySelector(".f").getBoundingClientRect();
+    const g = m.querySelector(".g").getBoundingClientRect();
+    const base = m.getBoundingClientRect();
+    m.style.setProperty("--vao", `${(f.right + g.left) / 2 - base.left}px`);
+  }
+});
+
+const nos = await page.$$(".slide");
+for (const [i, no] of nos.entries()) {
+  const arq = join(saida, `pag-${String(i + 1).padStart(2, "0")}.png`);
+  await no.screenshot({ path: arq });
+  console.log(arq);
+}
+await browser.close();
+console.log(`${nos.length} slides em ${saida}`);

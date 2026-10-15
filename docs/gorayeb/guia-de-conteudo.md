@@ -43,6 +43,16 @@ Formato único: **1080 × 1350 px (4:5)**, PNG.
 | Terracota (fundo de citação, jul) | ![](https://placehold.co/16/6b2d14/6b2d14) | `#6b2d14` |
 | Verde-oliva (destaque de palavra, raro) | ![](https://placehold.co/16/5f7a3a/5f7a3a) | `~#5f7a3a` |
 
+**Listras verdes** (o elemento da marca, do `Asset 51.png` do Drive): faixas
+verticais alternando `#121610` e `#1b2217`. No arquivo original de 2161 px de
+largura o período é 468 px, na proporção escuro 108 / claro 39 / escuro 108 /
+claro 213. Em peça de 1080 px isso vira um período de 234 px. Está montado em
+`template/base.css` na classe `.listras`.
+
+**Marca F.T.G.**: o jugo dourado arqueia sobre as letras F e G, e a haste
+vertical faz o traço entre elas. O símbolo isolado está em
+`assets/ftg-marca.png`, extraído do mesmo arquivo da marca.
+
 Regras de uso observadas:
 - O verde é a base. Creme e bordô entram para quebrar o ritmo (1 a 2 slides
   por carrossel). Branco puro só em linha fina de caixa e em legenda sobre foto.
@@ -52,19 +62,16 @@ Regras de uso observadas:
 
 ### Tipografia
 
-- **Títulos**: slab serif geométrica, peso bold/extra bold, **caixa alta**,
-  tracking apertado. Mesmo desenho de Rockwell Extra Bold (G com esporão
-  vertical, R de perna reta, serifas retas). A versão livre equivalente no
-  Google Fonts é **Arvo Bold**. Confirmar o nome exato no `Gorayeb.ai`
-  (pasta Prelúdio) antes de montar template.
+- **Títulos**: **Arvo Bold**, caixa alta, tracking apertado (confirmado pelo
+  Victor em 15/out, arquivos em `fontes/arvo/`).
 - **Subtítulos e frases-chave**: a mesma slab em regular, caixa baixa,
   frequentemente com **sublinhado** na expressão que importa
   ("não espera", "vira briga", "financiamento travado").
 - **Citações**: slab em itálico dentro de caixa de borda fina e cantos
   arredondados.
-- **Corpo**: sans neutra (Arial/Helvetica) em blocos curtos, às vezes
-  justificados, sobre foto. Em slides de dado (mapa, números) o corpo é a
-  slab regular.
+- **Corpo**: **Helvetica Neue** (Light para texto corrido, Bold para o que
+  precisa pesar), em blocos curtos sobre foto. Em slides de dado (mapa,
+  números) o corpo é a slab regular. Arquivos em `fontes/helvetica/`.
 - **Assinatura**: "Do agro, pelo agro." em slab regular pequeno. Fica no
   rodapé (centro ou direita) ou no topo esquerdo (estáticos de julho).
 - **@gorayebadvocacia** em slab regular pequeno, topo centralizado nos slides
@@ -161,6 +168,9 @@ Reels: 14 cortes do podcast com o Seu Roberto (ago) e 7 cortes anteriores (jul).
   IMERSÃO`, `FOTOS SELEÇÃO`.
 
 ## 7. Como diferenciar o que vamos fazer aqui
+
+Extensão combinada com o Victor: **5 a 7 slides por carrossel**, contra os 9 a
+11 das peças de setembro.
 
 Decisões sugeridas para os novos carrosséis (a confirmar com o Victor):
 - Manter paleta, slab e assinatura. Isso é a marca, não o template.
