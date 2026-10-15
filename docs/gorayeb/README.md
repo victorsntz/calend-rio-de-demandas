@@ -52,7 +52,23 @@ encurtar a frase ou marcar a quebra na mão com uma quebra de linha no JSON.
 | `lista` | `titulo`, `itens`, `remate` | até quatro itens, um por linha |
 | `dado` | `numero`, `leitura`, `texto` | um número grande com a leitura embaixo |
 | `fecho` | `sintese`, `cta` | fechar com assinatura e lockup |
+| `capa-foto` | `foto`, `etiqueta`, `titulo`, `sub`, `escala` | capa de foto cheia |
+| `corpo-foto` | `foto`, `titulo` (2 linhas), `paragrafos` | foto em cima, chapa embaixo |
+| `perspectiva` | `foto`, `itens`, `guia`, `titulo`, `fonte` | cifras deitadas no plano da foto |
 | `figura` | `figura` + campos da figura | gráfico, mapa ou números |
+
+### Os três modelos de foto
+
+- **`capa-foto`**: foto sangrando, logo no alto, etiqueta de assunto e título
+  no pé, com uma linha de apoio. `*assim*` engrossa a palavra que pesa.
+- **`corpo-foto`**: foto na metade de cima, chapa verde embaixo com a marca
+  F.T.G. em opacidade baixa. O título tem duas linhas: a primeira em regular,
+  a segunda em bold itálico. Use `\n` pra separar.
+- **`perspectiva`**: as cifras deitam no plano da foto. O campo `guia` controla
+  a diagonal: `x0,y0` onde começa, `x1,y1` onde termina (em % do slide),
+  `giro` e `incl` a inclinação, `escala0` e `escala1` o tamanho de quem está
+  perto e de quem está longe. Escolha uma foto com perspectiva clara, como
+  lavoura em curva de nível ou estrada se afastando.
 
 ### Fundos
 
@@ -88,6 +104,22 @@ passar pelo mesmo teste antes de entrar.
 
 **Número sem fonte não entra na arte.** O contrato com a Gorayeb exige que toda
 informação factual seja verificável.
+
+## Escolha de foto
+
+Ordem de preferência: banco da Gorayeb primeiro, Pinterest depois. O banco está
+no Drive, em `BANCO DE ARQUIVOS › FOTOS GORAYEB`, com Fernando, equipe,
+escritório e as aplicações da marca. Essas podem publicar sem ressalva.
+
+Buscando no Pinterest, o termo precisa dizer Brasil: *"fazenda brasileira
+cerrado mineiro"* traz o que a gente quer, *"fazenda cerca"* traz Meio-Oeste
+americano. Depois de baixar, abra em tamanho cheio e descarte duas coisas:
+
+1. **Marca d'água** de banco de imagem ou assinatura de fotógrafo.
+2. **Cara de IA**, que no agro é epidemia: madeira uniforme demais, gado
+   simétrico, telhado regular demais, luz sem direção.
+
+A procedência de tudo fica em `img/_creditos.json`.
 
 Campos que valem em qualquer slide: `fundo` (`creme`, `areia`, `bordo`; sem
 nada sai verde com listras), `foto` (caminho do arquivo) e `veu`

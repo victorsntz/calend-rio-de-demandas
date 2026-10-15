@@ -63,8 +63,11 @@ const LOCKUP = (altura = 74, claro = true) =>
 
 function foto(s) {
   if (!s.foto) return "";
+  const img = `<img class="foto" src="${esc(s.foto)}" alt="">`;
+  /* capa e perspectiva trazem o próprio véu, em dois gradientes */
+  if (s.veu === "nenhum" || s.tipo === "capa-foto" || s.tipo === "perspectiva") return img;
   const veu = s.veu === "marrom" ? "veu-marrom" : s.veu === "topo" ? "veu-topo" : "veu-verde";
-  return `<img class="foto" src="${esc(s.foto)}" alt=""><div class="${veu}"></div>`;
+  return `${img}<div class="${veu}"></div>`;
 }
 
 /* fundos claros: a logo vai na versão escura e o texto em verde */
@@ -74,7 +77,7 @@ function monta(s) {
   const claro = !CLAROS.has(s.fundo) || !!s.foto;
   const LOGO = (h) => LOCKUP(h, claro);
   const cls = ["slide", "vinheta"];
-  if (s.foto && !s.meiaFoto) cls.push("bg-foto");
+  if (s.foto && !s.meiaFoto && s.tipo !== "corpo-foto") cls.push("bg-foto");
   else if (s.fundo === "creme") cls.push("bg-creme");
   else if (s.fundo === "areia") cls.push("bg-areia");
   else if (s.fundo === "offwhite") cls.push("bg-offwhite");
@@ -91,6 +94,8 @@ function monta(s) {
   if (s.borda === "dourada") cls.push("borda-dourada");
   if (s.borda === "bordo") cls.push("borda-bordo");
   if (s.meiaFoto) cls.push("meia-foto");
+  if (s.tipo === "capa-foto" || s.tipo === "perspectiva") cls.push("capa-foto", "bg-foto");
+  if (s.tipo === "corpo-foto") cls.push("corpo-foto", "bg-verde");
 
   let corpo = "";
   switch (s.tipo) {
@@ -178,6 +183,77 @@ function monta(s) {
         <div class="empurra"></div>`;
       break;
 
+
+    /* capa de foto: foto sangrando, marca no alto, etiqueta e título no pé.
+       Modelo que o Victor mandou, enxugado: sem carimbo e sem a assinatura
+       repetida no topo. */
+    case "capa-foto":
+      corpo = `
+        <div class="veu-capa"></div>
+        ${LOGO(66)}
+        <div class="empurra"></div>
+        ${s.etiqueta ? `<span class="etiqueta"><span class="bolota"></span>${esc(s.etiqueta)}</span>` : ""}
+        <h1 class="titulo-capa ${s.escala || ""}">${titulo(s.titulo)}</h1>
+        ${s.sub ? `<p class="sub-capa">${titulo(s.sub)}</p>` : ""}`;
+      break;
+
+    /* corpo de foto: foto em cima, chapa embaixo com a marca d'água da casa */
+    case "corpo-foto": {
+      const [l1, l2] = String(s.titulo || "").split("\n");
+      corpo = `
+        <div class="faixa-img"><img src="${esc(s.foto || "")}" alt=""></div>
+        <div class="chapa">
+          <h2 class="titulo-corpo">
+            <span class="l1">${titulo(l1 || "")}</span>
+            ${l2 ? `<span class="l2">${titulo(l2)}</span>` : ""}
+          </h2>
+          ${(s.paragrafos || []).map((t) => `<p class="texto-corpo">${rico(t)}</p>`).join("")}
+          <div class="pe">${LOGO(58)}</div>
+        </div>`;
+      break;
+    }
+
+    /* gráfico em perspectiva: as cifras deitadas no plano da foto, seguindo
+       a diagonal do terreno, diminuindo conforme se afastam. */
+    case "perspectiva": {
+      const its = (s.itens || []).slice(0, 4);
+      const g = s.guia || {};
+      const x0 = g.x0 ?? 10, y0 = g.y0 ?? 42, x1 = g.x1 ?? 62, y1 = g.y1 ?? 88;
+      const giro = g.giro ?? 16, incl = g.incl ?? -9;
+      const e0 = g.escala0 ?? 1, e1 = g.escala1 ?? 0.62;
+      const fios = its
+        .map((_, k) => {
+          const t = its.length > 1 ? k / (its.length - 1) : 0;
+          const x = x0 + (x1 - x0) * t, y = y0 + (y1 - y0) * t;
+          return `<line x1="${(x - 7).toFixed(1)}%" y1="${(y + 1.4).toFixed(1)}%" x2="${(x + 34).toFixed(1)}%" y2="${(y - 7).toFixed(1)}%"
+                    stroke="rgba(235,227,200,.9)" stroke-width="1" vector-effect="non-scaling-stroke"/>`;
+        })
+        .join("");
+      const marcas = its
+        .map((it, k) => {
+          const t = its.length > 1 ? k / (its.length - 1) : 0;
+          const x = x0 + (x1 - x0) * t, y = y0 + (y1 - y0) * t;
+          const e = e0 + (e1 - e0) * t;
+          return `<div class="persp-item" style="left:${x.toFixed(1)}%;top:${y.toFixed(1)}%;
+                       transform:rotate(${giro}deg) skewX(${incl}deg) scale(${e.toFixed(3)})">
+                    <span class="n" style="font-size:${s.corpoNum || 88}px">${esc(it.numero)}</span>
+                    <span class="r" style="font-size:${s.corpoRot || 27}px">${esc(it.rotulo)}</span>
+                  </div>`;
+        })
+        .join("");
+      corpo = `
+        <div class="veu-capa"></div>
+        ${LOGO(60)}
+        <svg class="persp-fios" viewBox="0 0 100 100" preserveAspectRatio="none">${fios}</svg>
+        <div class="perspectiva">${marcas}</div>
+        <div class="empurra"></div>
+        <div class="pe-persp">
+          ${s.titulo ? `<h2 class="titulo menor">${titulo(s.titulo)}</h2>` : ""}
+          ${s.fonte ? `<div class="espaco-sm"></div><p class="fonte">Fonte: ${esc(s.fonte)}</p>` : ""}
+        </div>`;
+      break;
+    }
+
     /* figura: donut, barras, mapa ou números em diagonal */
     case "figura": {
       const fab = FIGURAS[s.figura];
@@ -192,6 +268,9 @@ function monta(s) {
 
     default:
       throw new Error(`tipo de slide desconhecido: ${s.tipo}`);
+  }
+  if (s.tipo === "corpo-foto") {
+    return `<div class="${cls.join(" ")}">${corpo}</div>`;
   }
   if (s.meiaFoto) {
     return `<div class="${cls.join(" ")}">

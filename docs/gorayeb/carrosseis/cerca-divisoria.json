@@ -1,34 +1,35 @@
 {
   "id": "cerca-divisoria",
   "titulo": "Cerca divisória: quem paga a conta",
-  "nota": "Fotos do Pinterest, para aprovação. Conferir licença antes de publicar: ver docs/gorayeb/img/_creditos.json. As fotos do banco da Gorayeb entram no lugar das genéricas assim que escolhidas.",
+  "nota": "Fotos do banco da Gorayeb (Fernando, curral) e do Pinterest (campo). Ver _creditos.json: as do Pinterest precisam de licença conferida antes de publicar.",
   "legenda_instagram": "A cerca caiu. E agora, quem paga?\n\nNo meio rural essa conta sempre vira discussão de vizinho. Mas o Código Civil já respondeu isso faz tempo: a cerca que separa duas propriedades é dos dois. Construir, consertar e manter é despesa dividida meio a meio (art. 1.297).\n\nTem um detalhe que muda tudo: isso vale pra cerca que fica em cima da divisa. Se você levantou a cerca dentro da sua terra, ela é sua e a conta também.\n\nE se o vizinho se recusa a pagar a parte dele? Dá pra cobrar. Mas antes de chamar advogado, junte o que prova: orçamento, foto, nota do material e a conversa onde vocês combinaram.\n\nCerca é limite de terra, não de relação. Resolve cedo, enquanto ainda dá pra conversar na porteira.\n\nDo agro. Pelo agro.",
   "slides": [
     {
-      "tipo": "capa",
+      "tipo": "capa-foto",
+      "foto": "../img/capa-cerrado-divisa.jpg",
+      "etiqueta": "Direito agrário.",
       "titulo": "A cerca caiu.\nE agora, quem paga?",
       "escala": "menor",
-      "gancho": "A resposta está no Código Civil. E quase ninguém leu.",
-      "arraste": "Arrasta pro lado",
-      "foto": "../img/capa-porteira-ipe.jpg",
-      "veu": "topo"
+      "sub": "A resposta *está no Código Civil*. E quase ninguém leu."
     },
     {
-      "tipo": "tese",
-      "tese": "Cerca de divisa não é sua.\nÉ de vocês dois.",
-      "texto": "O muro, a cerca e a vala que separam duas propriedades pertencem aos dois vizinhos em comum. Está no art. 1.297 do Código Civil.",
-      "fundo": "offwhite",
-      "borda": "dourada"
+      "tipo": "corpo-foto",
+      "foto": "../img/porteira-madeira.jpg",
+      "titulo": "Cerca de divisa\nnão é sua.",
+      "paragrafos": [
+        "O muro, a cerca e a vala que separam duas propriedades pertencem aos dois vizinhos em comum. Está no art. 1.297 do Código Civil.",
+        "Levantar, consertar e manter: as três despesas saem metade de cada um."
+      ]
     },
     {
       "tipo": "figura",
       "figura": "donut",
-      "titulo": "A conta da divisa\nem uma imagem",
+      "titulo": "Metade é sua.\nMetade é dele.",
       "valor": 50,
       "destaque": "50%",
       "rotulo": "é a sua parte",
       "resto": "a outra metade é do vizinho",
-      "legenda": "Levantar, consertar e manter: a lei divide as três despesas meio a meio entre os dois confinantes.",
+      "legenda": "Vale pra cerca que está em cima da linha de divisa, não pra que você levantou pra dentro.",
       "fonte": "art. 1.297 do Código Civil",
       "alt": "Donut dividido ao meio",
       "textura": "listras"
@@ -36,7 +37,7 @@
     {
       "tipo": "figura",
       "figura": "tabela",
-      "titulo": "Onde a cerca está\nmuda quem paga",
+      "titulo": "Um metro pra dentro\nmuda tudo",
       "colunas": [
         "Em cima da divisa",
         "Pra dentro da sua terra"
@@ -69,9 +70,9 @@
     },
     {
       "tipo": "foto-texto",
-      "titulo": "Um metro pra dentro\nmuda toda a conta",
-      "texto": "O vizinho não tem obrigação nenhuma sobre o que está fora da linha de divisa. Antes de levantar, confira onde a divisa passa de verdade.",
-      "foto": "../img/estrada-terra-roxa.jpg",
+      "titulo": "Fora da linha,\no vizinho não deve nada",
+      "texto": "Antes de levantar, confira onde a divisa passa de verdade. Matrícula, memorial e, quando existe, o georreferenciamento.",
+      "foto": "../img/estrada-cerrado-cerca.jpg",
       "veu": "marrom"
     },
     {
@@ -84,7 +85,7 @@
       ],
       "remate": "Sem prova, a cobrança vira a sua palavra contra a dele.",
       "meiaFoto": true,
-      "foto": "../img/curral-nelore.jpg"
+      "foto": "../img/fernando-assinando.jpg"
     },
     {
       "tipo": "fecho",

@@ -277,6 +277,8 @@
    ====================================================================== */
 
 /* respiro de luz: tira o ar de chapa morta sem virar mancha */
+.bg-foto.vinheta::after, .capa-foto.vinheta::after,
+.corpo-foto.vinheta::after, .meia-foto.vinheta::after { content: none; }
 .vinheta::after {
   content: "";
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
@@ -361,3 +363,89 @@
 .tabela tbody td.col-b { opacity: .72; }
 .bg-creme .tabela tbody tr, .bg-areia .tabela tbody tr,
 .bg-offwhite .tabela tbody tr, .bg-branco .tabela tbody tr { border-top-color: rgba(27,35,22,.22); }
+
+/* ======================================================================
+   CAPA DE FOTO — foto sangrando, marca no alto, categoria e título no pé.
+   ====================================================================== */
+.capa-foto { padding: var(--margem); }
+.capa-foto .veu-capa {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(16,22,13,.62) 0%, rgba(16,22,13,.18) 22%, rgba(16,22,13,0) 40%),
+    linear-gradient(0deg,   rgba(16,22,13,.92) 0%, rgba(16,22,13,.74) 24%, rgba(16,22,13,.26) 48%, rgba(16,22,13,0) 68%);
+}
+.capa-foto .etiqueta {
+  display: inline-flex; align-items: center; gap: 16px;
+  border: 2px solid rgba(235,227,200,.55); border-radius: 999px;
+  padding: 11px 26px 11px 11px; align-self: flex-start;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 400; font-size: 25px; color: var(--creme);
+}
+.capa-foto .etiqueta .bolota {
+  width: 36px; height: 36px; border-radius: 999px; flex: none;
+  background: var(--dourado);
+}
+.capa-foto .titulo-capa {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 92px; line-height: 1.04; letter-spacing: -.02em;
+  margin-top: 26px;
+}
+.capa-foto .titulo-capa.menor { font-size: 76px; }
+.capa-foto .sub-capa {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 38px; line-height: 1.32; margin-top: 22px;
+  max-width: 17em;
+}
+.capa-foto .sub-capa strong { font-weight: 700; }
+
+/* ======================================================================
+   CORPO DE FOTO — foto em cima, chapa embaixo com a marca d'água.
+   ====================================================================== */
+.corpo-foto { padding: 0; }
+.corpo-foto .faixa-img { position: relative; height: 52%; flex: none; overflow: hidden; }
+.corpo-foto .faixa-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.corpo-foto .chapa {
+  position: relative; flex: 1; min-height: 0; overflow: hidden;
+  display: flex; flex-direction: column;
+  padding: 64px var(--margem) 56px;
+}
+/* a marca d'água vive na chapa, não no slide inteiro */
+.corpo-foto .chapa::before {
+  content: "";
+  position: absolute; z-index: 0; pointer-events: none;
+  width: 62%; aspect-ratio: 838 / 544;
+  right: -14%; bottom: -8%;
+  background: url("../assets/simbolo-marcadagua.png") no-repeat center / contain;
+  opacity: .10; transform: rotate(-7deg);
+}
+.corpo-foto .chapa > * { position: relative; z-index: 1; }
+.corpo-foto .titulo-corpo {
+  font-family: "Arvo", Georgia, serif; font-size: 58px; line-height: 1.12;
+}
+.corpo-foto .titulo-corpo .l1 { font-weight: 400; display: block; }
+.corpo-foto .titulo-corpo .l2 { font-weight: 700; font-style: italic; display: block; }
+.corpo-foto .texto-corpo {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 31px; line-height: 1.56; margin-top: 34px;
+  max-width: 21em;
+}
+.corpo-foto .pe { margin-top: auto; display: flex; justify-content: center; padding-top: 40px; }
+
+/* ======================================================================
+   GRÁFICO EM PERSPECTIVA — as cifras deitadas no plano da foto.
+   ====================================================================== */
+.perspectiva { position: absolute; inset: 0; z-index: 1; }
+.persp-item { position: absolute; transform-origin: left bottom; white-space: nowrap; }
+.persp-item .n {
+  font-family: "Arvo", Georgia, serif; font-weight: 700; color: var(--creme);
+  display: block; line-height: .94; text-shadow: 0 3px 18px rgba(0,0,0,.55);
+}
+.persp-item .r {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 400;
+  color: var(--creme); display: block; margin-top: 6px; opacity: .92;
+  text-shadow: 0 2px 12px rgba(0,0,0,.6);
+}
+.persp-fios { position: absolute; inset: 0; z-index: 0; opacity: .5; }
+
+/* o pé da perspectiva fica numa faixa própria, longe das cifras */
+.pe-persp { position: relative; z-index: 2; }

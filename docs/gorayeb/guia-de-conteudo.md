@@ -152,6 +152,44 @@ Fórmulas de título que se repetem (e funcionam):
 Palavras-âncora: terra, porteira, lida, patrimônio, família, geração, papel,
 gaveta, safra, calendário da fazenda, "da porteira pra dentro / pra fora".
 
+### Como a Gorayeb escreve um título (e como não escreve)
+
+Levantei os títulos das peças publicadas de junho a outubro. O padrão é
+consistente e vale como regra.
+
+**O que eles fazem**
+
+1. **Afirmam seco.** Sujeito concreto, verbo, ponto final.
+   *"O problema começa no silêncio." · "Marca não é enfeite." ·
+   "Holding rural virou moda."*
+2. **Negam e corrigem.** A fórmula mais usada da casa.
+   *"Não é por falta de trabalho. Por falta de planejamento." ·
+   "Contrato bom não é desconfiança. É respeito pelos dois lados." ·
+   "Planejar não é pensar na morte."*
+3. **Espelham duas frases.** A segunda vira a chave da primeira.
+   *"Dinheiro perdido volta. Terra perdida, quase nunca." ·
+   "A terra não espera. Sua segurança jurídica também não devia." ·
+   "Quem se antecipa protege. Quem espera, remedia."*
+4. **Falam com o sujeito, não com a plateia.**
+   *"Cancelaram seu CAR?" seguido de "Calma. Nem sempre é o fim da linha." ·
+   "Deixa eu te mostrar o caminho do preço." · "O recado é esse:"*
+
+**O que eles nunca fazem**
+
+Não existe, em nenhuma peça, título que fale sobre o próprio post. Nada de
+"entenda", "veja", "descubra", "confira", "saiba mais", "neste carrossel",
+"em uma imagem", "tudo o que você precisa saber", "o guia definitivo". Esse
+vocabulário é de marketing de conteúdo genérico e destoa na hora.
+
+Também não existe superlativo ("o melhor", "o maior"), promessa de resultado
+nem pergunta retórica sem resposta logo abaixo. As duas primeiras são vedação
+da OAB; a terceira é só preguiça.
+
+**O teste.** Leia o título em voz alta como se o Fernando estivesse falando
+com um produtor na porteira. Se soar como legenda de agência, está errado.
+*"A conta da divisa em uma imagem"* reprova. *"Metade é sua. Metade é dele."*
+passa.
+
 ## 5. O que já foi publicado (não repetir sem ângulo novo)
 
 Carrosséis: CAR cancelado (jun) · Equipe (jul) · Trajetória (jul) · Embrapa
