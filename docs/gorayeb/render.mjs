@@ -171,12 +171,10 @@ function monta(s) {
       corpo = `
         ${ARROBA}
         <div class="empurra"></div>
-        <p class="titulo menor centro" style="text-align:center">${titulo(s.sintese)}</p>
-        ${s.cta ? `<div class="espaco"></div><div class="centro" style="text-align:center"><span class="cta">${rico(s.cta)}</span></div>` : ""}
+        <p class="titulo menor">${titulo(s.sintese)}</p>
+        ${s.cta ? `<div class="espaco"></div><span class="cta">${rico(s.cta)}</span>` : ""}
         <div class="espaco-lg"></div>
-        <div class="centro" style="text-align:center">
-          <div style="display:flex;justify-content:center">${LOGO(72)}</div>
-        </div>
+        ${LOGO(72)}
         <div class="empurra"></div>`;
       break;
 

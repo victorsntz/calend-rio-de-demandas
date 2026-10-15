@@ -453,3 +453,6 @@
 
 /* o pé da perspectiva fica numa faixa própria, longe das cifras */
 .pe-persp { position: relative; z-index: 2; }
+
+/* alinhamento padrão à esquerda, inclusive no fecho */
+.slide .cta { align-self: flex-start; }
