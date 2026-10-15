@@ -35,6 +35,12 @@ Sai em `docs/gorayeb/saida/<nome>/pag-01.png`… em 1080 × 1350.
 Em qualquer campo de texto: `_assim_` sublinha a expressão, `*assim*` engrossa,
 e a quebra de linha vira quebra de linha na arte.
 
+**Viúva não passa.** O render costura as duas últimas palavras de cada linha
+com espaço rígido, então nunca sobra palavra sozinha fechando um bloco. Em
+título, tese, citação e frase curta a costura é mais firme: preposição e artigo
+grudam na palavra seguinte. Se mesmo assim a quebra ficar feia, o jeito é
+encurtar a frase ou marcar a quebra na mão com uma quebra de linha no JSON.
+
 ### Tipos de slide
 
 | tipo | campos | serve pra |
@@ -48,6 +54,18 @@ e a quebra de linha vira quebra de linha na arte.
 | `fecho` | `sintese`, `cta` | fechar com assinatura e lockup |
 | `figura` | `figura` + campos da figura | gráfico, mapa ou números |
 
+### Fundos
+
+Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
+
+| campo | valores |
+| --- | --- |
+| `fundo` | `offwhite`, `branco`, `creme`, `areia`, `bordo`, `marrom`; sem nada sai verde |
+| `textura` | `listras`, `marca`, `marca-baixo`, `marca-esq` |
+| `borda` | `dourada`, `bordo` |
+| `foto` | caminho do arquivo, com `veu` em `verde`, `marrom` ou `topo` |
+| `meiaFoto` | `true` põe a foto na metade de cima e o texto na de baixo |
+
 ### Figuras (`"tipo": "figura"`)
 
 | `figura` | campos | serve pra |
@@ -56,6 +74,7 @@ e a quebra de linha vira quebra de linha na arte.
 | `barras` | `itens` de `{rotulo, valor, valorTexto, destaque}` | comparar 2 a 5 grandezas |
 | `mapa` | `mapa` (`brasil`), `pontos` de `{lon, lat, raio, rotulo}` | situar no território |
 | `numeros` | `itens` de `{numero, rotulo}` | até 4 cifras em diagonal |
+| `tabela` | `colunas` (2) e `linhas` de `{criterio, a, b}` | comparar dois cenários |
 
 Todas aceitam `legenda` (a frase que explica), `fonte` (de onde veio o número) e
 `alt` (a descrição pra quem usa leitor de tela).

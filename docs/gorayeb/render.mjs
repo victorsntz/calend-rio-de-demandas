@@ -14,12 +14,44 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const AQUI = dirname(fileURLToPath(import.meta.url));
 const esc = (s = "") => String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+
+/* Viúva é palavra sozinha fechando um bloco. Costura as duas últimas
+   palavras de cada linha com espaço rígido, pra nunca sobrar uma só.
+   Em título e frase curta costura também monossílabos no meio da linha. */
+const NBSP = "\u00a0";
+const CURTAS = /^(a|à|ao|as|às|o|os|e|é|em|no|na|nos|nas|de|do|da|dos|das|um|uma|uns|umas|por|pra|pro|que|se|com|sem|sob|ou|já|só|até|mas|nem)$/i;
+function costura(txt, agressivo = false) {
+  return txt
+    .split("\n")
+    .map((linha) => {
+      let ps = linha.split(/ +/).filter(Boolean);
+      if (ps.length < 2) return linha;
+      if (agressivo) {
+        /* junta preposição e artigo à palavra seguinte */
+        const out = [];
+        for (let i = 0; i < ps.length; i++) {
+          if (CURTAS.test(ps[i]) && i < ps.length - 1) {
+            out.push(ps[i] + NBSP + ps[i + 1]);
+            i++;
+          } else out.push(ps[i]);
+        }
+        ps = out;
+      }
+      if (ps.length >= 2) ps[ps.length - 2] += NBSP + ps.pop();
+      return ps.join(" ");
+    })
+    .join("\n");
+}
+
 /* _texto_ sublinha, *texto* engrossa, quebra de linha vira <br> */
-const rico = (s = "") =>
-  esc(s)
+const rico = (s = "", agressivo = false) =>
+  esc(costura(String(s), agressivo))
     .replace(/_([^_]+)_/g, '<span class="marca-texto">$1</span>')
     .replace(/\*([^*]+)\*/g, "<strong>$1</strong>")
     .replace(/\n/g, "<br>");
+
+/* títulos, teses e frases curtas levam costura agressiva */
+const titulo = (s) => rico(s, true);
 
 const ARROBA = '<div class="arroba">@gorayebadvocacia</div>';
 const ASSINA = (classe = "") => `<div class="assinatura ${classe}">Do agro, pelo agro.</div>`;
@@ -67,8 +99,8 @@ function monta(s) {
       corpo = `
         ${LOGO(70)}
         <div class="espaco-lg"></div>
-        <h1 class="titulo ${s.escala || ""}">${rico(s.titulo)}</h1>
-        ${s.gancho ? `<div class="espaco"></div><div class="caixa-fina corpo menor">${rico(s.gancho)}</div>` : ""}
+        <h1 class="titulo ${s.escala || ""}">${titulo(s.titulo)}</h1>
+        ${s.gancho ? `<div class="espaco"></div><div class="caixa-fina corpo menor">${titulo(s.gancho)}</div>` : ""}
         <div class="rodape">
           <div class="pilula">${esc(s.arraste || "Arrasta pro lado")} <span>▶</span></div>
           ${ASSINA()}
@@ -80,7 +112,7 @@ function monta(s) {
       corpo = `
         ${ARROBA}
         <div class="meio">
-          <div class="entre-fios"><p class="tese ${s.centro ? "centro" : ""}">${rico(s.tese)}</p></div>
+          <div class="entre-fios"><p class="tese ${s.centro ? "centro" : ""}">${titulo(s.tese)}</p></div>
           ${s.texto ? `<div class="espaco"></div><p class="corpo">${rico(s.texto)}</p>` : ""}
         </div>
         <div class="rodape"><span></span>${ASSINA()}</div>`;
@@ -91,7 +123,7 @@ function monta(s) {
       corpo = `
         ${ARROBA}
         <div class="empurra"></div>
-        ${s.titulo ? `<h2 class="titulo menor">${rico(s.titulo)}</h2><div class="espaco"></div>` : ""}
+        ${s.titulo ? `<h2 class="titulo menor">${titulo(s.titulo)}</h2><div class="espaco"></div>` : ""}
         ${s.texto ? `<p class="corpo">${rico(s.texto)}</p>` : ""}
         <div class="espaco-lg"></div>
         <div class="rodape"><span></span>${ASSINA()}</div>`;
@@ -101,7 +133,7 @@ function monta(s) {
     case "citacao":
       corpo = `
         ${ARROBA}
-        <div class="meio"><div class="caixa-fina"><p class="citacao">${rico(s.citacao)}</p></div></div>
+        <div class="meio"><div class="caixa-fina"><p class="citacao">${titulo(s.citacao)}</p></div></div>
         <div class="rodape"><span></span>${ASSINA()}</div>`;
       break;
 
@@ -110,9 +142,9 @@ function monta(s) {
       corpo = `
         ${ARROBA}
         <div class="empurra"></div>
-        ${s.titulo ? `<h2 class="titulo menor">${rico(s.titulo)}</h2><div class="espaco"></div>` : ""}
+        ${s.titulo ? `<h2 class="titulo menor">${titulo(s.titulo)}</h2><div class="espaco"></div>` : ""}
         <ul class="lista">${(s.itens || []).map((i) => `<li><span>${rico(i)}</span></li>`).join("")}</ul>
-        ${s.remate ? `<div class="espaco"></div><p class="tese">${rico(s.remate)}</p>` : ""}
+        ${s.remate ? `<div class="espaco"></div><p class="tese">${titulo(s.remate)}</p>` : ""}
         <div class="empurra"></div>
         <div class="rodape"><span></span>${ASSINA()}</div>`;
       break;
@@ -124,7 +156,7 @@ function monta(s) {
         <div class="empurra"></div>
         <p class="titulo maior dourado">${rico(s.numero)}</p>
         <div class="espaco-sm"></div>
-        <p class="tese">${rico(s.leitura)}</p>
+        <p class="tese">${titulo(s.leitura)}</p>
         ${s.texto ? `<div class="espaco"></div><p class="corpo">${rico(s.texto)}</p>` : ""}
         <div class="empurra"></div>
         <div class="rodape"><span></span>${ASSINA()}</div>`;
@@ -135,7 +167,7 @@ function monta(s) {
       corpo = `
         ${ARROBA}
         <div class="empurra"></div>
-        <p class="titulo menor centro" style="text-align:center">${rico(s.sintese)}</p>
+        <p class="titulo menor centro" style="text-align:center">${titulo(s.sintese)}</p>
         ${s.cta ? `<div class="espaco"></div><div class="centro" style="text-align:center"><span class="cta">${rico(s.cta)}</span></div>` : ""}
         <div class="espaco-lg"></div>
         <div class="centro" style="text-align:center">
@@ -152,7 +184,7 @@ function monta(s) {
       if (!fab) throw new Error(`figura desconhecida: ${s.figura}`);
       corpo = `
         ${ARROBA}
-        ${s.titulo ? `<div class="espaco"></div><h2 class="titulo menor">${rico(s.titulo)}</h2>` : ""}
+        ${s.titulo ? `<div class="espaco"></div><h2 class="titulo menor">${titulo(s.titulo)}</h2>` : ""}
         <div class="meio">${fab(s)}</div>
         <div class="rodape"><span></span>${ASSINA()}</div>`;
       break;

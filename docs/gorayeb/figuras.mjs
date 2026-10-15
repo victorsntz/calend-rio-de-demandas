@@ -13,6 +13,12 @@ import { fileURLToPath } from "node:url";
 
 const AQUI = dirname(fileURLToPath(import.meta.url));
 const esc = (s = "") => String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+/* costura a última palavra na anterior, pra não sobrar viúva */
+const ec = (s = "") => {
+  const ps = String(s).split(/ +/).filter(Boolean);
+  if (ps.length >= 2) ps[ps.length - 2] += "\u00a0" + ps.pop();
+  return esc(ps.join(" "));
+};
 const n2 = (v) => (Math.round(v * 100) / 100).toFixed(2).replace(/\.?0+$/, "");
 
 /* ---- donut de proporção ------------------------------------------------
@@ -41,7 +47,7 @@ export function donut(f) {
       <text x="${cx}" y="${cy + 54}" class="rot-txt" text-anchor="middle">${esc(f.rotulo || "")}</text>
       ${f.resto ? `<text x="${cx}" y="${cy + R + 96}" class="rot-txt" text-anchor="middle" opacity=".6">${esc(f.resto)}</text>` : ""}
     </svg>
-    ${f.legenda ? `<p class="figura-legenda">${esc(f.legenda)}</p>` : ""}
+    ${f.legenda ? `<p class="figura-legenda">${ec(f.legenda)}</p>` : ""}
     ${f.fonte ? `<p class="fonte">Fonte: ${esc(f.fonte)}</p>` : ""}
   </div>`;
 }
@@ -69,7 +75,7 @@ export function barras(f) {
   return `
   <div class="figura">
     <svg viewBox="0 0 1000 ${h}" role="img" aria-label="${esc(f.alt || "")}">${linhas}</svg>
-    ${f.legenda ? `<p class="figura-legenda">${esc(f.legenda)}</p>` : ""}
+    ${f.legenda ? `<p class="figura-legenda">${ec(f.legenda)}</p>` : ""}
     ${f.fonte ? `<p class="fonte">Fonte: ${esc(f.fonte)}</p>` : ""}
   </div>`;
 }
@@ -105,7 +111,7 @@ export function mapa(f) {
       <path d="${m.d}" class="mapa-base"/>
       ${pontos}
     </svg>
-    ${f.legenda ? `<p class="figura-legenda">${esc(f.legenda)}</p>` : ""}
+    ${f.legenda ? `<p class="figura-legenda">${ec(f.legenda)}</p>` : ""}
     ${f.fonte ? `<p class="fonte">Fonte: ${esc(f.fonte)}</p>` : ""}
   </div>`;
 }
@@ -131,4 +137,37 @@ export function numeros(f) {
   </div>`;
 }
 
-export const FIGURAS = { donut, barras, mapa, numeros };
+
+/* ---- tabela de comparação -------------------------------------------
+   Duas colunas, uma por cenário, e uma linha por critério. Serve pra
+   mostrar "de um jeito é assim, do outro é assado" sem texto corrido.  */
+export function tabela(f) {
+  const cols = (f.colunas || []).slice(0, 2);
+  const linhas = (f.linhas || []).slice(0, 5);
+  const cab = cols
+    .map(
+      (c, i) =>
+        `<th class="${i === 0 ? "col-a" : "col-b"}"><span>${ec(c)}</span></th>`
+    )
+    .join("");
+  const corpo = linhas
+    .map(
+      (l) => `<tr>
+        <th scope="row">${ec(l.criterio)}</th>
+        <td class="col-a">${ec(l.a)}</td>
+        <td class="col-b">${ec(l.b)}</td>
+      </tr>`
+    )
+    .join("");
+  return `
+  <div class="figura">
+    <table class="tabela">
+      <thead><tr><th></th>${cab}</tr></thead>
+      <tbody>${corpo}</tbody>
+    </table>
+    ${f.legenda ? `<p class="figura-legenda">${ec(f.legenda)}</p>` : ""}
+    ${f.fonte ? `<p class="fonte">Fonte: ${esc(f.fonte)}</p>` : ""}
+  </div>`;
+}
+
+export const FIGURAS = { donut, barras, mapa, numeros, tabela };

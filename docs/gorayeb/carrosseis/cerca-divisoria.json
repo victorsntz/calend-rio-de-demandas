@@ -1,60 +1,90 @@
 {
   "id": "cerca-divisoria",
   "titulo": "Cerca divisória: quem paga a conta",
-  "nota": "Fotos achadas via Pinterest, para aprovação. Conferir licença antes de publicar: ver docs/gorayeb/img/_creditos.json.",
+  "nota": "Fotos do Pinterest, para aprovação. Conferir licença antes de publicar: ver docs/gorayeb/img/_creditos.json. As fotos do banco da Gorayeb entram no lugar das genéricas assim que escolhidas.",
   "legenda_instagram": "A cerca caiu. E agora, quem paga?\n\nNo meio rural essa conta sempre vira discussão de vizinho. Mas o Código Civil já respondeu isso faz tempo: a cerca que separa duas propriedades é dos dois. Construir, consertar e manter é despesa dividida meio a meio (art. 1.297).\n\nTem um detalhe que muda tudo: isso vale pra cerca que fica em cima da divisa. Se você levantou a cerca dentro da sua terra, ela é sua e a conta também.\n\nE se o vizinho se recusa a pagar a parte dele? Dá pra cobrar. Mas antes de chamar advogado, junte o que prova: orçamento, foto, nota do material e a conversa onde vocês combinaram.\n\nCerca é limite de terra, não de relação. Resolve cedo, enquanto ainda dá pra conversar na porteira.\n\nDo agro. Pelo agro.",
   "slides": [
     {
       "tipo": "capa",
       "titulo": "A cerca caiu.\nE agora, quem paga?",
       "escala": "menor",
-      "gancho": "A resposta tá no Código Civil. E quase ninguém leu.",
+      "gancho": "A resposta está no Código Civil. E quase ninguém leu.",
       "arraste": "Arrasta pro lado",
-      "foto": "../img/capa-cerca-entardecer.jpg",
+      "foto": "../img/capa-porteira-ipe.jpg",
       "veu": "topo"
     },
     {
       "tipo": "tese",
-      "tese": "Cerca de divisa não é sua. É de vocês dois.",
+      "tese": "Cerca de divisa não é sua.\nÉ de vocês dois.",
       "texto": "O muro, a cerca e a vala que separam duas propriedades pertencem aos dois vizinhos em comum. Está no art. 1.297 do Código Civil.",
       "fundo": "offwhite",
       "borda": "dourada"
     },
     {
-      "tipo": "lista",
-      "titulo": "O que a lei divide\nmeio a meio",
-      "itens": [
-        "Levantar a cerca pela primeira vez",
-        "Consertar o que o tempo ou o gado derrubou",
-        "A manutenção do dia a dia"
-      ],
-      "remate": "Despesa de divisa é conta de dois.",
+      "tipo": "figura",
+      "figura": "donut",
+      "titulo": "A conta da divisa\nem uma imagem",
+      "valor": 50,
+      "destaque": "50%",
+      "rotulo": "é a sua parte",
+      "resto": "a outra metade é do vizinho",
+      "legenda": "Levantar, consertar e manter: a lei divide as três despesas meio a meio entre os dois confinantes.",
+      "fonte": "art. 1.297 do Código Civil",
+      "alt": "Donut dividido ao meio",
       "textura": "listras"
     },
     {
-      "tipo": "citacao",
-      "citacao": "Só que tem um detalhe que muda tudo: isso vale pra cerca que está em cima da linha de divisa.",
-      "fundo": "areia",
-      "textura": "marca-baixo"
+      "tipo": "figura",
+      "figura": "tabela",
+      "titulo": "Onde a cerca está\nmuda quem paga",
+      "colunas": [
+        "Em cima da divisa",
+        "Pra dentro da sua terra"
+      ],
+      "linhas": [
+        {
+          "criterio": "De quem é",
+          "a": "dos dois vizinhos",
+          "b": "só sua"
+        },
+        {
+          "criterio": "Quem levanta",
+          "a": "os dois, meio a meio",
+          "b": "você"
+        },
+        {
+          "criterio": "Quem conserta",
+          "a": "os dois, meio a meio",
+          "b": "você"
+        },
+        {
+          "criterio": "Dá pra cobrar?",
+          "a": "dá",
+          "b": "não dá"
+        }
+      ],
+      "legenda": "Quem recua e levanta a cerca dentro do próprio imóvel perde o direito de dividir a despesa.",
+      "fundo": "offwhite",
+      "borda": "dourada"
     },
     {
       "tipo": "foto-texto",
-      "titulo": "Cerca pra dentro\né sua. A conta também.",
-      "texto": "Quem recua e levanta a cerca para dentro do próprio imóvel perde o direito de dividir a despesa. O vizinho não tem obrigação sobre o que está fora da divisa.",
-      "foto": "../img/terra-arada.jpg",
+      "titulo": "Um metro pra dentro\nmuda toda a conta",
+      "texto": "O vizinho não tem obrigação nenhuma sobre o que está fora da linha de divisa. Antes de levantar, confira onde a divisa passa de verdade.",
+      "foto": "../img/estrada-terra-roxa.jpg",
       "veu": "marrom"
     },
     {
       "tipo": "lista",
-      "titulo": "Se o vizinho\nnão quer pagar",
+      "titulo": "Se o vizinho\nnão quiser pagar",
       "itens": [
         "Orçamento e nota do material usado",
         "Foto do antes e do depois, com data",
-        "A conversa onde vocês combinaram a obra"
+        "A conversa onde combinaram a obra"
       ],
       "remate": "Sem prova, a cobrança vira a sua palavra contra a dele.",
       "meiaFoto": true,
-      "foto": "../img/faixa-porteira-pasto.jpg"
+      "foto": "../img/curral-nelore.jpg"
     },
     {
       "tipo": "fecho",

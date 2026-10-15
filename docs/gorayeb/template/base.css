@@ -100,20 +100,22 @@
 .tese {
   font-family: "Arvo", Georgia, serif;
   font-weight: 700;
-  font-size: 58px;
-  line-height: 1.18;
+  font-size: 56px;
+  line-height: 1.24;
+  max-width: 15em;
 }
 .citacao {
   font-family: "Arvo", Georgia, serif;
   font-style: italic;
-  font-size: 44px;
-  line-height: 1.32;
+  font-size: 42px;
+  line-height: 1.42;
 }
 .corpo {
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 36px;
-  line-height: 1.46;
+  font-size: 34px;
+  line-height: 1.58;
+  max-width: 19em;        /* medida que o olho lê sem se perder */
 }
 .corpo strong { font-weight: 700; }
 .corpo.menor { font-size: 31px; }
@@ -150,13 +152,16 @@
 .arroba {
   font-family: "Arvo", Georgia, serif; font-size: 24px;
   opacity: .72; text-align: left; letter-spacing: .01em;
+  margin-bottom: 46px;   /* folga entre o arroba e o que vem abaixo */
+  flex: none;
 }
 .assinatura {
   font-family: "Arvo", Georgia, serif; font-size: 24px;
   opacity: .9;
 }
 .rodape {
-  margin-top: auto; display: flex; align-items: flex-end;
+  margin-top: auto; padding-top: 54px; flex: none;  /* folga antes da assinatura */
+  display: flex; align-items: flex-end;
   justify-content: space-between; gap: var(--gutter);
 }
 
@@ -189,13 +194,14 @@
 
 /* ---- utilidades -------------------------------------------------------- */
 .empurra { margin-top: auto; }
-.espaco-sm { height: 24px; }
-.espaco    { height: 44px; }
-.espaco-lg { height: 76px; }
+/* espaçadores: flex item encolhe por padrão, então trava o tamanho */
+.espaco-sm { height: 24px; flex: none; }
+.espaco    { height: 44px; flex: none; }
+.espaco-lg { height: 76px; flex: none; }
 .centro { text-align: center; align-items: center; }
 .dourado { color: var(--dourado); }
-.lista { list-style: none; display: flex; flex-direction: column; gap: 26px; }
-.lista li { display: flex; gap: 20px; font-size: 34px; line-height: 1.34; font-weight: 300; }
+.lista { list-style: none; display: flex; flex-direction: column; gap: 30px; margin-bottom: 14px; }
+.lista li { display: flex; gap: 20px; font-size: 33px; line-height: 1.44; font-weight: 300; max-width: 19em; }
 .lista li::before { content: "—"; color: var(--dourado); flex: none; }
 
 /* bloco que fica no centro vertical do slide, entre o @ e o rodapé */
@@ -324,3 +330,34 @@
 /* na faixa de texto da meia-foto o conteúdo é curto: garante respiro */
 .meia-foto .arroba { margin-bottom: 26px; }
 .meia-foto .rodape { margin-top: 38px; }
+
+/* ---- tabela de comparação ---------------------------------------------
+   Sem grade fechada: só os fios que separam. A coluna que importa ganha
+   o dourado, a outra fica neutra.                                       */
+.tabela { width: 100%; border-collapse: collapse; }
+.tabela th, .tabela td { text-align: left; padding: 26px 22px; vertical-align: top; }
+.tabela thead th {
+  font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 29px;
+  line-height: 1.22; padding-bottom: 18px;
+}
+.tabela thead th.col-a span { color: var(--dado-1); }
+.tabela thead th.col-b span { color: var(--dado-3); opacity: .9; }
+.bg-creme .tabela thead th.col-b span, .bg-areia .tabela thead th.col-b span,
+.bg-offwhite .tabela thead th.col-b span, .bg-branco .tabela thead th.col-b span {
+  color: var(--marrom); opacity: .78;
+}
+.bg-creme .tabela tbody td.col-b, .bg-areia .tabela tbody td.col-b,
+.bg-offwhite .tabela tbody td.col-b, .bg-branco .tabela tbody td.col-b { opacity: .62; }
+.tabela tbody tr { border-top: 2px solid var(--fio-fino); }
+.tabela tbody th {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: 26px; line-height: 1.34; width: 27%; opacity: .78;
+}
+.tabela tbody td {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 30px; line-height: 1.38; width: 36.5%;
+}
+.tabela tbody td.col-a { font-weight: 500; }
+.tabela tbody td.col-b { opacity: .72; }
+.bg-creme .tabela tbody tr, .bg-areia .tabela tbody tr,
+.bg-offwhite .tabela tbody tr, .bg-branco .tabela tbody tr { border-top-color: rgba(27,35,22,.22); }
