@@ -35,15 +35,30 @@ function foto(s) {
   return `<img class="foto" src="${esc(s.foto)}" alt=""><div class="${veu}"></div>`;
 }
 
+/* fundos claros: a logo vai na versão escura e o texto em verde */
+const CLAROS = new Set(["creme", "areia", "offwhite", "branco"]);
+
 function monta(s) {
-  const claro = !(s.fundo === "creme" || s.fundo === "areia") || !!s.foto;
+  const claro = !CLAROS.has(s.fundo) || !!s.foto;
   const LOGO = (h) => LOCKUP(h, claro);
-  const cls = ["slide"];
-  if (s.foto) cls.push("bg-foto");
+  const cls = ["slide", "vinheta"];
+  if (s.foto && !s.meiaFoto) cls.push("bg-foto");
   else if (s.fundo === "creme") cls.push("bg-creme");
   else if (s.fundo === "areia") cls.push("bg-areia");
+  else if (s.fundo === "offwhite") cls.push("bg-offwhite");
+  else if (s.fundo === "branco") cls.push("bg-branco");
   else if (s.fundo === "bordo") cls.push("bg-bordo");
-  else cls.push("bg-verde", "listras");
+  else if (s.fundo === "marrom") cls.push("bg-marrom");
+  else cls.push("bg-verde");
+
+  /* textura: listras, marca d'água ou nada. Nenhuma é padrão em todo slide. */
+  if (s.textura === "listras") cls.push("listras");
+  if (s.textura === "marca") cls.push("marca-dagua");
+  if (s.textura === "marca-baixo") cls.push("marca-dagua", "canto-baixo");
+  if (s.textura === "marca-esq") cls.push("marca-dagua", "canto-esq");
+  if (s.borda === "dourada") cls.push("borda-dourada");
+  if (s.borda === "bordo") cls.push("borda-bordo");
+  if (s.meiaFoto) cls.push("meia-foto");
 
   let corpo = "";
   switch (s.tipo) {
@@ -145,6 +160,12 @@ function monta(s) {
 
     default:
       throw new Error(`tipo de slide desconhecido: ${s.tipo}`);
+  }
+  if (s.meiaFoto) {
+    return `<div class="${cls.join(" ")}">
+      <div class="faixa-img"><img src="${esc(s.foto || "")}" alt=""></div>
+      <div class="faixa-txt">${corpo}</div>
+    </div>`;
   }
   return `<div class="${cls.join(" ")}">${foto(s)}${corpo}</div>`;
 }

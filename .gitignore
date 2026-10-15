@@ -30,3 +30,7 @@ next-env.d.ts
 
 # html intermediário do render dos carrosséis
 docs/gorayeb/template/_*.html
+
+# substitutos de imagem, trocados por foto real na produção
+docs/gorayeb/img/substituto-*.jpg
+img/

@@ -1,7 +1,7 @@
 {
   "id": "cerca-divisoria",
   "titulo": "Cerca divisória: quem paga a conta",
-  "nota": "Teste do template. Sem fotos ainda — o Pinterest está bloqueado pela rede desta sessão. Quando liberar, basta acrescentar \"foto\" em cada slide.",
+  "nota": "Teste do template. Sem fotos ainda: o CDN de imagens do Pinterest segue bloqueado nesta sessão.",
   "legenda_instagram": "A cerca caiu. E agora, quem paga?\n\nNo meio rural essa conta sempre vira discussão de vizinho. Mas o Código Civil já respondeu isso faz tempo: a cerca que separa duas propriedades é dos dois. Construir, consertar e manter é despesa dividida meio a meio (art. 1.297).\n\nTem um detalhe que muda tudo: isso vale pra cerca que fica em cima da divisa. Se você levantou a cerca dentro da sua terra, ela é sua e a conta também.\n\nE se o vizinho se recusa a pagar a parte dele? Dá pra cobrar. Mas antes de chamar advogado, junte o que prova: orçamento, foto, nota do material e a conversa onde vocês combinaram.\n\nCerca é limite de terra, não de relação. Resolve cedo, enquanto ainda dá pra conversar na porteira.\n\nDo agro. Pelo agro.",
   "slides": [
     {
@@ -9,12 +9,16 @@
       "titulo": "A cerca caiu.\nE agora, quem paga?",
       "escala": "menor",
       "gancho": "A resposta tá no Código Civil. E quase ninguém leu.",
-      "arraste": "Arrasta pro lado"
+      "arraste": "Arrasta pro lado",
+      "foto": "../img/substituto-campo.jpg",
+      "veu": "topo"
     },
     {
       "tipo": "tese",
       "tese": "Cerca de divisa não é sua. É de vocês dois.",
-      "texto": "O muro, a cerca e a vala que separam duas propriedades pertencem aos dois vizinhos em comum. Está no art. 1.297 do Código Civil."
+      "texto": "O muro, a cerca e a vala que separam duas propriedades pertencem aos dois vizinhos em comum. Está no art. 1.297 do Código Civil.",
+      "fundo": "offwhite",
+      "borda": "dourada"
     },
     {
       "tipo": "lista",
@@ -24,18 +28,21 @@
         "Consertar o que o tempo ou o gado derrubou",
         "A manutenção do dia a dia"
       ],
-      "remate": "Despesa de divisa é conta de dois."
+      "remate": "Despesa de divisa é conta de dois.",
+      "textura": "listras"
     },
     {
       "tipo": "citacao",
-      "fundo": "creme",
-      "citacao": "Só que tem um detalhe que muda tudo: isso vale pra cerca que está em cima da linha de divisa."
+      "citacao": "Só que tem um detalhe que muda tudo: isso vale pra cerca que está em cima da linha de divisa.",
+      "fundo": "areia",
+      "textura": "marca-baixo"
     },
     {
       "tipo": "foto-texto",
-      "fundo": "bordo",
       "titulo": "Cerca dentro da sua terra\né sua. E a conta também.",
-      "texto": "Quem recua e levanta a cerca para dentro do próprio imóvel perde o direito de dividir a despesa. O vizinho não tem obrigação sobre o que está fora da divisa."
+      "texto": "Quem recua e levanta a cerca para dentro do próprio imóvel perde o direito de dividir a despesa. O vizinho não tem obrigação sobre o que está fora da divisa.",
+      "fundo": "bordo",
+      "borda": "dourada"
     },
     {
       "tipo": "lista",
@@ -45,13 +52,16 @@
         "Foto do antes e do depois, com data",
         "A conversa onde vocês combinaram a obra"
       ],
-      "remate": "Sem prova, a cobrança vira a sua palavra contra a dele."
+      "remate": "Sem prova, a cobrança vira a sua palavra contra a dele.",
+      "meiaFoto": true,
+      "foto": "../img/substituto-campo.jpg"
     },
     {
       "tipo": "fecho",
-      "fundo": "creme",
       "sintese": "Cerca marca limite de terra.\nNão precisa marcar limite de relação.",
-      "cta": "Qual discussão de divisa você já viu virar processo?"
+      "cta": "Qual discussão de divisa você já viu virar processo?",
+      "fundo": "offwhite",
+      "textura": "marca-esq"
     }
   ]
 }

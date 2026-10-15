@@ -53,13 +53,18 @@
   content: "";
   position: absolute;
   inset: 0;
+  /* mesmo ritmo do Asset 51, mas numa escala bem maior: o olho lê como
+     textura, não como padrão. */
   background: repeating-linear-gradient(
     90deg,
-    var(--verde-listra-escura) 0px,     var(--verde-listra-escura) 54px,
-    var(--verde-listra-clara)  54px,    var(--verde-listra-clara)  73px,
-    var(--verde-listra-escura) 73px,    var(--verde-listra-escura) 127px,
-    var(--verde-listra-clara)  127px,   var(--verde-listra-clara)  234px
+    rgba(0,0,0,.26) 0px,    rgba(0,0,0,.26) 104px,
+    rgba(0,0,0,0)   104px,  rgba(0,0,0,0)   142px,
+    rgba(0,0,0,.26) 142px,  rgba(0,0,0,.26) 246px,
+    rgba(0,0,0,0)   246px,  rgba(0,0,0,0)   452px
   );
+  /* e esmaece de um lado pro outro, pra não ficar carimbado */
+  -webkit-mask-image: linear-gradient(104deg, #000 0%, rgba(0,0,0,.42) 48%, rgba(0,0,0,.06) 100%);
+          mask-image: linear-gradient(104deg, #000 0%, rgba(0,0,0,.42) 48%, rgba(0,0,0,.06) 100%);
   z-index: 0;
 }
 .slide > * { position: relative; z-index: 1; }
@@ -144,7 +149,7 @@
 /* ---- marcações fixas --------------------------------------------------- */
 .arroba {
   font-family: "Arvo", Georgia, serif; font-size: 24px;
-  opacity: .9; text-align: center;
+  opacity: .72; text-align: left; letter-spacing: .01em;
 }
 .assinatura {
   font-family: "Arvo", Georgia, serif; font-size: 24px;
@@ -259,3 +264,63 @@
 /* logo oficial: só muda de versão conforme o fundo, nunca de desenho */
 .logo { display: block; width: auto; flex: none; align-self: flex-start; }
 .centro .logo, .rodape .logo { align-self: center; }
+
+
+/* ======================================================================
+   FUNDOS — variedade sem sair da linha da marca
+   ====================================================================== */
+
+/* respiro de luz: tira o ar de chapa morta sem virar mancha */
+.vinheta::after {
+  content: "";
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(132% 86% at 18% 4%, rgba(255,255,255,.06) 0%, rgba(255,255,255,0) 68%),
+              radial-gradient(150% 108% at 96% 104%, rgba(0,0,0,.26) 0%, rgba(0,0,0,0) 66%);
+}
+.bg-creme.vinheta::after, .bg-areia.vinheta::after,
+.bg-offwhite.vinheta::after, .bg-branco.vinheta::after {
+  background: radial-gradient(160% 112% at 96% 106%, rgba(27,35,22,.07) 0%, rgba(27,35,22,0) 70%);
+}
+
+/* marca d'água: o símbolo da casa em escala grande, sangrando na borda.
+   É o mesmo movimento da peça de referência, com o ativo da marca. */
+.marca-dagua::before {
+  content: "";
+  position: absolute; z-index: 0; pointer-events: none;
+  width: 125%; aspect-ratio: 900 / 544;
+  right: -46%; top: 8%;
+  background: url("../assets/simbolo-marcadagua.png") no-repeat center / contain;
+  opacity: .07;
+  transform: rotate(-9deg);
+}
+.marca-dagua.canto-baixo::before { right: -40%; top: auto; bottom: -16%; transform: rotate(6deg); }
+.marca-dagua.canto-esq::before   { right: auto; left: -50%; top: 42%;   transform: rotate(11deg); }
+.bg-creme.marca-dagua::before, .bg-areia.marca-dagua::before,
+.bg-offwhite.marca-dagua::before, .bg-branco.marca-dagua::before { opacity: .055; }
+
+/* chapas claras, as que o Victor pediu */
+.bg-offwhite { background: #f4f0e4; color: var(--verde); }
+.bg-branco   { background: #fbfaf6; color: var(--verde); }
+.bg-marrom   { background: var(--marrom); }
+
+.bg-offwhite .arroba, .bg-branco .arroba,
+.bg-creme .arroba, .bg-areia .arroba { color: var(--verde); }
+.bg-offwhite .assinatura, .bg-branco .assinatura { color: var(--verde); }
+.bg-offwhite .fio, .bg-branco .fio { background: var(--dourado); }
+
+/* um fio de cor na borda, pra chapa clara não ficar solta */
+.borda-dourada { border-left: 10px solid var(--dourado); }
+.borda-bordo   { border-left: 10px solid var(--bordo); }
+
+/* faixa de foto: imagem na metade de cima, chapa na de baixo (peça Malibu) */
+.meia-foto { padding: 0; }
+.meia-foto .faixa-img { position: relative; height: 46%; flex: none; overflow: hidden; }
+.meia-foto .faixa-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.meia-foto .faixa-txt {
+  flex: 1; display: flex; flex-direction: column;
+  padding: 64px var(--margem) var(--margem);
+}
+
+/* na faixa de texto da meia-foto o conteúdo é curto: garante respiro */
+.meia-foto .arroba { margin-bottom: 26px; }
+.meia-foto .rodape { margin-top: 44px; }
