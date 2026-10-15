@@ -15,7 +15,9 @@ na mesma linguagem, sem repetir o que já foi publicado.
 - Marca **F.T.G.** = iniciais do Fernando, e também Fidelidade, Transparência,
   Genialidade. Era a marca do gado da família antes de ser a do escritório.
   "Marcar é deixar nome" é o mito fundador que aparece em tudo.
-- Assinatura obrigatória de todo conteúdo: **"Do agro. Pelo agro."**
+- Assinatura que eles usavam em todo conteúdo: **"Do agro. Pelo agro."**
+  **Saiu do nosso formato por decisão do Victor**: não entra na arte nem na
+  legenda. Fica aqui só como registro do que já foi publicado.
 - Áreas que viram pauta: direito agrário, sucessão e holding rural, CAR e
   crédito rural, contratos (arrendamento, parceria, CPR), tributário (ITR,
   VTN), recuperação judicial do produtor, seguro rural, fraudes contra o
@@ -89,10 +91,11 @@ Regras de uso observadas:
 - **Corpo**: **Helvetica Neue** (Light para texto corrido, Bold para o que
   precisa pesar), em blocos curtos sobre foto. Em slides de dado (mapa,
   números) o corpo é a slab regular. Arquivos em `fontes/helvetica/`.
-- **Assinatura**: "Do agro, pelo agro." em slab regular pequeno. Fica no
-  rodapé (centro ou direita) ou no topo esquerdo (estáticos de julho).
-- **@gorayebadvocacia** em slab regular pequeno, topo centralizado nos slides
-  internos; rodapé esquerdo nos estáticos.
+- **Assinatura**: nas peças antigas, "Do agro, pelo agro." em slab regular
+  pequeno, no rodapé ou no topo esquerdo. **Não usamos mais.**
+- **@gorayebadvocacia** em slab regular pequeno. Eles centralizavam no topo;
+  a gente joga pra esquerda, alinhado com o resto, e agora aparece **também
+  no topo da capa**.
 
 ### Logo
 
@@ -133,9 +136,10 @@ Duas vozes, mesmo conteúdo:
 "tá", "Seu Roberto", "calma, lavrador". Frases curtas, uma por linha. Metáforas
 do campo para explicar direito ("a mesma lógica de quem cerca a propriedade e
 tranca a porteira: cuidar antes, pra não remediar depois"). Humor leve e
-afetivo, nunca piada com a lei. Fecha sempre com "Do agro. Pelo agro." e, nos
-carrosséis, um CTA de salvar/compartilhar ("Salva esse post e manda pra aquele
-amigo que tá penando com o CAR").
+afetivo, nunca piada com a lei. Nas legendas deles fecha com "Do agro. Pelo
+agro." — **a nossa não leva isso**, fecha na frase da peça e, nos carrosséis,
+num CTA de salvar/compartilhar ("Salva esse post e manda pra aquele amigo que
+tá penando com o CAR").
 
 **LinkedIn (arquivo `legendas_gorayeb_linkedin_tom_tecnico.txt`)**: versão
 técnica do mesmo post. Cita artigo de lei, resolução e número. Sem gíria,

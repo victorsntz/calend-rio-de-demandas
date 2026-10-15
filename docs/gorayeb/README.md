@@ -81,6 +81,7 @@ Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
 | `borda` | `dourada`, `bordo` |
 | `foto` | caminho do arquivo, com `veu` em `verde`, `marrom` ou `topo` |
 | `meiaFoto` | `true` põe a foto na metade de cima e o texto na de baixo |
+| `foco` | `object-position` da foto em `meiaFoto` e `corpo-foto`, p. ex. `center 14%`, pra não cortar rosto |
 
 ### Figuras (`"tipo": "figura"`)
 
@@ -91,6 +92,7 @@ Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
 | `mapa` | `mapa` (`brasil`), `pontos` de `{lon, lat, raio, rotulo}` | situar no território |
 | `numeros` | `itens` de `{numero, rotulo}` | até 4 cifras em diagonal |
 | `tabela` | `colunas` (2) e `linhas` de `{criterio, a, b}` | comparar dois cenários |
+| `cerca` | `rotuloA`, `rotuloB` | meio a meio de uma divisa, desenhado como cerca |
 
 Todas aceitam `legenda` (a frase que explica), `fonte` (de onde veio o número) e
 `alt` (a descrição pra quem usa leitor de tela).

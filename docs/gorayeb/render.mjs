@@ -179,13 +179,12 @@ function monta(s) {
       break;
 
 
-    /* capa de foto: foto sangrando, marca no alto, etiqueta e título no pé.
-       Modelo que o Victor mandou, enxugado: sem carimbo e sem a assinatura
-       repetida no topo. */
+    /* capa de foto: foto sangrando, arroba no alto, etiqueta e título na
+       terceira faixa, logo na quarta, dentro da sombra. */
     case "capa-foto":
       corpo = `
         <div class="veu-capa"></div>
-        <div class="faixa-vazia"></div>
+        <div class="faixa-vazia">${ARROBA}</div>
         <div class="faixa-titulo">
           ${s.etiqueta ? `<span class="etiqueta"><span class="bolota"></span>${esc(s.etiqueta)}</span>` : ""}
           <h1 class="titulo-capa ${s.escala || ""}">${titulo(s.titulo)}</h1>
@@ -198,7 +197,7 @@ function monta(s) {
     case "corpo-foto": {
       const [l1, l2] = String(s.titulo || "").split("\n");
       corpo = `
-        <div class="faixa-img"><img src="${esc(s.foto || "")}" alt=""></div>
+        <div class="faixa-img"><img src="${esc(s.foto || "")}" alt="" style="object-position:${esc(s.foco || "center")}"></div>
         <div class="chapa">
           <h2 class="titulo-corpo">
             <span class="l1">${titulo(l1 || "")}</span>
@@ -270,7 +269,7 @@ function monta(s) {
   }
   if (s.meiaFoto) {
     return `<div class="${cls.join(" ")}">
-      <div class="faixa-img"><img src="${esc(s.foto || "")}" alt=""></div>
+      <div class="faixa-img"><img src="${esc(s.foto || "")}" alt="" style="object-position:${esc(s.foco || "center")}"></div>
       <div class="faixa-txt">${corpo}</div>
     </div>`;
   }

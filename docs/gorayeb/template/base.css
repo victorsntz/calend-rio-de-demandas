@@ -244,8 +244,10 @@
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 400;
   fill: var(--creme); font-size: 25px; opacity: .85;
 }
-.bg-creme .rot-num, .bg-areia .rot-num { fill: var(--verde); }
-.bg-creme .rot-txt, .bg-areia .rot-txt { fill: var(--verde); }
+.bg-creme .rot-num, .bg-areia .rot-num,
+.bg-offwhite .rot-num, .bg-branco .rot-num { fill: var(--verde); }
+.bg-creme .rot-txt, .bg-areia .rot-txt,
+.bg-offwhite .rot-txt, .bg-branco .rot-txt { fill: var(--verde); }
 
 /* barras: marca fina, ponta arredondada só do lado do dado */
 .barra-trilho { fill: var(--dado-base); }
@@ -256,13 +258,24 @@
 .mapa-base { fill: var(--dado-base); stroke: var(--fio-fino); stroke-width: 1.5; }
 .mapa-destaque { fill: var(--dado-1); }
 .mapa-anel { fill: none; stroke: var(--fio-fino); stroke-width: 2; }
+/* legenda dos pontos do mapa, uma linha por destaque */
+.mapa-chaves { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.mapa-chaves li {
+  display: flex; align-items: center; gap: 18px;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 400; font-size: 29px;
+}
+.mapa-chaves .ponto {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--dado-1); flex: none;
+}
 
 /* números em diagonal sobre foto, no espírito da peça de referência */
 .diag { position: relative; flex: 1; display: flex; align-items: center; }
 .diag-item { display: flex; align-items: baseline; gap: 18px; }
 .diag-item .n {
   font-family: "Arvo", Georgia, serif; font-weight: 700;
-  font-size: 92px; line-height: .92;
+  font-size: 92px; line-height: .92; white-space: nowrap;
 }
 .diag-item .r {
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
@@ -378,7 +391,8 @@
   grid-template-rows: 1fr 1fr 1fr 1fr;
   align-items: center;
 }
-.capa-foto .faixa-vazia { grid-row: span 2; }
+.capa-foto .faixa-vazia { grid-row: span 2; align-self: start; }
+.capa-foto .arroba { margin-bottom: 0; opacity: .88; }
 .capa-foto .faixa-titulo { grid-row: 3; align-self: center; }
 .capa-foto .faixa-marca  { grid-row: 4; align-self: center; }
 .capa-foto .veu-capa {

@@ -2,7 +2,7 @@
   "id": "cerca-divisoria",
   "titulo": "Cerca divisória: quem paga a conta",
   "nota": "Fotos do banco da Gorayeb no escritório (quadro, Fernando, chapéu) e do Pinterest no campo. Ver _creditos.json: as do Pinterest precisam de licença conferida antes de publicar.",
-  "legenda_instagram": "A cerca caiu. E agora, quem paga?\n\nNo meio rural essa conta sempre vira discussão de vizinho. Mas o Código Civil já respondeu isso faz tempo: a cerca que separa duas propriedades é dos dois. Construir, consertar e manter é despesa dividida meio a meio (art. 1.297).\n\nTem um detalhe que muda tudo: isso vale pra cerca que fica em cima da divisa. Se você levantou a cerca dentro da sua terra, ela é sua e a conta também.\n\nE se o vizinho se recusa a pagar a parte dele? Dá pra cobrar. Mas antes de chamar advogado, junte o que prova: orçamento, foto, nota do material e a conversa onde vocês combinaram.\n\nCerca é limite de terra, não de relação. Resolve cedo, enquanto ainda dá pra conversar na porteira.\n\nDo agro. Pelo agro.",
+  "legenda_instagram": "A cerca caiu. E agora, quem paga?\n\nNo meio rural essa conta sempre vira discussão de vizinho. Mas o Código Civil já respondeu isso faz tempo: a cerca que separa duas propriedades é dos dois. Construir, consertar e manter é despesa dividida meio a meio (art. 1.297).\n\nTem um detalhe que muda tudo: isso vale pra cerca que fica em cima da divisa. Se você levantou a cerca dentro da sua terra, ela é sua e a conta também.\n\nE se o vizinho se recusa a pagar a parte dele? Dá pra cobrar. Mas antes de chamar advogado, junte o que prova: orçamento, foto, nota do material e a conversa onde vocês combinaram.\n\nCerca é limite de terra, não de relação. Resolve cedo, enquanto ainda dá pra conversar na porteira.",
   "slides": [
     {
       "tipo": "capa-foto",
@@ -23,15 +23,13 @@
     },
     {
       "tipo": "figura",
-      "figura": "donut",
+      "figura": "cerca",
       "titulo": "Metade é sua.\nMetade é dele.",
-      "valor": 50,
-      "destaque": "50%",
-      "rotulo": "é a sua parte",
-      "resto": "a outra metade é do vizinho",
+      "rotuloA": "metade é sua",
+      "rotuloB": "metade é dele",
       "legenda": "Vale pra cerca que está em cima da linha de divisa, não pra que você levantou pra dentro.",
       "fonte": "art. 1.297 do Código Civil",
-      "alt": "Donut dividido ao meio",
+      "alt": "Cerca de arame cortada ao meio pelo marco da divisa, metade de cada vizinho",
       "textura": "listras"
     },
     {

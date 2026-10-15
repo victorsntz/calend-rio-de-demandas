@@ -1,4 +1,4 @@
-/* Figuras dos carrosséis: donut, barras, mapa e números em diagonal.
+/* Figuras dos carrosséis: donut, barras, mapa, números, tabela e cerca.
  *
  * Regras que valem pra todas:
  *  - no máximo dois dados coloridos por figura; o resto é neutro;
@@ -99,10 +99,18 @@ export function mapa(f) {
       const r = p.raio || 46;
       return `
       <circle cx="${n2(x)}" cy="${n2(y)}" r="${r}" class="mapa-destaque" opacity=".9"/>
-      <circle cx="${n2(x)}" cy="${n2(y)}" r="${r + 30}" class="mapa-anel"/>
-      ${p.rotulo ? `<text x="${n2(x + r + 48)}" y="${n2(y + 10)}" class="rot-txt" style="font-size:54px">${esc(p.rotulo)}</text>` : ""}`;
+      <circle cx="${n2(x)}" cy="${n2(y)}" r="${r + 30}" class="mapa-anel"/>`;
     })
     .join("");
+
+  /* o rótulo de cada ponto vira linha de legenda embaixo do mapa: dentro do
+     desenho ele estourava a margem da peça */
+  const chaves = (f.pontos || []).some((p) => p.rotulo)
+    ? `<ul class="mapa-chaves">${(f.pontos || [])
+        .filter((p) => p.rotulo)
+        .map((p) => `<li><span class="ponto"></span>${ec(p.rotulo)}</li>`)
+        .join("")}</ul>`
+    : "";
 
   return `
   <div class="figura">
@@ -111,6 +119,7 @@ export function mapa(f) {
       <path d="${m.d}" class="mapa-base"/>
       ${pontos}
     </svg>
+    ${chaves}
     ${f.legenda ? `<p class="figura-legenda">${ec(f.legenda)}</p>` : ""}
     ${f.fonte ? `<p class="fonte">Fonte: ${esc(f.fonte)}</p>` : ""}
   </div>`;
@@ -131,9 +140,9 @@ export function numeros(f) {
     )
     .join("");
   return `
-  <div class="figura" style="flex:1;justify-content:center;gap:40px">
+  <div class="figura" style="gap:54px">
     ${linhas}
-    ${f.fonte ? `<p class="fonte">Fonte: ${esc(f.fonte)}</p>` : ""}
+    ${f.fonte ? `<p class="fonte" style="margin-top:18px">Fonte: ${esc(f.fonte)}</p>` : ""}
   </div>`;
 }
 
@@ -170,4 +179,52 @@ export function tabela(f) {
   </div>`;
 }
 
-export const FIGURAS = { donut, barras, mapa, numeros, tabela };
+/* ---- cerca de divisa ---------------------------------------------------
+   Ilustração, não gráfico. Uma cerca de arame vista de lado, cortada ao
+   meio pelo marco da divisa: metade dourada, metade terracota. O mesmo
+   dado do donut, só que desenhado como a coisa de que a peça fala.     */
+export function cerca(f) {
+  const topo = 274, solo = 500, meio = 500;
+  const postes = [140, 320, 500, 680, 860];
+  const arames = [308, 360, 412, 464];
+  const cor = (x) => (x < meio ? "var(--dado-1)" : x > meio ? "var(--dado-2)" : "var(--areia)");
+
+  /* mourão grosso, fincado um pouco abaixo da linha do chão */
+  const madeira = postes
+    .map((x) => {
+      const divisa = x === meio;
+      const l = divisa ? 20 : 15;
+      const alto = divisa ? topo - 52 : topo;
+      return `<rect x="${x - l / 2}" y="${alto}" width="${l}" height="${solo + 16 - alto}" rx="4" fill="${cor(x)}"/>`;
+    })
+    .join("\n      ");
+
+  /* arame fino, pra não competir com o mourão */
+  const fio = (y) =>
+    `<line x1="140" y1="${y}" x2="${meio - 10}" y2="${y}" stroke="var(--dado-1)" stroke-width="3.5"/>
+      <line x1="${meio + 10}" y1="${y}" x2="860" y2="${y}" stroke="var(--dado-2)" stroke-width="3.5"/>`;
+
+  /* chave embaixo de cada metade, que é onde mora a divisão da conta */
+  const chave = (a, b, rot, cl) => `
+      <path d="M${a},${solo + 50} v16 H${b} v-16" fill="none" stroke="${cl}" stroke-width="3.5" opacity=".65"/>
+      <text x="${(a + b) / 2}" y="${solo + 112}" class="rot-txt" text-anchor="middle">${esc(rot)}</text>
+      <text x="${(a + b) / 2}" y="${topo - 78}" class="rot-num" style="font-size:78px" text-anchor="middle" fill="${cl}">50%</text>`;
+
+  return `
+  <div class="figura">
+    <svg viewBox="0 0 1000 660" role="img" aria-label="${esc(f.alt || "Cerca de arame dividida ao meio pelo marco da divisa")}">
+      <line x1="${meio}" y1="120" x2="${meio}" y2="596" stroke="var(--areia)" stroke-width="2"
+            stroke-dasharray="9 13" opacity=".45"/>
+      <line x1="60" y1="${solo}" x2="940" y2="${solo}" stroke="var(--areia)" stroke-width="2.5" opacity=".4"/>
+      ${arames.map(fio).join("\n      ")}
+      ${madeira}
+      ${chave(140, meio - 18, f.rotuloA || "metade é sua", "var(--dado-1)")}
+      ${chave(meio + 18, 860, f.rotuloB || "metade é dele", "var(--dado-2)")}
+    </svg>
+    ${f.legenda ? `<p class="figura-legenda">${ec(f.legenda)}</p>` : ""}
+    ${f.fonte ? `<p class="fonte">Fonte: ${esc(f.fonte)}</p>` : ""}
+  </div>`;
+}
+
+export const FIGURAS = { donut, barras, mapa, numeros, tabela, cerca };
+
