@@ -94,6 +94,7 @@ function monta(s) {
   if (s.borda === "dourada") cls.push("borda-dourada");
   if (s.borda === "bordo") cls.push("borda-bordo");
   if (s.meiaFoto) cls.push("meia-foto");
+  if (s.tipo === "fecho" && s.foto) cls.push("fecho-foto");
   if (s.tipo === "capa-foto" || s.tipo === "perspectiva") cls.push("capa-foto", "bg-foto");
   if (s.tipo === "corpo-foto") cls.push("corpo-foto", "bg-verde");
 

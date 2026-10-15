@@ -1,7 +1,7 @@
 {
   "id": "cerca-divisoria",
   "titulo": "Cerca divisória: quem paga a conta",
-  "nota": "Fotos do banco da Gorayeb (Fernando, curral) e do Pinterest (campo). Ver _creditos.json: as do Pinterest precisam de licença conferida antes de publicar.",
+  "nota": "Fotos do banco da Gorayeb no escritório (quadro, Fernando, chapéu) e do Pinterest no campo. Ver _creditos.json: as do Pinterest precisam de licença conferida antes de publicar.",
   "legenda_instagram": "A cerca caiu. E agora, quem paga?\n\nNo meio rural essa conta sempre vira discussão de vizinho. Mas o Código Civil já respondeu isso faz tempo: a cerca que separa duas propriedades é dos dois. Construir, consertar e manter é despesa dividida meio a meio (art. 1.297).\n\nTem um detalhe que muda tudo: isso vale pra cerca que fica em cima da divisa. Se você levantou a cerca dentro da sua terra, ela é sua e a conta também.\n\nE se o vizinho se recusa a pagar a parte dele? Dá pra cobrar. Mas antes de chamar advogado, junte o que prova: orçamento, foto, nota do material e a conversa onde vocês combinaram.\n\nCerca é limite de terra, não de relação. Resolve cedo, enquanto ainda dá pra conversar na porteira.\n\nDo agro. Pelo agro.",
   "slides": [
     {
@@ -14,7 +14,7 @@
     },
     {
       "tipo": "corpo-foto",
-      "foto": "../img/porteira-madeira.jpg",
+      "foto": "../img/cavalo-codigo-civil.jpg",
       "titulo": "Cerca de divisa\nnão é sua.",
       "paragrafos": [
         "O muro, a cerca e a vala que separam duas propriedades pertencem aos dois vizinhos em comum. Está no art. 1.297 do Código Civil.",
@@ -89,10 +89,10 @@
     },
     {
       "tipo": "fecho",
+      "foto": "../img/chapeu-chesterfield.jpg",
+      "veu": "verde",
       "sintese": "Cerca marca limite de terra.\nNão precisa marcar limite de relação.",
-      "cta": "Qual discussão de divisa você já viu virar processo?",
-      "fundo": "offwhite",
-      "textura": "marca-esq"
+      "cta": "Qual discussão de divisa você já viu virar processo?"
     }
   ]
 }

@@ -80,6 +80,9 @@
 /* overlay: sempre, pra tipografia ler. verde por padrão, marrom quando a foto é quente */
 .veu-verde  { position: absolute; inset: 0; z-index: 0;
   background: linear-gradient(180deg, rgba(22,34,17,.30) 0%, rgba(22,34,17,.55) 45%, rgba(22,34,17,.92) 100%); }
+/* fecho sobre foto: o texto fica no meio, então o véu é parelho e mais forte */
+.slide.fecho-foto .veu-verde {
+  background: linear-gradient(180deg, rgba(20,28,16,.70) 0%, rgba(20,28,16,.80) 42%, rgba(20,28,16,.88) 100%); }
 .veu-marrom { position: absolute; inset: 0; z-index: 0;
   background: linear-gradient(180deg, rgba(67,26,10,.25) 0%, rgba(67,26,10,.55) 45%, rgba(67,26,10,.92) 100%); }
 .veu-topo   { position: absolute; inset: 0; z-index: 0;
