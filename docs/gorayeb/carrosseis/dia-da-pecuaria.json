@@ -1,16 +1,16 @@
 {
-  "id": "dia-do-pecuarista",
-  "titulo": "Dia do Pecuarista: os primeiros",
+  "id": "dia-da-pecuaria",
+  "titulo": "Dia da Pecuária: os primeiros",
   "nota": "Formato 01, recorte nacional: nada do escritório na arte. Fotos do Pinterest, licença a conferir antes de publicar (ver _creditos.json). Todo número tem fonte na peça.",
-  "legenda_instagram": "15 de julho é o Dia do Pecuarista. E vale lembrar como isso tudo começou.\n\nEm 16 de fevereiro de 1919, em Uberaba, um grupo de criadores fundou o Herd Book da Raça Zebu. A ideia era simples e ninguém tinha feito antes: anotar de onde vinha cada bezerro. Geraldino Rodrigues da Cunha e Joaquim Machado Borges assinaram aquele começo e hoje estão na galeria de presidentes da ABCZ.\n\nDepois vieram outros. Adir do Carmo Leonel entrou na atividade em 1958 e virou um dos jurados mais respeitados do zebu. E vieram os milhares que nunca entraram em livro nenhum, mas abriram pasto onde só tinha mato.\n\nO resultado está aí: 234,3 milhões de cabeças, o Centro-Oeste com 30,8% do rebanho e 2,43 milhões de toneladas de carne embarcadas só de janeiro a setembro, US$ 14,17 bilhões de receita.\n\nO que mudou foi o resto. O primeiro pecuarista não tinha livro, nem lei, nem prazo. Hoje tem os três, e cada um com uma exigência diferente.\n\nQuem foi o primeiro pecuarista da sua família?\n\nFontes: ABCZ, IBGE (Pesquisa da Pecuária Municipal 2025) e ABIEC/Secex.",
+  "legenda_instagram": "14 de outubro é o Dia Nacional da Pecuária. E vale lembrar como isso tudo começou.\n\nEm 16 de fevereiro de 1919, em Uberaba, um grupo de criadores fundou o Herd Book da Raça Zebu. A ideia era simples e ninguém tinha feito antes: anotar de onde vinha cada bezerro. Geraldino Rodrigues da Cunha e Joaquim Machado Borges assinaram aquele começo e hoje estão na galeria de presidentes da ABCZ.\n\nDepois vieram outros. Adir do Carmo Leonel entrou na atividade em 1958 e virou um dos jurados mais respeitados do zebu. E vieram os milhares que nunca entraram em livro nenhum, mas abriram pasto onde só tinha mato.\n\nO resultado está aí: 234,3 milhões de cabeças, o Centro-Oeste com 30,8% do rebanho e 2,43 milhões de toneladas de carne embarcadas só de janeiro a setembro, US$ 14,17 bilhões de receita.\n\nO que mudou foi o resto. O primeiro pecuarista não tinha livro, nem lei, nem prazo. Hoje tem os três, e cada um com uma exigência diferente.\n\nQuem foi o primeiro pecuarista da sua família?\n\nFontes: ABCZ, IBGE (Pesquisa da Pecuária Municipal 2025) e ABIEC/Secex.",
   "slides": [
     {
       "tipo": "capa-foto",
       "foto": "../img/boiada-estrada.jpg",
-      "etiqueta": "15 de julho.",
+      "etiqueta": "14 de outubro.",
       "titulo": "Ninguém começa\ncom 234 milhões.",
       "escala": "menor",
-      "sub": "Dia do Pecuarista. *O rebanho brasileiro* começou com um punhado de teimosos."
+      "sub": "Dia da Pecuária. *O rebanho brasileiro* começou com um punhado de teimosos."
     },
     {
       "tipo": "corpo-foto",
