@@ -1,3 +1,5 @@
+<!-- diario.md: o que já foi feito e decidido. Ler primeiro. -->
+
 # Carrosséis da Gorayeb — como rodar
 
 ```bash

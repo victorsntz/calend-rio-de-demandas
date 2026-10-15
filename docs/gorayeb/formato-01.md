@@ -103,6 +103,11 @@ node docs/gorayeb/render.mjs docs/gorayeb/carrosseis/<peça>.json
 python3 docs/gorayeb/empacota.py docs/gorayeb/carrosseis/<peça>.json
 ```
 
+## Diário
+
+Toda entrega ou decisão nova entra no `diario.md`, que é o resumo do que já foi
+feito. É pra consultar lá em vez de rolar conversa.
+
 ## Limites da OAB
 
 Informativo e educativo. Sem promessa de resultado, sem "melhor" ou "maior",
