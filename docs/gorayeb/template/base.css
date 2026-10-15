@@ -412,8 +412,9 @@
   display: flex; flex-direction: column;
   padding: 64px var(--margem) 56px;
 }
-/* a marca d'água vive na chapa, não no slide inteiro */
-.corpo-foto .chapa::before {
+/* a marca d'água na chapa é opcional: só entra com textura "marca".
+   Por padrão a chapa fica em cor sólida. */
+.corpo-foto.marca-dagua .chapa::before {
   content: "";
   position: absolute; z-index: 0; pointer-events: none;
   width: 62%; aspect-ratio: 838 / 544;
@@ -432,7 +433,7 @@
   font-weight: 300; font-size: 31px; line-height: 1.56; margin-top: 34px;
   max-width: 21em;
 }
-.corpo-foto .pe { margin-top: auto; display: flex; justify-content: center; padding-top: 40px; }
+.corpo-foto .pe { margin-top: auto; display: flex; padding-top: 40px; }
 
 /* ======================================================================
    GRÁFICO EM PERSPECTIVA — as cifras deitadas no plano da foto.

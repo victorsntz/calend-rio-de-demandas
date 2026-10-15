@@ -54,7 +54,6 @@ const rico = (s = "", agressivo = false) =>
 const titulo = (s) => rico(s, true);
 
 const ARROBA = '<div class="arroba">@gorayebadvocacia</div>';
-const ASSINA = (classe = "") => `<div class="assinatura ${classe}">Do agro, pelo agro.</div>`;
 /* Logos oficiais da pasta ENTREGA > LOGOS E SÍMBOLOS do Drive. Nunca
    redesenhar: é só escolher a versão certa pro fundo. */
 const LOCKUP = (altura = 74, claro = true) =>
@@ -109,7 +108,6 @@ function monta(s) {
         ${s.gancho ? `<div class="espaco"></div><div class="caixa-fina corpo menor">${titulo(s.gancho)}</div>` : ""}
         <div class="rodape">
           <div class="pilula">${esc(s.arraste || "Arrasta pro lado")} <span>▶</span></div>
-          ${ASSINA()}
         </div>`;
       break;
 
@@ -121,7 +119,7 @@ function monta(s) {
           <div class="entre-fios"><p class="tese ${s.centro ? "centro" : ""}">${titulo(s.tese)}</p></div>
           ${s.texto ? `<div class="espaco"></div><p class="corpo">${rico(s.texto)}</p>` : ""}
         </div>
-        <div class="rodape"><span></span>${ASSINA()}</div>`;
+        <div class="rodape"></div>`;
       break;
 
     /* foto com um bloco de texto embaixo */
@@ -132,7 +130,7 @@ function monta(s) {
         ${s.titulo ? `<h2 class="titulo menor">${titulo(s.titulo)}</h2><div class="espaco"></div>` : ""}
         ${s.texto ? `<p class="corpo">${rico(s.texto)}</p>` : ""}
         <div class="espaco-lg"></div>
-        <div class="rodape"><span></span>${ASSINA()}</div>`;
+        <div class="rodape"></div>`;
       break;
 
     /* citação em itálico dentro de caixa de borda fina, centrada no slide */
@@ -140,7 +138,7 @@ function monta(s) {
       corpo = `
         ${ARROBA}
         <div class="meio"><div class="caixa-fina"><p class="citacao">${titulo(s.citacao)}</p></div></div>
-        <div class="rodape"><span></span>${ASSINA()}</div>`;
+        <div class="rodape"></div>`;
       break;
 
     /* lista curta: até 4 itens, um por linha */
@@ -152,7 +150,7 @@ function monta(s) {
         <ul class="lista">${(s.itens || []).map((i) => `<li><span>${rico(i)}</span></li>`).join("")}</ul>
         ${s.remate ? `<div class="espaco"></div><p class="tese">${titulo(s.remate)}</p>` : ""}
         <div class="empurra"></div>
-        <div class="rodape"><span></span>${ASSINA()}</div>`;
+        <div class="rodape"></div>`;
       break;
 
     /* dado: um número grande com a leitura embaixo */
@@ -165,7 +163,7 @@ function monta(s) {
         <p class="tese">${titulo(s.leitura)}</p>
         ${s.texto ? `<div class="espaco"></div><p class="corpo">${rico(s.texto)}</p>` : ""}
         <div class="empurra"></div>
-        <div class="rodape"><span></span>${ASSINA()}</div>`;
+        <div class="rodape"></div>`;
       break;
 
     /* fecho: síntese + CTA + assinatura + lockup */
@@ -177,9 +175,7 @@ function monta(s) {
         ${s.cta ? `<div class="espaco"></div><div class="centro" style="text-align:center"><span class="cta">${rico(s.cta)}</span></div>` : ""}
         <div class="espaco-lg"></div>
         <div class="centro" style="text-align:center">
-          <p class="titulo menor" style="font-size:34px">Do agro, pelo agro.</p>
-          <div class="espaco"></div>
-          <div style="display:flex;justify-content:center">${LOGO(66)}</div>
+          <div style="display:flex;justify-content:center">${LOGO(72)}</div>
         </div>
         <div class="empurra"></div>`;
       break;
@@ -209,7 +205,6 @@ function monta(s) {
             ${l2 ? `<span class="l2">${titulo(l2)}</span>` : ""}
           </h2>
           ${(s.paragrafos || []).map((t) => `<p class="texto-corpo">${rico(t)}</p>`).join("")}
-          <div class="pe">${LOGO(58)}</div>
         </div>`;
       break;
     }
@@ -263,7 +258,7 @@ function monta(s) {
         ${ARROBA}
         ${s.titulo ? `<div class="espaco"></div><h2 class="titulo menor">${titulo(s.titulo)}</h2>` : ""}
         <div class="meio">${fab(s)}</div>
-        <div class="rodape"><span></span>${ASSINA()}</div>`;
+        <div class="rodape"></div>`;
       break;
     }
 
