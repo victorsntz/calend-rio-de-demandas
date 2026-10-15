@@ -89,6 +89,20 @@ Data histórica que **diverge entre fontes não entra**. Fica de fora e, se for
 importante, vai avisado na entrega. Retrato de figura histórica também não: ou
 tem autorização do acervo, ou não vai.
 
+## Como entrego
+
+Sempre dois arquivos, sem precisar pedir:
+
+1. **O zip** com as artes numeradas na ordem do post, mais o `legenda.txt` dentro.
+2. **O .txt da legenda** solto, pra colar direto sem abrir o zip.
+
+Quem faz isso é `empacota.py`, que roda depois do render:
+
+```
+node docs/gorayeb/render.mjs docs/gorayeb/carrosseis/<peça>.json
+python3 docs/gorayeb/empacota.py docs/gorayeb/carrosseis/<peça>.json
+```
+
 ## Limites da OAB
 
 Informativo e educativo. Sem promessa de resultado, sem "melhor" ou "maior",

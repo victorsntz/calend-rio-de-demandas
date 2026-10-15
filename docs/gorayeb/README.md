@@ -94,6 +94,15 @@ Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
 | `tabela` | `colunas` (2) e `linhas` de `{criterio, a, b}` | comparar dois cenários |
 | `cerca` | `rotuloA`, `rotuloB` | meio a meio de uma divisa, desenhado como cerca |
 
+Pra fechar a entrega, depois do render:
+
+```
+python3 docs/gorayeb/empacota.py docs/gorayeb/carrosseis/<peça>.json [saída]
+```
+
+Sai um `gorayeb-<id>.zip` com as artes numeradas e a legenda dentro, mais o
+`gorayeb-<id>-legenda.txt` solto. Sem a pasta de saída, vai pra `entrega/`.
+
 Ícones de linha disponíveis em `ICONES`: `boi`, `navio`, `dinheiro`, `mapa`,
 `documento`. Entram pelo campo `icone` de cada item de `numeros`.
 
