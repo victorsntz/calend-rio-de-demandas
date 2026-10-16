@@ -99,6 +99,15 @@ Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
 | `cerca` | `rotuloA`, `rotuloB` | meio a meio de uma divisa, desenhado como cerca |
 | `linha` | `itens` de `{numero, rotulo}` | até 4 etapas em sequência, de cima pra baixo |
 
+Pra puxar um post de referência do Instagram:
+
+```
+python3 docs/gorayeb/ig.py "<link do post>" <pasta>
+```
+
+Sai um arquivo por slide mais a `legenda.txt`. Depois é abrir cada imagem e ler
+slide a slide, que é o que mostra a estrutura da peça.
+
 Pra fechar a entrega, depois do render:
 
 ```
