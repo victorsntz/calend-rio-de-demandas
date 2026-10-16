@@ -60,6 +60,9 @@ python3 docs/gorayeb/calendario/gerar.py [saída]
 semanas, rodar o gerador e mandar o arquivo. O nome do arquivo carrega a data,
 então não sobrescreve o que já foi enviado.
 
+Os quatro vídeos gravados e os roteiros deles estão em
+`calendario/roteiros-gravados.md`, com a ordem de publicação e o porquê.
+
 O raciocínio do remanejamento de 16/10 está em `calendario.md`. Em uma linha: o
 calendário não estava sendo seguido porque o feed já tem pauta própria, então ele
 passou a valer como **estoque de pauta, não como agenda**.
@@ -93,6 +96,8 @@ O detalhe de cada uma está em `formato-01.md`.
 | Calendário é estoque de pauta, não agenda; notícia fura a fila | reconciliação de 16/10 |
 | Ritmo: 1 vídeo (terça) + 2 peças da agência por semana | pedido direto |
 | Carrossel e estático trocam de lugar na execução; o vídeo tem dia fixo | pedido direto |
+| Duas trilhas: terça segue o estoque de vídeo, quinta e sábado seguem o pilar | estoque gravado de 16/10 |
+| Peça pronta não espera pilar | estoque gravado de 16/10 |
 | Pauta de lei informa o que mudou; projeção de custo fica na legenda | retorno do cliente |
 | Pauta técnica pede registro longo, até 10 slides | revisão da escala 6x1 |
 | Número sem fonte não entra | contrato |
@@ -148,6 +153,10 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 
 **16/10/2026**
 
+- Correção: os vídeos dos itens 1, 9, 10 e 15 não estavam no ar, estavam
+  gravados e editados. Entraram nas terças de 20/10 a 10/11, e a primeira
+  quinzena de novembro virou bloco ambiental para acompanhá-los. A NR-31 abre
+  em 24/11.
 - Calendário editorial reconciliado. 20 posts previstos até 15/10, 4 do
   calendário feitos, mas o feed publicou bem mais que isso com pauta própria.
   Agenda refeita de 17/10 em diante, pilar trabalhista deslocado uma semana, e

@@ -12,8 +12,9 @@ sábado é estático com legenda. É proposta, não lei — carrossel e estátic
 de lugar sem problema. O que não troca é o vídeo da terça, que depende de agenda
 e vale gravar em lote.
 
-  - o calendário original, de onde vêm os itens de novembro em diante, todos
-    deslocados sete dias por causa do atraso de outubro.
+  - o calendário original, de onde vem o pilar trabalhista em diante, deslocado
+    28 dias: até 21/11 a agenda é ocupada pelo estoque de vídeo já gravado e
+    pelo bloco ambiental que o acompanha.
 
 Sai um arquivo com quatro abas: a agenda viva, o que já está no ar, o banco de
 pauta e o guia de pilares original. O nome carrega a data, para não sobrescrever
@@ -32,7 +33,7 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
 AQUI = Path(__file__).resolve().parent
 ORIGINAL = AQUI / "original.xlsx"
-DESLOCAMENTO = datetime.timedelta(days=7)
+DESLOCAMENTO = datetime.timedelta(days=28)
 PRIMEIRO_DESLOCADO = 25  # o pilar trabalhista em diante
 
 VERDE = "1B2316"
@@ -108,11 +109,12 @@ def monta(destino: Path):
             reservados |= set(lista)
     reservados |= {x["n"] for x in plano["banco_de_pauta"]["fora_de_pauta"]}
     reservados |= {x["n"] for x in plano["no_ar"] if x["n"]}
-    reservados |= {
-        int(a["origem"].split()[-1])
-        for a in plano["agenda"]
-        if a["origem"].startswith("item ")
-    }
+    # "item 7 — resgatado...", "item 15 — vídeo gravado": o número vem logo após "item"
+    import re
+    for it in plano["agenda"]:
+        m = re.match(r"item (\d+)", it["origem"])
+        if m:
+            reservados.add(int(m.group(1)))
 
     wb = openpyxl.Workbook()
 
@@ -150,7 +152,7 @@ def monta(destino: Path):
         ws.cell(linha, 6, it["tema"])
         ws.cell(linha, 7, FORMATO_POR_DIA.get(d.weekday(), "a definir"))
         ws.cell(linha, 8, "a produzir")
-        ws.cell(linha, 9, f"item {n} do original, +7 dias")
+        ws.cell(linha, 9, f"item {n} do original, +28 dias")
         linha += 1
 
     larguras(ws, {"A": 6, "B": 12, "C": 10, "D": 34, "E": 11, "F": 74, "G": 14, "H": 24, "I": 28})
