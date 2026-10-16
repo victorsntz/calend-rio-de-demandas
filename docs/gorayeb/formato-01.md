@@ -42,7 +42,7 @@ Alternar. Nenhum fundo repete dentro do mesmo carrossel.
 
 - **Fundos**: verde, off-white, branco, areia, bordô, marrom, foto com véu.
 - **Texturas**: listras, marca d'água (opcional), ou nada.
-- **Figuras**: donut, barras, tabela, mapa, números e cerca. Pelo menos uma por
+- **Figuras**: donut, barras, tabela, mapa, números, cerca e linha do tempo. Pelo menos uma por
   carrossel, que é o que diferencia o nosso do que já estava sendo publicado.
   Quando a pauta tem uma coisa concreta (uma cerca, uma porteira, uma divisa),
   desenhar a coisa vale mais que um gráfico genérico.

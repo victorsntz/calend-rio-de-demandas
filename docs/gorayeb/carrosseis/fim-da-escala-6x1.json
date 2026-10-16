@@ -1,0 +1,86 @@
+{
+  "id": "fim-da-escala-6x1",
+  "titulo": "Fim da escala 6x1: o que muda no campo",
+  "nota": "Formato 01, recorte nacional. Pauta vinda de um post da abrada.oficial, mas apurada do zero: cada número foi conferido em fonte independente antes de entrar na arte. Fotos do Pinterest, licença a conferir (ver _creditos.json).",
+  "legenda_instagram": "O Senado aprovou o fim da escala 6x1. E no campo isso tem data pra pegar.\n\nNo dia 14 de outubro, em dois turnos e por 75 votos a 1, passou a PEC 221/2019. A jornada cai de 44 para 40 horas por semana, no máximo 8 por dia, com dois descansos semanais, um deles de preferência no domingo. Sem corte de salário. O texto é o mesmo que saiu da Câmara, então vai direto pra promulgação.\n\nA conta do tempo começa aí. Dois meses depois da promulgação a jornada já cai pra 42 horas. Um ano e dois meses depois, chega nas 40.\n\nE o agro é dos setores que mais sentem. Pelo Ipea, 96,57% dos vínculos formais da agricultura, pecuária e serviços ligados a elas estão hoje acima de 40 horas, com alta estimada de 9,62% no custo da hora trabalhada.\n\nFaz sentido, porque no campo a tarefa não espera. Ordenha tem hora, colheita tem janela, trato não adia pra segunda. O serviço continua o mesmo. O que muda é quanta gente precisa pra cobrir a semana.\n\nDá pra chegar organizado. Olhe agora a escala real de cada frente, o ponto, os intervalos, o banco de horas, o contrato de safra e o acordo coletivo da categoria.\n\nSua escala já está pronta pra 40 horas?\n\nFontes: Senado Federal (PEC 221/2019) e Ipea, Nota Técnica 123/2026.",
+  "slides": [
+    {
+      "tipo": "capa-foto",
+      "foto": "../img/cafe-peneira.jpg",
+      "etiqueta": "Aprovado em 14 de outubro.",
+      "titulo": "A vaca não sabe\nque mudou a lei.",
+      "escala": "menor",
+      "sub": "O Senado aprovou o fim da escala 6x1. *No campo o trabalho não para.* Quem vai ter que mudar é a escala."
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../img/ordenha-carrossel.jpg",
+      "titulo": "O que o Senado\naprovou.",
+      "paragrafos": [
+        "Jornada de 44 para 40 horas por semana, no máximo 8 por dia, e dois descansos semanais, um deles de preferência no domingo. Sem corte de salário.",
+        "Passou em dois turnos, por 75 votos a 1. O texto é o mesmo que saiu da Câmara, então vai direto pra promulgação."
+      ]
+    },
+    {
+      "tipo": "figura",
+      "figura": "linha",
+      "titulo": "O relógio começa\nna promulgação.",
+      "itens": [
+        {
+          "numero": "44h",
+          "rotulo": "é a jornada que vale hoje"
+        },
+        {
+          "numero": "42h",
+          "rotulo": "dois meses depois\nda promulgação"
+        },
+        {
+          "numero": "40h",
+          "rotulo": "um ano e dois meses depois"
+        }
+      ],
+      "fonte": "PEC 221/2019, texto aprovado pelo Senado",
+      "alt": "Linha do tempo de 44 para 42 e depois 40 horas semanais",
+      "textura": "listras"
+    },
+    {
+      "tipo": "figura",
+      "figura": "donut",
+      "titulo": "No agro,\nquase todo mundo.",
+      "valor": 96.57,
+      "destaque": "96,6%",
+      "rotulo": "dos vínculos do agro",
+      "resto": "o restante já cumpre as 40 horas",
+      "legenda": "O mesmo estudo estima alta de 9,62% no custo da hora trabalhada na agricultura, pecuária e serviços ligados a elas.",
+      "fonte": "Ipea, Nota Técnica 123/2026",
+      "alt": "Donut mostrando 96,6 por cento dos vínculos do agro acima de 40 horas",
+      "fundo": "offwhite"
+    },
+    {
+      "tipo": "foto-texto",
+      "titulo": "Domingo não é\nferiado pro trato.",
+      "texto": "Ordenha tem hora. Colheita tem janela. Trato não adia pra segunda. O serviço continua o mesmo, o que muda é quanta gente precisa pra cobrir a semana.",
+      "foto": "../img/enxada-lavoura.jpg",
+      "veu": "marrom"
+    },
+    {
+      "tipo": "lista",
+      "titulo": "O que olhar antes\nda conta chegar",
+      "itens": [
+        "A escala real de cada frente: curral, lavoura e galpão",
+        "Ponto, intervalo e banco de horas, do jeito que funcionam hoje",
+        "Contrato de safra e o acordo coletivo da categoria"
+      ],
+      "meiaFoto": true,
+      "foto": "../img/peao-balde-pasto.jpg",
+      "foco": "center 22%"
+    },
+    {
+      "tipo": "fecho",
+      "foto": "../img/estrada-amanhecer.jpg",
+      "veu": "verde",
+      "sintese": "A lei mudou\no calendário.\nNão mudou\na ordenha.",
+      "cta": "Sua escala já está pronta pra 40 horas?"
+    }
+  ]
+}

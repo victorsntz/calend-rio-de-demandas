@@ -1,4 +1,5 @@
-/* Figuras dos carrosséis: donut, barras, mapa, números, tabela e cerca.
+/* Figuras dos carrosséis: donut, barras, mapa, números, tabela, cerca e
+ * linha do tempo.
  *
  * Regras que valem pra todas:
  *  - no máximo dois dados coloridos por figura; o resto é neutro;
@@ -195,6 +196,42 @@ export function numeros(f) {
 }
 
 
+/* ---- linha do tempo ----------------------------------------------------
+   Etapas em sequência, de cima pra baixo. Serve pra prazo, pra transição
+   de lei, pra qualquer coisa que acontece em ordem e tem data.          */
+export function linha(f) {
+  const its = (f.itens || []).slice(0, 4);
+  const x = 72, xr = 156;
+  const y0 = 92, y1 = 568;
+  const passo = its.length > 1 ? (y1 - y0) / (its.length - 1) : 0;
+  const ys = its.map((_, k) => y0 + passo * k);
+
+  const marcas = its
+    .map((it, k) => {
+      const y = ys[k];
+      const linhas = String(it.rotulo || "").split("\n");
+      const rot = linhas
+        .map((l, i) => `<tspan x="${xr}" dy="${i === 0 ? 0 : 38}">${esc(l)}</tspan>`)
+        .join("");
+      return `
+      <circle cx="${x}" cy="${y}" r="17" class="mapa-destaque"/>
+      <circle cx="${x}" cy="${y}" r="33" class="mapa-anel"/>
+      <text x="${xr}" y="${y + 12}" class="rot-num" style="font-size:94px">${esc(it.numero)}</text>
+      <text x="${xr}" y="${y + 62}" class="rot-txt" style="font-size:31px">${rot}</text>`;
+    })
+    .join("");
+
+  return `
+  <div class="figura">
+    <svg viewBox="0 0 1000 660" role="img" aria-label="${esc(f.alt || "Linha do tempo das etapas")}">
+      <line x1="${x}" y1="${y0}" x2="${x}" y2="${y1}" stroke="var(--dado-1)" stroke-width="4" opacity=".45"/>
+      ${marcas}
+    </svg>
+    ${f.legenda ? `<p class="figura-legenda">${ec(f.legenda)}</p>` : ""}
+    ${f.fonte ? `<p class="fonte">Fonte: ${esc(f.fonte)}</p>` : ""}
+  </div>`;
+}
+
 /* ---- tabela de comparação -------------------------------------------
    Duas colunas, uma por cenário, e uma linha por critério. Serve pra
    mostrar "de um jeito é assim, do outro é assado" sem texto corrido.  */
@@ -274,5 +311,5 @@ export function cerca(f) {
   </div>`;
 }
 
-export const FIGURAS = { donut, barras, mapa, numeros, tabela, cerca };
+export const FIGURAS = { donut, barras, mapa, numeros, tabela, cerca, linha };
 

@@ -8,7 +8,7 @@ Atualizo isso a cada entrega ou decisão nova.
 | | |
 | --- | --- |
 | **Formato padrão** | 01, escrito em `formato-01.md` |
-| **Peças prontas** | 2 carrosséis, nenhum publicado ainda |
+| **Peças prontas** | 3 carrosséis, nenhum publicado ainda |
 | **Pendente com o Victor** | licença das fotos do Pinterest |
 | **Em aberto** | autorização da ABCZ pra retrato de pioneiro |
 
@@ -32,6 +32,19 @@ rebanhos, as três cifras com ícone e o fecho em homenagem à classe.
 Arquivo: `carrosseis/dia-da-pecuaria.json`
 Status: **aprovado na revisão**, zip entregue. Falta conferir licença de 5 fotos.
 
+### 3. Fim da escala 6x1: o que muda no campo
+
+7 slides sobre a PEC 221/2019, aprovada no Senado em 14/10. Capa no café, o que
+o Senado aprovou, a linha do tempo do prazo, a rosca dos 96,6% do agro, a rotina
+que não tem folga, o que revisar e o fecho.
+
+A pauta veio de um post da abrada.oficial que o Victor mandou. Não aproveitei
+número nenhum de lá: apurei tudo de novo. O ângulo é outro, o prazo, que é o que
+ninguém estava contando.
+
+Arquivo: `carrosseis/fim-da-escala-6x1.json`
+Status: **entregue**, aguardando revisão. Falta conferir licença de 5 fotos.
+
 ## Decisões que viraram padrão
 
 Cada uma saiu de um pedido do Victor. Não voltar atrás sem ele mandar.
@@ -52,6 +65,8 @@ O detalhe de cada uma está em `formato-01.md`.
 | Cenário nacional, não o escritório | revisão da pecuária |
 | Fecho honra quem faz, chamada pede marcação | revisão da pecuária |
 | Entrega sempre em zip + txt da legenda | pedido direto |
+| Diário atualizado a cada entrega | pedido direto |
+| Referência de concorrente é pauta, não fonte | post da abrada |
 | Número sem fonte não entra | contrato |
 | Data que diverge entre fontes fica de fora | pesquisa da pecuária |
 
@@ -81,7 +96,9 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 2. **Retrato de pioneiro.** O Victor pediu foto dos grandes no carrossel da
    pecuária. Não coloquei: os retratos que existem são de acervo da ABCZ e
    precisam de autorização. Se conseguir, monto um slide só com eles.
-3. **Figma.** O MCP do Figma não conecta nessa sessão, dá 403 no proxy. Tudo que
+3. **Instagram.** Liberado na rede, mas o `WebFetch` resolve DNS por fora do
+   proxy e não enxerga. Abrir post é pelo Chromium, com o script do scratchpad.
+4. **Figma.** O MCP do Figma não conecta nessa sessão, dá 403 no proxy. Tudo que
    foi feito saiu das peças do Drive e do `hex.pdf` oficial.
 
 ## Histórico
@@ -97,3 +114,13 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - Carrossel do Dia da Pecuária, revisado em três rodadas.
 - Correção: era Dia do Pecuarista, 15 de julho. É Dia da Pecuária, 14 de outubro.
 - Empacotador de entrega.
+- Diário criado.
+
+**16/10/2026**
+
+- Carrossel do fim da escala 6x1, a partir de um post que o Victor mandou como
+  referência. Instagram liberado na rede pra conseguir ler o original.
+- Figura nova: linha do tempo.
+- Regra nova: número de concorrente não entra sem conferir em fonte
+  independente. Caiu a projeção da FAEP de R$ 4,1 bilhões, que é calculada em
+  cima de 36 horas e não das 40 aprovadas.

@@ -95,6 +95,7 @@ Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
 | `numeros` | `itens` de `{numero, rotulo, icone}` | até 4 cifras em diagonal |
 | `tabela` | `colunas` (2) e `linhas` de `{criterio, a, b}` | comparar dois cenários |
 | `cerca` | `rotuloA`, `rotuloB` | meio a meio de uma divisa, desenhado como cerca |
+| `linha` | `itens` de `{numero, rotulo}` | até 4 etapas em sequência, de cima pra baixo |
 
 Pra fechar a entrega, depois do render:
 
