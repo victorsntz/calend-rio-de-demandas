@@ -6,6 +6,12 @@ Uso:  python3 docs/gorayeb/calendario/gerar.py [pasta de saída]
 Junta duas coisas:
   - `plano.json`, que é o remanejamento feito aqui (o que já está no ar, o que
     entra nas próximas semanas e o que foi para o banco de pauta);
+
+O formato segue o dia: terça é o vídeo com o Dr. Fernando, quinta é carrossel e
+sábado é estático com legenda. É proposta, não lei — carrossel e estático trocam
+de lugar sem problema. O que não troca é o vídeo da terça, que depende de agenda
+e vale gravar em lote.
+
   - o calendário original, de onde vêm os itens de novembro em diante, todos
     deslocados sete dias por causa do atraso de outubro.
 
@@ -36,6 +42,8 @@ DOURADO = "B8943D"
 BORDO = "63260F"
 
 DS = ["segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"]
+# uma peça em vídeo por semana, na terça; as outras duas saem da agência
+FORMATO_POR_DIA = {1: "vídeo", 3: "carrossel", 5: "estático"}
 CABECA = ["Nº", "Data", "Dia", "Pilar", "Tipo", "Tema do post", "Formato", "Status", "Observação"]
 
 
@@ -140,7 +148,7 @@ def monta(destino: Path):
         ws.cell(linha, 4, it["pilar"])
         ws.cell(linha, 5, it["tipo"])
         ws.cell(linha, 6, it["tema"])
-        ws.cell(linha, 7, "a definir")
+        ws.cell(linha, 7, FORMATO_POR_DIA.get(d.weekday(), "a definir"))
         ws.cell(linha, 8, "a produzir")
         ws.cell(linha, 9, f"item {n} do original, +7 dias")
         linha += 1

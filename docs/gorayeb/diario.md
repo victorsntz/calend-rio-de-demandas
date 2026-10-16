@@ -91,7 +91,8 @@ O detalhe de cada uma está em `formato-01.md`.
 | Da referência se copia o conteúdo, não a espinha visual | revisão da escala 6x1 |
 | Barra de progresso não entra | revisão da escala 6x1 |
 | Calendário é estoque de pauta, não agenda; notícia fura a fila | reconciliação de 16/10 |
-| Formato (carrossel, estático ou vídeo) se decide na hora de executar | pedido direto |
+| Ritmo: 1 vídeo (terça) + 2 peças da agência por semana | pedido direto |
+| Carrossel e estático trocam de lugar na execução; o vídeo tem dia fixo | pedido direto |
 | Pauta de lei informa o que mudou; projeção de custo fica na legenda | retorno do cliente |
 | Pauta técnica pede registro longo, até 10 slides | revisão da escala 6x1 |
 | Número sem fonte não entra | contrato |

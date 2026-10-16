@@ -4,6 +4,11 @@ O calendário que ela mandou prevê 144 posts, de 01/09/2026 a 31/07/2027, em
 três por semana: **terça técnico, quinta notícia, sábado humanizado.** Cada mês
 tem um pilar, escolhido pela época do ano.
 
+**Formato, definido com o Victor em 16/10:** três peças por semana, sendo **uma
+em vídeo e duas da agência**. A terça é o vídeo com o Dr. Fernando, porque é o
+que depende de agenda e tem que ter dia fixo. Quinta sai carrossel e sábado sai
+estático com legenda, e esses dois trocam de lugar livremente.
+
 ## O que a grade mostrou
 
 Pelo calendário, deviam ter saído 20 posts até 15/10 e saíram 4. Isso lido
@@ -54,25 +59,35 @@ Mantém três por semana e a cadência de terça, quinta e sábado.
 
 | Data | Slot | O que entra | Situação |
 | --- | --- | --- | --- |
-| sáb 17/10 | notícia | **Fim da escala 6x1** | peça pronta, é notícia quente |
-| ter 20/10 | técnico | Alongamento de dívida rural (19) | a produzir |
-| qui 22/10 | notícia | Recuperação judicial no agro (14) | a produzir |
-| sáb 24/10 | humanizado | Proteção do patrimônio do produtor PF (21) | a produzir |
-| ter 27/10 | técnico | Penhora de safra e maquinário (22) | a produzir |
-| qui 29/10 | notícia | Disputas com cooperativas (20) | a produzir |
-| sáb 31/10 | humanizado | Bastidores: crédito rural na nossa atuação (24) | precisa do escritório |
-| ter 03/11 | técnico | NR-31: o que é e para quem se aplica (25) | abre o pilar de novembro |
+| sex 16/10 | notícia | **Fim da escala 6x1** (carrossel) | sai hoje |
+| ter 20/10 | **vídeo** | Alongamento de dívida rural (19) | a produzir |
+| qui 22/10 | carrossel | Recuperação judicial no agro (14) | a produzir |
+| sáb 24/10 | estático | Proteção do patrimônio do produtor PF (21) | a produzir |
+| ter 27/10 | **vídeo** | Penhora de safra e maquinário (22) | a produzir |
+| qui 29/10 | carrossel | Disputas com cooperativas (20) | a produzir |
+| sáb 31/10 | estático | Bastidores: crédito rural na nossa atuação (24) | precisa do escritório |
+| ter 03/11 | **vídeo** | NR-31: o que é e para quem se aplica (25) | abre o pilar de novembro |
 
 De 03/11 em diante, o pilar trabalhista segue como estava, deslocado uma semana.
 O de dezembro, sucessão e holding, começa em 01/12 e fecha em 26/12, o que cai
 em cima do Natal. Vale rever esse fim quando chegar perto.
 
-### Por que a escala 6x1 fura a fila
+### Por que a escala 6x1 sai hoje
 
 A PEC foi aprovada em 14 de outubro. Notícia trabalhista não espera pilar: em
-duas semanas o assunto esfria e a peça perde a razão de existir. Ela também
-serve de porta de entrada para novembro, que é justamente o mês do trabalhista
-rural. Sai agora e emenda no pilar seguinte.
+duas semanas o assunto esfria e a peça perde a razão de existir. Sexta é fora da
+cadência, e tudo bem: notícia manda na agenda, não o contrário. Ela também serve
+de porta de entrada para novembro, que é o mês do trabalhista rural.
+
+### Gravar o vídeo em lote
+
+Um vídeo por semana dá quatro ou cinco por mês. Marcar quatro gravações
+separadas com o Dr. Fernando é o que costuma travar o calendário.
+
+A proposta é gravar o mês inteiro numa sessão só, com os quatro roteiros
+entregues juntos na véspera. A agenda dele é ocupada uma vez em vez de quatro.
+Foi o que não aconteceu em setembro e outubro, e o resultado está na conta: dos
+sete vídeos previstos no período, saíram quatro.
 
 ## O que sai de pauta, e para onde vai
 
