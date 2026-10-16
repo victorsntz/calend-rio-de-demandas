@@ -87,7 +87,7 @@ Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
 | `meiaFoto` | `true` põe a foto na metade de cima e o texto na de baixo |
 | `foco` | `object-position` da foto em `meiaFoto` e `corpo-foto`, p. ex. `center 14%`, pra não cortar rosto |
 | `corpoTitulo` | força o corpo do título da chapa em px; sem ele o render escolhe pelo tamanho da frase |
-| `progresso` | no topo do spec: `true` liga a barra de progresso e o contador em todo slide |
+| `progresso` | no topo do spec: `true` liga a barra de progresso em todo slide (sem contador) |
 
 ### Figuras (`"tipo": "figura"`)
 

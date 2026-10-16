@@ -59,12 +59,11 @@ const ARROBA = '<div class="arroba">@gorayebadvocacia</div>';
 const ETIQUETA = (t) =>
   t ? `<span class="etiqueta-pill">${esc(t)}</span>` : "";
 
-/* barra de progresso do carrossel: mostra onde o leitor está */
+/* barra de progresso do carrossel: mostra onde o leitor está, sem contador */
 const PASSO = (i, total) =>
   !total ? "" : `
     <div class="passo">
       <div class="passo-trilho"><div class="passo-feito" style="width:${((i + 1) / total) * 100}%"></div></div>
-      <span class="passo-num">${i + 1}/${total}</span>
     </div>`;
 
 /* caixa de apoio: ícone redondo + um dado que completa a cifra */

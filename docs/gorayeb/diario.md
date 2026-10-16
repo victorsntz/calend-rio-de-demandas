@@ -69,6 +69,7 @@ O detalhe de cada uma está em `formato-01.md`.
 | Diário atualizado a cada entrega | pedido direto |
 | Referência de concorrente é pauta, não fonte | post da abrada |
 | Referência mandada = quase cópia da estrutura, com a nossa IDV | pedido direto |
+| Estrutura se copia, frase não: reescrever todo o texto | revisão da escala 6x1 |
 | Pauta técnica pede registro longo, até 10 slides | revisão da escala 6x1 |
 | Número sem fonte não entra | contrato |
 | Data que diverge entre fontes fica de fora | pesquisa da pecuária |
@@ -138,6 +139,8 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - Peças novas no template: barra de progresso, etiqueta em pílula, slide de
   `cifra`, lista `itens` em pílula com ícone ou número, caixa de dado, mapinha
   de canto e nove ícones novos.
+- Revisão: contador numérico da barra fora, texto todo reescrito pra não ficar
+  com cara de cópia, e o slide do placar ganhou foto do plenário do Senado.
 - Revisão em quatro comentários. Três correções que valem pro template inteiro:
   a chapa do `corpo-foto` era fixa em 48% e cortava texto comprido, agora cresce
   com o conteúdo; a rosca de 96,6% virou `blocos`, porque anel quase fechado não

@@ -1,29 +1,29 @@
 {
   "id": "fim-da-escala-6x1",
-  "titulo": "Fim da escala 6x1: o agro vai pagar a conta?",
+  "titulo": "Fim da escala 6x1: quanto isso pesa no campo",
   "progresso": true,
   "nota": "Releitura do carrossel da abrada.oficial (9 slides), na nossa identidade. Mesma estrutura e mesma ordem de assunto; muda paleta, tipografia, ícone e foto. Acrescentei um slide, a linha do tempo da transição, que o original não trazia. Todo número foi conferido em fonte independente antes de entrar na arte.",
-  "legenda_instagram": "FIM DA ESCALA 6X1: O AGRO VAI PAGAR A CONTA?\n\nO Senado aprovou em 14/10, em dois turnos e por 75 votos a 1, a PEC 221/2019. A jornada cai de 44 para 40 horas semanais, com dois dias de descanso e sem redução salarial. O texto é o mesmo da Câmara e segue direto para promulgação.\n\nA conta do tempo começa na promulgação: 42 horas dois meses depois, 40 horas um ano e dois meses depois. Até lá, vale a regra atual.\n\nPelo Ipea, divulgado pelo Sistema Faemg Senar, 96,57% dos vínculos formais da agricultura, pecuária e serviços relacionados seriam afetados, o que representa mais de 1,5 milhão de trabalhadores. A mesma nota estima alta de 9,62% no custo da hora trabalhada na agropecuária.\n\nO Sistema FAEP projetou R$ 4,1 bilhões de impacto anual na agropecuária do Paraná e a necessidade de 107 mil novas contratações. Vale a ressalva: esse estudo simula jornada de 36 horas, e não as 40 que o Senado aprovou.\n\nO setor pesa. Segundo o Cepea/CNA, 27,79 milhões de pessoas trabalhavam no agronegócio no 1º trimestre de 2026, 25,73% da população ocupada do país.\n\nA pressão não é igual em todo lugar. Leite e ordenha, avicultura e suinocultura, hortifrúti, operações com turnos contínuos e atividades safristas são onde pausa operacional e substituição de mão de obra pesam mais.\n\nO que revisar antes da promulgação: jornadas e escalas reais, cartões de ponto e intervalos, horas extras e descanso semanal, safristas e turnos contínuos, acordos e convenções coletivas, passivos e plano preventivo.\n\nNo agro, essa discussão não é só política. Ela envolve custo, prova, escala, produtividade e prevenção de passivo trabalhista.\n\nSalve este conteúdo e compartilhe com quem vive o campo.\n\nFontes: Senado Federal (PEC 221/2019), Ipea (Nota Técnica 123/2026, divulgada pelo Sistema Faemg Senar), Sistema FAEP e Cepea/CNA.",
+  "legenda_instagram": "FIM DA ESCALA 6X1: QUANTO ISSO PESA NO CAMPO\n\nPor 75 votos a 1, em dois turnos, o Senado aprovou no dia 14 de outubro a PEC 221/2019. A jornada cai de 44 para 40 horas por semana, com dois dias de descanso e sem corte de salário. O texto saiu igual ao que veio da Câmara, então não volta para os deputados e segue para promulgação pelo Congresso Nacional.\n\nO relógio só começa a correr depois disso. Dois meses após a publicação da emenda a jornada já cai para 42 horas. Um ano e dois meses depois, chega nas 40. Até lá, vale a regra de hoje.\n\nO campo é onde isso pega mais forte. Pelo Ipea, divulgado pelo Sistema Faemg Senar, 96,57% dos contratos formais da agricultura, pecuária e serviços ligados a elas estão acima do teto que vai passar a valer. Em gente, são mais de 1,5 milhão de trabalhadores. A mesma nota calcula que a hora trabalhada encarece 9,62%.\n\nO Sistema FAEP projetou R$ 4,1 bilhões de impacto anual no agro do Paraná e 107 mil contratações só para manter a produção de pé. Fica a ressalva: esse estudo parte de jornada de 36 horas, não das 40 aprovadas, então serve de ordem de grandeza.\n\nO setor é grande. Pelo Cepea com a CNA, 27,79 milhões de pessoas trabalhavam no agronegócio no primeiro trimestre de 2026, um em cada quatro ocupados do país.\n\nE o aperto não chega igual em todo canto. Ordenha, avicultura, suinocultura, hortifrúti, turno que não para e safra são as frentes em que remanejar escala e repor gente custa mais caro.\n\nO que dá pra revisar agora: a escala que roda de verdade, o ponto e o intervalo do jeito que são marcados, a hora extra e o descanso da semana, o contrato de safrista, o acordo da categoria e o passivo que já existe.\n\nIsso não se resolve só no Congresso. No campo a mudança mexe em custo, prova, escala, produtividade e no risco de ação lá na frente.\n\nSalva esse carrossel e manda pra quem toca uma propriedade.\n\nFontes: Senado Federal (PEC 221/2019), Ipea (Nota Técnica 123/2026, divulgada pelo Sistema Faemg Senar), Sistema FAEP e Cepea/CNA.",
   "slides": [
     {
       "tipo": "capa-foto",
       "foto": "../img/cafe-peneira.jpg",
       "etiqueta": "Trabalho no agro.",
-      "titulo": "Fim da escala 6x1:\no agro vai pagar\na conta?",
+      "titulo": "Fim da escala 6x1:\nquanto isso pesa\nno campo?",
       "escala": "menor",
-      "sub": "Os estudos já apontam impacto em *custo, emprego e contrato* no campo."
+      "sub": "Os estudos já mostram efeito em *custo, emprego e contrato* dentro da porteira."
     },
     {
       "tipo": "cifra",
       "etiqueta": "O que aconteceu",
       "numero": "75 a 1",
-      "leitura": "foi o placar da aprovação da PEC 221/2019 no Senado, em dois turnos, no dia 14 de outubro.",
-      "texto": "A proposta encerra a escala 6x1, garante dois dias de descanso por semana e segue para promulgação. O texto é o mesmo que veio da Câmara, então não volta aos deputados.",
+      "leitura": "foi como o Senado aprovou a PEC 221/2019, em dois turnos, no dia 14 de outubro.",
+      "texto": "Com ela cai a escala 6x1 e passam a valer dois dias de descanso por semana. Como o texto saiu igual ao que veio da Câmara, não volta para os deputados.",
       "caixa": {
         "icone": "balanca",
-        "texto": "É emenda constitucional. *A promulgação cabe ao Congresso Nacional.*"
+        "texto": "Por ser emenda constitucional, *quem promulga é o Congresso Nacional.*"
       },
-      "foto": "../img/gado-por-do-sol.jpg",
+      "foto": "../img/plenario-senado.jpg",
       "veu": "verde"
     },
     {
@@ -54,11 +54,11 @@
       "tipo": "cifra",
       "etiqueta": "Estudo técnico",
       "numero": "96,57%",
-      "leitura": "dos vínculos formais da agricultura, pecuária e serviços relacionados seriam afetados.",
-      "texto": "O dado vem de nota técnica do Ipea, divulgada pelo Sistema Faemg Senar.",
+      "leitura": "dos contratos formais do campo estão hoje acima do teto que vai passar a valer.",
+      "texto": "O cálculo é de nota técnica do Ipea, divulgada pelo Sistema Faemg Senar, e cobre agricultura, pecuária e os serviços ligados a elas.",
       "caixa": {
         "icone": "pessoas",
-        "texto": "*Mais de 1,5 milhão* de trabalhadores entram nessa conta."
+        "texto": "Em gente, isso dá *mais de 1,5 milhão* de trabalhadores."
       },
       "foto": "../img/enxada-lavoura.jpg",
       "veu": "marrom"
@@ -67,8 +67,8 @@
       "tipo": "cifra",
       "etiqueta": "Custo do trabalho",
       "numero": "+9,62%",
-      "leitura": "é o aumento estimado no custo da hora trabalhada na agropecuária.",
-      "texto": "Em cadeia com margem apertada, a pressão cai sobre preço, escala e contratação.",
+      "leitura": "é quanto a hora trabalhada deve encarecer na agropecuária.",
+      "texto": "Onde a margem já é apertada, esse peso costuma sair do preço, da escala ou do número de contratados.",
       "fonte": "Ipea, com divulgação do Sistema Faemg Senar",
       "fundo": "offwhite"
     },
@@ -76,12 +76,12 @@
       "tipo": "cifra",
       "etiqueta": "Simulação regional",
       "numero": "R$ 4,1 bi",
-      "leitura": "é o impacto anual estimado para a agropecuária do Paraná.",
+      "leitura": "é o tamanho que o Sistema FAEP projetou para o impacto anual no agro paranaense.",
       "caixa": {
         "icone": "pessoas",
-        "texto": "O estudo do Sistema FAEP também aponta *107 mil novas contratações* para manter a produção."
+        "texto": "O mesmo estudo calcula *107 mil contratações* só para manter a produção de pé."
       },
-      "nota": "*Atenção:* esse levantamento simula jornada de 36 horas, e não as 40 que o Senado aprovou. Serve de ordem de grandeza, não de previsão.",
+      "nota": "*Olho na conta:* esse cálculo parte de uma jornada de 36 horas, não das 40 que foram aprovadas. Serve como ordem de grandeza.",
       "fundo": "bordo",
       "mapa": {
         "lon": -51.5,
@@ -92,11 +92,11 @@
       "tipo": "cifra",
       "etiqueta": "Peso do setor",
       "numero": "27,79 mi",
-      "leitura": "de pessoas trabalhavam no agronegócio brasileiro no 1º trimestre de 2026.",
-      "texto": "Pelo Cepea/CNA, o setor respondeu por 25,73% da população ocupada do país.",
+      "leitura": "é o tanto de gente que o agronegócio ocupava no primeiro trimestre de 2026.",
+      "texto": "Pelo levantamento do Cepea com a CNA, um em cada quatro ocupados do país trabalha no setor: 25,73% do total.",
       "caixa": {
         "icone": "grafico",
-        "texto": "Mudança trabalhista no agro *repercute em toda a cadeia.*"
+        "texto": "Mexer na jornada do campo *chega em toda a cadeia.*"
       },
       "escala": "menor",
       "foto": "../img/saco-cafe.jpg",
@@ -104,12 +104,12 @@
     },
     {
       "tipo": "itens",
-      "etiqueta": "Onde a pressão é maior",
-      "titulo": "Atividades mais\nsensíveis",
+      "etiqueta": "O impacto no campo",
+      "titulo": "Onde o aperto\nchega primeiro",
       "itens": [
         {
           "icone": "boi",
-          "texto": "Leite e ordenha"
+          "texto": "Ordenha e produção de leite"
         },
         {
           "icone": "porco",
@@ -117,18 +117,18 @@
         },
         {
           "icone": "folha",
-          "texto": "Hortifrúti"
+          "texto": "Hortifrúti e colheita diária"
         },
         {
           "icone": "relogio",
-          "texto": "Operações com turnos contínuos"
+          "texto": "Turno que não pode parar"
         },
         {
           "icone": "trator",
-          "texto": "Atividades safristas e logística rural"
+          "texto": "Safra e logística rural"
         }
       ],
-      "remate": "São as áreas em que pausa operacional, escala e substituição de mão de obra pesam mais.",
+      "remate": "São frentes em que parar a operação, remanejar escala ou repor gente custa mais caro.",
       "textura": "listras"
     },
     {
@@ -138,14 +138,14 @@
       "numerada": true,
       "marca": "check",
       "itens": [
-        "Jornadas e escalas reais",
-        "Cartões de ponto e intervalos",
-        "Horas extras e descanso semanal",
-        "Safristas, turnos e atividades contínuas",
-        "Acordos e convenções coletivas",
-        "Passivos e plano preventivo"
+        "A escala que roda de verdade",
+        "Ponto e intervalo, do jeito que são marcados",
+        "Hora extra e o descanso da semana",
+        "Safrista, turno e serviço que não para",
+        "Acordo e convenção da categoria",
+        "O passivo que já existe e o plano pra não criar mais"
       ],
-      "remate": "A leitura precisa ser jurídica, operacional e econômica ao mesmo tempo.",
+      "remate": "A conta precisa fechar nos três lados ao mesmo tempo: o jurídico, o operacional e o financeiro.",
       "fundo": "offwhite"
     },
     {
@@ -153,12 +153,12 @@
       "etiqueta": "Fechamento",
       "foto": "../img/estrada-amanhecer.jpg",
       "veu": "verde",
-      "sintese": "No agro, a discussão\nnão é só política.",
+      "sintese": "Isso não se resolve\nsó no Congresso.",
       "paragrafos": [
-        "Ela envolve custo, prova, escala, produtividade e prevenção de passivo trabalhista.",
-        "Quem vive do campo precisa acompanhar a mudança antes que ela chegue ao processo."
+        "No campo, a mudança mexe em custo, prova, escala, produtividade e no risco de ação trabalhista lá na frente.",
+        "Quem vive de produzir precisa acertar a escala antes que a discussão chegue em forma de processo."
       ],
-      "salvar": "*Salve este conteúdo* e compartilhe com quem vive o campo."
+      "salvar": "*Salva esse carrossel* e manda pra quem toca uma propriedade."
     }
   ]
 }

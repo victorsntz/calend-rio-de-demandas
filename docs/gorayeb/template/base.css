@@ -535,10 +535,6 @@
   background: rgba(235,227,200,.26);
 }
 .passo-feito { height: 100%; border-radius: 3px; background: var(--dourado); }
-.passo-num {
-  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-size: 23px; font-weight: 400; opacity: .72; flex: none;
-}
 .bg-offwhite .passo-trilho, .bg-branco .passo-trilho,
 .bg-creme .passo-trilho, .bg-areia .passo-trilho { background: rgba(27,35,22,.14); }
 /* o slide com barra começa mais embaixo, pra ela não encostar no conteúdo */

@@ -26,7 +26,7 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Fecho** | Honra quem faz, não vende serviço. A chamada pede marcação, que puxa mais comentário que pergunta. |
 | **Título de chapa** | Uma linha só, no `corpo-foto`. O `\n` no JSON marca onde começa o itálico, não quebra linha. Se não couber, encurtar o título. |
 | **Tamanho** | 5 a 7 slides no padrão. Até 10 quando a pauta é técnica e pede texto corrido, como mudança de lei. |
-| **Barra de progresso** | `progresso: true` no spec. Liga a barra e o contador no alto de todo slide. Entra nos carrosséis longos. |
+| **Barra de progresso** | `progresso: true` no spec. Só a barra, **sem contador numérico**. Entra nos carrosséis longos. |
 
 ## A capa
 
@@ -71,6 +71,8 @@ com a nossa identidade.**
    nossa também vai.
 3. **Trocar só a casca.** Nossa paleta, nossa tipografia, nossos ícones, nosso
    jeito de desenhar gráfico. O conteúdo e o encadeamento ficam.
+   **Reescrever todo o texto**, inclusive título de slide e nome de item de
+   lista. Mesma informação, outras palavras: estrutura a gente copia, frase não.
    Quando a referência fala com um público diferente do nosso (eles falam com
    advogado, a Gorayeb fala com produtor), muda o destinatário, não a lista.
 4. **Conferir cada informação** em fonte independente antes de entrar na arte.
