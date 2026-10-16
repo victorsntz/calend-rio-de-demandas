@@ -68,6 +68,7 @@ O detalhe de cada uma está em `formato-01.md`.
 | Entrega sempre em zip + txt da legenda | pedido direto |
 | Diário atualizado a cada entrega | pedido direto |
 | Referência de concorrente é pauta, não fonte | post da abrada |
+| Referência mandada = quase cópia da estrutura, com a nossa IDV | pedido direto |
 | Pauta técnica pede registro longo, até 10 slides | revisão da escala 6x1 |
 | Número sem fonte não entra | contrato |
 | Data que diverge entre fontes fica de fora | pesquisa da pecuária |
@@ -99,7 +100,9 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
    pecuária. Não coloquei: os retratos que existem são de acervo da ABCZ e
    precisam de autorização. Se conseguir, monto um slide só com eles.
 3. **Instagram.** Liberado na rede, mas o `WebFetch` resolve DNS por fora do
-   proxy e não enxerga. Abrir post é pelo Chromium, com o script do scratchpad.
+   proxy e não enxerga. Pelo Chromium dá pra ler a legenda, mas as imagens do
+   carrossel não vêm: sem login o site segura as artes e, depois de algumas
+   tentativas, passa a devolver 429. **Para referência, pedir os prints.**
 4. **Figma.** O MCP do Figma não conecta nessa sessão, dá 403 no proxy. Tudo que
    foi feito saiu das peças do Drive e do `hex.pdf` oficial.
 

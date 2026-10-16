@@ -57,6 +57,29 @@ Alternar. Nenhum fundo repete dentro do mesmo carrossel.
   legenda embaixo repetindo o número. Texto solto dentro do desenho estoura a
   margem da peça.
 
+## Quando vem uma referência
+
+O Victor manda um post de outro perfil. **A regra é quase cópia da estrutura,
+com a nossa identidade.**
+
+1. **Ver as artes, não só a legenda.** Slide a slide: quantos são, o que cada um
+   carrega, onde entra gráfico, onde entra ícone, como fecha. A legenda sozinha
+   não mostra isso e leva a um carrossel mais pobre que o original.
+2. **Seguir a estrutura deles.** Mesma quantidade de slides, mesma ordem de
+   assunto, mesmo nível de detalhe. Se eles foram mais visuais e didáticos, a
+   nossa também vai.
+3. **Trocar só a casca.** Nossa paleta, nossa tipografia, nossos ícones, nosso
+   jeito de desenhar gráfico. O conteúdo e o encadeamento ficam.
+4. **Conferir cada informação** em fonte independente antes de entrar na arte.
+   Corrigir o que estiver errado e **avisar na entrega** o que foi corrigido e
+   por quê.
+5. **Melhorar o fechamento** se o deles for melhor que o nosso padrão. Vale
+   copiar a ideia do fecho.
+
+Obter as artes do Instagram é o ponto frágil: o site bloqueia quem não está
+logado e passa a devolver 429 depois de algumas tentativas. O caminho confiável
+é o Victor mandar os prints.
+
 ## Linguagem
 
 Dois registros, conforme a pauta.
