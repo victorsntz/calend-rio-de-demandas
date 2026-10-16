@@ -68,9 +68,14 @@ Mantém três por semana e a cadência de terça, quinta e sábado.
 | sáb 31/10 | estático | Bastidores: crédito rural na nossa atuação (24) | precisa do escritório |
 | ter 03/11 | **vídeo** | NR-31: o que é e para quem se aplica (25) | abre o pilar de novembro |
 
-De 03/11 em diante, o pilar trabalhista segue como estava, deslocado uma semana.
-O de dezembro, sucessão e holding, começa em 01/12 e fecha em 26/12, o que cai
-em cima do Natal. Vale rever esse fim quando chegar perto.
+Novembro e dezembro estão fechados item a item no `plano.json`. A NR-31 abre em
+24/11; a sucessão ocupa o miolo de dezembro, que é quando a família se reúne.
+
+**Dezembro foi montado à mão**, não pelo deslocamento. Entraram duas pautas de
+época que o calendário original não tinha: o 13º e a rescisão do safrista, em
+03/12, e um balanço do que muda para o produtor em 2027, em 29/12. A semana do
+Natal quebra a cadência de propósito: uma peça em 24/12, nada em 26/12 e a
+despedida em 31/12.
 
 ### Por que a escala 6x1 sai hoje
 

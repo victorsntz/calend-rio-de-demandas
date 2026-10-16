@@ -56,6 +56,8 @@ Excel para mandar ao marketing da Gorayeb.
 python3 docs/gorayeb/calendario/gerar.py [saída]
 ```
 
+O texto do e-mail de envio está em `calendario/email-elisa.md`.
+
 **Rotina quinzenal:** marcar em `plano.json` o que saiu, acrescentar as próximas
 semanas, rodar o gerador e mandar o arquivo. O nome do arquivo carrega a data,
 então não sobrescreve o que já foi enviado.

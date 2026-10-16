@@ -123,6 +123,7 @@ def monta(destino: Path):
     ws.title = "Agenda"
     estilo_cabeca(ws, CABECA)
     linha = 2
+    ocupadas = {datetime.date.fromisoformat(x["data"]) for x in plano["agenda"]}
 
     for a in plano["agenda"]:
         d = datetime.date.fromisoformat(a["data"])
@@ -144,6 +145,10 @@ def monta(destino: Path):
             continue
         it = itens[n]
         d = it["data"] + DESLOCAMENTO
+        # a agenda escrita à mão manda: dezembro foi montado item a item
+        while d in ocupadas:
+            d += datetime.timedelta(days=2)
+        ocupadas.add(d)
         ws.cell(linha, 1, n)
         ws.cell(linha, 2, d.strftime("%d/%m/%Y"))
         ws.cell(linha, 3, DS[d.weekday()])
