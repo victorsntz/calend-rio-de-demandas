@@ -227,6 +227,42 @@ export const ICONE = (nome) =>
     : "";
 const icone = ICONE;
 
+/* ---- a semana ----------------------------------------------------------
+   Sete quadrados por linha, um por dia. Cheio é dia de trabalho, vazado é
+   descanso. Mostra a mudança de escala sem precisar de uma frase.        */
+export function semana(f) {
+  const DIAS = ["S", "T", "Q", "Q", "S", "S", "D"];
+  const lado = 118, vao = 12, passo = lado + vao;
+  const linhas = (f.linhas || []).slice(0, 2);
+  const alturaBloco = 300;
+
+  const bloco = (l, k) => {
+    const topo = 34 + k * alturaBloco;
+    const caixas = DIAS.map((d, i) => {
+      const x = i * passo, y = topo + 52;
+      const folga = i >= Number(l.trabalho);
+      return `
+      <rect x="${x}" y="${y}" width="${lado}" height="${lado}" rx="14"
+            class="${folga ? "dia-folga" : "dia-trabalho"}"/>
+      <text x="${x + lado / 2}" y="${y + lado / 2 + 17}" text-anchor="middle"
+            class="dia-letra ${folga ? "folga" : ""}">${d}</text>`;
+    }).join("");
+    return `
+      <text x="0" y="${topo + 18}" class="rot-txt" style="font-size:31px">${esc(l.rotulo || "")}</text>
+      ${caixas}
+      ${l.nota ? `<text x="0" y="${topo + 52 + lado + 48}" class="rot-txt" style="font-size:29px" opacity=".66">${esc(l.nota)}</text>` : ""}`;
+  };
+
+  return `
+  <div class="figura">
+    <svg viewBox="0 0 ${7 * passo - vao} 640" role="img" aria-label="${esc(f.alt || "A semana antes e depois")}">
+      ${linhas.map(bloco).join("")}
+    </svg>
+    ${f.legenda ? `<p class="figura-legenda">${ec(f.legenda)}</p>` : ""}
+    ${f.fonte ? `<p class="fonte">Fonte: ${esc(f.fonte)}</p>` : ""}
+  </div>`;
+}
+
 /* ---- mapinha de canto ---------------------------------------------------
    Silhueta do Brasil pequena, com um ponto no lugar de que a peça fala.
    É ornamento que situa, não gráfico: entra no canto de um slide de cifra. */
@@ -388,5 +424,5 @@ export function cerca(f) {
   </div>`;
 }
 
-export const FIGURAS = { donut, blocos, barras, mapa, numeros, tabela, cerca, linha };
+export const FIGURAS = { donut, blocos, barras, mapa, numeros, tabela, cerca, linha, semana };
 

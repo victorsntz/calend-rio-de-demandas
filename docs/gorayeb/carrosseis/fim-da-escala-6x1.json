@@ -1,16 +1,16 @@
 {
   "id": "fim-da-escala-6x1",
-  "titulo": "Fim da escala 6x1: quanto isso pesa no campo",
-  "nota": "Releitura do carrossel da abrada.oficial. A informação e o grau de detalhe são os mesmos; a estrutura foi refeita para não espelhar a deles. Onde eles empilham cinco slides de número gigante, a nossa usa chapa de texto, linha do tempo, tabela, blocos de proporção e números em diagonal. Todo número conferido em fonte independente.",
-  "legenda_instagram": "FIM DA ESCALA 6X1: QUANTO ISSO PESA NO CAMPO\n\nPor 75 votos a 1, em dois turnos, o Senado aprovou no dia 14 de outubro a PEC 221/2019. A jornada cai de 44 para 40 horas por semana, com dois dias de descanso e sem corte de salário. O texto saiu igual ao que veio da Câmara, então não volta para os deputados e segue para promulgação pelo Congresso Nacional.\n\nO relógio só começa a correr depois disso. Dois meses após a publicação da emenda a jornada já cai para 42 horas. Um ano e dois meses depois, chega nas 40. Até lá, vale a regra de hoje.\n\nO campo é onde isso pega mais forte. Pelo Ipea, divulgado pelo Sistema Faemg Senar, 96,57% dos contratos formais da agricultura, pecuária e serviços ligados a elas estão acima do teto que vai passar a valer. Em gente, são mais de 1,5 milhão de trabalhadores. A mesma nota calcula que a hora trabalhada encarece 9,62%.\n\nO Sistema FAEP projetou R$ 4,1 bilhões de impacto anual no agro do Paraná e 107 mil contratações só para manter a produção de pé. Fica a ressalva: esse estudo parte de jornada de 36 horas, não das 40 aprovadas, então serve de ordem de grandeza.\n\nO setor é grande. Pelo Cepea com a CNA, 27,79 milhões de pessoas trabalhavam no agronegócio no primeiro trimestre de 2026, um em cada quatro ocupados do país.\n\nE o aperto não chega igual em todo canto. Ordenha, avicultura, suinocultura, hortifrúti, turno que não para e safra são as frentes em que remanejar escala e repor gente custa mais caro.\n\nO que dá pra revisar agora: a escala que roda de verdade, o ponto e o intervalo do jeito que são marcados, a hora extra e o descanso da semana, o contrato de safrista, o acordo da categoria e o passivo que já existe.\n\nIsso não se resolve só no Congresso. No campo a mudança mexe em custo, prova, escala, produtividade e no risco de ação lá na frente.\n\nSalva esse carrossel e manda pra quem toca uma propriedade.\n\nFontes: Senado Federal (PEC 221/2019), Ipea (Nota Técnica 123/2026, divulgada pelo Sistema Faemg Senar), Sistema FAEP e Cepea/CNA.",
+  "titulo": "Fim da escala 6x1: o que muda na jornada de quem trabalha no campo",
+  "nota": "Pauta vinda de um post da abrada.oficial, com estrutura própria. O eixo é informar o produtor sobre o que muda na prática, não medir o impacto no setor: as projeções de custo saíram da arte e ficaram na legenda. Todo número conferido em fonte independente.",
+  "legenda_instagram": "FIM DA ESCALA 6X1: O QUE MUDA NA JORNADA DE QUEM TRABALHA NO CAMPO\n\nO Senado aprovou no dia 14 de outubro, por 75 votos a 1 e em dois turnos, a PEC 221/2019. Aqui vai o que ela muda, em português.\n\nA JORNADA. Hoje o limite é de 44 horas por semana. Passa a ser de 40, com no máximo 8 horas por dia. O salário não pode cair por causa disso.\n\nA SEMANA. Hoje são seis dias de trabalho e um de folga, a tal escala 6x1. Passam a ser dois dias de descanso por semana, um deles de preferência no domingo.\n\nO PRAZO. Nada muda enquanto a emenda não for promulgada. Depois disso, a jornada cai para 42 horas em dois meses e chega nas 40 um ano e dois meses depois.\n\nQUEM FICA DE FORA. Servidores públicos, que seguem o estatuto de cada carreira, e empregados da iniciativa privada com diploma superior que recebam a partir de R$ 21.188,00, equivalente a 2,5 vezes o teto do INSS. No campo quase todo contrato é celetista, então quase todo mundo entra.\n\nPOR QUE O CAMPO SENTE MAIS. Pelo Ipea, divulgado pelo Sistema Faemg Senar, 96,57% dos contratos formais da agricultura, pecuária e serviços ligados a elas estão hoje acima de 40 horas. São mais de 1,5 milhão de trabalhadores. E a tarefa no campo tem hora: ordenha, trato e colheita não esperam a segunda-feira.\n\nO que dá pra fazer desde já: conferir a escala que roda de verdade em cada frente, olhar ponto, intervalo e hora extra como estão hoje, e reler o contrato de safrista e a convenção da categoria.\n\nSobre custo, as projeções que circulam variam bastante. O Ipea estima alta de 9,62% no custo da hora trabalhada na agropecuária. O Sistema FAEP projetou R$ 4,1 bilhões de impacto anual e 107 mil contratações no agro do Paraná, mas esse estudo parte de uma jornada de 36 horas, não das 40 aprovadas, então serve só como ordem de grandeza.\n\nSalva esse carrossel e manda pra quem toca uma propriedade.\n\nFontes: Senado Federal (PEC 221/2019), Ipea (Nota Técnica 123/2026, divulgada pelo Sistema Faemg Senar) e Sistema FAEP.",
   "slides": [
     {
       "tipo": "capa-foto",
       "foto": "../img/cafe-peneira.jpg",
       "etiqueta": "Trabalho no agro.",
-      "titulo": "Fim da escala 6x1:\nquanto isso pesa\nno campo?",
+      "titulo": "Fim da escala 6x1:\no que muda na\njornada no campo",
       "escala": "menor",
-      "sub": "Os estudos já mostram efeito em *custo, emprego e contrato* dentro da porteira."
+      "sub": "O Senado aprovou em 14 de outubro. *Explicado em dez telas,* sem juridiquês."
     },
     {
       "tipo": "corpo-foto",
@@ -18,9 +18,62 @@
       "foco": "center 40%",
       "titulo": "O que o Senado\naprovou.",
       "paragrafos": [
-        "Por 75 votos a 1, em dois turnos, no dia 14 de outubro. A jornada cai de 44 para 40 horas por semana, com dois dias de descanso e sem corte de salário.",
-        "O texto saiu igual ao que veio da Câmara, então não volta para os deputados e segue para promulgação pelo Congresso Nacional."
+        "Por 75 votos a 1, em dois turnos. A jornada máxima cai de 44 para 40 horas por semana, com no máximo 8 horas por dia e dois dias de descanso.",
+        "Um dos descansos deve ser, de preferência, no domingo. E o salário não pode cair por causa disso."
       ]
+    },
+    {
+      "tipo": "figura",
+      "figura": "semana",
+      "titulo": "A semana,\nantes e depois.",
+      "linhas": [
+        {
+          "rotulo": "COMO É HOJE",
+          "trabalho": 6,
+          "nota": "Seis dias de trabalho e um de folga. É a escala 6x1."
+        },
+        {
+          "rotulo": "DEPOIS DA TRANSIÇÃO",
+          "trabalho": 5,
+          "nota": "Cinco dias de trabalho e dois de folga, sem mexer no salário."
+        }
+      ],
+      "alt": "Duas semanas em quadrados: seis dias de trabalho hoje, cinco depois",
+      "fundo": "offwhite"
+    },
+    {
+      "tipo": "figura",
+      "figura": "tabela",
+      "titulo": "O que muda\nno contrato",
+      "colunas": [
+        "Como é hoje",
+        "Depois da transição"
+      ],
+      "realce": "b",
+      "linhas": [
+        {
+          "criterio": "Jornada semanal",
+          "a": "até 44 horas",
+          "b": "até 40 horas"
+        },
+        {
+          "criterio": "Jornada por dia",
+          "a": "até 8 horas",
+          "b": "até 8 horas"
+        },
+        {
+          "criterio": "Descansos na semana",
+          "a": "um",
+          "b": "dois"
+        },
+        {
+          "criterio": "Salário",
+          "a": "—",
+          "b": "não pode cair"
+        }
+      ],
+      "legenda": "A jornada de um dia não muda. O que muda é o total da semana e o número de folgas.",
+      "textura": "listras"
     },
     {
       "tipo": "figura",
@@ -40,99 +93,34 @@
           "rotulo": "um ano e dois meses depois"
         }
       ],
-      "legenda": "O relógio só começa a correr quando a emenda for promulgada e publicada.",
+      "legenda": "A emenda ainda não foi promulgada. Até isso acontecer, nada muda na prática.",
       "fonte": "PEC 221/2019, texto aprovado pelo Senado",
       "alt": "Linha do tempo de 44 para 42 e depois 40 horas semanais",
-      "fundo": "offwhite"
+      "fundo": "branco"
     },
     {
-      "tipo": "figura",
-      "figura": "tabela",
-      "titulo": "O que muda\nno contrato",
-      "colunas": [
-        "Como é hoje",
-        "Depois da transição"
-      ],
-      "realce": "b",
-      "linhas": [
-        {
-          "criterio": "Jornada semanal",
-          "a": "até 44 horas",
-          "b": "até 40 horas"
-        },
-        {
-          "criterio": "Descansos na semana",
-          "a": "um",
-          "b": "dois"
-        },
-        {
-          "criterio": "Escala 6x1",
-          "a": "permitida",
-          "b": "não cabe mais"
-        },
-        {
-          "criterio": "Efeito no salário",
-          "a": "sem previsão",
-          "b": "não pode cair"
-        }
-      ],
-      "legenda": "O texto não trata de jornada especial de categoria. O relator rejeitou emenda sobre o tema para não devolver a proposta à Câmara.",
-      "textura": "listras"
+      "tipo": "tese",
+      "tese": "Nem todo mundo entra na regra.",
+      "texto": "Ficam de fora os servidores públicos, que não seguem a CLT e sim o estatuto de cada carreira. E os empregados da iniciativa privada com diploma de curso superior que recebam a partir de R$ 21.188,00, o equivalente a 2,5 vezes o teto do INSS. No campo, quase todo contrato é celetista, então quase todo mundo entra.",
+      "fundo": "bordo"
     },
     {
       "tipo": "figura",
       "figura": "blocos",
-      "titulo": "Quase todo contrato\ndo campo entra nisso.",
+      "titulo": "No campo, isso\npega quase todo mundo.",
       "valor": 96.57,
       "destaque": "96,6%",
       "rotulo": "dos contratos do agro",
       "resto": "cada quadrado é um por cento",
-      "legenda": "Em gente, são mais de 1,5 milhão de trabalhadores com jornada acima do teto que vai passar a valer.",
+      "legenda": "É a fatia dos contratos formais da agricultura, pecuária e serviços ligados a elas que hoje passa de 40 horas por semana. São mais de 1,5 milhão de trabalhadores.",
       "fonte": "Ipea, divulgado pelo Sistema Faemg Senar",
-      "alt": "Cem blocos, 97 cheios, mostrando a fatia dos contratos do agro acima de 40 horas",
+      "alt": "Cem blocos, 97 cheios",
       "fundo": "offwhite"
     },
     {
-      "tipo": "figura",
-      "figura": "numeros",
-      "titulo": "O que os estudos\njá calcularam",
-      "itens": [
-        {
-          "numero": "+9,62%",
-          "rotulo": "no custo da hora trabalhada na agropecuária",
-          "icone": "dinheiro"
-        },
-        {
-          "numero": "R$ 4,1 bi",
-          "rotulo": "de impacto anual projetado só no agro do Paraná",
-          "icone": "grafico"
-        },
-        {
-          "numero": "107 mil",
-          "rotulo": "contratações para manter a produção de pé",
-          "icone": "pessoas"
-        }
-      ],
-      "legenda": "A projeção do Paraná parte de uma jornada de 36 horas, não das 40 que foram aprovadas. Serve como ordem de grandeza.",
-      "fonte": "Ipea e Sistema FAEP"
-    },
-    {
-      "tipo": "cifra",
-      "numero": "27,79 mi",
-      "escala": "menor",
-      "leitura": "é o tanto de gente que o agronegócio ocupava no primeiro trimestre de 2026.",
-      "texto": "Pelo levantamento do Cepea com a CNA, um em cada quatro ocupados do país trabalha no setor: 25,73% do total.",
-      "caixa": {
-        "icone": "pessoas",
-        "texto": "Mexer na jornada do campo *chega em toda a cadeia.*"
-      },
-      "foto": "../img/saco-cafe.jpg",
-      "veu": "verde"
-    },
-    {
       "tipo": "itens",
-      "etiqueta": "O impacto no campo",
-      "titulo": "Onde o aperto\nchega primeiro",
+      "etiqueta": "No dia a dia da propriedade",
+      "titulo": "Onde isso\npesa mais",
       "itens": [
         {
           "icone": "boi",
@@ -155,16 +143,17 @@
           "texto": "Safra e logística rural"
         }
       ],
-      "remate": "São frentes em que parar a operação, remanejar escala ou repor gente custa mais caro.",
-      "fundo": "bordo"
+      "remate": "São frentes em que a tarefa tem hora e não dá pra empurrar pra segunda-feira.",
+      "fundo": "verde",
+      "textura": "listras"
     },
     {
       "tipo": "lista",
-      "titulo": "O que dá pra\nrevisar agora",
+      "titulo": "O que dá pra\nfazer desde já",
       "itens": [
-        "A escala que roda de verdade em cada frente",
-        "Ponto, intervalo e hora extra, do jeito que são marcados",
-        "Contrato de safrista e a convenção da categoria"
+        "Conferir a escala que roda de verdade em cada frente",
+        "Olhar ponto, intervalo e hora extra como estão hoje",
+        "Reler o contrato de safrista e a convenção da categoria"
       ],
       "meiaFoto": true,
       "foto": "../img/peao-balde-pasto.jpg",
@@ -174,10 +163,10 @@
       "tipo": "fecho",
       "foto": "../img/estrada-amanhecer.jpg",
       "veu": "verde",
-      "sintese": "Isso não se resolve\nsó no Congresso.",
+      "sintese": "A regra mudou.\nO prazo começa\nna promulgação.",
       "paragrafos": [
-        "No campo, a mudança mexe em custo, prova, escala, produtividade e no risco de ação trabalhista lá na frente.",
-        "Quem vive de produzir precisa acertar a escala antes que a discussão chegue em forma de processo."
+        "Quem ajustar a escala antes chega na data com a casa em ordem. Quem deixar pra depois ajusta às pressas e com mais custo.",
+        "A mudança vale para todo empregador celetista, não só no campo."
       ],
       "salvar": "*Salva esse carrossel* e manda pra quem toca uma propriedade."
     }

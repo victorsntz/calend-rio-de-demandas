@@ -72,6 +72,7 @@ O detalhe de cada uma está em `formato-01.md`.
 | Estrutura se copia, frase não: reescrever todo o texto | revisão da escala 6x1 |
 | Da referência se copia o conteúdo, não a espinha visual | revisão da escala 6x1 |
 | Barra de progresso não entra | revisão da escala 6x1 |
+| Pauta de lei informa o que mudou; projeção de custo fica na legenda | retorno do cliente |
 | Pauta técnica pede registro longo, até 10 slides | revisão da escala 6x1 |
 | Número sem fonte não entra | contrato |
 | Data que diverge entre fontes fica de fora | pesquisa da pecuária |
@@ -147,6 +148,10 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   de cinco cifras seguidas deu lugar a sete desenhos diferentes. Três cifras
   deles viraram um slide de números em diagonal; entraram tabela e linha do
   tempo, que o original não tem.
+- Retorno do cliente: o conteúdo tem que informar o público sobre as mudanças,
+  de um jeito fácil de entender. Refeito no eixo informativo. Saíram da arte as
+  projeções de custo e entraram a semana em quadrados, a tabela com a linha que
+  não muda e o slide de quem fica de fora. Figura nova: `semana`.
 - Revisão em quatro comentários. Três correções que valem pro template inteiro:
   a chapa do `corpo-foto` era fixa em 48% e cortava texto comprido, agora cresce
   com o conteúdo; a rosca de 96,6% virou `blocos`, porque anel quase fechado não

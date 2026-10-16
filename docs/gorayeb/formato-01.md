@@ -89,6 +89,21 @@ Para baixar a referência: `python3 docs/gorayeb/ig.py "<link>" <pasta>`. A rede
 precisa permitir `www.instagram.com` e `*.cdninstagram.com`, com o curinga, que
 os arquivos ficam em subdomínio regional.
 
+## O eixo: informar, não medir
+
+A pauta de mudança de lei existe para **o público entender o que mudou**, não
+para medir o tamanho do impacto no setor. Projeção de custo e de emprego é
+assunto de entidade, e empilhada vira lobby.
+
+Na arte entra: **o que muda, quando começa, quem entra, quem fica de fora e o
+que fazer.** Um número de contexto basta, o que responde "isso me pega?". As
+projeções vão para a legenda, com a ressalva de metodologia junto.
+
+O teste é simples: alguém que não entende nada de PEC consegue explicar a
+mudança depois de passar o dedo? Se a resposta depende de ler, falta desenho.
+Foi assim que nasceu a figura `semana`: catorze quadrados explicam a escala 6x1
+sem uma linha de texto.
+
 ## Linguagem
 
 Dois registros, conforme a pauta.
