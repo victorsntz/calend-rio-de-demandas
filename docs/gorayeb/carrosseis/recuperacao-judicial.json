@@ -1,0 +1,130 @@
+{
+  "id": "recuperacao-judicial",
+  "titulo": "Recuperação judicial no agro: o caminho que o produtor passou a ter",
+  "nota": "Item 14 do calendário, para 22/10. Eixo informativo: explica a regra, não mede o impacto. Não há estatística confiável de pedidos no agro em 2026, então nenhum número de volume entrou na arte. Fotos do Pinterest, licença a conferir.",
+  "legenda_instagram": "RECUPERAÇÃO JUDICIAL NO AGRO: O CAMINHO QUE O PRODUTOR PASSOU A TER\n\nAté 2020 havia discussão sobre se o produtor rural pessoa física podia pedir recuperação judicial. A Lei 14.112 encerrou o assunto: pode, e sem precisar abrir CNPJ.\n\nO QUE A LEI EXIGE. Exercer atividade rural há mais de dois anos. Estar inscrito na Junta Comercial no momento do pedido. E comprovar tudo com o Livro Caixa Digital do Produtor Rural, a declaração de Imposto de Renda e um balanço assinado por contador.\n\nUm detalhe que já foi muito discutido: o tempo de atividade anterior ao registro na Junta conta para os dois anos. Quem fixou isso foi o STJ, no Tema 1.145.\n\nNÃO É PERDÃO DE DÍVIDA. A recuperação judicial suspende as cobranças por um prazo e obriga a apresentar um plano, que os credores votam. A dívida continua existindo. O que muda é a forma e o prazo de pagar, e o fato de tudo passar a ser tratado de uma vez, com a atividade de pé.\n\nO QUE FICA DE FORA. Na pessoa física entram só os créditos que vêm da atividade rural e que estiverem discriminados na documentação do pedido. Dívida pessoal não entra. A CPR com liquidação física e as operações de barter, a troca de insumo por produto, também ficam de fora por previsão expressa da lei.\n\nPOR QUE O TEMA VOLTOU. Safra frustrada, crédito mais caro e dívida rolada de um ano para o outro. Quando a conta deixa de fechar, a recuperação judicial é o caminho legal para reorganizar sem perder a atividade. O ponto é procurar antes de a execução chegar, não depois.\n\nO que juntar antes de conversar com um advogado: Livro Caixa Digital dos últimos exercícios, a declaração de Imposto de Renda, e os contratos, CPRs e extratos de cada dívida.\n\nSalva esse carrossel e manda pra quem está com a conta apertada.\n\nFontes: Lei 11.101/2005 com as alterações da Lei 14.112/2020, e STJ, Tema 1.145.",
+  "slides": [
+    {
+      "tipo": "capa-foto",
+      "foto": "../img/colheita-aerea.jpg",
+      "etiqueta": "Crédito rural.",
+      "titulo": "Recuperação judicial:\no caminho do produtor.",
+      "escala": "menor",
+      "sub": "Desde 2020 o produtor pessoa física pode pedir. *Explicado sem juridiquês.*"
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../img/colheitadeira-soja.jpg",
+      "titulo": "O que a lei\nmudou.",
+      "paragrafos": [
+        "Até 2020 havia discussão sobre se o produtor rural pessoa física podia pedir recuperação judicial. A Lei 14.112 encerrou o assunto: pode, e sem precisar abrir CNPJ.",
+        "O instrumento serve para quem tem dívida que não cabe mais no fluxo de caixa, mas tem atividade viável."
+      ]
+    },
+    {
+      "tipo": "itens",
+      "etiqueta": "O que a lei exige",
+      "titulo": "Três condições\npara pedir",
+      "itens": [
+        {
+          "icone": "relogio",
+          "texto": "Atividade rural há mais de dois anos"
+        },
+        {
+          "icone": "documento",
+          "texto": "Inscrição na Junta Comercial na hora do pedido"
+        },
+        {
+          "icone": "check",
+          "texto": "Livro Caixa Digital, Imposto de Renda e balanço de contador"
+        }
+      ],
+      "remate": "O tempo de atividade anterior ao registro na Junta conta para os dois anos. Quem fixou isso foi o STJ, no Tema 1.145.",
+      "textura": "listras"
+    },
+    {
+      "tipo": "tese",
+      "tese": "Recuperação judicial não é perdão de dívida.",
+      "texto": "Ela suspende as cobranças por um prazo e obriga a apresentar um plano, que os credores votam. A dívida continua existindo. O que muda é a forma e o prazo de pagar, e o fato de tudo passar a ser tratado de uma vez, com a atividade de pé.",
+      "fundo": "bordo"
+    },
+    {
+      "tipo": "figura",
+      "figura": "linha",
+      "titulo": "Como o processo\nanda",
+      "itens": [
+        {
+          "numero": "1",
+          "rotulo": "O pedido entra, com a documentação\nda atividade rural"
+        },
+        {
+          "numero": "2",
+          "rotulo": "Deferido, as cobranças ficam suspensas\npor 180 dias, prorrogáveis uma vez"
+        },
+        {
+          "numero": "3",
+          "rotulo": "O plano vai ao juízo em até 60 dias,\ncontados do deferimento"
+        },
+        {
+          "numero": "4",
+          "rotulo": "A assembleia de credores vota o plano"
+        }
+      ],
+      "legenda": "Os prazos são os da lei geral de recuperação, com as mudanças de 2020.",
+      "fonte": "Lei 11.101/2005, alterada pela Lei 14.112/2020",
+      "alt": "Linha do tempo das etapas da recuperação judicial",
+      "fundo": "offwhite"
+    },
+    {
+      "tipo": "itens",
+      "etiqueta": "Atenção",
+      "titulo": "O que fica de fora\ndo pedido",
+      "itens": [
+        {
+          "icone": "dinheiro",
+          "texto": "Dívida pessoal, sem relação com a atividade rural"
+        },
+        {
+          "icone": "documento",
+          "texto": "CPR com liquidação física"
+        },
+        {
+          "icone": "navio",
+          "texto": "Barter, a troca de insumo por produto"
+        }
+      ],
+      "remate": "Na pessoa física entram só os créditos da atividade rural, e só os que estiverem discriminados na documentação do pedido.",
+      "fundo": "verde"
+    },
+    {
+      "tipo": "foto-texto",
+      "titulo": "Por que o assunto\nvoltou agora.",
+      "texto": "Safra frustrada, crédito mais caro e dívida rolada de um ano para o outro. Quando a conta deixa de fechar, esse é o caminho legal para reorganizar sem perder a atividade. O ponto é procurar antes de a execução chegar, não depois.",
+      "foto": "../img/silos-aereo.jpg",
+      "veu": "marrom"
+    },
+    {
+      "tipo": "lista",
+      "titulo": "O que juntar\nantes da conversa",
+      "itens": [
+        "Livro Caixa Digital do Produtor Rural dos últimos exercícios",
+        "A declaração de Imposto de Renda",
+        "Contratos, CPRs e extratos de cada dívida"
+      ],
+      "meiaFoto": true,
+      "foto": "../img/peao-balde-pasto.jpg",
+      "foco": "center 22%"
+    },
+    {
+      "tipo": "fecho",
+      "foto": "../img/estrada-amanhecer.jpg",
+      "veu": "verde",
+      "sintese": "Dívida que não\ncabe no caixa\ntem caminho na lei.",
+      "paragrafos": [
+        "O que decide se ele serve para o seu caso é a conta da propriedade, não o tamanho da dívida.",
+        "E ele funciona melhor quando a atividade ainda está de pé."
+      ],
+      "salvar": "*Salva esse carrossel* e manda pra quem está com a conta apertada."
+    }
+  ]
+}
