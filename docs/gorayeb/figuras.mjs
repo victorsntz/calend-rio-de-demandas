@@ -60,7 +60,7 @@ export function donut(f) {
 export function blocos(f) {
   const pct = Math.max(0, Math.min(100, Number(f.valor)));
   const cheios = Math.round(pct);
-  const lado = 46, vao = 8, passo = lado + vao;
+  const lado = 42, vao = 7, passo = lado + vao;
   const x0 = 1000 - (10 * passo - vao), y0 = 62;
 
   const grade = Array.from({ length: 100 }, (_, i) => {
@@ -74,8 +74,8 @@ export function blocos(f) {
   <div class="figura">
     <svg viewBox="0 0 1000 660" role="img" aria-label="${esc(f.alt || `${pct}%`)}">
       <text x="0" y="${meio - 34}" class="rot-num" style="font-size:132px">${esc(f.destaque || pct + "%")}</text>
-      <text x="0" y="${meio + 30}" class="rot-txt" style="font-size:34px">${esc(f.rotulo || "")}</text>
-      ${f.resto ? `<text x="0" y="${meio + 84}" class="rot-txt" style="font-size:29px" opacity=".6">${esc(f.resto)}</text>` : ""}
+      <text x="0" y="${meio + 30}" class="rot-txt" style="font-size:32px">${esc(f.rotulo || "")}</text>
+      ${f.resto ? `<text x="0" y="${meio + 82}" class="rot-txt" style="font-size:27px" opacity=".6">${esc(f.resto)}</text>` : ""}
       ${grade}
     </svg>
     ${f.legenda ? `<p class="figura-legenda">${ec(f.legenda)}</p>` : ""}
@@ -187,9 +187,9 @@ export const ICONES = {
           <path d="M32 40V22h10v18"/>
           <path d="M42 40v-7h6v7"/>
           <path d="M4 57c4 0 4-3 8-3s4 3 8 3 4-3 8-3 4 3 8 3 4-3 8-3 4 3 8 3"/>`,
-  dinheiro: `<rect x="6" y="16" width="52" height="32" rx="4"/>
-             <circle cx="32" cy="32" r="8"/>
-             <path d="M16 24h4M44 40h4"/>`,
+  dinheiro: `<rect x="5" y="15" width="54" height="34" rx="5"/>
+             <path d="M32 22v20"/>
+             <path d="M38 28a4.5 4.5 0 0 0-4.5-3.5h-2a3.8 3.8 0 0 0 0 7.5h2a3.8 3.8 0 0 1 0 7.5h-2A4.5 4.5 0 0 1 27 36"/>`,
   mapa: `<path d="M8 18l16-6 16 6 16-6v34l-16 6-16-6-16 6z"/>
          <path d="M24 12v34M40 18v34"/>`,
   documento: `<path d="M16 8h20l12 12v36H16z"/>
@@ -265,7 +265,8 @@ export function numeros(f) {
   return `
   <div class="figura" style="gap:54px">
     ${linhas}
-    ${f.fonte ? `<p class="fonte" style="margin-top:18px">Fonte: ${esc(f.fonte)}</p>` : ""}
+    ${f.legenda ? `<p class="figura-legenda" style="margin-top:18px">${ec(f.legenda)}</p>` : ""}
+    ${f.fonte ? `<p class="fonte" style="margin-top:${f.legenda ? 10 : 18}px">Fonte: ${esc(f.fonte)}</p>` : ""}
   </div>`;
 }
 

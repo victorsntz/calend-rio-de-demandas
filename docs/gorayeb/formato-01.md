@@ -26,7 +26,7 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Fecho** | Honra quem faz, não vende serviço. A chamada pede marcação, que puxa mais comentário que pergunta. |
 | **Título de chapa** | Uma linha só, no `corpo-foto`. O `\n` no JSON marca onde começa o itálico, não quebra linha. Se não couber, encurtar o título. |
 | **Tamanho** | 5 a 7 slides no padrão. Até 10 quando a pauta é técnica e pede texto corrido, como mudança de lei. |
-| **Barra de progresso** | `progresso: true` no spec. Só a barra, **sem contador numérico**. Entra nos carrosséis longos. |
+| **Barra de progresso** | **Não usar.** Existe no template (`progresso: true`), mas ficou de fora por decisão do Victor. |
 
 ## A capa
 
@@ -66,9 +66,13 @@ com a nossa identidade.**
 1. **Ver as artes, não só a legenda.** Slide a slide: quantos são, o que cada um
    carrega, onde entra gráfico, onde entra ícone, como fecha. A legenda sozinha
    não mostra isso e leva a um carrossel mais pobre que o original.
-2. **Seguir a estrutura deles.** Mesma quantidade de slides, mesma ordem de
+2. **Seguir o conteúdo, não o desenho.** Mesma quantidade de slides, mesmo
    assunto, mesmo nível de detalhe. Se eles foram mais visuais e didáticos, a
-   nossa também vai.
+   nossa também vai. Mas **a espinha visual tem que ser outra**: se eles empilham
+   cinco telas de número gigante, a gente distribui a mesma informação em chapa
+   de texto, linha do tempo, tabela, blocos e números em diagonal. Juntar três
+   cifras deles num slide só já muda o ritmo inteiro.
+   Nenhum desenho se repete em dois slides seguidos.
 3. **Trocar só a casca.** Nossa paleta, nossa tipografia, nossos ícones, nosso
    jeito de desenhar gráfico. O conteúdo e o encadeamento ficam.
    **Reescrever todo o texto**, inclusive título de slide e nome de item de
