@@ -53,6 +53,36 @@ export function donut(f) {
   </div>`;
 }
 
+/* ---- blocos de proporção ----------------------------------------------
+   Cem quadrados, um por ponto percentual. Serve onde a rosca falha: quando
+   a fatia é quase o todo, o anel vira um círculo e não informa nada. Aqui
+   os poucos que faltam ficam visíveis como buraco.                       */
+export function blocos(f) {
+  const pct = Math.max(0, Math.min(100, Number(f.valor)));
+  const cheios = Math.round(pct);
+  const lado = 46, vao = 8, passo = lado + vao;
+  const x0 = 1000 - (10 * passo - vao), y0 = 62;
+
+  const grade = Array.from({ length: 100 }, (_, i) => {
+    const x = x0 + (i % 10) * passo, y = y0 + Math.floor(i / 10) * passo;
+    const cl = i < cheios ? "bloco-cheio" : "bloco-vazio";
+    return `<rect x="${x}" y="${y}" width="${lado}" height="${lado}" rx="5" class="${cl}"/>`;
+  }).join("\n      ");
+
+  const meio = y0 + (10 * passo - vao) / 2;
+  return `
+  <div class="figura">
+    <svg viewBox="0 0 1000 660" role="img" aria-label="${esc(f.alt || `${pct}%`)}">
+      <text x="0" y="${meio - 34}" class="rot-num" style="font-size:132px">${esc(f.destaque || pct + "%")}</text>
+      <text x="0" y="${meio + 30}" class="rot-txt" style="font-size:34px">${esc(f.rotulo || "")}</text>
+      ${f.resto ? `<text x="0" y="${meio + 84}" class="rot-txt" style="font-size:29px" opacity=".6">${esc(f.resto)}</text>` : ""}
+      ${grade}
+    </svg>
+    ${f.legenda ? `<p class="figura-legenda">${ec(f.legenda)}</p>` : ""}
+    ${f.fonte ? `<p class="fonte">Fonte: ${esc(f.fonte)}</p>` : ""}
+  </div>`;
+}
+
 /* ---- barras horizontais ------------------------------------------------
    Série única, rótulo e valor em cima de cada barra. Sem grade, sem eixo:
    o valor já está escrito.                                               */
@@ -313,5 +343,5 @@ export function cerca(f) {
   </div>`;
 }
 
-export const FIGURAS = { donut, barras, mapa, numeros, tabela, cerca, linha };
+export const FIGURAS = { donut, blocos, barras, mapa, numeros, tabela, cerca, linha };
 

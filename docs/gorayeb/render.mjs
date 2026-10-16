@@ -196,12 +196,15 @@ function monta(s) {
     /* corpo de foto: foto em cima, chapa embaixo com a marca d'água da casa */
     case "corpo-foto": {
       const [l1, l2] = String(s.titulo || "").split("\n");
+      /* o título da chapa corre numa linha só, então o corpo cede conforme
+         o tamanho da frase, em vez de quebrar */
+      const n = `${l1 || ""} ${l2 || ""}`.trim().length;
+      const cpoTitulo = s.corpoTitulo ?? (n <= 22 ? 58 : n <= 28 ? 50 : 44);
       corpo = `
         <div class="faixa-img"><img src="${esc(s.foto || "")}" alt="" style="object-position:${esc(s.foco || "center")}"></div>
         <div class="chapa">
-          <h2 class="titulo-corpo">
-            <span class="l1">${titulo(l1 || "")}</span>
-            ${l2 ? `<span class="l2">${titulo(l2)}</span>` : ""}
+          <h2 class="titulo-corpo" style="font-size:${cpoTitulo}px">
+            <span class="l1">${titulo(l1 || "")}</span>${l2 ? ` <span class="l2">${titulo(l2)}</span>` : ""}
           </h2>
           ${(s.paragrafos || []).map((t) => `<p class="texto-corpo">${rico(t)}</p>`).join("")}
         </div>`;

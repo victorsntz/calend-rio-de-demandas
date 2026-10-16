@@ -282,6 +282,9 @@
   font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 20px;
   display: flex; align-items: center; justify-content: center;
 }
+/* blocos de proporção: cem quadrados, um por ponto percentual */
+.bloco-cheio { fill: var(--dado-1); }
+.bloco-vazio { fill: var(--dado-base); }
 .mapa-chaves .ponto {
   width: 20px; height: 20px; border-radius: 50%;
   background: var(--dado-1); flex: none;
@@ -458,10 +461,13 @@
    CORPO DE FOTO — foto em cima, chapa embaixo com a marca d'água.
    ====================================================================== */
 .corpo-foto { padding: 0; }
-.corpo-foto .faixa-img { position: relative; height: 52%; flex: none; overflow: hidden; }
+/* a foto fica com o que sobrar: a chapa cresce conforme o texto, e a imagem
+   nunca encolhe abaixo de um terço da peça. Antes a chapa era fixa em 48% e
+   texto comprido vazava pelo pé do slide. */
+.corpo-foto .faixa-img { position: relative; flex: 1 1 auto; min-height: 33%; overflow: hidden; }
 .corpo-foto .faixa-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .corpo-foto .chapa {
-  position: relative; flex: 1; min-height: 0; overflow: hidden;
+  position: relative; flex: 0 0 auto; overflow: hidden;
   display: flex; flex-direction: column;
   padding: 64px var(--margem) 56px;
 }
@@ -479,12 +485,14 @@
 .corpo-foto .titulo-corpo {
   font-family: "Arvo", Georgia, serif; font-size: 58px; line-height: 1.12;
 }
-.corpo-foto .titulo-corpo .l1 { font-weight: 400; display: block; }
-.corpo-foto .titulo-corpo .l2 { font-weight: 700; font-style: italic; display: block; }
+/* as duas metades do título dividem o peso, não a linha: o título da chapa
+   corre numa linha só, e o \n no JSON marca onde começa o itálico. */
+.corpo-foto .titulo-corpo .l1 { font-weight: 400; }
+.corpo-foto .titulo-corpo .l2 { font-weight: 700; font-style: italic; }
 .corpo-foto .texto-corpo {
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-weight: 300; font-size: 31px; line-height: 1.56; margin-top: 34px;
-  max-width: 21em;
+  font-weight: 300; font-size: 32px; line-height: 1.55; margin-top: 34px;
+  max-width: 24em;
 }
 .corpo-foto .pe { margin-top: auto; display: flex; padding-top: 40px; }
 

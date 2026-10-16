@@ -24,6 +24,7 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Viúvas** | Palavra sozinha fechando linha **não passa**. O render costura sozinho; se ainda ficar feia, encurtar a frase. |
 | **Respiro** | Corpo em 34 px, entrelinha 1,58, medida de 19 caracteres. Nada espremido. Todo slide de figura leva folga entre o título e o desenho. |
 | **Fecho** | Honra quem faz, não vende serviço. A chamada pede marcação, que puxa mais comentário que pergunta. |
+| **Título de chapa** | Uma linha só, no `corpo-foto`. O `\n` no JSON marca onde começa o itálico, não quebra linha. Se não couber, encurtar o título. |
 | **Tamanho** | 5 a 7 slides no padrão. Até 10 quando a pauta é técnica e pede texto corrido, como mudança de lei. |
 
 ## A capa
@@ -43,7 +44,9 @@ Alternar. Nenhum fundo repete dentro do mesmo carrossel.
 
 - **Fundos**: verde, off-white, branco, areia, bordô, marrom, foto com véu.
 - **Texturas**: listras, marca d'água (opcional), ou nada.
-- **Figuras**: donut, barras, tabela, mapa, números, cerca e linha do tempo. Pelo menos uma por
+- **Figuras**: donut, blocos, barras, tabela, mapa, números, cerca e linha do tempo.
+  Proporção perto dos extremos vai de **blocos**; no meio do caminho, de **rosca**.
+  Com 96% o anel fecha e vira um círculo, que não informa nada. Pelo menos uma por
   carrossel, que é o que diferencia o nosso do que já estava sendo publicado.
   Quando a pauta tem uma coisa concreta (uma cerca, uma porteira, uma divisa),
   desenhar a coisa vale mais que um gráfico genérico.

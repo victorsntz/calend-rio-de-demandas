@@ -84,12 +84,14 @@ Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
 | `foto` | caminho do arquivo, com `veu` em `verde`, `marrom` ou `topo` |
 | `meiaFoto` | `true` põe a foto na metade de cima e o texto na de baixo |
 | `foco` | `object-position` da foto em `meiaFoto` e `corpo-foto`, p. ex. `center 14%`, pra não cortar rosto |
+| `corpoTitulo` | força o corpo do título da chapa em px; sem ele o render escolhe pelo tamanho da frase |
 
 ### Figuras (`"tipo": "figura"`)
 
 | `figura` | campos | serve pra |
 | --- | --- | --- |
-| `donut` | `valor` (0–100), `destaque`, `rotulo`, `resto` | uma proporção só |
+| `donut` | `valor` (0–100), `destaque`, `rotulo`, `resto` | uma proporção só, longe dos extremos |
+| `blocos` | os mesmos campos do donut | cem quadrados, um por ponto; serve onde a fatia é quase o todo |
 | `barras` | `itens` de `{rotulo, valor, valorTexto, destaque}` | comparar 2 a 5 grandezas |
 | `mapa` | `mapa` (`brasil`), `altura`, `pontos` de `{lon, lat, valor, rotulo}` | situar no território; com `valor` a bolha cresce pela raiz e os pontos viram lista numerada |
 | `numeros` | `itens` de `{numero, rotulo, icone}` | até 4 cifras em diagonal |

@@ -129,3 +129,8 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - Refeito em dez slides, no registro técnico da referência, com menos frase de
   efeito. O formato 01 passou a ter dois registros, curto e longo.
 - A tabela ganhou `realce`, pra poder destacar a segunda coluna.
+- Revisão em quatro comentários. Três correções que valem pro template inteiro:
+  a chapa do `corpo-foto` era fixa em 48% e cortava texto comprido, agora cresce
+  com o conteúdo; a rosca de 96,6% virou `blocos`, porque anel quase fechado não
+  informa nada; e o título da chapa passou a correr numa linha só, com o corpo
+  cedendo conforme o tamanho da frase.

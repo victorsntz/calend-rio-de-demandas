@@ -87,15 +87,15 @@
     },
     {
       "tipo": "figura",
-      "figura": "donut",
+      "figura": "blocos",
       "titulo": "Quase todo vínculo\ndo agro é afetado.",
       "valor": 96.57,
       "destaque": "96,6%",
       "rotulo": "dos vínculos do agro",
-      "resto": "o restante já cumpre as 40 horas",
+      "resto": "cada quadrado é um por cento",
       "legenda": "O Ipea estima aumento de 9,62% no custo da hora trabalhada na agricultura, pecuária e serviços relacionados. É um dos setores em que a jornada acima de 40 horas é mais comum.",
       "fonte": "Ipea, Nota Técnica 123/2026",
-      "alt": "Rosca mostrando 96,6 por cento dos vínculos do agro acima de 40 horas",
+      "alt": "Cem blocos, 97 cheios, mostrando a fatia dos vínculos do agro acima de 40 horas",
       "fundo": "offwhite"
     },
     {
