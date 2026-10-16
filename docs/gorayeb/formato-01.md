@@ -150,6 +150,15 @@ Data histórica que **diverge entre fontes não entra**. Fica de fora e, se for
 importante, vai avisado na entrega. Retrato de figura histórica também não: ou
 tem autorização do acervo, ou não vai.
 
+## O estático
+
+Uma tela só, 1080 × 1350. A frase é a peça; o desenvolvimento inteiro vai na
+legenda. Segue o que o feed já faz: uma frase de contexto em corpo normal e a
+virada em **caixa alta dourada**, marcada com `*asterisco*` no JSON.
+
+Leva etiqueta, logo e, quando houver base legal, a fonte no rodapé. Serve bem
+para regra com exceção, que é onde uma frase curta rende mais que dez slides.
+
 ## Como entrego
 
 Sempre dois arquivos, sem precisar pedir:

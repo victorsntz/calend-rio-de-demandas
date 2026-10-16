@@ -185,6 +185,19 @@ function monta(s, i = 0, total = 0) {
         <div class="rodape"></div>`;
       break;
 
+    /* estático: uma peça só. A frase é o conteúdo, o apoio explica em uma
+       linha e o resto fica na legenda do post. */
+    case "estatico":
+      corpo = `
+        ${ARROBA}
+        ${s.etiqueta ? `${ETIQUETA(s.etiqueta)}` : ""}
+        <div class="meio">
+          <p class="frase ${s.escala || ""}">${titulo(s.frase)}</p>
+          ${s.apoio ? `<div class="espaco"></div><p class="corpo menor">${rico(s.apoio)}</p>` : ""}
+        </div>
+        <div class="rodape">${LOGO(66)}${s.fonte ? `<p class="fonte">${esc(s.fonte)}</p>` : ""}</div>`;
+      break;
+
     /* fecho: síntese + parágrafos + CTA + lockup */
     case "fecho":
       corpo = `

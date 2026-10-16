@@ -665,3 +665,21 @@
 .dia-letra.folga { fill: var(--creme); opacity: .55; }
 .bg-offwhite .dia-letra.folga, .bg-branco .dia-letra.folga,
 .bg-creme .dia-letra.folga, .bg-areia .dia-letra.folga { fill: var(--verde); opacity: .5; }
+
+/* ======================================================================
+   ESTÁTICO — peça de uma tela só, a frase é o conteúdo
+   ====================================================================== */
+.frase {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 82px; line-height: 1.14; letter-spacing: -.01em;
+}
+.frase.menor { font-size: 68px; }
+.frase.maior { font-size: 96px; }
+/* a segunda metade da frase é a virada: vai em caixa alta e dourada */
+.frase strong {
+  font-weight: 700; text-transform: uppercase;
+  color: var(--dourado); letter-spacing: .005em;
+}
+.bg-offwhite .frase strong, .bg-branco .frase strong,
+.bg-creme .frase strong, .bg-areia .frase strong { color: var(--bordo); }
+.frase em { font-style: italic; font-weight: 400; }

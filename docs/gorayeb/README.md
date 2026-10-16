@@ -53,6 +53,7 @@ encurtar a frase ou marcar a quebra na mão com uma quebra de linha no JSON.
 | `citacao` | `citacao` | a fala em itálico dentro da caixa de borda fina |
 | `lista` | `titulo`, `itens`, `remate` | até quatro itens, um por linha |
 | `dado` | `numero`, `leitura`, `texto` | um número grande com a leitura embaixo |
+| `estatico` | `frase`, `apoio`, `etiqueta`, `fonte`, `escala` | peça de uma tela só; `*trecho*` vira caixa alta dourada |
 | `fecho` | `sintese`, `cta` | fechar com assinatura e lockup |
 | `capa-foto` | `foto`, `etiqueta`, `titulo`, `sub`, `escala` | capa de foto cheia |
 | `corpo-foto` | `foto`, `titulo` (2 linhas), `paragrafos` | foto em cima, chapa embaixo |
@@ -101,6 +102,7 @@ Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
 | `tabela` | `colunas` (2), `linhas` de `{criterio, a, b}`, `realce` | comparar dois cenários; `realce: "b"` põe a ênfase na segunda coluna |
 | `cerca` | `rotuloA`, `rotuloB` | meio a meio de uma divisa, desenhado como cerca |
 | `linha` | `itens` de `{numero, rotulo}` | até 4 etapas em sequência, de cima pra baixo |
+| `estatico` (tipo de slide) | `frase`, `apoio`, `etiqueta`, `fonte` | peça de uma tela só; o `*trecho*` marcado vira caixa alta dourada |
 | `semana` | `linhas` de `{rotulo, trabalho, nota}` | sete quadrados por linha, um por dia; cheio é trabalho, vazado é folga |
 
 Ícones: `boi`, `porco`, `folha`, `relogio`, `trator`, `navio`, `dinheiro`,

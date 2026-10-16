@@ -317,18 +317,24 @@ export function linha(f) {
   const passo = its.length > 1 ? (y1 - y0) / (its.length - 1) : 0;
   const ys = its.map((_, k) => y0 + passo * k);
 
+  /* com quatro etapas o número cede, senão a linha de baixo encosta na de cima */
+  const cpo = its.length >= 4 ? 70 : 94;
+  const salto = its.length >= 4 ? 34 : 38;
+  const descida = its.length >= 4 ? 46 : 62;
+  const corpoRot = its.length >= 4 ? 29 : 31;
+
   const marcas = its
     .map((it, k) => {
       const y = ys[k];
       const linhas = String(it.rotulo || "").split("\n");
       const rot = linhas
-        .map((l, i) => `<tspan x="${xr}" dy="${i === 0 ? 0 : 38}">${esc(l)}</tspan>`)
+        .map((l, i) => `<tspan x="${xr}" dy="${i === 0 ? 0 : salto}">${esc(l)}</tspan>`)
         .join("");
       return `
       <circle cx="${x}" cy="${y}" r="17" class="mapa-destaque"/>
       <circle cx="${x}" cy="${y}" r="33" class="mapa-anel"/>
-      <text x="${xr}" y="${y + 12}" class="rot-num" style="font-size:94px">${esc(it.numero)}</text>
-      <text x="${xr}" y="${y + 62}" class="rot-txt" style="font-size:31px">${rot}</text>`;
+      <text x="${xr}" y="${y + 10}" class="rot-num" style="font-size:${cpo}px">${esc(it.numero)}</text>
+      <text x="${xr}" y="${y + descida}" class="rot-txt" style="font-size:${corpoRot}px">${rot}</text>`;
     })
     .join("");
 
