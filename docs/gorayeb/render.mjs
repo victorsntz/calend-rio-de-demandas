@@ -8,7 +8,7 @@
 import playwright from "/opt/node-tools/node_modules/playwright/index.js";
 const { chromium } = playwright;
 import { readFileSync, mkdirSync, writeFileSync } from "node:fs";
-import { FIGURAS } from "./figuras.mjs";
+import { FIGURAS, ICONE, mapinha } from "./figuras.mjs";
 import { basename, dirname, resolve, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -54,6 +54,26 @@ const rico = (s = "", agressivo = false) =>
 const titulo = (s) => rico(s, true);
 
 const ARROBA = '<div class="arroba">@gorayebadvocacia</div>';
+
+/* etiqueta em pílula, o assunto do slide em duas palavras */
+const ETIQUETA = (t) =>
+  t ? `<span class="etiqueta-pill">${esc(t)}</span>` : "";
+
+/* barra de progresso do carrossel: mostra onde o leitor está */
+const PASSO = (i, total) =>
+  !total ? "" : `
+    <div class="passo">
+      <div class="passo-trilho"><div class="passo-feito" style="width:${((i + 1) / total) * 100}%"></div></div>
+      <span class="passo-num">${i + 1}/${total}</span>
+    </div>`;
+
+/* caixa de apoio: ícone redondo + um dado que completa a cifra */
+const CAIXA = (c) =>
+  !c ? "" : `
+    <div class="caixa-dado">
+      ${c.icone ? `<span class="caixa-icone">${ICONE(c.icone)}</span>` : ""}
+      <p>${rico(c.texto || "")}</p>
+    </div>`;
 /* Logos oficiais da pasta ENTREGA > LOGOS E SÍMBOLOS do Drive. Nunca
    redesenhar: é só escolher a versão certa pro fundo. */
 const LOCKUP = (altura = 74, claro = true) =>
@@ -72,7 +92,7 @@ function foto(s) {
 /* fundos claros: a logo vai na versão escura e o texto em verde */
 const CLAROS = new Set(["creme", "areia", "offwhite", "branco"]);
 
-function monta(s) {
+function monta(s, i = 0, total = 0) {
   const claro = !CLAROS.has(s.fundo) || !!s.foto;
   const LOGO = (h) => LOCKUP(h, claro);
   const cls = ["slide", "vinheta"];
@@ -166,13 +186,16 @@ function monta(s) {
         <div class="rodape"></div>`;
       break;
 
-    /* fecho: síntese + CTA + assinatura + lockup */
+    /* fecho: síntese + parágrafos + CTA + lockup */
     case "fecho":
       corpo = `
         ${ARROBA}
+        ${s.etiqueta ? `${ETIQUETA(s.etiqueta)}<div class="espaco-sm"></div>` : ""}
         <div class="empurra"></div>
         <p class="titulo menor">${titulo(s.sintese)}</p>
+        ${(s.paragrafos || []).map((t) => `<div class="espaco-sm"></div><p class="corpo menor">${rico(t)}</p>`).join("")}
         ${s.cta ? `<div class="espaco"></div><span class="cta">${rico(s.cta)}</span>` : ""}
+        ${s.salvar ? `<div class="espaco"></div>${CAIXA({ icone: "salvar", texto: s.salvar })}` : ""}
         <div class="espaco-lg"></div>
         ${LOGO(72)}
         <div class="empurra"></div>`;
@@ -252,6 +275,48 @@ function monta(s) {
       break;
     }
 
+    /* cifra: o número é o slide. Etiqueta, cifra grande com a marca de
+       destaque atrás, a leitura dela e um dado de apoio na caixa. */
+    case "cifra":
+      corpo = `
+        ${ARROBA}
+        ${s.mapa ? mapinha(s.mapa) : ""}
+        ${s.etiqueta ? `<div class="espaco-sm"></div>${ETIQUETA(s.etiqueta)}` : ""}
+        <div class="espaco-sm"></div>
+        <p class="cifra ${s.escala || ""}"><span class="cifra-num">${titulo(s.numero)}</span></p>
+        ${s.leitura ? `<p class="cifra-leitura">${titulo(s.leitura)}</p>` : ""}
+        ${s.texto ? `<div class="espaco-sm"></div><p class="corpo menor">${rico(s.texto)}</p>` : ""}
+        ${s.caixa ? `<div class="espaco"></div>${CAIXA(s.caixa)}` : ""}
+        ${s.foto ? `<div class="empurra"></div>` : `<div class="espaco"></div>`}
+        ${s.fonte ? `<p class="fonte">Fonte: ${esc(s.fonte)}</p>` : ""}
+        ${s.nota ? `<p class="nota-pe">${rico(s.nota)}</p>` : ""}`;
+      break;
+
+    /* itens com ícone: cada linha é uma pílula com o símbolo do assunto */
+    case "itens":
+      corpo = `
+        ${ARROBA}
+        ${s.etiqueta ? `${ETIQUETA(s.etiqueta)}<div class="espaco-sm"></div>` : ""}
+        <h2 class="titulo menor">${titulo(s.titulo)}</h2>
+        <div class="espaco"></div>
+        <ul class="pilulas">
+          ${(s.itens || [])
+            .slice(0, 6)
+            .map(
+              (it, k) => `<li>
+                <span class="pilula-icone${s.numerada ? " numero" : ""}">${
+                  s.numerada ? k + 1 : ICONE(it.icone)
+                }</span>
+                <span class="pilula-txt">${rico(it.texto ?? it)}</span>
+                ${s.marca ? `<span class="pilula-marca">${ICONE(s.marca)}</span>` : ""}
+              </li>`
+            )
+            .join("")}
+        </ul>
+        <div class="empurra"></div>
+        ${s.remate ? `<p class="corpo menor">${rico(s.remate)}</p>` : ""}`;
+      break;
+
     /* figura: donut, barras, mapa ou números em diagonal */
     case "figura": {
       const fab = FIGURAS[s.figura];
@@ -268,15 +333,15 @@ function monta(s) {
       throw new Error(`tipo de slide desconhecido: ${s.tipo}`);
   }
   if (s.tipo === "corpo-foto") {
-    return `<div class="${cls.join(" ")}">${corpo}</div>`;
+    return `<div class="${cls.join(" ")}">${PASSO(i, total)}${corpo}</div>`;
   }
   if (s.meiaFoto) {
-    return `<div class="${cls.join(" ")}">
+    return `<div class="${cls.join(" ")}">${PASSO(i, total)}
       <div class="faixa-img"><img src="${esc(s.foto || "")}" alt="" style="object-position:${esc(s.foco || "center")}"></div>
       <div class="faixa-txt">${corpo}</div>
     </div>`;
   }
-  return `<div class="${cls.join(" ")}">${foto(s)}${corpo}</div>`;
+  return `<div class="${cls.join(" ")}">${foto(s)}${PASSO(i, total)}${corpo}</div>`;
 }
 
 const specPath = resolve(process.argv[2] || "");
@@ -291,7 +356,7 @@ mkdirSync(saida, { recursive: true });
 
 const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
 <link rel="stylesheet" href="base.css"></head><body style="background:#333">
-${spec.slides.map(monta).join("\n")}
+${spec.slides.map((s, i) => monta(s, i, spec.progresso ? spec.slides.length : 0)).join("\n")}
 </body></html>`;
 const htmlPath = join(AQUI, "template", `_${nome}.html`);
 writeFileSync(htmlPath, html);

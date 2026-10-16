@@ -58,6 +58,8 @@ encurtar a frase ou marcar a quebra na mão com uma quebra de linha no JSON.
 | `corpo-foto` | `foto`, `titulo` (2 linhas), `paragrafos` | foto em cima, chapa embaixo |
 | `perspectiva` | `foto`, `itens`, `guia`, `titulo`, `fonte` | cifras deitadas no plano da foto |
 | `figura` | `figura` + campos da figura | gráfico, mapa ou números |
+| `cifra` | `etiqueta`, `numero`, `leitura`, `texto`, `caixa`, `nota`, `mapa` | o número manda no slide |
+| `itens` | `etiqueta`, `titulo`, `itens` de `{icone, texto}`, `numerada`, `marca`, `remate` | lista em pílula, com ícone ou número |
 
 ### Os três modelos de foto
 
@@ -85,6 +87,7 @@ Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
 | `meiaFoto` | `true` põe a foto na metade de cima e o texto na de baixo |
 | `foco` | `object-position` da foto em `meiaFoto` e `corpo-foto`, p. ex. `center 14%`, pra não cortar rosto |
 | `corpoTitulo` | força o corpo do título da chapa em px; sem ele o render escolhe pelo tamanho da frase |
+| `progresso` | no topo do spec: `true` liga a barra de progresso e o contador em todo slide |
 
 ### Figuras (`"tipo": "figura"`)
 
@@ -98,6 +101,9 @@ Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
 | `tabela` | `colunas` (2), `linhas` de `{criterio, a, b}`, `realce` | comparar dois cenários; `realce: "b"` põe a ênfase na segunda coluna |
 | `cerca` | `rotuloA`, `rotuloB` | meio a meio de uma divisa, desenhado como cerca |
 | `linha` | `itens` de `{numero, rotulo}` | até 4 etapas em sequência, de cima pra baixo |
+
+Ícones: `boi`, `porco`, `folha`, `relogio`, `trator`, `navio`, `dinheiro`,
+`mapa`, `documento`, `pessoas`, `check`, `salvar`, `grafico`, `balanca`.
 
 Pra puxar um post de referência do Instagram:
 

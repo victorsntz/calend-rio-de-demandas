@@ -195,11 +195,55 @@ export const ICONES = {
   documento: `<path d="M16 8h20l12 12v36H16z"/>
               <path d="M36 8v12h12"/>
               <path d="M24 32h16M24 42h16"/>`,
+  porco: `<path d="M18 26c0-8 28-8 28 0l-1 14c0 7-26 7-26 0z"/>
+          <path d="M19 25l-5-9 11 3M45 25l5-9-11 3"/>
+          <ellipse cx="32" cy="40" rx="9" ry="6"/>
+          <path d="M29 39v3M35 39v3"/>`,
+  folha: `<path d="M12 52C12 28 30 12 52 12c0 22-16 40-40 40z"/>
+          <path d="M44 20L18 46"/>`,
+  relogio: `<circle cx="32" cy="32" r="22"/>
+            <path d="M32 18v15l10 6"/>`,
+  trator: `<circle cx="20" cy="44" r="12"/>
+           <circle cx="48" cy="47" r="8"/>
+           <path d="M20 32V18h12l5 14"/>
+           <path d="M32 40h10"/>`,
+  pessoas: `<circle cx="24" cy="24" r="8"/>
+            <path d="M10 50c0-8 6-13 14-13s14 5 14 13"/>
+            <path d="M42 18a8 8 0 0 1 0 14"/>
+            <path d="M44 38c6 1 10 6 10 12"/>`,
+  check: `<path d="M18 10h28a4 4 0 0 1 4 4v38a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4z"/>
+          <path d="M25 6h14v8H25z"/>
+          <path d="M23 34l7 7 13-14"/>`,
+  salvar: `<path d="M18 10h28v46L32 44 18 56z"/>`,
+  grafico: `<path d="M12 52h40"/>
+            <path d="M20 52V36M30 52V22M40 52V30M50 52V14"/>`,
+  balanca: `<path d="M32 12v40M20 56h24"/>
+            <path d="M12 26h40l-8 14a8 8 0 0 1-12 0z" />
+            <path d="M12 26l-8 14a8 8 0 0 0 12 0z"/>`,
 };
-const icone = (nome) =>
+export const ICONE = (nome) =>
   ICONES[nome]
     ? `<svg class="icone" viewBox="0 0 64 64" aria-hidden="true">${ICONES[nome]}</svg>`
     : "";
+const icone = ICONE;
+
+/* ---- mapinha de canto ---------------------------------------------------
+   Silhueta do Brasil pequena, com um ponto no lugar de que a peça fala.
+   É ornamento que situa, não gráfico: entra no canto de um slide de cifra. */
+export function mapinha(p = {}) {
+  const m = MAPAS[p.mapa || "brasil"];
+  const [lon0, my0, lon1, my1] = m.bbox_lonlat;
+  const [, , W, H] = m.viewBox.split(" ").map(Number);
+  const merc = (lat) => (180 / Math.PI) * Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 180 / 2));
+  const x = ((p.lon - lon0) / (lon1 - lon0)) * W;
+  const y = ((my1 - merc(p.lat)) / (my1 - my0)) * H;
+  return `
+  <svg class="mapinha" viewBox="${m.viewBox}" aria-hidden="true">
+    <path d="${m.d}" class="mapinha-base"/>
+    <circle cx="${n2(x)}" cy="${n2(y)}" r="46" class="mapinha-ponto"/>
+    <circle cx="${n2(x)}" cy="${n2(y)}" r="82" class="mapinha-anel"/>
+  </svg>`;
+}
 
 /* ---- números em diagonal ----------------------------------------------
    Até quatro figuras escalonadas na diagonal, cada uma com seu rótulo,

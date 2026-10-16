@@ -517,3 +517,144 @@
 
 /* alinhamento padrão à esquerda, inclusive no fecho */
 .slide .cta { align-self: flex-start; }
+
+/* ======================================================================
+   CIFRA, PÍLULAS E BARRA DE PROGRESSO
+   Peças do formato longo: o número manda no slide, a etiqueta diz o
+   assunto e a barra mostra ao leitor onde ele está no carrossel.
+   ====================================================================== */
+
+/* barra de progresso: fina, no alto, acima de qualquer foto */
+.passo {
+  position: absolute; z-index: 3;
+  top: 40px; left: var(--margem); right: var(--margem);
+  display: flex; align-items: center; gap: 22px;
+}
+.passo-trilho {
+  flex: 1; height: 6px; border-radius: 3px;
+  background: rgba(235,227,200,.26);
+}
+.passo-feito { height: 100%; border-radius: 3px; background: var(--dourado); }
+.passo-num {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-size: 23px; font-weight: 400; opacity: .72; flex: none;
+}
+.bg-offwhite .passo-trilho, .bg-branco .passo-trilho,
+.bg-creme .passo-trilho, .bg-areia .passo-trilho { background: rgba(27,35,22,.14); }
+/* o slide com barra começa mais embaixo, pra ela não encostar no conteúdo */
+.slide:has(.passo) { padding-top: calc(var(--margem) + 34px); }
+
+/* etiqueta em pílula: assunto do slide, caixa alta e entreletra larga */
+.etiqueta-pill {
+  align-self: flex-start; flex: none;
+  display: inline-block; padding: 15px 30px; border-radius: 999px;
+  background: var(--areia); color: var(--verde);
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: 24px;
+  letter-spacing: .14em; text-transform: uppercase;
+}
+.bg-offwhite .etiqueta-pill, .bg-branco .etiqueta-pill,
+.bg-creme .etiqueta-pill { background: var(--dourado); color: var(--verde); }
+
+/* a cifra: o número é o slide */
+.cifra {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 158px; line-height: .98; letter-spacing: -.02em;
+  color: var(--creme); flex: none; margin-top: 6px;
+}
+.cifra.menor { font-size: 126px; }
+.cifra.maior { font-size: 184px; }
+.bg-offwhite .cifra, .bg-branco .cifra,
+.bg-creme .cifra, .bg-areia .cifra { color: var(--verde); }
+/* marca-texto atrás da metade de baixo do número, como caneta marcadora */
+.cifra-num {
+  background: linear-gradient(
+    transparent 50%, rgba(184,148,61,.38) 50%,
+    rgba(184,148,61,.38) 92%, transparent 92%);
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  padding: 0 .06em;
+}
+.bg-offwhite .cifra-num, .bg-branco .cifra-num, .bg-creme .cifra-num {
+  background: linear-gradient(
+    transparent 50%, var(--areia) 50%, var(--areia) 92%, transparent 92%);
+}
+.cifra-leitura {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: 42px; line-height: 1.22;
+  margin-top: 16px; max-width: 17em; flex: none;
+}
+
+/* caixa de apoio: ícone redondo + o dado que completa a cifra */
+.caixa-dado {
+  display: flex; align-items: center; gap: 26px; flex: none;
+  background: rgba(235,227,200,.12); border-radius: 22px;
+  padding: 26px 32px;
+}
+.bg-offwhite .caixa-dado, .bg-branco .caixa-dado,
+.bg-creme .caixa-dado, .bg-areia .caixa-dado { background: rgba(27,35,22,.07); }
+.caixa-dado p {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 30px; line-height: 1.38;
+}
+.caixa-dado strong { font-weight: 700; }
+.caixa-icone {
+  flex: none; width: 76px; height: 76px; border-radius: 50%;
+  background: var(--verde); display: flex; align-items: center; justify-content: center;
+}
+.caixa-icone svg.icone { width: 42px; height: 42px; stroke: var(--dourado); }
+.bg-verde .caixa-icone, .bg-bordo .caixa-icone, .bg-marrom .caixa-icone,
+.bg-foto .caixa-icone { background: var(--areia); }
+.bg-verde .caixa-icone svg.icone, .bg-bordo .caixa-icone svg.icone,
+.bg-marrom .caixa-icone svg.icone, .bg-foto .caixa-icone svg.icone { stroke: var(--verde); }
+
+.nota-pe {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 24px; line-height: 1.4;
+  opacity: .72; margin-top: 14px; flex: none;
+}
+.nota-pe strong { font-weight: 700; opacity: 1; }
+
+/* lista em pílulas, com ícone ou número na frente */
+.pilulas { list-style: none; display: flex; flex-direction: column; gap: 18px; flex: none; }
+/* a pílula abraça o texto, não estica até a margem */
+.pilulas li {
+  display: flex; align-items: center; gap: 24px;
+  width: fit-content; max-width: 100%;
+  background: rgba(235,227,200,.12); border-radius: 999px;
+  padding: 14px 32px 14px 14px;
+}
+.bg-offwhite .pilulas li, .bg-branco .pilulas li,
+.bg-creme .pilulas li, .bg-areia .pilulas li { background: rgba(27,35,22,.07); }
+.pilula-icone {
+  flex: none; width: 72px; height: 72px; border-radius: 50%;
+  background: var(--verde); display: flex; align-items: center; justify-content: center;
+}
+.pilula-icone svg.icone { width: 40px; height: 40px; stroke: var(--dourado); }
+.pilula-icone.numero {
+  background: var(--dourado); color: var(--verde);
+  font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 34px;
+}
+.bg-verde .pilula-icone, .bg-bordo .pilula-icone, .bg-marrom .pilula-icone,
+.bg-foto .pilula-icone { background: var(--areia); }
+.bg-verde .pilula-icone svg.icone, .bg-bordo .pilula-icone svg.icone,
+.bg-marrom .pilula-icone svg.icone, .bg-foto .pilula-icone svg.icone { stroke: var(--verde); }
+.pilula-txt {
+  flex: 1;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 400; font-size: 32px; line-height: 1.25;
+}
+.pilula-marca { flex: none; margin-left: 10px; }
+.pilula-marca svg.icone { width: 36px; height: 36px; stroke: var(--dourado-caixa); }
+.bg-verde .pilula-marca svg.icone, .bg-bordo .pilula-marca svg.icone,
+.bg-marrom .pilula-marca svg.icone, .bg-foto .pilula-marca svg.icone { stroke: var(--dourado); }
+
+/* silhueta de canto que situa a cifra no território */
+.mapinha {
+  position: absolute; z-index: 0; pointer-events: none;
+  right: -8%; bottom: 2%; width: 66%; height: auto; opacity: .16;
+}
+.mapinha-base { fill: var(--creme); }
+.mapinha-ponto { fill: var(--dourado); opacity: .9; }
+.mapinha-anel { fill: none; stroke: var(--creme); stroke-width: 6; }
+.bg-offwhite .mapinha-base, .bg-branco .mapinha-base,
+.bg-creme .mapinha-base, .bg-areia .mapinha-base { fill: var(--verde); }

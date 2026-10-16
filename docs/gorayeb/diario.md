@@ -132,6 +132,12 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - Refeito em dez slides, no registro técnico da referência, com menos frase de
   efeito. O formato 01 passou a ter dois registros, curto e longo.
 - A tabela ganhou `realce`, pra poder destacar a segunda coluna.
+- **Refeito como releitura da referência**, depois que consegui baixar as artes
+  do post pelo endpoint de embed. Os 9 slides deles, slide a slide, com a nossa
+  identidade, mais a linha do tempo que eles não trazem.
+- Peças novas no template: barra de progresso, etiqueta em pílula, slide de
+  `cifra`, lista `itens` em pílula com ícone ou número, caixa de dado, mapinha
+  de canto e nove ícones novos.
 - Revisão em quatro comentários. Três correções que valem pro template inteiro:
   a chapa do `corpo-foto` era fixa em 48% e cortava texto comprido, agora cresce
   com o conteúdo; a rosca de 96,6% virou `blocos`, porque anel quase fechado não

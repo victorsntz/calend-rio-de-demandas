@@ -26,6 +26,7 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Fecho** | Honra quem faz, não vende serviço. A chamada pede marcação, que puxa mais comentário que pergunta. |
 | **Título de chapa** | Uma linha só, no `corpo-foto`. O `\n` no JSON marca onde começa o itálico, não quebra linha. Se não couber, encurtar o título. |
 | **Tamanho** | 5 a 7 slides no padrão. Até 10 quando a pauta é técnica e pede texto corrido, como mudança de lei. |
+| **Barra de progresso** | `progresso: true` no spec. Liga a barra e o contador no alto de todo slide. Entra nos carrosséis longos. |
 
 ## A capa
 
@@ -70,15 +71,17 @@ com a nossa identidade.**
    nossa também vai.
 3. **Trocar só a casca.** Nossa paleta, nossa tipografia, nossos ícones, nosso
    jeito de desenhar gráfico. O conteúdo e o encadeamento ficam.
+   Quando a referência fala com um público diferente do nosso (eles falam com
+   advogado, a Gorayeb fala com produtor), muda o destinatário, não a lista.
 4. **Conferir cada informação** em fonte independente antes de entrar na arte.
    Corrigir o que estiver errado e **avisar na entrega** o que foi corrigido e
    por quê.
 5. **Melhorar o fechamento** se o deles for melhor que o nosso padrão. Vale
    copiar a ideia do fecho.
 
-Obter as artes do Instagram é o ponto frágil: o site bloqueia quem não está
-logado e passa a devolver 429 depois de algumas tentativas. O caminho confiável
-é o Victor mandar os prints.
+Para baixar a referência: `python3 docs/gorayeb/ig.py "<link>" <pasta>`. A rede
+precisa permitir `www.instagram.com` e `*.cdninstagram.com`, com o curinga, que
+os arquivos ficam em subdomínio regional.
 
 ## Linguagem
 
