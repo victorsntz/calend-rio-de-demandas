@@ -46,6 +46,24 @@ ninguém estava contando.
 Arquivo: `carrosseis/fim-da-escala-6x1.json`
 Status: **entregue**, aguardando revisão. Falta conferir licença de 5 fotos.
 
+## Calendário editorial
+
+A linha editorial vive em `calendario/`. O `plano.json` é a fonte: o que já está
+no ar, a agenda das próximas semanas e o banco de pauta. O `gerar.py` monta o
+Excel para mandar ao marketing da Gorayeb.
+
+```
+python3 docs/gorayeb/calendario/gerar.py [saída]
+```
+
+**Rotina quinzenal:** marcar em `plano.json` o que saiu, acrescentar as próximas
+semanas, rodar o gerador e mandar o arquivo. O nome do arquivo carrega a data,
+então não sobrescreve o que já foi enviado.
+
+O raciocínio do remanejamento de 16/10 está em `calendario.md`. Em uma linha: o
+calendário não estava sendo seguido porque o feed já tem pauta própria, então ele
+passou a valer como **estoque de pauta, não como agenda**.
+
 ## Decisões que viraram padrão
 
 Cada uma saiu de um pedido do Victor. Não voltar atrás sem ele mandar.
@@ -72,6 +90,8 @@ O detalhe de cada uma está em `formato-01.md`.
 | Estrutura se copia, frase não: reescrever todo o texto | revisão da escala 6x1 |
 | Da referência se copia o conteúdo, não a espinha visual | revisão da escala 6x1 |
 | Barra de progresso não entra | revisão da escala 6x1 |
+| Calendário é estoque de pauta, não agenda; notícia fura a fila | reconciliação de 16/10 |
+| Formato (carrossel, estático ou vídeo) se decide na hora de executar | pedido direto |
 | Pauta de lei informa o que mudou; projeção de custo fica na legenda | retorno do cliente |
 | Pauta técnica pede registro longo, até 10 slides | revisão da escala 6x1 |
 | Número sem fonte não entra | contrato |
@@ -126,6 +146,11 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - Diário criado.
 
 **16/10/2026**
+
+- Calendário editorial reconciliado. 20 posts previstos até 15/10, 4 do
+  calendário feitos, mas o feed publicou bem mais que isso com pauta própria.
+  Agenda refeita de 17/10 em diante, pilar trabalhista deslocado uma semana, e
+  gerador de Excel montado para a entrega quinzenal ao marketing.
 
 - Carrossel do fim da escala 6x1, a partir de um post que o Victor mandou como
   referência. Instagram liberado na rede pra conseguir ler o original.

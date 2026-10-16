@@ -1,0 +1,35 @@
+{
+  "atualizado_em": "2026-10-16",
+  "origem": "Calendario_Editorial_Instagram_Agro.xlsx, remanejado em 16/10/2026",
+  "cadencia": "Terça = Técnico · Quinta = Relevante/tendência · Sábado = Relevante/humanizado",
+  "deslocamento": "A partir do item 25 (pilar trabalhista), tudo correu 7 dias para frente: NR-31 abre em 03/11 em vez de 27/10.",
+
+  "no_ar": [
+    { "n": 1, "tema": "O que é o CAR e por que ele é obrigatório", "como": "vídeo com o Dr. Fernando" },
+    { "n": 3, "tema": "Mito ou verdade: 'não tenho CAR e nunca fui multado'", "como": "coberto por 'Cancelaram seu CAR?' e 'O CAR não é só mais um cadastro'" },
+    { "n": 5, "tema": "Quando o CAR é exigido: crédito rural, escritura, venda", "como": "coberto por 'Seu CAR tá inscrito. Mas isso já não basta pro crédito rural'" },
+    { "n": 9, "tema": "O CAR também protege contra invasões e conflitos de terra", "como": "vídeo com o Dr. Fernando" },
+    { "n": 10, "tema": "Usucapião rural: regularizar a posse da terra", "como": "vídeo + 'Você trabalha a terra há anos'" },
+    { "n": 15, "tema": "Prorrogação de dívida em caso de frustração de safra", "como": "vídeo + 'Safra ruim? Dívida acumulada'" },
+    { "n": null, "tema": "Dia da Pecuária: os primeiros", "como": "carrossel nosso, 'Ninguém começa com 234 milhões'" }
+  ],
+
+  "agenda": [
+    { "data": "2026-10-17", "slot": "humanizado", "pilar": "Trabalhista Rural", "tipo": "Relevante", "tema": "Fim da escala 6x1: o que muda na jornada de quem trabalha no campo", "origem": "fora da lista — notícia de 14/10", "status": "peça pronta", "formato": "carrossel" },
+    { "data": "2026-10-20", "slot": "técnico", "pilar": "Crédito Rural", "tipo": "Técnico", "tema": "Alongamento de dívida rural: quando é possível e como pedir", "origem": "item 19", "status": "a produzir", "formato": "a definir" },
+    { "data": "2026-10-22", "slot": "notícia", "pilar": "Crédito Rural", "tipo": "Relevante", "tema": "Recuperação judicial no agro: por que produtores estão recorrendo a esse instrumento", "origem": "item 14", "status": "a produzir", "formato": "a definir" },
+    { "data": "2026-10-24", "slot": "humanizado", "pilar": "Crédito Rural", "tipo": "Relevante", "tema": "Produtor pessoa física: como funciona a proteção do patrimônio em caso de dívida", "origem": "item 21", "status": "a produzir", "formato": "a definir" },
+    { "data": "2026-10-27", "slot": "técnico", "pilar": "Crédito Rural", "tipo": "Técnico", "tema": "Penhora de safra e maquinário: limites legais e o que dá para contestar", "origem": "item 22", "status": "a produzir", "formato": "a definir" },
+    { "data": "2026-10-29", "slot": "notícia", "pilar": "Crédito Rural", "tipo": "Relevante", "tema": "Disputas com cooperativas: o que fazer quando o produtor se sente lesado", "origem": "item 20", "status": "a produzir", "formato": "a definir" },
+    { "data": "2026-10-31", "slot": "humanizado", "pilar": "Crédito Rural", "tipo": "Relevante", "tema": "Bastidores: por que o crédito rural é um dos pilares da nossa atuação", "origem": "item 24", "status": "precisa de material do escritório", "formato": "a definir" }
+  ],
+
+  "banco_de_pauta": {
+    "nota": "Nada foi descartado. Estes entram nas segundas ondas que o próprio calendário já previa.",
+    "credito_2a_onda_fev_2027": [13, 16, 17, 18, 23],
+    "ambiental_2a_onda_abr_2027": [4, 6, 7, 8, 11, 12],
+    "fora_de_pauta": [
+      { "n": 2, "motivo": "'Prazos do CAR atualizados em 2026' envelheceu. Em abril vira 'atualizados em 2027', que é a mesma peça com data certa." }
+    ]
+  }
+}
