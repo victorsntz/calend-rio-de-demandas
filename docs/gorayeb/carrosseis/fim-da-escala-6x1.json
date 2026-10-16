@@ -1,30 +1,30 @@
 {
   "id": "fim-da-escala-6x1",
-  "titulo": "Fim da escala 6x1: o que muda no campo",
-  "nota": "Formato 01, recorte nacional. Pauta vinda de um post da abrada.oficial, mas apurada do zero: cada número foi conferido em fonte independente antes de entrar na arte. Fotos do Pinterest, licença a conferir (ver _creditos.json).",
-  "legenda_instagram": "O Senado aprovou o fim da escala 6x1. E no campo isso tem data pra pegar.\n\nNo dia 14 de outubro, em dois turnos e por 75 votos a 1, passou a PEC 221/2019. A jornada cai de 44 para 40 horas por semana, no máximo 8 por dia, com dois descansos semanais, um deles de preferência no domingo. Sem corte de salário. O texto é o mesmo que saiu da Câmara, então vai direto pra promulgação.\n\nA conta do tempo começa aí. Dois meses depois da promulgação a jornada já cai pra 42 horas. Um ano e dois meses depois, chega nas 40.\n\nE o agro é dos setores que mais sentem. Pelo Ipea, 96,57% dos vínculos formais da agricultura, pecuária e serviços ligados a elas estão hoje acima de 40 horas, com alta estimada de 9,62% no custo da hora trabalhada.\n\nFaz sentido, porque no campo a tarefa não espera. Ordenha tem hora, colheita tem janela, trato não adia pra segunda. O serviço continua o mesmo. O que muda é quanta gente precisa pra cobrir a semana.\n\nDá pra chegar organizado. Olhe agora a escala real de cada frente, o ponto, os intervalos, o banco de horas, o contrato de safra e o acordo coletivo da categoria.\n\nSua escala já está pronta pra 40 horas?\n\nFontes: Senado Federal (PEC 221/2019) e Ipea, Nota Técnica 123/2026.",
+  "titulo": "Fim da escala 6x1: o que o empregador rural precisa rever",
+  "nota": "Formato 01, versão longa e textual (10 slides), no registro técnico do post de referência. Pauta vinda de um post da abrada.oficial, mas apurada do zero: cada número conferido em fonte independente antes de entrar na arte. Fotos do Pinterest, licença a conferir (ver _creditos.json).",
+  "legenda_instagram": "FIM DA ESCALA 6X1: O QUE O EMPREGADOR RURAL PRECISA REVER\n\nO Senado aprovou em 14 de outubro, em dois turnos e por 75 votos a 1, a PEC 221/2019. A jornada máxima cai de 44 para 40 horas semanais, limitada a 8 horas por dia, com dois dias de descanso na semana, um deles preferencialmente no domingo, e sem redução de salário. O texto não sofreu alteração em relação ao que veio da Câmara, então não retorna aos deputados e segue para promulgação pelo Congresso Nacional.\n\nA transição não é imediata. A jornada cai para 42 horas dois meses após a publicação da emenda e chega a 40 horas um ano e dois meses depois. Até a promulgação, continua valendo a regra atual.\n\nA nova regra não alcança todos. Ficam de fora os servidores públicos, que não são regidos pela CLT, e os empregados da iniciativa privada com diploma de curso superior que recebam a partir de R$ 21.188,00, equivalente a 2,5 vezes o teto do INSS. No campo, porém, a quase totalidade dos contratos é celetista.\n\nPelo Ipea, 96,57% dos vínculos formais da agricultura, pecuária e serviços relacionados estão hoje acima de 40 horas semanais, com aumento estimado de 9,62% no custo da hora trabalhada. É um dos setores em que a jornada estendida é mais comum.\n\nO ajuste no campo é mais difícil por uma razão operacional. Ordenha, trato e colheita têm hora marcada e não aceitam adiamento. Em equipe enxuta, um dia a mais de descanso por semana significa contratar, remanejar turno ou pagar hora extra.\n\nO que revisar agora: a escala real de cada frente de trabalho, o controle de ponto, os intervalos, o banco de horas, os contratos de safra e a convenção coletiva da categoria.\n\nA emenda ainda não foi promulgada. O prazo para se organizar começa nesse dia.\n\nFontes: Senado Federal (PEC 221/2019) e Ipea, Nota Técnica 123/2026.",
   "slides": [
     {
       "tipo": "capa-foto",
       "foto": "../img/cafe-peneira.jpg",
-      "etiqueta": "Aprovado em 14 de outubro.",
-      "titulo": "A vaca não sabe\nque mudou a lei.",
+      "etiqueta": "Direito do trabalho no agro.",
+      "titulo": "Fim da escala 6x1:\no que o empregador\nrural precisa rever.",
       "escala": "menor",
-      "sub": "O Senado aprovou o fim da escala 6x1. *No campo o trabalho não para.* Quem vai ter que mudar é a escala."
+      "sub": "O Senado aprovou a PEC 221/2019 em 14 de outubro. *A transição começa dois meses depois da promulgação.*"
     },
     {
       "tipo": "corpo-foto",
       "foto": "../img/ordenha-carrossel.jpg",
-      "titulo": "O que o Senado\naprovou.",
+      "titulo": "O que foi\naprovado.",
       "paragrafos": [
-        "Jornada de 44 para 40 horas por semana, no máximo 8 por dia, e dois descansos semanais, um deles de preferência no domingo. Sem corte de salário.",
-        "Passou em dois turnos, por 75 votos a 1. O texto é o mesmo que saiu da Câmara, então vai direto pra promulgação."
+        "A jornada máxima cai de 44 para 40 horas semanais, limitada a 8 horas por dia, com dois dias de descanso na semana, um deles preferencialmente no domingo. Sem redução de salário.",
+        "Passou em dois turnos por 75 votos a 1, sem alteração no texto que veio da Câmara. Por isso não volta aos deputados e segue para promulgação pelo Congresso Nacional."
       ]
     },
     {
       "tipo": "figura",
       "figura": "linha",
-      "titulo": "O relógio começa\nna promulgação.",
+      "titulo": "A transição\nnão é imediata.",
       "itens": [
         {
           "numero": "44h",
@@ -32,44 +32,95 @@
         },
         {
           "numero": "42h",
-          "rotulo": "dois meses depois\nda promulgação"
+          "rotulo": "dois meses depois\nda publicação da emenda"
         },
         {
           "numero": "40h",
           "rotulo": "um ano e dois meses depois"
         }
       ],
+      "legenda": "A contagem só começa quando a emenda for promulgada e publicada. Até lá, continua valendo a regra atual.",
       "fonte": "PEC 221/2019, texto aprovado pelo Senado",
       "alt": "Linha do tempo de 44 para 42 e depois 40 horas semanais",
       "textura": "listras"
     },
     {
       "tipo": "figura",
+      "figura": "tabela",
+      "titulo": "O que muda\nno contrato",
+      "colunas": [
+        "Regra atual",
+        "Depois da transição"
+      ],
+      "linhas": [
+        {
+          "criterio": "Jornada semanal",
+          "a": "até 44 horas",
+          "b": "até 40 horas"
+        },
+        {
+          "criterio": "Descansos na semana",
+          "a": "um",
+          "b": "dois"
+        },
+        {
+          "criterio": "Escala 6x1",
+          "a": "permitida",
+          "b": "não cabe mais"
+        },
+        {
+          "criterio": "Efeito no salário",
+          "a": "sem previsão",
+          "b": "não pode cair"
+        }
+      ],
+      "legenda": "O texto não trata de jornada especial de categoria específica. O relator rejeitou emenda sobre o tema para não devolver a proposta à Câmara.",
+      "fundo": "offwhite",
+      "borda": "dourada",
+      "realce": "b"
+    },
+    {
+      "tipo": "tese",
+      "tese": "A regra não alcança todo mundo.",
+      "texto": "Ficam de fora os servidores públicos, que não são regidos pela CLT e seguem os estatutos de cada carreira. E os empregados da iniciativa privada com diploma de curso superior que recebam a partir de R$ 21.188,00, equivalente a 2,5 vezes o teto do INSS. No campo, a quase totalidade dos contratos é celetista e fica dentro da nova regra.",
+      "fundo": "bordo"
+    },
+    {
+      "tipo": "figura",
       "figura": "donut",
-      "titulo": "No agro,\nquase todo mundo.",
+      "titulo": "Quase todo vínculo\ndo agro é afetado.",
       "valor": 96.57,
       "destaque": "96,6%",
       "rotulo": "dos vínculos do agro",
       "resto": "o restante já cumpre as 40 horas",
-      "legenda": "O mesmo estudo estima alta de 9,62% no custo da hora trabalhada na agricultura, pecuária e serviços ligados a elas.",
+      "legenda": "O Ipea estima aumento de 9,62% no custo da hora trabalhada na agricultura, pecuária e serviços relacionados. É um dos setores em que a jornada acima de 40 horas é mais comum.",
       "fonte": "Ipea, Nota Técnica 123/2026",
-      "alt": "Donut mostrando 96,6 por cento dos vínculos do agro acima de 40 horas",
+      "alt": "Rosca mostrando 96,6 por cento dos vínculos do agro acima de 40 horas",
       "fundo": "offwhite"
     },
     {
       "tipo": "foto-texto",
-      "titulo": "Domingo não é\nferiado pro trato.",
-      "texto": "Ordenha tem hora. Colheita tem janela. Trato não adia pra segunda. O serviço continua o mesmo, o que muda é quanta gente precisa pra cobrir a semana.",
+      "titulo": "Por que no campo\no ajuste é mais difícil.",
+      "texto": "Ordenha, trato e colheita têm hora marcada e não aceitam adiamento. Em equipe enxuta, tirar um dia a mais de descanso por semana significa contratar, remanejar turno ou pagar hora extra.",
       "foto": "../img/enxada-lavoura.jpg",
       "veu": "marrom"
     },
     {
+      "tipo": "corpo-foto",
+      "foto": "../img/saco-cafe.jpg",
+      "titulo": "Onde a conta\naparece.",
+      "paragrafos": [
+        "A hora passa a custar mais porque o mesmo salário é dividido por menos horas. Com o segundo descanso obrigatório, tendem a crescer a hora extra e o adicional de domingo.",
+        "Em safra e em atividade que não para, a saída costuma ser ampliar a equipe ou redesenhar a escala. As duas mexem na folha."
+      ]
+    },
+    {
       "tipo": "lista",
-      "titulo": "O que olhar antes\nda conta chegar",
+      "titulo": "O que revisar\nagora",
       "itens": [
         "A escala real de cada frente: curral, lavoura e galpão",
-        "Ponto, intervalo e banco de horas, do jeito que funcionam hoje",
-        "Contrato de safra e o acordo coletivo da categoria"
+        "Controle de ponto, intervalos e banco de horas",
+        "Contratos de safra e a convenção coletiva da categoria"
       ],
       "meiaFoto": true,
       "foto": "../img/peao-balde-pasto.jpg",
@@ -79,8 +130,8 @@
       "tipo": "fecho",
       "foto": "../img/estrada-amanhecer.jpg",
       "veu": "verde",
-      "sintese": "A lei mudou\no calendário.\nNão mudou\na ordenha.",
-      "cta": "Sua escala já está pronta pra 40 horas?"
+      "sintese": "A emenda ainda\nnão foi promulgada.\nO prazo começa\nnesse dia.",
+      "cta": "Sua escala já está desenhada para 40 horas?"
     }
   ]
 }

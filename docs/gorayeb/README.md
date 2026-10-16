@@ -93,7 +93,7 @@ Nenhum fundo é padrão em todo slide: a graça é variar dentro do carrossel.
 | `barras` | `itens` de `{rotulo, valor, valorTexto, destaque}` | comparar 2 a 5 grandezas |
 | `mapa` | `mapa` (`brasil`), `altura`, `pontos` de `{lon, lat, valor, rotulo}` | situar no território; com `valor` a bolha cresce pela raiz e os pontos viram lista numerada |
 | `numeros` | `itens` de `{numero, rotulo, icone}` | até 4 cifras em diagonal |
-| `tabela` | `colunas` (2) e `linhas` de `{criterio, a, b}` | comparar dois cenários |
+| `tabela` | `colunas` (2), `linhas` de `{criterio, a, b}`, `realce` | comparar dois cenários; `realce: "b"` põe a ênfase na segunda coluna |
 | `cerca` | `rotuloA`, `rotuloB` | meio a meio de uma divisa, desenhado como cerca |
 | `linha` | `itens` de `{numero, rotulo}` | até 4 etapas em sequência, de cima pra baixo |
 

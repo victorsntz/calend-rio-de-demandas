@@ -34,9 +34,10 @@ Status: **aprovado na revisão**, zip entregue. Falta conferir licença de 5 fot
 
 ### 3. Fim da escala 6x1: o que muda no campo
 
-7 slides sobre a PEC 221/2019, aprovada no Senado em 14/10. Capa no café, o que
-o Senado aprovou, a linha do tempo do prazo, a rosca dos 96,6% do agro, a rotina
-que não tem folga, o que revisar e o fecho.
+10 slides sobre a PEC 221/2019, aprovada no Senado em 14/10. Versão longa e
+textual: o que foi aprovado, a linha do tempo da transição, a tabela de antes e
+depois, as exceções, a rosca dos 96,6% do agro, por que o ajuste no campo é mais
+difícil, onde a conta aparece, o que revisar e o fecho.
 
 A pauta veio de um post da abrada.oficial que o Victor mandou. Não aproveitei
 número nenhum de lá: apurei tudo de novo. O ângulo é outro, o prazo, que é o que
@@ -67,6 +68,7 @@ O detalhe de cada uma está em `formato-01.md`.
 | Entrega sempre em zip + txt da legenda | pedido direto |
 | Diário atualizado a cada entrega | pedido direto |
 | Referência de concorrente é pauta, não fonte | post da abrada |
+| Pauta técnica pede registro longo, até 10 slides | revisão da escala 6x1 |
 | Número sem fonte não entra | contrato |
 | Data que diverge entre fontes fica de fora | pesquisa da pecuária |
 
@@ -124,3 +126,6 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - Regra nova: número de concorrente não entra sem conferir em fonte
   independente. Caiu a projeção da FAEP de R$ 4,1 bilhões, que é calculada em
   cima de 36 horas e não das 40 aprovadas.
+- Refeito em dez slides, no registro técnico da referência, com menos frase de
+  efeito. O formato 01 passou a ter dois registros, curto e longo.
+- A tabela ganhou `realce`, pra poder destacar a segunda coluna.

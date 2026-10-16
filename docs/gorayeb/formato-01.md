@@ -5,7 +5,7 @@ sem precisar repetir nada.
 
 ## A regra curta
 
-5 a 7 slides, 1080 × 1350. Abre em capa de foto no grid de quatro faixas, fecha
+5 a 10 slides, 1080 × 1350. Abre em capa de foto no grid de quatro faixas, fecha
 em foto com a logo. No meio, pelo menos uma figura: gráfico, tabela, mapa ou
 número grande. Tudo alinhado à esquerda. Sem assinatura escrita, em lugar nenhum.
 
@@ -24,6 +24,7 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Viúvas** | Palavra sozinha fechando linha **não passa**. O render costura sozinho; se ainda ficar feia, encurtar a frase. |
 | **Respiro** | Corpo em 34 px, entrelinha 1,58, medida de 19 caracteres. Nada espremido. Todo slide de figura leva folga entre o título e o desenho. |
 | **Fecho** | Honra quem faz, não vende serviço. A chamada pede marcação, que puxa mais comentário que pergunta. |
+| **Tamanho** | 5 a 7 slides no padrão. Até 10 quando a pauta é técnica e pede texto corrido, como mudança de lei. |
 
 ## A capa
 
@@ -55,7 +56,17 @@ Alternar. Nenhum fundo repete dentro do mesmo carrossel.
 
 ## Linguagem
 
-A casa afirma seco, nega e corrige, espelha duas frases e fala com o produtor.
+Dois registros, conforme a pauta.
+
+**Curto**, para pauta de opinião, data comemorativa e conceito: frase seca,
+espelhada, pouca palavra por slide. É o padrão.
+
+**Longo**, para mudança de lei, prazo e número: parágrafo corrido, registro
+técnico, até 10 slides. Nesse caso **menos frase de efeito**: o título do slide
+descreve o que vem, não faz piada nem trocadilho. A referência é como os
+escritórios grandes do agro escrevem no LinkedIn.
+
+Nos dois: a casa afirma seco, nega e corrige, espelha duas frases e fala com o produtor.
 **Nunca fala sobre o próprio post.** Fora: "entenda", "veja", "confira", "em uma
 imagem", "neste carrossel", "tudo o que você precisa saber". A regra inteira,
 com os exemplos levantados das peças publicadas, está no guia de conteúdo.

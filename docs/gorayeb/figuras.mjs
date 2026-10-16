@@ -238,18 +238,20 @@ export function linha(f) {
 export function tabela(f) {
   const cols = (f.colunas || []).slice(0, 2);
   const linhas = (f.linhas || []).slice(0, 5);
+  /* `col-a` é a coluna em destaque. Por padrão é a primeira; com
+     realce: "b" a ênfase passa pra segunda, que é o caso quando a
+     tabela compara o que vale hoje com o que vai passar a valer. */
+  const forte = f.realce === "b" ? 1 : 0;
+  const cls = (i) => (i === forte ? "col-a" : "col-b");
   const cab = cols
-    .map(
-      (c, i) =>
-        `<th class="${i === 0 ? "col-a" : "col-b"}"><span>${ec(c)}</span></th>`
-    )
+    .map((c, i) => `<th class="${cls(i)}"><span>${ec(c)}</span></th>`)
     .join("");
   const corpo = linhas
     .map(
       (l) => `<tr>
         <th scope="row">${ec(l.criterio)}</th>
-        <td class="col-a">${ec(l.a)}</td>
-        <td class="col-b">${ec(l.b)}</td>
+        <td class="${cls(0)}">${ec(l.a)}</td>
+        <td class="${cls(1)}">${ec(l.b)}</td>
       </tr>`
     )
     .join("");
