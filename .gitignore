@@ -37,3 +37,6 @@ img/
 
 # entrega gerada pelo empacota.py
 docs/gorayeb/entrega/
+
+# excel gerado pelo calendario/gerar.py
+docs/gorayeb/calendario/saida/

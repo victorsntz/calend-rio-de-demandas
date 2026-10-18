@@ -8,7 +8,7 @@ Atualizo isso a cada entrega ou decisão nova.
 | | |
 | --- | --- |
 | **Formato padrão** | 01, escrito em `formato-01.md` |
-| **Peças prontas** | 3 carrosséis, nenhum publicado ainda |
+| **Peças prontas** | 5 carrosséis + 1 estático. Publicado: escala 6x1 (16/10) |
 | **Pendente com o Victor** | licença das fotos do Pinterest |
 | **Em aberto** | autorização da ABCZ pra retrato de pioneiro |
 
@@ -45,6 +45,24 @@ ninguém estava contando.
 
 Arquivo: `carrosseis/fim-da-escala-6x1.json`
 Status: **entregue**, aguardando revisão. Falta conferir licença de 5 fotos.
+
+### 6. Disputas com cooperativas
+
+8 slides pro 29/10, item 20 do calendário. Registro longo. O gancho é que o
+cooperado não é cliente: a operação é ato cooperativo (art. 79 da Lei 5.764/71),
+então o STJ afasta o CDC. Daí sai a tabela de cliente × cooperado, a tese de que
+crédito de ato cooperado fica fora da recuperação judicial (STJ, 3ª Turma, 2024,
+que amarra com o carrossel do dia 22), as cinco frentes onde a briga nasce, a
+assembleia como único lugar onde a voz do cooperado pesa, o que juntar e o fecho
+no estatuto.
+
+Ficou **fora da arte** o teto de 1% ao mês da lei de usura. Tem julgado do STJ
+aplicando o limite às cooperativas de crédito, mas o entendimento não é pacífico:
+há decisão equiparando a cooperativa a instituição financeira. Foi pra legenda
+com a ressalva.
+
+Arquivo: `carrosseis/disputas-cooperativas.json`
+Status: **entregue**, aguardando revisão. Falta conferir licença de 4 fotos.
 
 ## Calendário editorial
 
@@ -197,3 +215,22 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   com o conteúdo; a rosca de 96,6% virou `blocos`, porque anel quase fechado não
   informa nada; e o título da chapa passou a correr numa linha só, com o corpo
   cedendo conforme o tamanho da frase.
+
+**18/10/2026**
+
+- Carrossel das disputas com cooperativas, pro 29/10.
+- Troquei duas fotos depois de olhar o render: a assembleia e a roda de produtores
+  tinham rosto identificável em primeiro plano, e foto de Pinterest com gente
+  reconhecível num post comercial é risco que não vale. Entraram uma assembleia
+  vista de longe, sob a mangueira, e o saco de café subindo no caminhão.
+- **Regra nova no template:** `foto-texto` sobre foto ganhou véu próprio, mais
+  fechado na faixa do meio, que é onde o texto cai. O véu padrão só fecha no pé e
+  deixava o parágrafo brigando com a foto. Melhorou também o slide 7 da
+  recuperação judicial.
+- Descoberta pra conferir: `img/cafezal-minas.png` tem cara de IA (fileira
+  perfeita demais, duas casas quase iguais, luz sem direção). Não está em peça
+  nenhuma, só no arquivo de teste. Melhor apagar.
+- Pendência que vem de antes: o `corpo-foto` é o único slide sem o
+  @gorayebadvocacia no topo, porque a chapa não deixa lugar pra ele em cima da
+  foto. Está assim desde a cerca e passou em três revisões. Se o Victor quiser,
+  dá pra jogar o arroba pra dentro da chapa.

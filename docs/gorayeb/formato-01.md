@@ -26,6 +26,8 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Fecho** | Honra quem faz, não vende serviço. A chamada pede marcação, que puxa mais comentário que pergunta. |
 | **Título de chapa** | Uma linha só, no `corpo-foto`. O `\n` no JSON marca onde começa o itálico, não quebra linha. Se não couber, encurtar o título. |
 | **Tamanho** | 5 a 7 slides no padrão. Até 10 quando a pauta é técnica e pede texto corrido, como mudança de lei. |
+| **Véu sobre foto** | O `foto-texto` leva véu próprio, mais fechado na faixa do meio. O véu padrão fecha só no pé e deixa o parágrafo brigando com a imagem. |
+| **Rosto em foto de banco** | Close de gente identificável não entra. Foto de Pinterest com rosto reconhecível em post comercial é risco sem retorno. Multidão de longe, de costas ou em contraluz, pode. |
 | **Barra de progresso** | **Não usar.** Existe no template (`progresso: true`), mas ficou de fora por decisão do Victor. |
 
 ## A capa

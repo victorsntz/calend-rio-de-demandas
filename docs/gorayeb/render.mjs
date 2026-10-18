@@ -113,6 +113,7 @@ function monta(s, i = 0, total = 0) {
   if (s.borda === "bordo") cls.push("borda-bordo");
   if (s.meiaFoto) cls.push("meia-foto");
   if (s.tipo === "fecho" && s.foto) cls.push("fecho-foto");
+  if (s.tipo === "foto-texto" && s.foto) cls.push("foto-texto");
   if (s.tipo === "capa-foto" || s.tipo === "perspectiva") cls.push("capa-foto", "bg-foto");
   if (s.tipo === "corpo-foto") cls.push("corpo-foto", "bg-verde");
 

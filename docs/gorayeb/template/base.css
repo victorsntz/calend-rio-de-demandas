@@ -85,6 +85,12 @@
   background: linear-gradient(180deg, rgba(20,28,16,.70) 0%, rgba(20,28,16,.80) 42%, rgba(20,28,16,.88) 100%); }
 .veu-marrom { position: absolute; inset: 0; z-index: 0;
   background: linear-gradient(180deg, rgba(67,26,10,.25) 0%, rgba(67,26,10,.55) 45%, rgba(67,26,10,.92) 100%); }
+/* foto-texto sobre foto: o texto ocupa a faixa do meio, então o véu tem que
+   fechar ali em cima, não só no pé */
+.slide.foto-texto .veu-verde {
+  background: linear-gradient(180deg, rgba(20,28,16,.55) 0%, rgba(20,28,16,.78) 24%, rgba(20,28,16,.80) 70%, rgba(20,28,16,.64) 100%); }
+.slide.foto-texto .veu-marrom {
+  background: linear-gradient(180deg, rgba(58,24,10,.52) 0%, rgba(58,24,10,.76) 24%, rgba(58,24,10,.78) 70%, rgba(58,24,10,.62) 100%); }
 .veu-topo   { position: absolute; inset: 0; z-index: 0;
   background: linear-gradient(180deg, rgba(20,28,16,.94) 0%, rgba(20,28,16,.78) 32%, rgba(20,28,16,.30) 58%, rgba(20,28,16,.52) 100%); }
 
