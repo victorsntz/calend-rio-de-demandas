@@ -161,16 +161,21 @@ para regra com exceção, que é onde uma frase curta rende mais que dez slides.
 
 ## Como entrego
 
-Sempre dois arquivos, sem precisar pedir:
+**Toda vez que fecho conteúdo, vão três coisas**, sem precisar pedir:
 
-1. **O zip** com as artes numeradas na ordem do post, mais o `legenda.txt` dentro.
+1. **O zip** de cada peça, com as artes numeradas na ordem do post e o
+   `legenda.txt` dentro.
 2. **O .txt da legenda** solto, pra colar direto sem abrir o zip.
+3. **O calendário editorial atualizado**, em Excel, com o status da peça já
+   marcado e a data no nome do arquivo.
 
-Quem faz isso é `empacota.py`, que roda depois do render:
+A sequência:
 
 ```
 node docs/gorayeb/render.mjs docs/gorayeb/carrosseis/<peça>.json
 python3 docs/gorayeb/empacota.py docs/gorayeb/carrosseis/<peça>.json
+# marcar o status em calendario/plano.json e mudar atualizado_em
+python3 docs/gorayeb/calendario/gerar.py
 ```
 
 ## Diário

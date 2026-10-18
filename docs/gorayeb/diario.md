@@ -58,8 +58,11 @@ python3 docs/gorayeb/calendario/gerar.py [saída]
 
 O texto do e-mail de envio está em `calendario/email-elisa.md`.
 
-**Rotina quinzenal:** marcar em `plano.json` o que saiu, acrescentar as próximas
-semanas, rodar o gerador e mandar o arquivo. O nome do arquivo carrega a data,
+**A cada entrega de conteúdo:** marcar o status em `plano.json`, mudar
+`atualizado_em` e rodar o gerador. O Excel vai junto com os zips, sempre.
+
+**Rotina quinzenal:** acrescentar as próximas semanas e mandar o arquivo também
+para a Dra. Elisa, com o texto de `email-elisa.md`. O nome do arquivo carrega a data,
 então não sobrescreve o que já foi enviado.
 
 Os quatro vídeos gravados e os roteiros deles estão em
@@ -88,7 +91,7 @@ O detalhe de cada uma está em `formato-01.md`.
 | Quando a pauta tem coisa concreta, desenha a coisa | a rosca virou cerca |
 | Cenário nacional, não o escritório | revisão da pecuária |
 | Fecho honra quem faz, chamada pede marcação | revisão da pecuária |
-| Entrega sempre em zip + txt da legenda | pedido direto |
+| Entrega sempre em zip + txt da legenda + Excel atualizado | pedido direto |
 | Diário atualizado a cada entrega | pedido direto |
 | Referência de concorrente é pauta, não fonte | post da abrada |
 | Referência mandada = quase cópia da estrutura, com a nossa IDV | pedido direto |
