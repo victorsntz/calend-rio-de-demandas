@@ -159,7 +159,10 @@ for (const [i, p] of pecas.entries()) {
   // O -t é o que faz a diferença entre minutos e meia hora: sem ele, o PNG de
   // uma peça que fica 3 s na tela gera quadro pra toda a duração do vídeo, e
   // cada um desses quadros ainda passa por scale e fade.
-  entradas.push("-loop", "1", "-t", dur.toFixed(3), "-i", p.png);
+  // A sobra de 0,25 s cobre o arredondamento do deslocamento de tempo: sem ela
+  // a peça perdia o último quadro, e a cartela de fechamento sumia justo na
+  // volta do laço. Quem corta de verdade é o enable=between.
+  entradas.push("-loop", "1", "-t", (dur + 0.25).toFixed(3), "-i", p.png);
   const idx = proximo();
   const ehLegenda = p.entrada === "legenda";
   const subir = Math.round((ehLegenda ? estilo.legenda.entrada.subir : M.entrada.subir) * escala);

@@ -49,7 +49,7 @@
         {
           "de": 4.4,
           "ate": 8.0,
-          "texto": "existe uma infraestrutura que precisa de cuidado."
+          "texto": "Existe uma infraestrutura que precisa de cuidado."
         },
         {
           "de": 8.2,
@@ -180,13 +180,8 @@
         },
         {
           "de": 33.7,
-          "ate": 36.6,
-          "texto": "E levou sua experiência a novos territórios."
-        },
-        {
-          "de": 36.8,
           "ate": 39.8,
-          "texto": "Uma história que evolui."
+          "texto": "E levou sua experiência a novos territórios."
         }
       ],
       "transicao": {
@@ -307,17 +302,40 @@
       "narracao": "Nossa visão é manter o reconhecimento pela liderança em inovação e qualidade na gestão do saneamento. Continuar crescendo, desenvolver serviços que se complementam, consolidar o controle de perdas físicas de água e fortalecer parcerias com concessionárias na operação e gestão dos sistemas de água, esgotos e drenagem.",
       "pecas": [
         {
-          "tipo": "lista",
-          "titulo": "NOSSA VISÃO · 2025 a 2030",
+          "tipo": "ponto",
+          "rotulo": "NOSSA VISÃO · 2025 A 2030",
+          "indice": "01",
+          "texto": "Inovação e qualidade",
+          "veu": 0.7,
           "de": 72.5,
-          "ate": 101.5,
-          "itens": [
-            "Inovação e qualidade",
-            "Crescimento e soluções integradas",
-            "Controle de perdas de água",
-            "Parcerias na gestão do saneamento"
-          ],
-          "veu": 0.72
+          "ate": 79.5
+        },
+        {
+          "tipo": "ponto",
+          "rotulo": "NOSSA VISÃO · 2025 A 2030",
+          "indice": "02",
+          "texto": "Crescimento e soluções\nintegradas",
+          "veu": 0.7,
+          "de": 79.7,
+          "ate": 86.7
+        },
+        {
+          "tipo": "ponto",
+          "rotulo": "NOSSA VISÃO · 2025 A 2030",
+          "indice": "03",
+          "texto": "Controle de perdas de água",
+          "veu": 0.7,
+          "de": 86.9,
+          "ate": 93.9
+        },
+        {
+          "tipo": "ponto",
+          "rotulo": "NOSSA VISÃO · 2025 A 2030",
+          "indice": "04",
+          "texto": "Parcerias na gestão\ndo saneamento",
+          "veu": 0.7,
+          "de": 94.1,
+          "ate": 101.5
         }
       ],
       "legendas": [
@@ -359,23 +377,27 @@
       "clipes": [
         {
           "arquivo": "brutos/selecao/Video-08-parte-01.mov",
-          "de": 12.0,
-          "ate": 22.0,
-          "_oque": "prancha técnica da rede sendo desenhada"
-        },
-        {
-          "arquivo": "brutos/selecao/IMG_3915.MOV",
-          "de": 14.0,
-          "ate": 22.0,
-          "hdr": true,
-          "_oque": "inspeção no poço de visita"
+          "de": 68.0,
+          "ate": 75.5,
+          "_oque": "mão apontando um trecho da rede"
         },
         {
           "arquivo": "brutos/selecao/Video-08-parte-01.mov",
-          "de": 62.0,
-          "ate": 74.0,
-          "zoom": true,
-          "_oque": "traço vermelho fechando o diagnóstico"
+          "de": 86.0,
+          "ate": 93.5,
+          "_oque": "dedo marcando um poço de visita na prancha"
+        },
+        {
+          "arquivo": "brutos/selecao/Video-08-parte-01.mov",
+          "de": 100.0,
+          "ate": 107.5,
+          "_oque": "traço sendo desenhado a caneta"
+        },
+        {
+          "arquivo": "brutos/selecao/Video-08-parte-01.mov",
+          "de": 145.0,
+          "ate": 152.5,
+          "_oque": "linha vermelha do diagnóstico sendo fechada"
         }
       ]
     },
@@ -388,18 +410,49 @@
       "narracao": "Nossos valores orientam cada relação e cada entrega. Parceria, confiança e lealdade. Entender as necessidades do cliente, aplicar a técnica adequada e negociar com transparência. Valorizar as pessoas, incentivar seu desenvolvimento e construir relações confiáveis com fornecedores. Trabalhar com compromisso com os prazos, com a preservação do meio ambiente e com a melhoria da comunidade.",
       "pecas": [
         {
-          "tipo": "lista",
-          "titulo": "NOSSOS VALORES",
+          "tipo": "ponto",
+          "rotulo": "NOSSOS VALORES",
+          "check": true,
+          "texto": "Parceria, confiança e lealdade",
+          "veu": 0.7,
           "de": 102.5,
-          "ate": 136.5,
-          "itens": [
-            "Parceria, confiança e lealdade",
-            "Transparência e compromisso nas entregas",
-            "Valorização e desenvolvimento das pessoas",
-            "Relações confiáveis com fornecedores",
-            "Preservação ambiental e melhoria social"
-          ],
-          "veu": 0.72
+          "ate": 109.1
+        },
+        {
+          "tipo": "ponto",
+          "rotulo": "NOSSOS VALORES",
+          "check": true,
+          "texto": "Transparência e compromisso\nnas entregas",
+          "veu": 0.7,
+          "de": 109.3,
+          "ate": 115.9
+        },
+        {
+          "tipo": "ponto",
+          "rotulo": "NOSSOS VALORES",
+          "check": true,
+          "texto": "Valorização e desenvolvimento\ndas pessoas",
+          "veu": 0.7,
+          "de": 116.1,
+          "ate": 122.7
+        },
+        {
+          "tipo": "ponto",
+          "rotulo": "NOSSOS VALORES",
+          "check": true,
+          "texto": "Relações confiáveis\ncom fornecedores",
+          "veu": 0.7,
+          "de": 122.9,
+          "ate": 129.5
+        },
+        {
+          "tipo": "ponto",
+          "rotulo": "NOSSOS VALORES",
+          "check": true,
+          "texto": "Preservação ambiental\ne melhoria social",
+          "veu": 0.7,
+          "de": 129.7,
+          "ate": 136.3
         }
       ],
       "legendas": [
@@ -489,10 +542,11 @@
       "pecas": [
         {
           "tipo": "cartela",
-          "texto": "Engenharia, operação e gestão\na serviço das cidades\ne das pessoas.",
+          "texto": "Engenharia, operação\ne gestão a serviço\ndas cidades e das pessoas.",
           "de": 137.0,
           "ate": 145.0,
-          "alinhar": "centro"
+          "alinhar": "centro",
+          "tamanho": 58
         },
         {
           "tipo": "cartela",

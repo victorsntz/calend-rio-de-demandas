@@ -98,24 +98,35 @@ function pecaTitulo(o, F) {
   const cfg = F.titulo;
   const t = o.tamanho || cfg.tamanhoMax;
   const degrade = o.semDegrade ? "" : pecaDegrade({ _interno: true }, F);
+  // Sombra atrás da letra, não embaixo: sobre obra clara o degradê de base não
+  // dá conta sozinho e o branco se mistura com o fundo.
+  const sb = K.titulo.sombra;
+  const sombraTitulo = sb ? `text-shadow:0 ${sb.y}px ${sb.desfoque}px ${rgba(sb.cor, sb.opacidade)}` : "";
   return `${degrade}<div class="bloco" style="text-align:${o.alinhar || cfg.alinhamento === "esquerda" ? "left" : "center"}">
-    <div style="font-weight:${estilo.fonte.pesos.titulo};font-size:${t}px;line-height:1.1;letter-spacing:-.015em;color:${K.titulo.cor}">${enfatiza(o.texto)}</div>
+    <div style="font-weight:${estilo.fonte.pesos.titulo};font-size:${t}px;line-height:1.1;letter-spacing:-.015em;color:${K.titulo.cor};${sombraTitulo}">${enfatiza(o.texto)}</div>
   </div>`;
 }
 
 function pecaLegenda(o, F) {
-  // Legenda com a barra amarela à esquerda. A barra é o que amarra ela à marca.
+  // Legenda numa placa de azul noite com a barra amarela à esquerda. A placa é
+  // o que faz o branco fechar contraste sobre obra clara: sem ela a letra se
+  // mistura com o fundo e some a dez metros. A barra amarra à marca.
   const L = estilo.legenda;
   const cfg = F.legenda;
+  const P = L.placa;
   const t = o.tamanho || cfg.tamanhoMax;
   const faixa = cfg.faixaY;
   const x = F.zonaSegura.x1;
   const larg = F.zonaSegura.x2 - x;
+  const comPlaca = o.placa !== false && P;
+  const fundo = comPlaca
+    ? `background:${rgba(cor(P.cor), P.opacidade)};padding:${P.respiro[0]}px ${P.respiro[1]}px;border-radius:${P.raio}px;`
+    : `text-shadow:0 2px 10px ${rgba("#000000", .75)}, 0 0 22px ${rgba("#000000", .55)};`;
   return `<div style="position:absolute;left:${x}px;top:${faixa[0]}px;width:${larg}px;height:${faixa[1] - faixa[0]}px;
       display:flex;align-items:flex-end">
-    <div style="display:flex;align-items:stretch;gap:${L.barra.respiro}px;max-width:100%">
+    <div style="display:flex;align-items:stretch;gap:${L.barra.respiro}px;max-width:100%;${fundo}">
       <div style="width:${L.barra.largura}px;background:${L.barra.cor};flex:0 0 auto;border-radius:1px"></div>
-      <div style="font-weight:${estilo.fonte.pesos.legenda};font-size:${t}px;line-height:1.26;color:${L.cor};padding-bottom:2px">${enfatiza(o.texto)}</div>
+      <div style="font-weight:${estilo.fonte.pesos.legenda};font-size:${t}px;line-height:1.26;color:${L.cor}">${enfatiza(o.texto)}</div>
     </div></div>`;
 }
 
@@ -173,7 +184,7 @@ function pecaCartela(o, F) {
     <div class="cheia" style="background:${clarao}"></div>
     <div class="bloco" style="text-align:${centro ? "center" : "left"}">
       ${rot}<div style="font-weight:${estilo.fonte.pesos.titulo};font-size:${t}px;line-height:1.08;letter-spacing:-.02em;color:${cor("branco")}">${enfatiza(o.texto)}</div>${sub}
-    </div>${o.comMarca ? pecaMarca({ _interno: true, canto: "rodape" }, F) : ""}`;
+    </div>${o.comMarca ? pecaMarca({ _interno: true, canto: "rodape", alinhar: o.alinhar }, F) : ""}`;
 }
 
 function pecaLista(o, F) {
@@ -187,11 +198,57 @@ function pecaLista(o, F) {
     ? `<div class="cheia" style="background:${rgba(cor("azulNoite"), Number(o.veu))}"></div>`
     : "";
   const tit = o.titulo ? pecaRotulo({ texto: o.titulo, _interno: true, tamanho: Math.round(t * .52), cor: cor("amarelo") }, F) + `<div style="height:${Li.respiro}px"></div>` : "";
-  const linhas = itens.map((it, i) => `<div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:${Li.respiro}px">
-      <div style="width:${Li.fio.largura}px;height:${Math.round(t * .9)}px;background:${Li.fio.cor};flex:0 0 auto;margin-top:${Math.round(t * .14)}px;border-radius:1px"></div>
+
+  // Check, não fio. O fio amarelo era igualzinho à barra da legenda, e aí item
+  // de lista e legenda falada viravam a mesma coisa na tela.
+  const lado = Math.round(t * 0.82);
+  const marcador = `<svg width="${lado}" height="${lado}" viewBox="0 0 24 24" fill="none"
+      style="flex:0 0 auto;margin-top:${Math.round(t * .18)}px">
+      <path d="M3.5 12.8 L9 18.3 L20.5 6.2" stroke="${Li.corMarcador}" stroke-width="3.2"
+        stroke-linecap="square" stroke-linejoin="miter"/></svg>`;
+
+  const linhas = itens.map((it) => `<div style="display:flex;align-items:flex-start;gap:${Math.round(t * .42)}px;margin-bottom:${Li.respiro}px">
+      ${marcador}
       <div style="font-weight:${estilo.fonte.pesos.corpo};font-size:${t}px;line-height:1.24;color:${cor("branco")}">${enfatiza(it)}</div>
     </div>`).join("");
   return veu + envolve(`${tit}${linhas}`, o);
+}
+
+function pecaPonto(o, F) {
+  // Um ponto de cada vez, grande. Mesma fonte e mesma escala da lista, forma
+  // diferente: aqui a frase ocupa a tela em vez de virar item encaixotado.
+  // Serve pra bloco longo, onde quatro linhas paradas viram parede de texto.
+  const Li = K.lista;
+  const t = o.tamanho || Math.round(F.cartela.tamanhoMin * 0.78);
+  const veu = o.veu
+    ? `<div class="cheia" style="background:${rgba(cor("azulNoite"), Number(o.veu))}"></div>`
+    : "";
+  const rot = o.rotulo
+    ? pecaRotulo({ texto: o.rotulo, _interno: true, tamanho: K.rotulo.tamanho, cor: cor("amarelo") }, F) +
+      `<div style="height:${Math.round(t * .5)}px"></div>`
+    : "";
+
+  let selo = "";
+  if (o.indice) {
+    selo = `<div style="font-weight:${estilo.fonte.pesos.titulo};font-size:${Math.round(t * 1.9)}px;
+      line-height:.82;letter-spacing:-.04em;color:${cor("amarelo")}">${escapa(o.indice)}</div>`;
+  } else if (o.check) {
+    const lado = Math.round(t * 1.1);
+    selo = `<svg width="${lado}" height="${lado}" viewBox="0 0 24 24" fill="none">
+      <path d="M3.5 12.8 L9 18.3 L20.5 6.2" stroke="${Li.corMarcador}" stroke-width="3.2"
+        stroke-linecap="square" stroke-linejoin="miter"/></svg>`;
+  }
+
+  const frase = `<div style="font-weight:${estilo.fonte.pesos.titulo};font-size:${t}px;line-height:1.14;
+    letter-spacing:-.01em;color:${cor("branco")}">${enfatiza(o.texto)}</div>`;
+
+  const corpo = selo
+    ? `<div style="display:flex;align-items:flex-start;gap:${Math.round(t * .62)}px">
+         <div style="flex:0 0 auto;padding-top:${Math.round(t * .04)}px">${selo}</div>
+         <div>${frase}</div></div>`
+    : frase;
+
+  return veu + envolve(`${rot}${corpo}`, o);
 }
 
 function pecaMarca(o, F) {
@@ -204,7 +261,14 @@ function pecaMarca(o, F) {
   const h = o.altura || M.altura;
   if (rodape) {
     const site = o.semSite ? "" : `<div class="rotulo" style="margin-top:14px;font-size:${K.rotulo.tamanho}px;color:${cor("cinzaClaro")}">${escapa(K.marca.site)}</div>`;
-    return `<div style="position:absolute;left:0;right:0;bottom:${Math.round(F.altura * .12)}px;text-align:center">
+    // A assinatura para ACIMA da faixa da legenda. Antes ela morava a 12% do pé
+    // do quadro e a legenda passava por cima do logotipo e do site.
+    const base = F.altura - (F.legenda.faixaY[0] - 26);
+    // A assinatura segue o alinhamento da cartela: centralizada ao lado de um
+    // texto encostado à esquerda ela fica solta no quadro.
+    const lado = o.alinhar === "centro" ? "center" : "left";
+    const recuo = o.alinhar === "centro" ? 0 : F.zonaSegura.x1;
+    return `<div style="position:absolute;left:${recuo}px;right:${recuo}px;bottom:${base}px;text-align:${lado}">
       <img src="file://${arq}" style="height:${Math.round(h * 1.5)}px;display:inline-block">${site}</div>`;
   }
   // A margem sai da própria zona segura, que pode ser torta. Número solto no
@@ -249,13 +313,14 @@ function pecaImagem(o, F) {
 
 const PECAS = {
   ano: pecaAno, linha: pecaLinha, titulo: pecaTitulo, legenda: pecaLegenda,
-  pilula: pecaPilula, cartela: pecaCartela, lista: pecaLista, marca: pecaMarca,
+  pilula: pecaPilula, cartela: pecaCartela, lista: pecaLista, ponto: pecaPonto, marca: pecaMarca,
   numero: pecaNumero, rotulo: pecaRotulo, degrade: pecaDegrade, imagem: pecaImagem,
 };
 
 /** Peças que pintam o quadro todo de propósito. A imagem só quando é em sangria. */
 const SANGRIA = new Set(["cartela", "degrade", "titulo"]);
-const ehSangria = (tipo, o = {}) => SANGRIA.has(tipo) || (tipo === "imagem" && !!o.cheia) || (tipo === "lista" && !!o.veu);
+const ehSangria = (tipo, o = {}) => SANGRIA.has(tipo) || (tipo === "imagem" && !!o.cheia)
+  || ((tipo === "lista" || tipo === "ponto") && !!o.veu);
 /** Foto em sangria pode ter qualquer cor no canto, inclusive céu branco: não dá
  *  pra julgar pelo pixel. Ela já é conferida pelo existsSync do caminho. */
 const semVeredito = (tipo, o = {}) => tipo === "imagem" && !!o.cheia;
@@ -281,8 +346,11 @@ function paginaDaPeca(tipo, o, F) {
   // ano pra fora do quadro, porque ela tem "ate: 8" de segundos.
   // O título sem posição senta logo acima da faixa da legenda, como no modelo.
   if (tipo === "titulo" && o.y == null && o.rodape == null) o = { ...o, rodape: F.legenda.faixaY[0] - 14 };
+  // Cartela com assinatura sobe o texto: centralizado no quadro ele encostava no
+  // logotipo, que mora logo acima da faixa da legenda.
+  const centroVertical = tipo === "cartela" && o.comMarca ? 33 : 50;
   const posY = o.rodape != null ? `bottom:${F.altura - Number(o.rodape)}px`
-    : o.y === "centro" || o.y == null ? `top:50%;transform:translateY(-50%)`
+    : o.y === "centro" || o.y == null ? `top:${centroVertical}%;transform:translateY(-50%)`
     : `top:${Number(o.y)}px`;
   const posX = o.x === "direita" ? `right:${F.largura - Z.x2}px`
     : o.x === "centro" ? `left:50%;margin-left:${-Math.round(larguraMax / 2)}px`

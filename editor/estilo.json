@@ -71,6 +71,7 @@
 
   "legenda": {
     "cor": "#FFFFFF",
+    "placa": { "_leia": "placa atrás do texto: é o que faz o branco fechar contraste sobre obra clara", "cor": "azulNoite", "opacidade": 0.82, "respiro": [13, 18], "raio": 3 },
     "barra": { "largura": 4, "cor": "#FFBA00", "respiro": 16 },
     "entrada": { "subir": 8, "fade": 0.18 },
     "enfase": { "cor": "#FFBA00", "maxPorFrase": 1 },
@@ -81,10 +82,10 @@
   "kit": {
     "ano":      { "fundo": "#FFFFFF", "texto": "#001024", "barra": { "largura": 6, "cor": "#FFBA00" }, "raio": 4, "respiro": [14, 22], "tamanho": 40 },
     "linhaDoTempo": { "cor": "#C8D4E4", "opacidade": 0.55, "corAtivo": "#FFBA00", "deslize": 0.6, "tamanhoAno": 13 },
-    "titulo":   { "cor": "#FFFFFF", "peso": 700, "alinhamento": "esquerda" },
+    "titulo":   { "cor": "#FFFFFF", "peso": 700, "alinhamento": "esquerda", "sombra": { "y": 2, "desfoque": 14, "cor": "#000000", "opacidade": 0.6 } },
     "pilula":   { "raio": 4, "contorno": { "largura": 1, "cor": "#FFFFFF", "opacidade": 0.45 }, "preenchida": { "fundo": "#FFBA00", "texto": "#001024" }, "tamanho": 15, "respiro": [7, 13] },
     "cartela":  { "fundo": "#04306E", "clarao": { "cor": "#0A58B4", "opacidade": 0.5, "canto": "superior-direito" } },
-    "lista":    { "fio": { "largura": 3, "cor": "#FFBA00", "altura": 26 }, "respiro": 22, "escalonar": 0.12, "tamanho": 34 },
+    "lista":    { "marcador": "check", "corMarcador": "#FFBA00", "respiro": 22, "escalonar": 0.12, "tamanho": 34, "_leia": "marcador de check, não fio: o fio virava igualzinho à barra da legenda e confundia lista com legenda" },
     "marca":    { "arquivoEscuro": "marca/logo-nortesul-escuro-compacto.png", "arquivoClaro": "marca/logo-nortesul-compacto.png", "assinaturaEscura": "marca/logo-nortesul-escuro.png", "assinaturaClara": "marca/logo-nortesul.png", "site": "nortesultec.com.br", "irma": "Metropolitana", "_leia": "compacto (sem o descritivo) na marca d'água; a versão cheia só no fechamento, onde o descritivo lê" },
     "numero":   { "peso": 700, "cor": "#FFFFFF", "corDestaque": "#FFBA00", "espacamento": -0.02 },
     "rotulo":   { "peso": 700, "caixaAlta": true, "espacamento": 0.12, "tamanho": 16, "cor": "#C8D4E4" },

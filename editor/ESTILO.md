@@ -113,8 +113,10 @@ a 55%. Ela aparece em todo bloco histórico e some quando o vídeo sai da histó
 **Título sobre vídeo** — branco, Bold, alinhado à esquerda, sobre um degradê
 que escurece a base do quadro. Sem caixa, sem contorno.
 
-**Legenda** — branca, Medium, barra amarela de 4 px à esquerda, respiro de 16 px.
-A barra é o que amarra a legenda à marca; sem ela vira legenda de qualquer um.
+**Legenda** — branca, Medium, numa **placa de azul noite a 82%** com a barra
+amarela de 4 px à esquerda. A placa é o que faz o branco fechar contraste sobre
+obra clara: sem ela a letra se mistura com o fundo e some a dez metros. A barra
+é o que amarra a legenda à marca; sem ela vira legenda de qualquer um.
 
 **Pílula** — etiqueta pequena de canto reto suave: contorno branco a 45% com
 texto branco, ou preenchida em amarelo com texto azul quase preto quando é o
@@ -125,9 +127,14 @@ contrato (`Contrato por performance`).
 canto superior direito. Título centralizado ou à esquerda. É abertura,
 transição e fechamento.
 
-**Lista** — para missão, visão e valores. Cada item com um fio amarelo de 3 px
-antes, empilhados com respiro de 22 px. Entram escalonados, 0,12 s entre um e
-outro, nunca todos de uma vez.
+**Lista** — cada item com um **check amarelo** antes, empilhados com respiro de
+22 px. O marcador é check e não fio: fio amarelo fica igualzinho à barra da
+legenda, e aí item de lista e legenda falada viram a mesma coisa na tela.
+
+**Ponto** — um item de cada vez, grande, com índice `01` em amarelo ou com o
+check. Mesma fonte e mesma escala da lista, forma diferente. É o que entra em
+bloco longo: quatro linhas paradas por trinta segundos viram parede de texto, e
+o espectador para de ler.
 
 Sobre vídeo, a lista vem num **véu de azul noite a 72%** cobrindo o quadro. A
 obra continua aparecendo por baixo, e o texto fecha contraste. Sem o véu, branco
@@ -136,7 +143,14 @@ lista mora no meio do quadro.
 
 **Marca** — o logotipo no canto superior direito, altura de 44 px, sempre a
 versão de fundo escuro quando estiver sobre azul ou sobre vídeo. No fechamento,
-Norte Sul e Metropolitana lado a lado, centralizados, com o site em rótulo.
+Norte Sul e Metropolitana lado a lado, com o site em rótulo, **acima da faixa da
+legenda** e no mesmo alinhamento do texto da cartela. A assinatura no pé do
+quadro era atropelada pela legenda.
+
+O logotipo compacto (sem o descritivo) é o da marca d'água, porque em 44 px o
+"Hidrotecnologia e Comércio LTDA" vira borrão. **Ao recortar o descritivo, cortar
+na faixa de linhas vazias abaixo do wordmark**, nunca numa altura chutada: o pé
+do L fica logo acima dela e some junto.
 
 **Número de destaque** — Bold, bem grande, branco, com o rótulo em cinza claro
 embaixo. Quando o número é o assunto da tela, ele pode ir em amarelo.
@@ -170,6 +184,8 @@ embaixo. Quando o número é o assunto da tela, ele pode ir em amarelo.
   caminhão.
 - Sobre foto ou vídeo com texto por cima, escurecer a base em 55% num degradê
   que começa transparente na metade da altura.
+- **Título sobre vídeo leva sombra atrás da letra**, não só o degradê de base.
+  Sobre obra clara o degradê sozinho não dá conta.
 
 ### Ritmo
 
@@ -238,6 +254,10 @@ cada um o que roubar (o princípio) e o que deixar (o visual que é dele).
   cliente (painel 3L x 2A).
 - 19/out/2026 · institucional FENASAN · Helvetica Neue instalada, 5 pesos. O
   render de entrega passou a ser possível; antes disso o fiscal barrava tudo.
+- 19/out/2026 · institucional FENASAN · primeira decupagem do cliente. Entraram:
+  placa atrás da legenda, check no lugar do fio na lista, peça `ponto` pra bloco
+  longo, sombra no título, assinatura acima da faixa da legenda e correção do
+  recorte do logotipo, que tinha comido o pé do L.
 - 19/out/2026 · institucional FENASAN · as pontas perderam a transição e a
   cartela de abertura ganhou a assinatura, igual à de fechamento. Sem isso o
   laço dava um piscada na volta (SSIM 0,920; agora 0,988).

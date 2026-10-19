@@ -45,10 +45,20 @@ node $S/peca.mjs titulo --texto "Sem escurecer o fundo" --semDegrade
 ```
 
 ### `legenda` — a legenda falada
-Branca, com a barra amarela à esquerda, na faixa de baixo. O `legendas.mjs`
-chama essa sozinho; direto é útil pra testar um texto.
+Branca, numa placa de azul noite com a barra amarela à esquerda, na faixa de
+baixo. A placa é o que faz o branco fechar contraste sobre obra clara.
+`--placa false` troca a placa por sombra pesada, pra fundo já escuro.
 ```bash
 node $S/peca.mjs legenda --texto "1988: já são 3 hidrojatos desobstruindo redes."
+```
+
+### `ponto` — um item de cada vez, grande
+Mesma fonte e mesma escala da lista, forma diferente. É o que entra em bloco
+longo, onde quatro linhas paradas viram parede de texto. Aceita `--indice` (um
+número grande em amarelo) ou `--check`.
+```bash
+node $S/peca.mjs ponto --rotulo "NOSSA VISÃO · 2025 A 2030" --indice "01" --texto "Inovação e qualidade" --veu 0.7
+node $S/peca.mjs ponto --rotulo "NOSSOS VALORES" --check --texto "Parceria, confiança\ne lealdade" --veu 0.7
 ```
 
 ### `pilula` — etiqueta de cliente, praça ou contrato
@@ -66,8 +76,10 @@ Azul profundo com um clarão no canto. Abertura, transição e fechamento.
 node $S/peca.mjs cartela --rotulo "FENASAN 2026" --texto "Água. Esgotos.\nDrenagem." --sub "Desde 1985" --comMarca
 ```
 
-### `lista` — missão, visão e valores
-Cada item com um fio amarelo antes. O título vai em rótulo amarelo em cima.
+### `lista` — vários itens juntos
+Cada item com um **check amarelo** antes. O título vai em rótulo amarelo em
+cima. O marcador é check e não fio: fio amarelo fica igual à barra da legenda e
+aí lista e legenda falada viram a mesma coisa na tela.
 ```bash
 node $S/peca.mjs lista --titulo "NOSSA MISSÃO" --itens "Soluções para as necessidades reais|Bem-estar da população"
 node $S/peca.mjs lista --titulo "NOSSOS VALORES" --itens "..." --veu 0.72
