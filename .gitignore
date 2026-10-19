@@ -27,3 +27,26 @@ next-env.d.ts
 # artifact build outputs
 /artifact/app.js
 /artifact/calendario.html
+
+# editor de vídeos: mídia, fontes baixadas e intermediários nunca sobem
+editor/brutos/*
+!editor/brutos/.gitkeep
+editor/renders/*
+!editor/renders/.gitkeep
+editor/trabalho/*
+!editor/trabalho/.gitkeep
+editor/.fontes/
+*.mp4
+*.mov
+*.m4v
+*.avi
+*.mkv
+*.mxf
+*.braw
+*.r3d
+*.insv
+*.wav
+*.aif
+*.aiff
+*.m4a
+*.mp3
