@@ -151,7 +151,10 @@ embaixo. Quando o número é o assunto da tela, ele pode ir em amarelo.
 - Zoom lento na foto histórica: 1,00 para 1,05 ao longo do tempo que ela fica na
   tela. Foto parada em telão parece erro de projeção.
 - **O fim casa com o começo.** O último quadro e o primeiro são a mesma cartela
-  azul, pra rodar em loop sem solavanco.
+  azul, com a mesma assinatura, pra rodar em laço sem solavanco. As pontas não
+  têm transição: peça que começa em 0 entra já inteira, peça que vai até o fim
+  fica inteira até o fim. Com fade nas pontas o laço dá um piscada na volta, e
+  o `conferir.mjs` mede isso com SSIM.
 
 ### Imagem e cor
 
@@ -235,6 +238,9 @@ cada um o que roubar (o princípio) e o que deixar (o visual que é dele).
   cliente (painel 3L x 2A).
 - 19/out/2026 · institucional FENASAN · Helvetica Neue instalada, 5 pesos. O
   render de entrega passou a ser possível; antes disso o fiscal barrava tudo.
+- 19/out/2026 · institucional FENASAN · as pontas perderam a transição e a
+  cartela de abertura ganhou a assinatura, igual à de fechamento. Sem isso o
+  laço dava um piscada na volta (SSIM 0,920; agora 0,988).
 - 19/out/2026 · institucional FENASAN · lista sobre vídeo ganhou véu de 72%.
   A primeira prévia mostrou missão, visão e valores ilegíveis sobre a obra.
 - 19/out/2026 · institucional FENASAN · 13 clipes de operação selecionados pelo

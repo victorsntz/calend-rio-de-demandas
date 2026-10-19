@@ -163,18 +163,24 @@ for (const [i, p] of pecas.entries()) {
   const idx = proximo();
   const ehLegenda = p.entrada === "legenda";
   const subir = Math.round((ehLegenda ? estilo.legenda.entrada.subir : M.entrada.subir) * escala);
-  const fadeIn = ehLegenda ? estilo.legenda.entrada.fade : M.entrada.duracao;
-  const fadeOut = Math.min(ehLegenda ? 0.12 : 0.3, dur / 2);
 
+  // As pontas do vídeo não têm transição: o telão roda em laço, e o primeiro
+  // quadro precisa ser igual ao último. Peça que começa em 0 entra já inteira;
+  // peça que vai até o fim fica inteira até o fim.
+  const naAbertura = p.de <= 0.02;
+  const noFecho = p.ate >= duracaoTotal - 0.02;
+  const fadeIn = naAbertura ? 0 : (ehLegenda ? estilo.legenda.entrada.fade : M.entrada.duracao);
+  const fadeOut = noFecho ? 0 : Math.min(ehLegenda ? 0.12 : 0.3, dur / 2);
+
+  const entra = fadeIn ? `fade=t=in:st=0:d=${fadeIn.toFixed(2)}:alpha=1,` : "";
+  const sai = fadeOut ? `fade=t=out:st=${(dur - fadeOut).toFixed(2)}:d=${fadeOut.toFixed(2)}:alpha=1,` : "";
   filtro.push(
-    `[${idx}:v]scale=${L}:${A},setsar=1,format=rgba,` +
-    `fade=t=in:st=0:d=${fadeIn.toFixed(2)}:alpha=1,` +
-    `fade=t=out:st=${(dur - fadeOut).toFixed(2)}:d=${fadeOut.toFixed(2)}:alpha=1,` +
+    `[${idx}:v]scale=${L}:${A},setsar=1,format=rgba,${entra}${sai}` +
     `setpts=PTS-STARTPTS+${p.de.toFixed(3)}/TB[p${i}]`
   );
 
   // Sobe os últimos pixels enquanto aparece. Sem quicar: entra e assenta.
-  const y = p.entrada === "nenhuma"
+  const y = p.entrada === "nenhuma" || !fadeIn
     ? "0"
     : `'if(lt(t-${p.de.toFixed(3)},${fadeIn.toFixed(2)}),${subir}*(1-(t-${p.de.toFixed(3)})/${fadeIn.toFixed(2)}),0)'`;
 
