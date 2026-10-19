@@ -16,13 +16,18 @@ export function helvetica() {
   if (!existsSync(FONTES)) return {};
   const tem = readdirSync(FONTES).filter((f) => EXT.has(extname(f).toLowerCase()));
   const achados = {};
+  const limpo = (f) => f.toLowerCase().replace(/[\s_()-]/g, "");
+  const semExt = (f) => limpo(f.replace(/\.[^.]+$/, ""));
   for (const [peso, nomes] of Object.entries(F.arquivosEsperados)) {
-    const chuta = (f) => {
-      const limpo = f.toLowerCase().replace(/[\s_-]/g, "");
-      return nomes.some((n) => limpo.startsWith(n.toLowerCase().replace(/[\s_-]/g, "")));
-    };
-    // o nome mais curto ganha: "HelveticaNeue-Bold" antes de "HelveticaNeue-BoldItalic"
-    const certo = tem.filter(chuta).sort((a, b) => a.length - b.length)[0];
+    const alvos = nomes.map(limpo);
+    // Nome exato primeiro. Prefixo sozinho não serve: "HelveticaNeue" é prefixo
+    // de Thin, Black e Heavy, e aí o peso 400 vinha com a fonte errada.
+    const exato = tem.find((f) => alvos.includes(semExt(f)));
+    // No prefixo, o nome mais curto ganha: Bold antes de BoldItalic.
+    const porPrefixo = tem
+      .filter((f) => alvos.some((a) => semExt(f).startsWith(a)))
+      .sort((a, b) => a.length - b.length)[0];
+    const certo = exato || porPrefixo;
     if (certo) achados[peso] = join(FONTES, certo);
   }
   return achados;
