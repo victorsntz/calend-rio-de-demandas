@@ -32,7 +32,10 @@
           "sub": "Desde 1985",
           "de": 0,
           "ate": 4.5,
-          "comMarca": true
+          "comMarca": true,
+          "comSite": true,
+          "sublinhado": true,
+          "alturaMarca": 46
         },
         {
           "tipo": "marca",
@@ -187,7 +190,8 @@
       "transicao": {
         "de": 39.8,
         "ate": 43.6,
-        "texto": "Uma história que evolui.\nUm propósito que permanece."
+        "texto": "Um propósito\nque permanece.",
+        "alinhar": "esquerda"
       }
     },
     {
@@ -215,7 +219,8 @@
             "Bem-estar da população",
             "Responsabilidade social, ambiental e econômica"
           ],
-          "veu": 0.72
+          "veu": 0.72,
+          "y": 150
         }
       ],
       "legendas": [
@@ -377,27 +382,29 @@
       "clipes": [
         {
           "arquivo": "brutos/selecao/Video-08-parte-01.mov",
-          "de": 68.0,
-          "ate": 75.5,
-          "_oque": "mão apontando um trecho da rede"
-        },
-        {
-          "arquivo": "brutos/selecao/Video-08-parte-01.mov",
-          "de": 86.0,
-          "ate": 93.5,
-          "_oque": "dedo marcando um poço de visita na prancha"
-        },
-        {
-          "arquivo": "brutos/selecao/Video-08-parte-01.mov",
           "de": 100.0,
           "ate": 107.5,
-          "_oque": "traço sendo desenhado a caneta"
+          "_oque": "01 · traço sendo desenhado na prancha"
         },
         {
-          "arquivo": "brutos/selecao/Video-08-parte-01.mov",
-          "de": 145.0,
-          "ate": 152.5,
-          "_oque": "linha vermelha do diagnóstico sendo fechada"
+          "arquivo": "brutos/selecao/C0017.MP4",
+          "de": 0.0,
+          "ate": 7.5,
+          "girar": "esquerda",
+          "_oque": "02 · gestor e equipe na obra"
+        },
+        {
+          "arquivo": "brutos/selecao/IMG_3942.MOV",
+          "de": 2.0,
+          "ate": 9.5,
+          "hdr": true,
+          "_oque": "03 · hidrojato em operação"
+        },
+        {
+          "arquivo": "brutos/selecao/VIDEO-2025-10-22-17-40-13-4.MP4",
+          "de": 35.0,
+          "ate": 42.5,
+          "_oque": "04 · drone sobre o canteiro"
         }
       ]
     },
@@ -498,26 +505,6 @@
       ],
       "clipes": [
         {
-          "arquivo": "brutos/selecao/C0017.MP4",
-          "de": 0.0,
-          "ate": 7.5,
-          "girar": "esquerda",
-          "_oque": "equipe trabalhando junto da máquina"
-        },
-        {
-          "arquivo": "brutos/selecao/VIDEO-2025-10-22-17-40-13-4.MP4",
-          "de": 6.0,
-          "ate": 16.0,
-          "_oque": "drone sobre o canteiro, frota e equipe"
-        },
-        {
-          "arquivo": "brutos/selecao/C0016.MP4",
-          "de": 0.0,
-          "ate": 4.5,
-          "girar": "esquerda",
-          "_oque": "equipe em obra"
-        },
-        {
           "arquivo": "brutos/selecao/C0001.MP4",
           "de": 0.0,
           "ate": 6.0,
@@ -525,10 +512,31 @@
           "_oque": "operador na cabine"
         },
         {
+          "arquivo": "brutos/selecao/C0005.MP4",
+          "de": 0.3,
+          "ate": 5.3,
+          "girar": "esquerda",
+          "_oque": "operário na vala"
+        },
+        {
+          "arquivo": "brutos/selecao/C0070.MP4",
+          "de": 0.6,
+          "ate": 8.0,
+          "girar": "esquerda",
+          "_oque": "mangueira sendo manobrada"
+        },
+        {
           "arquivo": "brutos/selecao/VIDEO-2025-10-22-17-40-13-4.MP4",
-          "de": 26.0,
-          "ate": 33.0,
-          "_oque": "vista ampla do canteiro"
+          "de": 6.0,
+          "ate": 18.1,
+          "_oque": "drone sobre o canteiro"
+        },
+        {
+          "arquivo": "brutos/selecao/C0016.MP4",
+          "de": 0.0,
+          "ate": 4.5,
+          "girar": "esquerda",
+          "_oque": "equipe em obra de rua"
         }
       ]
     },
@@ -542,20 +550,26 @@
       "pecas": [
         {
           "tipo": "cartela",
-          "texto": "Engenharia, operação\ne gestão a serviço\ndas cidades e das pessoas.",
+          "veu": 0.74,
+          "sublinhado": true,
+          "tamanho": 56,
+          "texto": "**Engenharia, operação\ne gestão**\na serviço das cidades\ne das pessoas.",
           "de": 137.0,
-          "ate": 145.0,
-          "alinhar": "centro",
-          "tamanho": 58
+          "ate": 144.6
         },
         {
           "tipo": "cartela",
+          "veu": 0.82,
+          "comMarca": true,
+          "comSite": true,
+          "sublinhado": true,
+          "alturaMarca": 90,
           "rotulo": "FENASAN 2026",
-          "texto": "Água. Esgotos.\nDrenagem.",
-          "sub": "Desde 1985",
-          "de": 145.0,
-          "ate": 150.0,
-          "comMarca": true
+          "sub": "Água, esgotos e drenagem desde 1985.",
+          "texto": "",
+          "tamanho": 56,
+          "de": 144.6,
+          "ate": 150.0
         }
       ],
       "legendas": [
@@ -570,10 +584,22 @@
           "texto": "Nosso propósito orienta os próximos passos."
         },
         {
-          "de": 144.6,
-          "ate": 149.0,
+          "de": 144.8,
+          "ate": 149.2,
           "texto": "Engenharia, operação e gestão a serviço das cidades."
         }
+      ],
+      "clipes": [
+        {
+          "arquivo": "brutos/selecao/VIDEO-2025-10-22-17-40-16-3.MP4",
+          "de": 20.0,
+          "ate": 33.0,
+          "_oque": "drone acompanhando o caminhão na avenida"
+        }
+      ],
+      "cobre": [
+        137.0,
+        150.0
       ]
     }
   ],

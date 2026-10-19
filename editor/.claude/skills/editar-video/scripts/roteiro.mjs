@@ -122,7 +122,35 @@ const montagem = {
 };
 writeFileSync(join(casa, "montagem.json"), JSON.stringify(montagem, null, 2));
 
+// ---------- narração ----------
+// Bloco de texto pra mandar pro narrador, sem marcação nenhuma.
+const quebra = (t, n = 74) => {
+  const fora = []; let linha = "";
+  for (const p of t.split(/\s+/)) {
+    if ((linha + " " + p).trim().length > n) { fora.push(linha.trim()); linha = p; }
+    else linha += " " + p;
+  }
+  if (linha.trim()) fora.push(linha.trim());
+  return fora;
+};
+const emMinutos = (s) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}`;
+const palavras = R_.blocos.reduce((t, b) => t + (b.narracao || "").split(/\s+/).filter(Boolean).length, 0);
+
+writeFileSync(join(casa, "narracao.txt"), [
+  `NARRAÇÃO · ${R_.titulo}`,
+  `${R_.evento || ""} · ${emMinutos(R_.duracao)} · português do Brasil`, "",
+  "Ritmo calmo, de locução institucional. Os tempos abaixo são referência de",
+  "edição: grave no ritmo natural e a gente reajusta o corte em cima da sua voz.",
+  "", "=".repeat(74), "",
+  ...R_.blocos.flatMap((b) => [
+    `${b.n}. ${b.nome.toUpperCase()}   [${emMinutos(b.de)} a ${emMinutos(b.ate)}]`, "",
+    ...quebra(b.narracao || ""), "", "-".repeat(74), "",
+  ]),
+  `Total: ${palavras} palavras em ${R_.duracao}s, cerca de ${Math.round(palavras / (R_.duracao / 60))} palavras por minuto.`,
+].join("\n") + "\n");
+
 conta(`\n  legendas.json   ${legendas.length} blocos`);
+conta(`  narracao.txt    ${palavras} palavras pra mandar pro narrador`);
 conta(`  legendas.txt    pra ler e aprovar`);
 conta(`  pecas.json      ${pecas.length} peças`);
 conta(`  montagem.json   ${fita.length} trechos de base · ${totalFita.toFixed(1)}s de ${R_.duracao}s`);

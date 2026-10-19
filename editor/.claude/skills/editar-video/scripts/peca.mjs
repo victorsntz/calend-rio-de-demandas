@@ -173,18 +173,49 @@ function pecaPilula(o, F) {
 }
 
 function pecaCartela(o, F) {
-  // Quadro inteiro em azul profundo com um clarão no canto. Abertura e fechamento.
+  // Quadro inteiro em azul profundo com um clarão no canto, ou sobre vídeo com
+  // véu. Tudo encostado à esquerda, logotipo incluído: o logotipo solto no meio
+  // do quadro ficava distante do resto e desproporcional.
   const Cc = K.cartela;
   const t = o.tamanho || F.cartela.tamanhoMax;
-  const clarao = `radial-gradient(70% 90% at 88% 6%, ${rgba(Cc.clarao.cor, Cc.clarao.opacidade)} 0%, transparent 62%)`;
-  const rot = o.rotulo ? pecaRotulo({ texto: o.rotulo, _interno: true }, F) + `<div style="height:18px"></div>` : "";
-  const sub = o.sub ? `<div style="margin-top:20px;font-weight:${estilo.fonte.pesos.corpo};font-size:${Math.round(t * .42)}px;line-height:1.3;color:${cor("cinzaClaro")}">${enfatiza(o.sub)}</div>` : "";
   const centro = o.alinhar === "centro";
-  return `<div class="cheia" style="background:${Cc.fundo}"></div>
-    <div class="cheia" style="background:${clarao}"></div>
+
+  const fundo = o.veu
+    ? `<div class="cheia" style="background:${rgba(cor("azulNoite"), Number(o.veu))}"></div>`
+    : `<div class="cheia" style="background:${Cc.fundo}"></div>
+       <div class="cheia" style="background:radial-gradient(70% 90% at 88% 6%, ${rgba(Cc.clarao.cor, Cc.clarao.opacidade)} 0%, transparent 62%)"></div>`;
+
+  // O logotipo abre o bloco, no mesmo eixo do texto. Vira parte da composição.
+  const alturaMarca = o.alturaMarca || 52;
+  const marca = o.comMarca
+    ? (() => {
+        // Abaixo de 70 px o descritivo do logotipo vira borrão: ali entra a
+        // versão compacta. Grande, a versão cheia lê e vale mais.
+        const arq = resolve(R, alturaMarca >= 70 ? K.marca.assinaturaEscura : K.marca.arquivoEscuro);
+        if (!existsSync(arq)) throw new Error(`não achei o logotipo em ${arq}`);
+        return `<img src="file://${arq}" style="height:${alturaMarca}px;display:block;${centro ? "margin:0 auto;" : ""}">
+          <div style="height:${Math.round(t * .46)}px"></div>`;
+      })()
+    : "";
+
+  const rot = o.rotulo ? pecaRotulo({ texto: o.rotulo, _interno: true }, F) + `<div style="height:16px"></div>` : "";
+
+  // Sublinhado amarelo sob o título: é o que tira o bloco do branco chapado.
+  const sub_ = K.cartela.sublinhado;
+  const risco = o.sublinhado
+    ? `<div style="height:${sub_.espessura}px;width:${sub_.largura}px;background:${cor("amarelo")};
+         margin:${Math.round(t * .34)}px 0 0;${centro ? "margin-left:auto;margin-right:auto;" : ""}"></div>`
+    : "";
+
+  const sub = o.sub ? `<div style="margin-top:${risco ? Math.round(t * .34) : 20}px;font-weight:${estilo.fonte.pesos.corpo};font-size:${Math.round(t * .42)}px;line-height:1.3;color:${cor("cinzaClaro")}">${enfatiza(o.sub)}</div>` : "";
+  const site = o.comSite
+    ? `<div class="rotulo" style="margin-top:${Math.round(t * .5)}px;font-size:${K.rotulo.tamanho}px;color:${cor("cinzaClaro")}">${escapa(K.marca.site)}</div>`
+    : "";
+
+  return `${fundo}
     <div class="bloco" style="text-align:${centro ? "center" : "left"}">
-      ${rot}<div style="font-weight:${estilo.fonte.pesos.titulo};font-size:${t}px;line-height:1.08;letter-spacing:-.02em;color:${cor("branco")}">${enfatiza(o.texto)}</div>${sub}
-    </div>${o.comMarca ? pecaMarca({ _interno: true, canto: "rodape", alinhar: o.alinhar }, F) : ""}`;
+      ${marca}${rot}${o.texto ? `<div style="font-weight:${estilo.fonte.pesos.titulo};font-size:${t}px;line-height:1.08;letter-spacing:-.02em;color:${cor("branco")}">${enfatiza(o.texto)}</div>` : ""}${risco}${sub}${site}
+    </div>`;
 }
 
 function pecaLista(o, F) {

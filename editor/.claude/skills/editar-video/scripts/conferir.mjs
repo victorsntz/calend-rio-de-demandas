@@ -63,23 +63,35 @@ if (arquivo && existsSync(arquivo)) {
 
   bom("duração", `${Math.floor(dur / 60)}:${String(Math.round(dur % 60)).padStart(2, "0")}`);
 
-  // O ESTILO manda o fim casar com o começo, pra rodar em loop sem solavanco.
+  // O ESTILO pede volta suave, não quadro idêntico: o fechamento pode ter arte
+  // própria. O que não pode é a emenda piscar, então o teste é de cor média.
   if (v && dur > 1) {
     try {
       const casa = projeto ? oficina(projeto) : "/tmp";
-      const a0 = join(casa, "_loop-inicio.png"), a1 = join(casa, "_loop-fim.png");
-      await roda("ffmpeg", ["-y", "-v", "error", "-i", arquivo, "-frames:v", "1", a0]);
-      await roda("ffmpeg", ["-y", "-v", "error", "-sseof", "-0.2", "-i", arquivo, "-frames:v", "1", "-update", "1", a1]);
-      const { erroSaida } = await roda("ffmpeg", ["-hide_banner", "-v", "info", "-i", a0, "-i", a1,
-        "-filter_complex", "[0][1]ssim", "-f", "null", "-"]);
-      rmSync(a0, { force: true }); rmSync(a1, { force: true });
-      const m = erroSaida.match(/All:\s*([\d.]+)/);
-      if (m) {
-        const ssim = Number(m[1]);
-        ssim > 0.97 ? bom("loop", `primeiro e último quadro batem (SSIM ${ssim.toFixed(3)})`)
-          : erro("loop", `primeiro e último quadro diferentes (SSIM ${ssim.toFixed(3)}). No telão a volta vai dar solavanco.`);
+      const medias = [];
+      for (const [nome, args] of [["inicio", []], ["fim", ["-sseof", "-0.25"]]]) {
+        const png = join(casa, `_loop-${nome}.png`);
+        await roda("ffmpeg", ["-y", "-v", "error", ...args, "-i", arquivo, "-frames:v", "1", "-update", "1", png]);
+        const cru = join(casa, "_loop.raw");
+        await roda("ffmpeg", ["-y", "-v", "error", "-i", png, "-vf", "scale=32:21", "-pix_fmt", "rgb24", "-f", "rawvideo", cru]);
+        const b = readFileSync(cru);
+        rmSync(cru, { force: true }); rmSync(png, { force: true });
+        let r = 0, g = 0, bl = 0, n = 0;
+        for (let i = 0; i + 2 < b.length; i += 3) { r += b[i]; g += b[i + 1]; bl += b[i + 2]; n++; }
+        medias.push([r / n, g / n, bl / n]);
       }
-    } catch { /* o teste de loop é um luxo, não um bloqueio */ }
+      const [A_, B_] = medias;
+      const luma = (c) => 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+      const salto = Math.abs(luma(A_) - luma(B_));
+      const azulNosDois = A_[2] > A_[0] + 8 && B_[2] > B_[0] + 8;
+      if (salto > 28) {
+        erro("loop", `a volta salta ${salto.toFixed(0)} de brilho entre o último quadro e o primeiro. No telão isso pisca.`);
+      } else if (!azulNosDois) {
+        cuidado("loop", "uma das pontas não é azul. A emenda vai aparecer.");
+      } else {
+        bom("loop", `volta suave (salto de ${salto.toFixed(0)} de brilho, as duas pontas no azul)`);
+      }
+    } catch { /* o teste de laço é um luxo, não um bloqueio */ }
   }
 }
 

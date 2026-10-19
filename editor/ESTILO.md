@@ -124,8 +124,17 @@ dado principal. Serve pra cliente (`Sabesp`), praça (`RJ`, `MG`) e natureza do
 contrato (`Contrato por performance`).
 
 **Cartela** — quadro inteiro em azul profundo com um clarão radial suave no
-canto superior direito. Título centralizado ou à esquerda. É abertura,
-transição e fechamento.
+canto superior direito, ou sobre vídeo com véu. É abertura, transição e
+fechamento.
+
+**Tudo encostado à esquerda, logotipo incluído.** O logotipo abre o bloco de
+texto, no mesmo eixo do resto: solto no meio do quadro ele fica distante da
+composição e desproporcional. Abaixo de 70 px entra a versão compacta, porque
+o descritivo não lê; acima dela, a versão cheia.
+
+**Sublinhado amarelo** sob o título, 6 px por 96 px. É o que tira o bloco do
+branco chapado. Quando a frase tem um trecho que precisa saltar, esse trecho vai
+em amarelo em vez do sublinhado, nunca os dois no mesmo texto.
 
 **Lista** — cada item com um **check amarelo** antes, empilhados com respiro de
 22 px. O marcador é check e não fio: fio amarelo fica igualzinho à barra da
@@ -164,11 +173,12 @@ embaixo. Quando o número é o assunto da tela, ele pode ir em amarelo.
 - Transição entre blocos: corte seco, ou cartela azul entrando de baixo em 0,4 s.
 - Zoom lento na foto histórica: 1,00 para 1,05 ao longo do tempo que ela fica na
   tela. Foto parada em telão parece erro de projeção.
-- **O fim casa com o começo.** O último quadro e o primeiro são a mesma cartela
-  azul, com a mesma assinatura, pra rodar em laço sem solavanco. As pontas não
-  têm transição: peça que começa em 0 entra já inteira, peça que vai até o fim
-  fica inteira até o fim. Com fade nas pontas o laço dá um piscada na volta, e
-  o `conferir.mjs` mede isso com SSIM.
+- **A volta do laço é suave, não idêntica.** Abertura e fechamento são peças
+  diferentes, cada uma com arte própria, mas as duas no azul e no mesmo nível de
+  brilho, pra emenda não piscar. Repetir a mesma cartela nas duas pontas parece
+  erro de montagem. As pontas não têm transição: peça que começa em 0 entra já
+  inteira, peça que vai até o fim fica inteira até o fim. O `conferir.mjs` mede
+  o salto de brilho entre o último quadro e o primeiro.
 
 ### Imagem e cor
 
@@ -254,6 +264,11 @@ cada um o que roubar (o princípio) e o que deixar (o visual que é dele).
   cliente (painel 3L x 2A).
 - 19/out/2026 · institucional FENASAN · Helvetica Neue instalada, 5 pesos. O
   render de entrega passou a ser possível; antes disso o fiscal barrava tudo.
+- 19/out/2026 · institucional FENASAN · segunda decupagem. Tudo à esquerda,
+  logotipo dentro do bloco de texto, sublinhado amarelo na cartela, legenda de
+  36 pra 29 px e fechamento com arte própria em vez de repetir a abertura.
+  Cada ponto de um bloco longo passou a ter seu próprio clipe: quatro telas
+  seguidas no mesmo plano parecem quadro parado.
 - 19/out/2026 · institucional FENASAN · primeira decupagem do cliente. Entraram:
   placa atrás da legenda, check no lugar do fio na lista, peça `ponto` pra bloco
   longo, sombra no título, assinatura acima da faixa da legenda e correção do
