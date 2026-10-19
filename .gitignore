@@ -31,6 +31,10 @@ next-env.d.ts
 # editor de vídeos: mídia, fontes baixadas e intermediários nunca sobem
 editor/brutos/*
 !editor/brutos/.gitkeep
+# a ficha do material é documento, não mídia: ela sobe junto com o roteiro.
+!editor/brutos/*/
+editor/brutos/*/*
+!editor/brutos/*/*.json
 editor/renders/*
 !editor/renders/.gitkeep
 editor/trabalho/*

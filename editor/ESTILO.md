@@ -63,13 +63,13 @@ detalhe. Nunca encoste texto de leitura nele: o contraste não fecha.
 
 ### Fontes
 
-- **Helvetica Neue** é a fonte da marca. Títulos em Bold (75), texto e legenda em
-  Medium (65), rótulo em Bold caixa alta com espaçamento de 0,12 em.
+- **Helvetica Neue** é a fonte da marca. Títulos em Bold, texto e legenda em
+  Medium, rótulo em Bold caixa alta com espaçamento de 0,12 em.
 - A fonte é licenciada da Monotype e **não** vem no repositório. Ela mora em
   `.fontes/`, que o git ignora. Instalação em `.claude/skills/.../references/fluxo.md`.
 - **Enquanto a Helvetica Neue não estiver na máquina**, a esteira usa a Inter, que
-  é grotesca livre com largura e peso próximos. O `conferir.mjs` avisa quando o
-  render saiu com a substituta, pra nenhum arquivo ir pra feira trocado.
+  é grotesca livre com largura e peso próximos. O `conferir.mjs` **reprova** o
+  render feito com a substituta, pra nenhum arquivo ir pra feira trocado.
 - Nunca outra fonte. Sem serifa, sem condensada de impacto, sem manuscrita.
 
 ### Formato
@@ -152,6 +152,12 @@ embaixo. Quando o número é o assunto da tela, ele pode ir em amarelo.
 
 - Foto de acervo: manter o grão e a cor da época, sem tentar "consertar" pra
   parecer nova. 1988 tem que parecer 1988.
+- **Material de câmera chega torto.** Arquivo de Sony pode vir girado 90 graus
+  sem etiqueta de rotação, e o ffmpeg não corrige sozinho; iPhone grava em HDR.
+  O `montar.mjs` resolve os dois no mesmo passe, com `"girar"` e `"hdr"` no
+  clipe. Conferir quadro a quadro antes de montar, nunca confiar na etiqueta.
+- **Vídeo em pé não entra.** O telão é 3:2 deitado; material vertical perde
+  quase tudo no corte e fica de fora da seleção.
 - Vídeo atual: cor neutra, azul levemente puxado, sem estourar o branco do
   caminhão.
 - Sobre foto ou vídeo com texto por cima, escurecer a base em 55% num degradê
@@ -222,3 +228,9 @@ cada um o que roubar (o princípio) e o que deixar (o visual que é dele).
   oficial e amostradas no vídeo da linha do tempo já aprovado; amarelo medido em
   `#FFBA00` sobre 56 mil pixels de 12 quadros. Formato 1008x672 informado pelo
   cliente (painel 3L x 2A).
+- 19/out/2026 · institucional FENASAN · Helvetica Neue instalada, 5 pesos. O
+  render de entrega passou a ser possível; antes disso o fiscal barrava tudo.
+- 19/out/2026 · institucional FENASAN · 13 clipes de operação selecionados pelo
+  cliente. Cinco vieram girados 90 graus sem etiqueta e três em HDR, então a
+  regra de "conferir quadro a quadro antes de montar" entrou na seção 3. Um
+  clipe vertical ficou de fora.

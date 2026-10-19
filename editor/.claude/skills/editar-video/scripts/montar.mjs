@@ -5,7 +5,8 @@
 // arquivo bruto; os das peças são da linha do tempo já montada):
 // {
 //   "projeto": "institucional-fenasan", "formato": "telao",
-//   "clipes": [{ "arquivo": "brutos/.../a-sdr.mov", "de": 3.2, "ate": 8.9, "zoom": true }],
+//   "clipes": [{ "arquivo": "brutos/selecao/C0001.MP4", "de": 3.2, "ate": 8.9,
+//                "girar": "esquerda", "hdr": true, "zoom": true }],
 //   "legendas": true,
 //   "pecas":   [{ "png": "trabalho/.../gancho.png", "de": 0, "ate": 2.6, "entrada": "subir" }],
 //   "trilha":  { "arquivo": "trilha.mp3", "db": -20 },
@@ -45,6 +46,14 @@ if (!edl.clipes?.length) { console.error("o montagem.json não tem clipes."); pr
 
 const clipes = [];
 for (const c of edl.clipes) {
+  // Trecho que fica embaixo de cartela ou de foto em sangria não precisa de
+  // imagem: entra um campo de cor e o bruto bom fica pra onde aparece.
+  if (c.cor || !c.arquivo) {
+    const dur = segundos(c.dur ?? ((c.ate ?? 0) - (c.de ?? 0)));
+    if (!(dur > 0)) { console.error('clipe de preenchimento precisa de "dur" em segundos'); process.exit(1); }
+    clipes.push({ ...c, preenche: c.cor || estilo.cores.azulProfundo.hex, dur, temAudio: false });
+    continue;
+  }
   const arquivo = perto(c.arquivo);
   if (!existsSync(arquivo)) { console.error(`não achei o clipe: ${arquivo}`); process.exit(1); }
   const d = await ffprobe(arquivo);
@@ -99,14 +108,33 @@ const proximo = () => n++;
 // 1. clipes: corta, enquadra no formato e normaliza o relógio
 const rotulosV = [], rotulosA = [];
 for (const [i, c] of clipes.entries()) {
+  if (c.preenche) {
+    entradas.push("-f", "lavfi", "-t", String(c.dur), "-i", `color=c=${c.preenche}:s=${L}x${A}:r=${FPS}`);
+    const idxC = proximo();
+    filtro.push(`[${idxC}:v]setsar=1,format=yuv420p,setpts=PTS-STARTPTS[v${i}]`);
+    rotulosV.push(`[v${i}]`);
+    entradas.push("-f", "lavfi", "-t", String(c.dur), "-i", "anullsrc=r=48000:cl=stereo");
+    filtro.push(`[${proximo()}:a]asetpts=PTS-STARTPTS[a${i}]`);
+    rotulosA.push(`[a${i}]`);
+    continue;
+  }
   entradas.push("-ss", String(c.de), "-t", String(c.dur), "-i", c.arquivo);
   const idx = proximo();
-  const enquadra = `scale=${L}:${A}:force_original_aspect_ratio=increase,crop=${L}:${A}`;
-  // Zoom de ênfase: 1,00 → 1,06 em meio segundo. O ESTILO deixa um a cada 8 s.
-  const z = c.zoom
-    ? `,zoompan=z='min(${estilo.movimento.zoomEnfase.para},1+${(estilo.movimento.zoomEnfase.para - 1).toFixed(3)}*on/${Math.round(estilo.movimento.zoomEnfase.duracao * FPS)})':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=${L}x${A}:fps=${FPS}`
+  // Girar e converter HDR entram aqui, no mesmo passe do enquadramento: material
+  // de câmera chega deitado e em HDR, e um transcode a mais só perde geração.
+  const gira = c.girar === "esquerda" ? "transpose=2," : c.girar === "direita" ? "transpose=1," : "";
+  const tonemap = c.hdr
+    ? "zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,"
     : "";
-  filtro.push(`[${idx}:v]fps=${FPS},${enquadra}${z},setsar=1,format=yuv420p,setpts=PTS-STARTPTS[v${i}]`);
+  const enquadra = `scale=${L}:${A}:force_original_aspect_ratio=increase,crop=${L}:${A}`;
+  // Zoom lento na imagem: 1,00 até 1,05 ao longo do tempo que ela fica na tela.
+  // Imagem parada em telão parece erro de projeção.
+  const Z = estilo.movimento.zoomFoto;
+  const quadros = Math.max(1, Math.round(c.dur * FPS));
+  const z = c.zoom
+    ? `,zoompan=z='min(${Z.para},${Z.de}+${(Z.para - Z.de).toFixed(4)}*on/${quadros})':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=${L}x${A}:fps=${FPS}`
+    : "";
+  filtro.push(`[${idx}:v]fps=${FPS},${gira}${tonemap}${enquadra}${z},setsar=1,format=yuv420p,setpts=PTS-STARTPTS[v${i}]`);
   rotulosV.push(`[v${i}]`);
   if (c.temAudio && !c.mudo) {
     filtro.push(`[${idx}:a]aresample=48000,asetpts=PTS-STARTPTS[a${i}]`);

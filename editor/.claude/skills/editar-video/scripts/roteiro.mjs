@@ -83,12 +83,34 @@ writeFileSync(join(casa, "pecas.json"), JSON.stringify({ projeto, formato: nomeF
 
 // ---------- montagem ----------
 
-// Sem vídeo de operação ainda: o fundo dos blocos sem foto é a cartela azul.
-const semFoto = R_.blocos.filter((b) => !b.marcos && !(b.pecas || []).some((p) => p.tipo === "cartela"));
+// A base do vídeo é uma fita contínua. Onde o bloco declara clipes, entram eles;
+// o resto (trecho sob cartela ou sob foto de acervo) vira campo de cor.
+const janelas = R_.blocos
+  .filter((b) => b.clipes?.length && b.cobre)
+  .map((b) => ({ de: b.cobre[0], ate: b.cobre[1], clipes: b.clipes, bloco: b.n }))
+  .sort((a, b) => a.de - b.de);
+
+const fita = [];
+let relogio = 0;
+for (const j of janelas) {
+  if (j.de > relogio + 0.01) fita.push({ cor: null, dur: Number((j.de - relogio).toFixed(3)), _oque: `preenchimento até ${j.de}s` });
+  const soma = j.clipes.reduce((t, c) => t + (c.ate - c.de), 0);
+  const janela = j.ate - j.de;
+  if (Math.abs(soma - janela) > 0.05) {
+    aviso(`bloco ${j.bloco}: os clipes somam ${soma.toFixed(2)}s mas a janela é ${janela.toFixed(2)}s`);
+  }
+  fita.push(...j.clipes);
+  relogio = j.ate;
+}
+if (relogio < R_.duracao - 0.01) {
+  fita.push({ cor: null, dur: Number((R_.duracao - relogio).toFixed(3)), _oque: "preenchimento até o fim" });
+}
+const totalFita = fita.reduce((t, c) => t + (c.dur ?? c.ate - c.de), 0);
+
 const montagem = {
   projeto, formato: nomeFormato,
-  _leia: "Os clipes entram quando o vídeo de operação chegar do Drive. Por ora o fundo dos blocos é a cartela azul das peças.",
-  clipes: [],
+  _leia: "A base é contínua: clipe onde aparece imagem, campo de cor onde cartela ou foto de acervo cobre tudo.",
+  clipes: fita,
   legendas: true,
   pecas: pecas.map(({ saida, de, ate, entrada, destaque }) => ({
     png: saida.replace(R + "/", ""), de, ate,
@@ -103,7 +125,7 @@ writeFileSync(join(casa, "montagem.json"), JSON.stringify(montagem, null, 2));
 conta(`\n  legendas.json   ${legendas.length} blocos`);
 conta(`  legendas.txt    pra ler e aprovar`);
 conta(`  pecas.json      ${pecas.length} peças`);
-conta(`  montagem.json   esqueleto da edição`);
+conta(`  montagem.json   ${fita.length} trechos de base · ${totalFita.toFixed(1)}s de ${R_.duracao}s`);
 
 // ---------- render ----------
 
