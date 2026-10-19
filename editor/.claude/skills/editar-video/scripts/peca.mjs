@@ -180,12 +180,18 @@ function pecaLista(o, F) {
   const Li = K.lista;
   const t = o.tamanho || Li.tamanho;
   const itens = lista(o.itens || o.texto);
+  // Lista por cima de vídeo precisa de véu: branco sobre obra clara não lê de
+  // dez metros. O véu é azul noite no quadro todo, com a marca ainda aparecendo
+  // por baixo. Vem na mesma peça pra não custar uma sobreposição a mais.
+  const veu = o.veu
+    ? `<div class="cheia" style="background:${rgba(cor("azulNoite"), Number(o.veu))}"></div>`
+    : "";
   const tit = o.titulo ? pecaRotulo({ texto: o.titulo, _interno: true, tamanho: Math.round(t * .52), cor: cor("amarelo") }, F) + `<div style="height:${Li.respiro}px"></div>` : "";
   const linhas = itens.map((it, i) => `<div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:${Li.respiro}px">
       <div style="width:${Li.fio.largura}px;height:${Math.round(t * .9)}px;background:${Li.fio.cor};flex:0 0 auto;margin-top:${Math.round(t * .14)}px;border-radius:1px"></div>
       <div style="font-weight:${estilo.fonte.pesos.corpo};font-size:${t}px;line-height:1.24;color:${cor("branco")}">${enfatiza(it)}</div>
     </div>`).join("");
-  return envolve(`${tit}${linhas}`, o);
+  return veu + envolve(`${tit}${linhas}`, o);
 }
 
 function pecaMarca(o, F) {
@@ -249,7 +255,7 @@ const PECAS = {
 
 /** Peças que pintam o quadro todo de propósito. A imagem só quando é em sangria. */
 const SANGRIA = new Set(["cartela", "degrade", "titulo"]);
-const ehSangria = (tipo, o = {}) => SANGRIA.has(tipo) || (tipo === "imagem" && !!o.cheia);
+const ehSangria = (tipo, o = {}) => SANGRIA.has(tipo) || (tipo === "imagem" && !!o.cheia) || (tipo === "lista" && !!o.veu);
 /** Foto em sangria pode ter qualquer cor no canto, inclusive céu branco: não dá
  *  pra julgar pelo pixel. Ela já é conferida pelo existsSync do caminho. */
 const semVeredito = (tipo, o = {}) => tipo === "imagem" && !!o.cheia;

@@ -75,7 +75,21 @@ quadro, então o montador só sobrepõe em 0,0 e cuida do tempo.
 
 `PECA_DEBUG=1` guarda o HTML ao lado do PNG, pra ver o que o Chromium recebeu.
 
-## 6. Montar
+## 6. Preparar o material
+
+```bash
+node $S/preparar.mjs --projeto $P
+```
+
+Normaliza cada trecho de clipe uma vez só: gira o que veio deitado, converte
+HDR pra SDR, acerta o fps e já entrega no tamanho do quadro. Depois disso a
+montagem é só cortar e sobrepor, e o render cai de meia hora pra um minuto.
+O `montagem.json` passa a apontar pros preparados; `--forcar` refaz tudo.
+
+Mudou o roteiro? Rode o `roteiro.mjs` de novo (ele reescreve a montagem com os
+brutos) e o `preparar.mjs` em seguida, que reaproveita o que já existe.
+
+## 7. Montar
 
 ```bash
 node $S/montar.mjs trabalho/$P/montagem.json --previa    # metade da resolução
@@ -85,7 +99,7 @@ node $S/montar.mjs trabalho/$P/montagem.json             # o final
 A prévia existe pra aprovar sem gastar o render bom, e nunca escreve por cima
 dele. O comando ffmpeg inteiro fica em `trabalho/$P/ffmpeg.txt`.
 
-## 7. Conferir
+## 8. Conferir
 
 ```bash
 node $S/conferir.mjs renders/$P.mp4 --projeto $P
@@ -104,7 +118,7 @@ Sai com código 1 se achou coisa contra o `ESTILO.md`:
 | ritmo | legenda com menos de 1,2 s na tela |
 | peças | zona segura do painel |
 
-## 8. Testar a esteira
+## 9. Testar a esteira
 
 ```bash
 node $S/testar.mjs            # roda tudo num bruto de mentira e limpa depois

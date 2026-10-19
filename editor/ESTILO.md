@@ -129,6 +129,11 @@ transição e fechamento.
 antes, empilhados com respiro de 22 px. Entram escalonados, 0,12 s entre um e
 outro, nunca todos de uma vez.
 
+Sobre vídeo, a lista vem num **véu de azul noite a 72%** cobrindo o quadro. A
+obra continua aparecendo por baixo, e o texto fecha contraste. Sem o véu, branco
+sobre obra clara não lê de dez metros: o degradê de base não resolve, porque a
+lista mora no meio do quadro.
+
 **Marca** — o logotipo no canto superior direito, altura de 44 px, sempre a
 versão de fundo escuro quando estiver sobre azul ou sobre vídeo. No fechamento,
 Norte Sul e Metropolitana lado a lado, centralizados, com o site em rótulo.
@@ -230,6 +235,8 @@ cada um o que roubar (o princípio) e o que deixar (o visual que é dele).
   cliente (painel 3L x 2A).
 - 19/out/2026 · institucional FENASAN · Helvetica Neue instalada, 5 pesos. O
   render de entrega passou a ser possível; antes disso o fiscal barrava tudo.
+- 19/out/2026 · institucional FENASAN · lista sobre vídeo ganhou véu de 72%.
+  A primeira prévia mostrou missão, visão e valores ilegíveis sobre a obra.
 - 19/out/2026 · institucional FENASAN · 13 clipes de operação selecionados pelo
   cliente. Cinco vieram girados 90 graus sem etiqueta e três em HDR, então a
   regra de "conferir quadro a quadro antes de montar" entrou na seção 3. Um

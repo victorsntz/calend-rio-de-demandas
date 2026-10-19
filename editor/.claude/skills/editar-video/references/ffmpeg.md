@@ -50,6 +50,17 @@ que não diz qual é o problema.
 **A entrada com `-loop 1` nunca acaba.** O `-t` na saída é o que fecha o vídeo.
 Sem ele o render roda até o disco acabar.
 
+**E cada `-loop 1` precisa do SEU `-t`.** Sem isso, o PNG de uma peça que fica
+3 s na tela gera quadro pra duração inteira do vídeo, e cada um desses quadros
+ainda passa por `scale` e `fade`. Com 83 peças num vídeo de 2min30, isso é a
+diferença entre 1 minuto e meia hora de render. O gargalo não aparece em lugar
+nenhum: o ffmpeg só fica lento.
+
+**Material de câmera é caro de decodificar.** Tonemap de HDR em 4K somado a
+dezenas de sobreposições derruba qualquer render. Normalize os trechos uma vez
+com o `preparar.mjs` (gira, converte, enquadra) e monte em cima dos preparados:
+a montagem passa a ser só cortar e sobrepor.
+
 **`fade` no overlay vem antes do `setpts`.** O `st=` do fade conta a partir do
 começo do próprio stream (zero). O `setpts=PTS-STARTPTS+X/TB` é que empurra a
 peça pro lugar dela na linha do tempo. Inverter a ordem põe o fade na hora

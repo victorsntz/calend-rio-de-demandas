@@ -70,7 +70,12 @@ node $S/peca.mjs cartela --rotulo "FENASAN 2026" --texto "Água. Esgotos.\nDrena
 Cada item com um fio amarelo antes. O título vai em rótulo amarelo em cima.
 ```bash
 node $S/peca.mjs lista --titulo "NOSSA MISSÃO" --itens "Soluções para as necessidades reais|Bem-estar da população"
+node $S/peca.mjs lista --titulo "NOSSOS VALORES" --itens "..." --veu 0.72
 ```
+`--veu 0.72` põe um véu de azul noite no quadro todo, atrás da lista. **Use
+sempre que a lista for por cima de vídeo:** branco sobre obra clara não lê de
+dez metros. A obra continua aparecendo por baixo, e o véu vem na mesma peça pra
+não custar uma sobreposição a mais.
 
 ### `marca` — o logotipo
 No canto superior direito usa a versão compacta, sem o descritivo, que é a que

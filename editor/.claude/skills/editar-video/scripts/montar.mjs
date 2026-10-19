@@ -155,9 +155,12 @@ let v = "[vcat]";
 const M = estilo.movimento;
 const escala = previa ? 0.5 : 1;
 for (const [i, p] of pecas.entries()) {
-  entradas.push("-loop", "1", "-i", p.png);
-  const idx = proximo();
   const dur = Math.max(p.ate - p.de, 0.1);
+  // O -t é o que faz a diferença entre minutos e meia hora: sem ele, o PNG de
+  // uma peça que fica 3 s na tela gera quadro pra toda a duração do vídeo, e
+  // cada um desses quadros ainda passa por scale e fade.
+  entradas.push("-loop", "1", "-t", dur.toFixed(3), "-i", p.png);
+  const idx = proximo();
   const ehLegenda = p.entrada === "legenda";
   const subir = Math.round((ehLegenda ? estilo.legenda.entrada.subir : M.entrada.subir) * escala);
   const fadeIn = ehLegenda ? estilo.legenda.entrada.fade : M.entrada.duracao;

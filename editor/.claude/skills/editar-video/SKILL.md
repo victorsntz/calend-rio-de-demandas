@@ -54,6 +54,7 @@ Tudo em `.claude/skills/editar-video/scripts/`, rodando da raiz do editor.
 | `transcrever.mjs` | Fala vira texto com tempo por palavra (ElevenLabs Scribe). |
 | `legendas.mjs` | Blocos de legenda viram PNG e `.srt`, em duas passadas. |
 | `peca.mjs` | Renderiza uma peça do kit num PNG transparente do tamanho do quadro. |
+| `preparar.mjs` | Normaliza os clipes uma vez (gira, HDR→SDR, fps, enquadra). |
 | `montar.mjs` | Pega o `montagem.json` e cospe o vídeo. `--previa` pra aprovar. |
 | `conferir.mjs` | O fiscal do ESTILO. Roda antes de mostrar e antes de entregar. |
 | `testar.mjs` | A esteira inteira num bruto de mentira. |
@@ -73,6 +74,7 @@ node $S/fontes.mjs                              # só na primeira vez
 node $S/roteiro.mjs --projeto $P                # ← mostrar e esperar o aval
 node $S/roteiro.mjs --projeto $P --render
 node $S/legendas.mjs --projeto $P --render      # ← mostrar e esperar o aval
+node $S/preparar.mjs --projeto $P               # normaliza o material uma vez
 node $S/montar.mjs trabalho/$P/montagem.json --previa
 node $S/montar.mjs trabalho/$P/montagem.json
 node $S/conferir.mjs renders/$P.mp4 --projeto $P
