@@ -73,7 +73,8 @@ for (const b of R_.blocos) {
   if (b.transicao) {
     // Os tempos da transição saem do roteiro: é ela que fala com quem assiste
     // no trecho sem narração, então precisa cobrir o vão inteiro.
-    pecas.push({ tipo: "cartela", texto: b.transicao.texto, alinhar: "centro",
+    pecas.push({ tipo: "cartela", texto: b.transicao.texto,
+                 alinhar: b.transicao.alinhar || "esquerda",
                  de: b.transicao.de, ate: b.transicao.ate,
                  saida: join(destino, `b${b.n}-transicao.png`) });
   }
@@ -117,6 +118,9 @@ const montagem = {
     ...(entrada ? { entrada } : {}), ...(destaque ? { destaque } : {}),
   })),
   trilha: null,
+  // A locução gravada, frase a frase: "de/ate" recorta o arquivo e "em" diz a
+  // hora de entrar no vídeo. Sem ela a montagem segue só com o som dos clipes.
+  narracao: R_.narracao || null,
   loopConferido: false,
   saida: `renders/${projeto}.mp4`,
 };

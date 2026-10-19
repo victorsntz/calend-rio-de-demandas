@@ -129,12 +129,27 @@ fechamento.
 
 **Tudo encostado à esquerda, logotipo incluído.** O logotipo abre o bloco de
 texto, no mesmo eixo do resto: solto no meio do quadro ele fica distante da
-composição e desproporcional. Abaixo de 70 px entra a versão compacta, porque
+composição e desproporcional. Abaixo de 54 px entra a versão compacta, porque
 o descritivo não lê; acima dela, a versão cheia.
+
+**Arquivo de logotipo não tem transparência sobrando.** Os quatro PNGs de
+`marca/` vêm aparados na tinta, então a altura que a peça pede é a altura que
+o desenho tem. Quando a assinatura cheia ainda tinha 18,75% de vazio de cada
+lado e 29,78% em cima e embaixo, pedir 90 px desenhava 37 px empurrados 57 px
+pra dentro: no quadro ela não encostava no eixo do texto e lia como se
+estivesse centralizada de propósito. Reexportou o logotipo? Aparar antes de
+guardar, e conferir que o desenho encosta nas quatro bordas do arquivo.
+
+**Cartela com assinatura usa a zona segura inteira:** logotipo no alto, texto
+deitado no pé, e o vão no meio é parte da composição. Empilhado num bloco só,
+tudo subia pro terço de cima e o terço de baixo ficava morto. O texto para
+**acima da faixa da legenda**, nunca no pé da zona segura: ali a placa da
+legenda cobre a última linha.
 
 **Sublinhado amarelo** sob o título, 6 px por 96 px. É o que tira o bloco do
 branco chapado. Quando a frase tem um trecho que precisa saltar, esse trecho vai
-em amarelo em vez do sublinhado, nunca os dois no mesmo texto.
+em amarelo em vez do sublinhado, nunca os dois no mesmo texto. E nunca duas
+cartelas seguidas com o mesmo risco: na segunda ele já não acentua nada.
 
 **Lista** — cada item com um **check amarelo** antes, empilhados com respiro de
 22 px. O marcador é check e não fio: fio amarelo fica igualzinho à barra da
@@ -208,7 +223,15 @@ embaixo. Quando o número é o assunto da tela, ele pode ir em amarelo.
 ### Som
 
 - Narração em português do Brasil, locução profissional, ritmo calmo.
+- **A locução gravada entra frase a frase, não de enfiada.** O locutor lê no
+  ritmo dele e quase sempre acaba antes do corte: a gravação do institucional
+  deu 1:44 num vídeo de 2:30. Cada frase entra na hora da legenda que a carrega,
+  e o vão entre elas vira respiro. Esticar a voz pra preencher deixa ela bêbada,
+  e empurrar tudo pro começo deixa metade do filme mudo.
+- Com locução gravada, **o som dos clipes vira ambiente** e desce 18 dB. Ele
+  deixou de ser a voz no momento em que existe uma voz.
 - Trilha instrumental com licença livre, cerca de 20 dB abaixo da voz.
+- Teto no fim da cadeia. Voz levantada pra -16 LUFS estoura o pico sozinha.
 - Sem efeito sonoro de transição. O vídeo tem que fazer sentido no mudo, então o
   som é conforto, não informação.
 
@@ -222,6 +245,12 @@ embaixo. Quando o número é o assunto da tela, ele pode ir em amarelo.
   hidrojato, desobstrução, televisionamento, perdas, concessionária.
 
 ## 5. Nunca fazer
+
+- **Duas peças dizendo a mesma frase ao mesmo tempo.** A transição de um bloco
+  e a cartela do bloco seguinte chegaram a carregar "Um propósito que permanece"
+  com 3 segundos de sobreposição e alinhamentos diferentes: na tela a frase
+  aparecia centralizada, era atropelada pela cópia à esquerda e voltava ao
+  centro. Uma frase, uma peça, um alinhamento.
 
 - Texto fora da zona segura do painel.
 - Legenda ausente em qualquer trecho com narração.
@@ -257,6 +286,17 @@ cada um o que roubar (o princípio) e o que deixar (o visual que é dele).
 ## 8. Notas
 
 *Cresce a cada vídeo. Formato: data · vídeo · o que mudou e por quê.*
+
+- 19/out/2026 · institucional FENASAN · terceira decupagem. Os quatro PNGs de
+  `marca/` foram aparados: a assinatura cheia tinha 18,75% de transparência de
+  cada lado, então ela nunca encostava no eixo do texto e lia como logotipo
+  centralizado. A cartela com assinatura passou a usar a zona segura inteira,
+  parando acima da faixa da legenda. "Água. Esgotos. Drenagem." foi pro amarelo
+  e perdeu o sublinhado, que virava acento em cima de acento.
+- 19/out/2026 · institucional FENASAN · a locução do Paulo Radamés entrou frase
+  a frase. 1:44 de voz num corte de 2:30: o encaixe é por legenda, não de
+  enfiada. As legendas do bloco de valores caíram de 7 pra 6 porque três placas
+  pra uma frase faziam a voz chegar 4 s antes do texto.
 
 - 19/out/2026 · institucional FENASAN · estilo criado. Cores tiradas do logotipo
   oficial e amostradas no vídeo da linha do tempo já aprovado; amarelo medido em

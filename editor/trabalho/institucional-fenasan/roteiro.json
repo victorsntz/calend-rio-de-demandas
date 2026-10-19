@@ -28,14 +28,14 @@
         {
           "tipo": "cartela",
           "rotulo": "FENASAN 2026",
-          "texto": "Água. Esgotos.\nDrenagem.",
+          "texto": "**Água. Esgotos.\nDrenagem.**",
           "sub": "Desde 1985",
           "de": 0,
           "ate": 4.5,
           "comMarca": true,
-          "comSite": true,
-          "sublinhado": true,
-          "alturaMarca": 46
+          "alturaMarca": 44,
+          "tamanho": 64,
+          "respiroTopo": 40
         },
         {
           "tipo": "marca",
@@ -51,7 +51,7 @@
         },
         {
           "de": 4.4,
-          "ate": 8.0,
+          "ate": 8,
           "texto": "Existe uma infraestrutura que precisa de cuidado."
         },
         {
@@ -67,18 +67,18 @@
       ],
       "cobre": [
         4.5,
-        15.0
+        15
       ],
       "clipes": [
         {
           "arquivo": "brutos/selecao/VIDEO-2025-10-22-17-40-16-3.MP4",
-          "de": 2.0,
-          "ate": 8.0,
+          "de": 2,
+          "ate": 8,
           "_oque": "drone acompanhando o caminhão na avenida"
         },
         {
           "arquivo": "brutos/selecao/IMG_3942.MOV",
-          "de": 2.0,
+          "de": 2,
           "ate": 6.5,
           "hdr": true,
           "_oque": "hidrojato em operação na calçada"
@@ -96,7 +96,7 @@
         {
           "ano": "1985",
           "titulo": "O início",
-          "de": 15.0,
+          "de": 15,
           "ate": 18.1,
           "foto": "brutos/acervo/1985-primeiro-equipamento.png"
         },
@@ -146,19 +146,19 @@
           "ano": "2026",
           "titulo": "Evolução contínua",
           "de": 36.7,
-          "ate": 40.0,
+          "ate": 40,
           "foto": "brutos/acervo/2026-canteiro-jaime-wright.jpeg"
         }
       ],
       "legendas": [
         {
           "de": 15.2,
-          "ate": 18.0,
+          "ate": 18,
           "texto": "Os anos passaram."
         },
         {
           "de": 18.2,
-          "ate": 21.0,
+          "ate": 21,
           "texto": "Vieram novos equipamentos e novas equipes."
         },
         {
@@ -203,12 +203,6 @@
       "narracao": "Nossa missão é prover soluções que atendam ou superem as necessidades dos clientes e contribuam para o bem-estar da população. Fazemos isso por meio da melhoria contínua da operação e da renovação da infraestrutura, com tecnologias adequadas e responsabilidade social, ambiental e econômica.",
       "pecas": [
         {
-          "tipo": "cartela",
-          "texto": "Um propósito\nque permanece.",
-          "de": 40.0,
-          "ate": 43.0
-        },
-        {
           "tipo": "lista",
           "titulo": "NOSSA MISSÃO",
           "de": 43.5,
@@ -226,7 +220,7 @@
       "legendas": [
         {
           "de": 43.6,
-          "ate": 48.0,
+          "ate": 48,
           "texto": "Nossa missão é prover soluções"
         },
         {
@@ -241,7 +235,7 @@
         },
         {
           "de": 57.4,
-          "ate": 62.0,
+          "ate": 62,
           "texto": "Fazemos isso pela melhoria contínua da operação"
         },
         {
@@ -257,13 +251,13 @@
       ],
       "cobre": [
         43.6,
-        72.0
+        72
       ],
       "clipes": [
         {
           "arquivo": "brutos/selecao/IMG_3915.MOV",
-          "de": 4.0,
-          "ate": 10.0,
+          "de": 4,
+          "ate": 10,
           "hdr": true,
           "_oque": "poço de visita aberto, mangueiras trabalhando"
         },
@@ -284,7 +278,7 @@
         },
         {
           "arquivo": "brutos/selecao/C0016.MP4",
-          "de": 0.0,
+          "de": 0,
           "ate": 4.5,
           "girar": "esquerda",
           "_oque": "equipe e máquina em obra de rua"
@@ -292,7 +286,7 @@
         {
           "arquivo": "brutos/selecao/C0070.MP4",
           "de": 0.6,
-          "ate": 8.0,
+          "ate": 8,
           "girar": "esquerda",
           "_oque": "mangueira sendo manobrada no caminhão"
         }
@@ -351,7 +345,7 @@
         },
         {
           "de": 77.4,
-          "ate": 82.0,
+          "ate": 82,
           "texto": "pela liderança em inovação e qualidade."
         },
         {
@@ -360,7 +354,7 @@
           "texto": "Continuar crescendo e integrando serviços."
         },
         {
-          "de": 87.0,
+          "de": 87,
           "ate": 91.6,
           "texto": "Consolidar o controle de **perdas** de água."
         },
@@ -376,33 +370,33 @@
         }
       ],
       "cobre": [
-        72.0,
-        102.0
+        72,
+        102
       ],
       "clipes": [
         {
           "arquivo": "brutos/selecao/Video-08-parte-01.mov",
-          "de": 100.0,
+          "de": 100,
           "ate": 107.5,
           "_oque": "01 · traço sendo desenhado na prancha"
         },
         {
           "arquivo": "brutos/selecao/C0017.MP4",
-          "de": 0.0,
+          "de": 0,
           "ate": 7.5,
           "girar": "esquerda",
           "_oque": "02 · gestor e equipe na obra"
         },
         {
           "arquivo": "brutos/selecao/IMG_3942.MOV",
-          "de": 2.0,
+          "de": 2,
           "ate": 9.5,
           "hdr": true,
           "_oque": "03 · hidrojato em operação"
         },
         {
           "arquivo": "brutos/selecao/VIDEO-2025-10-22-17-40-13-4.MP4",
-          "de": 35.0,
+          "de": 35,
           "ate": 42.5,
           "_oque": "04 · drone sobre o canteiro"
         }
@@ -470,44 +464,39 @@
         },
         {
           "de": 107.4,
-          "ate": 112.0,
+          "ate": 112,
           "texto": "e cada entrega. Parceria, confiança e lealdade."
         },
         {
           "de": 112.2,
-          "ate": 116.8,
+          "ate": 117,
           "texto": "Entender a necessidade do cliente"
         },
         {
-          "de": 117.0,
-          "ate": 121.6,
-          "texto": "e aplicar a técnica adequada."
+          "de": 117.2,
+          "ate": 122.6,
+          "texto": "aplicar a técnica adequada e negociar com **transparência**."
         },
         {
-          "de": 121.8,
-          "ate": 126.4,
-          "texto": "Negociar com **transparência**."
-        },
-        {
-          "de": 126.6,
-          "ate": 131.2,
+          "de": 122.8,
+          "ate": 129,
           "texto": "Valorizar as pessoas e o seu desenvolvimento."
         },
         {
-          "de": 131.4,
+          "de": 129.2,
           "ate": 136.4,
           "texto": "Cuidar do prazo, do meio ambiente e da comunidade."
         }
       ],
       "cobre": [
-        102.0,
-        137.0
+        102,
+        137
       ],
       "clipes": [
         {
           "arquivo": "brutos/selecao/C0001.MP4",
-          "de": 0.0,
-          "ate": 6.0,
+          "de": 0,
+          "ate": 6,
           "girar": "esquerda",
           "_oque": "operador na cabine"
         },
@@ -521,19 +510,19 @@
         {
           "arquivo": "brutos/selecao/C0070.MP4",
           "de": 0.6,
-          "ate": 8.0,
+          "ate": 8,
           "girar": "esquerda",
           "_oque": "mangueira sendo manobrada"
         },
         {
           "arquivo": "brutos/selecao/VIDEO-2025-10-22-17-40-13-4.MP4",
-          "de": 6.0,
+          "de": 6,
           "ate": 18.1,
           "_oque": "drone sobre o canteiro"
         },
         {
           "arquivo": "brutos/selecao/C0016.MP4",
-          "de": 0.0,
+          "de": 0,
           "ate": 4.5,
           "girar": "esquerda",
           "_oque": "equipe em obra de rua"
@@ -554,22 +543,22 @@
           "sublinhado": true,
           "tamanho": 56,
           "texto": "**Engenharia, operação\ne gestão**\na serviço das cidades\ne das pessoas.",
-          "de": 137.0,
+          "de": 137,
           "ate": 144.6
         },
         {
           "tipo": "cartela",
-          "veu": 0.82,
+          "veu": 0.72,
           "comMarca": true,
           "comSite": true,
-          "sublinhado": true,
-          "alturaMarca": 90,
+          "alturaMarca": 64,
           "rotulo": "FENASAN 2026",
           "sub": "Água, esgotos e drenagem desde 1985.",
           "texto": "",
           "tamanho": 56,
           "de": 144.6,
-          "ate": 150.0
+          "ate": 150,
+          "respiroTopo": 120
         }
       ],
       "legendas": [
@@ -592,14 +581,14 @@
       "clipes": [
         {
           "arquivo": "brutos/selecao/VIDEO-2025-10-22-17-40-16-3.MP4",
-          "de": 20.0,
-          "ate": 33.0,
+          "de": 20,
+          "ate": 33,
           "_oque": "drone acompanhando o caminhão na avenida"
         }
       ],
       "cobre": [
-        137.0,
-        150.0
+        137,
+        150
       ]
     }
   ],
@@ -607,5 +596,121 @@
     "Locução gravada: os tempos são do roteiro e precisam casar com a voz real.",
     "Logotipo da Metropolitana para o fechamento, que o roteiro pede ao lado do da Norte Sul.",
     "Trilha instrumental com licença livre."
-  ]
+  ],
+  "narracao": {
+    "arquivo": "brutos/institucional-fenasan/narracao/paulo-radames.mp3",
+    "voz": "Paulo Radamés",
+    "dbAmbiente": -18,
+    "trechos": [
+      {
+        "de": 0,
+        "ate": 5,
+        "em": 0.6,
+        "texto": "Por trás de uma cidade que funciona, existe uma infraestrutura que precisa de cuidado."
+      },
+      {
+        "de": 5,
+        "ate": 10.74,
+        "em": 8.2,
+        "texto": "É nesse trabalho que a Norte Sul constrói sua história desde 1985."
+      },
+      {
+        "de": 10.74,
+        "ate": 11.98,
+        "em": 15.2,
+        "texto": "Os anos passaram."
+      },
+      {
+        "de": 11.98,
+        "ate": 16.25,
+        "em": 18.2,
+        "texto": "Vieram novos equipamentos, novas equipes e novos desafios."
+      },
+      {
+        "de": 16.25,
+        "ate": 20.89,
+        "em": 23.4,
+        "texto": "Da limpeza de redes à integração entre operação, engenharia e gestão."
+      },
+      {
+        "de": 20.89,
+        "ate": 27.82,
+        "em": 29.2,
+        "texto": "A Norte Sul ampliou sua atuação, incorporou a Metropolitana e levou sua experiência a novos territórios."
+      },
+      {
+        "de": 27.82,
+        "ate": 35.6,
+        "em": 43.6,
+        "texto": "Nossa missão é prover soluções que atendam ou superem as necessidades dos clientes e contribuam para o bem-estar da população."
+      },
+      {
+        "de": 35.6,
+        "ate": 46.5,
+        "em": 55,
+        "texto": "Fazemos isso por meio da melhoria contínua da operação e da renovação da infraestrutura, com tecnologias adequadas e responsabilidade social, ambiental e econômica."
+      },
+      {
+        "de": 46.5,
+        "ate": 52.85,
+        "em": 72.6,
+        "texto": "Nossa visão é manter o reconhecimento pela liderança em inovação e qualidade na gestão do saneamento."
+      },
+      {
+        "de": 52.85,
+        "ate": 66.44,
+        "em": 83,
+        "texto": "Continuar crescendo, desenvolver serviços que se complementam, consolidar o controle de perdas físicas de água e fortalecer parcerias com concessionárias na operação e gestão dos sistemas de água, esgotos e drenagem."
+      },
+      {
+        "de": 66.44,
+        "ate": 70.22,
+        "em": 102.6,
+        "texto": "Nossos valores orientam cada relação e cada entrega."
+      },
+      {
+        "de": 70.22,
+        "ate": 73.24,
+        "em": 107.8,
+        "texto": "Parceria, confiança e lealdade."
+      },
+      {
+        "de": 73.24,
+        "ate": 79.49,
+        "em": 112.4,
+        "texto": "Entender as necessidades do cliente, aplicar a técnica adequada e negociar com transparência."
+      },
+      {
+        "de": 79.49,
+        "ate": 86.36,
+        "em": 122.8,
+        "texto": "Valorizar as pessoas, incentivar seu desenvolvimento e construir relações confiáveis com fornecedores."
+      },
+      {
+        "de": 86.36,
+        "ate": 92.75,
+        "em": 130,
+        "texto": "Trabalhar com compromisso com os prazos, com a preservação do meio ambiente e com a melhoria da comunidade."
+      },
+      {
+        "de": 92.75,
+        "ate": 95.1,
+        "em": 137.2,
+        "texto": "A experiência nos trouxe até aqui."
+      },
+      {
+        "de": 95.1,
+        "ate": 98.23,
+        "em": 140.2,
+        "texto": "Nosso propósito orienta os próximos passos."
+      },
+      {
+        "de": 98.23,
+        "ate": 104.22,
+        "em": 143.9,
+        "texto": "Norte Sul: engenharia, operação e gestão a serviço das cidades e das pessoas."
+      }
+    ],
+    "ganhoDb": 5.4
+  }
 }

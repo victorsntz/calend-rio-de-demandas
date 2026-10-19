@@ -177,6 +177,7 @@ function pecaCartela(o, F) {
   // véu. Tudo encostado à esquerda, logotipo incluído: o logotipo solto no meio
   // do quadro ficava distante do resto e desproporcional.
   const Cc = K.cartela;
+  const Z = F.zonaSegura;
   const t = o.tamanho || F.cartela.tamanhoMax;
   const centro = o.alinhar === "centro";
 
@@ -185,37 +186,61 @@ function pecaCartela(o, F) {
     : `<div class="cheia" style="background:${Cc.fundo}"></div>
        <div class="cheia" style="background:radial-gradient(70% 90% at 88% 6%, ${rgba(Cc.clarao.cor, Cc.clarao.opacidade)} 0%, transparent 62%)"></div>`;
 
-  // O logotipo abre o bloco, no mesmo eixo do texto. Vira parte da composição.
-  const alturaMarca = o.alturaMarca || 52;
-  const marca = o.comMarca
-    ? (() => {
-        // Abaixo de 70 px o descritivo do logotipo vira borrão: ali entra a
-        // versão compacta. Grande, a versão cheia lê e vale mais.
-        const arq = resolve(R, alturaMarca >= 70 ? K.marca.assinaturaEscura : K.marca.arquivoEscuro);
-        if (!existsSync(arq)) throw new Error(`não achei o logotipo em ${arq}`);
-        return `<img src="file://${arq}" style="height:${alturaMarca}px;display:block;${centro ? "margin:0 auto;" : ""}">
-          <div style="height:${Math.round(t * .46)}px"></div>`;
-      })()
+  // O vão entre o rótulo e o título sai do corpo do título. Fixo em 16 px, o
+  // "FENASAN 2026" encostava no acento do Á.
+  const rot = o.rotulo
+    ? pecaRotulo({ texto: o.rotulo, _interno: true }, F) + `<div style="height:${Math.round(t * .46)}px"></div>`
     : "";
 
-  const rot = o.rotulo ? pecaRotulo({ texto: o.rotulo, _interno: true }, F) + `<div style="height:16px"></div>` : "";
+  // Entrelinha 1.08 comia o acento da primeira linha contra a linha de cima.
+  const chamada = o.texto
+    ? `<div style="font-weight:${estilo.fonte.pesos.titulo};font-size:${t}px;line-height:1.16;` +
+      `letter-spacing:-.02em;color:${cor("branco")}">${enfatiza(o.texto)}</div>`
+    : "";
 
   // Sublinhado amarelo sob o título: é o que tira o bloco do branco chapado.
   const sub_ = K.cartela.sublinhado;
   const risco = o.sublinhado
     ? `<div style="height:${sub_.espessura}px;width:${sub_.largura}px;background:${cor("amarelo")};
-         margin:${Math.round(t * .34)}px 0 0;${centro ? "margin-left:auto;margin-right:auto;" : ""}"></div>`
+         margin:${Math.round(t * .40)}px 0 0;${centro ? "margin-left:auto;margin-right:auto;" : ""}"></div>`
     : "";
 
-  const sub = o.sub ? `<div style="margin-top:${risco ? Math.round(t * .34) : 20}px;font-weight:${estilo.fonte.pesos.corpo};font-size:${Math.round(t * .42)}px;line-height:1.3;color:${cor("cinzaClaro")}">${enfatiza(o.sub)}</div>` : "";
-  const site = o.comSite
-    ? `<div class="rotulo" style="margin-top:${Math.round(t * .5)}px;font-size:${K.rotulo.tamanho}px;color:${cor("cinzaClaro")}">${escapa(K.marca.site)}</div>`
+  const sub = o.sub
+    ? `<div style="margin-top:${Math.round(t * (risco ? .40 : .34))}px;font-weight:${estilo.fonte.pesos.corpo};` +
+      `font-size:${Math.round(t * .42)}px;line-height:1.3;color:${cor("cinzaClaro")}">${enfatiza(o.sub)}</div>`
     : "";
+  const site = o.comSite
+    ? `<div class="rotulo" style="margin-top:${Math.round(t * .62)}px;font-size:${K.rotulo.tamanho}px;color:${cor("cinzaClaro")}">${escapa(K.marca.site)}</div>`
+    : "";
+
+  const texto = `${rot}${chamada}${risco}${sub}${site}`;
+
+  // Com assinatura a cartela ocupa a zona segura inteira: logotipo no alto,
+  // texto deitado no pé. Empilhado num bloco só, tudo subia pro terço de cima e
+  // o terço de baixo ficava vazio.
+  if (o.comMarca) {
+    // Os quatro logotipos vêm aparados, então a altura pedida é a altura do
+    // desenho. Abaixo do limiar o descritivo vira borrão: ali entra a compacta.
+    const alturaMarca = o.alturaMarca || 52;
+    const cheia = alturaMarca >= (K.marca.alturaMinimaAssinatura ?? 54);
+    // O texto para ACIMA da faixa da legenda. Deitado no pé da zona segura, a
+    // placa da legenda cobria o "Desde 1985" na abertura e a assinatura no fecho.
+    const baseLivre = Z.y2 - (F.legenda.faixaY[0] - 18);
+    const arq = resolve(R, cheia ? K.marca.assinaturaEscura : K.marca.arquivoEscuro);
+    if (!existsSync(arq)) throw new Error(`não achei o logotipo em ${arq}`);
+    return `${fundo}
+      <div style="position:absolute;left:${Z.x1}px;top:${Z.y1}px;width:${Z.x2 - Z.x1}px;
+        height:${Z.y2 - Z.y1}px;padding:${o.respiroTopo ?? 56}px 0 ${o.respiroBase ?? baseLivre}px;
+        display:flex;flex-direction:column;justify-content:space-between;
+        text-align:${centro ? "center" : "left"}">
+        <img src="file://${arq}" style="height:${alturaMarca}px;width:auto;display:block;
+          align-self:${centro ? "center" : "flex-start"}">
+        <div>${texto}</div>
+      </div>`;
+  }
 
   return `${fundo}
-    <div class="bloco" style="text-align:${centro ? "center" : "left"}">
-      ${marca}${rot}${o.texto ? `<div style="font-weight:${estilo.fonte.pesos.titulo};font-size:${t}px;line-height:1.08;letter-spacing:-.02em;color:${cor("branco")}">${enfatiza(o.texto)}</div>` : ""}${risco}${sub}${site}
-    </div>`;
+    <div class="bloco" style="text-align:${centro ? "center" : "left"}">${texto}</div>`;
 }
 
 function pecaLista(o, F) {
@@ -292,6 +317,9 @@ function pecaMarca(o, F) {
   const h = o.altura || M.altura;
   if (rodape) {
     const site = o.semSite ? "" : `<div class="rotulo" style="margin-top:14px;font-size:${K.rotulo.tamanho}px;color:${cor("cinzaClaro")}">${escapa(K.marca.site)}</div>`;
+    // O fator 1.5 vinha de quando o arquivo da assinatura tinha 29% de
+    // transparência em cima e embaixo: a altura pedida só virava 41% de
+    // desenho. Com o arquivo aparado, altura pedida é altura desenhada.
     // A assinatura para ACIMA da faixa da legenda. Antes ela morava a 12% do pé
     // do quadro e a legenda passava por cima do logotipo e do site.
     const base = F.altura - (F.legenda.faixaY[0] - 26);
@@ -300,7 +328,7 @@ function pecaMarca(o, F) {
     const lado = o.alinhar === "centro" ? "center" : "left";
     const recuo = o.alinhar === "centro" ? 0 : F.zonaSegura.x1;
     return `<div style="position:absolute;left:${recuo}px;right:${recuo}px;bottom:${base}px;text-align:${lado}">
-      <img src="file://${arq}" style="height:${Math.round(h * 1.5)}px;display:inline-block">${site}</div>`;
+      <img src="file://${arq}" style="height:${Math.round(h * 1.15)}px;display:inline-block">${site}</div>`;
   }
   // A margem sai da própria zona segura, que pode ser torta. Número solto no
   // estilo.json já fez a marca pisar fora do painel.
@@ -377,11 +405,8 @@ function paginaDaPeca(tipo, o, F) {
   // ano pra fora do quadro, porque ela tem "ate: 8" de segundos.
   // O título sem posição senta logo acima da faixa da legenda, como no modelo.
   if (tipo === "titulo" && o.y == null && o.rodape == null) o = { ...o, rodape: F.legenda.faixaY[0] - 14 };
-  // Cartela com assinatura sobe o texto: centralizado no quadro ele encostava no
-  // logotipo, que mora logo acima da faixa da legenda.
-  const centroVertical = tipo === "cartela" && o.comMarca ? 33 : 50;
   const posY = o.rodape != null ? `bottom:${F.altura - Number(o.rodape)}px`
-    : o.y === "centro" || o.y == null ? `top:${centroVertical}%;transform:translateY(-50%)`
+    : o.y === "centro" || o.y == null ? `top:50%;transform:translateY(-50%)`
     : `top:${Number(o.y)}px`;
   const posX = o.x === "direita" ? `right:${F.largura - Z.x2}px`
     : o.x === "centro" ? `left:50%;margin-left:${-Math.round(larguraMax / 2)}px`

@@ -191,9 +191,34 @@ for (const [i, p] of pecas.entries()) {
   v = `[v${i}o]`;
 }
 
-// 3. som: voz nivelada, trilha bem embaixo
+// 3. som: locução na frente, som dos clipes atrás, trilha mais atrás ainda
 let a = "[voz0]";
-filtro.push(`${a}loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[voz]`);
+const N = edl.narracao;
+if (N?.arquivo && N.trechos?.length) {
+  const arqVoz = perto(N.arquivo);
+  if (!existsSync(arqVoz)) { console.error(`não achei a narração: ${arqVoz}`); process.exit(1); }
+
+  // Com locução gravada o som dos clipes deixa de ser a voz e vira ambiente.
+  filtro.push(`${a}loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000,volume=${N.dbAmbiente ?? -18}dB[ambiente]`);
+
+  // Uma entrada por frase, cortada já no -ss/-t: o ffmpeg busca dentro do
+  // arquivo em vez de decodificar a locução inteira uma vez por frase. O ganho
+  // é fixo e medido no arquivo todo, porque nivelar frase a frase deixaria cada
+  // uma num volume diferente.
+  const ganho = N.ganhoDb ?? 0;
+  const vozes = [];
+  for (const [k, t] of N.trechos.entries()) {
+    entradas.push("-ss", Number(t.de).toFixed(3), "-t", (Number(t.ate) - Number(t.de)).toFixed(3), "-i", arqVoz);
+    filtro.push(`[${proximo()}:a]aresample=48000,volume=${ganho}dB,` +
+      `adelay=${Math.round(Number(t.em) * 1000)}:all=1[n${k}]`);
+    vozes.push(`[n${k}]`);
+  }
+  filtro.push(`${vozes.join("")}amix=inputs=${vozes.length}:duration=longest:normalize=0:dropout_transition=0[fala]`);
+  filtro.push(`[fala][ambiente]amix=inputs=2:duration=longest:normalize=0:dropout_transition=0[voz]`);
+  conta(`  locução: ${N.trechos.length} frases de ${N.voz || "locutor"}, ganho ${ganho >= 0 ? "+" : ""}${ganho} dB, ambiente ${N.dbAmbiente ?? -18} dB`);
+} else {
+  filtro.push(`${a}loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[voz]`);
+}
 a = "[voz]";
 
 if (edl.trilha?.arquivo) {
@@ -210,6 +235,10 @@ if (edl.trilha?.arquivo) {
   filtro.push(`${a}[trilha]amix=inputs=2:duration=first:normalize=0[mix]`);
   a = "[mix]";
 }
+
+// Teto no fim da cadeia: com o ganho da locução o pico passava de zero.
+filtro.push(`${a}alimiter=limit=0.841:level=0[som]`);
+a = "[som]";
 
 // ---------- render ----------
 
