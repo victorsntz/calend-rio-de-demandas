@@ -6,10 +6,10 @@ import { ffprobe, formato, titulo, conta, aviso } from "./_comum.mjs";
 
 const args = process.argv.slice(2);
 const arquivo = args.find((a) => !a.startsWith("--"));
-const nomeFormato = args.includes("--formato") ? args[args.indexOf("--formato") + 1] : "reels";
+const nomeFormato = args.includes("--formato") ? args[args.indexOf("--formato") + 1] : "telao";
 
 if (!arquivo || !existsSync(arquivo)) {
-  console.error("uso: node sonda.mjs <arquivo de vídeo> [--formato reels|youtube]");
+  console.error("uso: node sonda.mjs <arquivo de vídeo> [--formato telao|youtube]");
   process.exit(1);
 }
 

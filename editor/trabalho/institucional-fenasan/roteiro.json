@@ -1,0 +1,403 @@
+{
+  "projeto": "institucional-fenasan",
+  "titulo": "Norte Sul: experiência, propósito e futuro",
+  "evento": "FENASAN 2026",
+  "formato": "telao",
+  "duracao": 150,
+  "origem": "Roteiro-Norte-Sul-Proposito-e-Futuro.pdf",
+  "_leia": "O roteiro do cliente em formato de máquina. Os tempos são os do PDF. A narração é a locução; as legendas são o que vai na tela, porque o telão toca mudo.",
+  "anosDaLinha": [
+    "1985",
+    "1990",
+    "1995",
+    "2000",
+    "2010",
+    "2015",
+    "2020",
+    "2026"
+  ],
+  "blocos": [
+    {
+      "n": 1,
+      "nome": "Abertura",
+      "de": 0,
+      "ate": 15,
+      "imagens": "Cidade em movimento, água chegando às pessoas, equipes e equipamentos em operação. Cortes dinâmicos conectam a infraestrutura à vida urbana.",
+      "narracao": "Por trás de uma cidade que funciona, existe uma infraestrutura que precisa de cuidado. É nesse trabalho que a Norte Sul constrói sua história desde 1985.",
+      "pecas": [
+        {
+          "tipo": "cartela",
+          "rotulo": "FENASAN 2026",
+          "texto": "Água. Esgotos.\nDrenagem.",
+          "sub": "Desde 1985",
+          "de": 0,
+          "ate": 4.5,
+          "comMarca": false
+        },
+        {
+          "tipo": "marca",
+          "de": 4.5,
+          "ate": 15
+        }
+      ],
+      "legendas": [
+        {
+          "de": 0.6,
+          "ate": 4.2,
+          "texto": "Por trás de uma cidade que funciona"
+        },
+        {
+          "de": 4.4,
+          "ate": 8.0,
+          "texto": "existe uma infraestrutura que precisa de cuidado."
+        },
+        {
+          "de": 8.2,
+          "ate": 11.4,
+          "texto": "É nesse trabalho que a Norte Sul"
+        },
+        {
+          "de": 11.6,
+          "ate": 14.8,
+          "texto": "constrói sua história desde **1985**."
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "nome": "Uma história que avança",
+      "de": 15,
+      "ate": 40,
+      "imagens": "Uma linha percorre a tela. Os anos avançam, acompanhados de fotos históricas que se transformam em imagens atuais.",
+      "narracao": "Os anos passaram. Vieram novos equipamentos, novas equipes e novos desafios. Da limpeza de redes à integração entre operação, engenharia e gestão. A Norte Sul ampliou sua atuação, incorporou a Metropolitana e levou sua experiência a novos territórios.",
+      "marcos": [
+        {
+          "ano": "1985",
+          "titulo": "O início",
+          "de": 15.0,
+          "ate": 18.1,
+          "foto": "brutos/acervo/1985-primeiro-equipamento.png"
+        },
+        {
+          "ano": "1990",
+          "titulo": "Especialização",
+          "de": 18.1,
+          "ate": 21.2,
+          "foto": "brutos/acervo/1988-frota-tres-hidrojatos.png"
+        },
+        {
+          "ano": "1995",
+          "titulo": "Expansão",
+          "de": 21.2,
+          "ate": 24.3,
+          "foto": "brutos/acervo/1996-primeiro-caminhao-novo.png"
+        },
+        {
+          "ano": "2000",
+          "titulo": "Engenharia e gestão",
+          "de": 24.3,
+          "ate": 27.4,
+          "foto": "brutos/acervo/2000-canteiro-sao-miguel.png"
+        },
+        {
+          "ano": "2010",
+          "titulo": "Performance",
+          "de": 27.4,
+          "ate": 30.5,
+          "foto": "brutos/acervo/2010-sabesp-operacao.jpeg"
+        },
+        {
+          "ano": "2015",
+          "titulo": "Novas frentes",
+          "de": 30.5,
+          "ate": 33.6,
+          "foto": "brutos/acervo/2016-performance.jpeg"
+        },
+        {
+          "ano": "2020",
+          "titulo": "Novos territórios",
+          "de": 33.6,
+          "ate": 36.7,
+          "foto": "brutos/acervo/2024-unidades-brasil.png"
+        },
+        {
+          "ano": "2026",
+          "titulo": "Evolução contínua",
+          "de": 36.7,
+          "ate": 40.0,
+          "foto": "brutos/acervo/2026-canteiro-jaime-wright.jpeg"
+        }
+      ],
+      "legendas": [
+        {
+          "de": 15.2,
+          "ate": 18.0,
+          "texto": "Os anos passaram."
+        },
+        {
+          "de": 18.2,
+          "ate": 21.0,
+          "texto": "Vieram novos equipamentos e novas equipes."
+        },
+        {
+          "de": 21.2,
+          "ate": 24.2,
+          "texto": "Da limpeza de redes à engenharia."
+        },
+        {
+          "de": 24.4,
+          "ate": 27.3,
+          "texto": "Operação, engenharia e gestão integradas."
+        },
+        {
+          "de": 27.5,
+          "ate": 30.4,
+          "texto": "A Norte Sul ampliou sua atuação."
+        },
+        {
+          "de": 30.6,
+          "ate": 33.5,
+          "texto": "Incorporou a **Metropolitana**."
+        },
+        {
+          "de": 33.7,
+          "ate": 36.6,
+          "texto": "E levou sua experiência a novos territórios."
+        },
+        {
+          "de": 36.8,
+          "ate": 39.8,
+          "texto": "Uma história que evolui."
+        }
+      ],
+      "transicao": {
+        "de": 39.8,
+        "ate": 43.6,
+        "texto": "Uma história que evolui.\nUm propósito que permanece."
+      }
+    },
+    {
+      "n": 3,
+      "nome": "Nossa missão",
+      "de": 40,
+      "ate": 72,
+      "imagens": "Diagnóstico de redes, planejamento, equipes em campo, renovação da infraestrutura e cenas da população utilizando os espaços da cidade.",
+      "narracao": "Nossa missão é prover soluções que atendam ou superem as necessidades dos clientes e contribuam para o bem-estar da população. Fazemos isso por meio da melhoria contínua da operação e da renovação da infraestrutura, com tecnologias adequadas e responsabilidade social, ambiental e econômica.",
+      "pecas": [
+        {
+          "tipo": "cartela",
+          "texto": "Um propósito\nque permanece.",
+          "de": 40.0,
+          "ate": 43.0
+        },
+        {
+          "tipo": "lista",
+          "titulo": "NOSSA MISSÃO",
+          "de": 43.5,
+          "ate": 71.5,
+          "itens": [
+            "Soluções para as necessidades reais",
+            "Melhoria da operação e renovação da infraestrutura",
+            "Bem-estar da população",
+            "Responsabilidade social, ambiental e econômica"
+          ]
+        }
+      ],
+      "legendas": [
+        {
+          "de": 43.6,
+          "ate": 48.0,
+          "texto": "Nossa missão é prover soluções"
+        },
+        {
+          "de": 48.2,
+          "ate": 52.6,
+          "texto": "que atendam ou superem as necessidades dos clientes"
+        },
+        {
+          "de": 52.8,
+          "ate": 57.2,
+          "texto": "e contribuam para o bem-estar da população."
+        },
+        {
+          "de": 57.4,
+          "ate": 62.0,
+          "texto": "Fazemos isso pela melhoria contínua da operação"
+        },
+        {
+          "de": 62.2,
+          "ate": 66.6,
+          "texto": "e pela renovação da infraestrutura,"
+        },
+        {
+          "de": 66.8,
+          "ate": 71.4,
+          "texto": "com responsabilidade social, ambiental e econômica."
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "nome": "Nossa visão",
+      "de": 72,
+      "ate": 102,
+      "imagens": "Modelagem hidráulica, inspeções, sistemas de gestão, redução de perdas e integração entre equipes técnicas e operacionais.",
+      "narracao": "Nossa visão é manter o reconhecimento pela liderança em inovação e qualidade na gestão do saneamento. Continuar crescendo, desenvolver serviços que se complementam, consolidar o controle de perdas físicas de água e fortalecer parcerias com concessionárias na operação e gestão dos sistemas de água, esgotos e drenagem.",
+      "pecas": [
+        {
+          "tipo": "lista",
+          "titulo": "NOSSA VISÃO · 2025 a 2030",
+          "de": 72.5,
+          "ate": 101.5,
+          "itens": [
+            "Inovação e qualidade",
+            "Crescimento e soluções integradas",
+            "Controle de perdas de água",
+            "Parcerias na gestão do saneamento"
+          ]
+        }
+      ],
+      "legendas": [
+        {
+          "de": 72.6,
+          "ate": 77.2,
+          "texto": "Nossa visão é manter o reconhecimento"
+        },
+        {
+          "de": 77.4,
+          "ate": 82.0,
+          "texto": "pela liderança em inovação e qualidade."
+        },
+        {
+          "de": 82.2,
+          "ate": 86.8,
+          "texto": "Continuar crescendo e integrando serviços."
+        },
+        {
+          "de": 87.0,
+          "ate": 91.6,
+          "texto": "Consolidar o controle de **perdas** de água."
+        },
+        {
+          "de": 91.8,
+          "ate": 96.4,
+          "texto": "Fortalecer parcerias com concessionárias"
+        },
+        {
+          "de": 96.6,
+          "ate": 101.4,
+          "texto": "na gestão de água, esgotos e drenagem."
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "nome": "Nossos valores",
+      "de": 102,
+      "ate": 137,
+      "imagens": "Reuniões de planejamento, colaboradores em treinamento, execução dos serviços, relacionamento com parceiros e cuidado ambiental.",
+      "narracao": "Nossos valores orientam cada relação e cada entrega. Parceria, confiança e lealdade. Entender as necessidades do cliente, aplicar a técnica adequada e negociar com transparência. Valorizar as pessoas, incentivar seu desenvolvimento e construir relações confiáveis com fornecedores. Trabalhar com compromisso com os prazos, com a preservação do meio ambiente e com a melhoria da comunidade.",
+      "pecas": [
+        {
+          "tipo": "lista",
+          "titulo": "NOSSOS VALORES",
+          "de": 102.5,
+          "ate": 136.5,
+          "itens": [
+            "Parceria, confiança e lealdade",
+            "Transparência e compromisso nas entregas",
+            "Valorização e desenvolvimento das pessoas",
+            "Relações confiáveis com fornecedores",
+            "Preservação ambiental e melhoria social"
+          ]
+        }
+      ],
+      "legendas": [
+        {
+          "de": 102.6,
+          "ate": 107.2,
+          "texto": "Nossos valores orientam cada relação"
+        },
+        {
+          "de": 107.4,
+          "ate": 112.0,
+          "texto": "e cada entrega. Parceria, confiança e lealdade."
+        },
+        {
+          "de": 112.2,
+          "ate": 116.8,
+          "texto": "Entender a necessidade do cliente"
+        },
+        {
+          "de": 117.0,
+          "ate": 121.6,
+          "texto": "e aplicar a técnica adequada."
+        },
+        {
+          "de": 121.8,
+          "ate": 126.4,
+          "texto": "Negociar com **transparência**."
+        },
+        {
+          "de": 126.6,
+          "ate": 131.2,
+          "texto": "Valorizar as pessoas e o seu desenvolvimento."
+        },
+        {
+          "de": 131.4,
+          "ate": 136.4,
+          "texto": "Cuidar do prazo, do meio ambiente e da comunidade."
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "nome": "Encerramento",
+      "de": 137,
+      "ate": 150,
+      "imagens": "O primeiro caminhão dá lugar à frota atual. Equipes e operações completam a sequência. Encerrar com os logotipos Norte Sul e Metropolitana.",
+      "narracao": "A experiência nos trouxe até aqui. Nosso propósito orienta os próximos passos. Norte Sul: engenharia, operação e gestão a serviço das cidades e das pessoas.",
+      "pecas": [
+        {
+          "tipo": "cartela",
+          "texto": "Engenharia, operação e gestão\na serviço das cidades\ne das pessoas.",
+          "de": 137.0,
+          "ate": 145.0,
+          "alinhar": "centro"
+        },
+        {
+          "tipo": "cartela",
+          "rotulo": "FENASAN 2026",
+          "texto": "Água. Esgotos.\nDrenagem.",
+          "sub": "Desde 1985",
+          "de": 145.0,
+          "ate": 150.0,
+          "comMarca": true
+        }
+      ],
+      "legendas": [
+        {
+          "de": 137.2,
+          "ate": 140.6,
+          "texto": "A experiência nos trouxe até aqui."
+        },
+        {
+          "de": 140.8,
+          "ate": 144.4,
+          "texto": "Nosso propósito orienta os próximos passos."
+        },
+        {
+          "de": 144.6,
+          "ate": 149.0,
+          "texto": "Engenharia, operação e gestão a serviço das cidades."
+        }
+      ]
+    }
+  ],
+  "pendencias": [
+    "Locução gravada: os tempos são do roteiro e precisam casar com a voz real.",
+    "Vídeo atual de operação para os blocos 1, 3, 4 e 5. Está na pasta VÍDEOS NORTE SUL do Drive e ainda não foi baixado.",
+    "Logotipo da Metropolitana para o fechamento, que o roteiro pede ao lado do da Norte Sul.",
+    "Helvetica Neue: sem o arquivo, o render sai com a Inter e o fiscal reprova a entrega."
+  ]
+}

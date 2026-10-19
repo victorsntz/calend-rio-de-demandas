@@ -1,23 +1,40 @@
-# ESTILO.md · Victor Fortunato
+# ESTILO.md · Norte Sul
 
-Fonte única do estilo dos vídeos. Toda edição lê este arquivo antes de começar, e ele vence qualquer regra genérica da skill.
+Fonte única do estilo dos vídeos da Norte Sul Hidrotecnologia. Toda edição lê este
+arquivo antes de começar, e ele vence qualquer regra genérica da skill.
 
-Rascunho 1, 10/out/2026. Montado a partir do site fortunatoestudio.com (repositório `fortunato-site`: `site.css` e `index.html`). Falta a seção de referências.
+Versão 1.0, 19/out/2026. Montado a partir de três fontes: o logotipo oficial, o
+vídeo da linha do tempo já aprovado para a FENASAN e o roteiro institucional
+"Norte Sul: experiência, propósito e futuro". Onde as três concordam, virou regra.
+Onde só uma falava, está marcado como **a confirmar**.
 
 ---
 
 ## 1. O estilo em uma frase
 
-Editorial brasileiro: cara de revista impressa, papo de café e uma provocação por vídeo.
+Infraestrutura que se lê de longe: azul profundo, branco firme e um amarelo que
+só aponta o que importa.
 
 ## 2. Princípios
 
-1. **Origem é assinatura.** O vídeo tem cara de Brasil sem fantasia: café, papel, mão, sotaque, música daqui. Nada de estética importada só porque viralizou lá fora. *Por quê:* é a tese do livro Branding pra BraSileiro. Vídeo que contradiz a tese queima a tese.
-2. **Papel e tinta fazem quase tudo.** Preto e branco editorial, com o verde aparecendo só como detalhe. *Por quê:* é a regra do site. Marca que troca de roupa em cada canal some.
-3. **Calma que prende.** O ritmo vem do corte e da ideia. Efeito gritando fica de fora. *Por quê:* posicionamento premium. Quem cobra o que vale não precisa gritar.
-4. **Uma ideia por vídeo, dita sem rodeio.** Frase curta, palavra simples, opinião clara. *Por quê:* autoridade nasce de clareza.
-5. **Humor seco.** Piada rápida, de canto de boca, no estilo "929 cafés (e contando)". *Por quê:* tira o peso do assunto sem perder a seriedade.
-6. **Verdade antes de produção.** Bastidor real, conversa de verdade, erro que ficou bom. Nada encenado. *Por quê:* o site promete que marca só é forte quando carrega verdade. O vídeo precisa cumprir.
+1. **Tem que entender sem som.** O telão da feira toca mudo. Toda informação que
+   a narração dá, a tela também dá. Legenda do começo ao fim, sem exceção.
+   *Por quê:* é a primeira linha do roteiro, e é o cenário real de exibição.
+2. **Leitura à distância manda no tamanho.** Quem assiste está a dez metros, de
+   pé, passando. Fonte grande, frase curta, uma ideia por tela.
+   *Por quê:* num estande, texto pequeno é texto que ninguém lê.
+3. **A obra é a imagem.** Caminhão, rede, poço de visita, equipe em campo. Nada
+   de banco de imagens, nada de gente genérica sorrindo.
+   *Por quê:* o roteiro pede foto e vídeo reais da empresa. A história de 1985
+   até aqui é o ativo; emprestar imagem de fora joga esse ativo fora.
+4. **O tempo é personagem.** De 1985 a 2026 existe uma linha que não some. O
+   espectador sempre sabe em que ano está.
+   *Por quê:* é o que o vídeo-modelo faz, e é o que diferencia a Norte Sul de
+   qualquer concorrente novo.
+5. **Amarelo aponta, não decora.** Ele marca o ano ativo, abre a legenda e
+   destaca uma palavra. Nunca preenche área grande, nunca vira fundo.
+6. **Dado antes de adjetivo.** "Contratos no Rio, Uberlândia, Maceió, Goiânia e
+   Belo Horizonte" vale mais que "presença nacional".
 
 ## 3. Sistema visual
 
@@ -25,208 +42,183 @@ Editorial brasileiro: cara de revista impressa, papo de café e uma provocação
 
 | Nome | Hex | Uso |
 | --- | --- | --- |
-| Papel | `#F6F5F1` | fundo de cartela e de caixa, texto sobre vídeo escuro |
-| Papel 2 | `#EDEBE5` | caixas internas, respiro |
-| Tinta | `#15140F` | texto principal, linhas, cartela escura |
-| Tinta suave | `#5C5B55` | texto secundário |
-| Tinta apagada | `#6E6A61` | rótulos, créditos, legendas de apoio |
-| Espresso | `#121210` | fundo escuro de abertura, fechamento e citação |
-| Espresso suave | `#BFBDB5` | texto secundário sobre fundo escuro |
-| Verde | `#1F7A45` | acento sobre fundo claro |
-| Verde claro | `#8FD1A8` | o mesmo acento quando o fundo é escuro ou é vídeo |
+| Azul profundo | `#04306E` | fundo das cartelas, campo das peças, o azul da marca em área |
+| Azul noite | `#011A3D` | escurecido sobre vídeo, fundo de caixa escura, base do degradê |
+| Azul vivo | `#0092FF` | o azul do símbolo; detalhe, fio, ícone, realce sobre azul profundo |
+| Amarelo | `#FFBA00` | acento: barra da legenda, ano ativo, palavra destacada |
+| Branco | `#FFFFFF` | texto principal sobre azul e sobre vídeo |
+| Cinza claro | `#C8D4E4` | texto secundário sobre azul, rótulo, crédito |
+| Azul quase preto | `#001024` | texto sobre fundo claro, wordmark na versão clara |
 
-Regra do verde: **no máximo um elemento verde por tela.** Uma palavra, um ponto, um número. Nunca dois.
+Regra do amarelo: a mobília do sistema é amarela por desenho e não entra na conta.
+São três peças fixas: a barra da etiqueta de ano, a barra da legenda e o ponto
+ativo da linha do tempo. Elas podem estar as três na mesma tela, como no vídeo
+aprovado. O que a regra limita é **destaque de conteúdo: um por tela**. Uma
+palavra realçada, ou uma pílula preenchida, ou um número em destaque. Nunca dois.
 
-### Fontes (livre, no Google Fonts)
+Amarelo nunca é fundo de bloco nem cor de texto corrido.
 
-- **STIX Two Text**: a única fonte dos vídeos. Títulos em 500, legenda em 600, ênfase em itálico 400 ou 500. A legenda é em serifa de propósito: dá cara de revista e foge do Reels genérico.
-- **Rótulo (eyebrow):** STIX Two Text 600, caixa alta, espaçamento de 0,26 em, pequeno. Exemplo: `BASTIDORES · DIA 3`.
+Regra do azul vivo: ele é do símbolo. Sobre azul profundo funciona como fio e
+detalhe. Nunca encoste texto de leitura nele: o contraste não fecha.
 
-### Textura
+### Fontes
 
-Grão de papel por cima de tudo, 4 a 5% de opacidade, modo multiply (o mesmo do site). Dá cara de impresso e esconde o "liso de computador".
+- **Helvetica Neue** é a fonte da marca. Títulos em Bold (75), texto e legenda em
+  Medium (65), rótulo em Bold caixa alta com espaçamento de 0,12 em.
+- A fonte é licenciada da Monotype e **não** vem no repositório. Ela mora em
+  `.fontes/`, que o git ignora. Instalação em `.claude/skills/.../references/fluxo.md`.
+- **Enquanto a Helvetica Neue não estiver na máquina**, a esteira usa a Inter, que
+  é grotesca livre com largura e peso próximos. O `conferir.mjs` avisa quando o
+  render saiu com a substituta, pra nenhum arquivo ir pra feira trocado.
+- Nunca outra fonte. Sem serifa, sem condensada de impacto, sem manuscrita.
 
-### Legenda
+### Formato
 
-- STIX Two Text 600, em caixa normal. Caixa alta só em rótulo.
-- **Reels (1080x1920):** 64 a 72 px, até 2 linhas, 3 a 5 palavras por vez. Centralizada, na faixa entre y 1250 e y 1450.
-- **YouTube (1920x1080):** 52 a 56 px, uma linha de preferência, 80 px acima da base.
-- Cor sobre vídeo: Papel `#F6F5F1` com sombra suave (0 2px 12px, preto a 35%). Sobre fundo claro: Tinta `#15140F`, sem sombra.
-- Ênfase: a palavra-chave da frase em itálico. Se for a palavra do vídeo, itálico em Verde claro `#8FD1A8`. Uma por frase, no máximo.
-- Entrada: sobe 6 a 10 px com fade em 0,2 s. Sem quicar, sem pular palavra por palavra.
-- Legenda limpa: "né", "tipo" e "ééé" saem do texto mesmo quando ficaram no áudio. Ortografia sempre corrigida.
+O telão da FENASAN é um painel de 3 larguras por 2 alturas: **1008 x 672 pixels**,
+proporção 3:2. É a medida de entrega, em MP4.
 
-### Título de gancho (primeiros 1 a 3 segundos)
+- Zona segura: x de 48 a 960, y de 48 a 624. O que sai daí pode encostar na
+  moldura do painel.
+- Faixa da legenda: y de 466 a 570.
+- Linha do tempo: y 590, recuada 34 px de cada lado pra que o ponto e o ano
+  caibam dentro da zona segura.
 
-- Rótulo pequeno em cima, linha de Tinta de 2 px, frase grande embaixo.
-- Frase em STIX Two Text 500, 96 a 120 px no Reels, alinhada à esquerda, margem lateral de 96 px.
-- Uma palavra pode ir em itálico.
-- Sobre vídeo: escurece o fundo em 40% atrás do título. Em cartela: fundo Papel, texto Tinta.
+Também existe o perfil `youtube` (1920x1080) para quando o mesmo material virar
+vídeo de canal. O telão manda; o 16:9 é derivado.
+
+### Tipografia na tela
+
+| Peça | Tamanho | Peso |
+| --- | --- | --- |
+| Título de cartela | 60 a 72 px | Bold |
+| Título sobre vídeo | 52 a 60 px | Bold |
+| Legenda | 32 a 36 px | Medium |
+| Etiqueta de ano | 40 px | Bold |
+| Item de lista | 34 px | Medium |
+| Rótulo | 16 px | Bold, caixa alta, 0,12 em |
+| Linha do tempo | 13 px | Medium |
+
+Legenda: no máximo 2 linhas, 6 a 10 palavras por vez. Mais curta que isso fica
+picotada; mais longa não dá tempo de ler de pé.
 
 ### Kit de peças
 
-Toda peça gráfica que entrar no vídeo sai daqui. Se precisar de uma peça nova, ela nasce com o mesmo DNA: papel, tinta, canto arredondado, linha fina.
+**Etiqueta de ano** — caixa branca, barra amarela de 6 px à esquerda, texto em
+azul quase preto. É o carimbo do bloco: `1985–1990`, `2000–2010`.
 
-**Caixa de texto (cartão)**
-- Fundo Papel `#F6F5F1` (ou Papel 2 `#EDEBE5` quando o fundo já é Papel).
-- Cantos de 18 a 20 px. Borda de 1 px em Tinta a 15% de opacidade.
-- Respiro interno de 32 a 44 px.
-- Versão escura: fundo Espresso `#121210`, texto Papel, cantos de 20 a 26 px.
+**Linha do tempo** — fio de 2 px na base com um ponto por marco. O ano ativo
+vira ponto amarelo maior com o número em branco; os outros ficam em cinza claro
+a 55%. Ela aparece em todo bloco histórico e some quando o vídeo sai da história.
 
-**Pílula (etiqueta, chamada, botão)**
-- Cantos totalmente redondos.
-- Contorno de 1 px em Tinta com texto Tinta, ou preenchida em Tinta com texto Papel.
-- STIX Two Text 15 a 16 px na escala do site (no vídeo, escala proporcional).
-- Na chamada principal, um ponto Verde de 9 px à esquerda, pulsando a cada 1,9 s.
-- Seta `→` depois do texto, que desliza 5 px pra direita quando a pílula aparece.
+**Título sobre vídeo** — branco, Bold, alinhado à esquerda, sobre um degradê
+que escurece a base do quadro. Sem caixa, sem contorno.
 
-**Retângulo de imagem (foto, print, tela)**
-- Cantos de 18 px (14 px em peças pequenas).
-- Borda de 2 px em Tinta a 12%.
-- A imagem cobre o retângulo inteiro, nunca fica esticada.
+**Legenda** — branca, Medium, barra amarela de 4 px à esquerda, respiro de 16 px.
+A barra é o que amarra a legenda à marca; sem ela vira legenda de qualquer um.
 
-**Linha**
-- 1 a 2 px em Tinta. Separa blocos e fica embaixo de rótulo. É o "fio" do site.
+**Pílula** — etiqueta pequena de canto reto suave: contorno branco a 45% com
+texto branco, ou preenchida em amarelo com texto azul quase preto quando é o
+dado principal. Serve pra cliente (`Sabesp`), praça (`RJ`, `MG`) e natureza do
+contrato (`Contrato por performance`).
 
-**Número de destaque**
-- STIX Two Text 500, bem grande, espaçamento de -0,03 em.
-- Quando houver vários números, o principal vai em Verde.
-- Número que aparece conta subindo, como os números do site.
+**Cartela** — quadro inteiro em azul profundo com um clarão radial suave no
+canto superior direito. Título centralizado ou à esquerda. É abertura,
+transição e fechamento.
 
-**Lista numerada**
-- Sempre `01`, `02`, `03`, pequeno, em Verde, antes do título do item.
+**Lista** — para missão, visão e valores. Cada item com um fio amarelo de 3 px
+antes, empilhados com respiro de 22 px. Entram escalonados, 0,12 s entre um e
+outro, nunca todos de uma vez.
 
-**Citação**
-- Barra vertical Verde de 3 px à esquerda.
-- Texto em itálico, grande, em Tinta (ou Papel sobre Espresso).
-- Assinatura embaixo em rótulo: `VICTOR FORTUNATO`.
+**Marca** — o logotipo no canto superior direito, altura de 44 px, sempre a
+versão de fundo escuro quando estiver sobre azul ou sobre vídeo. No fechamento,
+Norte Sul e Metropolitana lado a lado, centralizados, com o site em rótulo.
 
-**Monograma F**
-- O F do favicon: letra Papel num quadrado Tinta com cantos arredondados.
-- Pode entrar pequeno no canto como marca d'água no vlog. Opcional.
-
-**Sombra**
-- Só uma: longa, macia, escura e baixa (0 18px 30px, preto a 30%). Nada de sombra dura ou colorida.
-
-**3D**
-- Objeto de papel e tinta: material fosco, textura de papel, luz suave de lado, sombra longa e macia.
-- Movimento de flutuar, igual ao livro no site: sobe e desce 7 px em 7 s, inclina 1,5 grau pra cada lado. Ou gira bem devagar.
-- Bons candidatos: o livro Branding pra BraSileiro, um cartão com o nome da marca do cliente, um bloco com o número `01`, o monograma F em relevo.
-- Feito com Three.js de verdade (luz e sombra reais). Antes de criar do zero, procurar no catálogo do HyperFrames.
-- Nada de cromado, vidro, neon, brilho estourado ou texto 3D girando feito em CSS.
-
-### Assinatura FORTUNATO
-
-Igual ao cabeçalho do site: `FORTUNATO` em STIX Two Text 600 com espaçamento de 0,2 em, um fio vertical fino e, ao lado, `ESTÚDIO / DE MARCAS` em duas linhas pequenas, caixa alta, Tinta suave. Entra na abertura do vlog e no fechamento de todo vídeo, com `fortunatoestudio.com` em rótulo.
+**Número de destaque** — Bold, bem grande, branco, com o rótulo em cinza claro
+embaixo. Quando o número é o assunto da tela, ele pode ir em amarelo.
 
 ### Movimento
 
-- Curva padrão: `cubic-bezier(.2,.8,.2,1)`. Entra rápido, assenta devagar.
-- Elementos entram subindo 20 a 26 px com fade, em 0,4 a 0,6 s.
-- Zoom de ênfase: de 1,00 para 1,06 em 0,5 s. No máximo um a cada 8 segundos.
-- Movimento contínuo sempre sutil. Nada balançando, nada quicando.
-- Transição: corte seco. Quando precisar, fade de 6 quadros ou uma cartela Papel entrando de baixo.
+- Curva padrão: `cubic-bezier(.25,.8,.25,1)`.
+- Peça entra subindo 18 px com fade, em 0,45 s.
+- Legenda entra subindo 8 px com fade, em 0,18 s. Sem quicar, sem letra por letra.
+- A linha do tempo anda: o ponto ativo desliza até o ano novo em 0,6 s.
+- Transição entre blocos: corte seco, ou cartela azul entrando de baixo em 0,4 s.
+- Zoom lento na foto histórica: 1,00 para 1,05 ao longo do tempo que ela fica na
+  tela. Foto parada em telão parece erro de projeção.
+- **O fim casa com o começo.** O último quadro e o primeiro são a mesma cartela
+  azul, pra rodar em loop sem solavanco.
 
-### Câmera e cor
+### Imagem e cor
 
-- Luz natural, de lado, puxando pro quente. Câmera na altura do olho.
-- B-roll de textura: mão rabiscando, papel, café sendo servido, tela com a marca, conversa com cliente, detalhe da mesa do estúdio.
-- Cor neutra puxando pro quente, saturação um pouco abaixo do normal, preto levemente aberto (lembra papel). Pele sempre natural.
-- Citação forte pode virar preto e branco por 2 a 3 segundos.
+- Foto de acervo: manter o grão e a cor da época, sem tentar "consertar" pra
+  parecer nova. 1988 tem que parecer 1988.
+- Vídeo atual: cor neutra, azul levemente puxado, sem estourar o branco do
+  caminhão.
+- Sobre foto ou vídeo com texto por cima, escurecer a base em 55% num degradê
+  que começa transparente na metade da altura.
 
 ### Ritmo
 
-- **Reels:** alguma coisa muda a cada 2 a 4 s (corte, texto, zoom, B-roll). Depois da frase mais forte, meio segundo de respiro antes do próximo corte.
-- **Vlog no YouTube:** planos de 4 a 8 s. A fala corta seco, a imagem pode durar.
-- Pausa máxima entre frases: 0,4 s no Reels, 0,8 s no vlog.
+- Marco histórico: cerca de 3 s cada. Oito marcos cabem nos 25 s que o roteiro
+  reserva pra passagem do tempo.
+- Blocos de missão, visão e valores: a frase fica na tela o tempo da narração
+  mais 0,4 s de respiro.
+- Nada na tela por menos de 1,2 s. De pé, a dez metros, menos que isso não lê.
 
 ### Som
 
-- Trilha instrumental brasileira com licença livre: violão, bossa, samba lento, MPB instrumental. Bem abaixo da voz (cerca de 20 dB a menos que a fala).
-- Efeitos só de som de verdade, analógicos e baixinhos: papel virando, lápis riscando, xícara no pires, clique de caneta.
-- Abertura e fechamento podem ter 1 s de som ambiente do estúdio.
+- Narração em português do Brasil, locução profissional, ritmo calmo.
+- Trilha instrumental com licença livre, cerca de 20 dB abaixo da voz.
+- Sem efeito sonoro de transição. O vídeo tem que fazer sentido no mudo, então o
+  som é conforto, não informação.
 
-## 4. Voz (texto na tela e roteiro)
+## 4. Voz
 
-- Português do Brasil, simples, como quem explica pro amigo no café.
-- Frase curta, palavra comum, exemplo concreto.
-- Provoca com fundamento: aponta o erro comum e mostra o caminho.
-- Humor seco e rápido, sem forçar.
-- Frases da marca que podem fechar um vídeo (uma por vídeo, no máximo):
-  - "A origem é a assinatura."
-  - "Brasilidade não se fantasia. Se carrega."
-  - "Marca brasileira não precisa de sotaque emprestado."
+- Português do Brasil, frase curta, afirmativa.
+- Sujeito concreto: "a Norte Sul", "a equipe", "a rede", não "a empresa" solto.
+- Fala de serviço, não de slogan. O roteiro já define o tom; a tela não inventa
+  frase nova, resume a que foi narrada.
+- Termos que a casa usa: água, esgotos, drenagem, rede coletora, poço de visita,
+  hidrojato, desobstrução, televisionamento, perdas, concessionária.
 
-## 5. Formatos e receitas
+## 5. Nunca fazer
 
-### A. Provocação (Reels, 30 a 60 s)
-
-Victor falando pra câmera, uma opinião forte.
-
-1. **0 a 2 s:** gancho. A frase mais polêmica do vídeo em título grande. O primeiro quadro já tem texto, porque vira a capa no perfil.
-2. **2 a 10 s:** o erro comum, com um exemplo concreto.
-3. **10 a 45 s:** o porquê e o caminho. B-roll a cada 3 a 5 s.
-4. **Fim:** a frase de fechamento em cartela (Papel e Tinta), 2 s, e a pílula de chamada com o ponto verde.
-
-### B. Lista (Reels, 30 a 60 s)
-
-Exemplo: "3 sinais de que sua marca pede desculpas por ser daqui".
-
-1. Gancho com o número.
-2. Cada item abre com `01`, `02`, `03` em Verde e um título curto numa caixa de texto.
-3. O último item é o mais forte.
-4. Fechamento com a assinatura e a chamada.
-
-### C. Case (Reels, 20 a 40 s)
-
-1. Gancho: o problema do cliente numa frase.
-2. Antes (rápido), processo (rabisco, conversa, mesa) e depois (a marca aplicada em retângulos de imagem).
-3. A frase do manifesto da marca em itálico, em citação.
-4. Fechamento: rótulo `MARCA APROVADA`, nome do cliente e a assinatura FORTUNATO.
-
-### D. Vlog do estúdio (YouTube 16:9, 8 a 15 min, com cortes verticais pros Reels)
-
-1. **Abertura fria:** 5 a 10 s da cena mais forte do dia, sem vinheta.
-2. **Vinheta curta:** assinatura FORTUNATO entrando sobre Espresso, até 3 s.
-3. **Capítulos** com rótulo no canto, usando as estações do método quando fizer sentido: `PRELÚDIO`, `IMERSÃO`, `ESTRATÉGIA`, `CRIAÇÃO`, `APLICAÇÃO`, `EVOLUÇÃO`.
-4. Victor narra por cima das imagens sempre que der. É isso que faz a edição por IA funcionar bem.
-5. **Fechamento:** o que ficou do dia, numa frase, e a assinatura.
-
-## 6. Nunca fazer
-
-- Legenda amarela, caixa alta gritando, fonte de impacto (Impact, Montserrat Black, The Bold Font e parecidas).
-- Qualquer fonte além da STIX Two Text. Isso inclui a Allura do site e qualquer manuscrita.
-- Emoji na legenda.
-- Mais de um elemento verde por tela. Gradiente, neon, brilho.
+- Texto fora da zona segura do painel.
+- Legenda ausente em qualquer trecho com narração.
+- Amarelo como fundo de bloco, ou terceiro elemento amarelo na mesma tela.
+- Texto de leitura em cima do azul vivo `#0092FF`.
+- Qualquer fonte que não seja a Helvetica Neue (ou a substituta declarada).
+- Foto de banco de imagem no lugar de foto da obra.
 - Transição de programa: cubo, giro, glitch, zoom com borrão.
-- Whoosh, boom, risada de plateia, som de meme.
-- Elemento balançando ou quicando sem parar.
-- Peça gráfica fora do kit: canto reto onde o kit pede arredondado, borda grossa, sombra dura, cor fora da paleta.
-- 3D cromado, de vidro ou brilhante. Texto 3D girando feito em CSS.
-- Música sem licença.
-- Texto fora da zona segura do Instagram.
-- Estética importada só porque é tendência.
+- Efeito sonoro de impacto, whoosh, boom.
+- Logotipo esticado, girado, com sombra ou sobre fundo que não fecha contraste.
+- Entregar fora de 1008x672 sem o cliente ter pedido outro tamanho.
 - Travessão no texto da tela.
-- Frase no molde "Não é sobre X, é sobre Y".
-- Palavra de texto de IA: "jornada", "desbloquear", "potencializar", "no cenário atual".
-- Copiar uma referência inteira. Da referência a gente rouba o princípio, e o visual continua sendo o nosso.
+- Palavra de texto de IA: "jornada", "desbloquear", "potencializar",
+  "no cenário atual", "soluções inovadoras" solto, "excelência" como enfeite.
 
-## 7. Especificações técnicas
+## 6. Especificações técnicas
 
-- **Reels:** 1080x1920, 30 fps, H.264 + AAC, cores BT.709. Zona segura: x de 60 a 940, y de 220 a 1500.
-- **YouTube:** 1920x1080, 30 fps (ou 24 se a gravação for em 24), H.264 + AAC, BT.709.
-- Vídeo do iPhone em HDR: converter pra SDR com a conversão da própria Apple antes de montar.
-- Primeiro quadro do Reels sempre com imagem e texto que façam sentido sozinhos.
+- **Telão FENASAN:** 1008x672, 30 fps, H.264 + AAC, cores BT.709, MP4 com
+  `+faststart`. Zona segura: x de 48 a 960, y de 48 a 624.
+- **YouTube:** 1920x1080, 30 fps, H.264 + AAC, BT.709.
+- Primeiro e último quadro iguais, pra fechar o loop.
 - Entrega em `renders/<projeto>.mp4`.
 
-## 8. Referências
+## 7. Referências
 
-*Pendente. Entram de 3 a 5 vídeos. Pra cada um: o que roubar (o princípio) e o que deixar (o visual que é dele).*
+*A confirmar.* Entram de 3 a 5 vídeos institucionais de infraestrutura, e pra
+cada um o que roubar (o princípio) e o que deixar (o visual que é dele).
 
 | Referência | O que roubar | O que deixar |
 | --- | --- | --- |
-| | | |
+| Linha do Tempo Norte Sul (FENASAN, 2026) | etiqueta de ano, linha do tempo viva na base, legenda com barra amarela, pílula de cliente e praça | a resolução de 720x480 do arquivo que circulou no WhatsApp |
 
-## 9. Notas
+## 8. Notas
 
 *Cresce a cada vídeo. Formato: data · vídeo · o que mudou e por quê.*
+
+- 19/out/2026 · institucional FENASAN · estilo criado. Cores tiradas do logotipo
+  oficial e amostradas no vídeo da linha do tempo já aprovado; amarelo medido em
+  `#FFBA00` sobre 56 mil pixels de 12 quadros. Formato 1008x672 informado pelo
+  cliente (painel 3L x 2A).

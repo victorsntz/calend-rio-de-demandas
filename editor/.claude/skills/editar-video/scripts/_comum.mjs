@@ -24,9 +24,9 @@ export const TRABALHO = join(R, "trabalho");
 
 export const estilo = JSON.parse(readFileSync(join(R, "estilo.json"), "utf8"));
 
-export function formato(nome = "reels") {
+export function formato(nome = "telao") {
   const f = estilo.formatos[nome];
-  if (!f) throw new Error(`formato desconhecido: ${nome}. Use reels ou youtube.`);
+  if (!f) throw new Error(`formato desconhecido: ${nome}. Use telao ou youtube.`);
   return f;
 }
 
@@ -55,8 +55,11 @@ export function corAss(hex, opacidade = 1) {
   return `&H${h2(a)}${h2(b)}${h2(g)}${h2(r)}`;
 }
 
-/** Os dois acentos verdes do estilo, pra contar quantos verdes há numa tela. */
-export const VERDES = Object.values(estilo.cores).filter((c) => c.acento).map((c) => c.hex.toUpperCase());
+/** O amarelo de acento, pra contar quantos há numa tela. */
+export const ACENTOS = Object.values(estilo.cores).filter((c) => c.acento).map((c) => c.hex.toUpperCase());
+/** Cores em que o ESTILO proíbe encostar texto de leitura. */
+export const SEM_TEXTO = Object.values(estilo.cores).filter((c) => c.textoProibido).map((c) => c.hex.toUpperCase());
+export const MARCA = join(R, "marca");
 
 // ---------- processo ----------
 

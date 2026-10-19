@@ -35,6 +35,10 @@ editor/renders/*
 !editor/renders/.gitkeep
 editor/trabalho/*
 !editor/trabalho/.gitkeep
+# o roteiro é fonte, não derivado: ele sobe. Legendas, peças e montagem saem dele.
+!editor/trabalho/*/
+editor/trabalho/*/*
+!editor/trabalho/*/roteiro.json
 editor/.fontes/
 *.mp4
 *.mov

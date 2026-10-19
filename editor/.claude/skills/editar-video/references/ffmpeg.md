@@ -14,10 +14,15 @@ sangria não pode ser branco puro (nenhuma cor do ESTILO é 255,255,255).
 **Transparência precisa de `--default-background-color=00000000`.** Sem isso o
 fundo sai branco opaco e a peça come o vídeo inteiro.
 
-**Fonte precisa de tempo pra carregar.** `--virtual-time-budget=400` dá esse
-tempo e, de quebra, adianta as animações de forma determinística: é assim que
-`--quadros` gera a sequência do ponto verde pulsando, um screenshot por tempo
-virtual diferente.
+**O viewport é mais baixo que a janela.** `--window-size=1008,672` entrega um
+viewport de uns 600 px: sobra a altura da barra do navegador. O screenshot sai
+com os 1008x672 pedidos, mas os últimos 72 px vêm transparentes, então tudo
+perto da base do quadro **some calado**. Foi assim que a linha do tempo inteira
+desapareceu sem erro nenhum. A saída é pedir a janela com folga
+(`altura + 160`) e recortar o quadro de verdade com o ffmpeg depois.
+
+**Fonte precisa de tempo pra carregar.** `--virtual-time-budget=450` dá esse
+tempo e, de quebra, adianta as animações de forma determinística.
 
 **Medir pixel: leia o cru.** `signalstats` trabalha em YUV de faixa limitada,
 onde branco puro vira 235 e o papel `#F6F5F1` vira 226. Nove de diferença não
@@ -54,10 +59,6 @@ errada.
 `y='if(lt(t-DE,D), SOBE*(1-(t-DE)/D), 0)'`. Começa SOBE pixels abaixo e assenta
 em D segundos. Nada de `sin()`: o ESTILO não quica.
 
-**Grão em multiply.** `blend=all_mode=multiply:all_opacity=0.045:shortest=1`. O
-ruído é claro (180 a 255) de propósito: ruído médio em multiply escurece a
-imagem toda em vez de dar dente de papel.
-
 **`amix` normaliza por padrão.** Isso afunda a voz quando a trilha entra. Use
 `amix=inputs=2:duration=first:normalize=0` e deixe a trilha em `-20dB`, que é o
 que o ESTILO pede.
@@ -69,10 +70,10 @@ Precisa de ffmpeg com libzimg. No Mac, o `avconvert` acerta melhor o tom de pele
 
 **Marque a cor na saída.** `-color_primaries bt709 -color_trc bt709 -colorspace
 bt709`. Sem isso o arquivo sai sem etiqueta e cada player escolhe uma cor, aí o
-verde do estilo muda de tom no celular.
+azul da marca muda de tom no telão.
 
-**`-movflags +faststart`** sempre. Sem isso o Instagram demora pra começar a
-tocar.
+**`-movflags +faststart`** sempre. Player de telão costuma ser simples e engasga
+com arquivo que tem o índice no fim.
 
 ## Quando der ruim
 
@@ -80,14 +81,14 @@ O `montar.mjs` salva o comando inteiro em `trabalho/<projeto>/ffmpeg.txt` toda
 vez, prévia inclusive. Copie, cole no terminal e vá cortando filtro até achar o
 culpado.
 
-## O que ficou de fora
+**Testar o loop com SSIM.** `[0][1]ssim` compara o primeiro quadro com o último
+e imprime `All: 0.99…`. Acima de 0,97 a volta do laço não dá solavanco no telão.
+Como todo filtro de medição, ele escreve em nível `info`.
 
-O `CLAUDE.md` fala do kit WeAreNoCode-YouTube-Editor e do HyperFrames. O kit
-mora numa comunidade do Skool e não dá pra baixar daqui, então a esteira foi
-montada do zero em cima do que já existe na máquina: ffmpeg, Chromium headless
-e Node. Sem dependência de npm, sem conta em lugar nenhum.
+## Fonte paga
 
-O HyperFrames (`npx hyperframes`, "HTML video compositions") continua valendo pro
-que esta esteira não faz: 3D de verdade com Three.js, luz e sombra reais, do
-jeito que a seção de 3D do `ESTILO.md` pede. Quando for montar o livro
-*Branding pra BraSileiro* flutuando, é por lá. Ainda não foi testado aqui.
+A Helvetica Neue é licenciada da Monotype e **não** pode ser baixada nem entrar
+no repositório. Ela mora em `.fontes/`, que o git ignora. O `fontes.mjs` procura
+por nome e, se não achar, baixa a Inter como substituta declarada no ESTILO. O
+`conferir.mjs` reprova qualquer entrega feita com a substituta: no telão da feira
+a fonte trocada é a primeira coisa que um designer vê.

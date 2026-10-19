@@ -10,11 +10,11 @@ import { renderizaPeca } from "./peca.mjs";
 const args = process.argv.slice(2);
 const pega = (n, pad) => (args.includes(n) ? args[args.indexOf(n) + 1] : pad);
 const projeto = pega("--projeto");
-const nomeFormato = pega("--formato", "reels");
+const nomeFormato = pega("--formato", "telao");
 const soRenderizar = args.includes("--render");
 
 if (!projeto) {
-  console.error("uso: node legendas.mjs --projeto <nome> [--formato reels|youtube] [--render]");
+  console.error("uso: node legendas.mjs --projeto <nome> [--formato telao|youtube] [--render]");
   process.exit(1);
 }
 
@@ -86,7 +86,7 @@ if (!soRenderizar) {
 
   writeFileSync(arqLegendas, JSON.stringify({
     projeto, formato: nomeFormato,
-    _leia: `Ajuste o texto e a ênfase aqui. *itálico* e **itálico no verde** (uma por frase). Depois: node legendas.mjs --projeto ${projeto} --render`,
+    _leia: `Ajuste o texto e a ênfase aqui. **palavra** sai no amarelo (uma por tela). Depois: node legendas.mjs --projeto ${projeto} --render`,
     blocos,
   }, null, 2));
 
@@ -119,10 +119,10 @@ const saidaBlocos = [];
 for (let i = 0; i < blocos.length; i++) {
   const b = blocos[i];
   const png = join(destino, `${String(i + 1).padStart(3, "0")}.png`);
-  const { verdes } = await renderizaPeca("legenda", {
-    texto: b.texto, sobreClaro: !!b.sobreClaro, tamanho: b.tamanho, saida: png,
+  const { amarelos } = await renderizaPeca("legenda", {
+    texto: b.texto, tamanho: b.tamanho, saida: png,
   }, nomeFormato);
-  saidaBlocos.push({ ...b, png, verdes });
+  saidaBlocos.push({ ...b, png, destaques: amarelos });
   conta(`  ${String(i + 1).padStart(3, "0")}  ${b.texto}`);
 }
 
@@ -141,10 +141,10 @@ writeFileSync(join(casa, "legendas.srt"), srt);
 
 writeFileSync(join(casa, "legendas-render.json"), JSON.stringify({ projeto, formato: nomeFormato, blocos: saidaBlocos }, null, 2));
 
-const comVerde = saidaBlocos.filter((b) => b.verdes > 0).length;
+const comDestaque = saidaBlocos.filter((b) => b.destaques > 0).length;
 conta(`\n  ${saidaBlocos.length} PNGs em ${destino}`);
 conta(`  legendas.srt pronto pro YouTube`);
-conta(`  ${comVerde} bloco(s) com ênfase em verde`);
-if (comVerde > Math.ceil(saidaBlocos.length / 4)) {
-  aviso("verde demais. O ESTILO manda uma ênfase por frase e uma palavra verde por tela; use com fome.");
+conta(`  ${comDestaque} bloco(s) com palavra destacada em amarelo`);
+if (comDestaque > Math.ceil(saidaBlocos.length / 4)) {
+  aviso("amarelo demais nas legendas. O ESTILO deixa um destaque de conteúdo por tela; use com fome.");
 }

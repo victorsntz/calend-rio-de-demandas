@@ -1,108 +1,115 @@
 {
   "_leia": "Tokens do ESTILO.md em formato de máquina. O ESTILO.md manda; este arquivo é a cópia que as scripts leem. Mudou um, muda o outro.",
+  "marca": "Norte Sul Hidrotecnologia",
   "versao": "1.0.0",
 
   "cores": {
-    "papel":        { "hex": "#F6F5F1", "uso": "fundo de cartela e de caixa, texto sobre vídeo escuro" },
-    "papel2":       { "hex": "#EDEBE5", "uso": "caixas internas, respiro" },
-    "tinta":        { "hex": "#15140F", "uso": "texto principal, linhas, cartela escura" },
-    "tintaSuave":   { "hex": "#5C5B55", "uso": "texto secundário" },
-    "tintaApagada": { "hex": "#6E6A61", "uso": "rótulos, créditos, legendas de apoio" },
-    "espresso":     { "hex": "#121210", "uso": "fundo escuro de abertura, fechamento e citação" },
-    "espressoSuave":{ "hex": "#BFBDB5", "uso": "texto secundário sobre fundo escuro" },
-    "verde":        { "hex": "#1F7A45", "uso": "acento sobre fundo claro", "acento": true },
-    "verdeClaro":   { "hex": "#8FD1A8", "uso": "acento sobre fundo escuro ou vídeo", "acento": true }
+    "azulProfundo":  { "hex": "#04306E", "uso": "fundo de cartela, campo das peças, o azul da marca em área" },
+    "azulNoite":     { "hex": "#011A3D", "uso": "escurecido sobre vídeo, caixa escura, base do degradê" },
+    "azulVivo":      { "hex": "#0092FF", "uso": "o azul do símbolo; fio, ícone, detalhe", "textoProibido": true },
+    "amarelo":       { "hex": "#FFBA00", "uso": "acento: barra da legenda, ano ativo, palavra destacada", "acento": true },
+    "branco":        { "hex": "#FFFFFF", "uso": "texto principal sobre azul e sobre vídeo" },
+    "cinzaClaro":    { "hex": "#C8D4E4", "uso": "texto secundário sobre azul, rótulo, crédito" },
+    "azulQuasePreto":{ "hex": "#001024", "uso": "texto sobre fundo claro, wordmark na versão clara" }
   },
-  "regraDoVerde": { "maxElementosPorTela": 1 },
+  "regraDoAmarelo": {
+    "_leia": "A mobília do sistema (barra do ano, barra da legenda, ponto ativo da linha do tempo) é amarela por desenho e não conta. O que conta é destaque de conteúdo: palavra realçada, pílula preenchida, número em destaque.",
+    "maxDestaquesPorTela": 1, "nuncaComoFundo": true, "nuncaTextoCorrido": true
+  },
 
   "fonte": {
-    "familia": "STIX Two Text",
-    "unica": true,
-    "pesos": { "titulo": 500, "legenda": 600, "enfase": 400, "rotulo": 600 },
-    "arquivos": {
-      "400":  "https://fonts.gstatic.com/s/stixtwotext/v18/YA9Gr02F12Xkf5whdwKf11l0jbKkeidMTtZ5YihS2SOY.ttf",
-      "500":  "https://fonts.gstatic.com/s/stixtwotext/v18/YA9Gr02F12Xkf5whdwKf11l0jbKkeidMTtZ5Yihg2SOY.ttf",
-      "600":  "https://fonts.gstatic.com/s/stixtwotext/v18/YA9Gr02F12Xkf5whdwKf11l0jbKkeidMTtZ5Yii-3iOY.ttf",
-      "700":  "https://fonts.gstatic.com/s/stixtwotext/v18/YA9Gr02F12Xkf5whdwKf11l0jbKkeidMTtZ5YiiH3iOY.ttf",
-      "400i": "https://fonts.gstatic.com/s/stixtwotext/v18/YA9Er02F12Xkf5whdwKf11l0p7uWhf8lJUzXZT2omsvbURU.ttf",
-      "500i": "https://fonts.gstatic.com/s/stixtwotext/v18/YA9Er02F12Xkf5whdwKf11l0p7uWhf8lJUzXZT2omvnbURU.ttf",
-      "600i": "https://fonts.gstatic.com/s/stixtwotext/v18/YA9Er02F12Xkf5whdwKf11l0p7uWhf8lJUzXZT2omhXcURU.ttf"
+    "familia": "Helvetica Neue",
+    "licenca": "Monotype. Licença do cliente, não entra no repositório. Mora em .fontes/, que o git ignora.",
+    "pesos": { "titulo": 700, "legenda": 500, "corpo": 500, "rotulo": 700 },
+    "arquivosEsperados": {
+      "400":  ["HelveticaNeue-Roman", "HelveticaNeue-Regular", "HelveticaNeue", "HelveticaNeueRoman"],
+      "500":  ["HelveticaNeue-Medium", "HelveticaNeueMedium"],
+      "700":  ["HelveticaNeue-Bold", "HelveticaNeueBold"],
+      "400i": ["HelveticaNeue-Italic", "HelveticaNeueItalic"],
+      "700i": ["HelveticaNeue-BoldItalic", "HelveticaNeueBoldItalic"]
     },
-    "licenca": "SIL Open Font License 1.1",
-    "proibidas": ["Impact", "Montserrat Black", "The Bold Font", "Anton", "Bebas Neue", "Allura", "Dancing Script", "Pacifico", "Great Vibes"]
-  },
-
-  "textura": {
-    "grao": { "opacidade": 0.045, "modo": "multiply", "escala": 1, "semente": 7 }
+    "substituta": {
+      "familia": "Inter",
+      "porque": "grotesca livre, desenhada pra tela, com largura e peso próximos da Helvetica Neue",
+      "licenca": "SIL Open Font License 1.1",
+      "arquivos": {
+        "400": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+        "500": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+        "600": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+        "700": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+        "800": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf"
+      }
+    },
+    "proibidas": ["Impact", "Arial Black", "Montserrat", "Poppins", "Bebas Neue", "Anton", "Oswald", "Times", "Georgia"]
   },
 
   "formatos": {
-    "reels": {
-      "largura": 1080, "altura": 1920, "fps": 30,
+    "telao": {
+      "_leia": "Painel de LED da FENASAN: 3 larguras por 2 alturas, 1008x672 px.",
+      "largura": 1008, "altura": 672, "fps": 30,
       "video": "libx264", "audio": "aac", "cores": "bt709",
-      "zonaSegura": { "x1": 60, "x2": 940, "y1": 220, "y2": 1500 },
-      "legenda": { "tamanhoMin": 64, "tamanhoMax": 72, "linhasMax": 2, "palavrasPorVez": [3, 5], "faixaY": [1250, 1450], "alinhamento": "centro" },
-      "gancho": { "tamanhoMin": 96, "tamanhoMax": 120, "alinhamento": "esquerda", "margemLateral": 96, "escurecerFundo": 0.4 },
-      "ritmo": { "mudaACada": [2, 4], "respiroDepoisDaFrase": 0.5, "pausaMaxEntreFrases": 0.4 }
+      "zonaSegura": { "x1": 48, "x2": 960, "y1": 48, "y2": 624 },
+      "legenda":  { "tamanhoMin": 32, "tamanhoMax": 36, "linhasMax": 2, "palavrasPorVez": [6, 10], "faixaY": [466, 570], "alinhamento": "esquerda" },
+      "titulo":   { "tamanhoMin": 52, "tamanhoMax": 60, "alinhamento": "esquerda", "margemLateral": 48, "escurecerBase": 0.55 },
+      "cartela":  { "tamanhoMin": 60, "tamanhoMax": 72 },
+      "linhaDoTempo": { "y": 590, "espessura": 2, "raioPonto": 5, "raioPontoAtivo": 8, "recuoLateral": 34 },
+      "marca":    { "altura": 44, "canto": "superior-direito", "_leia": "a margem sai da zona segura; passe --margem só pra forçar outra" },
+      "ritmo": { "marcoHistorico": 3, "minimoNaTela": 1.2, "respiroDepoisDaFrase": 0.4 }
     },
     "youtube": {
       "largura": 1920, "altura": 1080, "fps": 30,
       "video": "libx264", "audio": "aac", "cores": "bt709",
-      "zonaSegura": { "x1": 60, "x2": 1860, "y1": 60, "y2": 1020 },
-      "legenda": { "tamanhoMin": 52, "tamanhoMax": 56, "linhasMax": 1, "palavrasPorVez": [4, 7], "faixaY": [1000, 1000], "alinhamento": "centro", "acimaDaBase": 80 },
-      "gancho": { "tamanhoMin": 72, "tamanhoMax": 96, "alinhamento": "esquerda", "margemLateral": 120, "escurecerFundo": 0.4 },
-      "ritmo": { "mudaACada": [4, 8], "respiroDepoisDaFrase": 0.5, "pausaMaxEntreFrases": 0.8 }
+      "zonaSegura": { "x1": 90, "x2": 1830, "y1": 60, "y2": 1020 },
+      "legenda":  { "tamanhoMin": 44, "tamanhoMax": 52, "linhasMax": 2, "palavrasPorVez": [6, 10], "faixaY": [800, 930], "alinhamento": "esquerda" },
+      "titulo":   { "tamanhoMin": 80, "tamanhoMax": 96, "alinhamento": "esquerda", "margemLateral": 90, "escurecerBase": 0.55 },
+      "cartela":  { "tamanhoMin": 92, "tamanhoMax": 110 },
+      "linhaDoTempo": { "y": 958, "espessura": 3, "raioPonto": 7, "raioPontoAtivo": 11, "recuoLateral": 48 },
+      "marca":    { "altura": 72, "canto": "superior-direito" },
+      "ritmo": { "marcoHistorico": 3, "minimoNaTela": 1.2, "respiroDepoisDaFrase": 0.4 }
     }
   },
 
   "legenda": {
-    "corSobreVideo": "#F6F5F1",
-    "sombraSobreVideo": { "x": 0, "y": 2, "desfoque": 12, "cor": "#000000", "opacidade": 0.35 },
-    "corSobreClaro": "#15140F",
-    "sombraSobreClaro": null,
-    "entrada": { "subir": [6, 10], "fade": 0.2 },
-    "enfase": { "estilo": "italico", "corQuandoPalavraDoVideo": "#8FD1A8", "maxPorFrase": 1 },
-    "limpar": ["né", "tipo", "ééé", "éé", "aham", "ahn", "hum", "tá", "assim", "sabe"],
+    "cor": "#FFFFFF",
+    "barra": { "largura": 4, "cor": "#FFBA00", "respiro": 16 },
+    "entrada": { "subir": 8, "fade": 0.18 },
+    "enfase": { "cor": "#FFBA00", "maxPorFrase": 1 },
     "semEmoji": true,
-    "caixaAltaSoEmRotulo": true
-  },
-
-  "movimento": {
-    "curva": "cubic-bezier(.2,.8,.2,1)",
-    "entrada": { "subir": [20, 26], "duracao": [0.4, 0.6] },
-    "zoomEnfase": { "de": 1.0, "para": 1.06, "duracao": 0.5, "intervaloMin": 8 },
-    "flutuar": { "amplitude": 7, "periodo": 7, "inclinacao": 1.5 },
-    "transicao": { "padrao": "corte seco", "fadeQuadros": 6 },
-    "proibido": ["cubo", "giro", "glitch", "zoom com borrão", "quicar", "balançar sem parar"]
+    "sempreQueHouverNarracao": true
   },
 
   "kit": {
-    "cartao":   { "fundo": "#F6F5F1", "fundoAlternativo": "#EDEBE5", "raio": [18, 20], "borda": { "largura": 1, "cor": "#15140F", "opacidade": 0.15 }, "respiro": [32, 44], "escuro": { "fundo": "#121210", "texto": "#F6F5F1", "raio": [20, 26] } },
-    "pilula":   { "raio": "total", "contorno": { "largura": 1, "cor": "#15140F" }, "preenchida": { "fundo": "#15140F", "texto": "#F6F5F1" }, "tamanhoBase": [15, 16], "ponto": { "diametro": 9, "cor": "#1F7A45", "pulso": 1.9 }, "seta": { "glifo": "→", "desliza": 5 } },
-    "imagem":   { "raio": 18, "raioPequeno": 14, "borda": { "largura": 2, "cor": "#15140F", "opacidade": 0.12 }, "ajuste": "cover" },
-    "linha":    { "largura": [1, 2], "cor": "#15140F" },
-    "numero":   { "peso": 500, "espacamento": -0.03, "principalEmVerde": true, "contaSubindo": true },
-    "lista":    { "prefixo": ["01", "02", "03"], "corPrefixo": "#1F7A45", "tamanhoPrefixo": "pequeno" },
-    "citacao":  { "barra": { "largura": 3, "cor": "#1F7A45", "lado": "esquerda" }, "estilo": "italico", "assinatura": "VICTOR FORTUNATO" },
-    "rotulo":   { "peso": 600, "caixaAlta": true, "espacamento": 0.26, "tamanho": "pequeno" },
-    "monograma":{ "letra": "F", "corLetra": "#F6F5F1", "fundo": "#15140F", "raio": "arredondado" },
-    "assinatura": { "texto": "FORTUNATO", "peso": 600, "espacamento": 0.2, "secundario": ["ESTÚDIO", "DE MARCAS"], "corSecundario": "#5C5B55", "site": "fortunatoestudio.com" },
-    "sombra":   { "x": 0, "y": 18, "desfoque": 30, "cor": "#000000", "opacidade": 0.3 }
+    "ano":      { "fundo": "#FFFFFF", "texto": "#001024", "barra": { "largura": 6, "cor": "#FFBA00" }, "raio": 4, "respiro": [14, 22], "tamanho": 40 },
+    "linhaDoTempo": { "cor": "#C8D4E4", "opacidade": 0.55, "corAtivo": "#FFBA00", "deslize": 0.6, "tamanhoAno": 13 },
+    "titulo":   { "cor": "#FFFFFF", "peso": 700, "alinhamento": "esquerda" },
+    "pilula":   { "raio": 4, "contorno": { "largura": 1, "cor": "#FFFFFF", "opacidade": 0.45 }, "preenchida": { "fundo": "#FFBA00", "texto": "#001024" }, "tamanho": 15, "respiro": [7, 13] },
+    "cartela":  { "fundo": "#04306E", "clarao": { "cor": "#0A58B4", "opacidade": 0.5, "canto": "superior-direito" } },
+    "lista":    { "fio": { "largura": 3, "cor": "#FFBA00", "altura": 26 }, "respiro": 22, "escalonar": 0.12, "tamanho": 34 },
+    "marca":    { "arquivoEscuro": "marca/logo-nortesul-escuro-compacto.png", "arquivoClaro": "marca/logo-nortesul-compacto.png", "assinaturaEscura": "marca/logo-nortesul-escuro.png", "assinaturaClara": "marca/logo-nortesul.png", "site": "nortesultec.com.br", "irma": "Metropolitana", "_leia": "compacto (sem o descritivo) na marca d'água; a versão cheia só no fechamento, onde o descritivo lê" },
+    "numero":   { "peso": 700, "cor": "#FFFFFF", "corDestaque": "#FFBA00", "espacamento": -0.02 },
+    "rotulo":   { "peso": 700, "caixaAlta": true, "espacamento": 0.12, "tamanho": 16, "cor": "#C8D4E4" },
+    "degrade":  { "ate": 0.55, "comecaEm": 0.45 }
+  },
+
+  "movimento": {
+    "curva": "cubic-bezier(.25,.8,.25,1)",
+    "entrada": { "subir": 18, "duracao": 0.45 },
+    "zoomFoto": { "de": 1.0, "para": 1.05 },
+    "transicao": { "padrao": "corte seco", "cartelaSobe": 0.4 },
+    "loop": { "primeiroQuadroIgualAoUltimo": true },
+    "proibido": ["cubo", "giro", "glitch", "zoom com borrão", "quicar", "letra por letra"]
   },
 
   "som": {
-    "trilha": { "estilo": ["violão", "bossa", "samba lento", "MPB instrumental"], "licenca": "livre", "dbAbaixoDaVoz": 20 },
-    "efeitos": { "permitidos": ["papel virando", "lápis riscando", "xícara no pires", "clique de caneta"], "proibidos": ["whoosh", "boom", "risada de plateia", "som de meme"] },
-    "ambiente": { "aberturaFechamento": 1 }
+    "narracao": { "idioma": "pt-BR", "ritmo": "calmo" },
+    "trilha": { "licenca": "livre", "dbAbaixoDaVoz": 20 },
+    "efeitos": { "proibidos": ["whoosh", "boom", "impacto", "som de transição"] },
+    "mudoPrecisaFuncionar": true
   },
 
   "voz": {
-    "palavrasProibidas": ["jornada", "desbloquear", "potencializar", "no cenário atual", "alavancar", "mergulhar fundo", "game changer", "inovador"],
+    "palavrasProibidas": ["jornada", "desbloquear", "potencializar", "no cenário atual", "alavancar", "mergulhar fundo", "game changer"],
     "travessaoProibido": true,
-    "moldeProibido": "não é sobre X, é sobre Y",
-    "frasesDeFechamento": ["A origem é a assinatura.", "Brasilidade não se fantasia. Se carrega.", "Marca brasileira não precisa de sotaque emprestado."],
-    "maxFrasesDeFechamentoPorVideo": 1
-  },
-
-  "capitulos": ["PRELÚDIO", "IMERSÃO", "ESTRATÉGIA", "CRIAÇÃO", "APLICAÇÃO", "EVOLUÇÃO"]
+    "termosDaCasa": ["água", "esgotos", "drenagem", "rede coletora", "poço de visita", "hidrojato", "desobstrução", "televisionamento", "perdas", "concessionária"]
+  }
 }

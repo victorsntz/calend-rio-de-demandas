@@ -4,18 +4,17 @@
 // Formato do montagem.json (tempos em segundos, "de"/"ate" dos clipes são do
 // arquivo bruto; os das peças são da linha do tempo já montada):
 // {
-//   "projeto": "2026-10-10-nome", "formato": "reels",
+//   "projeto": "institucional-fenasan", "formato": "telao",
 //   "clipes": [{ "arquivo": "brutos/.../a-sdr.mov", "de": 3.2, "ate": 8.9, "zoom": true }],
 //   "legendas": true,
 //   "pecas":   [{ "png": "trabalho/.../gancho.png", "de": 0, "ate": 2.6, "entrada": "subir" }],
 //   "trilha":  { "arquivo": "trilha.mp3", "db": -20 },
-//   "grao": true,
 //   "saida": "renders/2026-10-10-nome.mp4"
 // }
 import { readFileSync, existsSync, statSync } from "node:fs";
 import { join, resolve, dirname } from "node:path";
 import {
-  estilo, formato, R, RENDERS, TRABALHO, oficina, pasta, roda, ffprobe,
+  estilo, formato, R, RENDERS, oficina, pasta, roda, ffprobe,
   segundos, titulo, conta, aviso,
 } from "./_comum.mjs";
 
@@ -29,7 +28,7 @@ if (!arqEdl || !existsSync(arqEdl)) {
 }
 
 const edl = JSON.parse(readFileSync(arqEdl, "utf8"));
-const F = formato(edl.formato || "reels");
+const F = formato(edl.formato || "telao");
 const projeto = edl.projeto || "sem-nome";
 const casa = oficina(projeto);
 
@@ -79,13 +78,13 @@ for (const p of pecas) {
   if (p.ate > duracaoTotal + 0.01) aviso(`peça passa do fim do vídeo: ${p.png} vai até ${p.ate}s e o vídeo tem ${duracaoTotal.toFixed(2)}s`);
 }
 
-// Regra do verde: duas peças verdes ao mesmo tempo na tela é proibido.
+// Regra do amarelo: dois destaques de conteúdo ao mesmo tempo na tela é demais.
 const sobrepoe = (a, b) => a.de < b.ate && b.de < a.ate;
-const verdes = pecas.filter((p) => p.verde);
-for (let i = 0; i < verdes.length; i++) {
-  for (let j = i + 1; j < verdes.length; j++) {
-    if (sobrepoe(verdes[i], verdes[j])) {
-      aviso(`dois elementos verdes na tela ao mesmo tempo (${verdes[i].de}s e ${verdes[j].de}s). O ESTILO deixa um.`);
+const destaques = pecas.filter((p) => p.destaque);
+for (let i = 0; i < destaques.length; i++) {
+  for (let j = i + 1; j < destaques.length; j++) {
+    if (sobrepoe(destaques[i], destaques[j])) {
+      aviso(`dois destaques amarelos na tela ao mesmo tempo (${destaques[i].de}s e ${destaques[j].de}s). O ESTILO deixa um.`);
     }
   }
 }
@@ -124,21 +123,7 @@ filtro.push(`${paresConcat}concat=n=${clipes.length}:v=1:a=1[vcat][voz0]`);
 
 let v = "[vcat]";
 
-// 2. grão de papel por cima de tudo, em multiply, baixinho
-if (edl.grao !== false) {
-  const grao = perto(edl.graoPng || join(TRABALHO, "_textura", `grao-${F.largura}x${F.altura}.png`));
-  if (existsSync(grao)) {
-    entradas.push("-loop", "1", "-i", grao);
-    const idx = proximo();
-    filtro.push(`[${idx}:v]scale=${L}:${A},format=gray,setsar=1[grao]`);
-    filtro.push(`${v}[grao]blend=all_mode=multiply:all_opacity=${estilo.textura.grao.opacidade}:shortest=1[vgrao]`);
-    v = "[vgrao]";
-  } else {
-    aviso(`sem textura de grão em ${grao}. Rode: node grao.mjs --formato ${edl.formato || "reels"}`);
-  }
-}
-
-// 3. peças e legendas, cada uma com sua entrada
+// 2. peças e legendas, cada uma com sua entrada
 const M = estilo.movimento;
 const escala = previa ? 0.5 : 1;
 for (const [i, p] of pecas.entries()) {
@@ -146,8 +131,8 @@ for (const [i, p] of pecas.entries()) {
   const idx = proximo();
   const dur = Math.max(p.ate - p.de, 0.1);
   const ehLegenda = p.entrada === "legenda";
-  const subir = Math.round((ehLegenda ? estilo.legenda.entrada.subir[1] : M.entrada.subir[1]) * escala);
-  const fadeIn = ehLegenda ? estilo.legenda.entrada.fade : M.entrada.duracao[0];
+  const subir = Math.round((ehLegenda ? estilo.legenda.entrada.subir : M.entrada.subir) * escala);
+  const fadeIn = ehLegenda ? estilo.legenda.entrada.fade : M.entrada.duracao;
   const fadeOut = Math.min(ehLegenda ? 0.12 : 0.3, dur / 2);
 
   filtro.push(
@@ -166,7 +151,7 @@ for (const [i, p] of pecas.entries()) {
   v = `[v${i}o]`;
 }
 
-// 4. som: voz nivelada, trilha bem embaixo
+// 3. som: voz nivelada, trilha bem embaixo
 let a = "[voz0]";
 filtro.push(`${a}loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[voz]`);
 a = "[voz]";
@@ -215,8 +200,10 @@ const cmd = [
 
 titulo(`Montagem · ${projeto}${previa ? " · prévia" : ""}`);
 conta(`  ${clipes.length} clipe(s) · ${pecas.length} peça(s) na tela · ${duracaoTotal.toFixed(2)} s · ${L}x${A} ${FPS}fps`);
-if (!previa && duracaoTotal > 60 && (edl.formato || "reels") === "reels") {
-  aviso(`${duracaoTotal.toFixed(0)}s de Reels. O ESTILO trabalha na faixa de 30 a 60.`);
+// O ESTILO manda o fim casar com o começo, pra rodar em loop no telão sem solavanco.
+if (!previa && estilo.movimento.loop?.primeiroQuadroIgualAoUltimo && !edl.loopConferido) {
+  aviso("o ESTILO pede o primeiro e o último quadro iguais, pra fechar o loop no telão.");
+  aviso('marque "loopConferido": true no montagem.json quando tiver conferido.');
 }
 
 const roteiro = join(casa, previa ? "ffmpeg-previa.txt" : "ffmpeg.txt");
@@ -233,4 +220,4 @@ try {
 conta(`\n  ${saida}  (${(statSync(saida).size / 1e6).toFixed(1)} MB)`);
 conta(previa
   ? `  Prévia pra aprovar. Depois do aval: node montar.mjs ${arqEdl}`
-  : `  Confira antes de postar: node conferir.mjs "${saida}" --formato ${edl.formato || "reels"}`);
+  : `  Confira antes de postar: node conferir.mjs "${saida}" --formato ${edl.formato || "telao"}`);
