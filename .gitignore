@@ -46,6 +46,10 @@ editor/trabalho/*/*
 !editor/trabalho/*/narracao.txt
 !editor/trabalho/*/transcricao.md
 !editor/trabalho/*/transcricao.txt
+# O plano estratégico fica de fora: é documento interno, com nome e cargo da
+# diretoria, lista de clientes-alvo, estratégia de caixa e análise de contratos.
+# As outras transcrições sobem porque são material de feira, feito pra circular.
+editor/trabalho/plano-estrategico/
 !editor/trabalho/*/creditos.json
 editor/.fontes/
 *.mp4
