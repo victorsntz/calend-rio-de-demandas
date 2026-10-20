@@ -1,0 +1,211 @@
+{
+ "projeto": "creditos-confraternizacao",
+ "_leia": "Créditos de fim de filme: nomes rolando à esquerda, quadro de fotos e clipes à direita.",
+ "formato": {
+  "largura": 1920,
+  "altura": 1080,
+  "fps": 30
+ },
+ "fundo": "#011A3D",
+ "nomes": "trabalho/creditos-confraternizacao/nomes.json",
+ "simbolo": {
+  "arquivo": "marca/logo-nortesul-simbolo.png",
+  "altura": 44,
+  "topo": 48
+ },
+ "coluna": {
+  "centro": 480,
+  "largura": 800,
+  "tamanho": 38,
+  "entrelinha": 59,
+  "cabecalho": 220,
+  "tamanhoCabecalho": 22
+ },
+ "quadro": {
+  "largura": 580,
+  "altura": 870,
+  "centro": 1440
+ },
+ "mescla": 1,
+ "entrada": 1.5,
+ "saida": "renders/creditos-confraternizacao.mp4",
+ "esperaAntes": 2,
+ "esperaDepois": 4,
+ "midia": [
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4593.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4508.mov",
+   "de": 0,
+   "dur": 2.37
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4597.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4515.mov",
+   "de": 0,
+   "dur": 2.07
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4607.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4519.mov",
+   "de": 1.23,
+   "dur": 4
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4615.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4520.mov",
+   "de": 0,
+   "dur": 2.6
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4620.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4521.mov",
+   "de": 0,
+   "dur": 2.97
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4625.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4524.mov",
+   "de": 0,
+   "dur": 3.13
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4632.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4526.mov",
+   "de": 0.98,
+   "dur": 4
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4638.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4527.mov",
+   "de": 0,
+   "dur": 3
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4647.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4530.mov",
+   "de": 0.88,
+   "dur": 4
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4653.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4547.mov",
+   "de": 0.28,
+   "dur": 4
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4655.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4552.mov",
+   "de": 0,
+   "dur": 1.83
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4662.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4563.mov",
+   "de": 0.35,
+   "dur": 4
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4665.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4617.mov",
+   "de": 0,
+   "dur": 3.73
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4672.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4628.mov",
+   "de": 0,
+   "dur": 2.27
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4675.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4677.mov",
+   "de": 0,
+   "dur": 2.47
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4680.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4710.mov",
+   "de": 0.02,
+   "dur": 4
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4687.jpg",
+   "foto": true,
+   "dur": 5
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4712.mov",
+   "de": 0,
+   "dur": 3.1
+  },
+  {
+   "arquivo": "brutos/creditos-confraternizacao/fotos/IMG_4699.jpg",
+   "foto": true,
+   "dur": 6.5
+  }
+ ]
+}

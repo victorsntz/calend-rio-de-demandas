@@ -317,7 +317,8 @@
       "site": "nortesultec.com.br",
       "irma": "Metropolitana",
       "_leia": "compacto (sem o descritivo) na marca d'agua; a versao cheia so a partir de 54 px, onde o descritivo le. Os quatro arquivos vem aparados: a altura pedida e a altura do desenho.",
-      "alturaMinimaAssinatura": 54
+      "alturaMinimaAssinatura": 54,
+      "simbolo": "marca/logo-nortesul-simbolo.png"
     },
     "numero": {
       "peso": 700,
@@ -335,6 +336,17 @@
     "degrade": {
       "ate": 0.55,
       "comecaEm": 0.45
+    },
+    "creditos": {
+      "_leia": "Creditos de fim de filme: nomes rolando de um lado, quadro de foto e clipe do outro.",
+      "tamanho": 38,
+      "entrelinha": 59,
+      "segundosNaTela": 4.6,
+      "mescla": 1,
+      "quadro": {
+        "proporcao": "2:3",
+        "_leia": "meio termo entre a foto 3:4 e o clipe 9:16, pra nao cortar cabeca nem lateral demais"
+      }
     }
   },
   "movimento": {

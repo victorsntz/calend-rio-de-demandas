@@ -179,6 +179,27 @@ do L fica logo acima dela e some junto.
 **Número de destaque** — Bold, bem grande, branco, com o rótulo em cinza claro
 embaixo. Quando o número é o assunto da tela, ele pode ir em amarelo.
 
+**Créditos** — fim de filme: a lista de nomes rolando numa coluna de um lado,
+centralizada, e um quadro de retrato do outro com foto e clipe mesclando um no
+outro. Fundo azul noite, só o símbolo parado no alto, pequeno.
+
+**A velocidade da rolagem se mede em segundos na tela, não em pixels.** Um nome
+precisa de uns **4,5 s** entre entrar pelo pé e sair pelo topo. Daí sai a conta:
+velocidade = (altura da tira + altura do quadro) ÷ tempo de rolagem, e o teste é
+dividir a altura do quadro pela velocidade. Mais rápido que isso, quem assiste
+não acha o próprio nome; mais devagar, o vídeo arrasta.
+
+**O quadro de mídia vai em 2:3.** Foto de celular vem em 3:4 e clipe de celular
+em 9:16; num 9:16 a foto perde as laterais, num 3:4 o clipe perde cabeça e pé.
+O 2:3 divide o prejuízo e ninguém fica decapitado.
+
+**O símbolo sozinho**, sem o descritivo e sem o wordmark, mora em
+`marca/logo-nortesul-simbolo.png`. Ele é o que entra quando a marca só precisa
+estar presente, não falar. Cortar o símbolo do logotipo compacto na mão não
+funciona: o "N" do wordmark fica tão perto que entra junto no recorte. O jeito
+é cortar largo e apagar por alpha o que é escuro, já que o símbolo é todo azul
+vivo e não tem um pixel escuro.
+
 ### Movimento
 
 - Curva padrão: `cubic-bezier(.25,.8,.25,1)`.
@@ -286,6 +307,12 @@ cada um o que roubar (o princípio) e o que deixar (o visual que é dele).
 ## 8. Notas
 
 *Cresce a cada vídeo. Formato: data · vídeo · o que mudou e por quê.*
+
+- 20/out/2026 · créditos da confraternização · peça nova no kit: créditos de fim
+  de filme, com 396 colaboradores. A regra que saiu daqui é a de velocidade:
+  mede-se em segundos na tela, não em pixels por segundo. E o quadro de mídia
+  virou 2:3 porque foto de celular e clipe de celular não têm a mesma forma.
+  O símbolo sozinho virou arquivo próprio em `marca/`.
 
 - 19/out/2026 · institucional FENASAN · terceira decupagem. Os quatro PNGs de
   `marca/` foram aparados: a assinatura cheia tinha 18,75% de transparência de

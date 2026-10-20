@@ -45,6 +45,7 @@ editor/trabalho/*/*
 !editor/trabalho/*/roteiro.json
 !editor/trabalho/*/narracao.txt
 !editor/trabalho/*/transcricao.md
+!editor/trabalho/*/creditos.json
 editor/.fontes/
 *.mp4
 *.mov
