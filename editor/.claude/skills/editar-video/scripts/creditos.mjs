@@ -273,36 +273,43 @@ async function montar(alturaTira, duracao) {
     (Ag ? ` · agradecimento parado nos últimos ${esperaDepois}s` : ""));
 
   const colX = Math.round(Col.centro - Col.largura / 2);
-  const quadroX = Math.round(Q.centro - Q.largura / 2);
-  const quadroY = Math.round((F.altura - Q.altura) / 2);
   const T = duracao.toFixed(3);
   const entradas = [
     "-f", "lavfi", "-t", T, "-i", `color=c=${C.fundo}:s=${F.largura}x${F.altura}:r=${F.fps}`,
     "-loop", "1", "-t", T, "-i", arqTira,
-    "-i", arqMidia,
   ];
-  let n = 3;
+  let n = 2;
   const filtro = [
     `[1:v]format=rgba[tira]`,
     `[0:v][tira]overlay=x=${colX}:y=${posY}[a]`,
   ];
+  let ultimo = "[a]";
 
-  // Com canto arredondado o quadro entra pela máscara; sem raio, entra direto.
-  let quadro = "[2:v]";
-  if (Q.raio) {
-    entradas.push("-loop", "1", "-t", T, "-i", await mascara());
-    filtro.push(`[2:v]format=rgba[mv]`, `[${n}:v]format=gray[mk]`, `[mv][mk]alphamerge[qd]`);
-    quadro = "[qd]"; n++;
+  // O quadro de mídia é opcional: sem ele sobram só os nomes, no meio da tela,
+  // que é o formato clássico de crédito de filme.
+  if (Q && C.midia && C.midia.length) {
+    entradas.push("-i", arqMidia);
+    let quadro = `[${n}:v]`; n++;
+    // Com canto arredondado o quadro entra pela máscara; sem raio, entra direto.
+    if (Q.raio) {
+      entradas.push("-loop", "1", "-t", T, "-i", await mascara());
+      filtro.push(`${quadro}format=rgba[mv]`, `[${n}:v]format=gray[mk]`, `[mv][mk]alphamerge[qd]`);
+      quadro = "[qd]"; n++;
+    }
+    filtro.push(`[a]${quadro}overlay=x=${Math.round(Q.centro - Q.largura / 2)}:` +
+      `y=${Math.round((F.altura - Q.altura) / 2)}[b]`);
+    ultimo = "[b]";
   }
-  filtro.push(`[a]${quadro}overlay=x=${quadroX}:y=${quadroY}[b]`);
-  let ultimo = "[b]";
 
   // O símbolo é opcional: sem ele o alto do quadro fica livre pros nomes.
   if (C.simbolo) {
     const sim = perto(C.simbolo.arquivo);
     if (!existsSync(sim)) { console.error(`não achei o símbolo: ${sim}`); process.exit(1); }
     entradas.push("-loop", "1", "-t", T, "-i", sim);
-    filtro.push(`[${n}:v]scale=-1:${C.simbolo.altura}[sb]`, `[b][sb]overlay=x=(W-w)/2:y=${C.simbolo.topo}[c]`);
+    // Encadeia no último rótulo, não num "[b]" fixo: sem quadro de mídia o [b]
+    // nem existe, e a cadeia quebra na hora do render.
+    filtro.push(`[${n}:v]scale=-1:${C.simbolo.altura}[sb]`,
+      `${ultimo}[sb]overlay=x=(W-w)/2:y=${C.simbolo.topo}[c]`);
     ultimo = "[c]"; n++;
   }
 
@@ -339,7 +346,14 @@ let alturaTira = 0, duracao = 0;
 if (faz("--tiras")) alturaTira = await tiras();
 else if (existsSync(arqTira)) alturaTira = (await medida(arqTira))[1];
 
-if (faz("--midia")) duracao = await midia();
+// Sem quadro de mídia, quem manda na duração é o roteiro: não há coluna de
+// fotos pra medir. Com quadro, a duração é a dela, pra tira e imagem fecharem
+// no mesmo instante.
+const temMidia = !!(C.midia && C.midia.length);
+if (!temMidia) {
+  duracao = Number(C.duracao);
+  if (!duracao) { console.error("sem midia no roteiro: preciso de \"duracao\" em segundos."); process.exit(1); }
+} else if (faz("--midia")) duracao = await midia();
 else duracao = C.midia.reduce((s, m) => s + m.dur, 0) - (C.midia.length - 1) * C.mescla;
 
 if (faz("--montar")) {
