@@ -209,7 +209,11 @@ async function montar(alturaTira, duracao) {
     `[a][2:v]overlay=x=${quadroX}:y=${quadroY}[b]`,
     `[3:v]scale=-1:${simH}[n]`,
     `[b][n]overlay=x=(W-w)/2:y=${C.simbolo.topo}[c]`,
-    `[c]fade=t=in:st=0:d=${C.entrada ?? 1.5},fade=t=out:st=${(duracao - (C.saida ?? 1.5)).toFixed(2)}:d=${C.saida ?? 1.5}[v]`,
+    // O fade de saída se chama "fecho" e não "saida" de propósito: "saida" é o
+    // arquivo que sai, e usar o mesmo nome pros dois punha o caminho do mp4
+    // dentro da duração do fade. É o mesmo tropeço do "ate" de tempo virando
+    // âncora de layout.
+    `[c]fade=t=in:st=0:d=${C.entrada ?? 1.5},fade=t=out:st=${(duracao - (C.fecho ?? 1.5)).toFixed(2)}:d=${C.fecho ?? 1.5}[v]`,
   ];
 
   const saida = previa ? join(casa, `${projeto}-previa.mp4`) : perto(C.saida || join(RENDERS, `${projeto}.mp4`));

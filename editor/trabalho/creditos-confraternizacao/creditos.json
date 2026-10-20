@@ -28,7 +28,6 @@
  },
  "mescla": 1,
  "entrada": 1.5,
- "saida": "renders/creditos-confraternizacao.mp4",
  "esperaAntes": 2,
  "esperaDepois": 4,
  "midia": [
@@ -207,5 +206,7 @@
    "foto": true,
    "dur": 6.5
   }
- ]
+ ],
+ "fecho": 1.5,
+ "saida": "renders/creditos-confraternizacao.mp4"
 }
