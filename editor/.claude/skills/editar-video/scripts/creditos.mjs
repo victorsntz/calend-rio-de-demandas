@@ -148,21 +148,37 @@ async function midia() {
   for (const [i, m] of C.midia.entries()) {
     const fonte = perto(m.arquivo);
     if (!existsSync(fonte)) { console.error(`não achei: ${fonte}`); process.exit(1); }
-    // O nome do preparado carrega o corte e a duração, não só a origem. Sem
-    // isso, mudar o tempo de um item no roteiro reaproveitava em silêncio o
-    // arquivo antigo, com a duração velha, e a montagem saía fora do lugar.
-    const etiqueta = `${basename(fonte).replace(/\.[^.]+$/, "")}-${(m.de ?? 0)}-${m.dur}`.replace(/[^a-z0-9.-]+/gi, "-");
+    // "dur" é quanto o item fica na tela. "origemDur" é quanto de material
+    // existe pra isso. Quando o clipe é mais curto que o tempo que ele tem,
+    // ele vai mais devagar em vez de a montagem correr.
+    const origem = m.origemDur ?? m.dur;
+    const lento = m.dur / origem;
+
+    // O nome do preparado carrega o corte, a duração e a esticada, não só a
+    // origem. Sem isso, mudar o tempo de um item no roteiro reaproveitava em
+    // silêncio o arquivo antigo e a montagem saía fora do lugar.
+    const etiqueta = `${basename(fonte).replace(/\.[^.]+$/, "")}-${m.de ?? 0}-${origem}-${m.dur}`
+      .replace(/[^a-z0-9.-]+/gi, "-");
     const saida = join(dirPrep, `${String(i + 1).padStart(2, "0")}-${etiqueta}.mp4`);
     if (existsSync(saida) && statSync(saida).size > 10000 && !args.includes("--forcar")) { prontos.push(saida); continue; }
 
+    // Esticar só com setpts repete quadro e o movimento judia. O minterpolate
+    // em blend mistura um quadro no seguinte: sai lento e liso, e é barato
+    // porque não calcula vetor de movimento.
+    const devagar = lento > 1.02
+      ? `setpts=${lento.toFixed(4)}*PTS,minterpolate=fps=${F.fps}:mi_mode=blend,`
+      : "";
     // Preenche o quadro e corta o que sobra: foto em 3:4 e clipe em 9:16 cabem
     // no mesmo retrato sem barra preta e sem deformar ninguém.
-    const vf = `scale=${Q.largura}:${Q.altura}:force_original_aspect_ratio=increase,` +
-      `crop=${Q.largura}:${Q.altura},setsar=1,fps=${F.fps},format=yuv420p`;
+    const vf = `${devagar}scale=${Q.largura}:${Q.altura}:force_original_aspect_ratio=increase,` +
+      `crop=${Q.largura}:${Q.altura},setsar=1,fps=${F.fps},format=yuv420p,` +
+      // O arredondamento do setpts deixa o clipe uns quadros curto, e aí as
+      // mesclagens seguintes andam todas pra trás. O último quadro cobre a sobra.
+      `tpad=stop_mode=clone:stop_duration=1`;
     const entrada = m.foto
-      ? ["-loop", "1", "-t", m.dur.toFixed(3), "-i", fonte]
-      : ["-ss", String(m.de ?? 0), "-t", m.dur.toFixed(3), "-i", fonte];
-    await roda("ffmpeg", ["-y", "-v", "error", ...entrada, "-vf", vf,
+      ? ["-loop", "1", "-t", origem.toFixed(3), "-i", fonte]
+      : ["-ss", String(m.de ?? 0), "-t", origem.toFixed(3), "-i", fonte];
+    await roda("ffmpeg", ["-y", "-v", "error", ...entrada, "-vf", vf, "-t", m.dur.toFixed(3),
       "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-an", saida]);
     prontos.push(saida);
   }
