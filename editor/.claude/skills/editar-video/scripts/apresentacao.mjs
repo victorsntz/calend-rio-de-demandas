@@ -56,9 +56,14 @@ function palavrasPorSlide(texto) {
 }
 
 // Leitura confortável na tela gira em torno de 4 palavras por segundo quando a
-// pessoa está varrendo cartões, não lendo prosa. O piso de 6 s é pra divisória
-// não piscar; o teto de 22 s é pra slide de portaria não virar tela parada.
-const tempo = (p) => Math.min(22, Math.max(6, 4.0 + p / 4.0));
+// pessoa está varrendo cartões, não lendo prosa. O teto de 22 s é pra slide de
+// portaria não virar tela parada.
+//
+// O piso é 9 s porque a conta pesa palavra, e slide que fala por imagem tem
+// pouca. A mancha de inundação, que é a conclusão de um estudo inteiro em duas
+// plantas lado a lado, ganhava 7 s enquanto a prancha de legenda ao lado dela
+// ganhava 22. Quem olha precisa de tempo pra comparar duas imagens, não pra ler.
+const tempo = (p) => Math.min(22, Math.max(9, 4.0 + p / 4.0));
 
 const md = readFileSync(arqTexto, "utf8");
 const palavras = palavrasPorSlide(md);
