@@ -12,10 +12,12 @@ import { readdirSync } from "node:fs";
 import { spawn } from "node:child_process";
 import { join, dirname, basename, resolve } from "node:path";
 
-const [pastaPng, arqTexto, saida] = process.argv.slice(2);
-const previa = process.argv.includes("--previa");
+const args = process.argv.slice(2);
+const [pastaPng, arqTexto, saida] = args;
+const previa = args.includes("--previa");
+const pega = (n, pad) => (args.includes(n) ? args[args.indexOf(n) + 1] : pad);
 if (!pastaPng || !arqTexto || !saida) {
-  console.error("uso: node montar-psa.mjs <pasta-png> <transcricao.md> <saida.mp4> [--previa]");
+  console.error("uso: node apresentacao.mjs <pasta-png> <transcricao> <saida.mp4> [--previa] [--teto <s>]");
   process.exit(1);
 }
 
@@ -63,7 +65,12 @@ function palavrasPorSlide(texto) {
 // pouca. A mancha de inundação, que é a conclusão de um estudo inteiro em duas
 // plantas lado a lado, ganhava 7 s enquanto a prancha de legenda ao lado dela
 // ganhava 22. Quem olha precisa de tempo pra comparar duas imagens, não pra ler.
-const tempo = (p) => Math.min(22, Math.max(9, 4.0 + p / 4.0));
+//
+// O teto é por deck, não constante de script: num deck de cartões curtos 22 s
+// já é tela parada, e num de parágrafos a mesma página sai a 6 palavras por
+// segundo, que é correr. --teto ajusta.
+const TETO = Number(pega("--teto", 22));
+const tempo = (p) => Math.min(TETO, Math.max(9, 4.0 + p / 4.0));
 
 const md = readFileSync(arqTexto, "utf8");
 const palavras = palavrasPorSlide(md);
