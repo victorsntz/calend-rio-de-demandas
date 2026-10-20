@@ -1,0 +1,426 @@
+{
+  "_leia": "Tokens do ESTILO.md em formato de máquina. O ESTILO.md manda; este arquivo é a cópia que as scripts leem. Mudou um, muda o outro.",
+  "marca": "Norte Sul Hidrotecnologia",
+  "versao": "1.0.0",
+  "cores": {
+    "azulProfundo": {
+      "hex": "#04306E",
+      "uso": "fundo de cartela, campo das peças, o azul da marca em área"
+    },
+    "azulNoite": {
+      "hex": "#011A3D",
+      "uso": "escurecido sobre vídeo, caixa escura, base do degradê"
+    },
+    "azulVivo": {
+      "hex": "#0092FF",
+      "uso": "o azul do símbolo; fio, ícone, detalhe",
+      "textoProibido": true
+    },
+    "amarelo": {
+      "hex": "#FFBA00",
+      "uso": "acento: barra da legenda, ano ativo, palavra destacada",
+      "acento": true
+    },
+    "branco": {
+      "hex": "#FFFFFF",
+      "uso": "texto principal sobre azul e sobre vídeo"
+    },
+    "cinzaClaro": {
+      "hex": "#C8D4E4",
+      "uso": "texto secundário sobre azul, rótulo, crédito"
+    },
+    "azulQuasePreto": {
+      "hex": "#001024",
+      "uso": "texto sobre fundo claro, wordmark na versão clara"
+    }
+  },
+  "regraDoAmarelo": {
+    "_leia": "A mobília do sistema (barra do ano, barra da legenda, ponto ativo da linha do tempo) é amarela por desenho e não conta. O que conta é destaque de conteúdo: palavra realçada, pílula preenchida, número em destaque.",
+    "maxDestaquesPorTela": 1,
+    "nuncaComoFundo": true,
+    "nuncaTextoCorrido": true
+  },
+  "fonte": {
+    "familia": "Helvetica Neue",
+    "licenca": "Monotype. Licença do cliente, não entra no repositório. Mora em .fontes/, que o git ignora.",
+    "pesos": {
+      "titulo": 700,
+      "legenda": 500,
+      "corpo": 500,
+      "rotulo": 700
+    },
+    "arquivosEsperados": {
+      "400": [
+        "HelveticaNeue-Roman",
+        "HelveticaNeue-Regular",
+        "HelveticaNeue",
+        "HelveticaNeueRoman"
+      ],
+      "500": [
+        "HelveticaNeue-Medium",
+        "HelveticaNeueMedium"
+      ],
+      "700": [
+        "HelveticaNeue-Bold",
+        "HelveticaNeueBold"
+      ],
+      "400i": [
+        "HelveticaNeue-Italic",
+        "HelveticaNeueItalic"
+      ],
+      "700i": [
+        "HelveticaNeue-BoldItalic",
+        "HelveticaNeueBoldItalic"
+      ]
+    },
+    "substituta": {
+      "familia": "Inter",
+      "porque": "grotesca livre, desenhada pra tela, com largura e peso próximos da Helvetica Neue",
+      "licenca": "SIL Open Font License 1.1",
+      "arquivos": {
+        "400": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+        "500": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+        "600": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+        "700": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+        "800": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf"
+      }
+    },
+    "proibidas": [
+      "Impact",
+      "Arial Black",
+      "Montserrat",
+      "Poppins",
+      "Bebas Neue",
+      "Anton",
+      "Oswald",
+      "Times",
+      "Georgia"
+    ]
+  },
+  "formatos": {
+    "telao": {
+      "_leia": "Painel de LED da FENASAN: 3 larguras por 2 alturas, 1008x672 px.",
+      "largura": 1008,
+      "altura": 672,
+      "fps": 30,
+      "video": "libx264",
+      "audio": "aac",
+      "cores": "bt709",
+      "zonaSegura": {
+        "x1": 48,
+        "x2": 960,
+        "y1": 48,
+        "y2": 624
+      },
+      "legenda": {
+        "tamanhoMin": 26,
+        "tamanhoMax": 29,
+        "linhasMax": 2,
+        "palavrasPorVez": [
+          6,
+          10
+        ],
+        "faixaY": [
+          470,
+          572
+        ],
+        "alinhamento": "esquerda"
+      },
+      "titulo": {
+        "tamanhoMin": 52,
+        "tamanhoMax": 60,
+        "alinhamento": "esquerda",
+        "margemLateral": 48,
+        "escurecerBase": 0.55
+      },
+      "cartela": {
+        "tamanhoMin": 60,
+        "tamanhoMax": 72
+      },
+      "linhaDoTempo": {
+        "y": 590,
+        "espessura": 2,
+        "raioPonto": 5,
+        "raioPontoAtivo": 8,
+        "recuoLateral": 34
+      },
+      "marca": {
+        "altura": 44,
+        "canto": "superior-direito",
+        "_leia": "a margem sai da zona segura; passe --margem só pra forçar outra"
+      },
+      "ritmo": {
+        "marcoHistorico": 3,
+        "minimoNaTela": 1.2,
+        "respiroDepoisDaFrase": 0.4
+      }
+    },
+    "youtube": {
+      "largura": 1920,
+      "altura": 1080,
+      "fps": 30,
+      "video": "libx264",
+      "audio": "aac",
+      "cores": "bt709",
+      "zonaSegura": {
+        "x1": 90,
+        "x2": 1830,
+        "y1": 60,
+        "y2": 1020
+      },
+      "legenda": {
+        "tamanhoMin": 38,
+        "tamanhoMax": 44,
+        "linhasMax": 2,
+        "palavrasPorVez": [
+          6,
+          10
+        ],
+        "faixaY": [
+          806,
+          936
+        ],
+        "alinhamento": "esquerda"
+      },
+      "titulo": {
+        "tamanhoMin": 80,
+        "tamanhoMax": 96,
+        "alinhamento": "esquerda",
+        "margemLateral": 90,
+        "escurecerBase": 0.55
+      },
+      "cartela": {
+        "tamanhoMin": 92,
+        "tamanhoMax": 110
+      },
+      "linhaDoTempo": {
+        "y": 958,
+        "espessura": 3,
+        "raioPonto": 7,
+        "raioPontoAtivo": 11,
+        "recuoLateral": 48
+      },
+      "marca": {
+        "altura": 72,
+        "canto": "superior-direito"
+      },
+      "ritmo": {
+        "marcoHistorico": 3,
+        "minimoNaTela": 1.2,
+        "respiroDepoisDaFrase": 0.4
+      }
+    }
+  },
+  "legenda": {
+    "cor": "#FFFFFF",
+    "placa": {
+      "_leia": "placa atrás do texto: é o que faz o branco fechar contraste sobre obra clara",
+      "cor": "azulNoite",
+      "opacidade": 0.82,
+      "respiro": [
+        13,
+        18
+      ],
+      "raio": 3
+    },
+    "barra": {
+      "largura": 4,
+      "cor": "#FFBA00",
+      "respiro": 16
+    },
+    "entrada": {
+      "subir": 8,
+      "fade": 0.18
+    },
+    "enfase": {
+      "cor": "#FFBA00",
+      "maxPorFrase": 1
+    },
+    "semEmoji": true,
+    "sempreQueHouverNarracao": true
+  },
+  "kit": {
+    "ano": {
+      "fundo": "#FFFFFF",
+      "texto": "#001024",
+      "barra": {
+        "largura": 6,
+        "cor": "#FFBA00"
+      },
+      "raio": 4,
+      "respiro": [
+        14,
+        22
+      ],
+      "tamanho": 40
+    },
+    "linhaDoTempo": {
+      "cor": "#C8D4E4",
+      "opacidade": 0.55,
+      "corAtivo": "#FFBA00",
+      "deslize": 0.6,
+      "tamanhoAno": 13
+    },
+    "titulo": {
+      "cor": "#FFFFFF",
+      "peso": 700,
+      "alinhamento": "esquerda",
+      "sombra": {
+        "y": 2,
+        "desfoque": 14,
+        "cor": "#000000",
+        "opacidade": 0.6
+      }
+    },
+    "pilula": {
+      "raio": 4,
+      "contorno": {
+        "largura": 1,
+        "cor": "#FFFFFF",
+        "opacidade": 0.45
+      },
+      "preenchida": {
+        "fundo": "#FFBA00",
+        "texto": "#001024"
+      },
+      "tamanho": 15,
+      "respiro": [
+        7,
+        13
+      ]
+    },
+    "cartela": {
+      "fundo": "#04306E",
+      "clarao": {
+        "cor": "#0A58B4",
+        "opacidade": 0.5,
+        "canto": "superior-direito"
+      },
+      "sublinhado": {
+        "espessura": 6,
+        "largura": 96
+      }
+    },
+    "lista": {
+      "marcador": "check",
+      "corMarcador": "#FFBA00",
+      "respiro": 22,
+      "escalonar": 0.12,
+      "tamanho": 34,
+      "_leia": "marcador de check, não fio: o fio virava igualzinho à barra da legenda e confundia lista com legenda"
+    },
+    "marca": {
+      "arquivoEscuro": "marca/logo-nortesul-escuro-compacto.png",
+      "arquivoClaro": "marca/logo-nortesul-compacto.png",
+      "assinaturaEscura": "marca/logo-nortesul-escuro.png",
+      "assinaturaClara": "marca/logo-nortesul.png",
+      "site": "nortesultec.com.br",
+      "irma": "Metropolitana",
+      "_leia": "compacto (sem o descritivo) na marca d'agua; a versao cheia so a partir de 54 px, onde o descritivo le. Os quatro arquivos vem aparados: a altura pedida e a altura do desenho.",
+      "alturaMinimaAssinatura": 54,
+      "simbolo": "marca/logo-nortesul-simbolo.png"
+    },
+    "numero": {
+      "peso": 700,
+      "cor": "#FFFFFF",
+      "corDestaque": "#FFBA00",
+      "espacamento": -0.02
+    },
+    "rotulo": {
+      "peso": 700,
+      "caixaAlta": true,
+      "espacamento": 0.12,
+      "tamanho": 16,
+      "cor": "#C8D4E4"
+    },
+    "degrade": {
+      "ate": 0.55,
+      "comecaEm": 0.45
+    },
+    "creditos": {
+      "_leia": "Creditos de fim de filme: nomes rolando de um lado, quadro de foto e clipe do outro.",
+      "tamanho": 38,
+      "entrelinha": 59,
+      "segundosNaTela": 4.6,
+      "mescla": 1,
+      "quadro": {
+        "proporcao": "2:3",
+        "_leia": "meio termo entre a foto 3:4 e o clipe 9:16, pra nao cortar cabeca nem lateral demais"
+      }
+    }
+  },
+  "movimento": {
+    "curva": "cubic-bezier(.25,.8,.25,1)",
+    "entrada": {
+      "subir": 18,
+      "duracao": 0.45
+    },
+    "zoomFoto": {
+      "de": 1,
+      "para": 1.05
+    },
+    "transicao": {
+      "padrao": "corte seco",
+      "cartelaSobe": 0.4
+    },
+    "loop": {
+      "primeiroQuadroIgualAoUltimo": true
+    },
+    "proibido": [
+      "cubo",
+      "giro",
+      "glitch",
+      "zoom com borrão",
+      "quicar",
+      "letra por letra"
+    ]
+  },
+  "som": {
+    "narracao": {
+      "idioma": "pt-BR",
+      "ritmo": "calmo",
+      "encaixe": "frase a frase: cada frase do locutor entra na hora da legenda que a carrega, e o vao entre elas e o respiro do corte"
+    },
+    "trilha": {
+      "licenca": "livre",
+      "dbAbaixoDaVoz": 20
+    },
+    "efeitos": {
+      "proibidos": [
+        "whoosh",
+        "boom",
+        "impacto",
+        "som de transição"
+      ]
+    },
+    "mudoPrecisaFuncionar": true,
+    "ambienteDosClipes": {
+      "dbAbaixoDaVoz": 18,
+      "_leia": "com locucao gravada, o som dos clipes deixa de ser a voz e vira fundo"
+    }
+  },
+  "voz": {
+    "palavrasProibidas": [
+      "jornada",
+      "desbloquear",
+      "potencializar",
+      "no cenário atual",
+      "alavancar",
+      "mergulhar fundo",
+      "game changer"
+    ],
+    "travessaoProibido": true,
+    "termosDaCasa": [
+      "água",
+      "esgotos",
+      "drenagem",
+      "rede coletora",
+      "poço de visita",
+      "hidrojato",
+      "desobstrução",
+      "televisionamento",
+      "perdas",
+      "concessionária"
+    ]
+  }
+}

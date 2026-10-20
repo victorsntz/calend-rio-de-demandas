@@ -27,3 +27,42 @@ next-env.d.ts
 # artifact build outputs
 /artifact/app.js
 /artifact/calendario.html
+
+# editor de vídeos: mídia, fontes baixadas e intermediários nunca sobem
+editor/brutos/*
+!editor/brutos/.gitkeep
+# a ficha do material é documento, não mídia: ela sobe junto com o roteiro.
+!editor/brutos/*/
+editor/brutos/*/*
+!editor/brutos/*/*.json
+editor/renders/*
+!editor/renders/.gitkeep
+editor/trabalho/*
+!editor/trabalho/.gitkeep
+# o roteiro é fonte, não derivado: ele sobe. Legendas, peças e montagem saem dele.
+!editor/trabalho/*/
+editor/trabalho/*/*
+!editor/trabalho/*/roteiro.json
+!editor/trabalho/*/narracao.txt
+!editor/trabalho/*/transcricao.md
+!editor/trabalho/*/transcricao.txt
+# O plano estratégico fica de fora: é documento interno, com nome e cargo da
+# diretoria, lista de clientes-alvo, estratégia de caixa e análise de contratos.
+# As outras transcrições sobem porque são material de feira, feito pra circular.
+editor/trabalho/plano-estrategico/
+!editor/trabalho/*/creditos.json
+editor/.fontes/
+*.mp4
+*.mov
+*.m4v
+*.avi
+*.mkv
+*.mxf
+*.braw
+*.r3d
+*.insv
+*.wav
+*.aif
+*.aiff
+*.m4a
+*.mp3

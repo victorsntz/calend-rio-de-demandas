@@ -54,6 +54,13 @@ O selo `hub` marca clientes que existem no Fortunato Hub, para uma futura
 integração. Ritmos, contratos, cores e ativos são editáveis na aba "Teia de
 clientes".
 
+## Também neste repositório: o editor de vídeos da Norte Sul
+
+A pasta `editor/` guarda outro projeto, de outro cliente: a esteira que o Claude
+Code usa pra montar os vídeos da Norte Sul Hidrotecnologia seguindo o
+`editor/ESTILO.md`. Ela tem lei, regras e skill próprias, e não encosta no
+calendário. Comece pelo [`editor/LEIA-ME.md`](editor/LEIA-ME.md).
+
 ## Rodar
 
 ```bash
