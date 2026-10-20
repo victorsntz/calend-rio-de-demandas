@@ -10,7 +10,7 @@
 import { readFileSync, existsSync, statSync } from "node:fs";
 import { readdirSync } from "node:fs";
 import { spawn } from "node:child_process";
-import { join, dirname } from "node:path";
+import { join, dirname, basename, resolve } from "node:path";
 
 const [pastaPng, arqTexto, saida] = process.argv.slice(2);
 const previa = process.argv.includes("--previa");
@@ -26,22 +26,31 @@ const FECHA = 1.6;      // saída pro preto
 
 // ---------- quanto tempo cada slide fica ----------
 
-// Só o texto do slide conta. As anotações que eu escrevi na transcrição (linhas
-// em itálico, o cabeçalho do arquivo) não estão na tela e não podem puxar o tempo.
-function palavrasPorSlide(md) {
-  const partes = md.split(/^## Slide (\d+)[^\n]*$/m);
+// Dois formatos de transcrição servem de entrada:
+//
+//   com cabeçalho  "## Slide 3 · ..." abre cada slide, e as linhas em itálico
+//                  são anotações minhas que não estão na tela: não contam tempo.
+//   seca           texto puro, um slide por bloco, separados por linha em branco.
+//                  É o formato que o cliente lê, e por isso é o mesmo que a
+//                  esteira cronometra: transcrição e vídeo nunca divergem.
+function palavrasPorSlide(texto) {
+  const comCabecalho = /^## Slide \d+/m.test(texto);
+  const limpa = (s) => s.replace(/[*_>#`]/g, " ").replace(/\s+/g, " ").trim();
+
+  if (!comCabecalho) {
+    return texto.split(/\n\s*\n+/).map(limpa).filter(Boolean)
+      .map((b) => b.split(" ").length);
+  }
+
+  const partes = texto.split(/^## Slide (\d+)[^\n]*$/m);
   const fora = [];
   for (let i = 1; i < partes.length; i += 2) {
-    const n = Number(partes[i]);
-    const corpo = partes[i + 1]
+    const corpo = limpa(partes[i + 1]
       .split("\n")
       .filter((l) => !/^\s*\*[^*].*\*\s*$/.test(l))   // minhas notas em itálico
       .filter((l) => !/^\s*---\s*$/.test(l))
-      .join(" ")
-      .replace(/[*_>#`]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-    fora[n - 1] = corpo ? corpo.split(" ").length : 0;
+      .join(" "));
+    fora[Number(partes[i]) - 1] = corpo ? corpo.split(" ").length : 0;
   }
   return fora;
 }
@@ -66,7 +75,10 @@ const n = duracoes.length;
 // Cada dissolução come DISSOLVE segundos, porque os dois slides dividem o mesmo trecho.
 const total = duracoes.reduce((s, d) => s + d, 0) - (n - 1) * DISSOLVE;
 
-console.log(`Curso PSA · ${n} slides`);
+// O nome sai da pasta da transcrição: a script serve qualquer apresentação,
+// e um rótulo chumbado faz o log mentir sobre o que está montando.
+const projeto = basename(dirname(resolve(arqTexto)));
+console.log(`${projeto} · ${n} slides`);
 console.log("slide  palavras  tempo");
 duracoes.forEach((d, i) => console.log(`  ${String(i + 1).padStart(2)}   ${String(palavras[i]).padStart(6)}   ${d.toFixed(1)}s`));
 console.log(`\n  total: ${Math.floor(total / 60)}:${String(Math.round(total % 60)).padStart(2, "0")} com dissolução de ${DISSOLVE}s`);

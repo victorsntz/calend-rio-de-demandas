@@ -1,0 +1,72 @@
+NORTESUL HIDROTECNOLOGIA
+Soluções integradas para redução de perdas de água
+Da rede ao ponto crítico
+FENASAN · Saneamento
+
+ABORDAGEM INTEGRADA
+Quatro frentes. Uma rede mais eficiente.
+01 Modelar: Modelagem da situação atual; Modelagem de cenários futuros.
+02 Renovar ativos: Substituição de redes (MND); Eliminação de perdas de carga; Eliminação de intermitência.
+03 Gestão de pressões: Otimização de VRPs; Novas VRPs.
+04 Otimizar operação: Operação de VRPs, boosters e EEAs pelo ponto crítico.
+Do diagnóstico à operação coordenada.
+
+01 / DIAGNÓSTICO
+Modelagem hidráulica: enxergar para decidir
+Noite · Vazamentos. Perdas de carga: Identificar trechos em que a hidráulica limita as ações de controle de pressão.
+Pico de consumo · Intermitência. Efeito no abastecimento: Trechos com elevada perda de carga restringem a operação e o abastecimento.
+Do diagnóstico à decisão: priorizar a rede que mais restringe a operação.
+
+02 / INTERVENÇÃO NA REDE
+Renovação de ativos
+01 Eliminar perdas de carga excessivas: Tubo novo de baixa rugosidade substitui tubos corroídos e incrustados, recupera a capacidade hidráulica, devolve pressão disponível nos pontos críticos e reduz energia de bombeamento.
+02 Eliminar intermitências no abastecimento: Vedação integral da tubulação elimina rompimentos e infiltrações, garante continuidade do fornecimento e reduz desabastecimentos por falha de rede.
+Rede renovada habilita o controle de pressão (VRPs) no trecho crítico.
+
+GESTÃO DAS PRESSÕES
+Menos pressão. Menos perdas.
+Alta pressão / alta vazão. Baixa pressão / baixa vazão.
+Menor pressão operacional leva a menor vazão dos vazamentos, que leva à redução das perdas de água.
+
+FUNDAMENTO TÉCNICO · LAMBERT
+A física por trás da redução
+Quando a pressão na rede é diminuída, a vazão dos vazamentos também diminui.
+A equação que rege este fenômeno é a equação de orifício: Q final dividido por Q inicial é igual a (P final dividido por P inicial) elevado a n. Portanto, Q final é igual a Q inicial multiplicado por (P final dividido por P inicial) elevado a n.
+Onde:
+Q final: Vazão dos vazamentos após a redução da pressão.
+Q inicial: Vazão dos vazamentos antes da redução da pressão.
+n: Expoente de vazamento (geralmente varia entre 0,5 para furos fixos em metal e 1,5 para rachaduras longitudinais em tubos plásticos que se expandem com a pressão).
+
+CASO DMC NASA
+Menos pressão. Menos perdas.
+Pressão média antes: 31 mca. Depois: 21 mca. Diferença de menos 10 mca.
+44,23% menos vazão de perdas.
+De 2.137,38 m³/dia para 1.191,98 m³/dia.
+945,4 m³/dia recuperados.
+"O controle de pressão não substitui o reparo: ele reduz o volume perdido até que ele aconteça."
+
+03 / CONTROLE DE PRESSÃO E AUTOMAÇÃO
+Operar pelo ponto crítico
+10 mca: Pressão mínima de referência nos pontos críticos.
+VRPs. Boosters. EEAs.
+Pressão operacional ao longo de 24 horas, em esquema das 00h às 24h, com 10 mca como mínimo de referência.
+
+FRENTE COMPLEMENTAR
+Fechar o ciclo das perdas
+Frentes 01 a 03. Perdas reais: Diagnóstico; Intervenção na rede; Operação coordenada.
+Frente 04. Perdas aparentes: Renovação e adequação do parque de hidrômetros; Combate a fraudes; Ressupressão de inativos com consumo.
+Soluções integradas é igual a perdas reais mais perdas aparentes.
+
+CADEIA DE VALOR INTEGRADA
+Um ciclo contínuo de melhoria
+01 Modelar: diagnóstico.
+02 Substituir: intervenção.
+03 Automatizar: operação coordenada.
+No centro do ciclo: Reduzir perdas.
+Diagnóstico, intervenção e operação se retroalimentam.
+
+NORTESUL HIDROTECNOLOGIA E COMÉRCIO LTDA
+Converse com nossa equipe
+Visite o estande da NorteSul na FENASAN.
+Da rede ao ponto crítico
+NorteSul Hidrotecnologia e Comércio LTDA · FENASAN · Redução de perdas de água

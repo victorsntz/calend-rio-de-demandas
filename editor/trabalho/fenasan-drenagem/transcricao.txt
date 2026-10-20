@@ -1,0 +1,97 @@
+MODELAGEM HIDRÁULICA APLICADA NO DIAGNÓSTICO E SOLUÇÕES PARA ALAGAMENTOS URBANOS
+
+O CONTEXTO
+Do cálculo estático à dinâmica urbana
+O crescimento urbano desordenado e a impermeabilização do solo sobrecarregam os sistemas de drenagem, intensificando inundações recorrentes nas cidades brasileiras.
+Impacto social: Famílias desalojadas, doenças de veiculação hídrica e interrupção de serviços públicos essenciais.
+Impacto econômico: Paralisação de atividades comerciais e industriais, danos à infraestrutura da cidade e perda de valor imobiliário em áreas críticas.
+Impacto político: Obras emergenciais caras com pouco impacto na raiz do problema, comprometendo a credibilidade da gestão municipal em cada evento de inundação recorrente.
+Túnel do Vale do Anhangabaú ficou alagado após chuva em São Paulo. Data: 14/10/2026.
+
+A EVOLUÇÃO
+Do cálculo estático à dinâmica urbana
+Métodos empíricos tradicionais: Cálculos estáticos não representam as variações temporais da chuva; Visão pontual dificulta avaliar remanso e refluxo na rede; Há risco de superdimensionamento ou falha em gargalos dinâmicos.
+Simulação hidráulica: Dinâmica temporal por hidrogramas reais de escoamento contínuo; Acoplamento entre rede subterrânea e superfície urbana; Teste virtual de intervenções antes da execução da obra.
+
+O MÉTODO
+Quatro etapas, do dado à decisão
+Coleta de dados: Topografia, dados meteorológicos, infraestrutura.
+Construção do modelo: Montagem das bacias de contribuição, nós, condutos e calhas viárias.
+Calibração: Ajuste com base em eventos históricos e marcas de cheia monitoradas.
+Simulações: Diagnóstico de extravasamento e dimensionamento de intervenções.
+
+AS ALTERNATIVAS
+Cenários testáveis
+Novas galerias pluviais. Remanejamento e aumento de diâmetro.
+Novas bocas de lobo. Aumento de calha.
+Piscinões. Parques lineares para infiltração.
+Galerias tanques de retardo.
+
+O CASE
+Micro bacia ACD-05 Carandiru Ten. Rocha
+91,4% de impermeabilização.
+A: 250.420 m² (0,25 km²).
+L: 1.100 m de talvegue.
+i: 0,05 m/m (5%).
+Z máximo e Z mínimo: 779,924 m e 724,580 m.
+Amplitude: 55,344 m.
+
+DIAGNÓSTICO
+Diagnóstico preliminar
+A topografia acidentada impunha nos trechos mais elevados o escoamento superficial, já que o segregado em tubulações implica velocidades acima de 5 m/s.
+O tempo em que as vazões de chuva dos pontos mais elevados chegam aos pontos mais baixos é bastante curto (13 minutos).
+A infraestrutura é insuficiente para as vazões geradas.
+Os pontos em vermelho representam os pontos intransitáveis segundo o CET e a CGE, na Av. Braz Leme e Rua Dr. Cesar, no bairro de Santana.
+Estudos da Fundação Centro Tecnológico de Hidráulica indicam os trechos de ruas alagáveis na cor abóbora.
+
+ENGENHARIA
+Conferência do cadastro técnico
+A confiabilidade do resultado da modelagem é diretamente resultado de um cadastro técnico bem feito.
+No presente caso, a conferência do cadastro foi fundamental na solução do problema da Braz Leme, onde constava rede circular diâmetro 1200 mm onde na realidade era galeria quadrada 1500 x 1400 mm.
+
+ENGENHARIA
+Parâmetros hidrológicos
+Com os dados da micro bacia relativos ao tempo de concentração e à intensidade de chuvas é definido o hietograma, que representa o comportamento das chuvas durante um período determinado.
+Em termos simples, ele funciona como o perfil de uma tempestade, mostrando exatamente em quais momentos a chuva foi mais fraca, quando atingiu o seu pico (o chamado extremo ou pico do hietograma) e quando começou a cessar.
+Hietograma da micro bacia para uma chuva com duração de 60 minutos.
+
+A ESTRATÉGIA
+Captação na fonte: Bocas de lobo interceptam a chuva nas cotas intermediárias, desviando o fluxo para o interior das galerias tanques de retardo antes de atingir o fundo de vale.
+Retenção temporária: As galerias tanques de retardo armazenam o volume excedente que sobrecarregaria as estruturas de fundo de vale durante as chuvas.
+Descarga controlada: A água armazenada é liberada de forma contínua, dentro da capacidade nominal da infraestrutura existente a jusante.
+
+ENGENHARIA
+O que são galerias tanque de retardo?
+Vista isométrica do tanque de retenção de picos de cheia. Legenda: 1 PV de entrada; 2 Tubulação de entrada Ø 500 mm; 3 Tanque de retenção Ø 1,50 m; 4 PV de inspeção e limpeza do tanque; 5 Tubulação de saída Ø 300 mm; 6 PV de saída.
+Corte transversal de detalhe do mini tanque. Legenda: 1 PV de entrada com retenção e areia e gradeamento; 2 Grade de retenção; 3 Tubulação de entrada; 4 Anteparo; 5 PV de inspeção, limpeza e respiro do tanque; 6 Tubulação de saída Ø 300 mm em ferro fundido com flange na ponta de saída; 7 PV de saída; 8 Flange com placa de orifício em aço inox; 9 Tubulação de saída para GAP.
+
+ENGENHARIA
+MTR em trechos com GAP
+Legenda: 1 Boca de lobo de captação; 2 Ramal de ligação BL - PV; 3 Poço de visita de entrada com retenção de areia e gradeamento; 4 Tubulação de entrada do tanque Ø 500 mm; 5 Tanque de retenção; 6 Tubulação de saída do tanque Ø 300 mm; 7 Poço de visita de saída com placa de orifício de controle de vazão; 8 Tubulação de saída do poço para sistema de GAP existente; 9 Poço de visita da galeria existente; 10 Tubulação de ligação PV - BL.
+
+ENGENHARIA
+MTR em trechos sem GAP
+Legenda: 1 Boca de lobo de captação; 2 Ramal de ligação BL - PV; 3 Poço de visita de entrada com retenção de areia e gradeamento; 4 Tubulação de entrada do tanque Ø 500 mm; 5 Tanque de retenção; 6 Tubulação de saída do tanque Ø 300 mm; 7 Poço de visita de saída com placa de orifício de controle de vazão; 8 Tubulação de saída do poço; 9 Poço de visita de distribuição para escoamento superficial; 10 Tubulação de ligação PV - BL de lançamento superficial; 11 Boca de lobo para lançamento superficial.
+Detalhe da boca de lobo: 1 Leito da rua; 2 Passeio público; 3 Boca de lobo; 4 Abertura da boca de lobo; 5 Sarjeta; 6 Tubulação da galeria.
+
+ENGENHARIA
+Distribuição das galerias tanque de retardo
+Mapa da micro bacia com a localização dos MTR ao longo das vias.
+
+RESULTADO
+Mancha de inundação
+Cenário atual comparado ao cenário com MTR.
+
+INOVAÇÃO
+Vantagens da modelagem no diagnóstico de drenagem
+Otimização da capacidade hidráulica: A simulação hidráulica evita obras superdimensionadas, encontrando o diâmetro e a declividade exatos para cada trecho.
+Investimento com a máxima eficiência e menor custo global: Você conhece o resultado antes de investir.
+Possibilita simulações para infraestrutura verde (SUDS): Jardins de chuva, com biorretenção e infiltração na fonte; Pavimentos permeáveis, com retenção direta no piso urbano.
+
+OBRIGADO
+Arnaldo Boa Sorte de Oliveira
+Consultor Sênior Norte Sul Hidrotecnologia
+Gestao.servicostec@nortesultec.com.br
+Luan Pacheco
+Técnico em Saneamento – Norte Sul Hidrotecnologia
+Servicostec.sp1@nortesultec.com.br
