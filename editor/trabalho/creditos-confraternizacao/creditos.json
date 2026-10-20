@@ -14,7 +14,14 @@
   "tamanho": 38,
   "entrelinha": 59,
   "cabecalho": 220,
-  "tamanhoCabecalho": 22
+  "tamanhoCabecalho": 22,
+  "agradecimento": {
+   "destaque": "GRATIDÃO",
+   "tamanhoDestaque": 104,
+   "frase": "Por trás de uma cidade que funciona\nestá a nossa gente.",
+   "tamanhoFrase": 34,
+   "altura": 1200
+  }
  },
  "quadro": {
   "largura": 580,
@@ -25,7 +32,7 @@
  "mescla": 1,
  "entrada": 1.5,
  "esperaAntes": 2,
- "esperaDepois": 4,
+ "esperaDepois": 6,
  "midia": [
   {
    "arquivo": "brutos/creditos-confraternizacao/clipes/IMG_4519.mov",

@@ -66,7 +66,11 @@ body{font-family:'MarcaNS','${familia}',Helvetica,Arial,sans-serif;-webkit-font-
 </style><div>${corpo}</div></html>`;
 }
 
-const escapa = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+// A quebra de linha do JSON tem que virar quebra na tela: quem decide onde a
+// frase corta é quem escreveu, não a largura da caixa. Nome não tem quebra,
+// então isso só pega na frase de fecho.
+const escapa = (s) => String(s)
+  .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
 
 async function desenha(html, largura, altura, saida) {
   const tmp = saida.replace(/\.png$/, ".html");
@@ -117,6 +121,30 @@ async function tiras() {
     await desenha(pagina(corpo, L, altura, regras, familia), L, altura, png);
     pedacos.push(png);
     conta(`  nomes ${String(i + 1).padStart(3)}–${String(i + lote.length).padStart(3)}   ${L}x${altura}`);
+  }
+
+  // O agradecimento fecha a rolagem no mesmo eixo dos nomes, como se fosse o
+  // último deles. Quem para no meio do quadro é a montagem, não a tira.
+  // Se chama "agradecimento" e não "fecho" porque "fecho" já é a duração do
+  // fade de saída lá em cima. Duas coisas com o mesmo nome no mesmo arquivo de
+  // roteiro é o começo do próximo bug.
+  const Ag = C.coluna.agradecimento;
+  if (Ag) {
+    // Altura maior que o quadro de propósito: com o pedaço centrado na parada,
+    // a tela mostra só o agradecimento, sem nome pendurado no topo.
+    const altura = Math.max(Ag.altura ?? 1200, F.altura + 120);
+    const frase = escapa(Ag.frase).replace(/\n/g, "<br>");
+    const corpo = `<div style="height:${altura}px;display:flex;flex-direction:column;
+      align-items:center;justify-content:center;padding:0 20px">
+      <div style="font-weight:${estilo.fonte.pesos.titulo};font-size:${Ag.tamanhoDestaque}px;
+        line-height:1.15;letter-spacing:-.02em;color:${estilo.cores.amarelo.hex}">${escapa(Ag.destaque)}</div>
+      <div style="height:${Math.round(Ag.tamanhoDestaque * .55)}px"></div>
+      <div style="font-weight:${estilo.fonte.pesos.corpo};font-size:${Ag.tamanhoFrase}px;
+        line-height:1.45;color:${estilo.cores.cinzaClaro.hex}">${frase}</div></div>`;
+    const png = join(dirTiras, "99-agradecimento.png");
+    await desenha(pagina(corpo, L, altura, regras, familia), L, altura, png);
+    pedacos.push(png);
+    conta(`  agradecimento ${L}x${altura}  "${Ag.destaque}"`);
   }
 
   // Empilha os pedaços numa tira só. vstack exige largura igual, que é o caso.
@@ -230,12 +258,19 @@ async function montar(alturaTira, duracao) {
   const Q = C.quadro, Col = C.coluna;
 
   const esperaAntes = C.esperaAntes ?? 2, esperaDepois = C.esperaDepois ?? 4;
-  // A tira entra pelo pé do quadro e sai pelo topo. A velocidade é o que
-  // decide se dá pra ler: o nome fica na tela (altura do quadro / velocidade).
-  const percurso = alturaTira + F.altura;
+  // A tira entra pelo pé do quadro. Sem agradecimento ela sai inteira pelo
+  // topo; com ele, para quando o agradecimento chega ao meio do quadro, senão
+  // ele sobe e some igual a mais um nome, que é o contrário do que ele serve.
+  const Ag = C.coluna.agradecimento;
+  const hAg = Ag ? Math.max(Ag.altura ?? 1200, F.altura + 120) : 0;
+  const alvo = Ag ? Math.round(F.altura / 2 - (alturaTira - hAg / 2)) : -alturaTira;
+  const percurso = F.altura - alvo;
   const rolagem = duracao - esperaAntes - esperaDepois;
   const vel = percurso / rolagem;
-  conta(`  rolagem: ${vel.toFixed(1)} px/s · cada nome ${(F.altura / vel).toFixed(1)}s na tela`);
+  const anda = `${F.altura}-(t-${esperaAntes})*${vel.toFixed(4)}`;
+  const posY = Ag ? `'max(${alvo},${anda})'` : `'${anda}'`;
+  conta(`  rolagem: ${vel.toFixed(1)} px/s · cada nome ${(F.altura / vel).toFixed(1)}s na tela` +
+    (Ag ? ` · agradecimento parado nos últimos ${esperaDepois}s` : ""));
 
   const colX = Math.round(Col.centro - Col.largura / 2);
   const quadroX = Math.round(Q.centro - Q.largura / 2);
@@ -249,7 +284,7 @@ async function montar(alturaTira, duracao) {
   let n = 3;
   const filtro = [
     `[1:v]format=rgba[tira]`,
-    `[0:v][tira]overlay=x=${colX}:y='${F.altura}-(t-${esperaAntes})*${vel.toFixed(4)}'[a]`,
+    `[0:v][tira]overlay=x=${colX}:y=${posY}[a]`,
   ];
 
   // Com canto arredondado o quadro entra pela máscara; sem raio, entra direto.
