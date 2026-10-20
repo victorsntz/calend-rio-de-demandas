@@ -148,7 +148,11 @@ async function midia() {
   for (const [i, m] of C.midia.entries()) {
     const fonte = perto(m.arquivo);
     if (!existsSync(fonte)) { console.error(`não achei: ${fonte}`); process.exit(1); }
-    const saida = join(dirPrep, `${String(i + 1).padStart(2, "0")}-${basename(fonte).replace(/\.[^.]+$/, "")}.mp4`);
+    // O nome do preparado carrega o corte e a duração, não só a origem. Sem
+    // isso, mudar o tempo de um item no roteiro reaproveitava em silêncio o
+    // arquivo antigo, com a duração velha, e a montagem saía fora do lugar.
+    const etiqueta = `${basename(fonte).replace(/\.[^.]+$/, "")}-${(m.de ?? 0)}-${m.dur}`.replace(/[^a-z0-9.-]+/gi, "-");
+    const saida = join(dirPrep, `${String(i + 1).padStart(2, "0")}-${etiqueta}.mp4`);
     if (existsSync(saida) && statSync(saida).size > 10000 && !args.includes("--forcar")) { prontos.push(saida); continue; }
 
     // Preenche o quadro e corta o que sobra: foto em 3:4 e clipe em 9:16 cabem
@@ -185,10 +189,29 @@ async function midia() {
 
 // ---------- 3. a montagem ----------
 
+const arqMascara = join(casa, "mascara-quadro.png");
+
+// Canto arredondado sai de máscara, não de filtro: o ffmpeg não tem
+// border-radius, e desenhar a curva na mão com geq sai serrilhada. O Chromium
+// já desenha com suavização, e o cinza da borda vira meio-alpha no alphamerge.
+async function mascara() {
+  const Q = C.quadro;
+  if (existsSync(arqMascara) && !args.includes("--forcar")) {
+    const [w, h] = await medida(arqMascara);
+    if (w === Q.largura && h === Q.altura) return arqMascara;
+  }
+  const html = `<!doctype html><html lang="pt-BR"><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:${Q.largura}px;height:${Q.altura}px;background:#000;overflow:hidden}
+.m{width:${Q.largura}px;height:${Q.altura}px;background:#fff;border-radius:${Q.raio}px}
+</style><div class="m"></div></html>`;
+  await desenha(html, Q.largura, Q.altura, arqMascara);
+  conta(`  máscara do quadro: ${Q.largura}x${Q.altura}, canto de ${Q.raio} px`);
+  return arqMascara;
+}
+
 async function montar(alturaTira, duracao) {
   const Q = C.quadro, Col = C.coluna;
-  const sim = perto(C.simbolo.arquivo);
-  if (!existsSync(sim)) { console.error(`não achei o símbolo: ${sim}`); process.exit(1); }
 
   const esperaAntes = C.esperaAntes ?? 2, esperaDepois = C.esperaDepois ?? 4;
   // A tira entra pelo pé do quadro e sai pelo topo. A velocidade é o que
@@ -201,33 +224,54 @@ async function montar(alturaTira, duracao) {
   const colX = Math.round(Col.centro - Col.largura / 2);
   const quadroX = Math.round(Q.centro - Q.largura / 2);
   const quadroY = Math.round((F.altura - Q.altura) / 2);
-  const simH = C.simbolo.altura;
-
+  const T = duracao.toFixed(3);
+  const entradas = [
+    "-f", "lavfi", "-t", T, "-i", `color=c=${C.fundo}:s=${F.largura}x${F.altura}:r=${F.fps}`,
+    "-loop", "1", "-t", T, "-i", arqTira,
+    "-i", arqMidia,
+  ];
+  let n = 3;
   const filtro = [
     `[1:v]format=rgba[tira]`,
     `[0:v][tira]overlay=x=${colX}:y='${F.altura}-(t-${esperaAntes})*${vel.toFixed(4)}'[a]`,
-    `[a][2:v]overlay=x=${quadroX}:y=${quadroY}[b]`,
-    `[3:v]scale=-1:${simH}[n]`,
-    `[b][n]overlay=x=(W-w)/2:y=${C.simbolo.topo}[c]`,
-    // O fade de saída se chama "fecho" e não "saida" de propósito: "saida" é o
-    // arquivo que sai, e usar o mesmo nome pros dois punha o caminho do mp4
-    // dentro da duração do fade. É o mesmo tropeço do "ate" de tempo virando
-    // âncora de layout.
-    `[c]fade=t=in:st=0:d=${C.entrada ?? 1.5},fade=t=out:st=${(duracao - (C.fecho ?? 1.5)).toFixed(2)}:d=${C.fecho ?? 1.5}[v]`,
   ];
+
+  // Com canto arredondado o quadro entra pela máscara; sem raio, entra direto.
+  let quadro = "[2:v]";
+  if (Q.raio) {
+    entradas.push("-loop", "1", "-t", T, "-i", await mascara());
+    filtro.push(`[2:v]format=rgba[mv]`, `[${n}:v]format=gray[mk]`, `[mv][mk]alphamerge[qd]`);
+    quadro = "[qd]"; n++;
+  }
+  filtro.push(`[a]${quadro}overlay=x=${quadroX}:y=${quadroY}[b]`);
+  let ultimo = "[b]";
+
+  // O símbolo é opcional: sem ele o alto do quadro fica livre pros nomes.
+  if (C.simbolo) {
+    const sim = perto(C.simbolo.arquivo);
+    if (!existsSync(sim)) { console.error(`não achei o símbolo: ${sim}`); process.exit(1); }
+    entradas.push("-loop", "1", "-t", T, "-i", sim);
+    filtro.push(`[${n}:v]scale=-1:${C.simbolo.altura}[sb]`, `[b][sb]overlay=x=(W-w)/2:y=${C.simbolo.topo}[c]`);
+    ultimo = "[c]"; n++;
+  }
+
+  // Faixa muda: arquivo sem áudio trava player e sobe torto em rede social.
+  entradas.push("-f", "lavfi", "-t", T, "-i", "anullsrc=r=48000:cl=stereo");
+
+  // O fade de saída se chama "fecho" e não "saida" de propósito: "saida" é o
+  // arquivo que sai, e usar o mesmo nome pros dois punha o caminho do mp4
+  // dentro da duração do fade. É o mesmo tropeço do "ate" de tempo virando
+  // âncora de layout.
+  filtro.push(`${ultimo}fade=t=in:st=0:d=${C.entrada ?? 1.5},` +
+    `fade=t=out:st=${(duracao - (C.fecho ?? 1.5)).toFixed(2)}:d=${C.fecho ?? 1.5}[v]`);
 
   const saida = previa ? join(casa, `${projeto}-previa.mp4`) : perto(C.saida || join(RENDERS, `${projeto}.mp4`));
   pasta(dirname(saida));
 
   await roda("ffmpeg", ["-y", "-v", "error", "-stats",
-    "-f", "lavfi", "-t", duracao.toFixed(3), "-i", `color=c=${C.fundo}:s=${F.largura}x${F.altura}:r=${F.fps}`,
-    "-loop", "1", "-t", duracao.toFixed(3), "-i", arqTira,
-    "-i", arqMidia,
-    "-loop", "1", "-t", duracao.toFixed(3), "-i", sim,
-    // Faixa muda: arquivo sem áudio trava player e sobe torto em rede social.
-    "-f", "lavfi", "-t", duracao.toFixed(3), "-i", "anullsrc=r=48000:cl=stereo",
+    ...entradas,
     "-filter_complex", filtro.join(";"),
-    "-map", "[v]", "-map", "4:a",
+    "-map", "[v]", "-map", `${n}:a`,
     "-c:v", "libx264", "-preset", previa ? "veryfast" : "medium", "-crf", previa ? "28" : "17",
     "-pix_fmt", "yuv420p", "-profile:v", "high", "-level", "4.2",
     "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709",
