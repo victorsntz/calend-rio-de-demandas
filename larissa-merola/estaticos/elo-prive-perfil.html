@@ -10,8 +10,7 @@
   .slide { position: relative; width: 1080px; height: 1080px; overflow: hidden; background: var(--musgo); color: var(--branco); font-family: var(--sans); }
   .anel { position: absolute; left: 50%; top: 50%; width: 900px; height: 900px; margin: -450px 0 0 -450px; border: 3px solid var(--saude); border-radius: 50%; }
   .anel2 { position: absolute; left: 50%; top: 50%; width: 860px; height: 860px; margin: -430px 0 0 -430px; border: 1px solid rgba(204,215,127,.35); border-radius: 50%; }
-  .miolo { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0; }
-  .iso { width: 54px; margin-bottom: 26px; }
+  .miolo { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0; padding-top: 18px; box-sizing: border-box; }
   .elo { font-family: var(--serif); font-size: 300px; line-height: .82; letter-spacing: 0.02em; }
   .prive { margin-top: 26px; font-size: 64px; font-weight: 300; letter-spacing: 0.46em; text-transform: uppercase; padding-left: 0.46em; color: var(--saude); }
   .risco { width: 64px; height: 3px; background: var(--saude); margin: 44px 0 30px; opacity: .9; }
@@ -23,7 +22,6 @@
   <div class="anel"></div>
   <div class="anel2"></div>
   <div class="miolo">
-    <img class="iso" src="../capa/isotipo-saude.svg" alt="">
     <div class="elo">ELO</div>
     <div class="prive">Privé</div>
     <div class="risco"></div>
