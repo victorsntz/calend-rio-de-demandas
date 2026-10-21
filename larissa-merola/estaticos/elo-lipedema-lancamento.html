@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Elo Lipedema, lançamento</title>
+<link rel="stylesheet" href="../capa/fonts/fonts.css">
+<link rel="stylesheet" href="../capa/tokens.css">
+<style>
+  html, body { margin: 0; background: #ddd; }
+  .slide { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--papel); color: var(--musgo); font-family: var(--sans); }
+  .topo { position: absolute; left: 0; right: 0; top: 0; height: 640px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 96px; box-sizing: border-box; }
+  .elo { font-family: var(--serif); font-size: 260px; line-height: .86; letter-spacing: 0.02em; }
+  .lipedema { margin-top: 18px; font-size: 54px; font-weight: 300; letter-spacing: 0.42em; text-transform: uppercase; padding-left: 0.42em; }
+  .por { margin-top: 14px; font-size: 24px; letter-spacing: 0.12em; color: var(--claro); font-weight: 500; }
+  .risco { width: 72px; height: 3px; background: var(--saude); margin: 34px auto 30px; }
+  .frase { font-family: var(--serif); font-size: 54px; line-height: 1.12; letter-spacing: -0.01em; text-wrap: balance; }
+  .base { position: absolute; left: 0; right: 0; bottom: 0; height: 710px; background: var(--musgo); color: var(--branco); padding: 60px 96px 0; box-sizing: border-box; }
+  .combo { display: grid; grid-template-columns: 1fr 72px 1fr; align-items: center; gap: 0; }
+  .combo .cartao { border: 1.5px solid rgba(255,255,255,.28); padding: 44px 36px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+  .combo .cartao.claro { background: var(--papel); color: var(--musgo); border-color: var(--papel); }
+  .combo .nome { font-family: var(--serif); font-size: 56px; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1; }
+  .combo .sub { font-size: 20px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--claro); font-weight: 500; }
+  .combo .texto { font-size: 32px; line-height: 1.3; font-weight: 400; }
+  .combo .mais { width: 72px; height: 72px; border-radius: 50%; background: var(--saude); color: var(--musgo); display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: 300; margin: 0 auto; position: relative; z-index: 1; }
+  .condicoes { margin-top: 40px; font-family: var(--serif); font-size: 40px; line-height: 1.2; text-align: center; }
+  .cta { margin: 26px auto 0; width: max-content; padding: 22px 40px; border: 2px solid var(--saude); color: var(--saude); font-size: 23px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+  .miudo { margin-top: 22px; text-align: center; font-size: 19px; color: rgba(255,255,255,.7); }
+  .logo { position: absolute; left: 0; right: 0; bottom: 44px; display: flex; justify-content: center; }
+  .logo img { height: 64px; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="topo">
+    <div class="elo">ELO</div>
+    <div class="lipedema">Lipedema</div>
+    <div class="por">por Dra. Larissa Merola</div>
+    <div class="risco"></div>
+    <div class="frase">Cuidado integrado, pensado para você.</div>
+  </div>
+  <div class="base">
+    <div class="combo">
+      <div class="cartao claro">
+        <div class="sub">Tecnologia</div>
+        <div class="nome">Velaryan</div>
+      </div>
+      <div class="mais">+</div>
+      <div class="cartao">
+        <div class="sub">Protocolo</div>
+        <div class="texto">Terapia de injetáveis direcionada para o lipedema</div>
+      </div>
+    </div>
+    <div class="condicoes">Condições especiais para participantes do programa.</div>
+    <div class="cta">Conheça as opções com nossa equipe</div>
+    <div class="miudo">Tratamentos individualizados, conforme avaliação e indicação médica.</div>
+  </div>
+  <div class="logo"><img src="../capa/logo-branca.png" alt="Dra. Larissa Merola"></div>
+</div>
+<script src="../capa/tipografia.js"></script>
+</body>
+</html>
