@@ -755,10 +755,15 @@
 
 /* o feed tem 570px a menos que o stories pro mesmo conteúdo, então o corpo
    cede e os vãos aumentam: apertado não se lê */
-.slide.vaga:not(.stories) .vaga-cargo  { font-size: 70px; }
+.slide.vaga:not(.stories) .vaga-cargo  { font-size: 68px; }
 .slide.vaga:not(.stories) .vaga-local  { font-size: 34px; }
-.slide.vaga:not(.stories) .espaco      { height: 54px; }
-.slide.vaga:not(.stories) .vaga-req    { gap: 24px; }
+.slide.vaga:not(.stories) .espaco      { height: 68px; }
+.slide.vaga:not(.stories) .espaco-sm   { height: 30px; }
+.slide.vaga:not(.stories) .vaga-req    { gap: 30px; }
 .slide.vaga:not(.stories) .vaga-req li { font-size: 29px; line-height: 1.4; max-width: 25em; }
-.slide.vaga:not(.stories) .vaga-chamada { font-size: 29px; margin-top: 54px; }
+.slide.vaga:not(.stories) .vaga-bloco-tit { margin-bottom: 28px; }
+.slide.vaga:not(.stories) .vaga-chamada { font-size: 29px; margin-top: 68px; }
+.slide.vaga:not(.stories) .vaga-chamada + .caixa-dado { margin-top: 26px; }
 .slide.vaga:not(.stories) .caixa-dado p { font-size: 28px; }
+.slide.vaga:not(.stories) .arroba { margin-bottom: 36px; }
+.slide.vaga:not(.stories) .rodape { padding-top: 64px; }

@@ -170,6 +170,9 @@ do mesmo JSON: o slide de stories só leva `formato: "stories"`.
 
 **O feed leva o mínimo que faz alguém se candidatar:** cargo, cidade, presencial
 ou não, dois ou três requisitos de uma linha, e o e-mail com o assunto do envio.
+**Respiro vem de cortar item, não de apertar entrelinha.** Quando a peça passa de
+uns cinco itens entre todos os blocos, o jeito de arejar é tirar linha, não
+diminuir corpo: o que sai do feed continua no stories e na legenda.
 
 **O stories leva muito mais**, porque tem 570px a mais de altura: as atribuições e
 os requisitos em `blocos`, cada um com subtítulo dourado, e o `remate` com

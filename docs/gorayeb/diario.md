@@ -292,4 +292,9 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - Divergência de propósito, pendente de palavra dela: na arte o desejável diz
   "Direito Agrário, Agronegócio ou Empresarial", do anúncio original; na legenda
   ficou "Agrário e/ou Empresarial", da versão nova.
+- Duas rodadas de "está condensado" no feed da vaga. A primeira resolvi com
+  espaçamento e deu pouco. A segunda era quantidade mesmo: a linha da
+  pós-graduação saiu do feed, o Desejável virou uma linha só, e os vãos entre
+  blocos foram pra 68px. A pós continua no stories e na legenda. Virou regra:
+  respiro vem de cortar item, não de apertar entrelinha.
 
