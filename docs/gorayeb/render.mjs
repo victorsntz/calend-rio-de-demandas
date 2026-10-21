@@ -195,7 +195,7 @@ function monta(s, i = 0, total = 0) {
     case "vaga":
       corpo = `
         ${ARROBA}
-        ${s.etiqueta ? ETIQUETA(s.etiqueta) : ""}
+        ${s.etiqueta ? `${ETIQUETA(s.etiqueta)}<div class="espaco-sm"></div>` : ""}
         <div class="meio">
           <h2 class="vaga-cargo">${titulo(s.cargo)}</h2>
           ${s.local ? `<div class="espaco-sm"></div><p class="vaga-local">${rico(s.local)}</p>` : ""}

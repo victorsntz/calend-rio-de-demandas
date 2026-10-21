@@ -752,3 +752,13 @@
 }
 .vaga-chamada strong { color: var(--dourado); }
 .vaga-chamada + .caixa-dado { margin-top: 22px; }
+
+/* o feed tem 570px a menos que o stories pro mesmo conteúdo, então o corpo
+   cede e os vãos aumentam: apertado não se lê */
+.slide.vaga:not(.stories) .vaga-cargo  { font-size: 70px; }
+.slide.vaga:not(.stories) .vaga-local  { font-size: 34px; }
+.slide.vaga:not(.stories) .espaco      { height: 54px; }
+.slide.vaga:not(.stories) .vaga-req    { gap: 24px; }
+.slide.vaga:not(.stories) .vaga-req li { font-size: 29px; line-height: 1.4; max-width: 25em; }
+.slide.vaga:not(.stories) .vaga-chamada { font-size: 29px; margin-top: 54px; }
+.slide.vaga:not(.stories) .caixa-dado p { font-size: 28px; }
