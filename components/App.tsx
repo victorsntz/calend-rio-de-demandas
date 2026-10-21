@@ -12,7 +12,8 @@ import Confetti from "./Confetti";
 
 type Tab = "calendario" | "teia";
 
-export default function App() {
+/** `voiceStudioHref`: link para o Estúdio de Voz (só existe no app Next). */
+export default function App({ voiceStudioHref }: { voiceStudioHref?: string } = {}) {
   const store = useAppState();
   const { state } = store;
 
@@ -71,6 +72,15 @@ export default function App() {
           <h1 className="text-4xl">Calendário de Demandas</h1>
         </div>
         <div className="flex items-center gap-2 text-sm">
+          {voiceStudioHref && (
+            <a
+              href={voiceStudioHref}
+              className="rounded border border-line-strong bg-foreground px-3 py-1.5 text-background hover:opacity-85"
+              title="Narração, versões traduzidas e banco de vozes"
+            >
+              🎙️ Estúdio de Voz
+            </a>
+          )}
           <button
             onClick={exportJson}
             className="rounded border border-line bg-card px-3 py-1.5 hover:border-line-strong"
