@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-18",
+  "atualizado_em": "2026-10-21",
   "origem": "Calendario_Editorial_Instagram_Agro.xlsx, remanejado em 16/10/2026",
   "cadencia": "Terça = vídeo com o Dr. Fernando (técnico) · Quinta = carrossel (notícia) · Sábado = estático com legenda (humanizado)",
   "deslocamento": "O pilar trabalhista (itens 25 em diante) correu 28 dias para frente: a NR-31 abre em 24/11 em vez de 27/10. O que ocupou o lugar foi o estoque de vídeo gravado mais o bloco ambiental que o acompanha.",
@@ -45,6 +45,16 @@
       "origem": "item 15 — vídeo gravado",
       "status": "gravado e editado",
       "formato": "vídeo"
+    },
+    {
+      "data": "2026-10-21",
+      "slot": "institucional",
+      "pilar": "Institucional",
+      "tipo": "Extra",
+      "tema": "Vaga: Advogado(a) — Contencioso Cível (feed + stories)",
+      "origem": "pedido da Dra. Elisa, fora da cadência",
+      "status": "entregue em 21/10",
+      "formato": "feed + stories"
     },
     {
       "data": "2026-10-22",

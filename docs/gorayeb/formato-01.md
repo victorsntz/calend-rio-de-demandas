@@ -161,6 +161,25 @@ virada em **caixa alta dourada**, marcada com `*asterisco*` no JSON.
 Leva etiqueta, logo e, quando houver base legal, a fonte no rodapé. Serve bem
 para regra com exceção, que é onde uma frase curta rende mais que dez slides.
 
+## A vaga
+
+Anúncio de contratação sai em duas peças, **feed 1080×1350 e stories 1080×1920**,
+do mesmo JSON: o slide de stories só leva `formato: "stories"`.
+
+Na arte vai o mínimo que faz alguém se candidatar: **cargo, cidade, presencial ou
+não, dois ou três requisitos de uma linha, e o e-mail com o assunto do envio.**
+Atribuição, diferencial e remuneração ficam na legenda. No stories os requisitos
+saem.
+
+Aqui a **foto é do escritório**, não cenário nacional. É a exceção: quem vai se
+candidatar quer ver onde trabalharia.
+
+O stories ganha margem extra em cima e embaixo, que é onde o Instagram põe a
+própria interface. Nada de texto encosta ali.
+
+**Prazo só entra se estiver certo.** Data de inscrição vencida ou que não bate com
+a data do envio fica de fora até o cliente confirmar.
+
 ## Como entrego
 
 **Toda vez que fecho conteúdo, vão três coisas**, sem precisar pedir:

@@ -215,6 +215,8 @@ export const ICONES = {
           <path d="M25 6h14v8H25z"/>
           <path d="M23 34l7 7 13-14"/>`,
   salvar: `<path d="M18 10h28v46L32 44 18 56z"/>`,
+  envelope: `<rect x="6" y="14" width="52" height="36" rx="5"/>
+             <path d="M6 18l26 18 26-18"/>`,
   grafico: `<path d="M12 52h40"/>
             <path d="M20 52V36M30 52V22M40 52V30M50 52V14"/>`,
   balanca: `<path d="M32 12v40M20 56h24"/>

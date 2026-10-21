@@ -81,7 +81,7 @@ const LOCKUP = (altura = 74, claro = true) =>
 
 function foto(s) {
   if (!s.foto) return "";
-  const img = `<img class="foto" src="${esc(s.foto)}" alt="">`;
+  const img = `<img class="foto" src="${esc(s.foto)}" alt="" style="object-position:${esc(s.foco || "center")}">`;
   /* capa e perspectiva trazem o próprio véu, em dois gradientes */
   if (s.veu === "nenhum" || s.tipo === "capa-foto" || s.tipo === "perspectiva") return img;
   const veu = s.veu === "marrom" ? "veu-marrom" : s.veu === "topo" ? "veu-topo" : "veu-verde";
@@ -114,6 +114,8 @@ function monta(s, i = 0, total = 0) {
   if (s.meiaFoto) cls.push("meia-foto");
   if (s.tipo === "fecho" && s.foto) cls.push("fecho-foto");
   if (s.tipo === "foto-texto" && s.foto) cls.push("foto-texto");
+  if (s.tipo === "vaga") cls.push("vaga");
+  if (s.formato === "stories") cls.push("stories");
   if (s.tipo === "capa-foto" || s.tipo === "perspectiva") cls.push("capa-foto", "bg-foto");
   if (s.tipo === "corpo-foto") cls.push("corpo-foto", "bg-verde");
 
@@ -188,6 +190,24 @@ function monta(s, i = 0, total = 0) {
 
     /* estático: uma peça só. A frase é o conteúdo, o apoio explica em uma
        linha e o resto fica na legenda do post. */
+    /* anúncio de vaga: mesmo conteúdo serve o feed (1080×1350) e o
+       stories (1080×1920). No stories os requisitos saem. */
+    case "vaga":
+      corpo = `
+        ${ARROBA}
+        ${s.etiqueta ? ETIQUETA(s.etiqueta) : ""}
+        <div class="meio">
+          <h2 class="vaga-cargo">${titulo(s.cargo)}</h2>
+          ${s.local ? `<div class="espaco-sm"></div><p class="vaga-local">${rico(s.local)}</p>` : ""}
+          ${(s.requisitos || []).length
+            ? `<div class="espaco"></div>
+               <ul class="lista vaga-req">${s.requisitos.map((r) => `<li>${rico(r)}</li>`).join("")}</ul>`
+            : ""}
+        </div>
+        ${CAIXA(s.envio)}
+        <div class="rodape">${LOGO(66)}${s.prazo ? `<p class="fonte">${esc(s.prazo)}</p>` : ""}</div>`;
+      break;
+
     case "estatico":
       corpo = `
         ${ARROBA}
@@ -375,7 +395,8 @@ const htmlPath = join(AQUI, "template", `_${nome}.html`);
 writeFileSync(htmlPath, html);
 
 const browser = await chromium.launch();
-const page = await browser.newPage({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 1 });
+const alturaMax = Math.max(1350, ...spec.slides.map((s) => (s.formato === "stories" ? 1920 : 1350)));
+const page = await browser.newPage({ viewport: { width: 1080, height: alturaMax }, deviceScaleFactor: 1 });
 await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "networkidle" });
 await page.evaluate(() => document.fonts.ready);
 /* centra o jugo exatamente no vão entre o F e o G de cada lockup */
@@ -391,6 +412,10 @@ await page.evaluate(() => {
 const nos = await page.$$(".slide");
 for (const [i, no] of nos.entries()) {
   const arq = join(saida, `pag-${String(i + 1).padStart(2, "0")}.png`);
+  /* slide mais alto que a janela (stories) precisa entrar em quadro e ter
+     um quadro pintado antes do print, senão o pedaço de baixo sai preto */
+  await no.scrollIntoViewIfNeeded();
+  await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
   await no.screenshot({ path: arq });
   console.log(arq);
 }

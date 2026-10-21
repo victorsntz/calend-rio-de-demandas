@@ -8,7 +8,7 @@ Atualizo isso a cada entrega ou decisão nova.
 | | |
 | --- | --- |
 | **Formato padrão** | 01, escrito em `formato-01.md` |
-| **Peças prontas** | 5 carrosséis + 1 estático. Publicado: escala 6x1 (16/10) |
+| **Peças prontas** | 5 carrosséis, 1 estático, 1 anúncio de vaga. Publicado: escala 6x1 (16/10) |
 | **Pendente com o Victor** | licença das fotos do Pinterest |
 | **Em aberto** | autorização da ABCZ pra retrato de pioneiro |
 
@@ -63,6 +63,22 @@ com a ressalva.
 
 Arquivo: `carrosseis/disputas-cooperativas.json`
 Status: **entregue**, aguardando revisão. Falta conferir licença de 4 fotos.
+
+### 7. Vaga: Advogado(a) — Contencioso Cível
+
+Duas artes, feed (1080×1350) e stories (1080×1920), a partir do texto que a Dra.
+Elisa mandou. Só o essencial na arte: cargo, cidade, três requisitos de uma linha
+e o e-mail com o assunto. Atribuição, diferencial e remuneração ficaram na legenda.
+
+Foto é do banco da própria Gorayeb, a sala de reuniões vazia. É a exceção à regra
+de cenário nacional: em vaga, quem vai se candidatar quer ver onde trabalharia.
+
+**O prazo não entrou.** O texto diz "até 16/10/2026" numa mensagem de 21/10. Ou
+era 16/11, ou veio de rascunho antigo. O campo está pronto no rodapé, é só a
+Elisa confirmar.
+
+Arquivo: `carrosseis/vaga-contencioso-civel.json`
+Status: **entregue**, aguardando revisão.
 
 ## Calendário editorial
 
@@ -234,3 +250,20 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   @gorayebadvocacia no topo, porque a chapa não deixa lugar pra ele em cima da
   foto. Está assim desde a cerca e passou em três revisões. Se o Victor quiser,
   dá pra jogar o arroba pra dentro da chapa.
+
+**21/10/2026**
+
+- Anúncio da vaga do contencioso, feed e stories.
+- **Tipo novo no template: `vaga`.** Etiqueta, cargo em duas linhas com a segunda
+  em dourado, cidade, requisitos opcionais e caixa de e-mail. O mesmo JSON serve
+  as duas peças; o que muda é `formato: "stories"`.
+- **Stories passou a existir no render.** `.slide.stories` tem 1920px de altura,
+  com margem extra em cima e embaixo, que é onde o Instagram põe a própria
+  interface. A janela do Chromium cresce pro maior slide da peça.
+- Erro que custou uma rodada: slide mais alto que a janela saía com o pé preto. O
+  print do elemento pegava uma faixa que o Chromium ainda não tinha pintado. Entrou
+  `scrollIntoViewIfNeeded` e a espera de dois quadros antes de cada print.
+- O `empacota.py` passou a pôr o formato no nome do arquivo quando a peça tem mais
+  de um (`01-feed.png`, `02-stories.png`) e a medida certa no cabeçalho do txt.
+- A vaga entrou na agenda do dia 21/10 como extra, fora da cadência, pra Elisa ver
+  no Excel que ela saiu.

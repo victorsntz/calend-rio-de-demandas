@@ -26,13 +26,25 @@ def empacota(spec_path, destino=None):
     if not pngs:
         raise SystemExit(f"{artes} está sem PNG nenhum.")
 
+    # peça com formatos diferentes (feed e stories) ganha o formato no nome do
+    # arquivo, senão quem abre o zip não sabe qual é qual
+    formatos = [s.get("formato", "feed") for s in spec.get("slides", [])]
+    varios = len(set(formatos)) > 1
+    nomes = [
+        f"{i:02d}-{formatos[i - 1]}.png" if varios and i <= len(formatos) else f"{i:02d}.png"
+        for i in range(1, len(pngs) + 1)
+    ]
+
+    MEDIDA = {"stories": "1080 x 1920"}
+    medidas = sorted({MEDIDA.get(f, "1080 x 1350") for f in formatos} or {"1080 x 1350"})
+
     legenda = spec.get("legenda_instagram", "").strip()
     titulo = spec.get("titulo", nome)
     # cabeçalho curto pra quem abre o txt saber de que peça é, separado da
     # legenda por uma linha de corte, que é o que vai pro Instagram
     texto = (
         f"{titulo}\n"
-        f"{len(pngs)} slides · 1080 x 1350\n"
+        f"{len(pngs)} {'artes' if varios else 'slides'} · {' e '.join(medidas)}\n"
         f"{'-' * 60}\n\n"
         f"{legenda}\n"
     )
@@ -42,8 +54,8 @@ def empacota(spec_path, destino=None):
     zip_path = os.path.join(destino, f"gorayeb-{nome}.zip")
 
     with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
-        for i, f in enumerate(pngs, 1):
-            z.write(os.path.join(artes, f), f"{nome}/{i:02d}.png")
+        for f, destino_png in zip(pngs, nomes):
+            z.write(os.path.join(artes, f), f"{nome}/{destino_png}")
         z.writestr(f"{nome}/legenda.txt", texto)
 
     txt_path = os.path.join(destino, f"gorayeb-{nome}-legenda.txt")

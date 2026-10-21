@@ -689,3 +689,37 @@
 .bg-offwhite .frase strong, .bg-branco .frase strong,
 .bg-creme .frase strong, .bg-areia .frase strong { color: var(--bordo); }
 .frase em { font-style: italic; font-weight: 400; }
+
+/* ======================================================================
+   VAGA — anúncio de contratação. O mesmo slide serve o feed (1080×1350)
+   e o stories (1080×1920); muda só a altura e o corpo do cargo.
+   ====================================================================== */
+.slide.stories { height: 1920px; }
+
+/* sobre foto o texto ocupa a peça inteira, então o véu é parelho e forte */
+.slide.vaga .veu-verde {
+  background: linear-gradient(180deg, rgba(20,28,16,.80) 0%, rgba(20,28,16,.86) 50%, rgba(20,28,16,.92) 100%); }
+.slide.vaga .veu-marrom {
+  background: linear-gradient(180deg, rgba(58,24,10,.78) 0%, rgba(58,24,10,.84) 50%, rgba(58,24,10,.90) 100%); }
+
+.vaga-cargo {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 84px; line-height: 1.08; letter-spacing: -.012em;
+}
+.slide.stories .vaga-cargo { font-size: 96px; }
+.vaga-cargo strong { color: var(--dourado); font-weight: 700; }
+
+.vaga-local {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 36px; letter-spacing: .02em;
+  color: var(--areia);
+}
+.slide.stories .vaga-local { font-size: 40px; }
+
+.vaga-req { gap: 26px; margin-bottom: 0; }
+.vaga-req li { font-size: 31px; max-width: 24em; }
+
+/* o Instagram cobre o topo e o pé do stories com a própria interface, então
+   a peça ganha margem extra em cima e embaixo */
+.slide.stories { padding-top: 130px; padding-bottom: 190px; }
+.slide.vaga .caixa-dado { margin-top: 54px; }
