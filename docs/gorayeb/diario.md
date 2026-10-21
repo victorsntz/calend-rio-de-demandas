@@ -297,4 +297,7 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   pós-graduação saiu do feed, o Desejável virou uma linha só, e os vãos entre
   blocos foram pra 68px. A pós continua no stories e na legenda. Virou regra:
   respiro vem de cortar item, não de apertar entrelinha.
+- Dra. Elisa: Direito Agrário e Agronegócio, na lista do Desejável, estavam
+  dizendo a mesma coisa. Ficou "Direito do Agronegócio ou Empresarial" nas duas
+  artes e na legenda, que é como o escritório se posiciona. "Agrário" saiu da peça.
 

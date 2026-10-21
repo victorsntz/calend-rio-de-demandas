@@ -29,6 +29,7 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Véu sobre foto** | O `foto-texto` leva véu próprio, mais fechado na faixa do meio. O véu padrão fecha só no pé e deixa o parágrafo brigando com a imagem. |
 | **Rosto em foto de banco** | Close de gente identificável não entra. Foto de Pinterest com rosto reconhecível em post comercial é risco sem retorno. Multidão de longe, de costas ou em contraluz, pode. |
 | **"Agro"** | **Nunca abreviado.** Sempre **Agronegócio**, na arte e na legenda. Regra da Dra. Elisa, 21/10. |
+| **"Agrário" e "Agronegócio"** | Não listar os dois juntos: pra cliente são a mesma coisa. O termo da casa é **Direito do Agronegócio**. Regra da Dra. Elisa, 21/10. |
 | **"Conta ponto"** | Fora. Diferencial de vaga vai sob o rótulo **Desejável**. Regra da Dra. Elisa, 21/10. |
 | **Barra de progresso** | **Não usar.** Existe no template (`progresso: true`), mas ficou de fora por decisão do Victor. |
 
