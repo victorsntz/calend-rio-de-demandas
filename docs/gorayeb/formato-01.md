@@ -28,6 +28,8 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Tamanho** | 5 a 7 slides no padrão. Até 10 quando a pauta é técnica e pede texto corrido, como mudança de lei. |
 | **Véu sobre foto** | O `foto-texto` leva véu próprio, mais fechado na faixa do meio. O véu padrão fecha só no pé e deixa o parágrafo brigando com a imagem. |
 | **Rosto em foto de banco** | Close de gente identificável não entra. Foto de Pinterest com rosto reconhecível em post comercial é risco sem retorno. Multidão de longe, de costas ou em contraluz, pode. |
+| **"Agro"** | **Nunca abreviado.** Sempre **Agronegócio**, na arte e na legenda. Regra da Dra. Elisa, 21/10. |
+| **"Conta ponto"** | Fora. Diferencial de vaga vai sob o rótulo **Desejável**. Regra da Dra. Elisa, 21/10. |
 | **Barra de progresso** | **Não usar.** Existe no template (`progresso: true`), mas ficou de fora por decisão do Victor. |
 
 ## A capa
@@ -180,7 +182,8 @@ O stories ganha margem extra em cima e embaixo, que é onde o Instagram põe a
 própria interface. Nada de texto encosta ali.
 
 **Prazo só entra se estiver certo.** Data de inscrição vencida ou que não bate com
-a data do envio fica de fora até o cliente confirmar.
+a data do envio fica de fora até o cliente confirmar. Confirmada, ela vira a
+`chamada`: uma linha de ação logo acima da caixa do e-mail, com a data em dourado.
 
 ## Como entrego
 

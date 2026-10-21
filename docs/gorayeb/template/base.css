@@ -740,5 +740,15 @@
 .vaga-remate {
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-weight: 300; font-size: 28px; line-height: 1.46;
-  color: var(--areia); max-width: 26em; flex: none; margin-top: 10px;
+  color: var(--areia); max-width: 26em; flex: none; margin-top: 46px;
 }
+
+/* a chamada de envio: é o que a pessoa tem que fazer, com o prazo em dourado.
+   Vem colada na caixa do e-mail, que as duas são o mesmo gesto. */
+.vaga-chamada {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: 32px; line-height: 1.34;
+  flex: none; margin-top: 50px;
+}
+.vaga-chamada strong { color: var(--dourado); }
+.vaga-chamada + .caixa-dado { margin-top: 22px; }

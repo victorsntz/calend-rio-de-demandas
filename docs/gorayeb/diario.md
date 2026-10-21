@@ -75,9 +75,10 @@ de Araguari a 30 minutos de Uberlândia.
 Foto é do banco da própria Gorayeb, a sala de reuniões vazia. É a exceção à regra
 de cenário nacional: em vaga, quem vai se candidatar quer ver onde trabalharia.
 
-**O prazo não entrou.** O texto diz "até 16/10/2026" numa mensagem de 21/10. Ou
-era 16/11, ou veio de rascunho antigo. O campo está pronto no rodapé, é só a
-Elisa confirmar.
+**O prazo.** O texto original dizia "até 16/10/2026" numa mensagem de 21/10. Era
+data vencida, ficou de fora da arte. A Elisa confirmou 30/10 no mesmo dia e a
+chamada entrou nas duas peças: "Envie seu currículo até dia 30/10", com a data em
+dourado, logo acima da caixa do e-mail.
 
 Arquivo: `carrosseis/vaga-contencioso-civel.json`
 Status: **entregue**, aguardando revisão.
@@ -271,3 +272,11 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   no Excel que ela saiu.
 - Revisão do Victor: o stories podia levar bem mais informação. O tipo `vaga`
   ganhou `blocos` (subtítulo dourado + lista) e `remate`. O feed continua enxuto.
+- Duas correções da Dra. Elisa, que viraram regra: **"conta ponto" não se usa** em
+  anúncio de vaga, diferencial vai sob o rótulo **Desejável**; e **"agro" nunca
+  abreviado**, sempre **Agronegócio**.
+- A regra do Agronegócio foi aplicada também na recuperação judicial, que sai dia
+  22 e ainda dava tempo. A escala 6x1 já está publicada desde 16/10 com "Trabalho
+  no agro." na capa e "dos contratos do agro" no gráfico: fica como está, a regra
+  vale daqui pra frente.
+- Prazo da vaga confirmado em 30/10. Campo novo no tipo `vaga`: `chamada`.

@@ -212,6 +212,7 @@ function monta(s, i = 0, total = 0) {
             .join("")}
         </div>
         ${s.remate ? `<p class="vaga-remate">${rico(s.remate)}</p>` : ""}
+        ${s.chamada ? `<p class="vaga-chamada">${rico(s.chamada)}</p>` : ""}
         ${CAIXA(s.envio)}
         <div class="rodape">${LOGO(66)}${s.prazo ? `<p class="fonte">${esc(s.prazo)}</p>` : ""}</div>`;
       break;
