@@ -723,3 +723,22 @@
    a peça ganha margem extra em cima e embaixo */
 .slide.stories { padding-top: 130px; padding-bottom: 190px; }
 .slide.vaga .caixa-dado { margin-top: 54px; }
+
+/* a vaga pode vir em blocos (o que faz / o que buscamos), que é o que cabe
+   no stories e não cabe no feed */
+.vaga-bloco-tit {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: 23px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--dourado);
+  margin-bottom: 24px; flex: none;
+}
+.slide.stories .vaga-req { gap: 20px; }
+.slide.stories .vaga-req li { font-size: 29px; line-height: 1.4; max-width: 25em; }
+.slide.stories .espaco { height: 48px; }
+
+/* última linha antes do e-mail: o que não é requisito nem atribuição */
+.vaga-remate {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 28px; line-height: 1.46;
+  color: var(--areia); max-width: 26em; flex: none; margin-top: 10px;
+}

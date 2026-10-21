@@ -67,8 +67,10 @@ Status: **entregue**, aguardando revisão. Falta conferir licença de 4 fotos.
 ### 7. Vaga: Advogado(a) — Contencioso Cível
 
 Duas artes, feed (1080×1350) e stories (1080×1920), a partir do texto que a Dra.
-Elisa mandou. Só o essencial na arte: cargo, cidade, três requisitos de uma linha
-e o e-mail com o assunto. Atribuição, diferencial e remuneração ficaram na legenda.
+Elisa mandou. O feed leva o essencial: cargo, cidade, três requisitos de uma linha
+e o e-mail com o assunto. O stories, que tem 570px a mais de altura, abre as
+atribuições e os requisitos em dois blocos e ainda leva a linha da remuneração e
+de Araguari a 30 minutos de Uberlândia.
 
 Foto é do banco da própria Gorayeb, a sala de reuniões vazia. É a exceção à regra
 de cenário nacional: em vaga, quem vai se candidatar quer ver onde trabalharia.
@@ -267,3 +269,5 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   de um (`01-feed.png`, `02-stories.png`) e a medida certa no cabeçalho do txt.
 - A vaga entrou na agenda do dia 21/10 como extra, fora da cadência, pra Elisa ver
   no Excel que ela saiu.
+- Revisão do Victor: o stories podia levar bem mais informação. O tipo `vaga`
+  ganhou `blocos` (subtítulo dourado + lista) e `remate`. O feed continua enxuto.

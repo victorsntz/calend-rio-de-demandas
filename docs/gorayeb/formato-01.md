@@ -166,10 +166,12 @@ para regra com exceção, que é onde uma frase curta rende mais que dez slides.
 Anúncio de contratação sai em duas peças, **feed 1080×1350 e stories 1080×1920**,
 do mesmo JSON: o slide de stories só leva `formato: "stories"`.
 
-Na arte vai o mínimo que faz alguém se candidatar: **cargo, cidade, presencial ou
-não, dois ou três requisitos de uma linha, e o e-mail com o assunto do envio.**
-Atribuição, diferencial e remuneração ficam na legenda. No stories os requisitos
-saem.
+**O feed leva o mínimo que faz alguém se candidatar:** cargo, cidade, presencial
+ou não, dois ou três requisitos de uma linha, e o e-mail com o assunto do envio.
+
+**O stories leva muito mais**, porque tem 570px a mais de altura: as atribuições e
+os requisitos em `blocos`, cada um com subtítulo dourado, e o `remate` com
+remuneração e o que a cidade oferece. É a peça que alguém abre com tempo.
 
 Aqui a **foto é do escritório**, não cenário nacional. É a exceção: quem vai se
 candidatar quer ver onde trabalharia.

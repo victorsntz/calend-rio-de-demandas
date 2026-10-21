@@ -203,7 +203,15 @@ function monta(s, i = 0, total = 0) {
             ? `<div class="espaco"></div>
                <ul class="lista vaga-req">${s.requisitos.map((r) => `<li>${rico(r)}</li>`).join("")}</ul>`
             : ""}
+          ${(s.blocos || [])
+            .map(
+              (b) => `<div class="espaco"></div>
+                ${b.titulo ? `<p class="vaga-bloco-tit">${esc(b.titulo)}</p>` : ""}
+                <ul class="lista vaga-req">${(b.itens || []).map((r) => `<li>${rico(r)}</li>`).join("")}</ul>`
+            )
+            .join("")}
         </div>
+        ${s.remate ? `<p class="vaga-remate">${rico(s.remate)}</p>` : ""}
         ${CAIXA(s.envio)}
         <div class="rodape">${LOGO(66)}${s.prazo ? `<p class="fonte">${esc(s.prazo)}</p>` : ""}</div>`;
       break;

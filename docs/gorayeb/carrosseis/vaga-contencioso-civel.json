@@ -1,7 +1,7 @@
 {
   "id": "vaga-contencioso-civel",
   "titulo": "Vaga: Advogado(a) — Contencioso Cível",
-  "nota": "Duas peças: feed 1080×1350 e stories 1080×1920. Só o essencial, o resto fica na legenda. O prazo ficou de fora da arte: o texto da Dra. Elisa diz 16/10/2026, que já passou. Foto do banco da própria Gorayeb, a sala de reuniões vazia.",
+  "nota": "Duas peças: feed 1080×1350 e stories 1080×1920. O feed leva o essencial; o stories, que tem mais altura, abre as atribuições e os requisitos em dois blocos. O prazo ficou de fora da arte: o texto da Dra. Elisa diz 16/10/2026, que já passou. Foto do banco da própria Gorayeb, a sala de reuniões vazia.",
   "legenda_instagram": "A GORAYEB ADVOCACIA ESTÁ CONTRATANDO.\n\nAdvogado(a) para o Contencioso Cível. Araguari, Minas Gerais, presencial.\n\nA gente atua em Direito Empresarial e do Agronegócio, atendendo empresas, produtores rurais e grupos familiares do Triângulo Mineiro. A vaga é para fortalecer a área contenciosa, conduzindo processo do começo ao fim, com acompanhamento de perto dos sócios.\n\nO QUE VOCÊ VAI FAZER. Elaborar iniciais, contestações, réplicas, recursos e cumprimentos de sentença. Fazer audiência de conciliação, instrução e julgamento. Acompanhar prazo e andamento no processo eletrônico. Atuar em demanda cível de contrato, cobrança, execução e questão empresarial e agrária.\n\nO QUE A GENTE PROCURA. Até 5 anos de formado, com OAB ativa. Experiência de escritório em processo civil e audiência. Boa escrita jurídica e mão firme com prazo.\n\nCONTA PONTO. Conhecimento ou interesse em Direito Agrário, Agronegócio ou Empresarial, e pós-graduação nessas áreas ou em Processo Civil.\n\nRemuneração compatível com a experiência, espaço para crescer num nicho em expansão e a qualidade de vida de trabalhar em Araguari, a 30 minutos de Uberlândia.\n\nCurrículo para gestao@grupoftg.com.br, com o assunto “Vaga Contencioso Cível”.\n\nConhece alguém com esse perfil? Marca nos comentários.",
   "slides": [
     {
@@ -32,7 +32,26 @@
       "envio": {
         "icone": "envelope",
         "texto": "*gestao@grupoftg.com.br*\nassunto: Vaga Contencioso Cível"
-      }
+      },
+      "blocos": [
+        {
+          "titulo": "O que você vai fazer",
+          "itens": [
+            "Iniciais, contestações, réplicas, recursos e cumprimento de sentença",
+            "Audiência de conciliação, instrução e julgamento",
+            "Demanda cível de contrato, cobrança, execução e questão agrária"
+          ]
+        },
+        {
+          "titulo": "O que buscamos",
+          "itens": [
+            "Até 5 anos de formado(a), com OAB ativa",
+            "Experiência de escritório em processo civil e audiência",
+            "Direito do agro ou empresarial conta ponto"
+          ]
+        }
+      ],
+      "remate": "Remuneração compatível com a experiência e a qualidade de vida de Araguari, a 30 minutos de Uberlândia."
     }
   ]
 }
