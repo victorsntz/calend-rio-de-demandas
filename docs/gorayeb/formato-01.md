@@ -181,6 +181,10 @@ candidatar quer ver onde trabalharia.
 O stories ganha margem extra em cima e embaixo, que é onde o Instagram põe a
 própria interface. Nada de texto encosta ali.
 
+**A legenda de vaga é do cliente.** Vaga não segue a linguagem da casa: quem
+define o texto é o escritório, que é quem vai receber o currículo. A agência
+formata e aponta o que destoa, não reescreve por conta.
+
 **Prazo só entra se estiver certo.** Data de inscrição vencida ou que não bate com
 a data do envio fica de fora até o cliente confirmar. Confirmada, ela vira a
 `chamada`: uma linha de ação logo acima da caixa do e-mail, com a data em dourado.

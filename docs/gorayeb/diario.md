@@ -280,3 +280,16 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   no agro." na capa e "dos contratos do agro" no gráfico: fica como está, a regra
   vale daqui pra frente.
 - Prazo da vaga confirmado em 30/10. Campo novo no tipo `vaga`: `chamada`.
+- Mais uma rodada com a Dra. Elisa: a remuneração na arte ficou só
+  "Remuneração compatível com a experiência" (a qualidade de vida em Araguari saiu
+  da arte e continua na legenda), e a chamada virou "Envie seu currículo até dia
+  30/10 para o e-mail abaixo indicado:", apontando pra caixa.
+- **A legenda da vaga é o texto que ela mesma mandou, palavra por palavra.** Cheguei
+  a reescrever em registro institucional quando ela disse que estava informal, mas o
+  texto que ela aprovou em seguida é o tom da casa mesmo, com "a gente atua" e
+  "marca nos comentários". Quem escreve a legenda de vaga é o cliente; a agência
+  formata.
+- Divergência de propósito, pendente de palavra dela: na arte o desejável diz
+  "Direito Agrário, Agronegócio ou Empresarial", do anúncio original; na legenda
+  ficou "Agrário e/ou Empresarial", da versão nova.
+
