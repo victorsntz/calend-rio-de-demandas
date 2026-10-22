@@ -1,5 +1,28 @@
 # Vídeo de lançamento — Gorayeb abre a área de Direito Previdenciário
 
+**Versão em vigor: a do plano da Dra. Elisa (22/10), com o Dr. Fernando e o Dr. Gustavo
+na frente da câmera.** Cerca de 75 segundos. O Dr. Fernando abre e fecha; o Dr. Gustavo
+explica a área no meio. A versão narrada sem rosto, mais abaixo, ficou como histórico.
+
+| Tempo | Cena | Animação | Fala |
+| --- | --- | --- | --- |
+| 0–5s | Campo ao amanhecer: estrada de terra, lavoura, porteira. | A logo da Gorayeb se formando sobre a imagem. | (Sem fala, só trilha.) |
+| 5–18s | Dr. Fernando no escritório, plano médio. | Tarja: Dr. Fernando [sobrenome] · OAB/MG [número]. | A Gorayeb caminha junto com o produtor rural e com as empresas da nossa região. A gente cuida da terra, dos contratos, da família. Mas tem um momento que chega pra todo mundo que produz: o dia de parar. |
+| 18–24s | Trabalhador rural mais velho, de costas, olhando a lavoura. | Texto: **Direito Previdenciário**. | Dr. Fernando, em off: Por isso, agora a Gorayeb também atua em Direito Previdenciário. |
+| 24–40s | Dr. Gustavo, plano médio. | Tarja: Dr. Gustavo [sobrenome] · OAB/MG [número]. Linha do tempo com ícones de documentos rurais: nota do produtor, contrato de parceria, ITR, certidão. | Quem trabalha na roça com a família tem direito a se aposentar, mesmo sem ter pago o INSS todo mês. O que decide é a prova: nota de venda da produção, contrato de parceria, ITR, certidão com a profissão de lavrador. A gente ajuda a juntar e organizar esses documentos. |
+| 40–50s | Dr. Gustavo. | Ícone do BPC. | Também orientamos sobre o BPC, o benefício de um salário mínimo para idosos a partir de sessenta e cinco anos e para pessoas com deficiência, inclusive com autismo, de famílias de baixa renda. |
+| 50–58s | Dr. Gustavo. | Ícone de revisão. | E revisamos aposentadorias e pensões já concedidas, pra conferir se o cálculo e o tempo de trabalho foram reconhecidos do jeito certo. |
+| 58–66s | Fundo verde da marca. | Serviços entrando um a um, com ícone. | (Sem fala, só trilha.) |
+| 66–75s | Dr. Fernando fecha. | **Da porteira à aposentadoria.** e a logo. | Se você ou alguém da sua família tem dúvida sobre aposentadoria ou benefício do INSS, conversa com a gente. Gorayeb Advocacia. Protegemos o patrimônio e o futuro de quem produz, da porteira à aposentadoria. |
+
+Fontes: INSS, aposentadoria por idade do trabalhador rural; INSS, BPC/LOAS à pessoa idosa e
+à pessoa com deficiência (65 anos, renda de até 1/4 do salário mínimo por pessoa, CadÚnico).
+
+---
+
+## Histórico: versão narrada, sem rosto (substituída)
+
+
 Abre o bloco. Vai ao ar **sexta, 23/10**, fora da cadência. Pedido da Dra. Elisa.
 
 **Produção:** motion, sem rosto. Narração em ElevenLabs.

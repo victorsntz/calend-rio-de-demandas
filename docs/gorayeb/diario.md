@@ -370,3 +370,25 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   escritório. Não usar em peça de previdenciário: dá a entender que o patriarca é
   beneficiário.
 
+**22/10/2026, tarde**
+
+- A Dra. Elisa mandou o **Plano de Marketing do lançamento da área previdenciária**
+  (`calendario/referencias/plano-marketing-lancamento-previdenciario-elisa.pdf`). **Ele
+  substitui o nosso bloco de 13 peças.** 6 semanas, 18 posts, segunda, quarta e sexta,
+  temas misturando rural, BPC, urbano e aposentados, eventos (café de lançamento,
+  palestras, café com contadores) e entregas de site, cartilhas e apresentação.
+- Frase-guia dela: "Protegemos o patrimônio e o futuro de quem produz, da porteira à
+  aposentadoria." Linguagem: "quem trabalha na roça com a família" no lugar de
+  "segurado especial", sempre que der.
+- **Entregas com o nome Fortunato:** identidade visual da área, ajuste de perfis e
+  Google Meu Negócio, banco de 18 posts (antes da semana 1), cartilha do produtor rural
+  e apresentação institucional (semana 2), cartilha do BPC (semana 3). Na prática também
+  o vídeo de lançamento e, a confirmar, a parte visual do evento.
+- Leitura completa, grade dos 18 posts e pendências em
+  `calendario/lancamento-previdenciario.html`.
+- O vídeo do segurado especial (60 e 55, 15 anos) já foi feito e aprovado. Entra na
+  quarta da semana 1, que é o tema "Trabalho no campo conta para a aposentadoria?".
+- Roteiro do lançamento refeito no formato dela, com o Dr. Fernando e o Dr. Gustavo.
+- **Pendência que trava o calendário: a data de início da semana 1.** E se o feed do agro
+  pausa nas 6 semanas.
+
