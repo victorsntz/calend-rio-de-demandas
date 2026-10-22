@@ -12,6 +12,9 @@ na mesma linguagem, sem repetir o que já foi publicado.
 - Rosto da marca: **Dr. Fernando Torbay Gorayeb** (sócio-fundador, advogado e
   produtor rural). Segundo personagem: **Seu Roberto Gorayeb**, pai, advogado
   desde 1970, 80 anos. Terceira: **Jéssica**, esposa e sócia administradora.
+- **Área previdenciária (out/2026):** Dr. Gustavo Freitas Marcelino, advogado associado.
+  Dr. Fernando: OAB/MT 7.361, OAB/MG 144.479, OAB/DF 83.976. Gestora geral: Elisa Gehlen.
+  Fonte: site grupoftg.com.br, seção Equipe. Fotos em `img/fernando-site.jpg` e `img/gustavo-site.jpg`.
 - Marca **F.T.G.** = iniciais do Fernando, e também Fidelidade, Transparência,
   Genialidade. Era a marca do gado da família antes de ser a do escritório.
   "Marcar é deixar nome" é o mito fundador que aparece em tudo.

@@ -71,13 +71,23 @@
       "slot": "lançamento",
       "pilar": "Previdenciário",
       "tipo": "Relevante",
-      "tema": "Trabalho no campo conta para a aposentadoria? (vídeo do segurado especial; a legenda anuncia a área)",
+      "tema": "Apresentação da nova área e da equipe: vídeo de lançamento com o Dr. Fernando e o Dr. Gustavo",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "roteiro pronto · gravar hoje, reserva sem gravação pronta",
+      "formato": "vídeo"
+    },
+    {
+      "data": "2026-10-26",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Trabalho no campo conta para a aposentadoria? (vídeo do segurado especial, já aprovado)",
       "origem": "plano de marketing da Dra. Elisa, 22/10",
       "status": "vídeo aprovado · legenda para aprovação",
       "formato": "vídeo"
     },
     {
-      "data": "2026-10-26",
+      "data": "2026-10-28",
       "slot": "lançamento",
       "pilar": "Previdenciário",
       "tipo": "Relevante",
@@ -87,7 +97,7 @@
       "formato": "carrossel"
     },
     {
-      "data": "2026-10-28",
+      "data": "2026-10-30",
       "slot": "lançamento",
       "pilar": "Previdenciário",
       "tipo": "Relevante",
@@ -95,16 +105,6 @@
       "origem": "plano de marketing da Dra. Elisa, 22/10",
       "status": "a produzir",
       "formato": "carrossel"
-    },
-    {
-      "data": "2026-10-30",
-      "slot": "lançamento",
-      "pilar": "Previdenciário",
-      "tipo": "Relevante",
-      "tema": "Apresentação da nova área e da equipe: vídeo de lançamento com o Dr. Fernando e o Dr. Gustavo",
-      "origem": "plano de marketing da Dra. Elisa, 22/10",
-      "status": "roteiro pronto · gravar até 28/10",
-      "formato": "vídeo"
     },
     {
       "data": "2026-11-02",

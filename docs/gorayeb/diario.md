@@ -403,4 +403,14 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - As 14 peças do agro que estavam no período foram pro banco `proximo_bloco`,
   incluindo o carrossel das cooperativas e o estático do patrimônio, prontos e aprovados.
 - Legenda do post 01 em `lancamento-previdenciario/01-legenda-23-10.txt`.
+- Correção do Victor: **o post de amanhã tem que ser o vídeo de lançamento** do plano da
+  Elisa, com o Dr. Fernando aparecendo. O vídeo dos 60 e 55 foi pra segunda, 26/10, e o
+  resto subiu um passo. Roteiro em `lancamento-previdenciario/00-video-lancamento.md`,
+  em duas versões: A, gravada com os dois advogados, com o texto de cada um e um guia
+  de gravação rápida; B, reserva sem gravação, com os dois por foto e narração em voz
+  institucional (nunca clonar ou imitar a voz dos advogados).
+- Nomes e OAB vieram do site grupoftg.com.br, seção Equipe (os dados ficam no script do
+  site, não no HTML): Dr. Fernando Torbay Gorayeb, OAB/MG 144.479; Dr. Gustavo Freitas
+  Marcelino, advogado associado, sem OAB publicada. Fotos dos dois baixadas pra
+  `img/fernando-site.jpg` e `img/gustavo-site.jpg`. Falta a OAB do Dr. Gustavo.
 
