@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-21",
+  "atualizado_em": "2026-10-22",
   "origem": "Calendario_Editorial_Instagram_Agro.xlsx, remanejado em 16/10/2026",
   "cadencia": "Terça = vídeo com o Dr. Fernando (técnico) · Quinta = carrossel (notícia) · Sábado = estático com legenda (humanizado)",
   "deslocamento": "O pilar trabalhista (itens 25 em diante) correu 28 dias para frente: a NR-31 abre em 24/11 em vez de 27/10. O que ocupou o lugar foi o estoque de vídeo gravado mais o bloco ambiental que o acompanha.",
@@ -43,7 +43,7 @@
       "tipo": "Técnico",
       "tema": "Safra frustrada: o direito de prorrogar a dívida rural",
       "origem": "item 15 — vídeo gravado",
-      "status": "gravado e editado",
+      "status": "publicado em 20/10",
       "formato": "vídeo"
     },
     {
@@ -61,7 +61,7 @@
       "slot": "notícia",
       "pilar": "Crédito Rural",
       "tipo": "Relevante",
-      "tema": "Recuperação judicial no agro: por que produtores estão recorrendo a esse instrumento",
+      "tema": "Recuperação judicial no agronegócio: por que produtores estão recorrendo a esse instrumento",
       "origem": "item 14",
       "status": "entregue em 16/10",
       "formato": "carrossel"
