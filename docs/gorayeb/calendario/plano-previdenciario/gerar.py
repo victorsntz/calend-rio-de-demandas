@@ -214,7 +214,53 @@ def html_doc():
     return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Plano de conteúdo · Direito Previdenciário</title>
 <style>{CSS}</style></head><body>{capa}{visao}{grade_pag}{pecas}</body></html>"""
 
+# versão de tela, pra revisar e comentar: mesmas páginas, como folhas sobre
+# um fundo, e o grid cedendo no celular
+TELA = """
+:root{--fundo:#e7e2d4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--fundo:#12170f}}
+:root[data-theme="dark"]{--fundo:#12170f}
+html,body{background:var(--fundo)}
+body{padding:24px 0}
+.pag{width:min(210mm,calc(100% - 32px));margin:0 auto 24px;background:#fff;
+  padding:clamp(22px,6vw,22mm) clamp(18px,5.5vw,20mm);border-radius:4px;
+  box-shadow:0 1px 2px rgba(0,0,0,.08),0 8px 28px rgba(0,0,0,.10)}
+.capa{height:auto;min-height:min(297mm,150vw);padding:clamp(26px,7vw,26mm) clamp(20px,6vw,22mm)}
+.fontes a{word-break:normal}
+@media (max-width:640px){
+  body{font-size:15px}
+  .capa h1{font-size:44px}
+  .nums{grid-template-columns:1fr 1fr}
+  .tres,.telas{grid-template-columns:1fr}
+  ul.tela{columns:1}
+  table.grade td.f{display:none}
+  table.grade th:nth-child(2){display:none}
+}
+"""
+
+def html_tela():
+    doc = html_doc().replace("../fontes/", "fontes/").replace("../assets/", "assets/")
+    doc = doc.replace("<title>Plano de conteúdo · Direito Previdenciário</title>",
+                      "<title>Plano Direito Previdenciário</title>"
+                      '<meta name="viewport" content="width=device-width,initial-scale=1">')
+    return doc.replace("</style>", TELA + "</style>")
+
 if __name__ == "__main__":
+    if len(sys.argv) > 2 and sys.argv[1] == "--tela":
+        import shutil
+        d = sys.argv[2]
+        os.makedirs(os.path.join(d, "fontes", "arvo"), exist_ok=True)
+        os.makedirs(os.path.join(d, "fontes", "helvetica"), exist_ok=True)
+        os.makedirs(os.path.join(d, "assets"), exist_ok=True)
+        for f in ("Arvo-Regular.ttf", "Arvo-Bold.ttf", "Arvo-Italic.ttf"):
+            shutil.copy(os.path.join(GORAYEB, "fontes", "arvo", f), os.path.join(d, "fontes", "arvo", f))
+        for f in ("HelveticaNeueLight.otf", "HelveticaNeueRoman.otf", "HelveticaNeueMedium.otf", "HelveticaNeueBold.otf"):
+            shutil.copy(os.path.join(GORAYEB, "fontes", "helvetica", f), os.path.join(d, "fontes", "helvetica", f))
+        shutil.copy(os.path.join(GORAYEB, "assets", "logo-horizontal-claro.png"), os.path.join(d, "assets"))
+        open(os.path.join(d, "index.html"), "w", encoding="utf8").write(html_tela())
+        print(os.path.join(d, "index.html"))
+        sys.exit(0)
+
     tpl = os.path.join(GORAYEB, "template", "_plano-previdenciario.html")
     open(tpl, "w", encoding="utf8").write(html_doc())
     saida = os.path.join(GORAYEB, "calendario", "saida")
