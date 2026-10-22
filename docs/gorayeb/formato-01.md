@@ -223,6 +223,13 @@ revezando com as do novo por uma semana, não: o feed fica sem assunto.
 Peça pronta que não cabe na transição não se joga fora, vai pra segunda onda do
 pilar dela. Peça não produzida volta pra fila.
 
+## Plano de conteúdo pro cliente
+
+Quando um bloco vai pra aprovação, ele sai em PDF com **uma peça por página**: data,
+formato, objetivo, roteiro e fontes. Nada de bastidor de produção. O Victor aprovou
+esse formato no plano previdenciário de 22/10; o gerador está em
+`calendario/plano-previdenciario/gerar.py`, com versão de tela pra comentar.
+
 ## Como entrego
 
 **Toda vez que fecho conteúdo, vão três coisas**, sem precisar pedir:
