@@ -1,0 +1,100 @@
+{
+  "servicos": [
+    {
+      "servico": "BPC/LOAS para idoso",
+      "onde": null
+    },
+    {
+      "servico": "BPC/LOAS para pessoa com deficiência",
+      "onde": null
+    },
+    {
+      "servico": "BPC/LOAS para pessoa com TEA",
+      "onde": null
+    },
+    {
+      "servico": "Planejamento previdenciário",
+      "onde": "só o estático de fecho, 21/11"
+    },
+    {
+      "servico": "Atendimento ao produtor rural e família",
+      "onde": "o bloco inteiro"
+    },
+    {
+      "servico": "Análise documental",
+      "onde": "vídeo 4 e carrossel 3"
+    },
+    {
+      "servico": "Comprovação da atividade rural",
+      "onde": "vídeo 4, carrossel 1 e 3, estático 3"
+    },
+    {
+      "servico": "Revisão de aposentadoria",
+      "onde": null
+    },
+    {
+      "servico": "Revisão de pensão",
+      "onde": null
+    },
+    {
+      "servico": "Revisão de benefício por incapacidade",
+      "onde": null
+    },
+    {
+      "servico": "Erro de cálculo e período não reconhecido",
+      "onde": null
+    },
+    {
+      "servico": "Aposentadoria por idade rural",
+      "onde": "vídeos 1 e 2, carrossel 1 e 2, estáticos 1 e 2"
+    },
+    {
+      "servico": "Aposentadoria por idade urbana",
+      "onde": null
+    },
+    {
+      "servico": "Aposentadoria por tempo de contribuição",
+      "onde": null
+    },
+    {
+      "servico": "Aposentadoria por pontos",
+      "onde": null
+    },
+    {
+      "servico": "Aposentadoria especial (insalubre/periculoso)",
+      "onde": null
+    },
+    {
+      "servico": "Aposentadoria por incapacidade permanente",
+      "onde": null
+    },
+    {
+      "servico": "Auxílio-doença comum",
+      "onde": "carrossel 4, de passagem"
+    },
+    {
+      "servico": "Auxílio-doença acidentário",
+      "onde": null
+    },
+    {
+      "servico": "Salário-maternidade",
+      "onde": "carrossel 4"
+    },
+    {
+      "servico": "Pensão por morte",
+      "onde": "vídeo 5 e carrossel 4"
+    },
+    {
+      "servico": "Auxílio-reclusão",
+      "onde": null
+    },
+    {
+      "servico": "Servidor público municipal CLT (post que ela mandou)",
+      "onde": null
+    },
+    {
+      "servico": "Aposentadoria da PCD, LC 142 (post que ela mandou)",
+      "onde": null
+    }
+  ]
+}
