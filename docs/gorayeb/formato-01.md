@@ -216,9 +216,12 @@ Pilar ocupa a semana inteira, terça inclusive. Nada de intercalar assunto porqu
 peça de outro bloco já estava pronta: isso resolve problema de produção, não de
 audiência. Quem abre o feed não sabe nem liga que o vídeo já estava editado.
 
-O rabo de um bloco encostando no começo do outro é transição, não mistura, e vale
-por uma semana. Peça pronta de bloco encerrado sai no lugar dela; peça não produzida
-volta pra fila.
+**Transição é um bloco terminando antes do outro começar, não dois se alternando.**
+Uma peça do bloco anterior encostando na abertura do novo, tudo bem. Duas se
+revezando com as do novo por uma semana, não: o feed fica sem assunto.
+
+Peça pronta que não cabe na transição não se joga fora, vai pra segunda onda do
+pilar dela. Peça não produzida volta pra fila.
 
 ## Como entrego
 

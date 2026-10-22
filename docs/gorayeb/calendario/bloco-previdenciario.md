@@ -1,7 +1,7 @@
 # Bloco Previdenciário Rural
 
 Pedido da Dra. Elisa em 22/10. Abre **sexta, 23/10** e fecha em **21/11**.
-**12 peças: 5 vídeos, 3 carrosséis, 4 estáticos.**
+**13 peças: 5 vídeos, 4 carrosséis, 4 estáticos.**
 
 ## A decisão de recorte
 
@@ -26,9 +26,15 @@ editado, só vê que na terça falaram de CAR e na quinta de aposentadoria.
 **O bloco agora toma a semana inteira, terça inclusive.** Os três vídeos ambientais
 gravados foram pro bloco de janeiro, que já nasce com eles prontos na gaveta.
 
-O rabo de um bloco encostando no começo do outro continua valendo: as peças de
-crédito rural de 24/10 e 29/10 ficam onde estão, porque já foram produzidas e
-aprovadas. Transição de uma semana não é mistura.
+Na primeira versão corrigida ainda sobraram duas peças de crédito rural dentro da
+janela, em 24/10 e 29/10, e o feed ficava se revezando por uma semana. O Victor
+pegou de novo. **Transição é um bloco terminando antes do outro começar, não dois se
+alternando.**
+
+O carrossel das cooperativas subiu de 29/10 pra 24/10 e fecha o crédito rural no dia
+seguinte à abertura do previdenciário. O estático do patrimônio do produtor pessoa
+física saiu de outubro e foi pra segunda onda de crédito rural: está pronto e
+empacotado, é tema perene, e volta sem custo nenhum.
 
 ## A ordem dos formatos, e por quê
 
@@ -39,34 +45,38 @@ aprovadas. Transição de uma semana não é mistura.
 **Estático fecha com uma frase.** É o que vai pro grupo de WhatsApp da família.
 
 Aposentadoria rural se espalha por WhatsApp de filho pra mãe, não por explore. Uma
-frase que cabe num print viaja mais longe que um carrossel de dez telas, e é por
-isso que tem mais estático que carrossel.
+frase que cabe num print viaja mais longe que um carrossel de dez telas, e é por isso
+que o estático pesa tanto quanto o carrossel num tema que, em outro pilar, pediria
+mais carrossel.
 
 ## A grade
 
 | Data | | Formato | Peça |
 | --- | --- | --- | --- |
 | **23/10** | sex | **vídeo 1** | Segurado especial: quem vive da roça tem aposentadoria |
-| 24/10 | sáb | estático | *Patrimônio do produtor PF — crédito rural, já entregue* |
+| 24/10 | sáb | carrossel | *Disputas com cooperativas — fecha o crédito rural* |
 | **27/10** | ter | **vídeo 2** | Sessenta e cinquenta e cinco: a idade do campo não mudou |
-| 29/10 | qui | carrossel | *Disputas com cooperativas — crédito rural, já entregue* |
+| **29/10** | qui | **carrossel 1** | Segurado especial: os três critérios e o que derruba cada um |
 | **31/10** | sáb | **estático 1** | Trabalho na terra, não contribuição mensal |
 | **03/11** | ter | **vídeo 3** | Trabalhou na roça e depois na cidade: como o tempo se soma |
-| **05/11** | qui | **carrossel 1** | Segurado especial: os três critérios e o que derruba cada um |
-| **07/11** | sáb | **estático 2** | A Reforma não mexeu na idade do campo |
+| **05/11** | qui | **carrossel 2** | A Reforma não mexeu na idade do campo, e o que ela mexeu |
+| **07/11** | sáb | **estático 2** | Sessenta e cinquenta e cinco |
 | **10/11** | ter | **vídeo 4** | A prova é o que decide |
-| **12/11** | qui | **carrossel 2** | Os documentos que o INSS aceita como prova |
+| **12/11** | qui | **carrossel 3** | Os documentos que o INSS aceita como prova |
 | **14/11** | sáb | **estático 3** | Papel guardado vira aposentadoria |
 | **17/11** | ter | **vídeo 5** | Pensão por morte no campo |
-| **19/11** | qui | **carrossel 3** | Pensão, salário-maternidade e auxílio-doença: o que a família rural tem |
+| **19/11** | qui | **carrossel 4** | Pensão, salário-maternidade e auxílio-doença: o que a família rural tem |
 | **21/11** | sáb | **estático 4** | O ano de pedir não é o ano de começar a cuidar |
+
+Um único post de outro assunto na janela inteira, no dia seguinte à abertura. Depois
+dele são treze peças seguidas de previdenciário.
 
 ## O arco
 
-1. **Eu tenho direito?** vídeo 1, vídeo 2, estático 1
-2. **E quem saiu da roça?** vídeo 3, carrossel 1, estático 2
-3. **Como eu provo?** vídeo 4, carrossel 2, estático 3
-4. **E a minha família?** vídeo 5, carrossel 3, estático 4
+1. **Eu tenho direito?** vídeo 1, vídeo 2, carrossel 1, estático 1
+2. **E quem saiu da roça?** vídeo 3, carrossel 2, estático 2
+3. **Como eu provo?** vídeo 4, carrossel 3, estático 3
+4. **E a minha família?** vídeo 5, carrossel 4, estático 4
 
 O estático de 21/11 fecha o bloco virando a chave pro planejamento previdenciário,
 que é o serviço de maior valor da lista. Quem organiza papel dez anos antes se

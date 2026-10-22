@@ -78,13 +78,13 @@
     },
     {
       "data": "2026-10-24",
-      "slot": "humanizado",
+      "slot": "notícia",
       "pilar": "Crédito Rural",
       "tipo": "Relevante",
-      "tema": "Produtor pessoa física: como funciona a proteção do patrimônio em caso de dívida",
-      "origem": "item 21",
-      "status": "entregue em 16/10",
-      "formato": "estático"
+      "tema": "Disputas com cooperativas: o que fazer quando o produtor se sente lesado",
+      "origem": "item 20 · subiu de 29/10 pra fechar o crédito rural antes do previdenciário",
+      "status": "entregue em 18/10",
+      "formato": "carrossel"
     },
     {
       "data": "2026-10-27",
@@ -98,12 +98,12 @@
     },
     {
       "data": "2026-10-29",
-      "slot": "notícia",
-      "pilar": "Crédito Rural",
+      "slot": "pilar",
+      "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "Disputas com cooperativas: o que fazer quando o produtor se sente lesado",
-      "origem": "item 20",
-      "status": "entregue em 18/10",
+      "tema": "carrossel 1: Segurado especial, os três critérios e o que derruba cada um",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
+      "status": "a produzir",
       "formato": "carrossel"
     },
     {
@@ -131,7 +131,7 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "carrossel 1: Segurado especial, os três critérios e o que derruba cada um",
+      "tema": "carrossel 2: A Reforma não mexeu na idade do campo, e o que ela mexeu",
       "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "carrossel"
@@ -141,7 +141,7 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "estático 2: A Reforma não mexeu na idade do campo",
+      "tema": "estático 2: Sessenta e cinquenta e cinco",
       "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "estático"
@@ -161,7 +161,7 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "carrossel 2: Os documentos que o INSS aceita como prova",
+      "tema": "carrossel 3: Os documentos que o INSS aceita como prova",
       "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "carrossel"
@@ -191,7 +191,7 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "carrossel 3: Pensão, salário-maternidade e auxílio-doença, o que a família rural tem",
+      "tema": "carrossel 4: Pensão, salário-maternidade e auxílio-doença, o que a família rural tem",
       "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "carrossel"
@@ -465,6 +465,6 @@
   },
   "regra_de_formato": "Uma peça em vídeo por semana, na terça, mais duas que saem daqui. Carrossel e estático são intercambiáveis entre quinta e sábado, o Victor decide na execução. O vídeo é o que depende da agenda do Dr. Fernando, por isso tem dia fixo e vale gravar o mês inteiro de uma vez.",
   "correcao": "Em 16/10 os itens 1, 9, 10 e 15 foram marcados como no ar por engano. O feed tem estáticos e carrosséis sobre CAR; os vídeos estavam gravados e editados, esperando data. Entraram na agenda.",
-  "trilhas": "De 23/10 a 21/11 o pilar é Previdenciário Rural e ocupa a semana inteira, terça inclusive. Um bloco fala de uma coisa só. As peças de crédito rural de 24/10 e 29/10 ficam porque são o rabo do bloco anterior, e transição de uma semana não é mistura. De 24/11 a 05/12 o trabalhista corre junto: NR-31 na primeira semana, fim de ano na segunda.",
+  "trilhas": "De 23/10 a 21/11 o pilar é Previdenciário Rural e ocupa a semana inteira, terça inclusive. Um bloco fala de uma coisa só: o único post de outro assunto na janela é o carrossel das cooperativas em 24/10, que fecha o crédito rural no dia seguinte à abertura. De 24/11 a 05/12 o trabalhista corre junto, NR-31 na primeira semana e fim de ano na segunda.",
   "dezembro": "Dezembro foi montado à mão, não pelo deslocamento. Três decisões: o trabalhista fecha na primeira semana com contratação de temporário e com o 13º do safrista, que é de época e não estava no calendário; a sucessão ocupa o miolo do mês, que é quando a família se reúne e o tema fica permeável; e a semana do Natal quebra a cadência de propósito, com uma peça em 24/12, a virada de ano em 29/12 e a despedida em 31/12. Não há post em 26/12."
 }

@@ -335,4 +335,9 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - **Padrão de roteiro definido**, a partir do formato que o Victor usa no ElevenLabs:
   emoção em colchete antes da frase, `[pause]` marcando respiração, número por
   extenso. Está no formato 01.
+- Victor pegou de novo: mesmo depois de limpar as terças, sobravam duas peças de
+  crédito rural dentro da primeira semana e o feed ficava se revezando. **Transição é
+  um bloco terminando antes do outro começar, não dois se alternando.** O carrossel
+  das cooperativas subiu pra 24/10 e fecha o crédito rural; o estático do patrimônio
+  foi pra segunda onda, pronto e empacotado. Bloco fechou em 13 peças.
 
