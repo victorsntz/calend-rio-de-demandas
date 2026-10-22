@@ -1,7 +1,7 @@
 {
   "atualizado_em": "2026-10-22",
   "origem": "Calendario_Editorial_Instagram_Agro.xlsx, remanejado em 16/10/2026",
-  "cadencia": "Terça = vídeo com o Dr. Fernando (técnico) · Quinta = carrossel (notícia) · Sábado = estático com legenda (humanizado)",
+  "cadencia": "Durante o lançamento previdenciário, de 23/10 a 02/12: segunda, quarta e sexta, como no plano da Dra. Elisa. Quem aprova as peças é a Dra. Elisa.",
   "deslocamento": "O pilar trabalhista (itens 25 em diante) correu 28 dias para frente: a NR-31 abre em 24/11 em vez de 27/10. O que ocupou o lugar foi o estoque de vídeo gravado mais o bloco ambiental que o acompanha.",
   "no_ar": [
     {
@@ -68,273 +68,183 @@
     },
     {
       "data": "2026-10-23",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
-      "tipo": "Institucional",
-      "tema": "LANÇAMENTO: a Gorayeb abre a área de Direito Previdenciário",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, aguardando aprovação",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Trabalho no campo conta para a aposentadoria? (vídeo do segurado especial; a legenda anuncia a área)",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "vídeo aprovado · legenda para aprovação",
       "formato": "vídeo"
     },
     {
-      "data": "2026-10-24",
-      "slot": "notícia",
-      "pilar": "Crédito Rural",
+      "data": "2026-10-26",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
       "tipo": "Relevante",
-      "tema": "Disputas com cooperativas: o que fazer quando o produtor se sente lesado",
-      "origem": "item 20 · subiu de 29/10 pra fechar o crédito rural antes do previdenciário",
-      "status": "entregue em 18/10",
+      "tema": "Quais documentos provam a atividade rural",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "roteiro pronto",
       "formato": "carrossel"
     },
     {
-      "data": "2026-10-27",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
+      "data": "2026-10-28",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
       "tipo": "Relevante",
-      "tema": "vídeo 1: Segurado especial, quem vive da roça tem aposentadoria",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, aguardando aprovação",
-      "formato": "vídeo"
-    },
-    {
-      "data": "2026-10-29",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
-      "tipo": "Relevante",
-      "tema": "carrossel 1: Segurado especial, os três critérios e o que derruba cada um",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, aguardando aprovação",
-      "formato": "carrossel"
-    },
-    {
-      "data": "2026-10-31",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
-      "tipo": "Relevante",
-      "tema": "estático 1: Trabalho na terra, não contribuição mensal",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, aguardando aprovação",
-      "formato": "estático"
-    },
-    {
-      "data": "2026-11-03",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
-      "tipo": "Relevante",
-      "tema": "vídeo 2: Trabalhou na roça e depois na cidade, como o tempo se soma",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, aguardando aprovação",
-      "formato": "vídeo"
-    },
-    {
-      "data": "2026-11-05",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
-      "tipo": "Relevante",
-      "tema": "carrossel 2: Período rural negado pelo INSS, dá pra revisar",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, aguardando aprovação",
-      "formato": "carrossel"
-    },
-    {
-      "data": "2026-11-07",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
-      "tipo": "Relevante",
-      "tema": "estático 2: Sessenta e cinquenta e cinco, a Reforma não mexeu na idade do campo",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, aguardando aprovação",
-      "formato": "estático"
-    },
-    {
-      "data": "2026-11-10",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
-      "tipo": "Relevante",
-      "tema": "vídeo 3: A prova é o que decide",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, a gravar com o Dr. Gustavo",
-      "formato": "vídeo"
-    },
-    {
-      "data": "2026-11-12",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
-      "tipo": "Relevante",
-      "tema": "carrossel 3: Os documentos que o INSS aceita como prova",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, aguardando aprovação",
-      "formato": "carrossel"
-    },
-    {
-      "data": "2026-11-14",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
-      "tipo": "Relevante",
-      "tema": "estático 3: Papel guardado vira aposentadoria",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, aguardando aprovação",
-      "formato": "estático"
-    },
-    {
-      "data": "2026-11-17",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
-      "tipo": "Relevante",
-      "tema": "vídeo 4: Pensão por morte no campo",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, a gravar com o Dr. Gustavo",
-      "formato": "vídeo"
-    },
-    {
-      "data": "2026-11-19",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
-      "tipo": "Relevante",
-      "tema": "carrossel 4: Pensão, salário-maternidade e auxílio-doença, o que a família rural tem",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, aguardando aprovação",
-      "formato": "carrossel"
-    },
-    {
-      "data": "2026-11-21",
-      "slot": "pilar",
-      "pilar": "Previdenciário Rural",
-      "tipo": "Relevante",
-      "tema": "estático 4: O ano de pedir não é o ano de começar a cuidar",
-      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto, aguardando aprovação",
-      "formato": "estático"
-    },
-    {
-      "data": "2026-11-24",
-      "slot": "pilar",
-      "pilar": "Trabalhista Rural (NR-31)",
-      "tipo": "Relevante",
-      "tema": "NR-31: o que é e para quem essa norma se aplica",
-      "origem": "volta pra 24/11 e emenda no trabalhista de fim de ano",
-      "status": "a produzir",
-      "formato": "vídeo"
-    },
-    {
-      "data": "2026-11-26",
-      "slot": "pilar",
-      "pilar": "Trabalhista Rural (NR-31)",
-      "tipo": "Relevante",
-      "tema": "Atualizações da NR-31 e novos prazos de adequação",
-      "origem": "volta pra 24/11 e emenda no trabalhista de fim de ano",
+      "tema": "BPC/LOAS: quem tem direito",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
       "status": "a produzir",
       "formato": "carrossel"
     },
     {
-      "data": "2026-11-28",
-      "slot": "pilar",
-      "pilar": "Trabalhista Rural (NR-31)",
+      "data": "2026-10-30",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
       "tipo": "Relevante",
-      "tema": "Falta de EPI pode gerar multa e até interdição da fazenda",
-      "origem": "volta pra 24/11 e emenda no trabalhista de fim de ano",
-      "status": "a produzir",
-      "formato": "estático"
-    },
-    {
-      "data": "2026-12-01",
-      "slot": "técnico",
-      "pilar": "Trabalhista Rural (NR-31)",
-      "tipo": "Técnico",
-      "tema": "Contratação de trabalhador rural temporário: o que a lei exige",
-      "origem": "item 31",
-      "status": "a gravar no lote de dezembro",
+      "tema": "Apresentação da nova área e da equipe: vídeo de lançamento com o Dr. Fernando e o Dr. Gustavo",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "roteiro pronto · gravar até 28/10",
       "formato": "vídeo"
     },
     {
-      "data": "2026-12-03",
-      "slot": "notícia",
-      "pilar": "Trabalhista Rural (NR-31)",
+      "data": "2026-11-02",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
       "tipo": "Relevante",
-      "tema": "13º, férias e rescisão do trabalhador de safra: o que fechar antes do fim do ano",
-      "origem": "pauta nova — é de época e não estava no calendário",
+      "tema": "Seu benefício foi calculado certo?",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
       "status": "a produzir",
       "formato": "carrossel"
     },
     {
-      "data": "2026-12-05",
-      "slot": "humanizado",
-      "pilar": "Trabalhista Rural (NR-31)",
+      "data": "2026-11-04",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
       "tipo": "Relevante",
-      "tema": "Caso real: como evitamos uma autuação trabalhista em uma fazenda cliente",
-      "origem": "item 30",
-      "status": "precisa de material do escritório",
+      "tema": "Auxílio-doença mudou de nome: o que é o auxílio por incapacidade temporária",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "a produzir",
       "formato": "estático"
     },
     {
-      "data": "2026-12-08",
-      "slot": "técnico",
-      "pilar": "Sucessão e Holding Rural",
-      "tipo": "Técnico",
-      "tema": "O que é uma holding rural e para que ela serve",
-      "origem": "item 37",
-      "status": "a gravar no lote de dezembro",
+      "data": "2026-11-06",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "O que é planejamento previdenciário",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "a produzir · gravar",
       "formato": "vídeo"
     },
     {
-      "data": "2026-12-10",
-      "slot": "notícia",
-      "pilar": "Sucessão e Holding Rural",
+      "data": "2026-11-09",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
       "tipo": "Relevante",
-      "tema": "Holding familiar x inventário: diferenças de custo, tempo e conflito",
-      "origem": "item 40",
+      "tema": "Pensão por morte: quem recebe",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "roteiro pronto",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-11-11",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Chamada para o evento de lançamento",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "depende da data do evento",
+      "formato": "estático"
+    },
+    {
+      "data": "2026-11-13",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "BPC para crianças com TEA: como funciona",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
       "status": "a produzir",
       "formato": "carrossel"
     },
     {
-      "data": "2026-12-12",
-      "slot": "humanizado",
-      "pilar": "Sucessão e Holding Rural",
+      "data": "2026-11-16",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
       "tipo": "Relevante",
-      "tema": "Fim de ano, reunião de família: o momento certo para falar de sucessão",
-      "origem": "item 45",
-      "status": "a produzir",
-      "formato": "estático"
+      "tema": "Salário-maternidade para trabalhadora rural",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "roteiro pronto",
+      "formato": "carrossel"
     },
     {
-      "data": "2026-12-15",
-      "slot": "técnico",
-      "pilar": "Sucessão e Holding Rural",
-      "tipo": "Técnico",
-      "tema": "Doação em vida com reserva de usufruto: como funciona na prática",
-      "origem": "item 46",
-      "status": "a gravar no lote de dezembro",
-      "formato": "vídeo"
-    },
-    {
-      "data": "2026-12-17",
-      "slot": "notícia",
-      "pilar": "Sucessão e Holding Rural",
+      "data": "2026-11-18",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
       "tipo": "Relevante",
-      "tema": "Sem planejamento, a fazenda pode ser dividida ou vendida no inventário",
-      "origem": "item 39",
+      "tema": "Aposentadoria especial: quem trabalha com insalubridade",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
       "status": "a produzir",
       "formato": "carrossel"
     },
     {
-      "data": "2026-12-19",
-      "slot": "humanizado",
-      "pilar": "Sucessão e Holding Rural",
+      "data": "2026-11-20",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
       "tipo": "Relevante",
-      "tema": "Passo a passo para constituir uma holding rural com segurança jurídica",
-      "origem": "item 43",
-      "status": "a produzir",
-      "formato": "estático"
+      "tema": "Dúvidas frequentes sobre aposentadoria rural",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "a produzir · gravar",
+      "formato": "vídeo"
     },
     {
-      "data": "2026-12-22",
-      "slot": "técnico",
-      "pilar": "Sucessão e Holding Rural",
-      "tipo": "Técnico",
-      "tema": "Desvantagens da holding rural: quando ela não é a melhor solução",
-      "origem": "item 44",
-      "status": "a gravar no lote de dezembro",
-      "formato": "vídeo"
+      "data": "2026-11-23",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Bastidores do evento de lançamento",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "depende do evento",
+      "formato": "fotos"
+    },
+    {
+      "data": "2026-11-25",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Aposentadoria por idade urbana x rural",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "roteiro pronto",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-11-27",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Registro da palestra na cooperativa",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "depende do evento",
+      "formato": "fotos"
+    },
+    {
+      "data": "2026-11-30",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Registro do café com contadores",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "depende do evento",
+      "formato": "fotos"
+    },
+    {
+      "data": "2026-12-02",
+      "slot": "lançamento",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Registro da palestra no sindicato rural",
+      "origem": "plano de marketing da Dra. Elisa, 22/10",
+      "status": "depende do evento",
+      "formato": "fotos"
     },
     {
       "data": "2026-12-24",
@@ -461,10 +371,99 @@
           "tema": "Caso real: produtor perde acesso a financiamento por CAR desatualizado"
         }
       ]
+    },
+    "proximo_bloco": {
+      "motivo": "O feed do agro pausa durante o lançamento da área previdenciária, de 23/10 a 02/12. Decisão do Victor em 22/10: mantém só o bloco previdenciário e o próximo bloco se monta depois. O carrossel das cooperativas e o estático do patrimônio estão prontos e aprovados.",
+      "pecas": [
+        {
+          "pilar": "Crédito Rural",
+          "formato": "carrossel",
+          "tema": "Disputas com cooperativas: o que fazer quando o produtor se sente lesado",
+          "status": "entregue em 18/10"
+        },
+        {
+          "pilar": "Trabalhista Rural (NR-31)",
+          "formato": "vídeo",
+          "tema": "NR-31: o que é e para quem essa norma se aplica",
+          "status": "a produzir"
+        },
+        {
+          "pilar": "Trabalhista Rural (NR-31)",
+          "formato": "carrossel",
+          "tema": "Atualizações da NR-31 e novos prazos de adequação",
+          "status": "a produzir"
+        },
+        {
+          "pilar": "Trabalhista Rural (NR-31)",
+          "formato": "estático",
+          "tema": "Falta de EPI pode gerar multa e até interdição da fazenda",
+          "status": "a produzir"
+        },
+        {
+          "pilar": "Trabalhista Rural (NR-31)",
+          "formato": "vídeo",
+          "tema": "Contratação de trabalhador rural temporário: o que a lei exige",
+          "status": "a gravar no lote de dezembro"
+        },
+        {
+          "pilar": "Trabalhista Rural (NR-31)",
+          "formato": "carrossel",
+          "tema": "13º, férias e rescisão do trabalhador de safra: o que fechar antes do fim do ano",
+          "status": "a produzir"
+        },
+        {
+          "pilar": "Trabalhista Rural (NR-31)",
+          "formato": "estático",
+          "tema": "Caso real: como evitamos uma autuação trabalhista em uma fazenda cliente",
+          "status": "precisa de material do escritório"
+        },
+        {
+          "pilar": "Sucessão e Holding Rural",
+          "formato": "vídeo",
+          "tema": "O que é uma holding rural e para que ela serve",
+          "status": "a gravar no lote de dezembro"
+        },
+        {
+          "pilar": "Sucessão e Holding Rural",
+          "formato": "carrossel",
+          "tema": "Holding familiar x inventário: diferenças de custo, tempo e conflito",
+          "status": "a produzir"
+        },
+        {
+          "pilar": "Sucessão e Holding Rural",
+          "formato": "estático",
+          "tema": "Fim de ano, reunião de família: o momento certo para falar de sucessão",
+          "status": "a produzir"
+        },
+        {
+          "pilar": "Sucessão e Holding Rural",
+          "formato": "vídeo",
+          "tema": "Doação em vida com reserva de usufruto: como funciona na prática",
+          "status": "a gravar no lote de dezembro"
+        },
+        {
+          "pilar": "Sucessão e Holding Rural",
+          "formato": "carrossel",
+          "tema": "Sem planejamento, a fazenda pode ser dividida ou vendida no inventário",
+          "status": "a produzir"
+        },
+        {
+          "pilar": "Sucessão e Holding Rural",
+          "formato": "estático",
+          "tema": "Passo a passo para constituir uma holding rural com segurança jurídica",
+          "status": "a produzir"
+        },
+        {
+          "pilar": "Sucessão e Holding Rural",
+          "formato": "vídeo",
+          "tema": "Desvantagens da holding rural: quando ela não é a melhor solução",
+          "status": "a gravar no lote de dezembro"
+        }
+      ]
     }
   },
   "regra_de_formato": "Uma peça em vídeo por semana, na terça, mais duas que saem daqui. Carrossel e estático são intercambiáveis entre quinta e sábado, o Victor decide na execução. O vídeo é o que depende da agenda do Dr. Fernando, por isso tem dia fixo e vale gravar o mês inteiro de uma vez.",
   "correcao": "Em 16/10 os itens 1, 9, 10 e 15 foram marcados como no ar por engano. O feed tem estáticos e carrosséis sobre CAR; os vídeos estavam gravados e editados, esperando data. Entraram na agenda.",
-  "trilhas": "De 23/10 a 21/11 o pilar é Previdenciário Rural e ocupa a semana inteira, terça inclusive. Um bloco fala de uma coisa só: o único post de outro assunto na janela é o carrossel das cooperativas em 24/10, que fecha o crédito rural no dia seguinte à abertura. De 24/11 a 05/12 o trabalhista corre junto, NR-31 na primeira semana e fim de ano na segunda.",
+  "trilhas": "De 23/10 a 02/12 o feed é só do lançamento da área previdenciária: 18 posts. O agro pausa. Depois disso se monta o próximo bloco.",
   "dezembro": "Dezembro foi montado à mão, não pelo deslocamento. Três decisões: o trabalhista fecha na primeira semana com contratação de temporário e com o 13º do safrista, que é de época e não estava no calendário; a sucessão ocupa o miolo do mês, que é quando a família se reúne e o tema fica permeável; e a semana do Natal quebra a cadência de propósito, com uma peça em 24/12, a virada de ano em 29/12 e a despedida em 31/12. Não há post em 26/12."
 }

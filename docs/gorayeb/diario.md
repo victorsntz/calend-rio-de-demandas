@@ -391,4 +391,16 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - Roteiro do lançamento refeito no formato dela, com o Dr. Fernando e o Dr. Gustavo.
 - **Pendência que trava o calendário: a data de início da semana 1.** E se o feed do agro
   pausa nas 6 semanas.
+- Victor fechou: **o lançamento começa sexta, 23/10, e o feed do agro pausa** até o fim
+  do bloco (02/12). Depois se monta o próximo. Quem aprova as peças é a Dra. Elisa.
+  Prioridade dele: primeiro a linha editorial do Instagram, depois a cartilha, o resto
+  (eventos, apresentação, perfis) mais pra frente.
+- Linha editorial datada: 18 posts, segunda, quarta e sexta, de 23/10 a 02/12
+  (`lancamento-previdenciario/linha-editorial.html`). Temas todos da Elisa; mudou só a
+  ordem: o vídeo aprovado dos 60 e 55 abre amanhã com legenda que anuncia a área, o
+  vídeo de lançamento com os advogados vai pra 30/10, gravação mais pra trás, e todo
+  registro de evento depois do evento.
+- As 14 peças do agro que estavam no período foram pro banco `proximo_bloco`,
+  incluindo o carrossel das cooperativas e o estático do patrimônio, prontos e aprovados.
+- Legenda do post 01 em `lancamento-previdenciario/01-legenda-23-10.txt`.
 
