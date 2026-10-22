@@ -301,3 +301,26 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   dizendo a mesma coisa. Ficou "Direito do Agronegócio ou Empresarial" nas duas
   artes e na legenda, que é como o escritório se posiciona. "Agrário" saiu da peça.
 
+**22/10/2026**
+
+- Vídeo do dia 20 publicado.
+- **Pilar novo: Previdenciário Rural**, pedido da Dra. Elisa. Abre em 23/10, fora da
+  cadência, e corre até 28/11. Doze peças: 3 vídeos, 4 carrosséis, 5 estáticos. O
+  plano inteiro está em `calendario/bloco-previdenciario.md`.
+- O recorte foi por público, não pela lista de serviços. O escritório faz
+  previdenciário inteiro, inclusive BPC/LOAS, PCD e servidor municipal, mas o feed
+  fala com o produtor rural. Entra o que já é dor dessa audiência; o urbano fica pro
+  banco de janeiro e, se for, rende mais em tráfego pago.
+- Mais estático que carrossel neste bloco, cinco contra quatro: aposentadoria rural
+  se espalha por WhatsApp de família, não por explore, e frase que cabe num print
+  viaja mais que carrossel de dez telas.
+- As terças de 27/10, 03/11 e 10/11 ficaram com o bloco ambiental, porque esses
+  vídeos já estão gravados. Onze peças de ambiental e da NR-31, todas ainda por
+  produzir, foram pro banco de janeiro.
+- Roteiro do vídeo 1 pronto em `calendario/roteiro-previdenciario-01.md`: motion sem
+  rosto, narração em ElevenLabs, decupagem segundo a segundo.
+- Ficou fora de tudo o estudo que sugere subir o tempo mínimo de 15 para 20 anos e a
+  idade para 67. Não é lei.
+- Os textos que a Elisa mandou de referência são posts de outro perfil. Pauta, não
+  fonte, como já tinha sido com o post da escala 6x1.
+
