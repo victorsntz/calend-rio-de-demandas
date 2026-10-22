@@ -323,4 +323,16 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   idade para 67. Não é lei.
 - Os textos que a Elisa mandou de referência são posts de outro perfil. Pauta, não
   fonte, como já tinha sido com o post da escala 6x1.
+- Victor derrubou a primeira grade do bloco: eu tinha intercalado os vídeos
+  ambientais gravados no meio do previdenciário. Ele estava certo, aquilo resolvia
+  problema de produção e não de audiência. **Regra nova: um bloco fala de uma coisa
+  só, terça inclusive.** Os três vídeos ambientais foram pro bloco de janeiro.
+- Bloco fechado em **12 peças, de 23/10 a 21/11**: 5 vídeos, 3 carrosséis, 4
+  estáticos. Victor faz os três primeiros vídeos em motion, o Dr. Gustavo grava os
+  dois últimos numa sessão só.
+- A NR-31 voltou pra 24/11 e emendou no trabalhista de fim de ano, virando um bloco
+  contínuo de duas semanas até 05/12.
+- **Padrão de roteiro definido**, a partir do formato que o Victor usa no ElevenLabs:
+  emoção em colchete antes da frase, `[pause]` marcando respiração, número por
+  extenso. Está no formato 01.
 

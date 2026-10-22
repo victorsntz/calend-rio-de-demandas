@@ -3,42 +3,70 @@
 Abre o pilar de Previdenciário Rural. Vai ao ar **sexta, 23/10**, fora da cadência.
 
 **Produção:** motion, sem rosto. Narração em ElevenLabs.
-**Duração alvo:** 55 a 60 segundos. 9:16, 1080 × 1920.
+**Duração alvo:** 60 a 65 segundos. 9:16, 1080 × 1920.
 **Voz:** masculina, grave, ritmo pausado. Sotaque neutro. Nada de locutor de rádio:
 o tom é de quem explica na porteira, não de quem anuncia.
 
 ---
 
-## Narração (texto corrido pro ElevenLabs)
+## Narração
 
-> Seu pai trabalhou a vida inteira na roça.
->
-> Nunca teve carteira assinada. Nunca pagou INSS todo mês.
->
-> E mesmo assim ele pode se aposentar.
->
-> O nome disso é segurado especial. É quem vive do que planta ou do que cria, em
-> família, sem empregado fixo.
->
-> A idade é sessenta anos pro homem e cinquenta e cinco pra mulher. A reforma da
-> previdência não mexeu nisso.
->
-> O que o INSS pede são quinze anos de trabalho na terra. Trabalho. Não contribuição.
->
-> E aqui está o que derruba a maior parte dos pedidos: o INSS não aceita só a sua
-> palavra.
->
-> Bloco de notas do produtor. Contrato de parceria. Nota de entrega na cooperativa.
-> Comprovante de ITR.
->
-> Papel guardado é o que vira aposentadoria.
+Padrão de roteiro da casa, a partir do formato que o Victor usa: as emoções vão em
+colchete antes da frase, e `[pause]` marca a respiração. Números sempre por extenso,
+que é como a voz lê certo.
 
-**Observações pro ElevenLabs:** os números vão escritos por extenso de propósito,
-que é como a voz lê certo. Deixar `Stability` por volta de 50 e `Similarity` alta.
-Entre os blocos, uma pausa de meio segundo. Entre "Trabalho." e "Não contribuição."
-a pausa é curta e seca, é a virada da frase.
+```
+[warm][thoughtful] Seu pai trabalhou a vida inteira na roça. [pause] Levantou cedo, voltou tarde, criou os filhos daquele chão.
 
----
+[pause]
+
+[calm][steady] Nunca teve carteira assinada. [pause] Nunca pagou INSS todo mês.
+
+[pause]
+
+[confident][warm] E mesmo assim ele pode se aposentar.
+
+[pause]
+
+[educational][steady] O nome disso é segurado especial. [pause] É quem vive do que planta ou do que cria, em família, sem empregado fixo.
+
+[pause]
+
+[instructive][calm] A idade é sessenta anos pro homem. [pause] Cinquenta e cinco pra mulher. [confident] A Reforma da Previdência não mexeu nisso.
+
+[pause]
+
+[educational][steady] O que o INSS pede são quinze anos de trabalho na terra.
+
+[pause]
+
+[firm][serious] Trabalho. [pause] Não contribuição.
+
+[pause]
+
+[attentive][serious] E aqui está o que derruba a maior parte dos pedidos. [pause] O INSS não aceita só a sua palavra.
+
+[pause]
+
+[instructive][steady] Bloco de notas do produtor. [pause] Contrato de parceria. [pause] Nota de entrega na cooperativa. [pause] Comprovante de ITR.
+
+[pause]
+
+[warm][confident] Papel guardado é o que vira aposentadoria.
+
+[pause]
+
+[steady][proud] Gorayeb Advocacia.
+```
+
+**Ajuste de voz:** `Stability` por volta de 50, `Similarity` alta. A última linha é
+opcional: a logo já entra na tela nesse momento, e terminar em "papel guardado é o
+que vira aposentadoria" deixa frase melhor no ouvido.
+
+**O coração do vídeo** é o bloco `[firm][serious] Trabalho. [pause] Não contribuição.`
+São três palavras que desfazem a confusão que mantém muito produtor sem pedir
+aposentadoria. Se a voz entregar essa pausa seca, o vídeo funciona. Se escorrer junto
+com a frase anterior, perde.
 
 ## Decupagem
 

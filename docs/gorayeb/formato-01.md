@@ -193,6 +193,33 @@ formata e aponta o que destoa, não reescreve por conta.
 a data do envio fica de fora até o cliente confirmar. Confirmada, ela vira a
 `chamada`: uma linha de ação logo acima da caixa do e-mail, com a data em dourado.
 
+## O roteiro de vídeo
+
+Roteiro sai em dois pedaços: **a narração**, pronta pra colar no sintetizador, e **a
+decupagem**, que diz o que aparece na tela em cada bloco.
+
+A narração usa o padrão de marcação do Victor: as emoções em colchete antes da frase
+(`[warm][thoughtful]`, `[firm][serious]`), e `[pause]` marcando a respiração, tanto
+entre blocos quanto dentro da frase. **Número sempre por extenso**, "sessenta" e não
+"60": a voz lê certo e nunca solta "cinco cinco" no lugar de "cinquenta e cinco".
+
+Cada roteiro aponta **o bloco que não pode errar**, que é a frase onde o vídeo ganha
+ou perde. Serve pra saber onde refazer o take se a voz não entregar.
+
+Imagem: **foto real do banco com push-in de 3%**, nunca imagem gerada. O público do
+agro reconhece gente de IA na hora e aí perde a confiança no resto. Número e frase
+vão em tipografia sobre fundo chapado da paleta, igual ao carrossel.
+
+## Um bloco fala de uma coisa só
+
+Pilar ocupa a semana inteira, terça inclusive. Nada de intercalar assunto porque uma
+peça de outro bloco já estava pronta: isso resolve problema de produção, não de
+audiência. Quem abre o feed não sabe nem liga que o vídeo já estava editado.
+
+O rabo de um bloco encostando no começo do outro é transição, não mistura, e vale
+por uma semana. Peça pronta de bloco encerrado sai no lugar dela; peça não produzida
+volta pra fila.
+
 ## Como entrego
 
 **Toda vez que fecho conteúdo, vão três coisas**, sem precisar pedir:

@@ -71,8 +71,8 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "vídeo 1: Quem vive da roça tem aposentadoria",
-      "origem": "pedido da Dra. Elisa, 22/10",
+      "tema": "vídeo 1: Segurado especial, quem vive da roça tem aposentadoria",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "roteiro pronto",
       "formato": "vídeo"
     },
@@ -88,12 +88,12 @@
     },
     {
       "data": "2026-10-27",
-      "slot": "técnico",
-      "pilar": "Regularização Ambiental",
-      "tipo": "Técnico",
-      "tema": "O que é o CAR e por que ele é obrigatório",
-      "origem": "item 1 — vídeo gravado",
-      "status": "gravado e editado",
+      "slot": "pilar",
+      "pilar": "Previdenciário Rural",
+      "tipo": "Relevante",
+      "tema": "vídeo 2: Sessenta e cinquenta e cinco, a idade do campo não mudou",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
+      "status": "a produzir",
       "formato": "vídeo"
     },
     {
@@ -111,19 +111,19 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "estático 1: A idade que a Reforma não mexeu",
-      "origem": "bloco previdenciário",
+      "tema": "estático 1: Trabalho na terra, não contribuição mensal",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "estático"
     },
     {
       "data": "2026-11-03",
-      "slot": "técnico",
-      "pilar": "Regularização Ambiental",
-      "tipo": "Técnico",
-      "tema": "O CAR pode revelar um conflito de terra",
-      "origem": "item 9 — vídeo gravado",
-      "status": "gravado e editado",
+      "slot": "pilar",
+      "pilar": "Previdenciário Rural",
+      "tipo": "Relevante",
+      "tema": "vídeo 3: Trabalhou na roça e depois na cidade, como o tempo se soma",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
+      "status": "a produzir",
       "formato": "vídeo"
     },
     {
@@ -131,8 +131,8 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "carrossel 1: Segurado especial, quem entra e quem fica de fora",
-      "origem": "bloco previdenciário",
+      "tema": "carrossel 1: Segurado especial, os três critérios e o que derruba cada um",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "carrossel"
     },
@@ -141,19 +141,19 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "estático 2: Trabalho na terra, não contribuição mensal",
-      "origem": "bloco previdenciário",
+      "tema": "estático 2: A Reforma não mexeu na idade do campo",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "estático"
     },
     {
       "data": "2026-11-10",
-      "slot": "técnico",
-      "pilar": "Fundiário",
-      "tipo": "Técnico",
-      "tema": "Usucapião rural: quando o pequeno produtor pode regularizar a posse",
-      "origem": "item 10 — vídeo gravado",
-      "status": "gravado e editado",
+      "slot": "pilar",
+      "pilar": "Previdenciário Rural",
+      "tipo": "Relevante",
+      "tema": "vídeo 4: A prova é o que decide",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
+      "status": "a produzir",
       "formato": "vídeo"
     },
     {
@@ -162,7 +162,7 @@
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
       "tema": "carrossel 2: Os documentos que o INSS aceita como prova",
-      "origem": "bloco previdenciário",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "carrossel"
     },
@@ -172,7 +172,7 @@
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
       "tema": "estático 3: Papel guardado vira aposentadoria",
-      "origem": "bloco previdenciário",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "estático"
     },
@@ -181,8 +181,8 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "vídeo 2: A prova é o que decide",
-      "origem": "bloco previdenciário",
+      "tema": "vídeo 5: Pensão por morte no campo",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "vídeo"
     },
@@ -191,8 +191,8 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "carrossel 3: Pensão por morte, salário-maternidade e auxílio-doença no campo",
-      "origem": "bloco previdenciário",
+      "tema": "carrossel 3: Pensão, salário-maternidade e auxílio-doença, o que a família rural tem",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "carrossel"
     },
@@ -201,38 +201,38 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "estático 4: A viúva do produtor",
-      "origem": "bloco previdenciário",
+      "tema": "estático 4: O ano de pedir não é o ano de começar a cuidar",
+      "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "estático"
     },
     {
       "data": "2026-11-24",
       "slot": "pilar",
-      "pilar": "Previdenciário Rural",
+      "pilar": "Trabalhista Rural (NR-31)",
       "tipo": "Relevante",
-      "tema": "vídeo 3: Planejamento previdenciário do produtor",
-      "origem": "bloco previdenciário",
+      "tema": "NR-31: o que é e para quem essa norma se aplica",
+      "origem": "volta pra 24/11 e emenda no trabalhista de fim de ano",
       "status": "a produzir",
       "formato": "vídeo"
     },
     {
       "data": "2026-11-26",
       "slot": "pilar",
-      "pilar": "Previdenciário Rural",
+      "pilar": "Trabalhista Rural (NR-31)",
       "tipo": "Relevante",
-      "tema": "carrossel 4: O que olhar no CNIS antes de pedir",
-      "origem": "bloco previdenciário",
+      "tema": "Atualizações da NR-31 e novos prazos de adequação",
+      "origem": "volta pra 24/11 e emenda no trabalhista de fim de ano",
       "status": "a produzir",
       "formato": "carrossel"
     },
     {
       "data": "2026-11-28",
       "slot": "pilar",
-      "pilar": "Previdenciário Rural",
+      "pilar": "Trabalhista Rural (NR-31)",
       "tipo": "Relevante",
-      "tema": "estático 5: Fecho do bloco",
-      "origem": "bloco previdenciário",
+      "tema": "Falta de EPI pode gerar multa e até interdição da fazenda",
+      "origem": "volta pra 24/11 e emenda no trabalhista de fim de ano",
       "status": "a produzir",
       "formato": "estático"
     },
@@ -400,8 +400,26 @@
       48
     ],
     "janeiro_2027": {
-      "motivo": "Bloco previdenciário rural entrou em 23/10 a pedido da Dra. Elisa e ocupou as quintas e sábados de novembro. O que estava nesses dias e ainda não tinha sido produzido voltou pra fila. Janeiro é entressafra, que é quando fazenda organiza documentação: serve bem pros dois pilares.",
+      "motivo": "O bloco previdenciário rural tomou as quatro semanas de 23/10 a 21/11 inteiras, terças inclusive, pra não intercalar assunto. Janeiro recebe o bloco ambiental completo e já nasce com três vídeos gravados e editados na gaveta. Entressafra é quando fazenda organiza documentação, então o encaixe é até melhor que novembro.",
       "pecas": [
+        {
+          "pilar": "Regularização Ambiental",
+          "formato": "vídeo",
+          "tema": "O que é o CAR e por que ele é obrigatório",
+          "status": "gravado e editado"
+        },
+        {
+          "pilar": "Regularização Ambiental",
+          "formato": "vídeo",
+          "tema": "O CAR pode revelar um conflito de terra",
+          "status": "gravado e editado"
+        },
+        {
+          "pilar": "Fundiário",
+          "formato": "vídeo",
+          "tema": "Usucapião rural: quando o pequeno produtor pode regularizar a posse",
+          "status": "gravado e editado"
+        },
         {
           "pilar": "Crédito Rural",
           "formato": "estático",
@@ -441,27 +459,12 @@
           "pilar": "Regularização Ambiental",
           "formato": "estático",
           "tema": "Caso real: produtor perde acesso a financiamento por CAR desatualizado"
-        },
-        {
-          "pilar": "Trabalhista Rural (NR-31)",
-          "formato": "vídeo",
-          "tema": "NR-31: o que é e para quem essa norma se aplica"
-        },
-        {
-          "pilar": "Trabalhista Rural (NR-31)",
-          "formato": "carrossel",
-          "tema": "Atualizações da NR-31 e novos prazos de adequação"
-        },
-        {
-          "pilar": "Trabalhista Rural (NR-31)",
-          "formato": "estático",
-          "tema": "Falta de EPI pode gerar multa e até interdição da fazenda"
         }
       ]
     }
   },
   "regra_de_formato": "Uma peça em vídeo por semana, na terça, mais duas que saem daqui. Carrossel e estático são intercambiáveis entre quinta e sábado, o Victor decide na execução. O vídeo é o que depende da agenda do Dr. Fernando, por isso tem dia fixo e vale gravar o mês inteiro de uma vez.",
   "correcao": "Em 16/10 os itens 1, 9, 10 e 15 foram marcados como no ar por engano. O feed tem estáticos e carrosséis sobre CAR; os vídeos estavam gravados e editados, esperando data. Entraram na agenda.",
-  "trilhas": "Duas trilhas correndo em paralelo. A de terça é vídeo e segue o estoque gravado e as promessas feitas ao seguidor. A de quinta e sábado é da agência e segue o pilar do mês. Elas não precisam estar no mesmo assunto na mesma semana. | De 23/10 a 28/11 o pilar é Previdenciário Rural, nas quintas e sábados. As terças de 27/10, 03/11 e 10/11 seguem com o estoque de vídeo ambiental já gravado.",
+  "trilhas": "De 23/10 a 21/11 o pilar é Previdenciário Rural e ocupa a semana inteira, terça inclusive. Um bloco fala de uma coisa só. As peças de crédito rural de 24/10 e 29/10 ficam porque são o rabo do bloco anterior, e transição de uma semana não é mistura. De 24/11 a 05/12 o trabalhista corre junto: NR-31 na primeira semana, fim de ano na segunda.",
   "dezembro": "Dezembro foi montado à mão, não pelo deslocamento. Três decisões: o trabalhista fecha na primeira semana com contratação de temporário e com o 13º do safrista, que é de época e não estava no calendário; a sucessão ocupa o miolo do mês, que é quando a família se reúne e o tema fica permeável; e a semana do Natal quebra a cadência de propósito, com uma peça em 24/12, a virada de ano em 29/12 e a despedida em 31/12. Não há post em 26/12."
 }
