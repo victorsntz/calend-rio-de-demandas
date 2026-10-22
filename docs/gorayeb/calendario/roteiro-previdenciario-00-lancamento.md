@@ -70,11 +70,10 @@ vira anúncio.
 
 Foto real, nunca gerada. Push-in de 3%, nada mais.
 
-**Pra "a renda de quem não pode mais trabalhar nela"** o banco da Gorayeb tem
-`patriarca-chapeu` e `pai-e-filho-chapeu`, que são perfeitas. Mas não vieram do
-Pinterest, vieram do Drive do escritório: **confirmar quem são antes de usar.** Se
-for alguém da família ou cliente, precisa de autorização; se não der, buscar no
-Pinterest "produtor rural idoso minas gerais", sem rosto de frente.
+**Pra "a renda de quem não pode mais trabalhar nela"**: buscar no Pinterest
+"produtor rural idoso minas gerais", de costas ou de perfil, sem rosto de frente.
+As fotos `patriarca-chapeu` e `pai-e-filho-chapeu` do banco são da família Gorayeb no
+escritório: **não usar aqui**, porque dariam a entender que o patriarca é beneficiário.
 
 **Pra "cidade"** não tem nada no banco. Buscar uma foto de rua de cidade do interior
 de Minas, não de capital, pra não parecer outro escritório.

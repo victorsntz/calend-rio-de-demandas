@@ -354,4 +354,19 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - Pendente: confirmar quem são as pessoas das fotos `patriarca-chapeu` e
   `pai-e-filho-chapeu` antes de usar no lançamento, e o nome e a OAB do Dr. Gustavo
   se ele for citado.
+- **Plano em PDF pra Dra. Elisa**, com os 13 roteiros e a fonte de cada informação:
+  `calendario/plano-previdenciario/` (o `conteudo.py` é a fonte, o `gerar.py` monta o
+  PDF com Chromium). O texto do e-mail está em `calendario/email-elisa-previdenciario.md`.
+- No PDF a narração vai em texto corrido. A marcação de voz pro ElevenLabs fica só nos
+  `.md` de roteiro, que é material de produção, não de aprovação.
+- Fontes: o Planalto não responde daqui (DNS e resposta vazia pelo proxy). A apuração
+  foi nas páginas oficiais do INSS em gov.br/inss, que trazem a regra vigente em
+  linguagem simples, mais lei, súmula e tema do STJ citados pelo número.
+- Achados que entraram nos roteiros: desde 1º/1/2023 o tempo rural do segurado especial
+  só se prova pelo cadastro (art. 19-D do RPS); a pensão rural exige 18 meses de
+  atividade, não de contribuição; salário-maternidade rural segue com 10 meses na
+  página do INSS, apesar da ADI 2110, e o carrossel diz isso com a ressalva.
+- As fotos `patriarca-chapeu` e `pai-e-filho-chapeu` são da família Gorayeb no
+  escritório. Não usar em peça de previdenciário: dá a entender que o patriarca é
+  beneficiário.
 
