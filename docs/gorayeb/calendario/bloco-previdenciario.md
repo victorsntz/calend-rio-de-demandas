@@ -1,7 +1,7 @@
 # Bloco Previdenciário Rural
 
 Pedido da Dra. Elisa em 22/10. Abre **sexta, 23/10** e fecha em **21/11**.
-**13 peças: 5 vídeos, 4 carrosséis, 4 estáticos.**
+**13 peças: 1 vídeo de lançamento, 4 vídeos educativos, 4 carrosséis, 4 estáticos.**
 
 ## A decisão de recorte
 
@@ -49,34 +49,55 @@ frase que cabe num print viaja mais longe que um carrossel de dez telas, e é po
 que o estático pesa tanto quanto o carrossel num tema que, em outro pilar, pediria
 mais carrossel.
 
+## O lançamento vem primeiro
+
+A Dra. Elisa pediu um vídeo de lançamento da área. Ele abre o bloco em 23/10, no lugar
+onde estava o vídeo do segurado especial, que passa pra 27/10.
+
+O lançamento faz duas coisas que o bloco educativo não faz. Explica por que um
+escritório de agronegócio abre previdenciário: a Gorayeb sempre cuidou do que o
+produtor construiu, e a renda de quem não pode mais trabalhar na terra é a única coisa
+que a terra não garante sozinha. E apresenta a área inteira, inclusive urbano, BPC e
+revisão, que não ganham bloco agora.
+
+O vídeo que falava só de sessenta e cinquenta e cinco saiu: o roteiro do vídeo 1 já
+diz a idade e os quinze anos, e o estático 2 fixa o número. Eram duas peças dizendo a
+mesma coisa.
+
+O carrossel 2 trocou de assunto. Saiu "a Reforma não mexeu na idade", que repetia o
+estático, e entrou **período rural negado pelo INSS, dá pra revisar**. Cobre quatro
+itens da lista da Elisa de uma vez e fala direto com o nosso público.
+
 ## A grade
 
 | Data | | Formato | Peça |
 | --- | --- | --- | --- |
-| **23/10** | sex | **vídeo 1** | Segurado especial: quem vive da roça tem aposentadoria |
+| **23/10** | sex | **vídeo de lançamento** | A Gorayeb abre a área de Direito Previdenciário |
 | 24/10 | sáb | carrossel | *Disputas com cooperativas — fecha o crédito rural* |
-| **27/10** | ter | **vídeo 2** | Sessenta e cinquenta e cinco: a idade do campo não mudou |
+| **27/10** | ter | **vídeo 1** | Segurado especial: quem vive da roça tem aposentadoria |
 | **29/10** | qui | **carrossel 1** | Segurado especial: os três critérios e o que derruba cada um |
 | **31/10** | sáb | **estático 1** | Trabalho na terra, não contribuição mensal |
-| **03/11** | ter | **vídeo 3** | Trabalhou na roça e depois na cidade: como o tempo se soma |
-| **05/11** | qui | **carrossel 2** | A Reforma não mexeu na idade do campo, e o que ela mexeu |
-| **07/11** | sáb | **estático 2** | Sessenta e cinquenta e cinco |
-| **10/11** | ter | **vídeo 4** | A prova é o que decide |
+| **03/11** | ter | **vídeo 2** | Trabalhou na roça e depois na cidade: como o tempo se soma |
+| **05/11** | qui | **carrossel 2** | Período rural negado pelo INSS: dá pra revisar |
+| **07/11** | sáb | **estático 2** | Sessenta e cinquenta e cinco: a Reforma não mexeu na idade do campo |
+| **10/11** | ter | **vídeo 3** | A prova é o que decide |
 | **12/11** | qui | **carrossel 3** | Os documentos que o INSS aceita como prova |
 | **14/11** | sáb | **estático 3** | Papel guardado vira aposentadoria |
-| **17/11** | ter | **vídeo 5** | Pensão por morte no campo |
+| **17/11** | ter | **vídeo 4** | Pensão por morte no campo |
 | **19/11** | qui | **carrossel 4** | Pensão, salário-maternidade e auxílio-doença: o que a família rural tem |
 | **21/11** | sáb | **estático 4** | O ano de pedir não é o ano de começar a cuidar |
 
-Um único post de outro assunto na janela inteira, no dia seguinte à abertura. Depois
-dele são treze peças seguidas de previdenciário.
+O carrossel das cooperativas sai no dia seguinte ao lançamento. Pra ele não empurrar
+o lançamento pra baixo no perfil, **fixar o vídeo de lançamento no topo do perfil**
+durante o bloco inteiro.
 
 ## O arco
 
-1. **Eu tenho direito?** vídeo 1, vídeo 2, carrossel 1, estático 1
-2. **E quem saiu da roça?** vídeo 3, carrossel 2, estático 2
-3. **Como eu provo?** vídeo 4, carrossel 3, estático 3
-4. **E a minha família?** vídeo 5, carrossel 4, estático 4
+0. **O que é isso?** vídeo de lançamento
+1. **Eu tenho direito?** vídeo 1, carrossel 1, estático 1
+2. **E se o INSS negou, ou se eu saí da roça?** vídeo 2, carrossel 2, estático 2
+3. **Como eu provo?** vídeo 3, carrossel 3, estático 3
+4. **E a minha família?** vídeo 4, carrossel 4, estático 4
 
 O estático de 21/11 fecha o bloco virando a chave pro planejamento previdenciário,
 que é o serviço de maior valor da lista. Quem organiza papel dez anos antes se
@@ -84,11 +105,11 @@ aposenta; quem procura no ano de parar, espera.
 
 ## Quem grava o quê
 
-**Victor, em motion com narração sintetizada:** vídeos 1, 2 e 3 (23/10, 27/10, 03/11).
-São os conceituais, funcionam bem em tipografia e não dependem de agenda de ninguém.
+**Victor, em motion com narração sintetizada:** lançamento (23/10), vídeo 1 (27/10) e
+vídeo 2 (03/11). Os dois primeiros já têm roteiro pronto.
 
-**Dr. Gustavo, numa sessão só, antes de 10/11:** vídeos 4 e 5. São prova e pensão,
-que é onde o cliente quer ver advogado falando, com rosto e nome.
+**Dr. Gustavo, numa sessão só, antes de 10/11:** vídeos 3 e 4, prova e pensão. É onde
+a área ganha rosto, depois de ter sido apresentada.
 
 ## O que saiu do lugar
 

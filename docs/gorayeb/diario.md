@@ -340,4 +340,18 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   um bloco terminando antes do outro começar, não dois se alternando.** O carrossel
   das cooperativas subiu pra 24/10 e fecha o crédito rural; o estático do patrimônio
   foi pra segunda onda, pronto e empacotado. Bloco fechou em 13 peças.
+- A Dra. Elisa pediu um **vídeo de lançamento da área previdenciária**. Ele abre o bloco
+  em 23/10; o do segurado especial passou pra 27/10. Roteiro em
+  `calendario/roteiro-previdenciario-00-lancamento.md`. A ideia é fazer a ponte que
+  justifica a área num escritório de agronegócio: a renda de quem não pode mais
+  trabalhar na terra é a única coisa que a terra não garante sozinha.
+- O lançamento cita a área inteira, rural e urbana, o que resolve boa parte da
+  cobertura da lista da Elisa sem quebrar o recorte rural do bloco educativo. Ficam
+  de fora de tudo só aposentadoria por pontos, auxílio-doença acidentário,
+  auxílio-reclusão e os dois posts de referência dela (servidor CLT e PCD).
+- Saiu o vídeo de 60 e 55, que repetia o vídeo 1. O carrossel 2 trocou pra período
+  rural negado pelo INSS, que cobre quatro serviços da lista.
+- Pendente: confirmar quem são as pessoas das fotos `patriarca-chapeu` e
+  `pai-e-filho-chapeu` antes de usar no lançamento, e o nome e a OAB do Dr. Gustavo
+  se ele for citado.
 

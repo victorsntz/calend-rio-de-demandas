@@ -1,6 +1,6 @@
 # Vídeo 01 — Quem vive da roça tem aposentadoria
 
-Abre o pilar de Previdenciário Rural. Vai ao ar **sexta, 23/10**, fora da cadência.
+Primeiro vídeo educativo do pilar, logo depois do lançamento. Vai ao ar **terça, 27/10**.
 
 **Produção:** motion, sem rosto. Narração em ElevenLabs.
 **Duração alvo:** 60 a 65 segundos. 9:16, 1080 × 1920.

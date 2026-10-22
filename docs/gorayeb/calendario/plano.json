@@ -70,10 +70,10 @@
       "data": "2026-10-23",
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
-      "tipo": "Relevante",
-      "tema": "vídeo 1: Segurado especial, quem vive da roça tem aposentadoria",
+      "tipo": "Institucional",
+      "tema": "LANÇAMENTO: a Gorayeb abre a área de Direito Previdenciário",
       "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "roteiro pronto",
+      "status": "roteiro pronto, motion",
       "formato": "vídeo"
     },
     {
@@ -91,9 +91,9 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "vídeo 2: Sessenta e cinquenta e cinco, a idade do campo não mudou",
+      "tema": "vídeo 1: Segurado especial, quem vive da roça tem aposentadoria",
       "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
-      "status": "a produzir em motion",
+      "status": "roteiro pronto, motion",
       "formato": "vídeo"
     },
     {
@@ -121,7 +121,7 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "vídeo 3: Trabalhou na roça e depois na cidade, como o tempo se soma",
+      "tema": "vídeo 2: Trabalhou na roça e depois na cidade, como o tempo se soma",
       "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir em motion",
       "formato": "vídeo"
@@ -131,7 +131,7 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "carrossel 2: A Reforma não mexeu na idade do campo, e o que ela mexeu",
+      "tema": "carrossel 2: Período rural negado pelo INSS, dá pra revisar",
       "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "carrossel"
@@ -141,7 +141,7 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "estático 2: Sessenta e cinquenta e cinco",
+      "tema": "estático 2: Sessenta e cinquenta e cinco, a Reforma não mexeu na idade do campo",
       "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a produzir",
       "formato": "estático"
@@ -151,7 +151,7 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "vídeo 4: A prova é o que decide",
+      "tema": "vídeo 3: A prova é o que decide",
       "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a gravar com o Dr. Gustavo",
       "formato": "vídeo"
@@ -181,7 +181,7 @@
       "slot": "pilar",
       "pilar": "Previdenciário Rural",
       "tipo": "Relevante",
-      "tema": "vídeo 5: Pensão por morte no campo",
+      "tema": "vídeo 4: Pensão por morte no campo",
       "origem": "bloco previdenciário, pedido da Dra. Elisa em 22/10",
       "status": "a gravar com o Dr. Gustavo",
       "formato": "vídeo"
