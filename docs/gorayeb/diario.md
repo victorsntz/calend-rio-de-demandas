@@ -414,3 +414,19 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   Marcelino, advogado associado, sem OAB publicada. Fotos dos dois baixadas pra
   `img/fernando-site.jpg` e `img/gustavo-site.jpg`. Falta a OAB do Dr. Gustavo.
 
+**23/10/2026**
+
+- **PDF da linha editorial inteira**, no padrão de uma peça por página: os 18 posts do
+  plano da Elisa, de 23/10 a 02/12, com objetivo, roteiro e fontes de cada um. Fonte em
+  `lancamento-previdenciario/conteudo.py`; o gerador do plano de 22/10 passou a aceitar
+  `--conteudo` e saem os dois.
+- Sete temas novos apurados nas páginas do INSS: BPC/LOAS, BPC para crianças com TEA,
+  aposentadoria especial (pontos 86/76/66 pra quem já contribuía em 2019, idade 60/58/55
+  pra quem começou depois, PPP), auxílio por incapacidade temporária, revisão (10 anos,
+  e o fim da revisão da vida toda no STF em 2024), planejamento e dúvidas frequentes.
+- **Correção:** o auxílio-doença acidentário é de empregado com carteira e doméstico, não
+  de quem trabalha na roça com a família. O plano de 22/10 tinha uma frase sugerindo o
+  contrário, no carrossel da família rural; no novo está certo.
+- O lançamento é a única peça com duas páginas: roteiro em tabela numa, legenda e
+  fontes na outra.
+

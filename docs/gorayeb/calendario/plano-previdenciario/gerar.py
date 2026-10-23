@@ -10,11 +10,24 @@ import html, os, subprocess, sys, datetime
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 GORAYEB = os.path.abspath(os.path.join(AQUI, "..", ".."))
-sys.path.insert(0, AQUI)
-from conteudo import F, GRADE, PECAS  # noqa: E402
+import importlib.util
+
+def carrega(caminho):
+    spec = importlib.util.spec_from_file_location("conteudo_plano", caminho)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+# --conteudo <arquivo.py> escolhe o plano; sem ele, sai o bloco de 22/10
+_args = sys.argv[1:]
+CONTEUDO = os.path.join(AQUI, "conteudo.py")
+if "--conteudo" in _args:
+    CONTEUDO = os.path.abspath(_args[_args.index("--conteudo") + 1])
+M = carrega(CONTEUDO)
+F, GRADE, PECAS = M.F, M.GRADE, M.PECAS
 
 e = html.escape
-HOJE = datetime.date(2026, 10, 22)
+HOJE = getattr(M, "HOJE", datetime.date(2026, 10, 22))
 
 CSS = """
 @font-face{font-family:Arvo;src:url(../fontes/arvo/Arvo-Regular.ttf);font-weight:400}
@@ -110,6 +123,23 @@ ul.tela li::before{content:"";position:absolute;left:0;top:2.3mm;width:3.2mm;hei
 .fontes h3{font-family:Hel;font-weight:700;font-size:7pt;letter-spacing:.14em;text-transform:uppercase;color:var(--fraca);margin-bottom:2mm}
 .fontes li{font-size:7.6pt;color:var(--fraca);margin:0 0 .9mm 4mm;line-height:1.4}
 .fontes a{color:var(--dourado-esc);text-decoration:none;word-break:break-all}
+.status{display:inline-block;background:#e4ecd9;color:#3f6a2e;font-size:8pt;font-weight:500;border-radius:2mm;padding:1.6mm 3.2mm;margin-bottom:3.6mm}
+table.rot-t{width:100%;border-collapse:collapse;font-size:8.2pt;line-height:1.42}
+table.rot-t th{font-family:Hel;font-weight:700;font-size:6.6pt;letter-spacing:.12em;text-transform:uppercase;color:var(--dourado-esc);text-align:left;padding:0 2.4mm 1.8mm 0;border-bottom:.35mm solid var(--tinta)}
+table.rot-t td{padding:1.9mm 2.4mm 1.9mm 0;border-bottom:.25mm solid var(--linha);vertical-align:top;color:var(--fraca)}
+table.rot-t td:first-child{white-space:nowrap;color:var(--dourado-esc);font-weight:500}
+table.rot-t td:last-child{color:var(--tinta);font-family:Arvo;font-size:8.6pt}
+.narr-b p{font-size:9.2pt}
+/* calendário de 18 linhas e peça com tabela de roteiro cabem numa página */
+.grade-longa table.grade{font-size:8.6pt}
+.grade-longa table.grade td{padding:1.55mm 3mm 1.55mm 0}
+.grade-longa .caixa{padding:4.6mm 6mm}
+.grade-longa .caixa li{margin-bottom:1.4mm;font-size:8.8pt}
+.com-tabela table.rot-t{font-size:7.7pt;line-height:1.36}
+.com-tabela table.rot-t td{padding:1.4mm 2.2mm 1.4mm 0}
+.com-tabela table.rot-t td:last-child{font-size:8.1pt}
+.com-tabela .leg p{font-size:8.1pt;line-height:1.4;margin-bottom:1.3mm}
+.com-tabela .obj{margin-bottom:3mm}
 """
 
 def fontes(p):
@@ -124,10 +154,22 @@ def fontes(p):
 def peca(p):
     quem = f'<div class="quem">{e(p["quem"])}</div>' if p.get("quem") else ""
     corpo = ""
+    if p.get("status"):
+        corpo += f'<div class="status">{e(p["status"])}</div>'
+    if "tabela" in p:
+        cab, linhas = p["tabela"]
+        corpo += '<h3 class="rot">Roteiro</h3><table class="rot-t"><thead><tr>' + "".join(f"<th>{e(c)}</th>" for c in cab) + "</tr></thead><tbody>"
+        corpo += "".join("<tr>" + "".join(f"<td>{e(c)}</td>" for c in l) + "</tr>" for l in linhas) + "</tbody></table>"
+    if "narracao_b" in p:
+        tit, linhas = p["narracao_b"]
+        corpo += f'<h3 class="rot">{e(tit)}</h3><div class="narr narr-b">' + "".join(f"<p>{e(x)}</p>" for x in linhas) + "</div>"
+    if "fotos" in p:
+        corpo += '<h3 class="rot">Sequência de fotos</h3><ul class="tela">' + "".join(f"<li>{e(x)}</li>" for x in p["fotos"]) + "</ul>"
     if "narracao" in p:
-        rot = "Fala" if p["quem"] and "Gustavo" in p["quem"] else "Narração"
+        rot = p.get("rotulo_fala") or ("Fala" if p.get("quem") and "Gravado" in p["quem"] else "Narração")
         corpo += f'<h3 class="rot">{rot}</h3><div class="narr">' + "".join(f"<p>{e(x)}</p>" for x in p["narracao"]) + "</div>"
-        corpo += '<h3 class="rot">O que aparece na tela</h3><ul class="tela">' + "".join(f"<li>{e(x)}</li>" for x in p["tela"]) + "</ul>"
+        if p.get("tela"):
+            corpo += '<h3 class="rot">O que aparece na tela</h3><ul class="tela">' + "".join(f"<li>{e(x)}</li>" for x in p["tela"]) + "</ul>"
     if "telas" in p:
         cards = []
         for i, (rot, tit, txt) in enumerate(p["telas"], 1):
@@ -138,11 +180,15 @@ def peca(p):
         a, b = p["frase"]
         corpo += f'<h3 class="rot">A arte</h3><div class="arte"><div class="a">{e(a)}</div><div class="b">{e(b)}</div><div class="apoio">{e(p["apoio"])}</div></div>'
     if "legenda" in p:
+        if p.get("duas_paginas"):
+            # peça longa demais pra uma folha: a legenda abre a segunda, com o cabeçalho repetido
+            corpo += (f'<div style="break-before:page"></div><div class="topo"><span class="data">{e(p["data"])}</span>'
+                      f'<span class="fmt">{e(p["titulo"])} · continuação</span></div>')
         nota = f'<p class="nota">{e(p["legenda_nota"])}</p>' if p.get("legenda_nota") else ""
         corpo += '<h3 class="rot">Legenda</h3><div class="leg">' + "".join(f"<p>{e(x)}</p>" for x in p["legenda"]) + nota + "</div>"
     if p.get("nota"):
         corpo += f'<div class="nota-f">{e(p["nota"])}</div>'
-    return f"""<section class="pag peca">
+    return f"""<section class="pag peca{' com-tabela' if 'tabela' in p else ''}">
   <div class="topo"><span class="data">{e(p['data'])}</span><span class="fmt">{e(p['formato'])}</span></div>
   <h2>{e(p['titulo'])}</h2>{quem}
   <p class="obj">{e(p['objetivo'])}</p>
@@ -157,6 +203,8 @@ def grade():
     return rows
 
 def html_doc():
+    if hasattr(M, "CAPA"):
+        return html_doc_m()
     capa = f"""<section class="pag capa"><div class="listras"></div>
   <img class="logo" src="../assets/logo-horizontal-claro.png" alt="Gorayeb Advocacia">
   <div class="meio">
@@ -214,6 +262,30 @@ def html_doc():
     return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Plano de conteúdo · Direito Previdenciário</title>
 <style>{CSS}</style></head><body>{capa}{visao}{grade_pag}{pecas}</body></html>"""
 
+def html_doc_m():
+    c = M.CAPA
+    capa = f"""<section class="pag capa"><div class="listras"></div>
+  <img class="logo" src="../assets/logo-horizontal-claro.png" alt="Gorayeb Advocacia">
+  <div class="meio">
+    <p class="eyebrow">{c['eyebrow']}</p>
+    <h1>{c['titulo']}</h1>
+    <p class="sub">{c['sub']}</p>
+  </div>
+  <p class="pe">{c['pe']}</p>
+</section>"""
+    visao = f'<section class="pag">{M.VISAO_HTML}</section>'
+    precisa = "".join(f"<li>{x}</li>" for x in M.PRECISAMOS)
+    grade_pag = f"""<section class="pag{' grade-longa' if len(GRADE) > 15 else ''}">
+  <p class="eyebrow">Calendário</p>
+  <h2 class="sec">{M.GRADE_TITULO}</h2>
+  <table class="grade"><thead><tr><th>Data</th><th>Formato</th><th>Post</th></tr></thead><tbody>{grade()}</tbody></table>
+  <p style="font-size:9pt;color:var(--fraca)">{M.GRADE_NOTA}</p>
+  <div class="caixa" style="margin-top:6mm"><h3>O que precisamos de vocês</h3><ol>{precisa}</ol></div>
+</section>"""
+    pecas = "\n".join(peca(p) for p in PECAS)
+    return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Plano de conteúdo · Direito Previdenciário</title>
+<style>{CSS}</style></head><body>{capa}{visao}{grade_pag}{pecas}</body></html>"""
+
 # versão de tela, pra revisar e comentar: mesmas páginas, como folhas sobre
 # um fundo, e o grid cedendo no celular
 TELA = """
@@ -246,9 +318,9 @@ def html_tela():
     return doc.replace("</style>", TELA + "</style>")
 
 if __name__ == "__main__":
-    if len(sys.argv) > 2 and sys.argv[1] == "--tela":
+    if "--tela" in _args:
         import shutil
-        d = sys.argv[2]
+        d = _args[_args.index("--tela") + 1]
         os.makedirs(os.path.join(d, "fontes", "arvo"), exist_ok=True)
         os.makedirs(os.path.join(d, "fontes", "helvetica"), exist_ok=True)
         os.makedirs(os.path.join(d, "assets"), exist_ok=True)
@@ -261,11 +333,11 @@ if __name__ == "__main__":
         print(os.path.join(d, "index.html"))
         sys.exit(0)
 
-    tpl = os.path.join(GORAYEB, "template", "_plano-previdenciario.html")
+    tpl = os.path.join(GORAYEB, "template", f"_{getattr(M, 'SLUG', 'plano-previdenciario')}.html")
     open(tpl, "w", encoding="utf8").write(html_doc())
     saida = os.path.join(GORAYEB, "calendario", "saida")
     os.makedirs(saida, exist_ok=True)
-    pdf = os.path.join(saida, f"Plano_Previdenciario_Gorayeb_{HOJE.isoformat()}.pdf")
+    pdf = os.path.join(saida, f"{getattr(M, 'ARQUIVO', 'Plano_Previdenciario_Gorayeb')}_{HOJE.isoformat()}.pdf")
     js = f"""
 const pw = require('/opt/node-tools/node_modules/playwright');
 (async () => {{
