@@ -430,3 +430,37 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - O lançamento é a única peça com duas páginas: roteiro em tabela numa, legenda e
   fontes na outra.
 
+
+**23/10/2026, noite**
+
+- **E-mail da Dra. Elisa:** gostou do vídeo, mas ele falava só do previdenciário rural; pediu
+  para incluir os outros benefícios. O Dr. Fernando não quer o lançamento da área do jeito
+  que estava no plano. Ficou assim: um vídeo que informa a área, os conteúdos do cronograma
+  **uma vez por semana**, ênfase no agronegócio e no empresarial, e os vídeos gravados em
+  setembro rodando. Os demais itens do lançamento ficam suspensos.
+- Vídeo novo da área em `linha-editorial/01-video-area-previdenciaria.md`: 90 segundos,
+  narração institucional no ElevenLabs, sem ninguém aparecendo. Fala de aposentadoria por
+  idade (rural e urbana), especial, híbrida, planejamento, BPC/LOAS, pensão,
+  salário-maternidade, auxílio por incapacidade temporária e revisão. Sai na quarta, 28/10.
+  Legenda em `linha-editorial/01-legenda-28-10.txt`.
+- **Linha editorial nova, de 26/10 a 18/12:** 24 posts. Quarta é do previdenciário (8 posts).
+  Segunda e sexta, agronegócio e empresarial em blocos: crédito rural (cooperativas e
+  patrimônio, prontos), ambiental e fundiário (os três vídeos gravados nas segundas 02, 09
+  e 16/11, mais reserva legal, georreferenciamento e consulta do CAR), trabalhista rural
+  (NR-31, 13º do safrista antes de 30/11, atualizações, EPI) e sucessão e holding em dezembro.
+  A regra "um bloco fala de uma coisa só" cedeu ao pedido da cliente: o previdenciário corre
+  em paralelo, uma vez por semana.
+- PDF: `calendario/saida/Linha_Editorial_Gorayeb_2026-10-23.pdf`, 29 páginas, fonte em
+  `linha-editorial/conteudo.py`. Roteiros novos do agronegócio e do empresarial em
+  `linha-editorial/agro_*.py`, todos conferidos em fonte oficial. Excel do dia 23/10.
+- Os outros 5 temas previdenciários (TEA, especial, planejamento, dúvidas, urbana x rural)
+  foram para janeiro. Os dois vídeos que dependiam de gravação do Dr. Gustavo viram
+  narração.
+- **Correção:** o estático do patrimônio citava a Súmula 349 do STJ como fonte da exceção à
+  impenhorabilidade. A 349 é sobre FGTS. A exceção é o art. 833, §1º do CPC. Apoio, rodapé
+  e legenda corrigidos, zip refeito. O título da arte ficou igual.
+- Georreferenciamento: o Decreto 12.689/2025 jogou tudo para 21/10/2029, mas uma liminar da
+  Justiça Federal no Maranhão (maio de 2026) suspendeu isso para imóveis maiores. O estático
+  não promete prazo; conferir o processo na semana de 13/11.
+- Holding: ITCD de Minas em 5% hoje, com projeto de alíquota progressiva na Assembleia.
+  Conferir na semana de 11/12.

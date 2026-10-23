@@ -141,6 +141,13 @@ table.rot-t td:last-child{color:var(--tinta);font-family:Arvo;font-size:8.6pt}
 .com-tabela .leg p{font-size:8.1pt;line-height:1.4;margin-bottom:1.3mm}
 .com-tabela .obj{margin-bottom:3mm}
 .peca .area{font-family:Hel;font-weight:700;font-size:6.8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--dourado-esc);margin:0 0 1.2mm}
+.fontes.longas ul{columns:2;column-gap:6mm}
+.fontes.longas li{font-size:6.9pt;line-height:1.32;break-inside:avoid;margin-bottom:.7mm}
+.grade-xl table.grade{font-size:8.1pt}
+.grade-xl table.grade td{padding:1.05mm 2.6mm 1.05mm 0}
+.grade-xl h2.sec{margin-bottom:3mm}
+.grade-xl .caixa{margin-top:3.5mm!important;padding:3.6mm 5mm}
+.grade-xl .caixa li{font-size:8.4pt;margin-bottom:1mm}
 table.grade td.a{font-size:7.6pt;color:var(--fraca);white-space:nowrap}
 """
 
@@ -151,7 +158,8 @@ def fontes(p):
     lis = "".join(
         f"<li>{f'<a href=\"{e(u)}\">{e(t)}</a>' if u else e(t)}</li>" for t, u in itens)
     extra = f"<li>{e(p['fontes_nota'])}</li>" if p.get("fontes_nota") else ""
-    return f'<div class="fontes"><h3>Fontes</h3><ul>{lis}{extra}</ul></div>'
+    longas = " longas" if len(itens) > 5 else ""
+    return f'<div class="fontes{longas}"><h3>Fontes</h3><ul>{lis}{extra}</ul></div>'
 
 def peca(p):
     quem = f'<div class="quem">{e(p["quem"])}</div>' if p.get("quem") else ""
@@ -290,7 +298,7 @@ def html_doc_m():
 </section>"""
     visao = f'<section class="pag">{M.VISAO_HTML}</section>'
     precisa = "".join(f"<li>{x}</li>" for x in M.PRECISAMOS)
-    grade_pag = f"""<section class="pag{' grade-longa' if len(GRADE) > 15 else ''}">
+    grade_pag = f"""<section class="pag{' grade-longa' if len(GRADE) > 15 else ''}{' grade-xl' if len(GRADE) > 20 else ''}">
   <p class="eyebrow">Calendário</p>
   <h2 class="sec">{M.GRADE_TITULO}</h2>
   <table class="grade"><thead><tr><th>Data</th>{'<th>Área</th>' if COM_AREA else ''}<th>Formato</th><th>Post</th></tr></thead><tbody>{grade()}</tbody></table>
@@ -362,7 +370,7 @@ const pw = require('/opt/node-tools/node_modules/playwright');
   await p.evaluate(() => document.fonts.ready);
   await p.pdf({{path:'{pdf}', format:'A4', printBackground:true, preferCSSPageSize:true,
     displayHeaderFooter:true, headerTemplate:'<span></span>',
-    footerTemplate:'<div style="width:100%;font-family:Helvetica,Arial;font-size:7px;color:#8a8a7a;padding:0 20mm;display:flex;justify-content:space-between"><span>Gorayeb Advocacia · Direito Previdenciário</span><span class="pageNumber"></span></div>',
+    footerTemplate:'<div style="width:100%;font-family:Helvetica,Arial;font-size:7px;color:#8a8a7a;padding:0 20mm;display:flex;justify-content:space-between"><span>{getattr(M, 'RODAPE', 'Gorayeb Advocacia · Direito Previdenciário')}</span><span class="pageNumber"></span></div>',
     }});
   await b.close();
 }})();"""

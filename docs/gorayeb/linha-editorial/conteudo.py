@@ -49,7 +49,8 @@ F.update({
  "car_gov": ("Serviço Florestal Brasileiro · Cadastro Ambiental Rural", "https://www.car.gov.br"),
 })
 for m in (AMB, TRAB, SUC):
-    F.update(m.FONTES)
+    # no PDF a fonte fica com o nome da norma; o detalhe está no arquivo de cada bloco
+    F.update({k: ((t.split(": ")[0] if len(t) > 110 else t), u) for k, (t, u) in m.FONTES.items()})
 
 def _redata(titulo, data):
     p = next(p for p in PREV.PECAS if p["titulo"] == titulo)
@@ -57,9 +58,20 @@ def _redata(titulo, data):
     p.pop("status", None) if "Depende" in p.get("status", "") else None
     return p
 
+# fontes que repetem outra da mesma peça saem da lista do PDF
+_ENXUGA = {"13º, férias e rescisão do trabalhador de safra: o que fechar antes do fim do ano": {"cf", "nr31", "dec10854"},
+           "Holding familiar x inventário: diferenças de custo, tempo e conflito": {"cf_itcmd"}}
+# ajustes de página: o estático do georreferenciamento tem legenda longa e vai em duas folhas
+_AJUSTE = {
+ "Georreferenciamento: obrigatoriedade e prazos para imóveis rurais": dict(duas_paginas=True),
+ "Holding familiar x inventário: diferenças de custo, tempo e conflito": dict(
+   nota="A alíquota de 5% é a de hoje em Minas. A reforma tributária obriga o ITCD progressivo e o projeto mineiro (PL 2.881/2024) ainda está na Assembleia: conferir na semana da publicação."),
+}
+
 def _agro(mod, titulo, data):
     p = next(p for p in mod.PECAS if p["titulo"] == titulo)
-    return dict(p, data=data)
+    fora = _ENXUGA.get(titulo, set())
+    return dict(p, data=data, fontes=[k for k in p["fontes"] if k not in fora], **_AJUSTE.get(titulo, {}))
 
 def _json(nome):
     return json.load(open(os.path.join(GORAYEB, "carrosseis", nome + ".json"), encoding="utf8"))
@@ -242,3 +254,4 @@ PRECISAMOS = [
  "<b>Aprovação dos demais roteiros</b> com pelo menos 2 dias úteis antes de cada data.",
  "Se o vídeo da área levar as fotos dos advogados, <b>o número da OAB do Dr. Gustavo</b>.",
 ]
+RODAPE = "Gorayeb Advocacia · Linha editorial"
