@@ -156,10 +156,18 @@ def peca(p):
     corpo = ""
     if p.get("status"):
         corpo += f'<div class="status">{e(p["status"])}</div>'
+    def tab(rot, cab, linhas):
+        t = f'<h3 class="rot">{e(rot)}</h3><table class="rot-t"><thead><tr>' + "".join(f"<th>{e(c)}</th>" for c in cab) + "</tr></thead><tbody>"
+        return t + "".join("<tr>" + "".join(f"<td>{e(c)}</td>" for c in l) + "</tr>" for l in linhas) + "</tbody></table>"
+    def continua():
+        return (f'<div style="break-before:page"></div><div class="topo"><span class="data">{e(p["data"])}</span>'
+                f'<span class="fmt">{e(p["titulo"])} · continuação</span></div>')
     if "tabela" in p:
-        cab, linhas = p["tabela"]
-        corpo += '<h3 class="rot">Roteiro</h3><table class="rot-t"><thead><tr>' + "".join(f"<th>{e(c)}</th>" for c in cab) + "</tr></thead><tbody>"
-        corpo += "".join("<tr>" + "".join(f"<td>{e(c)}</td>" for c in l) + "</tr>" for l in linhas) + "</tbody></table>"
+        corpo += tab(p.get("rotulo_tabela", "Roteiro"), *p["tabela"])
+    if "tabela_b" in p:
+        # opção de reserva do mesmo vídeo: página própria
+        rot, intro, cab, linhas = p["tabela_b"]
+        corpo += continua() + f'<h2>{e(rot)}</h2><p class="obj">{e(intro)}</p>' + tab("Roteiro", cab, linhas)
     if "narracao_b" in p:
         tit, linhas = p["narracao_b"]
         corpo += f'<h3 class="rot">{e(tit)}</h3><div class="narr narr-b">' + "".join(f"<p>{e(x)}</p>" for x in linhas) + "</div>"
@@ -182,8 +190,7 @@ def peca(p):
     if "legenda" in p:
         if p.get("duas_paginas"):
             # peça longa demais pra uma folha: a legenda abre a segunda, com o cabeçalho repetido
-            corpo += (f'<div style="break-before:page"></div><div class="topo"><span class="data">{e(p["data"])}</span>'
-                      f'<span class="fmt">{e(p["titulo"])} · continuação</span></div>')
+            corpo += continua()
         nota = f'<p class="nota">{e(p["legenda_nota"])}</p>' if p.get("legenda_nota") else ""
         corpo += '<h3 class="rot">Legenda</h3><div class="leg">' + "".join(f"<p>{e(x)}</p>" for x in p["legenda"]) + nota + "</div>"
     if p.get("nota"):

@@ -128,7 +128,8 @@ GRADE = [
 PECAS = []
 
 # 01 ------------------------------------------------------------------ lançamento
-PECAS.append(dict(data="23/10 · sexta", formato="Vídeo · 75 segundos", quem="Gravado pelo Dr. Fernando e pelo Dr. Gustavo", duas_paginas=True,
+PECAS.append(dict(data="23/10 · sexta", formato="Vídeo · 75 segundos", quem="Opção 1 gravada pelo Dr. Fernando e pelo Dr. Gustavo · opção 2 sem gravação", duas_paginas=True,
+ rotulo_tabela="Opção 1 · gravada pelos advogados",
  titulo="Vídeo de lançamento da área",
  objetivo="Apresentar a nova área e a equipe. O Dr. Fernando abre e fecha falando da relação do escritório com o agro e com as empresas; o Dr. Gustavo explica a área no meio.",
  tabela=(["Tempo","Cena","Animação","Fala"],[
@@ -141,7 +142,18 @@ PECAS.append(dict(data="23/10 · sexta", formato="Vídeo · 75 segundos", quem="
   ("58–66s","Fundo verde da marca.","Serviços entrando um a um, com ícone.","(Trilha.)"),
   ("66–75s","Dr. Fernando fecha.","Cartão final: Protegemos o patrimônio e o futuro de quem produz, da porteira à aposentadoria. E a logo.","Se você ou alguém da sua família tem dúvida sobre aposentadoria ou benefício do INSS, conversa com a gente. Gorayeb Advocacia. Da porteira à aposentadoria."),
  ]),
- nota="Se a gravação não sair a tempo, há uma versão sem gravação: os dois aparecem pelas fotos do site, com as tarjas, e as falas viram narração em voz institucional, falando do escritório e não em primeira pessoa.",
+ tabela_b=("Opção 2 · sem gravação",
+  "Para o caso de a gravação não sair a tempo. Mesma estrutura e mesmas animações. Os dois advogados aparecem pelas fotos do site, com as tarjas, e as falas viram narração em voz institucional, falando pelo escritório e não em primeira pessoa. A voz é da marca, não imita a de nenhum dos advogados.",
+  ["Tempo","Cena","Animação","Narração"],[
+  ("0–5s","Campo ao amanhecer.","A logo da Gorayeb se formando.","(Trilha.)"),
+  ("5–17s","Foto do Dr. Fernando, com aproximação lenta.","Tarja: Dr. Fernando Torbay Gorayeb · OAB/MG 144.479.","Há mais de vinte e cinco anos, a Gorayeb Advocacia caminha junto com quem produz. Cuidando da terra, dos contratos, da família."),
+  ("17–24s","Trabalhador rural mais velho, de costas, olhando a lavoura.","Texto: Direito Previdenciário.","Mas o futuro de quem produz não é só a terra. É também a aposentadoria. Por isso, a Gorayeb agora atua em Direito Previdenciário."),
+  ("24–40s","Foto do Dr. Gustavo, com aproximação lenta.","Tarja: Dr. Gustavo Freitas Marcelino · OAB/MG [número]. Linha do tempo com ícones de documentos rurais.","Quem trabalha na roça com a família tem direito a se aposentar, mesmo sem ter pago o INSS todo mês. O que decide é a prova: nota de venda da produção, contrato de parceria, ITR, certidão com a profissão de lavrador."),
+  ("40–50s","Fundo verde da marca.","Ícone do BPC.","A área também orienta sobre o BPC, o benefício de um salário mínimo para idosos a partir de sessenta e cinco anos e para pessoas com deficiência, inclusive com autismo, de famílias de baixa renda."),
+  ("50–58s","Fundo verde da marca.","Ícone de revisão.","E revisa aposentadorias e pensões já concedidas, para conferir se o cálculo e o tempo de trabalho foram reconhecidos do jeito certo."),
+  ("58–66s","Fundo verde da marca.","Serviços entrando um a um, com ícone.","(Trilha.)"),
+  ("66–75s","Foto do Dr. Fernando assinando, do banco do escritório.","Cartão final: Protegemos o patrimônio e o futuro de quem produz, da porteira à aposentadoria. E a logo.","Se você ou alguém da sua família tem dúvida sobre aposentadoria ou benefício do INSS, converse com a gente. Gorayeb Advocacia. Da porteira à aposentadoria."),
+ ]),
  legenda=[
   "A GORAYEB ADVOCACIA AGORA TAMBÉM ATUA EM DIREITO PREVIDENCIÁRIO.",
   "Protegemos o patrimônio e o futuro de quem produz, da porteira à aposentadoria.",
