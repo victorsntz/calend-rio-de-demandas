@@ -181,23 +181,22 @@ def monta(destino: Path):
     ws3 = wb.create_sheet("Banco de pauta")
     estilo_cabeca(ws3, ["Nº", "Tema", "Para onde vai", "Motivo"])
     l = 2
-    destinos = [
-        ("credito_2a_onda_fev_2027", "2ª onda de crédito — Fev/2027"),
-        ("ambiental_2a_onda_abr_2027", "2ª onda ambiental — Abr/2027"),
-    ]
-    for chave, rotulo in destinos:
-        for n in plano["banco_de_pauta"][chave]:
-            ws3.cell(l, 1, n)
-            ws3.cell(l, 2, itens[n]["tema"])
-            ws3.cell(l, 3, rotulo)
-            ws3.cell(l, 4, "não coube na janela de outubro; o pilar volta nessa data")
-            l += 1
-    for x in plano["banco_de_pauta"]["fora_de_pauta"]:
-        ws3.cell(l, 1, x["n"])
-        ws3.cell(l, 2, itens[x["n"]]["tema"])
-        ws3.cell(l, 3, "fora de pauta")
-        ws3.cell(l, 4, x["motivo"])
-        l += 1
+    # cada chave do banco é uma lista de números do calendário original ou um
+    # grupo de peças soltas, com o motivo; o rótulo sai de "rotulos_banco" no plano.json
+    for chave, valor in plano["banco_de_pauta"].items():
+        rotulo = plano.get("rotulos_banco", {}).get(chave, chave.replace("_", " "))
+        if chave == "fora_de_pauta":
+            for x in valor:
+                ws3.cell(l, 1, x["n"]); ws3.cell(l, 2, itens[x["n"]]["tema"])
+                ws3.cell(l, 3, "fora de pauta"); ws3.cell(l, 4, x["motivo"]); l += 1
+        elif isinstance(valor, list) and valor and isinstance(valor[0], int):
+            for n in valor:
+                ws3.cell(l, 1, n); ws3.cell(l, 2, itens[n]["tema"]); ws3.cell(l, 3, rotulo)
+                ws3.cell(l, 4, "o pilar volta nessa data"); l += 1
+        elif isinstance(valor, dict) and "pecas" in valor:
+            for p in valor["pecas"]:
+                ws3.cell(l, 1, p.get("n", "")); ws3.cell(l, 2, f'{p["tema"]} ({p["formato"]})')
+                ws3.cell(l, 3, rotulo); ws3.cell(l, 4, valor["motivo"]); l += 1
     larguras(ws3, {"A": 6, "B": 66, "C": 30, "D": 56})
     for r in ws3.iter_rows(min_row=2):
         for c in r:

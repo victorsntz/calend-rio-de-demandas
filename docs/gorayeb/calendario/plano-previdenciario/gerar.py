@@ -140,6 +140,8 @@ table.rot-t td:last-child{color:var(--tinta);font-family:Arvo;font-size:8.6pt}
 .com-tabela table.rot-t td:last-child{font-size:8.1pt}
 .com-tabela .leg p{font-size:8.1pt;line-height:1.4;margin-bottom:1.3mm}
 .com-tabela .obj{margin-bottom:3mm}
+.peca .area{font-family:Hel;font-weight:700;font-size:6.8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--dourado-esc);margin:0 0 1.2mm}
+table.grade td.a{font-size:7.6pt;color:var(--fraca);white-space:nowrap}
 """
 
 def fontes(p):
@@ -195,18 +197,24 @@ def peca(p):
         corpo += '<h3 class="rot">Legenda</h3><div class="leg">' + "".join(f"<p>{e(x)}</p>" for x in p["legenda"]) + nota + "</div>"
     if p.get("nota"):
         corpo += f'<div class="nota-f">{e(p["nota"])}</div>'
+    area = f'<p class="area">{e(p["pilar"])}</p>' if p.get("pilar") else ""
     return f"""<section class="pag peca{' com-tabela' if 'tabela' in p else ''}">
   <div class="topo"><span class="data">{e(p['data'])}</span><span class="fmt">{e(p['formato'])}</span></div>
-  <h2>{e(p['titulo'])}</h2>{quem}
+  {area}<h2>{e(p['titulo'])}</h2>{quem}
   <p class="obj">{e(p['objetivo'])}</p>
   {corpo}
   {fontes(p)}
 </section>"""
 
+COM_AREA = bool(GRADE) and len(GRADE[0]) > 5
+
 def grade():
-    rows = "".join(
-        f'<tr class="{"fora" if k=="fora" else ("lanc" if k=="lanc" else "")}"><td class="d">{d} <span style="color:#9a9a8c">{s}</span></td><td class="f">{f}</td><td>{e(t)}</td></tr>'
-        for d, s, f, t, k in GRADE)
+    # linha da grade: (data, dia, formato, tema, marca[, área])
+    rows = ""
+    for d, s, f, t, k, *a in GRADE:
+        area = f'<td class="a">{e(a[0])}</td>' if COM_AREA else ""
+        rows += (f'<tr class="{"fora" if k=="fora" else ("lanc" if k=="lanc" else "")}"><td class="d">{d} <span style="color:#9a9a8c">{s}</span></td>'
+                 f'{area}<td class="f">{f}</td><td>{e(t)}</td></tr>')
     return rows
 
 def html_doc():
@@ -285,12 +293,12 @@ def html_doc_m():
     grade_pag = f"""<section class="pag{' grade-longa' if len(GRADE) > 15 else ''}">
   <p class="eyebrow">Calendário</p>
   <h2 class="sec">{M.GRADE_TITULO}</h2>
-  <table class="grade"><thead><tr><th>Data</th><th>Formato</th><th>Post</th></tr></thead><tbody>{grade()}</tbody></table>
+  <table class="grade"><thead><tr><th>Data</th>{'<th>Área</th>' if COM_AREA else ''}<th>Formato</th><th>Post</th></tr></thead><tbody>{grade()}</tbody></table>
   <p style="font-size:9pt;color:var(--fraca)">{M.GRADE_NOTA}</p>
   <div class="caixa" style="margin-top:6mm"><h3>O que precisamos de vocês</h3><ol>{precisa}</ol></div>
 </section>"""
     pecas = "\n".join(peca(p) for p in PECAS)
-    return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Plano de conteúdo · Direito Previdenciário</title>
+    return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>{getattr(M, 'TITULO_DOC', 'Plano de conteúdo · Direito Previdenciário')}</title>
 <style>{CSS}</style></head><body>{capa}{visao}{grade_pag}{pecas}</body></html>"""
 
 # versão de tela, pra revisar e comentar: mesmas páginas, como folhas sobre
