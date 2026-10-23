@@ -1,0 +1,101 @@
+{
+  "servicos": [
+    {
+      "servico": "BPC/LOAS para idoso",
+      "onde": "citado no lançamento"
+    },
+    {
+      "servico": "BPC/LOAS para pessoa com deficiência",
+      "onde": "citado no lançamento"
+    },
+    {
+      "servico": "BPC/LOAS para pessoa com TEA",
+      "onde": "citado no lançamento (legenda)"
+    },
+    {
+      "servico": "Planejamento previdenciário",
+      "onde": "citado no lançamento · estático 4"
+    },
+    {
+      "servico": "Atendimento ao produtor rural e família",
+      "onde": "o bloco inteiro"
+    },
+    {
+      "servico": "Análise documental",
+      "onde": "vídeo 4 e carrossel 3"
+    },
+    {
+      "servico": "Comprovação da atividade rural",
+      "onde": "vídeo 4, carrossel 1 e 3, estático 3"
+    },
+    {
+      "servico": "Revisão de aposentadoria",
+      "onde": "citado no lançamento · carrossel 2"
+    },
+    {
+      "servico": "Revisão de pensão",
+      "onde": "citado no lançamento"
+    },
+    {
+      "servico": "Revisão de benefício por incapacidade",
+      "onde": "citado no lançamento"
+    },
+    {
+      "servico": "Erro de cálculo e período não reconhecido",
+      "onde": "carrossel 2"
+    },
+    {
+      "servico": "Aposentadoria por idade rural",
+      "onde": "vídeos 1 e 2, carrossel 1 e 2, estáticos 1 e 2"
+    },
+    {
+      "servico": "Aposentadoria por idade urbana",
+      "onde": "citado no lançamento"
+    },
+    {
+      "servico": "Aposentadoria por tempo de contribuição",
+      "onde": "citado no lançamento (legenda)"
+    },
+    {
+      "servico": "Aposentadoria por pontos",
+      "onde": null
+    },
+    {
+      "servico": "Aposentadoria especial (insalubre/periculoso)",
+      "onde": "citado no lançamento (legenda)"
+    },
+    {
+      "servico": "Aposentadoria por incapacidade permanente",
+      "onde": "citado no lançamento (legenda)"
+    },
+    {
+      "servico": "Auxílio-doença comum",
+      "onde": "citado no lançamento · carrossel 4"
+    },
+    {
+      "servico": "Auxílio-doença acidentário",
+      "onde": null
+    },
+    {
+      "servico": "Salário-maternidade",
+      "onde": "citado no lançamento · carrossel 4"
+    },
+    {
+      "servico": "Pensão por morte",
+      "onde": "citado no lançamento · vídeo 4 e carrossel 4"
+    },
+    {
+      "servico": "Auxílio-reclusão",
+      "onde": null
+    },
+    {
+      "servico": "Servidor público municipal CLT (post que ela mandou)",
+      "onde": null
+    },
+    {
+      "servico": "Aposentadoria da PCD, LC 142 (post que ela mandou)",
+      "onde": null
+    }
+  ],
+  "nota": "O lançamento apresenta a área inteira, rural e urbana. O bloco educativo aprofunda só o rural, que é o público do feed. O que só é citado no lançamento ganha conteúdo próprio em janeiro, se o rural performar."
+}

@@ -27,3 +27,17 @@ next-env.d.ts
 # artifact build outputs
 /artifact/app.js
 /artifact/calendario.html
+
+# html intermediário do render dos carrosséis
+docs/gorayeb/template/_*.html
+
+# substitutos de imagem, trocados por foto real na produção
+docs/gorayeb/img/substituto-*.jpg
+img/
+
+# entrega gerada pelo empacota.py
+docs/gorayeb/entrega/
+
+# excel gerado pelo calendario/gerar.py
+docs/gorayeb/calendario/saida/
+__pycache__/
