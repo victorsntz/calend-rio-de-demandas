@@ -1,0 +1,77 @@
+{
+  "slug": "v2-anvisa-canetas-internet",
+  "arroba": "@larissamerola",
+  "seed": 26,
+  "slides": [
+    {
+      "tipo": "capa-foto",
+      "foto": "post:anvisa",
+      "rotulo": "14 de outubro de 2026",
+      "titulo": "A Anvisa proibiu as canetas de internet.",
+      "sub": "O que foi apreendido, por que não tem registro e o que fazer se você já comprou."
+    },
+    {
+      "tipo": "noticia",
+      "tema": "papel",
+      "print": "../../saida/noticia-anvisa-canetas/print.png",
+      "texto": "A decisão vale para fabricação, venda, divulgação e uso. Não é recomendação: é proibição.",
+      "fonte": "Agência Brasil, 14/10/2026"
+    },
+    {
+      "tipo": "celulas",
+      "tema": "salvia",
+      "titulo": "O que estava à venda",
+      "itens": [
+        "Retatrutida em caneta de 60 mg e 120 mg, anunciada em sites e perfis",
+        "Tirzepatida de 75 mg e 150 mg sem registro, vendida por contabilidade de fachada",
+        "Retagen 40 mg e outros produtos de \"peptídeos\" sem lote, sem bula e sem responsável técnico"
+      ],
+      "texto": "Nenhum deles passou por inspeção. Ninguém sabe o que tem no frasco, nem em que dose.",
+      "fonte": "Anvisa, resolução de 14/10/2026"
+    },
+    {
+      "tipo": "dado",
+      "tema": "musgo",
+      "numero": "0",
+      "titulo": "registros da retatrutida na Anvisa",
+      "texto": "A substância ainda está em fase de estudos. Toda caneta vendida hoje com esse nome é irregular, não importa o site, o preço ou a promessa.",
+      "fonte": "Anvisa, 14/10/2026"
+    },
+    {
+      "tipo": "cards",
+      "tema": "papel",
+      "titulo": "Três sinais de caneta irregular",
+      "itens": [
+        { "icone": "chat", "rotulo": "Vende por site, perfil ou WhatsApp", "texto": "Farmácia tem endereço, CNPJ e farmacêutico. Loja de caneta tem link." },
+        { "icone": "receita", "rotulo": "Não pede receita", "texto": "Semaglutida e tirzepatida são medicamentos de prescrição. Sem receita, não é tratamento." },
+        { "icone": "preco", "rotulo": "Preço fora da curva", "texto": "Muito abaixo da farmácia significa que você não está pagando pelo que acha que está." }
+      ],
+      "texto": "Medicamento de verdade tem registro, lote, bula e nota fiscal."
+    },
+    {
+      "tipo": "passos",
+      "tema": "marrom",
+      "titulo": "Já comprou? Faz assim.",
+      "passos": [
+        "Para a aplicação. Não espera a próxima dose pra decidir.",
+        "Guarda o produto, a embalagem e a conversa da compra.",
+        "Leva tudo na consulta e conta o que usou e por quanto tempo.",
+        "Denuncia no site da Anvisa. A sua denúncia tira o produto de circulação."
+      ],
+      "texto": "Sem culpa. A pergunta agora é o que o seu corpo recebeu e como seguir com segurança."
+    },
+    {
+      "tipo": "fecho",
+      "tema": "musgo",
+      "titulo": "Investigação antes da caneta.",
+      "texto": "Exames, histórico e um plano feito pro seu corpo. Quando o medicamento entra, ele entra com registro, receita e acompanhamento.",
+      "cta": "Agende pelo link na bio",
+      "foto": "doutora"
+    }
+  ],
+  "legenda": [
+    "No dia 14 de outubro a Anvisa determinou a apreensão de canetas emagrecedoras vendidas pela internet, entre elas produtos com retatrutida e tirzepatida sem registro. A medida vale para fabricação, venda, divulgação e uso. O motivo é simples: sem registro, ninguém sabe o que está dentro do frasco, em que condição foi produzido e qual a dose real. A retatrutida, inclusive, ainda está em fase de pesquisa e não tem registro na agência.",
+    "Se você comprou uma dessas canetas, interrompe o uso, guarda o produto e leva na consulta pra gente avaliar o que fazer. Medicamento para emagrecer existe, funciona e tem lugar no tratamento, mas entra depois da investigação: exames, histórico e um plano feito pro seu corpo. Quando ele entra, entra com registro, receita e acompanhamento. Agende pelo link na bio.",
+    "Fontes: Agência Brasil, 14/10/2026; Anvisa, resolução de 14/10/2026."
+  ]
+}

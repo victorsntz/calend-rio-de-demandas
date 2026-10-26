@@ -2,6 +2,7 @@
 // Uso: node noticia.mjs <url> <slug> [--foto caminho.jpg] [--altura 760] [--chamada "texto"]
 //   --foto    injeta uma foto na imagem principal da matéria quando o site não entrega a imagem pro print (lazy load/proxy)
 //   --altura  altura do recorte da página em px CSS (largura fixa 1000). Padrão: até o fim do primeiro parágrafo.
+//   --topo N   pula os N px do topo da página (cabeçalho do site que não carrega direito)
 //   --chamada texto curto opcional abaixo do cartão (ex.: "O que isso muda pra quem já comprou? Deslize.")
 import { createRequire } from 'node:module';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
@@ -16,7 +17,7 @@ const args = process.argv.slice(2);
 const opt = (k, d) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : d; };
 const posicionais = []; for (let i = 0; i < args.length; i++) { if (args[i].startsWith('--')) { i++; continue; } posicionais.push(args[i]); }
 const [url, slug = 'noticia'] = posicionais;
-const fotoPath = opt('--foto'); const alturaFixa = Number(opt('--altura', 0)); const chamada = opt('--chamada', '');
+const fotoPath = opt('--foto'); const alturaFixa = Number(opt('--altura', 0)); const chamada = opt('--chamada', ''); const topo = Number(opt('--topo', 0));   // --topo N pula o cabeçalho do site
 const saida = resolve(aqui, '..', 'saida', `noticia-${slug}`);
 await mkdir(saida, { recursive: true });
 
@@ -54,7 +55,7 @@ if (!altura) {
 }
 altura = Math.min(Math.max(altura, 600), 960);   // cabe no cartão com a assinatura embaixo
 const printPath = join(saida, 'print.png');
-await p.screenshot({ path: printPath, clip: { x: 0, y: 0, width: 1000, height: altura } });
+await p.screenshot({ path: printPath, clip: { x: 0, y: topo, width: 1000, height: altura - topo } });
 await b.close();
 
 const rel = f => resolve(aqui, '..', 'capa', f);

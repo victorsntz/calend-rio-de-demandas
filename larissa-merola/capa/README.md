@@ -144,3 +144,19 @@ node noticia.mjs "https://agenciabrasil.ebc.com.br/..." anvisa-canetas --foto ..
 Tira o print com o Playwright (aceita cookies, esconde widgets fixos, força lazy load) e recorta até o
 fim do primeiro parágrafo (ou `--altura N`). `--foto` injeta uma imagem quando o site não entrega a
 foto pro print (o proxy daqui bloqueia o CDN da EBC). `--chamada "texto"` põe uma frase abaixo do cartão.
+
+## Sistema v2: "estáticos compilados em carrossel" (26/10)
+
+Depois do raio-X dos criativos 2024–2026 (`../ANALISE-CRIATIVOS-2024-2026.md`), o gerador ganhou um
+segundo sistema em que cada slide se sustenta sozinho como estático: cabeçalho micro
+"DRA. LARISSA MEROLA · NUTROLOGIA", conteúdo, faixa do padrão de folhas no rodapé.
+
+```bash
+node montar2.mjs ../carrosseis/v2/anvisa-canetas-internet.json      # saida/<slug>/ + zip + legenda
+node montar2.mjs ../carrosseis/v2/x.json --so-capa                   # só o primeiro slide
+```
+
+Tipos de slide (`tipo`): `capa-foto`, `noticia` (print do `estaticos/noticia.mjs`), `celulas`,
+`dado`, `cards` (ícones de linha: site, chat, receita, preco, lote, medico, anvisa, caneta),
+`passos`, `foto-frase`, `fecho`. Temas: `salvia` (padrão, com textura), `musgo`, `papel`,
+`marrom`, `marromclaro`, `branco`. Estilos em `v2.css`. Fotos e rotação iguais ao `montar.mjs`.
