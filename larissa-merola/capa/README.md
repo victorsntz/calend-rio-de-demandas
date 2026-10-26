@@ -104,3 +104,43 @@ Duas fontes, que se somam:
    os mais comuns: `upload.wikimedia.org`, `live.staticflickr.com`).
 
 Pinterest não serve como ponte: o domínio é bloqueado aqui e não tem API aberta.
+
+## Elementos da marca (Drive > MARCA > CONSTRUÇÃO), desde 26/10
+
+`elementos.mjs` reproduz em SVG o que está na apresentação da identidade:
+
+- **Padrão de folhas** (`padrao()`): grade de quadrados com uma folha em lente na diagonal; as folhas
+  de quatro quadrados vizinhos se encontram e formam a borboleta. Cores musgo, claro e saúde,
+  sorteio determinístico pela `seed` do JSON. Entra na faixa do topo da capa fixa (54 px) e no rodapé
+  dos slides de lista (B). `"padrao": false` num slide B tira a faixa.
+- **Isótipo em traço**: `flor()` (3 pétalas), `borboleta()` (4), `folha()` (1), `isotipo()` (6).
+  Cor vem de `currentColor`, então cada tema pinta do jeito certo. Flor nos slides de dado (C),
+  folha nos de foto e texto (A), borboleta na lista (B) e no fechamento (D).
+- **Degradê verde** (`"tema": "degrade"`): o fundo da logo na apresentação. Funciona em qualquer
+  layout, inclusive no fechamento (`D` aceita `tema`).
+
+## Três estilos de capa (`capa.tipo`)
+
+- `ilustracao` (padrão, o combinado): pergunta em duas linhas, ilustração figurativa, logo menor,
+  padrão de folhas no topo.
+- `social`: cartão branco com avatar (`banco/doutora/avatar.jpg`), nome, @, texto corrido
+  (`capa.texto`, string ou lista de linhas), "Arrasta" com seta e foto arredondada embaixo
+  (`capa.foto`). Sem emoji.
+- `foto`: foto inteira com véu escuro, até quatro linhas centralizadas alternando grande/pequena
+  (`capa.linhas`, ou `capa.classes` pra forçar), "Deslize para o lado", logo branca embaixo,
+  `capa.credito` opcional no canto.
+
+`node montar.mjs x.json --so-capa` renderiza só a capa (pra comparar estilos sem gastar fotos
+do rodízio). Slides E aceitam `credito` (texto pequeno no topo da foto).
+
+## Estático "Notícia" (`../estaticos/noticia.mjs`)
+
+Print real da matéria dentro de um cartão, faixa NOTÍCIA em musgo, nome da Dra. embaixo:
+
+```bash
+node noticia.mjs "https://agenciabrasil.ebc.com.br/..." anvisa-canetas --foto ../banco/post/post-16.jpg
+```
+
+Tira o print com o Playwright (aceita cookies, esconde widgets fixos, força lazy load) e recorta até o
+fim do primeiro parágrafo (ou `--altura N`). `--foto` injeta uma imagem quando o site não entrega a
+foto pro print (o proxy daqui bloqueia o CDN da EBC). `--chamada "texto"` põe uma frase abaixo do cartão.

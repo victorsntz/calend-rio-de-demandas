@@ -12,11 +12,14 @@ import { existsSync } from 'node:fs';
 import { resolve, dirname, relative, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
+import { padrao, flor, borboleta, folha } from './elementos.mjs';
 
 const aqui = dirname(fileURLToPath(import.meta.url));
 const [,, entrada] = process.argv;
 if (!entrada) { console.error('uso: node montar.mjs carrossel.json'); process.exit(1); }
 const dados = JSON.parse(await readFile(entrada, 'utf8'));
+const soCapa = process.argv.includes('--so-capa');   // renderiza só a capa (pra comparar estilos)
+if (soCapa) { dados.slides = []; dados.slug = (dados.slug ?? 'carrossel') + '-capa-' + (dados.capa.tipo ?? 'ilustracao'); }
 const slug = dados.slug ?? 'carrossel';
 const saida = resolve(aqui, '..', 'saida', slug);
 await mkdir(saida, { recursive: true });
@@ -54,33 +57,56 @@ const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').re
 // ---- slides ----------------------------------------------------------------
 const rel = p => relative(saida, resolve(aqui, p));
 const partes = [];
-partes.push(`
+const estiloCapa = dados.capa.tipo ?? 'ilustracao';
+if (estiloCapa === 'social') {
+  // capa "post social": perfil dela em cima, texto corrido, foto embaixo (sem emoji)
+  const avatar = rel('../banco/doutora/avatar.jpg');
+  const f = foto(dados.capa.foto, 'post');
+  const texto = Array.isArray(dados.capa.texto) ? dados.capa.texto.join('\n') : (dados.capa.texto ?? '');
+  partes.push(`
+<section class="slide capa-social">
+  <div class="perfil"><div class="avatar"><img src="${avatar}" alt=""></div><div><div class="nome">Dra. Larissa Merola</div><div class="arroba">${esc(dados.arroba ?? '@larissamerola')}</div></div></div>
+  <div class="mais"><i></i><i></i><i></i></div>
+  <div class="corpo"><div class="texto">${esc(texto)}</div>
+  <div class="arrasta">${esc(dados.capa.arrasta ?? 'Arrasta')}<b>&rarr;</b></div>
+  <div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div></div>
+</section>`);
+} else if (estiloCapa === 'foto') {
+  // capa "foto inteira": texto centralizado fino, logo branca embaixo
+  const f = foto(dados.capa.foto, 'post');
+  const l = dados.capa.linhas ?? [dados.capa.linha1, dados.capa.linha2];
+  const classes = ['grande', 'pequena', 'grande', 'pequena'];
+  partes.push(`
+<section class="slide capa-foto">
+  <div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>
+  <h1 class="titulo">${l.map((t, i) => `<span class="${dados.capa.classes?.[i] ?? classes[i % 4]}">${esc(t)}</span>`).join('')}</h1>
+  <div class="deslize-c">Deslize para o lado</div>
+  <div class="logo"><img src="${rel('logo-branca.png')}" alt=""></div>
+  ${dados.capa.credito ? `<div class="credito">${esc(dados.capa.credito)}</div>` : ''}
+</section>`);
+} else {
+  // capa padrão (fixa): pergunta em duas linhas, ilustração figurativa, logo menor embaixo, padrão de folhas da marca no topo
+  partes.push(`
 <section class="slide capa">
-  <svg class="faixa" viewBox="0 0 1080 26" preserveAspectRatio="none" aria-hidden="true">
-    <rect width="1080" height="26" fill="#78856F"/>
-    <path d="M0 26 C 120 -30, 260 -30, 380 26 Z" fill="#CCD77F"/>
-    <path d="M300 26 C 420 -34, 560 -34, 690 26 Z" fill="#343B30"/>
-    <path d="M620 26 C 740 -30, 880 -30, 1000 26 Z" fill="#CCD77F"/>
-    <path d="M900 26 C 980 -24, 1060 -24, 1140 26 Z" fill="#343B30"/>
-    <rect y="22" width="1080" height="4" fill="#343B30"/>
-  </svg>
+  ${padrao({ cols: 20, rows: 1, s: 54, seed: dados.seed ?? 7, classe: 'faixa-padrao' })}
   <div class="arroba">${esc(dados.arroba ?? '@larissamerola')}</div>
   <h1 class="titulo"><span class="linha1">${esc(dados.capa.linha1)}</span><span class="linha2">${esc(dados.capa.linha2)}</span></h1>
   <div class="ilustracao"><img src="${esc(foto(dados.capa.ilustracao, null) ?? '')}" alt=""></div>
   <div class="logo"><img src="${rel('logo.png')}" alt=""></div>
 </section>`);
+}
 
 const deslize = '<div class="deslize">Deslize para o lado</div>';
 // Tema de cor: o JSON pode fixar `tema` ("papel"|"marrom"|"marromclaro"|"musgo"|"saude"|"claro"); senão a gente mescla.
 const ciclo = ['marrom', 'papel', 'saude', 'musgo', 'papel', 'marromclaro'];
 function temaDe(s, i, n) {
   if (s.tema) return s.tema;
-  if (s.tipo === 'D') return 'musgo';
+  if (s.tipo === 'D') return s.tema ?? 'musgo';
   let t = ciclo[i % ciclo.length];
   if (i === n - 2 && t === 'musgo') t = 'saude';   // não emendar dois musgos antes do fechamento
   return t;
 }
-const rodapeDe = t => `<div class="rodape"><img src="${rel(['claro', 'musgo', 'marrom'].includes(t) ? 'logo-branca.png' : 'logo.png')}" alt=""></div>`;
+const rodapeDe = t => `<div class="rodape"><img src="${rel(['claro', 'musgo', 'marrom', 'degrade'].includes(t) ? 'logo-branca.png' : 'logo.png')}" alt=""></div>`;
 dados.slides.forEach((s, i) => {
   const ultimo = i === dados.slides.length - 1;
   const tema = temaDe(s, i, dados.slides.length);
@@ -89,6 +115,7 @@ dados.slides.forEach((s, i) => {
   if (s.tipo === 'A') {
     const f = foto(s.foto, 'post');
     partes.push(`<section class="slide a ${cls}">
+  ${folha(84, 3.2)}
   <div class="texto"><h2>${esc(s.titulo)}</h2><p>${esc(s.texto)}</p></div>
   <div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div>${ultimo ? '' : deslize}
 </section>`);
@@ -96,23 +123,24 @@ dados.slides.forEach((s, i) => {
     partes.push(`<section class="slide b ${cls}">
   <div class="texto"><h2>${s.titulo}</h2>
     <ul>${s.itens.map(it => `<li><i></i>${esc(it)}</li>`).join('')}</ul>
-    ${s.texto ? `<p>${esc(s.texto)}</p>` : ''}</div>${ultimo ? '' : deslize}${rodape}
+    ${s.texto ? `<p>${esc(s.texto)}</p>` : ''}</div>${borboleta(96, 3.2)}${s.padrao === false ? '' : padrao({ cols: 20, rows: 1, s: 54, seed: (dados.seed ?? 7) + i, classe: 'padrao-rodape' })}${ultimo ? '' : deslize}${rodape}
 </section>`);
   } else if (s.tipo === 'C') {
     partes.push(`<section class="slide c ${cls}">
   <div class="texto"><div class="numero">${esc(s.numero)}</div><h2>${esc(s.titulo)}</h2>
     ${s.texto ? `<p style="margin-top:36px">${esc(s.texto)}</p>` : ''}
-    ${s.fonte ? `<div class="fonte">Fonte: ${esc(s.fonte)}</div>` : ''}</div>${ultimo ? '' : deslize}${rodape}
+    ${s.fonte ? `<div class="fonte">Fonte: ${esc(s.fonte)}</div>` : ''}</div>${flor(300, 2.6)}${ultimo ? '' : deslize}${rodape}
 </section>`);
   } else if (s.tipo === 'E') {
     const f = foto(s.foto, 'post');
     partes.push(`<section class="slide e ${cls}">
-  <div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div>
+  <div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div>${s.credito ? `<div class="credito">${esc(s.credito)}</div>` : ''}
   <div class="faixa-texto"><h2>${esc(s.titulo)}</h2>${s.texto ? `<p>${esc(s.texto)}</p>` : ''}</div>${ultimo ? '' : deslize}
 </section>`);
   } else if (s.tipo === 'D') {
     const f = foto(s.foto, 'doutora');
-    partes.push(`<section class="slide d t-musgo">
+    partes.push(`<section class="slide d ${cls}">
+  ${borboleta(110, 3.4)}
   <div class="texto"><h2>${esc(s.titulo)}</h2><p>${esc(s.texto)}</p><div class="cta">${esc(s.cta ?? 'Link na bio')}</div></div>
   <div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div>
   <div class="logo"><img src="${rel('logo-branca.png')}" alt=""></div>
@@ -131,6 +159,7 @@ await writeFile(htmlPath, html);
 await writeFile(usoPath, JSON.stringify(uso, null, 2));
 execFileSync('node', [join(aqui, 'render.mjs'), htmlPath, join(saida, slug)], { stdio: 'inherit' });
 
+if (soCapa) { console.log('capa pronta:', saida); process.exit(0); }
 // legenda.txt: primeira linha "Siga @arroba", depois os parágrafos do JSON. Sem emoji.
 const arroba = dados.arroba ?? '@larissamerola';
 const legenda = [`Siga ${arroba}`, '', ...(dados.legenda ?? []).flatMap(p => [p, ''])].join('\n').trimEnd() + '\n';

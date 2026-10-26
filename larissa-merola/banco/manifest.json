@@ -217,5 +217,22 @@
       "inchaco"
     ],
     "usar": true
+  },
+  {
+    "arquivo": "post/post-16.jpg",
+    "grupo": "post",
+    "origem": "Agência Brasil (Marcelo Casal Jr), notícia 14/10/2026",
+    "drive_id": null,
+    "largura": 1551,
+    "altura": 920,
+    "orientacao": "paisagem",
+    "tags": [
+      "caneta",
+      "anvisa",
+      "medicamento",
+      "injetavel"
+    ],
+    "credito": "Foto: Marcelo Casal Jr/Agência Brasil",
+    "usar": true
   }
 ]

@@ -30,7 +30,7 @@ p { margin: 0; font-size: 31px; line-height: 1.42; font-weight: 400; }
 
 /* A: foto + texto */
 .a .texto { position: absolute; left: 96px; top: 300px; width: 470px; display: flex; flex-direction: column; gap: 36px; }
-.a h2 { font-size: 48px; }
+.a h2 { font-size: 46px; }
 .a .foto { position: absolute; right: 0; top: 0; width: 440px; height: 1350px; background: var(--claro); overflow: hidden; }
 .a .foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
 
@@ -117,3 +117,63 @@ p { margin: 0; font-size: 31px; line-height: 1.42; font-weight: 400; }
 .t-marrom.e .faixa-texto { background: var(--marrom); }
 .t-marromclaro.e .faixa-texto { background: var(--marrom-claro); }
 .t-papel::before { background: var(--marrom); }
+
+/* ---- Elementos da marca (Drive > MARCA > CONSTRUÇÃO): padrão de folhas + isótipo em traço ---- */
+.capa .faixa-padrao { position: absolute; top: 0; left: 0; width: 1080px; height: 54px; display: block; }
+.capa .arroba { top: 92px; }
+.capa .titulo { top: 236px; }
+.padrao-rodape { position: absolute; left: 0; bottom: 0; width: 1080px; height: 54px; display: block; }
+.marca { position: absolute; pointer-events: none; }
+.c .marca-flor { right: 72px; top: 150px; color: var(--claro); opacity: .55; }
+.t-musgo.c .marca-flor, .t-marrom.c .marca-flor, .t-claro.c .marca-flor { color: var(--saude); opacity: .5; }
+.t-saude.c .marca-flor { color: var(--musgo); opacity: .35; }
+.a .marca-folha { left: 96px; top: 196px; color: var(--claro); }
+.t-musgo.a .marca-folha, .t-marrom.a .marca-folha, .t-claro.a .marca-folha { color: var(--saude); }
+.d .marca-borboleta { left: 96px; top: 120px; color: var(--saude); }
+.b .marca-borboleta { right: 96px; top: 110px; color: var(--claro); opacity: .9; }
+.t-musgo.b .marca-borboleta, .t-marrom.b .marca-borboleta, .t-claro.b .marca-borboleta { color: var(--saude); }
+.t-saude.b .marca-borboleta { color: var(--musgo); opacity: .5; }
+.b .texto { top: 230px; }
+
+/* degradê verde da apresentação da marca (fundo da logo): usar em fechamento ou num slide interno */
+.t-degrade { background: radial-gradient(120% 95% at 88% 8%, #76866F 0%, #4E5B49 42%, #343B30 100%); color: var(--branco); }
+.t-degrade .deslize { color: rgba(255,255,255,.72); }
+.t-degrade .grifo { background: linear-gradient(transparent 58%, var(--saude) 58%); color: var(--musgo); }
+.t-degrade.b li { border-color: rgba(255,255,255,.28); }
+.t-degrade.b li i { background: var(--saude); border-color: var(--branco); }
+.t-degrade.c .numero { color: var(--saude); }
+.t-degrade.c .fonte { color: rgba(255,255,255,.7); }
+.t-degrade.a .foto { background: var(--claro); }
+.t-degrade.e .faixa-texto { background: var(--musgo); }
+.t-degrade.c .marca-flor, .t-degrade.a .marca-folha, .t-degrade.b .marca-borboleta { color: var(--saude); }
+.d.t-degrade { background: radial-gradient(120% 95% at 88% 8%, #76866F 0%, #4E5B49 42%, #343B30 100%); }
+
+/* ---- Capa estilo "post social": perfil dela em cima, texto corrido, foto embaixo ---- */
+.capa-social { background: var(--branco); color: #1b1f19; }
+.capa-social .perfil { position: absolute; left: 96px; top: 120px; display: flex; align-items: center; gap: 32px; }
+.capa-social .avatar { width: 150px; height: 150px; border-radius: 50%; overflow: hidden; border: 2px solid #e4e4e0; }
+.capa-social .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 10%; }
+.capa-social .nome { font-size: 46px; font-weight: 500; line-height: 1.15; letter-spacing: -0.01em; }
+.capa-social .arroba { font-size: 28px; color: #7a7f78; margin-top: 4px; }
+.capa-social .mais { position: absolute; right: 96px; top: 180px; display: flex; gap: 10px; }
+.capa-social .mais i { width: 12px; height: 12px; border-radius: 50%; background: #c9cbc6; }
+.capa-social .corpo { position: absolute; left: 96px; right: 96px; top: 330px; bottom: 96px; display: flex; flex-direction: column; gap: 34px; }
+.capa-social .texto { font-size: 42px; line-height: 1.32; font-weight: 400; white-space: pre-line; }
+.capa-social .arrasta { font-size: 42px; font-weight: 400; }
+.capa-social .arrasta b { font-weight: 600; color: var(--musgo); margin-left: 10px; }
+.capa-social .foto { flex: 1; min-height: 360px; border-radius: 30px; overflow: hidden; background: var(--claro); margin-top: 6px; }
+.capa-social .foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+
+/* ---- Capa estilo "foto inteira": texto centralizado fino, logo branca embaixo ---- */
+.capa-foto { background: var(--musgo); color: var(--branco); }
+.capa-foto .foto { position: absolute; inset: 0; }
+.capa-foto .foto img { width: 100%; height: 100%; object-fit: cover; }
+.capa-foto .veu { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,24,18,.25) 0%, rgba(20,24,18,.42) 45%, rgba(20,24,18,.72) 100%); }
+.capa-foto .titulo { position: absolute; left: 60px; right: 60px; top: 50%; transform: translateY(-56%); text-align: center; text-shadow: 0 2px 24px rgba(0,0,0,.25); }
+.capa-foto .grande { display: block; font-weight: 200; font-size: 128px; line-height: 1.02; letter-spacing: 0.01em; text-transform: uppercase; }
+.capa-foto .pequena { display: block; font-weight: 300; font-size: 54px; line-height: 1.2; margin: 10px 0 8px; }
+.capa-foto .deslize-c { position: absolute; left: 0; right: 0; bottom: 330px; text-align: center; font-size: 20px; letter-spacing: 0.34em; text-transform: uppercase; color: rgba(255,255,255,.85); }
+.capa-foto .logo { position: absolute; left: 0; right: 0; bottom: 110px; display: flex; justify-content: center; }
+.capa-foto .logo img { height: 92px; }
+.capa-foto .credito { position: absolute; right: 36px; bottom: 36px; font-size: 16px; letter-spacing: 0.08em; color: rgba(255,255,255,.6); }
+.e .credito { position: absolute; right: 24px; top: 24px; font-size: 16px; letter-spacing: 0.08em; color: rgba(255,255,255,.75); text-shadow: 0 1px 6px rgba(0,0,0,.5); }
