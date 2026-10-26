@@ -464,3 +464,24 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   não promete prazo; conferir o processo na semana de 13/11.
 - Holding: ITCD de Minas em 5% hoje, com projeto de alíquota progressiva na Assembleia.
   Conferir na semana de 11/12.
+
+**26/10/2026**
+
+- **Quatro modelos de capa**, pedido do Victor: o feed estava ficando com todas as
+  capas iguais. Capa 1 foto (a de sempre), 2 meia-folha, 3 tipográfica sem foto e
+  4 clara, com fundo creme. Revezam, sem repetir o mesmo modelo em dois posts
+  seguidos. Estão em `formato-01.md` e demonstrados em `carrosseis/demo-capas.json`.
+- **Selo de área**, pedido da Dra. Elisa: marcador pequeno no alto à direita da capa
+  dizendo de que área é o conteúdo. Cor por área: dourado no agronegócio, areia no
+  previdenciário, bordô no empresarial, marrom no trabalhista. Campo `selo`.
+  Quando o selo entra, a etiqueta de assunto da capa 1 sai.
+- A capa de cada post dos 24 ficou escrita no plano, no PDF e no Excel, pra não
+  depender de lembrar na hora de revezar.
+- **Aba nova no Excel, Roteiros e legendas:** o roteiro e a legenda de cada post,
+  uma linha por tela e por parágrafo. O Excel só mostra mil e poucos caracteres por
+  célula, por isso não vai tudo num lugar só. Mesma fonte do PDF.
+- Victor mandou pra Dra. Elisa só o Excel, que é quem posta é a gente. O PDF
+  continua existindo pra quando for preciso apresentar.
+- **Estático de 30/10 refeito** no modelo de capa 2, com o selo. Foto nova, de quem
+  está na enxada, que é o requisito legal da peça: propriedade trabalhada pela
+  família. A anterior era a casa de roça, que não cabia na faixa horizontal.

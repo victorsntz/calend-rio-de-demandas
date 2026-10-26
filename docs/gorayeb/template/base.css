@@ -795,7 +795,7 @@
    CAPA 2 — MEIA-FOLHA: foto na metade de cima, chapa sólida embaixo.
    A divisão é reta, sem degradê, pra não repetir a capa de foto.
    ====================================================================== */
-.capa-faixa { padding: 0; display: grid; grid-template-rows: 620px 1fr; }
+.capa-faixa { padding: 0; display: grid; grid-template-rows: var(--alt-foto, 620px) 1fr; }
 .capa-faixa .meia-img { position: relative; overflow: hidden; }
 .capa-faixa .meia-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .capa-faixa .meia-img .arroba {
@@ -815,6 +815,9 @@
 }
 .capa-faixa .titulo-capa { font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 86px; line-height: 1.04; letter-spacing: -.02em; }
 .capa-faixa .titulo-capa.menor { font-size: 70px; }
+.capa-faixa .titulo-capa strong { color: var(--dourado); font-weight: 700; }
+.capa-faixa .pe-capa { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; }
+.capa-faixa .pe-capa .fonte { text-align: right; flex: none; max-width: 46%; }
 .capa-faixa .sub-capa {
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 300;
   font-size: 36px; line-height: 1.34; margin-top: 24px; max-width: 17em; opacity: .92;

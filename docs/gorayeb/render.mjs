@@ -140,6 +140,7 @@ function monta(s, i = 0, total = 0) {
   if (s.tipo === "corpo-foto") cls.push("corpo-foto", "bg-verde");
 
   let corpo = SELO(s);
+  const estilo = s.alturaFoto ? ` style="--alt-foto:${Number(s.alturaFoto)}px"` : "";
   switch (s.tipo) {
     /* capa: foto + título grande + gancho + pílula de arraste + lockup */
     case "capa":
@@ -290,7 +291,7 @@ function monta(s, i = 0, total = 0) {
           ${s.kicker ? `<p class="kicker">${esc(s.kicker)}</p>` : ""}
           <h1 class="titulo-capa ${s.escala || ""}">${titulo(s.titulo)}</h1>
           ${s.sub ? `<p class="sub-capa">${titulo(s.sub)}</p>` : ""}
-          <div class="pe-capa">${LOGO(74)}</div>
+          <div class="pe-capa">${LOGO(74)}${s.fonte ? `<p class="fonte">${esc(s.fonte)}</p>` : ""}</div>
         </div>`;
       break;
 
@@ -436,8 +437,8 @@ function monta(s, i = 0, total = 0) {
     default:
       throw new Error(`tipo de slide desconhecido: ${s.tipo}`);
   }
-  if (s.tipo === "corpo-foto") {
-    return `<div class="${cls.join(" ")}">${PASSO(i, total)}${corpo}</div>`;
+  if (s.tipo === "corpo-foto" || s.tipo === "capa-faixa") {
+    return `<div class="${cls.join(" ")}"${estilo}>${PASSO(i, total)}${corpo}</div>`;
   }
   if (s.meiaFoto) {
     return `<div class="${cls.join(" ")}">${PASSO(i, total)}
