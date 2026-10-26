@@ -164,8 +164,7 @@ def fontes(p):
 
 def peca(p):
     quem = f'<div class="quem">{e(p["quem"])}</div>' if p.get("quem") else ""
-    if p.get("arte"):
-        quem += f'<div class="quem arte-linha">{e(p["arte"])}</div>' 
+
     corpo = ""
     if p.get("status"):
         corpo += f'<div class="status">{e(p["status"])}</div>'
@@ -208,7 +207,10 @@ def peca(p):
         corpo += '<h3 class="rot">Legenda</h3><div class="leg">' + "".join(f"<p>{e(x)}</p>" for x in p["legenda"]) + nota + "</div>"
     if p.get("nota"):
         corpo += f'<div class="nota-f">{e(p["nota"])}</div>'
-    area = f'<p class="area">{e(p["pilar"])}</p>' if p.get("pilar") else ""
+    # área e, junto dela, o modelo de capa e o selo: uma linha só, pra não
+    # empurrar as fontes da peça pra uma folha sozinha
+    rot = " · ".join(x for x in (p.get("pilar"), p.get("arte")) if x)
+    area = f'<p class="area">{e(rot)}</p>' if rot else ""
     return f"""<section class="pag peca{' com-tabela' if 'tabela' in p else ''}">
   <div class="topo"><span class="data">{e(p['data'])}</span><span class="fmt">{e(p['formato'])}</span></div>
   {area}<h2>{e(p['titulo'])}</h2>{quem}
