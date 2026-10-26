@@ -339,7 +339,7 @@
               radial-gradient(150% 108% at 96% 104%, rgba(0,0,0,.26) 0%, rgba(0,0,0,0) 66%);
 }
 .bg-creme.vinheta::after, .bg-areia.vinheta::after,
-.bg-offwhite.vinheta::after, .bg-branco.vinheta::after {
+.bg-offwhite.vinheta::after, .bg-branco.vinheta::after, .capa-clara.vinheta::after {
   background: radial-gradient(160% 112% at 96% 106%, rgba(27,35,22,.07) 0%, rgba(27,35,22,0) 70%);
 }
 
@@ -767,3 +767,103 @@
 .slide.vaga:not(.stories) .caixa-dado p { font-size: 28px; }
 .slide.vaga:not(.stories) .arroba { margin-bottom: 36px; }
 .slide.vaga:not(.stories) .rodape { padding-top: 64px; }
+
+/* ======================================================================
+   SELO DE ÁREA — pedido da Dra. Elisa: um marcador pequeno no canto da
+   capa dizendo de que área é aquele conteúdo. Vale nos quatro modelos
+   de capa e no estático. Sempre no alto, à direita, na linha do arroba.
+   ====================================================================== */
+.selo {
+  position: absolute; z-index: 6;
+  top: var(--margem); right: var(--margem);
+  display: inline-flex; align-items: center; gap: 13px;
+  border-radius: 999px; padding: 11px 26px;
+  background: var(--dourado); color: var(--verde);
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: 20px; letter-spacing: .13em;
+  text-transform: uppercase; line-height: 1;
+}
+.selo .ponto { width: 11px; height: 11px; border-radius: 999px; background: currentColor; opacity: .55; flex: none; }
+.selo.areia    { background: var(--areia);  color: var(--verde); }
+.selo.bordo    { background: var(--bordo);  color: var(--creme); }
+.selo.marrom   { background: var(--marrom); color: var(--creme); }
+.selo.verde    { background: var(--verde);  color: var(--areia); }
+/* na capa clara o selo encosta no creme do fundo, então ganha um respiro */
+.bg-creme .selo, .bg-areia .selo, .bg-offwhite .selo, .bg-branco .selo { box-shadow: 0 0 0 7px var(--creme); }
+
+/* ======================================================================
+   CAPA 2 — MEIA-FOLHA: foto na metade de cima, chapa sólida embaixo.
+   A divisão é reta, sem degradê, pra não repetir a capa de foto.
+   ====================================================================== */
+.capa-faixa { padding: 0; display: grid; grid-template-rows: 620px 1fr; }
+.capa-faixa .meia-img { position: relative; overflow: hidden; }
+.capa-faixa .meia-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.capa-faixa .meia-img .arroba {
+  position: absolute; top: var(--margem); left: var(--margem); margin: 0;
+  color: var(--creme); opacity: .9; text-shadow: 0 2px 18px rgba(16,22,13,.55);
+}
+/* fio dourado marcando a emenda entre a foto e a chapa */
+.capa-faixa .meia-img::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: var(--dourado); }
+.capa-faixa .chapa-capa {
+  padding: 62px var(--margem) var(--margem);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.capa-faixa .kicker {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 700;
+  font-size: 22px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--dourado); margin-bottom: 26px;
+}
+.capa-faixa .titulo-capa { font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 86px; line-height: 1.04; letter-spacing: -.02em; }
+.capa-faixa .titulo-capa.menor { font-size: 70px; }
+.capa-faixa .sub-capa {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 300;
+  font-size: 36px; line-height: 1.34; margin-top: 24px; max-width: 17em; opacity: .92;
+}
+.capa-faixa .pe-capa { margin-top: auto; padding-top: 46px; }
+
+/* ======================================================================
+   CAPA 3 — TIPOGRÁFICA: sem foto. O título é a arte. Entra quando a
+   pauta é uma frase forte e não tem imagem que ajude.
+   ====================================================================== */
+.capa-tipo { display: flex; flex-direction: column; }
+.capa-tipo .meio-tipo { margin-top: auto; margin-bottom: auto; }
+.capa-tipo .fio-capa { width: 210px; height: 6px; background: var(--dourado); border: 0; margin-bottom: 34px; }
+.capa-tipo .kicker {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 700;
+  font-size: 23px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--dourado); margin-bottom: 26px;
+}
+.capa-tipo .titulo-capa {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 118px; line-height: 1.0; letter-spacing: -.028em;
+}
+.capa-tipo .titulo-capa.menor { font-size: 96px; }
+.capa-tipo .titulo-capa strong { color: var(--dourado); font-weight: 700; }
+.capa-tipo .sub-capa {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 300;
+  font-size: 38px; line-height: 1.32; margin-top: 40px; max-width: 16em; opacity: .9;
+}
+.capa-tipo .pe-capa { margin-top: auto; }
+
+/* ======================================================================
+   CAPA 4 — CLARA: fundo creme e a foto num retângulo, com margem.
+   É a que clareia o feed, que hoje é quase todo verde escuro.
+   ====================================================================== */
+.capa-clara { background: var(--creme); color: var(--verde); display: flex; flex-direction: column; }
+.capa-clara .moldura { margin-left: calc(var(--margem) * -1); margin-right: calc(var(--margem) * -1); }
+.capa-clara .moldura { height: 560px; overflow: hidden; position: relative; flex: none; margin-bottom: 54px; }
+.capa-clara .moldura img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.capa-clara .moldura::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: var(--dourado); }
+.capa-clara .arroba { color: var(--verde); opacity: .6; }
+.capa-clara .kicker {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 700;
+  font-size: 22px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--dourado-caixa); margin-bottom: 24px;
+}
+.capa-clara .titulo-capa { font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 84px; line-height: 1.05; letter-spacing: -.02em; }
+.capa-clara .titulo-capa.menor { font-size: 68px; }
+.capa-clara .sub-capa {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 300;
+  font-size: 36px; line-height: 1.34; margin-top: 24px; max-width: 17em; opacity: .8;
+}
+.capa-clara .pe-capa { margin-top: auto; }

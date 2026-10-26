@@ -210,6 +210,25 @@ def _fmt(p):
 def _area(p):
     return p.get("pilar", "").split(" · ")[0]
 
+
+# ---------------------------------------------------------------- capa e selo
+# Pedido do Victor em 26/10: quatro modelos de capa se revezando, pro feed não
+# ficar todo igual. Pedido da Dra. Elisa: um selo de área no canto da capa.
+# A sugestão é esta; na execução o Victor troca se a foto pedir outra coisa.
+CAPAS = ["1 · foto", "2 · meia-folha", "3 · tipográfica", "4 · clara"]
+SELOS = {"Agronegócio": "Agronegócio", "Empresarial": "Área Empresarial",
+         "Previdenciário": "Área Previdenciária"}
+
+_giro = 0
+for _p in PECAS:
+    _selo = ("Área Trabalhista" if "Trabalhista" in _p.get("pilar", "")
+             else SELOS.get(_area(_p), "Institucional"))
+    if _fmt(_p) in ("Carrossel", "Estático"):
+        _p["arte"] = f"Capa {CAPAS[_giro % len(CAPAS)]} · selo {_selo}"
+        _giro += 1
+    else:
+        _p["arte"] = f"Selo {_selo}, se entrar capa"
+
 GRADE = [(p["data"].split(" · ")[0], p["data"].split(" · ")[1][:3], _fmt(p), p["titulo"],
           "lanc" if p is VIDEO_AREA else "", _area(p)) for p in PECAS]
 

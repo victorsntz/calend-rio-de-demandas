@@ -144,6 +144,8 @@ def roteiros(ws, caminho_conteudo):
                 l += 1
 
         bloco("Objetivo", [("", p["objetivo"])])
+        if p.get("arte"):
+            bloco("Arte", [("Capa e selo", p["arte"])])
         if "tabela" in p:
             cab, linhas = p["tabela"]
             bloco(p.get("rotulo_tabela", "Roteiro"),

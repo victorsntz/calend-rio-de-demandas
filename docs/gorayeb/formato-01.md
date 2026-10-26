@@ -35,6 +35,13 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 
 ## A capa
 
+São **quatro modelos**, e eles se revezam. Pedido do Victor em 26/10: o feed
+estava ficando com todas as capas parecidas. A regra é simples, **não repetir o
+mesmo modelo em dois posts seguidos**. Dá pra ver os quatro lado a lado em
+`carrosseis/demo-capas.json`.
+
+### Capa 1 · foto (`capa-foto`)
+
 Grid de **quatro faixas horizontais** de 337 px:
 
 1. e 2. Foto limpa. A paisagem respira.
@@ -42,7 +49,45 @@ Grid de **quatro faixas horizontais** de 337 px:
 4. Logo, dentro da sombra, em tamanho generoso.
 
 A sombra sobe até a metade da peça, então as duas faixas de baixo têm base
-escura e o texto nunca briga com o fundo.
+escura e o texto nunca briga com o fundo. É a capa de sempre, boa quando a foto
+é bonita de ponta a ponta.
+
+### Capa 2 · meia-folha (`capa-faixa`)
+
+Foto nos 620 px de cima, chapa verde sólida embaixo, fio dourado na emenda. A
+divisão é reta, sem degradê. Campos: `kicker` (a linha dourada em caixa alta),
+`titulo`, `sub`. Serve quando a foto tem um assunto no meio que a sombra da capa
+1 comeria.
+
+### Capa 3 · tipográfica (`capa-tipo`)
+
+Sem foto. O título é a arte, em 118 px, com uma palavra em dourado pelo
+`*asterisco*`. Fio dourado curto em cima. Serve quando a pauta é uma pergunta ou
+uma frase forte e nenhuma imagem ajuda. Vai bem com `textura: "listras"`.
+
+### Capa 4 · clara (`capa-clara`)
+
+Fundo creme, foto num retângulo sangrando nas laterais, título em verde. A logo
+entra na versão escura sozinha. É a que **clareia o feed**, que hoje é quase todo
+verde. Usar uma a cada quatro ou cinco posts, pra ela continuar fazendo efeito.
+
+## O selo de área
+
+Pedido da Dra. Elisa em 26/10: um marcador pequeno dizendo de que área é aquele
+conteúdo. Fica **no alto, à direita**, na mesma linha do arroba, nas quatro capas
+e no estático. Campo `selo`.
+
+| Área | Texto | Cor |
+| --- | --- | --- |
+| Agronegócio | `Agronegócio` | dourado, texto verde |
+| Previdenciário | `Área Previdenciária` | areia, texto verde |
+| Empresarial | `Área Empresarial` | bordô, texto creme |
+| Trabalhista rural | `Área Trabalhista` | marrom, texto creme |
+| Institucional | `Institucional` | verde, texto areia |
+
+A cor sai sozinha do texto do selo. Pra forçar outra, `seloCor`. **O selo só entra
+na capa**, nunca no miolo, e quando ele aparece a etiqueta de assunto da capa 1 é
+opcional: as duas juntas pesam.
 
 ## O que entra no miolo
 

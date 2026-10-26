@@ -140,6 +140,7 @@ table.rot-t td:last-child{color:var(--tinta);font-family:Arvo;font-size:8.6pt}
 .com-tabela table.rot-t td:last-child{font-size:8.1pt}
 .com-tabela .leg p{font-size:8.1pt;line-height:1.4;margin-bottom:1.3mm}
 .com-tabela .obj{margin-bottom:3mm}
+.peca .arte-linha{color:var(--dourado-esc);font-size:8pt}
 .peca .area{font-family:Hel;font-weight:700;font-size:6.8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--dourado-esc);margin:0 0 1.2mm}
 .fontes.longas ul{columns:2;column-gap:6mm}
 .fontes.longas li{font-size:6.9pt;line-height:1.32;break-inside:avoid;margin-bottom:.7mm}
@@ -163,6 +164,8 @@ def fontes(p):
 
 def peca(p):
     quem = f'<div class="quem">{e(p["quem"])}</div>' if p.get("quem") else ""
+    if p.get("arte"):
+        quem += f'<div class="quem arte-linha">{e(p["arte"])}</div>' 
     corpo = ""
     if p.get("status"):
         corpo += f'<div class="status">{e(p["status"])}</div>'

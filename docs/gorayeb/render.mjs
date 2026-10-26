@@ -55,6 +55,19 @@ const titulo = (s) => rico(s, true);
 
 const ARROBA = '<div class="arroba">@gorayebadvocacia</div>';
 
+/* selo de área, no alto à direita da capa: diz de que área é o conteúdo.
+   A cor sai da área, pra dar pra reconhecer o assunto de longe no feed. */
+const COR_SELO = {
+  "agronegócio": "", "previdenciário": "areia", "empresarial": "bordo",
+  "trabalhista": "marrom", "institucional": "verde",
+};
+const SELO = (s) => {
+  if (!s.selo) return "";
+  const chave = String(s.selo).toLowerCase();
+  const cor = s.seloCor ?? Object.keys(COR_SELO).find((k) => chave.includes(k));
+  return `<div class="selo ${COR_SELO[cor] ?? cor ?? ""}"><span class="ponto"></span>${esc(s.selo)}</div>`;
+};
+
 /* etiqueta em pílula, o assunto do slide em duas palavras */
 const ETIQUETA = (t) =>
   t ? `<span class="etiqueta-pill">${esc(t)}</span>` : "";
@@ -79,8 +92,11 @@ const LOCKUP = (altura = 74, claro = true) =>
   `<img class="logo" style="height:${altura}px" alt="Gorayeb Advocacia"
      src="../assets/logo-horizontal-${claro ? "claro" : "escuro"}.png">`;
 
+/* estes montam a imagem dentro do corpo, então não levam foto de fundo */
+const FOTO_PROPRIA = new Set(["corpo-foto", "capa-faixa", "capa-clara"]);
+
 function foto(s) {
-  if (!s.foto) return "";
+  if (!s.foto || FOTO_PROPRIA.has(s.tipo)) return "";
   const img = `<img class="foto" src="${esc(s.foto)}" alt="" style="object-position:${esc(s.foco || "center")}">`;
   /* capa e perspectiva trazem o próprio véu, em dois gradientes */
   if (s.veu === "nenhum" || s.tipo === "capa-foto" || s.tipo === "perspectiva") return img;
@@ -92,10 +108,11 @@ function foto(s) {
 const CLAROS = new Set(["creme", "areia", "offwhite", "branco"]);
 
 function monta(s, i = 0, total = 0) {
-  const claro = !CLAROS.has(s.fundo) || !!s.foto;
+  /* a capa clara é creme por baixo, então a logo vai na versão escura */
+  const claro = s.tipo === "capa-clara" ? false : !CLAROS.has(s.fundo) || !!s.foto;
   const LOGO = (h) => LOCKUP(h, claro);
   const cls = ["slide", "vinheta"];
-  if (s.foto && !s.meiaFoto && s.tipo !== "corpo-foto") cls.push("bg-foto");
+  if (s.foto && !s.meiaFoto && !FOTO_PROPRIA.has(s.tipo)) cls.push("bg-foto");
   else if (s.fundo === "creme") cls.push("bg-creme");
   else if (s.fundo === "areia") cls.push("bg-areia");
   else if (s.fundo === "offwhite") cls.push("bg-offwhite");
@@ -117,13 +134,16 @@ function monta(s, i = 0, total = 0) {
   if (s.tipo === "vaga") cls.push("vaga");
   if (s.formato === "stories") cls.push("stories");
   if (s.tipo === "capa-foto" || s.tipo === "perspectiva") cls.push("capa-foto", "bg-foto");
+  if (s.tipo === "capa-faixa") cls.push("capa-faixa", "bg-verde");
+  if (s.tipo === "capa-tipo") cls.push("capa-tipo");
+  if (s.tipo === "capa-clara") cls.push("capa-clara");
   if (s.tipo === "corpo-foto") cls.push("corpo-foto", "bg-verde");
 
-  let corpo = "";
+  let corpo = SELO(s);
   switch (s.tipo) {
     /* capa: foto + título grande + gancho + pílula de arraste + lockup */
     case "capa":
-      corpo = `
+      corpo += `
         ${LOGO(70)}
         <div class="espaco-lg"></div>
         <h1 class="titulo ${s.escala || ""}">${titulo(s.titulo)}</h1>
@@ -135,7 +155,7 @@ function monta(s, i = 0, total = 0) {
 
     /* tese: a frase-chave entre dois fios dourados, com um parágrafo abaixo */
     case "tese":
-      corpo = `
+      corpo += `
         ${ARROBA}
         <div class="meio">
           <div class="entre-fios"><p class="tese ${s.centro ? "centro" : ""}">${titulo(s.tese)}</p></div>
@@ -146,7 +166,7 @@ function monta(s, i = 0, total = 0) {
 
     /* foto com um bloco de texto embaixo */
     case "foto-texto":
-      corpo = `
+      corpo += `
         ${ARROBA}
         <div class="empurra"></div>
         ${s.titulo ? `<h2 class="titulo menor">${titulo(s.titulo)}</h2><div class="espaco"></div>` : ""}
@@ -157,7 +177,7 @@ function monta(s, i = 0, total = 0) {
 
     /* citação em itálico dentro de caixa de borda fina, centrada no slide */
     case "citacao":
-      corpo = `
+      corpo += `
         ${ARROBA}
         <div class="meio"><div class="caixa-fina"><p class="citacao">${titulo(s.citacao)}</p></div></div>
         <div class="rodape"></div>`;
@@ -165,7 +185,7 @@ function monta(s, i = 0, total = 0) {
 
     /* lista curta: até 4 itens, um por linha */
     case "lista":
-      corpo = `
+      corpo += `
         ${ARROBA}
         <div class="empurra"></div>
         ${s.titulo ? `<h2 class="titulo menor">${titulo(s.titulo)}</h2><div class="espaco"></div>` : ""}
@@ -177,7 +197,7 @@ function monta(s, i = 0, total = 0) {
 
     /* dado: um número grande com a leitura embaixo */
     case "dado":
-      corpo = `
+      corpo += `
         ${ARROBA}
         <div class="empurra"></div>
         <p class="titulo maior dourado">${rico(s.numero)}</p>
@@ -193,7 +213,7 @@ function monta(s, i = 0, total = 0) {
     /* anúncio de vaga: mesmo conteúdo serve o feed (1080×1350) e o
        stories (1080×1920). No stories os requisitos saem. */
     case "vaga":
-      corpo = `
+      corpo += `
         ${ARROBA}
         ${s.etiqueta ? `${ETIQUETA(s.etiqueta)}<div class="espaco-sm"></div>` : ""}
         <div class="meio">
@@ -218,7 +238,7 @@ function monta(s, i = 0, total = 0) {
       break;
 
     case "estatico":
-      corpo = `
+      corpo += `
         ${ARROBA}
         ${s.etiqueta ? `${ETIQUETA(s.etiqueta)}` : ""}
         <div class="meio">
@@ -230,7 +250,7 @@ function monta(s, i = 0, total = 0) {
 
     /* fecho: síntese + parágrafos + CTA + lockup */
     case "fecho":
-      corpo = `
+      corpo += `
         ${ARROBA}
         ${s.etiqueta ? `${ETIQUETA(s.etiqueta)}<div class="espaco-sm"></div>` : ""}
         <div class="empurra"></div>
@@ -247,7 +267,7 @@ function monta(s, i = 0, total = 0) {
     /* capa de foto: foto sangrando, arroba no alto, etiqueta e título na
        terceira faixa, logo na quarta, dentro da sombra. */
     case "capa-foto":
-      corpo = `
+      corpo += `
         <div class="veu-capa"></div>
         <div class="faixa-vazia">${ARROBA}</div>
         <div class="faixa-titulo">
@@ -258,6 +278,48 @@ function monta(s, i = 0, total = 0) {
         <div class="faixa-marca">${LOGO(78)}</div>`;
       break;
 
+    /* capa 2, meia-folha: foto na metade de cima, chapa sólida embaixo.
+       A emenda é reta, com um fio dourado, em vez do degradê da capa 1. */
+    case "capa-faixa":
+      corpo += `
+        <div class="meia-img">
+          <img src="${esc(s.foto || "")}" alt="" style="object-position:${esc(s.foco || "center")}">
+          ${ARROBA}
+        </div>
+        <div class="chapa-capa">
+          ${s.kicker ? `<p class="kicker">${esc(s.kicker)}</p>` : ""}
+          <h1 class="titulo-capa ${s.escala || ""}">${titulo(s.titulo)}</h1>
+          ${s.sub ? `<p class="sub-capa">${titulo(s.sub)}</p>` : ""}
+          <div class="pe-capa">${LOGO(74)}</div>
+        </div>`;
+      break;
+
+    /* capa 3, tipográfica: sem foto, o título é a arte. *palavra* sai em
+       dourado. Entra quando a frase é forte e nenhuma imagem ajuda. */
+    case "capa-tipo":
+      corpo += `
+        ${ARROBA}
+        <div class="meio-tipo">
+          <hr class="fio-capa">
+          ${s.kicker ? `<p class="kicker">${esc(s.kicker)}</p>` : ""}
+          <h1 class="titulo-capa ${s.escala || ""}">${titulo(s.titulo)}</h1>
+          ${s.sub ? `<p class="sub-capa">${titulo(s.sub)}</p>` : ""}
+        </div>
+        <div class="pe-capa">${LOGO(74)}</div>`;
+      break;
+
+    /* capa 4, clara: fundo creme e a foto num retângulo com margem. É a
+       que clareia o feed, hoje quase todo verde escuro. */
+    case "capa-clara":
+      corpo += `
+        ${ARROBA}
+        <div class="moldura"><img src="${esc(s.foto || "")}" alt="" style="object-position:${esc(s.foco || "center")}"></div>
+        ${s.kicker ? `<p class="kicker">${esc(s.kicker)}</p>` : ""}
+        <h1 class="titulo-capa ${s.escala || ""}">${titulo(s.titulo)}</h1>
+        ${s.sub ? `<p class="sub-capa">${titulo(s.sub)}</p>` : ""}
+        <div class="pe-capa">${LOGO(74)}</div>`;
+      break;
+
     /* corpo de foto: foto em cima, chapa embaixo com a marca d'água da casa */
     case "corpo-foto": {
       const [l1, l2] = String(s.titulo || "").split("\n");
@@ -265,7 +327,7 @@ function monta(s, i = 0, total = 0) {
          o tamanho da frase, em vez de quebrar */
       const n = `${l1 || ""} ${l2 || ""}`.trim().length;
       const cpoTitulo = s.corpoTitulo ?? (n <= 22 ? 58 : n <= 28 ? 50 : 44);
-      corpo = `
+      corpo += `
         <div class="faixa-img"><img src="${esc(s.foto || "")}" alt="" style="object-position:${esc(s.foco || "center")}"></div>
         <div class="chapa">
           <h2 class="titulo-corpo" style="font-size:${cpoTitulo}px">
@@ -304,7 +366,7 @@ function monta(s, i = 0, total = 0) {
                   </div>`;
         })
         .join("");
-      corpo = `
+      corpo += `
         <div class="veu-capa"></div>
         ${LOGO(60)}
         <svg class="persp-fios" viewBox="0 0 100 100" preserveAspectRatio="none">${fios}</svg>
@@ -320,7 +382,7 @@ function monta(s, i = 0, total = 0) {
     /* cifra: o número é o slide. Etiqueta, cifra grande com a marca de
        destaque atrás, a leitura dela e um dado de apoio na caixa. */
     case "cifra":
-      corpo = `
+      corpo += `
         ${ARROBA}
         ${s.mapa ? mapinha(s.mapa) : ""}
         ${s.etiqueta ? `<div class="espaco-sm"></div>${ETIQUETA(s.etiqueta)}` : ""}
@@ -336,7 +398,7 @@ function monta(s, i = 0, total = 0) {
 
     /* itens com ícone: cada linha é uma pílula com o símbolo do assunto */
     case "itens":
-      corpo = `
+      corpo += `
         ${ARROBA}
         ${s.etiqueta ? `${ETIQUETA(s.etiqueta)}<div class="espaco-sm"></div>` : ""}
         <h2 class="titulo menor">${titulo(s.titulo)}</h2>
@@ -363,7 +425,7 @@ function monta(s, i = 0, total = 0) {
     case "figura": {
       const fab = FIGURAS[s.figura];
       if (!fab) throw new Error(`figura desconhecida: ${s.figura}`);
-      corpo = `
+      corpo += `
         ${ARROBA}
         ${s.titulo ? `<div class="espaco"></div><h2 class="titulo menor">${titulo(s.titulo)}</h2><div class="espaco"></div>` : ""}
         <div class="meio">${fab(s)}</div>
