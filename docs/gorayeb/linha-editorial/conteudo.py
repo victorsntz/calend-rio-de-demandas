@@ -123,8 +123,8 @@ PATRIMONIO = dict(data="30/10 · sexta", formato="Estático", pilar="Agronegóci
  status="Pronto e aprovado. A fonte da exceção foi corrigida: é o art. 833, §1º do CPC, e não a Súmula 349 do STJ, que trata de FGTS.",
  titulo="Produtor pessoa física: a proteção do patrimônio",
  objetivo="Explicar a proteção da pequena propriedade rural contra penhora e a exceção que pega muita gente.",
- frase=("A pequena propriedade rural é impenhorável.","Menos pra quem financiou ela."),
- apoio=_pat["slides"][0]["apoio"],
+ frase=tuple(_pat["slides"][0]["titulo"].replace("*", "").split("\n")[:2]),
+ apoio=_pat["slides"][0].get("sub") or _pat["slides"][0].get("apoio", ""),
  legenda=[l for l in _pat["legenda_instagram"].split("\n\n") if l.strip() and not l.startswith("Fontes")],
  fontes=["cf_5_xxvi","stf_961","cpc_833"],
 )
