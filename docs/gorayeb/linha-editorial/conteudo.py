@@ -22,7 +22,7 @@ def _carrega(caminho, nome):
     spec.loader.exec_module(mod)
     return mod
 
-HOJE = datetime.date(2026, 10, 23)
+HOJE = datetime.date(2026, 10, 26)
 SLUG = "linha-editorial"
 ARQUIVO = "Linha_Editorial_Gorayeb"
 TITULO_DOC = "Linha editorial · Gorayeb Advocacia"

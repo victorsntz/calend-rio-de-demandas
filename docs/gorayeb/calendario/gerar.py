@@ -99,6 +99,87 @@ def pinta_status(celula, status):
         celula.fill = PatternFill("solid", fgColor="F2D9C4")
 
 
+def roteiros(ws, caminho_conteudo):
+    """Uma aba com o roteiro e a legenda de cada post, linha a linha.
+
+    O Excel mostra no máximo mil e poucos caracteres por célula, então nada de
+    jogar a legenda inteira num lugar só: cada tela, cada fala e cada parágrafo
+    da legenda ocupa a sua linha. Pra copiar a legenda, seleciona as linhas dela.
+    """
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location("conteudo_linha", caminho_conteudo)
+    M = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(M)
+
+    estilo_cabeca(ws, ["Data", "Post", "Parte", "Detalhe", "Texto"])
+    ws.freeze_panes = "C2"
+    l = 2
+    faixa = PatternFill("solid", fgColor=AREIA)
+    sub = PatternFill("solid", fgColor=CREME)
+
+    for p in M.PECAS:
+        data = p["data"].split(" · ")[0]
+        # faixa de abertura do post: data, título, formato e situação
+        ws.cell(l, 1, data)
+        ws.cell(l, 2, p["titulo"])
+        ws.cell(l, 3, p["formato"])
+        ws.cell(l, 4, p.get("pilar", ""))
+        ws.cell(l, 5, p.get("status") or p.get("quem") or "")
+        for j in range(1, 6):
+            c = ws.cell(l, j)
+            c.fill = faixa
+            c.font = Font(bold=True, size=11)
+        l += 1
+
+        def bloco(rotulo, linhas):
+            nonlocal l
+            for i, (det, txt) in enumerate(linhas):
+                if not txt:
+                    continue
+                ws.cell(l, 3, rotulo if i == 0 else "")
+                ws.cell(l, 4, det)
+                ws.cell(l, 5, txt)
+                ws.cell(l, 3).fill = sub
+                l += 1
+
+        bloco("Objetivo", [("", p["objetivo"])])
+        if "tabela" in p:
+            cab, linhas = p["tabela"]
+            bloco(p.get("rotulo_tabela", "Roteiro"),
+                  [(x[0], " · ".join(f"{cab[i]}: {x[i]}" for i in range(1, len(cab)) if x[i])) for x in linhas])
+        if "tabela_b" in p:
+            rot, intro, cab, linhas = p["tabela_b"]
+            bloco(rot, [("", intro)] +
+                  [(x[0], " · ".join(f"{cab[i]}: {x[i]}" for i in range(1, len(cab)) if x[i])) for x in linhas])
+        if "telas" in p:
+            bloco("Tela a tela", [(f"{i:02d} · {rot}", f"{tit} {txt}") for i, (rot, tit, txt) in enumerate(p["telas"], 1)])
+        if "narracao" in p:
+            bloco(p.get("rotulo_fala", "Narração"), [(f"{i:02d}", x) for i, x in enumerate(p["narracao"], 1)])
+        if "tela" in p:
+            bloco("Na tela", [(f"{i:02d}", x) for i, x in enumerate(p["tela"], 1)])
+        if "frase" in p:
+            a, b = p["frase"]
+            bloco("A arte", [("Frase", f"{a} {b}"), ("Apoio", p.get("apoio", ""))])
+        if "legenda" in p:
+            bloco("Legenda", [(f"{i:02d}", x) for i, x in enumerate(p["legenda"], 1)])
+            if p.get("legenda_nota"):
+                bloco("", [("Observação", p["legenda_nota"])])
+        if p.get("nota"):
+            bloco("", [("Observação", p["nota"])])
+        bloco("Fontes", [(f"{i:02d}", M.F[k][0] + (f" · {M.F[k][1]}" if M.F[k][1] else ""))
+                         for i, k in enumerate(p.get("fontes", []), 1)])
+        if p.get("fontes_nota"):
+            bloco("", [("Fonte", p["fontes_nota"])])
+        l += 1  # uma linha em branco entre um post e o outro
+
+    larguras(ws, {"A": 12, "B": 40, "C": 18, "D": 22, "E": 110})
+    for r in ws.iter_rows(min_row=2, max_row=l):
+        for c in r:
+            c.alignment = Alignment(vertical="top", wrap_text=(c.column == 5))
+    return l
+
+
 def monta(destino: Path):
     plano = json.loads((AQUI / "plano.json").read_text(encoding="utf8"))
     wb_orig, itens = le_original()
@@ -202,7 +283,13 @@ def monta(destino: Path):
         for c in r:
             c.alignment = Alignment(vertical="top", wrap_text=True)
 
-    # ---- aba 4: o guia original, sem mexer -------------------------------
+    # ---- aba 4: roteiro e legenda de cada post ---------------------------
+    # mesma fonte do PDF, pra não existirem duas versões do mesmo texto
+    conteudo = AQUI.parent / "linha-editorial" / "conteudo.py"
+    if conteudo.exists():
+        roteiros(wb.create_sheet("Roteiros e legendas"), conteudo)
+
+    # ---- aba 5: o guia original, sem mexer -------------------------------
     ws4 = wb.create_sheet("Guia de Pilares")
     orig = wb_orig["Guia de Pilares e Lógica"]
     for i, r in enumerate(orig.iter_rows(values_only=True), start=1):
