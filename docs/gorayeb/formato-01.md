@@ -56,8 +56,11 @@ escura e o texto nunca briga com o fundo. É a capa de sempre, boa quando a foto
 
 Foto nos 620 px de cima, chapa verde sólida embaixo, fio dourado na emenda. A
 divisão é reta, sem degradê. Campos: `kicker` (a linha dourada em caixa alta),
-`titulo`, `sub`. Serve quando a foto tem um assunto no meio que a sombra da capa
-1 comeria.
+`titulo`, `sub`, `fonte` e `alturaFoto`, quando o texto pede mais chapa. Serve
+quando a foto tem um assunto no meio que a sombra da capa 1 comeria.
+
+**A linha de apoio vai em no máximo duas linhas.** Pedido do Victor em 26/10.
+Se não couber, encurtar a frase: o detalhe que sobrar vai para a legenda.
 
 ### Capa 3 · tipográfica (`capa-tipo`)
 
