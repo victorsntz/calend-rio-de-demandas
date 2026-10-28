@@ -234,5 +234,360 @@
     ],
     "credito": "Foto: Marcelo Casal Jr/Agência Brasil",
     "usar": true
+  },
+  {
+    "arquivo": "post/post-17.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (jun-maos-caneta)",
+    "drive_id": null,
+    "largura": 1080,
+    "altura": 520,
+    "orientacao": "paisagem",
+    "tags": [
+      "caneta",
+      "maos",
+      "injetavel",
+      "mesa"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-18.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (jun-pes-balanca)",
+    "drive_id": null,
+    "largura": 1080,
+    "altura": 560,
+    "orientacao": "paisagem",
+    "tags": [
+      "balanca",
+      "pes",
+      "peso"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-19.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (jun-prato)",
+    "drive_id": null,
+    "largura": 1080,
+    "altura": 560,
+    "orientacao": "paisagem",
+    "tags": [
+      "comida",
+      "prato",
+      "salada",
+      "alimentacao"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-20.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (jun-mulher-caneta)",
+    "drive_id": null,
+    "largura": 1080,
+    "altura": 560,
+    "orientacao": "paisagem",
+    "tags": [
+      "caneta",
+      "mulher",
+      "injetavel",
+      "casa"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-21.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (abr-barriga)",
+    "drive_id": null,
+    "largura": 532,
+    "altura": 1350,
+    "orientacao": "retrato",
+    "tags": [
+      "barriga",
+      "abdomen",
+      "peso",
+      "top"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-22.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (abr-cama)",
+    "drive_id": null,
+    "largura": 532,
+    "altura": 1350,
+    "orientacao": "retrato",
+    "tags": [
+      "cansaco",
+      "cama",
+      "sono",
+      "mulher",
+      "mao na testa"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-23.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (abr-bolo)",
+    "drive_id": null,
+    "largura": 532,
+    "altura": 1350,
+    "orientacao": "retrato",
+    "tags": [
+      "doce",
+      "compulsao",
+      "bolo",
+      "comida"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-24.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (abr-cabelo)",
+    "drive_id": null,
+    "largura": 532,
+    "altura": 1350,
+    "orientacao": "retrato",
+    "tags": [
+      "cabelo",
+      "queda",
+      "fios",
+      "mulher"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-25.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (abr-mesa)",
+    "drive_id": null,
+    "largura": 532,
+    "altura": 1350,
+    "orientacao": "retrato",
+    "tags": [
+      "cansaco",
+      "trabalho",
+      "mulher",
+      "irritacao",
+      "mesa"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-26.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (ago-silhueta-cama)",
+    "drive_id": null,
+    "largura": 540,
+    "altura": 1350,
+    "orientacao": "retrato",
+    "tags": [
+      "cama",
+      "silhueta",
+      "sono",
+      "menopausa",
+      "mulher"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-27.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (ago-consultorio)",
+    "drive_id": null,
+    "largura": 540,
+    "altura": 1350,
+    "orientacao": "retrato",
+    "tags": [
+      "consultorio",
+      "medico",
+      "prancheta",
+      "exame"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-28.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (jul25-sofa)",
+    "drive_id": null,
+    "largura": 1080,
+    "altura": 560,
+    "orientacao": "paisagem",
+    "tags": [
+      "cansaco",
+      "mulher",
+      "sofa",
+      "45",
+      "menopausa",
+      "mao no rosto"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-29.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (ago25-salada-garfo)",
+    "drive_id": null,
+    "largura": 540,
+    "altura": 852,
+    "orientacao": "retrato",
+    "tags": [
+      "salada",
+      "dieta",
+      "comida",
+      "garfo"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-30.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (ago25-barriga-estrias)",
+    "drive_id": null,
+    "largura": 540,
+    "altura": 852,
+    "orientacao": "retrato",
+    "tags": [
+      "barriga",
+      "estrias",
+      "flacidez",
+      "pele"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-31.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (ago25-jeans-folgado)",
+    "drive_id": null,
+    "largura": 540,
+    "altura": 852,
+    "orientacao": "retrato",
+    "tags": [
+      "jeans",
+      "emagreceu",
+      "roupa",
+      "peso"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-32.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (ago25-mulher-sentada)",
+    "drive_id": null,
+    "largura": 540,
+    "altura": 852,
+    "orientacao": "retrato",
+    "tags": [
+      "mulher",
+      "sentada",
+      "treino",
+      "cansaco"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-33.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (ago25-pes-balanca-2)",
+    "drive_id": null,
+    "largura": 540,
+    "altura": 852,
+    "orientacao": "retrato",
+    "tags": [
+      "balanca",
+      "pes",
+      "peso"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-34.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (ago25-mulher-chorando)",
+    "drive_id": null,
+    "largura": 540,
+    "altura": 852,
+    "orientacao": "retrato",
+    "tags": [
+      "mulher",
+      "tristeza",
+      "mao no rosto",
+      "ansiedade"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-35.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (ago25-balanca-em-pe)",
+    "drive_id": null,
+    "largura": 540,
+    "altura": 852,
+    "orientacao": "retrato",
+    "tags": [
+      "balanca",
+      "mulher",
+      "peso",
+      "obesidade"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-36.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (ago25-espelho)",
+    "drive_id": null,
+    "largura": 540,
+    "altura": 852,
+    "orientacao": "retrato",
+    "tags": [
+      "espelho",
+      "mulher",
+      "autoestima",
+      "peso"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-37.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (ago25-jeans-folgado-2)",
+    "drive_id": null,
+    "largura": 540,
+    "altura": 852,
+    "orientacao": "retrato",
+    "tags": [
+      "jeans",
+      "emagreceu",
+      "roupa",
+      "cintura"
+    ],
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-38.jpg",
+    "grupo": "post",
+    "origem": "banco de imagens já licenciado em post anterior (ago25-mulher-cama)",
+    "drive_id": null,
+    "largura": 540,
+    "altura": 852,
+    "orientacao": "retrato",
+    "tags": [
+      "mulher",
+      "cama",
+      "cansaco",
+      "peso"
+    ],
+    "usar": true
   }
 ]

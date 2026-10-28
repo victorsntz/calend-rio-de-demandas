@@ -55,6 +55,7 @@ function foto(ref, padraoRef) {
   return relative(saida, resolve(dirname(entrada), ref));
 }
 const creditoDe = (caminho) => { const m = manifest.find(x => caminho && caminho.endsWith(x.arquivo)); return m?.credito ?? ''; };
+const creditosDe = (lista) => [...new Set(lista.map(creditoDe).filter(Boolean))].join(' · ');
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const rel = p => relative(saida, resolve(aqui, p));
 const arroba = dados.arroba ?? '@larissamerola';
@@ -121,18 +122,26 @@ dados.slides.forEach((s, i) => {
     // TIPO 2, capa cheia de imagens: 3 fotos (2 em cima, 1 embaixo), rótulo em caixa e texto curto
     const fs = (s.fotos ?? ['post', 'post', 'post']).map(r => foto(r, 'post'));
     partes.push(`<section class="slide tipo2 capa-colagem"><div class="grade">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div><div class="veu"></div>${chip}
-  <div class="bloco"><div><span class="rotulo-caixa">${s.titulo}</span></div>${s.texto ? `<div class="texto">${s.texto}</div>` : ''}</div></section>`);
+  <div class="bloco"><div><span class="rotulo-caixa">${s.titulo}</span></div>${s.texto ? `<div class="texto">${s.texto}</div>` : ''}</div>${creditosDe(fs) ? `<div class="credito">${esc(creditosDe(fs))}</div>` : ''}</section>`);
   } else if (s.tipo === 'capa-frase') {
     // TIPO 2, capa de frase: foto inteira, frase grande em sans pesada com grifo, convite pra comentar
     const f = foto(s.foto, 'post');
     partes.push(`<section class="slide tipo2 capa-frase"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>${chip}
-  <div class="bloco"><h1>${s.titulo}</h1>${s.convite ? `<div class="convite">${s.convite}${SETA_BAIXO}</div>` : ''}</div></section>`);
+  <div class="bloco"><h1>${s.titulo}</h1>${s.convite ? `<div class="convite">${s.convite}${SETA_BAIXO}</div>` : ''}</div>${creditoDe(f) ? `<div class="credito">${esc(creditoDe(f))}</div>` : ''}</section>`);
   } else if (s.tipo === 'corpo-foto') {
-    // TIPO 2, miolo: foto inteira, rótulo em caixa, texto corrido e itens com seta
-    const f = foto(s.foto, 'post');
+    // TIPO 2, miolo: foto inteira (ou duas empilhadas, `fotos: [2]`), rótulo em caixa, texto corrido e itens com seta
+    const fs = s.fotos ? s.fotos.map(r => foto(r, 'post')) : [foto(s.foto, 'post')];
+    const cred = creditosDe(fs);
     const itens = (s.itens ?? []).map(it => `<li>${SETA}<span>${it.lead ? `<b>${it.lead}</b> ` : ''}${it.texto}</span></li>`).join('');
-    partes.push(`<section class="slide tipo2 corpo-foto"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>${chip}
-  <div class="bloco">${s.rotulo ? `<div><span class="rotulo-caixa">${s.rotulo}</span></div>` : ''}${s.texto ? `<div class="texto">${s.texto}</div>` : ''}${itens ? `<ul>${itens}</ul>` : ''}</div>${deslize}</section>`);
+    const fotoHtml = fs.length > 1 ? `<div class="foto">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div>` : `<div class="foto">${fs[0] ? `<img src="${esc(fs[0])}" alt="">` : ''}</div>`;
+    partes.push(`<section class="slide tipo2 corpo-foto${fs.length > 1 ? ' duas' : ''}">${fotoHtml}<div class="veu"></div>${chip}
+  <div class="bloco">${s.rotulo ? `<div><span class="rotulo-caixa">${s.rotulo}</span></div>` : ''}${s.texto ? `<div class="texto">${s.texto}</div>` : ''}${itens ? `<ul>${itens}</ul>` : ''}</div>${cred ? `<div class="credito">${esc(cred)}</div>` : ''}${deslize}</section>`);
+  } else if (s.tipo === 'mosaico') {
+    // TIPO 2, quatro fotos em grade e uma frase no meio
+    const fs = (s.fotos ?? ['post', 'post', 'post', 'post']).map(r => foto(r, 'post'));
+    const cred = creditosDe(fs);
+    partes.push(`<section class="slide tipo2 mosaico"><div class="grade">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div><div class="veu"></div>${chip}
+  <div class="bloco"><div><span class="rotulo-caixa">${s.titulo}</span></div>${s.texto ? `<div class="texto">${s.texto}</div>` : ''}</div>${cred ? `<div class="credito">${esc(cred)}</div>` : ''}${deslize}</section>`);
   } else if (s.tipo === 'fecho2') {
     // TIPO 2, fecho: a Dra. em foto inteira, três chamadas (comenta, salva/manda, link)
     const f = foto(s.foto, 'doutora');

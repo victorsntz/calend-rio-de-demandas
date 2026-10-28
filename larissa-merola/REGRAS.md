@@ -44,11 +44,16 @@ Feedback de 28/10: "muito professoral". O que muda no texto:
 - Técnica continua existindo, mas como prova de que ela sabe o que faz, não como aula.
 - Dentro do CFM e da Anvisa: sem promessa de resultado, sem preço de prescrição, sem antes/depois.
 
-## 4. Fotos
+## 4. Fotos: inflar de imagem
 
-Banco em `banco/` (Drive BANCO DE ARQUIVOS). Pinterest não abre daqui: o Victor salva as
-referências numa pasta do Drive (ex.: `BANCO DE ARQUIVOS/PINTEREST`) e eu puxo de lá. A Dra. só
-no último slide. Rotação sem repetir (`banco/uso.json`).
+Tipo 2 pede imagem em todo slide (colagem de 3, duas empilhadas, mosaico de 4, foto inteira).
+Banco em `banco/` (38 fotos): Drive BANCO DE ARQUIVOS + recortes limpos das fotos de banco que a
+agência já licenciou em posts anteriores (`origem` no manifest diz de onde veio). Pinterest: o
+site abre, mas o servidor de imagens dele (i.pinimg.com) bloqueia download daqui, e eu não disfarço
+o cliente pra passar. Wikimedia Commons responde 429 (limite de requisições). Solução: o Victor
+salva as referências do Pinterest e as fotos de famosas numa pasta do Drive
+(`BANCO DE ARQUIVOS/PINTEREST`) e eu puxo de lá com crédito. A Dra. só no último slide. Rotação
+sem repetir (`banco/uso.json`).
 
 ## 5. Entrega
 

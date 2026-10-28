@@ -205,3 +205,21 @@ p b, li b { font-weight: 600; }
 .fecho2 .cta svg { width: 36px; height: 36px; stroke: var(--saude); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 .fecho2 .logo { position: absolute; right: 72px; bottom: 96px; }
 .fecho2 .logo img { height: 72px; opacity: .95; }
+
+/* corpo-foto com duas fotos empilhadas (mais imagem): foto de cima livre, foto de baixo recebe o texto */
+.corpo-foto.duas .foto { display: grid; grid-template-rows: 46% 1fr; gap: 6px; background: var(--marrom); }
+.corpo-foto.duas .foto div { overflow: hidden; }
+.corpo-foto.duas .foto img { width: 100%; height: 100%; object-fit: cover; }
+.corpo-foto.duas .veu { background: linear-gradient(180deg, rgba(48,36,26,0) 0%, rgba(48,36,26,0) 46%, rgba(48,36,26,.22) 54%, rgba(43,33,24,.82) 70%, rgba(36,27,20,.96) 100%); }
+
+/* mosaico: quatro fotos em grade, frase no meio em caixa */
+.mosaico .grade { position: absolute; inset: 0; z-index: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 6px; background: var(--marrom); }
+.mosaico .grade div { overflow: hidden; }
+.mosaico .grade img { width: 100%; height: 100%; object-fit: cover; }
+.mosaico .veu { background: radial-gradient(90% 60% at 50% 55%, rgba(36,27,20,.78) 0%, rgba(36,27,20,.55) 45%, rgba(36,27,20,.15) 100%); }
+.mosaico .bloco { top: 50%; bottom: auto; transform: translateY(-50%); align-items: center; text-align: center; gap: 26px; }
+.mosaico .rotulo-caixa { font-size: 46px; }
+.mosaico .texto { font-size: 31px; line-height: 1.4; font-weight: 300; letter-spacing: 0.03em; max-width: 860px; text-shadow: 0 1px 12px rgba(0,0,0,.5); }
+.mosaico .texto b { font-weight: 600; }
+.mosaico .deslize { color: rgba(255,255,255,.8); bottom: 50px; }
+.tipo2 .credito { position: absolute; right: 28px; bottom: 22px; font-size: 14px; letter-spacing: 0.06em; color: rgba(255,255,255,.65); text-align: right; max-width: 700px; }
