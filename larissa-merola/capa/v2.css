@@ -178,8 +178,8 @@ p b, li b { font-weight: 600; }
 .capa-colagem .grade div:nth-child(3) { grid-column: 1 / -1; }
 .capa-colagem .grade img { width: 100%; height: 100%; object-fit: cover; }
 .capa-colagem .veu { background: linear-gradient(180deg, rgba(48,36,26,0) 0%, rgba(48,36,26,0) 42%, rgba(43,33,24,.80) 62%, rgba(36,27,20,.97) 100%); }
-.capa-colagem .bloco { bottom: 84px; gap: 30px; text-align: center; align-items: center; }
-.capa-colagem .rotulo-caixa { font-size: 44px; }
+.capa-colagem .bloco { bottom: 84px; gap: 30px; text-align: left; align-items: flex-start; }
+.capa-colagem .rotulo-caixa { font-size: 62px; line-height: 1.22; }
 .capa-colagem .texto { font-size: 30px; line-height: 1.4; font-weight: 300; letter-spacing: 0.03em; max-width: 880px; }
 .capa-colagem .texto b { font-weight: 600; }
 
@@ -216,10 +216,10 @@ p b, li b { font-weight: 600; }
 .mosaico .grade { position: absolute; inset: 0; z-index: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 6px; background: var(--marrom); }
 .mosaico .grade div { overflow: hidden; }
 .mosaico .grade img { width: 100%; height: 100%; object-fit: cover; }
-.mosaico .veu { background: radial-gradient(90% 60% at 50% 55%, rgba(36,27,20,.78) 0%, rgba(36,27,20,.55) 45%, rgba(36,27,20,.15) 100%); }
-.mosaico .bloco { top: 50%; bottom: auto; transform: translateY(-50%); align-items: center; text-align: center; gap: 26px; }
+.mosaico .veu { background: radial-gradient(95% 62% at 40% 55%, rgba(36,27,20,.8) 0%, rgba(36,27,20,.55) 48%, rgba(36,27,20,.15) 100%); }
+.mosaico .bloco { top: 50%; bottom: auto; transform: translateY(-50%); align-items: flex-start; text-align: left; gap: 26px; }
 .mosaico .rotulo-caixa { font-size: 46px; }
-.mosaico .texto { font-size: 31px; line-height: 1.4; font-weight: 300; letter-spacing: 0.03em; max-width: 860px; text-shadow: 0 1px 12px rgba(0,0,0,.5); }
+.mosaico .texto { font-size: 31px; line-height: 1.4; font-weight: 300; letter-spacing: 0.03em; max-width: 820px; text-shadow: 0 1px 12px rgba(0,0,0,.5); }
 .mosaico .texto b { font-weight: 600; }
 .mosaico .deslize { color: rgba(255,255,255,.8); bottom: 50px; }
 .tipo2 .credito { position: absolute; right: 28px; bottom: 22px; font-size: 14px; letter-spacing: 0.06em; color: rgba(255,255,255,.65); text-align: right; max-width: 700px; }

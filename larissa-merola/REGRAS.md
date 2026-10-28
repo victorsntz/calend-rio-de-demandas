@@ -29,6 +29,13 @@ e foto com véu marrom. Padrão de folhas do rodapé nas cores musgo + marrom + 
 Tons já listados em `capa/v2.css`: `--marrom #4D392A`, `--marrom-claro #B8A08A`, taupe `#8C7B6B`,
 papel quente `#EFE8DC`.
 
+## 2b. Alinhamento: um só por carrossel
+
+Regra do Victor (28/10): se um slide está alinhado à esquerda, todos os textos de todos os slides
+ficam à esquerda. Nada de capa centralizada com miolo à esquerda. No tipo 2 tudo é à esquerda,
+inclusive colagem e mosaico. No tipo 1, o que for centralizado (notícia, capa de ilustração) só
+convive com slides também centralizados.
+
 ## 3. Tom de voz: menos professora, mais conversa
 
 Feedback de 28/10: "muito professoral". O que muda no texto:
