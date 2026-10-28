@@ -48,11 +48,13 @@ Feedback de 28/10: "muito professoral". O que muda no texto:
 
 Tipo 2 pede imagem em todo slide (colagem de 3, duas empilhadas, mosaico de 4, foto inteira).
 Banco em `banco/` (38 fotos): Drive BANCO DE ARQUIVOS + recortes limpos das fotos de banco que a
-agência já licenciou em posts anteriores (`origem` no manifest diz de onde veio). Pinterest: o
-site abre, mas o servidor de imagens dele (i.pinimg.com) bloqueia download daqui, e eu não disfarço
-o cliente pra passar. Wikimedia Commons responde 429 (limite de requisições). Solução: o Victor
-salva as referências do Pinterest e as fotos de famosas numa pasta do Drive
-(`BANCO DE ARQUIVOS/PINTEREST`) e eu puxo de lá com crédito. A Dra. só no último slide. Rotação
+agência já licenciou em posts anteriores (`origem` no manifest diz de onde veio). Pinterest liberado no
+ambiente (28/10): `node capa/pinterest.mjs "termo ou link de pin/pasta" --n 10 --tags a,b --slug nome --banco`
+abre a grade pública num Chromium (sem login), baixa as imagens em 736px pra `banco/raw/pinterest/<slug>/`
+com `fontes.json` e, com `--banco`, registra no manifest com a URL de origem. As imagens em 736 px
+cobrem meio slide ou um mosaico com folga; em foto inteira ficam no limite, preferir pins grandes.
+Foto de famosa e foto de imprensa são de terceiros: usar como referência cultural, sempre com a
+origem registrada, como a agência já fazia em set/2026. A Dra. só no último slide. Rotação
 sem repetir (`banco/uso.json`).
 
 ## 5. Entrega

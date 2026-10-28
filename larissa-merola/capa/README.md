@@ -160,3 +160,15 @@ Tipos de slide (`tipo`): `capa-foto`, `noticia` (print do `estaticos/noticia.mjs
 `dado`, `cards` (ícones de linha: site, chat, receita, preco, lote, medico, anvisa, caneta),
 `passos`, `foto-frase`, `fecho`. Temas: `salvia` (padrão, com textura), `musgo`, `papel`,
 `marrom`, `marromclaro`, `branco`. Estilos em `v2.css`. Fotos e rotação iguais ao `montar.mjs`.
+
+## Pinterest (`pinterest.mjs`)
+
+```bash
+node pinterest.mjs "farrah fawcett hair" --n 8 --slug farrah-fawcett            # só baixa
+node pinterest.mjs "https://br.pinterest.com/<user>/<pasta>/" --n 20 --tags cabelo,famosa --banco   # baixa e registra no banco
+```
+
+Abre a busca ou a pasta num Chromium sem login, lê a grade pública, troca a miniatura pela imagem
+de 736 px e salva em `banco/raw/pinterest/<slug>/` com `fontes.json` (URL da imagem, descrição,
+busca, data). `--banco` copia pra `banco/post/post-NN.jpg` e registra no manifest com
+`origem: Pinterest: <url>`. Precisa do host `i.pinimg.com` liberado no ambiente.
