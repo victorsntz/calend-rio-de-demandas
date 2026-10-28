@@ -23,8 +23,10 @@ explicação de cada um.
 
 ## 2. Cor: mais marrom, menos verde
 
-Feedback de 28/10: "tá verde demais, falta amarronzar". Regra: num carrossel de 7 slides, no
-máximo 2 com fundo verde (musgo ou sálvia). O resto em papel quente, marrom-claro, marrom, taupe
+Feedback de 28/10: "tá verde demais, falta amarronzar". Ajuste de 28/10 à noite: marrom predominante, uns 60%, e o verde
+escuro de volta nos outros 40%, porque ele é parte da composição dela. No tipo 2 o véu das fotos
+alterna marrom e musgo (slides ímpares em verde, fecho em verde); no tipo 1, capa em musgo, miolo
+em papel/marrom-claro/marrom, dado e fecho em musgo. O resto em papel quente, marrom-claro, marrom, taupe
 e foto com véu marrom. Padrão de folhas do rodapé nas cores musgo + marrom + marrom-claro + saúde.
 Tons já listados em `capa/v2.css`: `--marrom #4D392A`, `--marrom-claro #B8A08A`, taupe `#8C7B6B`,
 papel quente `#EFE8DC`.
@@ -35,6 +37,12 @@ Regra do Victor (28/10): se um slide está alinhado à esquerda, todos os textos
 ficam à esquerda. Nada de capa centralizada com miolo à esquerda. No tipo 2 tudo é à esquerda,
 inclusive colagem e mosaico. No tipo 1, o que for centralizado (notícia, capa de ilustração) só
 convive com slides também centralizados.
+
+## 2c. Viúvas: nunca
+
+Nenhum título, rótulo ou frase de destaque termina com uma palavra sozinha na última linha
+(`capa/tipografia.js` junta as duas últimas palavras com espaço fixo em h1, h2, h3, rótulos em
+caixa e títulos de card). Conferir na prancha antes de entregar.
 
 ## 3. Tom de voz: menos professora, mais conversa
 

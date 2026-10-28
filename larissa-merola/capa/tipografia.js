@@ -7,7 +7,7 @@
     let n; while ((n = w.nextNode())) if (n.nodeValue.trim()) out.push(n);
     return out;
   }
-  document.querySelectorAll('h1 span, h2, .sem-viuva').forEach(el => {
+  document.querySelectorAll('h1 span, h1, h2, h3, .rotulo-caixa, .cards .card b, .fecho2 .cta span, .sem-viuva').forEach(el => {
     const nos = nosDeTexto(el);
     if (!nos.length) return;
     const total = nos.map(n => n.nodeValue.trim().split(/\s+/).length).reduce((a, b) => a + b, 0);

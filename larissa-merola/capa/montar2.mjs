@@ -84,12 +84,15 @@ const partes = [];
 dados.slides.forEach((s, i) => {
   const ultimo = i === dados.slides.length - 1;
   const tema = s.tema ?? (s.tipo === 'fecho' ? 'musgo' : 'salvia');
+  // tipo 2: véu das fotos alterna marrom (padrão, ~60%) e verde escuro (~40%); `tom: "musgo"|"marrom"` força
+  const tom = s.tom ?? (s.tipo === 'fecho2' ? 'musgo' : (i % 3 === 1 ? 'musgo' : 'marrom'));   // ~40% verde: slides 2, 5 e fecho
+  const vcls = tom === 'musgo' ? ' v-musgo' : '';
   const cls = `slide ${s.tipo} t-${tema}`;
   const deslize = ultimo ? '' : '<div class="deslize">Deslize</div>';
   if (s.tipo === 'capa-foto') {
     const f = foto(s.foto, 'post');
     const cred = s.credito ?? creditoDe(f);
-    partes.push(`<section class="${cls}"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>${cabecalho}
+    partes.push(`<section class="${cls}${s.tom === 'marrom' ? '' : ' v-musgo'}"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>${cabecalho}
   ${cred ? `<div class="credito">${esc(cred)}</div>` : ''}
   <div class="bloco">${s.rotulo ? `<div class="rotulo">${esc(s.rotulo)}</div>` : ''}<h1>${esc(s.titulo)}</h1>${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}</div>
   <div class="deslize">Deslize</div><div class="logo"><img src="${rel('logo-branca.png')}" alt=""></div></section>`);
@@ -121,12 +124,12 @@ dados.slides.forEach((s, i) => {
   } else if (s.tipo === 'capa-colagem') {
     // TIPO 2, capa cheia de imagens: 3 fotos (2 em cima, 1 embaixo), rótulo em caixa e texto curto
     const fs = (s.fotos ?? ['post', 'post', 'post']).map(r => foto(r, 'post'));
-    partes.push(`<section class="slide tipo2 capa-colagem"><div class="grade">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div><div class="veu"></div>${chip}
+    partes.push(`<section class="slide tipo2 capa-colagem${vcls}"><div class="grade">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div><div class="veu"></div>${chip}
   <div class="bloco"><div><span class="rotulo-caixa">${s.titulo}</span></div>${s.texto ? `<div class="texto">${s.texto}</div>` : ''}</div>${creditosDe(fs) ? `<div class="credito">${esc(creditosDe(fs))}</div>` : ''}</section>`);
   } else if (s.tipo === 'capa-frase') {
     // TIPO 2, capa de frase: foto inteira, frase grande em sans pesada com grifo, convite pra comentar
     const f = foto(s.foto, 'post');
-    partes.push(`<section class="slide tipo2 capa-frase"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>${chip}
+    partes.push(`<section class="slide tipo2 capa-frase${vcls}"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>${chip}
   <div class="bloco"><h1>${s.titulo}</h1>${s.convite ? `<div class="convite">${s.convite}${SETA_BAIXO}</div>` : ''}</div>${creditoDe(f) ? `<div class="credito">${esc(creditoDe(f))}</div>` : ''}</section>`);
   } else if (s.tipo === 'corpo-foto') {
     // TIPO 2, miolo: foto inteira (ou duas empilhadas, `fotos: [2]`), rótulo em caixa, texto corrido e itens com seta
@@ -134,19 +137,19 @@ dados.slides.forEach((s, i) => {
     const cred = creditosDe(fs);
     const itens = (s.itens ?? []).map(it => `<li>${SETA}<span>${it.lead ? `<b>${it.lead}</b> ` : ''}${it.texto}</span></li>`).join('');
     const fotoHtml = fs.length > 1 ? `<div class="foto">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div>` : `<div class="foto">${fs[0] ? `<img src="${esc(fs[0])}" alt="">` : ''}</div>`;
-    partes.push(`<section class="slide tipo2 corpo-foto${fs.length > 1 ? ' duas' : ''}">${fotoHtml}<div class="veu"></div>${chip}
+    partes.push(`<section class="slide tipo2 corpo-foto${fs.length > 1 ? ' duas' : ''}${vcls}">${fotoHtml}<div class="veu"></div>${chip}
   <div class="bloco">${s.rotulo ? `<div><span class="rotulo-caixa">${s.rotulo}</span></div>` : ''}${s.texto ? `<div class="texto">${s.texto}</div>` : ''}${itens ? `<ul>${itens}</ul>` : ''}</div>${cred ? `<div class="credito">${esc(cred)}</div>` : ''}${deslize}</section>`);
   } else if (s.tipo === 'mosaico') {
     // TIPO 2, quatro fotos em grade e uma frase no meio
     const fs = (s.fotos ?? ['post', 'post', 'post', 'post']).map(r => foto(r, 'post'));
     const cred = creditosDe(fs);
-    partes.push(`<section class="slide tipo2 mosaico"><div class="grade">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div><div class="veu"></div>${chip}
+    partes.push(`<section class="slide tipo2 mosaico${vcls}"><div class="grade">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div><div class="veu"></div>${chip}
   <div class="bloco"><div><span class="rotulo-caixa">${s.titulo}</span></div>${s.texto ? `<div class="texto">${s.texto}</div>` : ''}</div>${cred ? `<div class="credito">${esc(cred)}</div>` : ''}${deslize}</section>`);
   } else if (s.tipo === 'fecho2') {
     // TIPO 2, fecho: a Dra. em foto inteira, três chamadas (comenta, salva/manda, link)
     const f = foto(s.foto, 'doutora');
     const ctas = (s.ctas ?? ['Me conta nos comentários', 'Salva e manda pra uma amiga', 'Consulta pelo link na bio']).map(t => `<div class="cta">${SETA}<span>${esc(t)}</span></div>`).join('');
-    partes.push(`<section class="slide tipo2 fecho2"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>${chip}
+    partes.push(`<section class="slide tipo2 fecho2${vcls}"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>${chip}
   <div class="bloco"><h1>${s.titulo}</h1>${s.texto ? `<div class="convite">${s.texto}</div>` : ''}<div class="ctas">${ctas}</div></div>
   <div class="logo"><img src="${rel('logo-branca.png')}" alt=""></div></section>`);
   } else if (s.tipo === 'fecho') {
