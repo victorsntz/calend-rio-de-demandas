@@ -22,7 +22,7 @@ def _carrega(caminho, nome):
     spec.loader.exec_module(mod)
     return mod
 
-HOJE = datetime.date(2026, 10, 26)
+HOJE = datetime.date(2026, 10, 28)
 SLUG = "linha-editorial"
 ARQUIVO = "Linha_Editorial_Gorayeb"
 TITULO_DOC = "Linha editorial · Gorayeb Advocacia"
@@ -269,8 +269,8 @@ GRADE_NOTA = ("Os outros cinco temas previdenciários do cronograma (BPC para cr
               "planejamento, dúvidas frequentes e idade urbana x rural) seguem em janeiro, no mesmo ritmo de um por semana. "
               "Natal, 29/12 e virada de ano ficam como já estavam.")
 PRECISAMOS = [
- "<b>Aprovação do roteiro e da legenda do vídeo da área</b>, para publicar na quarta, 28/10.",
- "<b>Aprovação dos demais roteiros</b> com pelo menos 2 dias úteis antes de cada data.",
- "Se o vídeo da área levar as fotos dos advogados, <b>o número da OAB do Dr. Gustavo</b>.",
+ "<b>Linha editorial aprovada pela Dra. Elisa em 28/10.</b> Os roteiros estão liberados; o que falta em cada peça é a arte.",
+ "<b>Aviso de qualquer mudança de rota</b> com pelo menos 2 dias úteis antes da data do post.",
+ "Se algum vídeo levar as fotos dos advogados, <b>o número da OAB do Dr. Gustavo</b>.",
 ]
 RODAPE = "Gorayeb Advocacia · Linha editorial"

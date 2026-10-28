@@ -485,3 +485,13 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
 - **Estático de 30/10 refeito** no modelo de capa 2, com o selo. Foto nova, de quem
   está na enxada, que é o requisito legal da peça: propriedade trabalhada pela
   família. A anterior era a casa de roça, que não cabia na faixa horizontal.
+
+**28/10/2026**
+
+- **A Dra. Elisa aprovou a linha editorial inteira**, por e-mail: "Aprovado! Vamos em
+  frente!". Os 24 posts de 26/10 a 18/12 estão liberados. O que falta em cada peça
+  agora é a arte, não o texto.
+- Status atualizado no `plano.json` e no Excel: o que estava "roteiro para aprovação"
+  passou a "roteiro aprovado · produzir a arte"; os três vídeos de setembro e o dos
+  60 e 55 ficaram "aprovado · pronto para publicar".
+- O vídeo da área sai hoje. Legenda em `linha-editorial/01-legenda-28-10.txt`.
