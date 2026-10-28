@@ -143,8 +143,9 @@ dados.slides.forEach((s, i) => {
     // TIPO 2, quatro fotos em grade e uma frase no meio
     const fs = (s.fotos ?? ['post', 'post', 'post', 'post']).map(r => foto(r, 'post'));
     const cred = creditosDe(fs);
-    partes.push(`<section class="slide tipo2 mosaico${vcls}"><div class="grade">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div><div class="veu"></div>${chip}
-  <div class="bloco"><div><span class="rotulo-caixa">${s.titulo}</span></div>${s.texto ? `<div class="texto">${s.texto}</div>` : ''}</div>${cred ? `<div class="credito">${esc(cred)}</div>` : ''}${deslize}</section>`);
+    const itensM = (s.itens ?? []).map(it => `<li>${SETA}<span>${it.lead ? `<b>${it.lead}</b> ` : ''}${it.texto}</span></li>`).join('');
+    partes.push(`<section class="slide tipo2 mosaico${vcls}${itensM ? ' com-itens' : ''}"><div class="grade">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div><div class="veu"></div>${chip}
+  <div class="bloco"><div><span class="rotulo-caixa">${s.titulo}</span></div>${s.texto ? `<div class="texto">${s.texto}</div>` : ''}${itensM ? `<ul>${itensM}</ul>` : ''}</div>${cred ? `<div class="credito">${esc(cred)}</div>` : ''}${deslize}</section>`);
   } else if (s.tipo === 'fecho2') {
     // TIPO 2, fecho: a Dra. em foto inteira, três chamadas (comenta, salva/manda, link)
     const f = foto(s.foto, 'doutora');

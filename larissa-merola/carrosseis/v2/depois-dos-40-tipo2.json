@@ -51,7 +51,21 @@
         "../../banco/post/post-58.jpg"
       ],
       "titulo": "Você faz tudo certo e a balança não mexe?",
-      "texto": "Isso não é teimosia do seu corpo. É ele pedindo <b>uma investigação diferente</b> da que você já tentou."
+      "texto": "Quando isso acontece, quase sempre é um destes três:",
+      "itens": [
+        {
+          "lead": "Você perdeu músculo, não gordura.",
+          "texto": "O peso até cai, mas a roupa não muda e a energia some"
+        },
+        {
+          "lead": "O hormônio está segurando líquido.",
+          "texto": "De manhã desinchada, à noite 2 kg a mais. Não é gordura"
+        },
+        {
+          "lead": "Você comeu pouco demais.",
+          "texto": "O corpo entende como escassez e passa a gastar menos pra se proteger"
+        }
+      ]
     },
     {
       "tipo": "corpo-foto",

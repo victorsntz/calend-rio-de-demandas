@@ -228,3 +228,13 @@ p b, li b { font-weight: 600; }
 .mosaico .texto b { font-weight: 600; }
 .mosaico .deslize { color: rgba(255,255,255,.8); bottom: 50px; }
 .tipo2 .credito { position: absolute; right: 28px; bottom: 22px; font-size: 14px; letter-spacing: 0.06em; color: rgba(255,255,255,.65); text-align: right; max-width: 700px; }
+
+/* mosaico com itens: texto desce pra base, véu mais forte embaixo, lista com setas como no corpo */
+.mosaico.com-itens .veu { background: linear-gradient(180deg, rgba(var(--v),.10) 0%, rgba(var(--v),.30) 32%, rgba(var(--v),.88) 52%, rgba(var(--vf),.98) 100%); }
+.mosaico.com-itens .bloco { top: auto; bottom: 96px; transform: none; gap: 24px; }
+.mosaico.com-itens .rotulo-caixa { font-size: 42px; }
+.mosaico.com-itens .texto { font-size: 29px; text-shadow: none; }
+.mosaico ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+.mosaico li { display: flex; gap: 18px; align-items: flex-start; font-size: 29px; line-height: 1.4; font-weight: 300; letter-spacing: 0.02em; }
+.mosaico li svg { flex: none; width: 34px; height: 34px; margin-top: 6px; stroke: var(--saude); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.mosaico li b { font-weight: 600; }

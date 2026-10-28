@@ -51,7 +51,21 @@
         "post:dor"
       ],
       "titulo": "Você emagrece em cima e as pernas continuam iguais?",
-      "texto": "Isso tem nome, tem exame e tem tratamento. <b>Não é falta de esforço seu.</b>"
+      "texto": "Isso tem nome, tem exame e tem tratamento. <b>Não é falta de esforço seu.</b> O que costuma aparecer:",
+      "itens": [
+        {
+          "lead": "Lipedema:",
+          "texto": "gordura dolorida da cintura pro tornozelo, que não responde a dieta"
+        },
+        {
+          "lead": "Retenção por hormônio:",
+          "texto": "inchaço que vai e volta com o ciclo ou com a menopausa"
+        },
+        {
+          "lead": "Circulação lenta:",
+          "texto": "peso nas pernas no fim do dia e marca de meia que demora a sair"
+        }
+      ]
     },
     {
       "tipo": "corpo-foto",
