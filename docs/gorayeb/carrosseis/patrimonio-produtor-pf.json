@@ -1,0 +1,20 @@
+{
+  "id": "patrimonio-produtor-pf",
+  "titulo": "Produtor pessoa física: a proteção do patrimônio",
+  "nota": "Item 21 do calendário, para 30/10. Estático de uma tela, no modelo de capa 2 (meia-folha), com o selo de Agronegócio. A versão anterior, em capa de foto, está no histórico do repositório.",
+  "legenda_instagram": "A PEQUENA PROPRIEDADE RURAL É IMPENHORÁVEL. MENOS PRA QUEM FINANCIOU ELA.\n\nNa pessoa física não existe a separação que existe na empresa. O produtor responde pelas dívidas da atividade com o patrimônio dele. Mas a Constituição abriu uma exceção que muita gente não conhece.\n\nO artigo 5º, inciso XXVI, diz que a pequena propriedade rural, desde que trabalhada pela família, não é penhorada para pagar dívida da atividade produtiva.\n\nTRÊS CONDIÇÕES. A área precisa ser pequena, e o parâmetro usado é de até quatro módulos fiscais do município onde ela fica. A exploração precisa ser direta, pela família. E a terra precisa ser meio de subsistência dela.\n\nO STF já decidiu, no Tema 961, que a proteção vale mesmo quando a pequena propriedade é formada por mais de um terreno, desde que sejam contínuos e que a soma não passe dos quatro módulos. Pela mesma decisão, por maioria, a proteção prevalece mesmo quando o imóvel foi dado em garantia.\n\nA EXCEÇÃO. O Código de Processo Civil, no art. 833, §1º, diz que essa proteção não vale contra a dívida do próprio imóvel, inclusive a que foi feita para comprá-lo. Em outras palavras: a terra está protegida da dívida de insumo e de fornecedor. Não está protegida da dívida que pagou a compra dela.\n\nDuas coisas decidem o caso concreto: quantos módulos fiscais tem a propriedade no seu município, e de onde veio a dívida. São perguntas que se responde com a matrícula na mão.\n\nComente aqui se você sabe quantos módulos fiscais tem a sua propriedade.\n\nFontes: art. 5º, XXVI da Constituição Federal; STF, Tema 961 (ARE 1.038.507); art. 833, VIII e §1º do Código de Processo Civil.",
+  "slides": [
+    {
+      "tipo": "capa-faixa",
+      "selo": "Agronegócio",
+      "foto": "../img/enxada-lavoura.jpg",
+      "foco": "center 0%",
+      "alturaFoto": 560,
+      "kicker": "Dívida no campo",
+      "titulo": "A pequena propriedade\nrural é impenhorável.\n*Menos pra quem\nfinanciou ela.*",
+      "escala": "menor",
+      "sub": "A Constituição protege até quatro módulos fiscais trabalhados pela família.",
+      "fonte": "Art. 5º, XXVI da CF · Art. 833, §1º do CPC"
+    }
+  ]
+}

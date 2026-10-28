@@ -1,0 +1,872 @@
+/* Gorayeb Advocacia — base dos carrosséis e estáticos.
+   Medidas tiradas das peças de set/out 2026 e do Asset 51 da marca. */
+
+@font-face { font-family: "Arvo"; src: url("../fontes/arvo/Arvo-Regular.ttf"); font-weight: 400; }
+@font-face { font-family: "Arvo"; src: url("../fontes/arvo/Arvo-Italic.ttf"); font-weight: 400; font-style: italic; }
+@font-face { font-family: "Arvo"; src: url("../fontes/arvo/Arvo-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: "Arvo"; src: url("../fontes/arvo/Arvo-BoldItalic.ttf"); font-weight: 700; font-style: italic; }
+@font-face { font-family: "HelveticaNeue"; src: url("../fontes/helvetica/HelveticaNeueLight.otf"); font-weight: 300; }
+@font-face { font-family: "HelveticaNeue"; src: url("../fontes/helvetica/HelveticaNeueRoman.otf"); font-weight: 400; }
+@font-face { font-family: "HelveticaNeue"; src: url("../fontes/helvetica/HelveticaNeueMedium.otf"); font-weight: 500; }
+@font-face { font-family: "HelveticaNeue"; src: url("../fontes/helvetica/HelveticaNeueBold.otf"); font-weight: 700; }
+
+:root {
+  /* paleta OFICIAL da marca (ENTREGA > PALETA DE CORES > hex.pdf) */
+  --verde: #1b2316;
+  --areia: #d4c9aa;
+  --bordo: #63260f;
+  --marrom: #6c4d2e;
+  --dourado: #b8943d;
+  --verde-claro: #6ebb50;
+
+  /* derivadas, pro uso em peça */
+  --creme: #ebe3c8;              /* tinta clara do texto sobre chapa escura */
+  --verde-listra-clara: #1b2217; /* as listras do Asset 51 */
+  --verde-listra-escura: #121610;
+  --dourado-caixa: #8a6f32;
+  --terracota: #a8552c;          /* passo mais claro do bordô, pro 2º dado */
+
+  /* grid: 1080 × 1350, margem de 84px */
+  --margem: 84px;
+  --gutter: 36px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.slide {
+  position: relative;
+  width: 1080px;
+  height: 1350px;
+  overflow: hidden;
+  background: var(--verde);
+  color: var(--creme);
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: var(--margem);
+}
+
+/* ---- listras verticais (elemento da marca, Asset 51) --------------------
+   Período de 468px no arquivo de 2161px de largura. Em 1080px o período
+   fica em 234px: escuro 54, claro 19.5, escuro 54, claro 106.5.          */
+.listras::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* mesmo ritmo do Asset 51, mas numa escala bem maior: o olho lê como
+     textura, não como padrão. */
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(0,0,0,.26) 0px,    rgba(0,0,0,.26) 104px,
+    rgba(0,0,0,0)   104px,  rgba(0,0,0,0)   142px,
+    rgba(0,0,0,.26) 142px,  rgba(0,0,0,.26) 246px,
+    rgba(0,0,0,0)   246px,  rgba(0,0,0,0)   452px
+  );
+  /* e esmaece de um lado pro outro, pra não ficar carimbado */
+  -webkit-mask-image: linear-gradient(104deg, #000 0%, rgba(0,0,0,.42) 48%, rgba(0,0,0,.06) 100%);
+          mask-image: linear-gradient(104deg, #000 0%, rgba(0,0,0,.42) 48%, rgba(0,0,0,.06) 100%);
+  z-index: 0;
+}
+.slide > * { position: relative; z-index: 1; }
+
+/* ---- fundos ------------------------------------------------------------ */
+.bg-verde  { background: var(--verde); }
+.bg-creme  { background: var(--creme);  color: var(--verde); }
+.bg-areia  { background: var(--areia);  color: var(--verde); }
+.bg-bordo  { background: var(--bordo); }
+.bg-foto   { background: #000; }
+
+.foto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+/* overlay: sempre, pra tipografia ler. verde por padrão, marrom quando a foto é quente */
+.veu-verde  { position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(180deg, rgba(22,34,17,.30) 0%, rgba(22,34,17,.55) 45%, rgba(22,34,17,.92) 100%); }
+/* fecho sobre foto: o texto fica no meio, então o véu é parelho e mais forte */
+.slide.fecho-foto .veu-verde {
+  background: linear-gradient(180deg, rgba(20,28,16,.70) 0%, rgba(20,28,16,.80) 42%, rgba(20,28,16,.88) 100%); }
+.veu-marrom { position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(180deg, rgba(67,26,10,.25) 0%, rgba(67,26,10,.55) 45%, rgba(67,26,10,.92) 100%); }
+/* foto-texto sobre foto: o texto ocupa a faixa do meio, então o véu tem que
+   fechar ali em cima, não só no pé */
+.slide.foto-texto .veu-verde {
+  background: linear-gradient(180deg, rgba(20,28,16,.55) 0%, rgba(20,28,16,.78) 24%, rgba(20,28,16,.80) 70%, rgba(20,28,16,.64) 100%); }
+.slide.foto-texto .veu-marrom {
+  background: linear-gradient(180deg, rgba(58,24,10,.52) 0%, rgba(58,24,10,.76) 24%, rgba(58,24,10,.78) 70%, rgba(58,24,10,.62) 100%); }
+.veu-topo   { position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(180deg, rgba(20,28,16,.94) 0%, rgba(20,28,16,.78) 32%, rgba(20,28,16,.30) 58%, rgba(20,28,16,.52) 100%); }
+
+/* ---- tipografia -------------------------------------------------------- */
+.titulo {
+  font-family: "Arvo", Georgia, serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 82px;
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+}
+.titulo.menor  { font-size: 64px; }
+.titulo.maior  { font-size: 104px; }
+
+.tese {
+  font-family: "Arvo", Georgia, serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.24;
+  max-width: 15em;
+}
+.citacao {
+  font-family: "Arvo", Georgia, serif;
+  font-style: italic;
+  font-size: 42px;
+  line-height: 1.42;
+}
+.corpo {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 1.58;
+  max-width: 19em;        /* medida que o olho lê sem se perder */
+}
+.corpo strong { font-weight: 700; }
+.corpo.menor { font-size: 31px; }
+
+/* sublinhado da expressão que pesa */
+.marca-texto { text-decoration: underline; text-underline-offset: .14em; text-decoration-thickness: .055em; }
+
+/* ---- fios dourados ----------------------------------------------------- */
+.fio { height: 3px; background: var(--dourado); border: 0; }
+.fio-curto { width: 180px; }
+.entre-fios { padding: 42px 0; border-top: 3px solid var(--dourado); border-bottom: 3px solid var(--dourado); }
+
+/* ---- caixas ------------------------------------------------------------ */
+.caixa-fina {
+  border: 2px solid currentColor;
+  border-radius: 18px;
+  padding: 30px 36px;
+  display: inline-block;
+  max-width: 740px;
+}
+.pilula {
+  display: inline-flex; align-items: center; gap: 16px;
+  background: var(--dourado-caixa); color: var(--creme);
+  font-family: "Arvo", Georgia, serif; font-size: 28px;
+  padding: 14px 28px; border-radius: 10px;
+}
+.cta {
+  display: inline-block; background: var(--marrom); color: var(--creme);
+  font-family: "Arvo", Georgia, serif; font-size: 30px;
+  padding: 18px 30px; border-radius: 8px;
+}
+
+/* ---- marcações fixas --------------------------------------------------- */
+.arroba {
+  font-family: "Arvo", Georgia, serif; font-size: 24px;
+  opacity: .72; text-align: left; letter-spacing: .01em;
+  margin-bottom: 46px;   /* folga entre o arroba e o que vem abaixo */
+  flex: none;
+}
+.assinatura {
+  font-family: "Arvo", Georgia, serif; font-size: 24px;
+  opacity: .9;
+}
+.rodape {
+  margin-top: auto; padding-top: 54px; flex: none;  /* folga antes da assinatura */
+  display: flex; align-items: flex-end;
+  justify-content: space-between; gap: var(--gutter);
+}
+
+/* ---- lockup F|G + Gorayeb Advocacia ------------------------------------
+   O símbolo (jugo) arqueia por cima do F e do G, e a haste vertical faz o
+   papel do traço entre as duas letras. Reconstruído sobre Arvo Bold.     */
+.lockup { display: flex; align-items: center; gap: 22px; }
+.marca {
+  position: relative; display: flex; align-items: baseline;
+  gap: calc(var(--marca-tam, 58px) * .34);
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  color: var(--dourado); font-size: var(--marca-tam, 58px); line-height: 1;
+}
+/* a haste do jugo faz o traço entre o F e o G, então o símbolo é centrado
+   no vão entre as duas letras, não no conjunto todo. */
+.marca .jugo {
+  position: absolute;
+  left: var(--vao, 50%); transform: translateX(-50%);
+  top: calc(var(--marca-tam, 58px) * -0.46);
+  width: calc(var(--marca-tam, 58px) * 1.74);
+  height: auto;
+}
+.lockup .nome {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: calc(var(--marca-tam, 58px) * .46);
+  line-height: 1.14; letter-spacing: .04em; text-transform: uppercase;
+}
+.bg-verde .lockup .nome, .bg-bordo .lockup .nome, .bg-foto .lockup .nome { color: var(--creme); }
+.bg-creme .lockup .nome, .bg-areia .lockup .nome { color: var(--verde); }
+
+/* ---- utilidades -------------------------------------------------------- */
+.empurra { margin-top: auto; }
+/* espaçadores: flex item encolhe por padrão, então trava o tamanho */
+.espaco-sm { height: 24px; flex: none; }
+.espaco    { height: 44px; flex: none; }
+.espaco-lg { height: 76px; flex: none; }
+.centro { text-align: center; align-items: center; }
+.dourado { color: var(--dourado); }
+.lista { list-style: none; display: flex; flex-direction: column; gap: 30px; margin-bottom: 14px; }
+.lista li { display: flex; gap: 20px; font-size: 33px; line-height: 1.44; font-weight: 300; max-width: 19em; }
+.lista li::before { content: "—"; color: var(--dourado); flex: none; }
+
+/* bloco que fica no centro vertical do slide, entre o @ e o rodapé */
+.meio { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+/* ======================================================================
+   INFOGRAFIA — gráficos, mapas e números
+   Paleta de dados validada contra a chapa verde #1b2316:
+   dourado #b8943d · terracota #a8552c · areia #d4c9aa (o "resto", neutro).
+   Toda fatia e toda barra leva rótulo direto, nunca só cor.
+   ====================================================================== */
+:root {
+  --dado-1: #b8943d;   /* o destaque */
+  --dado-2: #a8552c;   /* o contraponto */
+  --dado-3: #d4c9aa;   /* o resto, neutro */
+  --dado-base: rgba(212, 201, 170, .16);  /* trilho e silhueta apagada */
+  --fio-fino: rgba(212, 201, 170, .45);
+}
+
+.figura { display: flex; flex-direction: column; gap: 30px; }
+.figura svg { display: block; width: 100%; height: auto; overflow: visible; }
+.figura-legenda {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 25px; line-height: 1.4; opacity: .82;
+}
+.fonte {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 21px; opacity: .6;
+}
+
+/* rótulos dentro das figuras */
+.rot-num {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  fill: var(--creme); font-size: 46px;
+}
+.rot-txt {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 400;
+  fill: var(--creme); font-size: 25px; opacity: .85;
+}
+.bg-creme .rot-num, .bg-areia .rot-num,
+.bg-offwhite .rot-num, .bg-branco .rot-num { fill: var(--verde); }
+.bg-creme .rot-txt, .bg-areia .rot-txt,
+.bg-offwhite .rot-txt, .bg-branco .rot-txt { fill: var(--verde); }
+
+/* barras: marca fina, ponta arredondada só do lado do dado */
+.barra-trilho { fill: var(--dado-base); }
+.barra { fill: var(--dado-1); }
+.barra-2 { fill: var(--dado-2); }
+
+/* mapa: silhueta apagada, recorte em destaque por cima */
+.mapa-base { fill: var(--dado-base); stroke: var(--fio-fino); stroke-width: 1.5; }
+.mapa-destaque { fill: var(--dado-1); }
+.mapa-anel { fill: none; stroke: var(--fio-fino); stroke-width: 2; }
+/* legenda dos pontos do mapa, uma linha por destaque */
+.mapa-num {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 46px; fill: var(--verde);
+}
+.mapa-chaves { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+/* a partir de quatro destaques a legenda quebra em duas colunas */
+.mapa-chaves.duas {
+  display: grid; grid-template-columns: 1fr 1fr;
+  column-gap: 40px; row-gap: 14px;
+}
+.mapa-chaves li {
+  display: flex; align-items: center; gap: 14px;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 28px;
+}
+.mapa-chaves .nome { flex: 1; }
+.mapa-chaves b { font-weight: 700; white-space: nowrap; }
+.mapa-chaves .ordem {
+  width: 36px; height: 36px; border-radius: 50%; flex: none;
+  background: var(--dado-1); color: var(--verde);
+  font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 20px;
+  display: flex; align-items: center; justify-content: center;
+}
+/* blocos de proporção: cem quadrados, um por ponto percentual */
+.bloco-cheio { fill: var(--dado-1); }
+.bloco-vazio { fill: var(--dado-base); }
+.mapa-chaves .ponto {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--dado-1); flex: none;
+}
+
+/* números em diagonal sobre foto, no espírito da peça de referência */
+.diag { position: relative; flex: 1; display: flex; align-items: center; }
+/* o ícone fica em cima e a cifra com o rótulo embaixo, na mesma linha de base */
+.diag-item { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.diag-linha { display: flex; align-items: baseline; gap: 18px; }
+.diag-item .n {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 92px; line-height: .92; white-space: nowrap;
+}
+.diag-item .r {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 28px; line-height: 1.25; max-width: 330px;
+}
+/* ícone de linha ao lado da cifra: mesma espessura de traço em toda a peça */
+/* precisa ser mais específico que .figura svg, que estica tudo pra 100% */
+.figura svg.icone, .icone {
+  width: 80px; height: 80px; flex: none;
+  fill: none; stroke: var(--dado-1); stroke-width: 2.6;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.bg-offwhite svg.icone, .bg-branco svg.icone,
+.bg-creme svg.icone, .bg-areia svg.icone { stroke: var(--dourado-caixa); }
+.diag-linhas { position: absolute; inset: 0; pointer-events: none; }
+
+/* logo oficial: só muda de versão conforme o fundo, nunca de desenho */
+.logo { display: block; width: auto; flex: none; align-self: flex-start; }
+.centro .logo, .rodape .logo { align-self: center; }
+
+
+/* ======================================================================
+   FUNDOS — variedade sem sair da linha da marca
+   ====================================================================== */
+
+/* respiro de luz: tira o ar de chapa morta sem virar mancha */
+.bg-foto.vinheta::after, .capa-foto.vinheta::after,
+.corpo-foto.vinheta::after, .meia-foto.vinheta::after { content: none; }
+.vinheta::after {
+  content: "";
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(132% 86% at 18% 4%, rgba(255,255,255,.06) 0%, rgba(255,255,255,0) 68%),
+              radial-gradient(150% 108% at 96% 104%, rgba(0,0,0,.26) 0%, rgba(0,0,0,0) 66%);
+}
+.bg-creme.vinheta::after, .bg-areia.vinheta::after,
+.bg-offwhite.vinheta::after, .bg-branco.vinheta::after, .capa-clara.vinheta::after {
+  background: radial-gradient(160% 112% at 96% 106%, rgba(27,35,22,.07) 0%, rgba(27,35,22,0) 70%);
+}
+
+/* marca d'água: o símbolo da casa em escala grande, sangrando na borda.
+   É o mesmo movimento da peça de referência, com o ativo da marca. */
+.marca-dagua::before {
+  content: "";
+  position: absolute; z-index: 0; pointer-events: none;
+  width: 125%; aspect-ratio: 900 / 544;
+  right: -46%; top: 8%;
+  background: url("../assets/simbolo-marcadagua.png") no-repeat center / contain;
+  opacity: .07;
+  transform: rotate(-9deg);
+}
+.marca-dagua.canto-baixo::before { right: -40%; top: auto; bottom: -16%; transform: rotate(6deg); }
+.marca-dagua.canto-esq::before   { right: auto; left: -50%; top: 42%;   transform: rotate(11deg); }
+.bg-creme.marca-dagua::before, .bg-areia.marca-dagua::before,
+.bg-offwhite.marca-dagua::before, .bg-branco.marca-dagua::before { opacity: .055; }
+
+/* chapas claras, as que o Victor pediu */
+.bg-offwhite { background: #f4f0e4; color: var(--verde); }
+.bg-branco   { background: #fbfaf6; color: var(--verde); }
+.bg-marrom   { background: var(--marrom); }
+
+.bg-offwhite .arroba, .bg-branco .arroba,
+.bg-creme .arroba, .bg-areia .arroba { color: var(--verde); }
+.bg-offwhite .assinatura, .bg-branco .assinatura { color: var(--verde); }
+.bg-offwhite .fio, .bg-branco .fio { background: var(--dourado); }
+
+/* um fio de cor na borda, pra chapa clara não ficar solta */
+.borda-dourada { border-left: 10px solid var(--dourado); }
+.borda-bordo   { border-left: 10px solid var(--bordo); }
+
+/* faixa de foto: imagem na metade de cima, chapa na de baixo (peça Malibu) */
+.meia-foto { padding: 0; }
+.meia-foto .faixa-img { position: relative; height: 42%; flex: none; overflow: hidden; }
+.meia-foto .faixa-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.meia-foto .faixa-txt {
+  flex: 1; min-height: 0; display: flex; flex-direction: column;
+  padding: 58px var(--margem) 72px;
+}
+
+/* na faixa de texto da meia-foto o conteúdo é curto: garante respiro */
+.meia-foto .arroba { margin-bottom: 26px; }
+.meia-foto .rodape { margin-top: 38px; }
+
+/* ---- tabela de comparação ---------------------------------------------
+   Sem grade fechada: só os fios que separam. A coluna que importa ganha
+   o dourado, a outra fica neutra.                                       */
+.tabela { width: 100%; border-collapse: collapse; }
+.tabela th, .tabela td { text-align: left; padding: 26px 22px; vertical-align: top; }
+.tabela thead th {
+  font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 29px;
+  line-height: 1.22; padding-bottom: 18px;
+}
+.tabela thead th.col-a span { color: var(--dado-1); }
+.tabela thead th.col-b span { color: var(--dado-3); opacity: .9; }
+.bg-creme .tabela thead th.col-b span, .bg-areia .tabela thead th.col-b span,
+.bg-offwhite .tabela thead th.col-b span, .bg-branco .tabela thead th.col-b span {
+  color: var(--marrom); opacity: .78;
+}
+.bg-creme .tabela tbody td.col-b, .bg-areia .tabela tbody td.col-b,
+.bg-offwhite .tabela tbody td.col-b, .bg-branco .tabela tbody td.col-b { opacity: .62; }
+.tabela tbody tr { border-top: 2px solid var(--fio-fino); }
+.tabela tbody th {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: 26px; line-height: 1.34; width: 27%; opacity: .78;
+}
+.tabela tbody td {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 30px; line-height: 1.38; width: 36.5%;
+}
+.tabela tbody td.col-a { font-weight: 500; }
+.tabela tbody td.col-b { opacity: .72; }
+.bg-creme .tabela tbody tr, .bg-areia .tabela tbody tr,
+.bg-offwhite .tabela tbody tr, .bg-branco .tabela tbody tr { border-top-color: rgba(27,35,22,.22); }
+
+/* ======================================================================
+   CAPA DE FOTO — foto sangrando, marca no alto, categoria e título no pé.
+   ====================================================================== */
+ /* grid de quatro faixas horizontais: as duas de cima ficam com a foto,
+    o título mora no meio da terceira e a logo na quarta, na sombra. */
+.capa-foto {
+  padding: var(--margem);
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+.capa-foto .faixa-vazia { grid-row: span 2; align-self: start; }
+.capa-foto .arroba { margin-bottom: 0; opacity: .88; }
+.capa-foto .faixa-titulo { grid-row: 3; align-self: center; }
+.capa-foto .faixa-marca  { grid-row: 4; align-self: center; }
+.capa-foto .veu-capa {
+  position: absolute; inset: 0; z-index: 0;
+  /* a sombra cobre as duas faixas de baixo, onde moram título e logo */
+  background:
+    linear-gradient(180deg, rgba(16,22,13,.34) 0%, rgba(16,22,13,.10) 16%, rgba(16,22,13,0) 34%),
+    linear-gradient(0deg,   rgba(16,22,13,.95) 0%, rgba(16,22,13,.90) 22%, rgba(16,22,13,.74) 42%, rgba(16,22,13,.22) 62%, rgba(16,22,13,0) 76%);
+}
+.capa-foto .etiqueta {
+  display: inline-flex; align-items: center; gap: 16px;
+  border: 2px solid rgba(235,227,200,.55); border-radius: 999px;
+  padding: 11px 26px 11px 11px; align-self: flex-start;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 400; font-size: 25px; color: var(--creme);
+}
+.capa-foto .etiqueta .bolota {
+  width: 36px; height: 36px; border-radius: 999px; flex: none;
+  background: var(--dourado);
+}
+.capa-foto .titulo-capa {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 92px; line-height: 1.04; letter-spacing: -.02em;
+  margin-top: 24px;
+}
+.capa-foto .titulo-capa.menor { font-size: 76px; }
+.capa-foto .sub-capa {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 38px; line-height: 1.32; margin-top: 22px;
+  max-width: 17em;
+}
+.capa-foto .sub-capa strong { font-weight: 700; }
+
+/* ======================================================================
+   CORPO DE FOTO — foto em cima, chapa embaixo com a marca d'água.
+   ====================================================================== */
+.corpo-foto { padding: 0; }
+/* a foto fica com o que sobrar: a chapa cresce conforme o texto, e a imagem
+   nunca encolhe abaixo de um terço da peça. Antes a chapa era fixa em 48% e
+   texto comprido vazava pelo pé do slide. */
+.corpo-foto .faixa-img { position: relative; flex: 1 1 auto; min-height: 33%; overflow: hidden; }
+.corpo-foto .faixa-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.corpo-foto .chapa {
+  position: relative; flex: 0 0 auto; overflow: hidden;
+  display: flex; flex-direction: column;
+  padding: 64px var(--margem) 56px;
+}
+/* a marca d'água na chapa é opcional: só entra com textura "marca".
+   Por padrão a chapa fica em cor sólida. */
+.corpo-foto.marca-dagua .chapa::before {
+  content: "";
+  position: absolute; z-index: 0; pointer-events: none;
+  width: 62%; aspect-ratio: 838 / 544;
+  right: -14%; bottom: -8%;
+  background: url("../assets/simbolo-marcadagua.png") no-repeat center / contain;
+  opacity: .10; transform: rotate(-7deg);
+}
+.corpo-foto .chapa > * { position: relative; z-index: 1; }
+.corpo-foto .titulo-corpo {
+  font-family: "Arvo", Georgia, serif; font-size: 58px; line-height: 1.12;
+}
+/* as duas metades do título dividem o peso, não a linha: o título da chapa
+   corre numa linha só, e o \n no JSON marca onde começa o itálico. */
+.corpo-foto .titulo-corpo .l1 { font-weight: 400; }
+.corpo-foto .titulo-corpo .l2 { font-weight: 700; font-style: italic; }
+.corpo-foto .texto-corpo {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 32px; line-height: 1.55; margin-top: 34px;
+  max-width: 24em;
+}
+.corpo-foto .pe { margin-top: auto; display: flex; padding-top: 40px; }
+
+/* ======================================================================
+   GRÁFICO EM PERSPECTIVA — as cifras deitadas no plano da foto.
+   ====================================================================== */
+.perspectiva { position: absolute; inset: 0; z-index: 1; }
+.persp-item { position: absolute; transform-origin: left bottom; white-space: nowrap; }
+.persp-item .n {
+  font-family: "Arvo", Georgia, serif; font-weight: 700; color: var(--creme);
+  display: block; line-height: .94; text-shadow: 0 3px 18px rgba(0,0,0,.55);
+}
+.persp-item .r {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 400;
+  color: var(--creme); display: block; margin-top: 6px; opacity: .92;
+  text-shadow: 0 2px 12px rgba(0,0,0,.6);
+}
+.persp-fios { position: absolute; inset: 0; z-index: 0; opacity: .5; }
+
+/* o pé da perspectiva fica numa faixa própria, longe das cifras */
+.pe-persp { position: relative; z-index: 2; }
+
+/* alinhamento padrão à esquerda, inclusive no fecho */
+.slide .cta { align-self: flex-start; }
+
+/* ======================================================================
+   CIFRA, PÍLULAS E BARRA DE PROGRESSO
+   Peças do formato longo: o número manda no slide, a etiqueta diz o
+   assunto e a barra mostra ao leitor onde ele está no carrossel.
+   ====================================================================== */
+
+/* barra de progresso: fina, no alto, acima de qualquer foto */
+.passo {
+  position: absolute; z-index: 3;
+  top: 40px; left: var(--margem); right: var(--margem);
+  display: flex; align-items: center; gap: 22px;
+}
+.passo-trilho {
+  flex: 1; height: 6px; border-radius: 3px;
+  background: rgba(235,227,200,.26);
+}
+.passo-feito { height: 100%; border-radius: 3px; background: var(--dourado); }
+.bg-offwhite .passo-trilho, .bg-branco .passo-trilho,
+.bg-creme .passo-trilho, .bg-areia .passo-trilho { background: rgba(27,35,22,.14); }
+/* o slide com barra começa mais embaixo, pra ela não encostar no conteúdo */
+.slide:has(.passo) { padding-top: calc(var(--margem) + 34px); }
+
+/* etiqueta em pílula: assunto do slide, caixa alta e entreletra larga */
+.etiqueta-pill {
+  align-self: flex-start; flex: none;
+  display: inline-block; padding: 15px 30px; border-radius: 999px;
+  background: var(--areia); color: var(--verde);
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: 24px;
+  letter-spacing: .14em; text-transform: uppercase;
+}
+.bg-offwhite .etiqueta-pill, .bg-branco .etiqueta-pill,
+.bg-creme .etiqueta-pill { background: var(--dourado); color: var(--verde); }
+
+/* a cifra: o número é o slide */
+.cifra {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 158px; line-height: .98; letter-spacing: -.02em;
+  color: var(--creme); flex: none; margin-top: 6px;
+}
+.cifra.menor { font-size: 126px; }
+.cifra.maior { font-size: 184px; }
+.bg-offwhite .cifra, .bg-branco .cifra,
+.bg-creme .cifra, .bg-areia .cifra { color: var(--verde); }
+/* marca-texto atrás da metade de baixo do número, como caneta marcadora */
+.cifra-num {
+  background: linear-gradient(
+    transparent 50%, rgba(184,148,61,.38) 50%,
+    rgba(184,148,61,.38) 92%, transparent 92%);
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  padding: 0 .06em;
+}
+.bg-offwhite .cifra-num, .bg-branco .cifra-num, .bg-creme .cifra-num {
+  background: linear-gradient(
+    transparent 50%, var(--areia) 50%, var(--areia) 92%, transparent 92%);
+}
+.cifra-leitura {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: 42px; line-height: 1.22;
+  margin-top: 16px; max-width: 17em; flex: none;
+}
+
+/* caixa de apoio: ícone redondo + o dado que completa a cifra */
+.caixa-dado {
+  display: flex; align-items: center; gap: 26px; flex: none;
+  background: rgba(235,227,200,.12); border-radius: 22px;
+  padding: 26px 32px;
+}
+.bg-offwhite .caixa-dado, .bg-branco .caixa-dado,
+.bg-creme .caixa-dado, .bg-areia .caixa-dado { background: rgba(27,35,22,.07); }
+.caixa-dado p {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 30px; line-height: 1.38;
+}
+.caixa-dado strong { font-weight: 700; }
+.caixa-icone {
+  flex: none; width: 76px; height: 76px; border-radius: 50%;
+  background: var(--verde); display: flex; align-items: center; justify-content: center;
+}
+.caixa-icone svg.icone { width: 42px; height: 42px; stroke: var(--dourado); }
+.bg-verde .caixa-icone, .bg-bordo .caixa-icone, .bg-marrom .caixa-icone,
+.bg-foto .caixa-icone { background: var(--areia); }
+.bg-verde .caixa-icone svg.icone, .bg-bordo .caixa-icone svg.icone,
+.bg-marrom .caixa-icone svg.icone, .bg-foto .caixa-icone svg.icone { stroke: var(--verde); }
+
+.nota-pe {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 24px; line-height: 1.4;
+  opacity: .72; margin-top: 14px; flex: none;
+}
+.nota-pe strong { font-weight: 700; opacity: 1; }
+
+/* lista em pílulas, com ícone ou número na frente */
+.pilulas { list-style: none; display: flex; flex-direction: column; gap: 18px; flex: none; }
+/* a pílula abraça o texto, não estica até a margem */
+.pilulas li {
+  display: flex; align-items: center; gap: 24px;
+  width: fit-content; max-width: 100%;
+  background: rgba(235,227,200,.12); border-radius: 999px;
+  padding: 14px 32px 14px 14px;
+}
+.bg-offwhite .pilulas li, .bg-branco .pilulas li,
+.bg-creme .pilulas li, .bg-areia .pilulas li { background: rgba(27,35,22,.07); }
+.pilula-icone {
+  flex: none; width: 72px; height: 72px; border-radius: 50%;
+  background: var(--verde); display: flex; align-items: center; justify-content: center;
+}
+.pilula-icone svg.icone { width: 40px; height: 40px; stroke: var(--dourado); }
+.pilula-icone.numero {
+  background: var(--dourado); color: var(--verde);
+  font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 34px;
+}
+.bg-verde .pilula-icone, .bg-bordo .pilula-icone, .bg-marrom .pilula-icone,
+.bg-foto .pilula-icone { background: var(--areia); }
+.bg-verde .pilula-icone svg.icone, .bg-bordo .pilula-icone svg.icone,
+.bg-marrom .pilula-icone svg.icone, .bg-foto .pilula-icone svg.icone { stroke: var(--verde); }
+.pilula-txt {
+  flex: 1;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 400; font-size: 32px; line-height: 1.25;
+}
+.pilula-marca { flex: none; margin-left: 10px; }
+.pilula-marca svg.icone { width: 36px; height: 36px; stroke: var(--dourado-caixa); }
+.bg-verde .pilula-marca svg.icone, .bg-bordo .pilula-marca svg.icone,
+.bg-marrom .pilula-marca svg.icone, .bg-foto .pilula-marca svg.icone { stroke: var(--dourado); }
+
+/* silhueta de canto que situa a cifra no território */
+.mapinha {
+  position: absolute; z-index: 0; pointer-events: none;
+  right: -8%; bottom: 2%; width: 66%; height: auto; opacity: .16;
+}
+.mapinha-base { fill: var(--creme); }
+.mapinha-ponto { fill: var(--dourado); opacity: .9; }
+.mapinha-anel { fill: none; stroke: var(--creme); stroke-width: 6; }
+.bg-offwhite .mapinha-base, .bg-branco .mapinha-base,
+.bg-creme .mapinha-base, .bg-areia .mapinha-base { fill: var(--verde); }
+
+/* a semana: dia de trabalho cheio, descanso vazado */
+.dia-trabalho { fill: var(--dado-1); }
+.dia-folga { fill: none; stroke: var(--dado-base); stroke-width: 4; }
+.dia-letra {
+  font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 48px;
+  fill: var(--verde);
+}
+.dia-letra.folga { fill: var(--creme); opacity: .55; }
+.bg-offwhite .dia-letra.folga, .bg-branco .dia-letra.folga,
+.bg-creme .dia-letra.folga, .bg-areia .dia-letra.folga { fill: var(--verde); opacity: .5; }
+
+/* ======================================================================
+   ESTÁTICO — peça de uma tela só, a frase é o conteúdo
+   ====================================================================== */
+.frase {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 82px; line-height: 1.14; letter-spacing: -.01em;
+}
+.frase.menor { font-size: 68px; }
+.frase.maior { font-size: 96px; }
+/* a segunda metade da frase é a virada: vai em caixa alta e dourada */
+.frase strong {
+  font-weight: 700; text-transform: uppercase;
+  color: var(--dourado); letter-spacing: .005em;
+}
+.bg-offwhite .frase strong, .bg-branco .frase strong,
+.bg-creme .frase strong, .bg-areia .frase strong { color: var(--bordo); }
+.frase em { font-style: italic; font-weight: 400; }
+
+/* ======================================================================
+   VAGA — anúncio de contratação. O mesmo slide serve o feed (1080×1350)
+   e o stories (1080×1920); muda só a altura e o corpo do cargo.
+   ====================================================================== */
+.slide.stories { height: 1920px; }
+
+/* sobre foto o texto ocupa a peça inteira, então o véu é parelho e forte */
+.slide.vaga .veu-verde {
+  background: linear-gradient(180deg, rgba(20,28,16,.80) 0%, rgba(20,28,16,.86) 50%, rgba(20,28,16,.92) 100%); }
+.slide.vaga .veu-marrom {
+  background: linear-gradient(180deg, rgba(58,24,10,.78) 0%, rgba(58,24,10,.84) 50%, rgba(58,24,10,.90) 100%); }
+
+.vaga-cargo {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 84px; line-height: 1.08; letter-spacing: -.012em;
+}
+.slide.stories .vaga-cargo { font-size: 96px; }
+.vaga-cargo strong { color: var(--dourado); font-weight: 700; }
+
+.vaga-local {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 36px; letter-spacing: .02em;
+  color: var(--areia);
+}
+.slide.stories .vaga-local { font-size: 40px; }
+
+.vaga-req { gap: 26px; margin-bottom: 0; }
+.vaga-req li { font-size: 31px; max-width: 24em; }
+
+/* o Instagram cobre o topo e o pé do stories com a própria interface, então
+   a peça ganha margem extra em cima e embaixo */
+.slide.stories { padding-top: 130px; padding-bottom: 190px; }
+.slide.vaga .caixa-dado { margin-top: 54px; }
+
+/* a vaga pode vir em blocos (o que faz / o que buscamos), que é o que cabe
+   no stories e não cabe no feed */
+.vaga-bloco-tit {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: 23px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--dourado);
+  margin-bottom: 24px; flex: none;
+}
+.slide.stories .vaga-req { gap: 20px; }
+.slide.stories .vaga-req li { font-size: 29px; line-height: 1.4; max-width: 25em; }
+.slide.stories .espaco { height: 48px; }
+
+/* última linha antes do e-mail: o que não é requisito nem atribuição */
+.vaga-remate {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 300; font-size: 28px; line-height: 1.46;
+  color: var(--areia); max-width: 26em; flex: none; margin-top: 46px;
+}
+
+/* a chamada de envio: é o que a pessoa tem que fazer, com o prazo em dourado.
+   Vem colada na caixa do e-mail, que as duas são o mesmo gesto. */
+.vaga-chamada {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: 32px; line-height: 1.34;
+  flex: none; margin-top: 50px;
+}
+.vaga-chamada strong { color: var(--dourado); }
+.vaga-chamada + .caixa-dado { margin-top: 22px; }
+
+/* o feed tem 570px a menos que o stories pro mesmo conteúdo, então o corpo
+   cede e os vãos aumentam: apertado não se lê */
+.slide.vaga:not(.stories) .vaga-cargo  { font-size: 68px; }
+.slide.vaga:not(.stories) .vaga-local  { font-size: 34px; }
+.slide.vaga:not(.stories) .espaco      { height: 68px; }
+.slide.vaga:not(.stories) .espaco-sm   { height: 30px; }
+.slide.vaga:not(.stories) .vaga-req    { gap: 30px; }
+.slide.vaga:not(.stories) .vaga-req li { font-size: 29px; line-height: 1.4; max-width: 25em; }
+.slide.vaga:not(.stories) .vaga-bloco-tit { margin-bottom: 28px; }
+.slide.vaga:not(.stories) .vaga-chamada { font-size: 29px; margin-top: 68px; }
+.slide.vaga:not(.stories) .vaga-chamada + .caixa-dado { margin-top: 26px; }
+.slide.vaga:not(.stories) .caixa-dado p { font-size: 28px; }
+.slide.vaga:not(.stories) .arroba { margin-bottom: 36px; }
+.slide.vaga:not(.stories) .rodape { padding-top: 64px; }
+
+/* ======================================================================
+   SELO DE ÁREA — pedido da Dra. Elisa: um marcador pequeno no canto da
+   capa dizendo de que área é aquele conteúdo. Vale nos quatro modelos
+   de capa e no estático. Sempre no alto, à direita, na linha do arroba.
+   ====================================================================== */
+.selo {
+  position: absolute; z-index: 6;
+  top: var(--margem); right: var(--margem);
+  display: inline-flex; align-items: center; gap: 13px;
+  border-radius: 999px; padding: 11px 26px;
+  background: var(--dourado); color: var(--verde);
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 700; font-size: 20px; letter-spacing: .13em;
+  text-transform: uppercase; line-height: 1;
+}
+.selo .ponto { width: 11px; height: 11px; border-radius: 999px; background: currentColor; opacity: .55; flex: none; }
+.selo.areia    { background: var(--areia);  color: var(--verde); }
+.selo.bordo    { background: var(--bordo);  color: var(--creme); }
+.selo.marrom   { background: var(--marrom); color: var(--creme); }
+.selo.verde    { background: var(--verde);  color: var(--areia); }
+/* na capa clara o selo encosta no creme do fundo, então ganha um respiro */
+.bg-creme .selo, .bg-areia .selo, .bg-offwhite .selo, .bg-branco .selo { box-shadow: 0 0 0 7px var(--creme); }
+
+/* ======================================================================
+   CAPA 2 — MEIA-FOLHA: foto na metade de cima, chapa sólida embaixo.
+   A divisão é reta, sem degradê, pra não repetir a capa de foto.
+   ====================================================================== */
+.capa-faixa { padding: 0; display: grid; grid-template-rows: var(--alt-foto, 620px) 1fr; }
+.capa-faixa .meia-img { position: relative; overflow: hidden; }
+.capa-faixa .meia-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.capa-faixa .meia-img .arroba {
+  position: absolute; top: var(--margem); left: var(--margem); margin: 0;
+  color: var(--creme); opacity: .9; text-shadow: 0 2px 18px rgba(16,22,13,.55);
+}
+/* fio dourado marcando a emenda entre a foto e a chapa */
+.capa-faixa .meia-img::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: var(--dourado); }
+.capa-faixa .chapa-capa {
+  padding: 62px var(--margem) var(--margem);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.capa-faixa .kicker {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 700;
+  font-size: 22px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--dourado); margin-bottom: 26px;
+}
+.capa-faixa .titulo-capa { font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 86px; line-height: 1.04; letter-spacing: -.02em; }
+.capa-faixa .titulo-capa.menor { font-size: 70px; }
+.capa-faixa .titulo-capa strong { color: var(--dourado); font-weight: 700; }
+.capa-faixa .pe-capa { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; }
+.capa-faixa .pe-capa .fonte { text-align: right; flex: none; max-width: 46%; }
+.capa-faixa .sub-capa {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 300;
+  font-size: 36px; line-height: 1.34; margin-top: 24px; max-width: 23em; opacity: .92;
+}
+.capa-faixa .pe-capa { margin-top: auto; padding-top: 46px; }
+
+/* ======================================================================
+   CAPA 3 — TIPOGRÁFICA: sem foto. O título é a arte. Entra quando a
+   pauta é uma frase forte e não tem imagem que ajude.
+   ====================================================================== */
+.capa-tipo { display: flex; flex-direction: column; }
+.capa-tipo .meio-tipo { margin-top: auto; margin-bottom: auto; }
+.capa-tipo .fio-capa { width: 210px; height: 6px; background: var(--dourado); border: 0; margin-bottom: 34px; }
+.capa-tipo .kicker {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 700;
+  font-size: 23px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--dourado); margin-bottom: 26px;
+}
+.capa-tipo .titulo-capa {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 118px; line-height: 1.0; letter-spacing: -.028em;
+}
+.capa-tipo .titulo-capa.menor { font-size: 96px; }
+.capa-tipo .titulo-capa strong { color: var(--dourado); font-weight: 700; }
+.capa-tipo .sub-capa {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 300;
+  font-size: 38px; line-height: 1.32; margin-top: 40px; max-width: 16em; opacity: .9;
+}
+.capa-tipo .pe-capa { margin-top: auto; }
+
+/* ======================================================================
+   CAPA 4 — CLARA: fundo creme e a foto num retângulo, com margem.
+   É a que clareia o feed, que hoje é quase todo verde escuro.
+   ====================================================================== */
+.capa-clara { background: var(--creme); color: var(--verde); display: flex; flex-direction: column; }
+.capa-clara .moldura { margin-left: calc(var(--margem) * -1); margin-right: calc(var(--margem) * -1); }
+.capa-clara .moldura { height: 560px; overflow: hidden; position: relative; flex: none; margin-bottom: 54px; }
+.capa-clara .moldura img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.capa-clara .moldura::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: var(--dourado); }
+.capa-clara .arroba { color: var(--verde); opacity: .6; }
+.capa-clara .kicker {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 700;
+  font-size: 22px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--dourado-caixa); margin-bottom: 24px;
+}
+.capa-clara .titulo-capa { font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 84px; line-height: 1.05; letter-spacing: -.02em; }
+.capa-clara .titulo-capa.menor { font-size: 68px; }
+.capa-clara .sub-capa {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 300;
+  font-size: 36px; line-height: 1.34; margin-top: 24px; max-width: 17em; opacity: .8;
+}
+.capa-clara .pe-capa { margin-top: auto; }

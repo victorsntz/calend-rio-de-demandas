@@ -1,0 +1,546 @@
+{
+  "atualizado_em": "2026-10-28",
+  "origem": "Calendario_Editorial_Instagram_Agro.xlsx, remanejado em 16/10/2026",
+  "cadencia": "De 26/10 a 18/12: segunda, quarta e sexta. Quarta é do previdenciário, uma vez por semana. Segunda e sexta são do agronegócio e do empresarial. Quem aprova as peças é a Dra. Elisa.",
+  "deslocamento": "O pilar trabalhista (itens 25 em diante) correu 28 dias para frente: a NR-31 abre em 24/11 em vez de 27/10. O que ocupou o lugar foi o estoque de vídeo gravado mais o bloco ambiental que o acompanha.",
+  "no_ar": [
+    {
+      "n": 3,
+      "tema": "Mito ou verdade: 'não tenho CAR e nunca fui multado'",
+      "como": "coberto por 'Cancelaram seu CAR?' e 'O CAR não é só mais um cadastro'"
+    },
+    {
+      "n": 5,
+      "tema": "Quando o CAR é exigido: crédito rural, escritura, venda",
+      "como": "coberto por 'Seu CAR tá inscrito. Mas isso já não basta pro crédito rural'"
+    },
+    {
+      "n": null,
+      "tema": "Dia da Pecuária: os primeiros",
+      "como": "carrossel nosso, 'Ninguém começa com 234 milhões'"
+    },
+    {
+      "n": 10,
+      "tema": "Usucapião rural (como estático)",
+      "como": "'Você trabalha a terra há anos. Mas ela não é sua no papel?' — o vídeo é outra camada do mesmo tema e convive"
+    }
+  ],
+  "agenda": [
+    {
+      "data": "2026-10-16",
+      "slot": "notícia",
+      "pilar": "Trabalhista Rural",
+      "tipo": "Relevante",
+      "tema": "Fim da escala 6x1: o que muda na jornada de quem trabalha no campo",
+      "origem": "fora da lista — PEC aprovada em 14/10",
+      "status": "publicado em 16/10",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-10-20",
+      "slot": "técnico",
+      "pilar": "Crédito Rural",
+      "tipo": "Técnico",
+      "tema": "Safra frustrada: o direito de prorrogar a dívida rural",
+      "origem": "item 15 — vídeo gravado",
+      "status": "publicado em 20/10",
+      "formato": "vídeo"
+    },
+    {
+      "data": "2026-10-21",
+      "slot": "institucional",
+      "pilar": "Institucional",
+      "tipo": "Extra",
+      "tema": "Vaga: Advogado(a) — Contencioso Cível (feed + stories)",
+      "origem": "pedido da Dra. Elisa, fora da cadência",
+      "status": "entregue em 21/10",
+      "formato": "feed + stories"
+    },
+    {
+      "data": "2026-10-22",
+      "slot": "notícia",
+      "pilar": "Crédito Rural",
+      "tipo": "Relevante",
+      "tema": "Recuperação judicial no agronegócio: por que produtores estão recorrendo a esse instrumento",
+      "origem": "item 14",
+      "status": "entregue em 16/10",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-10-26",
+      "slot": "segunda",
+      "pilar": "Agronegócio · Crédito rural",
+      "tipo": "Relevante",
+      "tema": "Disputas com cooperativas: o que fazer quando o produtor se sente lesado",
+      "origem": "item 20",
+      "status": "pronto e aprovado",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-10-28",
+      "slot": "quarta",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Vídeo da área previdenciária",
+      "origem": "cronograma previdenciário da Dra. Elisa",
+      "status": "aprovado · publicar hoje",
+      "formato": "vídeo"
+    },
+    {
+      "data": "2026-10-30",
+      "slot": "sexta",
+      "pilar": "Agronegócio · Crédito rural",
+      "tipo": "Relevante",
+      "tema": "Produtor pessoa física: a proteção do patrimônio",
+      "origem": "item 21",
+      "status": "pronto e aprovado",
+      "formato": "estático"
+    },
+    {
+      "data": "2026-11-02",
+      "slot": "segunda",
+      "pilar": "Agronegócio · Ambiental e fundiário",
+      "tipo": "Relevante",
+      "tema": "O que é o CAR e por que ele é obrigatório",
+      "origem": "item 1",
+      "status": "aprovado · pronto para publicar",
+      "formato": "vídeo"
+    },
+    {
+      "data": "2026-11-04",
+      "slot": "quarta",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Trabalho no campo conta para a aposentadoria?",
+      "origem": "cronograma previdenciário da Dra. Elisa",
+      "status": "aprovado · pronto para publicar",
+      "formato": "vídeo"
+    },
+    {
+      "data": "2026-11-06",
+      "slot": "sexta",
+      "pilar": "Agronegócio · Ambiental",
+      "tipo": "Relevante",
+      "tema": "Reserva Legal e APP: como funciona dentro do CAR",
+      "origem": "item 7",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-11-09",
+      "slot": "segunda",
+      "pilar": "Agronegócio · Ambiental e fundiário",
+      "tipo": "Relevante",
+      "tema": "O CAR pode revelar um conflito de terra",
+      "origem": "item 9",
+      "status": "aprovado · pronto para publicar",
+      "formato": "vídeo"
+    },
+    {
+      "data": "2026-11-11",
+      "slot": "quarta",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "BPC/LOAS: quem tem direito",
+      "origem": "cronograma previdenciário da Dra. Elisa",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-11-13",
+      "slot": "sexta",
+      "pilar": "Agronegócio · Fundiário",
+      "tipo": "Relevante",
+      "tema": "Georreferenciamento: obrigatoriedade e prazos para imóveis rurais",
+      "origem": "item 11",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "estático"
+    },
+    {
+      "data": "2026-11-16",
+      "slot": "segunda",
+      "pilar": "Agronegócio · Ambiental e fundiário",
+      "tipo": "Relevante",
+      "tema": "Usucapião rural: quando o pequeno produtor pode regularizar a posse",
+      "origem": "item 10",
+      "status": "aprovado · pronto para publicar",
+      "formato": "vídeo"
+    },
+    {
+      "data": "2026-11-18",
+      "slot": "quarta",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Quais documentos provam a atividade rural",
+      "origem": "cronograma previdenciário da Dra. Elisa",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-11-20",
+      "slot": "sexta",
+      "pilar": "Agronegócio · Ambiental",
+      "tipo": "Relevante",
+      "tema": "Passo a passo para consultar seu CAR pelo CPF",
+      "origem": "item 4",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-11-23",
+      "slot": "segunda",
+      "pilar": "Agronegócio · Trabalhista rural",
+      "tipo": "Relevante",
+      "tema": "NR-31: o que é e para quem essa norma se aplica",
+      "origem": "item 25",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-11-25",
+      "slot": "quarta",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Seu benefício foi calculado certo?",
+      "origem": "cronograma previdenciário da Dra. Elisa",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-11-27",
+      "slot": "sexta",
+      "pilar": "Agronegócio · Trabalhista rural",
+      "tipo": "Relevante",
+      "tema": "13º, férias e rescisão do trabalhador de safra: o que fechar antes do fim do ano",
+      "origem": "pauta nova, época de acerto da safra",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-11-30",
+      "slot": "segunda",
+      "pilar": "Agronegócio · Trabalhista rural",
+      "tipo": "Relevante",
+      "tema": "Atualizações da NR-31 e prazos de adequação",
+      "origem": "item 26",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-12-02",
+      "slot": "quarta",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Pensão por morte: quem recebe",
+      "origem": "cronograma previdenciário da Dra. Elisa",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-12-04",
+      "slot": "sexta",
+      "pilar": "Agronegócio · Trabalhista rural",
+      "tipo": "Relevante",
+      "tema": "Falta de EPI pode gerar multa e até interdição da fazenda",
+      "origem": "item 27",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "estático"
+    },
+    {
+      "data": "2026-12-07",
+      "slot": "segunda",
+      "pilar": "Empresarial · Sucessão e holding rural",
+      "tipo": "Relevante",
+      "tema": "Fim de ano, reunião de família: o momento certo para falar de sucessão",
+      "origem": "item 45",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "estático"
+    },
+    {
+      "data": "2026-12-09",
+      "slot": "quarta",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Auxílio-doença mudou de nome",
+      "origem": "cronograma previdenciário da Dra. Elisa",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "estático"
+    },
+    {
+      "data": "2026-12-11",
+      "slot": "sexta",
+      "pilar": "Empresarial · Sucessão e holding rural",
+      "tipo": "Relevante",
+      "tema": "Holding familiar x inventário: diferenças de custo, tempo e conflito",
+      "origem": "item 40",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-12-14",
+      "slot": "segunda",
+      "pilar": "Empresarial · Sucessão e holding rural",
+      "tipo": "Relevante",
+      "tema": "Sem planejamento, a fazenda pode ser dividida ou vendida no inventário",
+      "origem": "item 39",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-12-16",
+      "slot": "quarta",
+      "pilar": "Previdenciário",
+      "tipo": "Relevante",
+      "tema": "Salário-maternidade para trabalhadora rural",
+      "origem": "cronograma previdenciário da Dra. Elisa",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-12-18",
+      "slot": "sexta",
+      "pilar": "Empresarial · Sucessão e holding rural",
+      "tipo": "Relevante",
+      "tema": "Passo a passo para constituir uma holding rural com segurança jurídica",
+      "origem": "item 43",
+      "status": "roteiro aprovado · produzir a arte",
+      "formato": "estático"
+    },
+    {
+      "data": "2026-12-24",
+      "slot": "institucional",
+      "pilar": "Institucional",
+      "tipo": "Relevante",
+      "tema": "Mensagem de Natal",
+      "origem": "pauta nova — semana morta, uma peça só",
+      "status": "a produzir",
+      "formato": "estático"
+    },
+    {
+      "data": "2026-12-29",
+      "slot": "notícia",
+      "pilar": "Institucional",
+      "tipo": "Relevante",
+      "tema": "O que muda para o produtor rural em 2027",
+      "origem": "pauta nova — virada de ano, puxa a escala 6x1 e a reforma tributária",
+      "status": "a produzir",
+      "formato": "carrossel"
+    },
+    {
+      "data": "2026-12-31",
+      "slot": "institucional",
+      "pilar": "Institucional",
+      "tipo": "Relevante",
+      "tema": "Mensagem de virada de ano",
+      "origem": "pauta nova",
+      "status": "a produzir",
+      "formato": "estático"
+    }
+  ],
+  "banco_de_pauta": {
+    "nota": "Banco de reserva, não agenda fechada. Quando cada segunda onda chegar, escolhe-se daqui. Os itens ambientais voltaram para novembro porque acompanham os vídeos de CAR.",
+    "credito_2a_onda_fev_2027": [
+      13,
+      16,
+      17,
+      18,
+      23
+    ],
+    "ambiental_2a_onda_abr_2027": [],
+    "fora_de_pauta": [
+      {
+        "n": 2,
+        "motivo": "'Prazos do CAR atualizados em 2026' envelheceu. Em abril vira 'atualizados em 2027', que é a mesma peça com data certa."
+      }
+    ],
+    "trabalhista_2a_onda_mai_2027": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "sucessao_2a_onda_mar_2027": [
+      37,
+      38,
+      41,
+      42,
+      44,
+      46,
+      47,
+      48
+    ],
+    "janeiro_2027": {
+      "motivo": "Sobra do bloco ambiental e de crédito rural. Os três vídeos gravados e as peças de reserva legal, georreferenciamento e consulta do CAR entraram em novembro.",
+      "pecas": [
+        {
+          "pilar": "Crédito Rural",
+          "formato": "estático",
+          "tema": "Bastidores: por que o crédito rural é um dos pilares da nossa atuação"
+        },
+        {
+          "pilar": "Regularização Ambiental",
+          "formato": "carrossel",
+          "tema": "Fiscalização ambiental no Triângulo Mineiro na safra 2026/2027"
+        },
+        {
+          "pilar": "Regularização Ambiental",
+          "formato": "estático",
+          "tema": "Bastidores: como ajudamos o produtor a sair da irregularidade fundiária"
+        },
+        {
+          "pilar": "Crédito Rural",
+          "formato": "vídeo",
+          "tema": "Alongamento de dívida rural: como pedir do jeito certo"
+        },
+        {
+          "pilar": "Regularização Ambiental",
+          "formato": "estático",
+          "tema": "Caso real: produtor perde acesso a financiamento por CAR desatualizado"
+        }
+      ]
+    },
+    "proximo_bloco": {
+      "motivo": "Dependem de gravação nova com o Dr. Fernando ou de material do escritório. Entram quando houver agenda de gravação.",
+      "pecas": [
+        {
+          "pilar": "Trabalhista Rural (NR-31)",
+          "formato": "vídeo",
+          "tema": "Contratação de trabalhador rural temporário: o que a lei exige",
+          "status": "a gravar no lote de dezembro"
+        },
+        {
+          "pilar": "Trabalhista Rural (NR-31)",
+          "formato": "estático",
+          "tema": "Caso real: como evitamos uma autuação trabalhista em uma fazenda cliente",
+          "status": "precisa de material do escritório"
+        },
+        {
+          "pilar": "Sucessão e Holding Rural",
+          "formato": "vídeo",
+          "tema": "O que é uma holding rural e para que ela serve",
+          "status": "a gravar no lote de dezembro"
+        },
+        {
+          "pilar": "Sucessão e Holding Rural",
+          "formato": "vídeo",
+          "tema": "Doação em vida com reserva de usufruto: como funciona na prática",
+          "status": "a gravar no lote de dezembro"
+        },
+        {
+          "pilar": "Sucessão e Holding Rural",
+          "formato": "vídeo",
+          "tema": "Desvantagens da holding rural: quando ela não é a melhor solução",
+          "status": "a gravar no lote de dezembro"
+        }
+      ]
+    },
+    "previdenciario_janeiro_2027": {
+      "motivo": "Temas do cronograma previdenciário que seguem em janeiro, um por semana, às quartas. Os dois vídeos viram narração, sem gravação.",
+      "pecas": [
+        {
+          "pilar": "Previdenciário",
+          "formato": "carrossel",
+          "tema": "BPC para crianças com TEA: como funciona",
+          "status": "roteiro pronto"
+        },
+        {
+          "pilar": "Previdenciário",
+          "formato": "carrossel",
+          "tema": "Aposentadoria especial: quem trabalha com insalubridade",
+          "status": "roteiro pronto"
+        },
+        {
+          "pilar": "Previdenciário",
+          "formato": "vídeo",
+          "tema": "O que é planejamento previdenciário",
+          "status": "roteiro pronto"
+        },
+        {
+          "pilar": "Previdenciário",
+          "formato": "vídeo",
+          "tema": "Dúvidas frequentes sobre aposentadoria rural",
+          "status": "roteiro pronto"
+        },
+        {
+          "pilar": "Previdenciário",
+          "formato": "carrossel",
+          "tema": "Aposentadoria por idade urbana x rural",
+          "status": "roteiro pronto"
+        }
+      ]
+    },
+    "lancamento_suspenso": {
+      "motivo": "E-mail da Dra. Elisa de 23/10: os demais itens do lançamento ficam suspensos até que seja o momento oportuno.",
+      "pecas": [
+        {
+          "pilar": "Previdenciário",
+          "formato": "vídeo",
+          "tema": "Vídeo de lançamento com o Dr. Fernando e o Dr. Gustavo",
+          "status": "suspenso"
+        },
+        {
+          "pilar": "Previdenciário",
+          "formato": "estático",
+          "tema": "Chamada para o evento de lançamento",
+          "status": "suspenso"
+        },
+        {
+          "pilar": "Previdenciário",
+          "formato": "fotos",
+          "tema": "Bastidores do evento de lançamento",
+          "status": "suspenso"
+        },
+        {
+          "pilar": "Previdenciário",
+          "formato": "fotos",
+          "tema": "Registro da palestra na cooperativa",
+          "status": "suspenso"
+        },
+        {
+          "pilar": "Previdenciário",
+          "formato": "fotos",
+          "tema": "Registro do café com contadores",
+          "status": "suspenso"
+        },
+        {
+          "pilar": "Previdenciário",
+          "formato": "fotos",
+          "tema": "Registro da palestra no sindicato rural",
+          "status": "suspenso"
+        },
+        {
+          "pilar": "Previdenciário",
+          "formato": "cartilha",
+          "tema": "Cartilha Previdência do Produtor Rural",
+          "status": "suspenso"
+        },
+        {
+          "pilar": "Previdenciário",
+          "formato": "cartilha",
+          "tema": "Cartilha do BPC",
+          "status": "suspenso"
+        }
+      ]
+    }
+  },
+  "regra_de_formato": "Os vídeos gravados em setembro (CAR, conflito de terra e usucapião) saem em três segundas seguidas, porque são uma série. Os vídeos que dependem de gravação nova ficam no banco até haver agenda.",
+  "correcao": "Em 16/10 os itens 1, 9, 10 e 15 foram marcados como no ar por engano. O feed tem estáticos e carrosséis sobre CAR; os vídeos estavam gravados e editados, esperando data. Entraram na agenda.",
+  "trilhas": "E-mail da Dra. Elisa de 23/10: o lançamento da área previdenciária fica suspenso. O previdenciário sai uma vez por semana, começando pelo vídeo que informa a área; a ênfase volta para o agronegócio e o empresarial, com os vídeos gravados em setembro rodando nas segundas.",
+  "dezembro": "Dezembro foi montado à mão, não pelo deslocamento. Três decisões: o trabalhista fecha na primeira semana com contratação de temporário e com o 13º do safrista, que é de época e não estava no calendário; a sucessão ocupa o miolo do mês, que é quando a família se reúne e o tema fica permeável; e a semana do Natal quebra a cadência de propósito, com uma peça em 24/12, a virada de ano em 29/12 e a despedida em 31/12. Não há post em 26/12.",
+  "rotulos_banco": {
+    "credito_2a_onda_fev_2027": "2ª onda de crédito, fev/2027",
+    "ambiental_2a_onda_abr_2027": "2ª onda ambiental, abr/2027",
+    "trabalhista_2a_onda_mai_2027": "2ª onda trabalhista, mai/2027",
+    "sucessao_2a_onda_mar_2027": "2ª onda de sucessão, mar/2027",
+    "janeiro_2027": "janeiro de 2027",
+    "proximo_bloco": "depende de gravação",
+    "previdenciario_janeiro_2027": "previdenciário, janeiro de 2027",
+    "lancamento_suspenso": "lançamento suspenso"
+  },
+  "aprovacao": "Dra. Elisa aprovou a linha editorial inteira em 28/10/2026, por e-mail. Os roteiros estão liberados; o que falta em cada peça é a arte."
+}
