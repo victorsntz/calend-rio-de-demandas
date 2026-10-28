@@ -1,0 +1,65 @@
+{
+  "slug": "tipo2-pernas-inchadas",
+  "arroba": "@larissamerola",
+  "seed": 31,
+  "slides": [
+    {
+      "tipo": "capa-colagem",
+      "fotos": ["post:lipedema", "post:inchaco", "post:varizes"],
+      "titulo": "Se as suas pernas incham, doem e ficam pesadas no fim do dia, salva esse post",
+      "texto": "Porque muita mulher passa anos achando que é <b>sal, sedentarismo ou frescura</b>. E quase nunca é só isso."
+    },
+    {
+      "tipo": "capa-frase",
+      "foto": "post:menopausa",
+      "titulo": "As mulheres não estão com as <u>pernas inchadas</u> pelo <i>sal</i>, pela <i>idade</i> e nem por <i>falta de exercício</i>",
+      "convite": "Me conta aqui nos comentários se você sente isso e <b>manda pra uma amiga que vive reclamando das pernas</b>"
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "post:pernas",
+      "rotulo": "Então o que deixa as pernas assim?",
+      "texto": "Não é o sal do almoço. Não é a cadeira do trabalho. É um conjunto de coisas que acontecem <b>dentro do corpo</b>, e que a gente consegue investigar.",
+      "itens": [
+        { "lead": "Hormônio:", "texto": "estrogênio em desequilíbrio segura líquido e muda onde a gordura se acumula" },
+        { "lead": "Circulação:", "texto": "veia e linfa trabalhando devagar deixam o inchaço parado no fim do dia" },
+        { "lead": "Lipedema:", "texto": "uma gordura diferente, dolorida, que não responde a dieta e que 1 em cada 8 mulheres tem" },
+        { "lead": "Inflamação:", "texto": "sono ruim, estresse e comida inflamatória pioram tudo isso junto" }
+      ]
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "post:dor",
+      "rotulo": "Como saber se é lipedema",
+      "texto": "Um teste simples que você faz agora, sozinha, em casa:",
+      "itens": [
+        { "lead": "Olha o tornozelo.", "texto": "No lipedema a gordura para de repente ali, e o pé fica fino" },
+        { "lead": "Aperta a canela.", "texto": "Se dói mais do que deveria e marca roxo fácil, anota" },
+        { "lead": "Compara com a cintura.", "texto": "Emagrece em cima e as pernas continuam iguais? Isso tem nome" }
+      ]
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "post:celulite",
+      "rotulo": "O que a gente faz com isso",
+      "texto": "Nada de dieta de sopa nem de meia de compressão pra sempre. O caminho é descobrir o que o <b>seu</b> corpo está pedindo:",
+      "itens": [
+        { "lead": "Exames", "texto": "de hormônio, tireoide e inflamação, não só a balança" },
+        { "lead": "Tratar a causa", "texto": "e não só drenar o sintoma" },
+        { "lead": "Um plano", "texto": "que cabe na sua rotina, sem heroísmo e sem culpa" }
+      ]
+    },
+    {
+      "tipo": "fecho2",
+      "titulo": "Você não está exagerando. Suas pernas estão falando.",
+      "texto": "Eu atendo em Araguari e aqui a gente conversa sem julgamento.",
+      "ctas": ["Me conta nos comentários o que você sente", "Salva e manda pra uma amiga", "Consulta pelo link na bio"],
+      "foto": "doutora"
+    }
+  ],
+  "legenda": [
+    "Pernas pesadas, inchadas e doloridas no fim do dia não são frescura, não são só sal e não são idade. Hormônio, circulação, inflamação e o lipedema, que atinge uma em cada oito mulheres, estão entre as causas mais comuns. E quase nenhuma delas aparece na balança.",
+    "Se você se reconheceu em algum slide, me conta nos comentários o que você sente. Eu leio tudo e respondo por aqui. E se você conhece uma amiga que vive reclamando das pernas, manda esse post pra ela. Consulta em Araguari pelo link na bio.",
+    "Fonte: Sociedade Brasileira de Angiologia e Cirurgia Vascular, 2026."
+  ]
+}

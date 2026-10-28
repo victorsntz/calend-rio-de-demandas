@@ -19,7 +19,7 @@
     },
     {
       "tipo": "celulas",
-      "tema": "salvia",
+      "tema": "marromclaro",
       "titulo": "O que estava à venda",
       "itens": [
         "Retatrutida em caneta de 60 mg e 120 mg, anunciada em sites e perfis",
@@ -42,9 +42,21 @@
       "tema": "papel",
       "titulo": "Três sinais de caneta irregular",
       "itens": [
-        { "icone": "chat", "rotulo": "Vende por site, perfil ou WhatsApp", "texto": "Farmácia tem endereço, CNPJ e farmacêutico. Loja de caneta tem link." },
-        { "icone": "receita", "rotulo": "Não pede receita", "texto": "Semaglutida e tirzepatida são medicamentos de prescrição. Sem receita, não é tratamento." },
-        { "icone": "preco", "rotulo": "Preço fora da curva", "texto": "Muito abaixo da farmácia significa que você não está pagando pelo que acha que está." }
+        {
+          "icone": "chat",
+          "rotulo": "Vende por site, perfil ou WhatsApp",
+          "texto": "Farmácia tem endereço, CNPJ e farmacêutico. Loja de caneta tem link."
+        },
+        {
+          "icone": "receita",
+          "rotulo": "Não pede receita",
+          "texto": "Semaglutida e tirzepatida são medicamentos de prescrição. Sem receita, não é tratamento."
+        },
+        {
+          "icone": "preco",
+          "rotulo": "Preço fora da curva",
+          "texto": "Muito abaixo da farmácia significa que você não está pagando pelo que acha que está."
+        }
       ],
       "texto": "Medicamento de verdade tem registro, lote, bula e nota fiscal."
     },
