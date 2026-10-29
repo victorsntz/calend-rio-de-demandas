@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Elo Lipedema, anúncio v5</title>
+<link rel="stylesheet" href="../capa/fonts/fonts.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
+<style>
+  /* v5, molde novo: foto grande em cima, o ELO cruza a borda da foto e entra no painel marrom.
+     Leitura de cima pra baixo: "Vem aí" na foto, ELO na dobra, informações no painel. Tudo à esquerda,
+     margem 80, 44 px entre blocos. Marrom como base, verde só nos pontos e no símbolo. */
+  :root { --marrom: #4D392A; --marrom2: #5C4636; --papel: #EFE8DC; --saude: #CCD77F; --branco: #FFFFFF;
+    --serif: 'Gloock', Georgia, serif; --ital: 'Fraunces', Georgia, serif; --sans: 'Sora', system-ui, sans-serif; --m: 80px; --g: 44px;
+    --textura: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>"); }
+  html, body { margin: 0; background: #ddd; }
+  .slide { position: relative; width: 1080px; height: 1350px; overflow: hidden; font-family: var(--sans); background: var(--marrom); color: var(--papel); margin-bottom: 40px; }
+  .slide::after { content: ""; position: absolute; inset: 0; background-image: var(--textura); opacity: .10; mix-blend-mode: screen; pointer-events: none; z-index: 5; }
+  .foto { position: absolute; left: 0; top: 0; width: 1080px; height: 770px; overflow: hidden; }
+  .foto img { width: 100%; height: 100%; object-fit: cover; }
+  .micro { position: absolute; left: var(--m); top: var(--m); display: flex; align-items: center; gap: 16px; font-size: 16px; letter-spacing: 0.32em; text-transform: uppercase; font-weight: 500; color: var(--branco); text-shadow: 0 1px 10px rgba(0,0,0,.35); z-index: 3; }
+  .micro img { height: 36px; width: auto; }
+  .vem { position: absolute; left: var(--m); top: 152px; font-family: var(--ital); font-style: italic; font-weight: 400; font-variation-settings: "opsz" 144; font-size: 44px; line-height: 1; color: var(--branco); text-shadow: 0 1px 12px rgba(0,0,0,.35); z-index: 3; }
+  .elo { position: absolute; left: 74px; top: 632px; font-family: var(--serif); font-size: 250px; line-height: .8; letter-spacing: 0.02em; color: var(--papel); z-index: 4; text-shadow: 0 2px 16px rgba(40,25,15,.25); }
+  .lip { position: absolute; left: var(--m); top: 848px; font-size: 30px; letter-spacing: 0.42em; text-transform: uppercase; font-weight: 300; line-height: 1; z-index: 4; }
+  .painel { position: absolute; left: var(--m); right: var(--m); top: 925px; display: flex; flex-direction: column; z-index: 4; }
+  .frase { font-family: var(--ital); font-style: italic; font-weight: 400; font-variation-settings: "opsz" 144; font-size: 34px; line-height: 1.25; }
+  .nos { display: flex; flex-direction: column; gap: 18px; margin-top: 43px; }
+  .nos div { display: flex; align-items: center; gap: 18px; line-height: 1; }
+  .nos div i { flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--saude); }
+  .nos span { font-size: 22px; font-weight: 300; letter-spacing: 0.02em; }
+  .nos span b { font-weight: 600; }
+  .quando { font-size: 22px; line-height: 1.55; letter-spacing: 0.04em; font-weight: 300; margin-top: 40px; }
+  .quando b { font-weight: 600; }
+  .quando em { font-style: normal; color: var(--saude); font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; font-size: 17px; display: block; margin-top: 12px; }
+  .v-dra .foto img { object-position: 50% 12%; }
+  .v-pin .foto img { object-position: 50% 92%; }
+  /* stories */
+  .stories { height: 1920px; }
+  .stories .foto { height: 1190px; }
+  .stories .vem { top: 220px; }
+  .stories .elo { top: 1052px; }
+  .stories .lip { top: 1268px; }
+  .stories .painel { top: 1345px; }
+  .stories .micro { top: 150px; }
+</style>
+</head>
+<body>
+
+<div class="slide v-dra">
+  <div class="foto"><img src="../banco/doutora/doutora-04.jpg" alt=""></div>
+  <div class="micro"><img src="../capa/isotipo-branco.svg" alt=""><span>Dra. Larissa Merola</span></div>
+  <div class="vem">Vem aí, em novembro.</div>
+  <div class="elo">ELO</div>
+  <div class="lip">Lipedema</div>
+  <div class="painel">
+    <div class="frase">Uma manhã para o corpo, o cuidado e a fé.</div>
+    <div class="nos">
+      <div><i></i><span><b>Aula funcional</b> adaptada ao lipedema</span></div>
+      <div><i></i><span><b>O que pode e o que não pode</b> no treino</span></div>
+      <div><i></i><span><b>Um momento de espiritualidade</b> pra fechar</span></div>
+    </div>
+    <div class="quando"><b>Sábado, 14 de novembro</b><br>Condomínio Ventana · Araguari<em>Inscrições em breve</em></div>
+  </div>
+</div>
+
+<div class="slide v-pin">
+  <div class="foto"><img src="../banco/post/post-87.jpg" alt=""></div>
+  <div class="micro"><img src="../capa/isotipo-branco.svg" alt=""><span>Dra. Larissa Merola</span></div>
+  <div class="vem">Vem aí, em novembro.</div>
+  <div class="elo">ELO</div>
+  <div class="lip">Lipedema</div>
+  <div class="painel">
+    <div class="frase">Uma manhã para o corpo, o cuidado e a fé.</div>
+    <div class="nos">
+      <div><i></i><span><b>Aula funcional</b> adaptada ao lipedema</span></div>
+      <div><i></i><span><b>O que pode e o que não pode</b> no treino</span></div>
+      <div><i></i><span><b>Um momento de espiritualidade</b> pra fechar</span></div>
+    </div>
+    <div class="quando"><b>Sábado, 14 de novembro</b><br>Condomínio Ventana · Araguari<em>Inscrições em breve</em></div>
+  </div>
+</div>
+
+<div class="slide v-dra stories">
+  <div class="foto"><img src="../banco/doutora/doutora-04.jpg" alt=""></div>
+  <div class="micro"><img src="../capa/isotipo-branco.svg" alt=""><span>Dra. Larissa Merola</span></div>
+  <div class="vem">Vem aí, em novembro.</div>
+  <div class="elo">ELO</div>
+  <div class="lip">Lipedema</div>
+  <div class="painel">
+    <div class="frase">Uma manhã para o corpo, o cuidado e a fé.</div>
+    <div class="nos">
+      <div><i></i><span><b>Aula funcional</b> adaptada ao lipedema</span></div>
+      <div><i></i><span><b>O que pode e o que não pode</b> no treino</span></div>
+      <div><i></i><span><b>Um momento de espiritualidade</b> pra fechar</span></div>
+    </div>
+    <div class="quando"><b>Sábado, 14 de novembro</b><br>Condomínio Ventana · Araguari<em>Inscrições em breve</em></div>
+  </div>
+</div>
+
+<div class="slide v-pin stories">
+  <div class="foto"><img src="../banco/post/post-87.jpg" alt=""></div>
+  <div class="micro"><img src="../capa/isotipo-branco.svg" alt=""><span>Dra. Larissa Merola</span></div>
+  <div class="vem">Vem aí, em novembro.</div>
+  <div class="elo">ELO</div>
+  <div class="lip">Lipedema</div>
+  <div class="painel">
+    <div class="frase">Uma manhã para o corpo, o cuidado e a fé.</div>
+    <div class="nos">
+      <div><i></i><span><b>Aula funcional</b> adaptada ao lipedema</span></div>
+      <div><i></i><span><b>O que pode e o que não pode</b> no treino</span></div>
+      <div><i></i><span><b>Um momento de espiritualidade</b> pra fechar</span></div>
+    </div>
+    <div class="quando"><b>Sábado, 14 de novembro</b><br>Condomínio Ventana · Araguari<em>Inscrições em breve</em></div>
+  </div>
+</div>
+
+<script src="../capa/tipografia.js"></script>
+</body>
+</html>
