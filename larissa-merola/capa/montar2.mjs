@@ -124,8 +124,8 @@ dados.slides.forEach((s, i) => {
   } else if (s.tipo === 'capa-colagem') {
     // TIPO 2, capa cheia de imagens: 3 fotos (2 em cima, 1 embaixo), rótulo em caixa e texto curto
     const fs = (s.fotos ?? ['post', 'post', 'post']).map(r => foto(r, 'post'));
-    partes.push(`<section class="slide tipo2 capa-colagem${vcls}"><div class="grade">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div><div class="veu"></div>${chip}
-  <div class="bloco"><div><span class="rotulo-caixa">${s.titulo}</span></div>${s.texto ? `<div class="texto">${s.texto}</div>` : ''}</div>${creditosDe(fs) ? `<div class="credito">${esc(creditosDe(fs))}</div>` : ''}</section>`);
+    partes.push(`<section class="slide tipo2 capa-colagem${vcls}"><div class="grade">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div><div class="veu"></div>
+  <div class="bloco">${chip.replace('class="chip"', 'class="chip chip-junto"')}<div><span class="rotulo-caixa">${s.titulo}</span></div>${s.texto ? `<div class="texto">${s.texto}</div>` : ''}</div>${creditosDe(fs) ? `<div class="credito">${esc(creditosDe(fs))}</div>` : ''}</section>`);
   } else if (s.tipo === 'capa-frase') {
     // TIPO 2, capa de frase: foto inteira, frase grande em sans pesada com grifo, convite pra comentar
     const f = foto(s.foto, 'post');
@@ -150,8 +150,8 @@ dados.slides.forEach((s, i) => {
     // TIPO 2, fecho: a Dra. em foto inteira, três chamadas (comenta, salva/manda, link)
     const f = foto(s.foto, 'doutora');
     const ctas = (s.ctas ?? ['Me conta nos comentários', 'Salva e manda pra uma amiga', 'Consulta pelo link na bio']).map(t => `<div class="cta">${SETA}<span>${esc(t)}</span></div>`).join('');
-    partes.push(`<section class="slide tipo2 fecho2${vcls}"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>${chip}
-  <div class="bloco"><h1>${s.titulo}</h1>${s.texto ? `<div class="convite">${s.texto}</div>` : ''}<div class="ctas">${ctas}</div></div>
+    partes.push(`<section class="slide tipo2 fecho2${vcls}"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>
+  <div class="bloco">${chip.replace('class="chip"', 'class="chip chip-junto"')}<h1>${s.titulo}</h1>${s.texto ? `<div class="convite">${s.texto}</div>` : ''}<div class="ctas">${ctas}</div></div>
   <div class="logo"><img src="${rel('logo-branca.png')}" alt=""></div></section>`);
   } else if (s.tipo === 'fecho') {
     const f = foto(s.foto, 'doutora');

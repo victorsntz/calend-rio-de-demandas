@@ -38,11 +38,19 @@ ficam à esquerda. Nada de capa centralizada com miolo à esquerda. No tipo 2 tu
 inclusive colagem e mosaico. No tipo 1, o que for centralizado (notícia, capa de ilustração) só
 convive com slides também centralizados.
 
+## 2b2. Chip de perfil (tipo 2)
+
+Avatar = foto do perfil real do Instagram (`banco/doutora/avatar.jpg`, @larissamerola). Na capa
+colagem e no fecho o chip fica junto do texto, logo acima do título; nos slides de miolo, no canto
+superior esquerdo.
+
 ## 2c. Viúvas: nunca
 
 Nenhum título, rótulo ou frase de destaque termina com uma palavra sozinha na última linha
 (`capa/tipografia.js` junta as duas últimas palavras com espaço fixo em h1, h2, h3, rótulos em
-caixa e títulos de card). Conferir na prancha antes de entregar.
+caixa e títulos de card). Conferir na prancha antes de entregar. Vale também pra palavra curta solta no fim da linha
+("E", "a", "de", "que", "pra"): o script cola no termo seguinte. Frase de capa que termina em
+"salva esse post" quebra antes do "salva", pra ficar inteira na última linha.
 
 ## 3. Tom de voz: menos professora, mais conversa
 

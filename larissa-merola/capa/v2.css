@@ -238,3 +238,7 @@ p b, li b { font-weight: 600; }
 .mosaico li { display: flex; gap: 18px; align-items: flex-start; font-size: 29px; line-height: 1.4; font-weight: 300; letter-spacing: 0.02em; }
 .mosaico li svg { flex: none; width: 34px; height: 34px; margin-top: 6px; stroke: var(--saude); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 .mosaico li b { font-weight: 600; }
+
+/* chip junto do texto (capa colagem e fecho): dentro do bloco, logo acima do título */
+.chip.chip-junto { position: static; margin-bottom: 6px; }
+.capa-colagem .bloco, .fecho2 .bloco { gap: 24px; }
