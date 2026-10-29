@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Elo Lipedema, camiseta v2</title>
+<link rel="stylesheet" href="../capa/fonts/fonts.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap">
+<style>
+  /* Camiseta do evento: costas com a frase em itálico empilhada à esquerda e a linha de nós; peito com o símbolo e ELO. */
+  :root { --musgo: #2B3629; --saude: #CCD77F; --branco: #FFFFFF; --disp: 'Fraunces', Georgia, serif; --sans: 'Sora', system-ui, sans-serif; }
+  html, body { margin: 0; background: transparent; }
+  .arte { position: relative; font-family: var(--sans); color: var(--musgo); background: transparent; margin-bottom: 40px; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; box-sizing: border-box; }
+  .arte.branca { color: var(--branco); }
+  .costas { width: 2400px; height: 2800px; padding: 120px; }
+  .costas .frase { font-family: var(--disp); font-style: italic; font-weight: 400; font-variation-settings: "opsz" 144; font-size: 440px; line-height: .92; letter-spacing: -0.02em; }
+  .costas .frase b { font-style: normal; font-weight: 400; }
+  .costas .linha { display: flex; align-items: center; gap: 40px; margin-top: 150px; }
+  .costas .linha i { width: 28px; height: 28px; border-radius: 50%; border: 5px solid currentColor; box-sizing: border-box; }
+  .costas .linha i.cheio { background: currentColor; }
+  .costas .linha u { flex: none; width: 160px; height: 5px; background: currentColor; text-decoration: none; }
+  .costas .linha span { font-size: 64px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; }
+  .costas .elo { display: flex; align-items: flex-end; gap: 48px; margin-top: 130px; }
+  .costas .elo .e { font-family: var(--disp); font-weight: 400; font-variation-settings: "opsz" 144; font-size: 400px; line-height: .82; letter-spacing: -0.01em; }
+  .costas .elo .l { font-size: 64px; letter-spacing: 0.44em; text-transform: uppercase; font-weight: 300; padding-bottom: 22px; }
+  .costas .data { margin-top: 90px; font-size: 56px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; opacity: .9; }
+  .peito { width: 1200px; height: 520px; padding: 40px; flex-direction: row; align-items: center; gap: 44px; }
+  .peito img { width: 150px; height: auto; }
+  .peito .e { font-family: var(--disp); font-weight: 400; font-variation-settings: "opsz" 144; font-size: 300px; line-height: .82; }
+  .peito .l { font-size: 50px; letter-spacing: 0.44em; text-transform: uppercase; font-weight: 300; margin-top: 10px; }
+  .peito .t { display: flex; flex-direction: column; align-items: flex-start; }
+  .manga { width: 1400px; height: 220px; padding: 20px 40px; flex-direction: row; align-items: center; gap: 36px; }
+  .manga span { font-size: 70px; letter-spacing: 0.34em; text-transform: uppercase; font-weight: 500; white-space: nowrap; }
+  .manga i { width: 22px; height: 22px; border-radius: 50%; background: currentColor; }
+</style>
+</head>
+<body>
+<div class="arte costas" id="costas-musgo">
+  <div class="frase">Movimento<br>que <b>cuida.</b></div>
+  <div class="linha"><i class="cheio"></i><u></u><i></i><u></u><i></i><span style="margin-left:30px">corpo · cuidado · fé</span></div>
+  <div class="elo"><div class="e">ELO</div><div class="l">Lipedema</div></div>
+  <div class="data">14 · 11 · 2026 &nbsp;·&nbsp; Araguari, MG</div>
+</div>
+<div class="arte costas branca" id="costas-branca">
+  <div class="frase">Movimento<br>que <b>cuida.</b></div>
+  <div class="linha"><i class="cheio"></i><u></u><i></i><u></u><i></i><span style="margin-left:30px">corpo · cuidado · fé</span></div>
+  <div class="elo"><div class="e">ELO</div><div class="l">Lipedema</div></div>
+  <div class="data">14 · 11 · 2026 &nbsp;·&nbsp; Araguari, MG</div>
+</div>
+<div class="arte peito" id="peito-musgo"><img src="../capa/isotipo.svg" alt=""><div class="t"><div class="e">ELO</div><div class="l">Lipedema</div></div></div>
+<div class="arte peito branca" id="peito-branca"><img src="../capa/isotipo-branco.svg" alt=""><div class="t"><div class="e">ELO</div><div class="l">Lipedema</div></div></div>
+<div class="arte manga" id="manga-musgo"><span>Movimento que cuida</span><i></i><span>Dra. Larissa Merola</span></div>
+<div class="arte manga branca" id="manga-branca"><span>Movimento que cuida</span><i></i><span>Dra. Larissa Merola</span></div>
+</body>
+</html>
