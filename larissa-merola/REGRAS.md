@@ -69,7 +69,13 @@ Feedback de 28/10: "muito professoral". O que muda no texto:
 
 ## 4. Fotos: inflar de imagem
 
-Tipo 2 pede imagem em todo slide (colagem de 3, duas empilhadas, mosaico de 4, foto inteira).
+Pedido de 30/10: "exagera na quantidade, 6 a 8 fotos por slide". No tipo 2, todo slide de miolo e as duas
+capas usam a **parede de fotos**: duas fileiras cheias (4+4, 4+3 ou 3+3), véu sobre a de baixo e o texto por
+cima. Só o fecho fica com a Dra. em foto inteira. No JSON é só passar `fotos: [6 a 8 caminhos]` em
+capa-colagem, capa-frase ou corpo-foto. Fotos escolhidas a dedo nas pranchas de `banco/raw/pinterest/` e
+registradas com `node capa/adicionar.mjs "pasta/arquivo.jpg:tag,tag"`. Recortes de posts antigos que
+carregam cabeçalho ou texto não entram em célula pequena. Layouts antigos (colagem de 3, duas empilhadas,
+mosaico de 4) continuam existindo pra quando houver menos imagem.
 Banco em `banco/` (38 fotos): Drive BANCO DE ARQUIVOS + recortes limpos das fotos de banco que a
 agência já licenciou em posts anteriores (`origem` no manifest diz de onde veio). Pinterest liberado no
 ambiente (28/10): `node capa/pinterest.mjs "termo ou link de pin/pasta" --n 10 --tags a,b --slug nome --banco`

@@ -9,8 +9,8 @@
 //        foto-frase{ foto, titulo, texto?, credito? }
 //        fecho     { titulo, texto, cta?, foto? }                  (sempre o último)
 // TIPO 2 (inspiração em perfil real; chip de perfil sobre a foto, sem cabeçalho):
-//        capa-colagem { fotos: [3], titulo, texto }   capa-frase { foto, titulo (aceita <u> e <i>), convite }
-//        corpo-foto   { foto, rotulo, texto?, itens: [{lead, texto}] }   fecho2 { titulo, texto?, ctas?: [..], foto? }
+//        capa-colagem { fotos: [3 ou 6-8], titulo, texto }   capa-frase { foto | fotos: [6-8], titulo (aceita <u> e <i>), convite }
+//        corpo-foto   { foto | fotos: [2 ou 6-8], rotulo, texto?, itens: [{lead, texto}] }   fecho2 { titulo, texto?, ctas?: [..], foto? }
 // temas: salvia (padrão), musgo, papel, marrom, marromclaro, branco. Fotos: "post", "post:tag", "doutora" ou caminho.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -78,6 +78,8 @@ const rodape = (i) => padrao({ cols: 30, rows: 1, s: 36, seed: seed + i, classe:
 const chip = `<div class="chip"><div class="avatar"><img src="${rel('../banco/doutora/avatar.jpg')}" alt=""></div><div><div class="nome">Dra. Larissa Merola<span class="selo"></span></div><div class="arroba">${esc(arroba)}</div></div></div>`;
 const SETA = '<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 const SETA_BAIXO = '<svg class="seta" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg>';
+// parede: 5+ fotos em duas fileiras (a de cima leva a metade maior)
+const parede = fs => { const n = Math.ceil(fs.length / 2); const cel = f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`; return `<div class="parede"><div class="fileira">${fs.slice(0, n).map(cel).join('')}</div><div class="fileira">${fs.slice(n).map(cel).join('')}</div></div>`; };
 const fonteDe = s => s.fonte ? `<div class="fonte">Fonte: ${esc(s.fonte)}</div>` : '';
 
 const partes = [];
@@ -124,20 +126,22 @@ dados.slides.forEach((s, i) => {
   } else if (s.tipo === 'capa-colagem') {
     // TIPO 2, capa cheia de imagens: 3 fotos (2 em cima, 1 embaixo), rótulo em caixa e texto curto
     const fs = (s.fotos ?? ['post', 'post', 'post']).map(r => foto(r, 'post'));
-    partes.push(`<section class="slide tipo2 capa-colagem${vcls}"><div class="grade">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div><div class="veu"></div>
+    const fundo = fs.length >= 5 ? parede(fs) : `<div class="grade">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div>`;
+    partes.push(`<section class="slide tipo2 capa-colagem${vcls}${fs.length >= 5 ? ' com-parede' : ''}">${fundo}<div class="veu"></div>
   <div class="bloco">${chip.replace('class="chip"', 'class="chip chip-junto"')}<div><span class="rotulo-caixa">${s.titulo}</span></div>${s.texto ? `<div class="texto">${s.texto}</div>` : ''}</div>${creditosDe(fs) ? `<div class="credito">${esc(creditosDe(fs))}</div>` : ''}</section>`);
   } else if (s.tipo === 'capa-frase') {
     // TIPO 2, capa de frase: foto inteira, frase grande em sans pesada com grifo, convite pra comentar
-    const f = foto(s.foto, 'post');
-    partes.push(`<section class="slide tipo2 capa-frase${vcls}"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>${chip}
-  <div class="bloco"><h1>${s.titulo}</h1>${s.convite ? `<div class="convite">${s.convite}${SETA_BAIXO}</div>` : ''}</div>${creditoDe(f) ? `<div class="credito">${esc(creditoDe(f))}</div>` : ''}</section>`);
+    const fs = s.fotos ? s.fotos.map(r => foto(r, 'post')) : [foto(s.foto, 'post')];
+    const fundo = fs.length >= 5 ? parede(fs) : `<div class="foto">${fs[0] ? `<img src="${esc(fs[0])}" alt="">` : ''}</div>`;
+    partes.push(`<section class="slide tipo2 capa-frase${vcls}${fs.length >= 5 ? ' com-parede' : ''}">${fundo}<div class="veu"></div>${chip}
+  <div class="bloco"><h1>${s.titulo}</h1>${s.convite ? `<div class="convite">${s.convite}${SETA_BAIXO}</div>` : ''}</div>${creditosDe(fs) ? `<div class="credito">${esc(creditosDe(fs))}</div>` : ''}</section>`);
   } else if (s.tipo === 'corpo-foto') {
     // TIPO 2, miolo: foto inteira (ou duas empilhadas, `fotos: [2]`), rótulo em caixa, texto corrido e itens com seta
     const fs = s.fotos ? s.fotos.map(r => foto(r, 'post')) : [foto(s.foto, 'post')];
     const cred = creditosDe(fs);
     const itens = (s.itens ?? []).map(it => `<li>${SETA}<span>${it.lead ? `<b>${it.lead}</b> ` : ''}${it.texto}</span></li>`).join('');
-    const fotoHtml = fs.length > 1 ? `<div class="foto">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div>` : `<div class="foto">${fs[0] ? `<img src="${esc(fs[0])}" alt="">` : ''}</div>`;
-    partes.push(`<section class="slide tipo2 corpo-foto${fs.length > 1 ? ' duas' : ''}${vcls}">${fotoHtml}<div class="veu"></div>${chip}
+    const fotoHtml = fs.length >= 5 ? parede(fs) : fs.length > 1 ? `<div class="foto">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div>` : `<div class="foto">${fs[0] ? `<img src="${esc(fs[0])}" alt="">` : ''}</div>`;
+    partes.push(`<section class="slide tipo2 corpo-foto${fs.length >= 5 ? ' com-parede' : fs.length > 1 ? ' duas' : ''}${vcls}">${fotoHtml}<div class="veu"></div>${chip}
   <div class="bloco">${s.rotulo ? `<div><span class="rotulo-caixa">${s.rotulo}</span></div>` : ''}${s.texto ? `<div class="texto">${s.texto}</div>` : ''}${itens ? `<ul>${itens}</ul>` : ''}</div>${cred ? `<div class="credito">${esc(cred)}</div>` : ''}${deslize}</section>`);
   } else if (s.tipo === 'mosaico') {
     // TIPO 2, quatro fotos em grade e uma frase no meio

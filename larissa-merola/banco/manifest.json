@@ -249,7 +249,8 @@
       "injetavel",
       "mesa"
     ],
-    "usar": true
+    "usar": false,
+    "obs": "recorte traz o cabeçalho do post antigo; não usar em célula pequena"
   },
   {
     "arquivo": "post/post-18.jpg",
@@ -2028,6 +2029,659 @@
       "instagram",
       "feed",
       "mulher",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-119.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/82/80/7e/82807e5acdd6e227bdd45fd43c4d1be0.jpg",
+    "drive_id": null,
+    "largura": 735,
+    "altura": 1102,
+    "orientacao": "retrato",
+    "tags": [
+      "jeans",
+      "emagreceu",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-120.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/22/0a/a8/220aa8a8d27a0371e78f966a234c72fb.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 1104,
+    "orientacao": "retrato",
+    "tags": [
+      "jeans",
+      "emagreceu",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-121.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/46/d2/de/46d2de6cfc2898a4c39118687002b20a.jpg",
+    "drive_id": null,
+    "largura": 735,
+    "altura": 1106,
+    "orientacao": "retrato",
+    "tags": [
+      "jeans",
+      "folga",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-122.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/19/73/85/197385317e19436f9d9546f0807f801a.jpg",
+    "drive_id": null,
+    "largura": 735,
+    "altura": 490,
+    "orientacao": "paisagem",
+    "tags": [
+      "barriga",
+      "pele",
+      "flacidez",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-123.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/85/82/42/858242b3f533fc2b1230d99ba540c51d.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 981,
+    "orientacao": "retrato",
+    "tags": [
+      "creme",
+      "pele",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-124.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/05/4b/77/054b77d34cfddceb5f22d05e8fc10d10.jpg",
+    "drive_id": null,
+    "largura": 735,
+    "altura": 1105,
+    "orientacao": "retrato",
+    "tags": [
+      "creme",
+      "pernas",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-125.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/1e/01/79/1e0179081134d1886d8b086225eaf50e.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 1308,
+    "orientacao": "retrato",
+    "tags": [
+      "creme",
+      "pernas",
+      "cama",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-126.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/02/8b/a9/028ba9a304345d0ae0cbf091520e0684.jpg",
+    "drive_id": null,
+    "largura": 735,
+    "altura": 1103,
+    "orientacao": "retrato",
+    "tags": [
+      "creme",
+      "colo",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-127.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/ee/c7/da/eec7dadb170f5621095785dfe39df9de.jpg",
+    "drive_id": null,
+    "largura": 675,
+    "altura": 1200,
+    "orientacao": "retrato",
+    "tags": [
+      "balao",
+      "cheio",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-128.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/22/b9/c2/22b9c2cf1167ebdfac193f1a3aba09e7.jpg",
+    "drive_id": null,
+    "largura": 626,
+    "altura": 626,
+    "orientacao": "paisagem",
+    "tags": [
+      "balao",
+      "cheio",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-129.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/80/92/62/8092625b5c148463511b87ab92848793.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 736,
+    "orientacao": "paisagem",
+    "tags": [
+      "balao",
+      "cheio",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-130.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/be/7e/42/be7e42edbc26e6e973ae2545b816544b.jpg",
+    "drive_id": null,
+    "largura": 476,
+    "altura": 596,
+    "orientacao": "retrato",
+    "tags": [
+      "balao",
+      "murcho",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-131.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/ae/28/0e/ae280e2a9e66c6a031025a79472264d9.jpg",
+    "drive_id": null,
+    "largura": 650,
+    "altura": 488,
+    "orientacao": "paisagem",
+    "tags": [
+      "balao",
+      "murcho",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-132.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/db/88/53/db885344734d7625c1c1f77c0fb9969c.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 1104,
+    "orientacao": "retrato",
+    "tags": [
+      "gestante",
+      "barriga",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-133.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/7b/c7/74/7bc774197aec9425b88e0a3632bde907.jpg",
+    "drive_id": null,
+    "largura": 735,
+    "altura": 976,
+    "orientacao": "retrato",
+    "tags": [
+      "gestante",
+      "barriga",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-134.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/e0/4e/99/e04e996b2f5b26050b5adad14b65255c.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 1104,
+    "orientacao": "retrato",
+    "tags": [
+      "gestante",
+      "maos",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-135.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/12/82/d4/1282d4adee489ef272361ef7d5feee56.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 981,
+    "orientacao": "retrato",
+    "tags": [
+      "espelho",
+      "provador",
+      "jeans",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-136.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/cf/12/5d/cf125ddef9d6a9bf62cbfbd215f91403.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 736,
+    "orientacao": "paisagem",
+    "tags": [
+      "mercado",
+      "iogurte",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-137.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/11/e0/6d/11e06d4201e954319b2a241e693926cb.jpg",
+    "drive_id": null,
+    "largura": 735,
+    "altura": 490,
+    "orientacao": "paisagem",
+    "tags": [
+      "mercado",
+      "iogurte",
+      "mulher",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-138.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/0b/ff/fa/0bfffa1158585f350d5701c84f3ab0c1.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 1308,
+    "orientacao": "retrato",
+    "tags": [
+      "crianca",
+      "xarope",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-139.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/2d/ec/e2/2dece2a6eca4e9729eae17fe555ae989.jpg",
+    "drive_id": null,
+    "largura": 735,
+    "altura": 490,
+    "orientacao": "paisagem",
+    "tags": [
+      "mae",
+      "filha",
+      "remedio",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-140.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/7d/1f/b1/7d1fb176f953a77b2d001e5e15695f09.jpg",
+    "drive_id": null,
+    "largura": 735,
+    "altura": 478,
+    "orientacao": "paisagem",
+    "tags": [
+      "crianca",
+      "remedio",
+      "cama",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-141.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/d1/01/7e/d1017e852def6054fb10b6a6fe27b334.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 1096,
+    "orientacao": "retrato",
+    "tags": [
+      "encomenda",
+      "caixa",
+      "mulher",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-142.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/cc/a1/a7/cca1a793e512115200f0285b9beaac4e.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 1104,
+    "orientacao": "retrato",
+    "tags": [
+      "encomenda",
+      "caixa",
+      "porta",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-143.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/17/e2/99/17e299c8f8569f96a6b003b9263e1f6d.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 1308,
+    "orientacao": "retrato",
+    "tags": [
+      "encomenda",
+      "caixa",
+      "mulher",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-144.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/b3/40/66/b3406646afc8fe2e3e0e0b2ec44e89d6.jpg",
+    "drive_id": null,
+    "largura": 478,
+    "altura": 320,
+    "orientacao": "paisagem",
+    "tags": [
+      "apreensao",
+      "caixas",
+      "caneta",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-145.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/10/8c/10/108c1074d96ee69c9ef09e0135af039c.jpg",
+    "drive_id": null,
+    "largura": 735,
+    "altura": 491,
+    "orientacao": "paisagem",
+    "tags": [
+      "caneta",
+      "fita metrica",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-146.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/9f/33/51/9f3351cc2975c9ca04414721bf5d429b.jpg",
+    "drive_id": null,
+    "largura": 640,
+    "altura": 640,
+    "orientacao": "paisagem",
+    "tags": [
+      "caneta",
+      "aplicacao",
+      "mao",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-147.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/4c/34/4c/4c344c0770cc4a69182b9ad02db5f847.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 981,
+    "orientacao": "retrato",
+    "tags": [
+      "caneta",
+      "fita metrica",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-148.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/df/0e/75/df0e755dfa4c024d60bc45e649edb9b8.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 981,
+    "orientacao": "retrato",
+    "tags": [
+      "caneta",
+      "injetavel",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-149.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/d4/8f/00/d48f00d13be1a134ef4ceb0ff99e1cf2.jpg",
+    "drive_id": null,
+    "largura": 716,
+    "altura": 954,
+    "orientacao": "retrato",
+    "tags": [
+      "caneta",
+      "injetavel",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-150.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/11/3a/d4/113ad4101665e176455f4354e2a5fd4a.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 981,
+    "orientacao": "retrato",
+    "tags": [
+      "caneta",
+      "mao",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-151.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/52/30/38/5230388001de828991b57e54847a8e0c.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 736,
+    "orientacao": "paisagem",
+    "tags": [
+      "caneta",
+      "barriga",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-152.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/39/d5/89/39d589f3dac540c7ca29c7cecf343c38.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 552,
+    "orientacao": "paisagem",
+    "tags": [
+      "geladeira",
+      "caneta",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-153.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/2b/cf/ec/2bcfecf09c1f0fa1f1e89943f4d46546.jpg",
+    "drive_id": null,
+    "largura": 720,
+    "altura": 960,
+    "orientacao": "retrato",
+    "tags": [
+      "geladeira",
+      "caneta",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-154.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/93/49/3c/93493c13ab2b5db273dd47abe2b28c66.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 1308,
+    "orientacao": "retrato",
+    "tags": [
+      "caneta",
+      "solta",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-155.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/29/a1/94/29a1948c4dd9ee3955af48b976c82bef.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 981,
+    "orientacao": "retrato",
+    "tags": [
+      "onibus",
+      "malas",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-156.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/ad/d8/a1/add8a103a0f431e4e30f5858f58182e9.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 490,
+    "orientacao": "paisagem",
+    "tags": [
+      "onibus",
+      "malas",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-157.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/fa/6f/a9/fa6fa9dfcba9874ffa2a3379c740c10e.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 1104,
+    "orientacao": "retrato",
+    "tags": [
+      "celular",
+      "feed",
+      "cafe",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-158.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/f3/52/11/f352115affc5e519a19feab20fe2768e.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 981,
+    "orientacao": "retrato",
+    "tags": [
+      "caneta",
+      "injetavel",
+      "verde",
       "salvar pins"
     ],
     "credito": "Imagem: Pinterest",

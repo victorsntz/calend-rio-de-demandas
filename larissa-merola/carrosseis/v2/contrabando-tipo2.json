@@ -5,47 +5,115 @@
   "slides": [
     {
       "tipo": "capa-colagem",
-      "fotos": ["../../banco/post/post-110.jpg", "../../banco/post/post-111.jpg", "../../banco/post/post-112.jpg"],
+      "fotos": [
+        "../../banco/post/post-110.jpg",
+        "../../banco/post/post-111.jpg",
+        "../../banco/post/post-112.jpg",
+        "../../banco/post/post-136.jpg",
+        "../../banco/post/post-115.jpg",
+        "../../banco/post/post-117.jpg",
+        "../../banco/post/post-137.jpg",
+        "../../banco/post/post-138.jpg"
+      ],
       "titulo": "Se você já pensou em comprar caneta pela internet,<br>salva esse post",
       "texto": "Porque você devolve iogurte vencido no mercado. E aplica na barriga <b>uma caneta que ninguém sabe o que tem dentro</b>."
     },
     {
       "tipo": "capa-frase",
-      "foto": "../../banco/post/post-113.jpg",
       "titulo": "Pro seu filho, só remédio <u>com procedência</u>. Pra você, <i>qualquer coisa</i> que chegou pelo correio?",
-      "convite": "Me conta nos comentários se alguém já te ofereceu uma dessas e <b>manda pra aquela amiga que está pensando em comprar</b>"
+      "convite": "Me conta nos comentários se alguém já te ofereceu uma dessas e <b>manda pra aquela amiga que está pensando em comprar</b>",
+      "fotos": [
+        "../../banco/post/post-113.jpg",
+        "../../banco/post/post-141.jpg",
+        "../../banco/post/post-139.jpg",
+        "../../banco/post/post-142.jpg",
+        "../../banco/post/post-140.jpg",
+        "../../banco/post/post-143.jpg"
+      ]
     },
     {
       "tipo": "corpo-foto",
-      "fotos": ["../../banco/post/post-114.jpg", "../../banco/post/post-115.jpg"],
+      "fotos": [
+        "../../banco/post/post-114.jpg",
+        "../../banco/post/post-144.jpg",
+        "../../banco/post/post-16.jpg",
+        "../../banco/post/post-145.jpg",
+        "../../banco/post/post-147.jpg",
+        "../../banco/post/post-148.jpg",
+        "../../banco/post/post-149.jpg",
+        "../../banco/post/post-146.jpg"
+      ],
       "rotulo": "O que a Receita Federal pegou",
       "texto": "Só no primeiro semestre de 2026, <b>mais de 158 mil canetas apreendidas</b>. Mais que o dobro do ano anterior inteiro.",
       "itens": [
-        { "lead": "Quase tudo entra pelo Paraguai:", "texto": "tirzepatida fabricada lá, sem registro no Brasil" },
-        { "lead": "Sem registro", "texto": "quer dizer que a Anvisa nunca olhou o que tem dentro" },
-        { "lead": "Por isso ela proibiu venda e uso", "texto": "e mandou recolher TG, Slimex, Tirzedral e T36, todas anunciadas em rede social" }
+        {
+          "lead": "Quase tudo entra pelo Paraguai:",
+          "texto": "tirzepatida fabricada lá, sem registro no Brasil"
+        },
+        {
+          "lead": "Sem registro",
+          "texto": "quer dizer que a Anvisa nunca olhou o que tem dentro"
+        },
+        {
+          "lead": "Por isso ela proibiu venda e uso",
+          "texto": "e mandou recolher TG, Slimex, Tirzedral e T36, todas anunciadas em rede social"
+        }
       ]
     },
     {
       "tipo": "corpo-foto",
-      "fotos": ["../../banco/post/post-116.jpg", "../../banco/post/post-117.jpg"],
+      "fotos": [
+        "../../banco/post/post-116.jpg",
+        "../../banco/post/post-152.jpg",
+        "../../banco/post/post-153.jpg",
+        "../../banco/post/post-154.jpg",
+        "../../banco/post/post-155.jpg",
+        "../../banco/post/post-156.jpg",
+        "../../banco/post/post-118.jpg",
+        "../../banco/post/post-20.jpg"
+      ],
       "rotulo": "O que ninguém te conta",
       "texto": "Pode ter mais remédio do que deveria, menos, ou outra coisa misturada. <b>Você só descobre quando o corpo reage.</b> E mesmo que o conteúdo fosse certo:",
       "itens": [
-        { "lead": "Esse tipo de remédio mora na geladeira,", "texto": "o tempo todo, da fábrica até a sua casa" },
-        { "lead": "A caneta de contrabando", "texto": "passa dias no bagageiro do ônibus, no calor, embrulhada em plástico bolha" },
-        { "lead": "Você viu a famosa usando,", "texto": "mas não viu de onde veio a dela" }
+        {
+          "lead": "Esse tipo de remédio mora na geladeira,",
+          "texto": "o tempo todo, da fábrica até a sua casa"
+        },
+        {
+          "lead": "A caneta de contrabando",
+          "texto": "passa dias no bagageiro do ônibus, no calor, embrulhada em plástico bolha"
+        },
+        {
+          "lead": "Você viu a famosa usando,",
+          "texto": "mas não viu de onde veio a dela"
+        }
       ]
     },
     {
       "tipo": "corpo-foto",
-      "fotos": ["../../banco/post/post-118.jpg", "../../banco/post/post-110.jpg0"],
+      "fotos": [
+        "../../banco/post/post-27.jpg",
+        "../../banco/post/post-157.jpg",
+        "../../banco/post/post-150.jpg",
+        "../../banco/post/post-151.jpg",
+        "../../banco/post/post-158.jpg",
+        "../../banco/post/post-35.jpg"
+      ],
       "rotulo": "O caminho seguro existe",
       "texto": "Remédio pra emagrecer tem lugar no tratamento. <b>Mas ele entra depois da consulta:</b>",
       "itens": [
-        { "lead": "Com avaliação, receita na mão", "texto": "e alguém acompanhando como o seu corpo responde" },
-        { "lead": "Com registro na Anvisa,", "texto": "e hoje já existem opções bem mais acessíveis do que há um ano, inclusive a primeira semaglutida genérica do país" },
-        { "lead": "Preço menor e famosa usando", "texto": "não deixam nenhum produto mais seguro" }
+        {
+          "lead": "Com avaliação, receita na mão",
+          "texto": "e alguém acompanhando como o seu corpo responde"
+        },
+        {
+          "lead": "Com registro na Anvisa,",
+          "texto": "e hoje já existem opções bem mais acessíveis do que há um ano, inclusive a primeira semaglutida genérica do país"
+        },
+        {
+          "lead": "Preço menor e famosa usando",
+          "texto": "não deixam nenhum produto mais seguro"
+        }
       ]
     },
     {
