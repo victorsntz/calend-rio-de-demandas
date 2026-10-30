@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 640" width="520" height="640">
+  <!-- Silhueta 01, estilo linha contínua: mulher de costas em 3/4, mão na nuca. Mancha orgânica em verde saúde atrás. -->
+  <defs>
+    <style>
+      .l{fill:none;stroke:#343B30;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+      .f{fill:none;stroke:#343B30;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:.75}
+    </style>
+  </defs>
+  <path d="M118 300 C96 214 180 150 262 164 C356 178 420 236 426 330 C432 430 376 534 286 548 C186 562 128 488 110 400 C104 366 110 330 118 300 Z" fill="#CCD77F" opacity=".55"/>
+  <path d="M150 350 C140 290 200 240 262 252 C330 264 372 300 376 372 C380 448 338 520 268 528 C196 536 156 480 148 420 Z" fill="#CCD77F" opacity=".35"/>
+
+  <!-- cabeça e coque -->
+  <path class="l" d="M232 112 C228 78 258 54 290 60 C322 66 334 98 322 126 C316 140 304 150 290 154"/>
+  <path class="l" d="M232 112 C226 128 230 146 244 156"/>
+  <path class="l" d="M290 60 C300 44 322 42 330 56 C336 68 326 82 316 78"/>
+  <path class="f" d="M242 90 C260 72 288 70 306 82"/>
+  <path class="f" d="M248 128 C262 120 276 120 290 126"/>
+  <!-- pescoço, ombros -->
+  <path class="l" d="M258 156 C258 170 252 182 240 190 C206 198 176 214 164 246"/>
+  <path class="l" d="M296 156 C300 172 310 184 326 190 C352 200 370 222 376 252"/>
+  <!-- braço direito erguido, mão na nuca -->
+  <path class="l" d="M326 190 C356 176 380 148 372 118 C366 100 348 96 338 110 C330 122 334 140 346 144"/>
+  <path class="l" d="M372 118 C366 128 356 136 346 144"/>
+  <!-- braço esquerdo caído ao longo do corpo -->
+  <path class="l" d="M164 246 C150 292 142 344 150 398 C152 410 164 414 170 404"/>
+  <path class="l" d="M170 404 C176 392 176 378 172 364"/>
+  <!-- tronco (costas) e cintura -->
+  <path class="l" d="M176 232 C190 290 184 330 176 362"/>
+  <path class="l" d="M376 252 C386 300 382 340 368 374"/>
+  <!-- coluna sugerida -->
+  <path class="f" d="M276 200 C282 250 282 300 272 350"/>
+  <!-- quadril e saia -->
+  <path class="l" d="M176 362 C150 400 140 450 146 498 C180 512 236 520 290 518 C338 516 374 506 388 494 C396 452 392 404 368 374"/>
+  <path class="f" d="M214 392 C206 432 206 470 212 506"/>
+  <path class="f" d="M330 388 C340 430 340 468 332 504"/>
+  <!-- pernas -->
+  <path class="l" d="M214 506 C206 540 204 572 212 604 C222 612 240 610 246 600 C250 566 250 540 246 514"/>
+  <path class="l" d="M296 518 C292 548 294 578 300 606 C310 614 330 612 336 600 C338 566 336 540 330 510"/>
+  <path class="f" d="M222 556 q10 5 20 0"/>
+  <path class="f" d="M304 554 q10 5 20 0"/>
+  <!-- sapatos -->
+  <path class="l" d="M208 604 C198 614 200 626 214 628 L246 628 C254 626 254 614 246 600"/>
+  <path class="l" d="M296 606 C286 616 290 628 304 630 L336 630 C344 628 344 616 336 600"/>
+</svg>

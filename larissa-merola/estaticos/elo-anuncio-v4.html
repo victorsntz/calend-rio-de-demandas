@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Elo Lipedema, anúncio v4</title>
+<link rel="stylesheet" href="../capa/fonts/fonts.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
+<style>
+  /* v4. Régua única de espaçamento: margem 88 px em todos os lados; entre blocos, sempre 44 px (--g);
+     dentro de um bloco, 16 px (--gi). Nenhum elemento empurrado pro fundo: a coluna inteira é centralizada
+     na altura, então o ar sobra igual em cima e embaixo. Nada de caixa com borda (o "quadrado"). */
+  :root { --musgo: #2B3629; --papel: #EFE8DC; --saude: #CCD77F; --marrom: #4D392A; --branco: #FFFFFF;
+    --serif: 'Gloock', Georgia, serif; --ital: 'Fraunces', Georgia, serif; --sans: 'Sora', system-ui, sans-serif;
+    --m: 88px; --g: 44px; --gi: 16px;
+    --textura: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>"); }
+  html, body { margin: 0; background: #ddd; }
+  .slide { position: relative; width: 1080px; height: 1350px; overflow: hidden; font-family: var(--sans); margin-bottom: 40px; }
+  .stories { height: 1920px; }
+  .micro { font-size: 16px; letter-spacing: 0.32em; text-transform: uppercase; font-weight: 500; display: flex; align-items: center; gap: 16px; line-height: 1; }
+  .micro img { height: 36px; width: auto; }
+  .bloco { display: flex; flex-direction: column; }
+  .vem { font-family: var(--ital); font-style: italic; font-weight: 400; font-variation-settings: "opsz" 144; font-size: 40px; line-height: 1; }
+  .elo { font-family: var(--serif); font-size: 220px; line-height: .8; letter-spacing: 0.02em; margin-top: var(--gi); margin-left: -6px; }
+  .lip { font-size: 30px; letter-spacing: 0.42em; text-transform: uppercase; font-weight: 300; line-height: 1; margin-top: 22px; }
+  .frase { font-family: var(--ital); font-style: italic; font-weight: 400; font-variation-settings: "opsz" 144; font-size: 34px; line-height: 1.25; text-wrap: balance; margin-top: 47px; }
+  .nos { display: flex; flex-direction: column; gap: 18px; margin-top: var(--g); }
+  .nos div { display: flex; align-items: center; gap: 18px; line-height: 1; }
+  .nos div i { flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--saude); }
+  .nos span { font-size: 22px; font-weight: 300; letter-spacing: 0.02em; }
+  .nos span b { font-weight: 600; }
+  .quando { font-size: 22px; line-height: 1.55; letter-spacing: 0.04em; font-weight: 300; margin-top: 40px; }
+  .quando b { font-weight: 600; }
+  .quando em { font-style: normal; color: var(--saude); font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; font-size: 17px; display: block; margin-top: 12px; }
+
+  /* ---- V1: painel musgo à esquerda, Dra. à direita, coluna centralizada na altura ---- */
+  .v1 { background: var(--musgo); color: var(--branco); }
+  .v1::before { content: ""; position: absolute; inset: 0; background-image: var(--textura); opacity: .10; mix-blend-mode: screen; pointer-events: none; }
+  .v1 .foto { position: absolute; right: 0; top: 0; width: 470px; height: 100%; overflow: hidden; }
+  .v1 .foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
+  .v1 .col { position: absolute; left: var(--m); top: var(--m); bottom: var(--m); width: 470px; display: flex; flex-direction: column; justify-content: center; }
+  .v1 .micro { position: absolute; left: var(--m); top: var(--m); }
+
+  /* ---- V2: foto da Dra. em cima (rosto), painel papel embaixo ---- */
+  .v2 { background: var(--papel); color: var(--musgo); }
+  .v2::before { content: ""; position: absolute; inset: 0; background-image: var(--textura); opacity: .12; mix-blend-mode: multiply; pointer-events: none; z-index: 2; }
+  .v2 .foto { position: absolute; left: 0; top: 0; width: 100%; height: 540px; overflow: hidden; }
+  .v2 .foto img { width: 100%; height: auto; margin-top: -40px; }
+  .v2 .micro { position: absolute; left: var(--m); top: var(--m); color: var(--musgo); z-index: 3; }
+  .v2 .col { position: absolute; left: var(--m); right: var(--m); top: 540px; bottom: 0; display: flex; flex-direction: column; justify-content: center; z-index: 3; }
+  .v2 .vem { color: var(--marrom); }
+  .v2 .elo { font-size: 180px; }
+  .v2 .quando em { color: var(--marrom); }
+  .v2.stories .foto { height: 1000px; }
+  .v2.stories .foto img { margin-top: -120px; }
+  .v2.stories .col { top: 1000px; }
+</style>
+</head>
+<body>
+
+<div class="slide v1">
+  <div class="foto"><img src="../banco/doutora/doutora-01.jpg" alt=""></div>
+  <div class="micro"><img src="../capa/isotipo-branco.svg" alt=""><span>Dra. Larissa Merola</span></div>
+  <div class="col">
+    <div class="bloco"><div class="vem">Vem aí, em novembro.</div><div class="elo">ELO</div><div class="lip">Lipedema</div></div>
+    <div class="frase">Uma manhã para o corpo, o cuidado e a fé.</div>
+    <div class="nos">
+      <div><i></i><span><b>Aula funcional</b> adaptada ao lipedema</span></div>
+      <div><i></i><span><b>O que pode e o que não pode</b></span></div>
+      <div><i></i><span><b>Um momento de espiritualidade</b></span></div>
+    </div>
+    <div class="quando"><b>Sábado, 14 de novembro</b><br>Condomínio Ventana · Araguari<em>Inscrições em breve</em></div>
+  </div>
+</div>
+
+<div class="slide v2">
+  <div class="foto"><img src="../banco/doutora/doutora-03.jpg" alt=""></div>
+  <div class="micro"><img src="../capa/isotipo-branco.svg" alt=""><span>Dra. Larissa Merola</span></div>
+  <div class="col">
+    <div class="bloco"><div class="vem">Vem aí, em novembro.</div><div class="elo">ELO</div><div class="lip">Lipedema</div></div>
+    <div class="frase">Uma manhã para o corpo, o cuidado e a fé.</div>
+    <div class="nos">
+      <div><i></i><span><b>Aula funcional</b> adaptada ao lipedema</span></div>
+      <div><i></i><span><b>O que pode e o que não pode</b></span></div>
+      <div><i></i><span><b>Um momento de espiritualidade</b></span></div>
+    </div>
+    <div class="quando"><b>Sábado, 14 de novembro</b><br>Condomínio Ventana · Araguari<em>Inscrições em breve</em></div>
+  </div>
+</div>
+
+<div class="slide v1 stories">
+  <div class="foto"><img src="../banco/doutora/doutora-01.jpg" alt=""></div>
+  <div class="micro"><img src="../capa/isotipo-branco.svg" alt=""><span>Dra. Larissa Merola</span></div>
+  <div class="col">
+    <div class="bloco"><div class="vem">Vem aí, em novembro.</div><div class="elo">ELO</div><div class="lip">Lipedema</div></div>
+    <div class="frase">Uma manhã para o corpo, o cuidado e a fé.</div>
+    <div class="nos">
+      <div><i></i><span><b>Aula funcional</b> adaptada ao lipedema</span></div>
+      <div><i></i><span><b>O que pode e o que não pode</b></span></div>
+      <div><i></i><span><b>Um momento de espiritualidade</b></span></div>
+    </div>
+    <div class="quando"><b>Sábado, 14 de novembro</b><br>Condomínio Ventana · Araguari<em>Inscrições em breve</em></div>
+  </div>
+</div>
+
+<div class="slide v2 stories">
+  <div class="foto"><img src="../banco/doutora/doutora-03.jpg" alt=""></div>
+  <div class="micro"><img src="../capa/isotipo-branco.svg" alt=""><span>Dra. Larissa Merola</span></div>
+  <div class="col">
+    <div class="bloco"><div class="vem">Vem aí, em novembro.</div><div class="elo">ELO</div><div class="lip">Lipedema</div></div>
+    <div class="frase">Uma manhã para o corpo, o cuidado e a fé.</div>
+    <div class="nos">
+      <div><i></i><span><b>Aula funcional</b> adaptada ao lipedema</span></div>
+      <div><i></i><span><b>O que pode e o que não pode</b></span></div>
+      <div><i></i><span><b>Um momento de espiritualidade</b></span></div>
+    </div>
+    <div class="quando"><b>Sábado, 14 de novembro</b><br>Condomínio Ventana · Araguari<em>Inscrições em breve</em></div>
+  </div>
+</div>
+
+<script src="../capa/tipografia.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+{
+  "slug": "tipo2-depois-dos-40",
+  "arroba": "@larissamerola",
+  "seed": 40,
+  "slides": [
+    {
+      "tipo": "capa-colagem",
+      "fotos": [
+        "../../banco/post/post-40.jpg",
+        "../../banco/post/post-51.jpg",
+        "../../banco/post/post-53.jpg"
+      ],
+      "titulo": "Se você passou dos 40, come menos, treina mais e nada muda,<br>salva esse post",
+      "texto": "Porque muita mulher chama isso de <b>falta de disciplina</b>. E quase sempre é hormônio, músculo e sono."
+    },
+    {
+      "tipo": "capa-frase",
+      "foto": "../../banco/post/post-44.jpg",
+      "titulo": "As mulheres não estão <u>engordando depois dos 40</u> por <i>preguiça</i>, por <i>falta de foco</i> e nem por <i>idade</i>",
+      "convite": "Me conta nos comentários se você sente isso e <b>manda pra uma amiga que vive dizendo que o metabolismo parou</b>"
+    },
+    {
+      "tipo": "corpo-foto",
+      "fotos": [
+        "../../banco/post/post-46.jpg",
+        "../../banco/post/post-55.jpg"
+      ],
+      "rotulo": "Então o que muda depois dos 40?",
+      "texto": "Você continua a mesma pessoa. O corpo é que trocou as regras do jogo, <b>sem avisar</b>:",
+      "itens": [
+        {
+          "lead": "Estrogênio cai",
+          "texto": "e a gordura muda de endereço: sai do quadril e vai pra barriga"
+        },
+        {
+          "lead": "Músculo vai embora devagar",
+          "texto": "e músculo é o que gasta energia até parada no sofá"
+        },
+        {
+          "lead": "Sono piora, cortisol sobe",
+          "texto": "e aparece aquela fome de doce no fim da tarde"
+        }
+      ]
+    },
+    {
+      "tipo": "mosaico",
+      "fotos": [
+        "../../banco/post/post-49.jpg",
+        "../../banco/post/post-52.jpg",
+        "../../banco/post/post-54.jpg",
+        "../../banco/post/post-58.jpg"
+      ],
+      "titulo": "Você faz tudo certo e a balança não mexe?",
+      "texto": "Quando isso acontece, quase sempre é um destes três:",
+      "itens": [
+        {
+          "lead": "Você perdeu músculo, não gordura.",
+          "texto": "O peso até cai, mas a roupa não muda e a energia some"
+        },
+        {
+          "lead": "O hormônio está segurando líquido.",
+          "texto": "De manhã desinchada, à noite 2 kg a mais. Não é gordura"
+        },
+        {
+          "lead": "Você comeu pouco demais.",
+          "texto": "O corpo entende como escassez e passa a gastar menos pra se proteger"
+        }
+      ]
+    },
+    {
+      "tipo": "corpo-foto",
+      "fotos": [
+        "../../banco/post/post-39.jpg",
+        "../../banco/post/post-56.jpg"
+      ],
+      "rotulo": "O que eu olho na consulta",
+      "texto": "Antes de qualquer dieta ou remédio, eu quero entender o que está acontecendo aí dentro:",
+      "itens": [
+        {
+          "lead": "Tireoide, hormônios, vitamina D e ferritina",
+          "texto": "nos exames, porque muita coisa some sem aparecer na balança"
+        },
+        {
+          "lead": "Quanto de músculo você tem",
+          "texto": "e não só quanto você pesa"
+        },
+        {
+          "lead": "Como anda seu sono e seu estresse",
+          "texto": "porque eles mandam na fome mais do que a força de vontade"
+        }
+      ]
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../../banco/post/post-41.jpg",
+      "rotulo": "O que funciona depois dos 40",
+      "texto": "Nada de cortar tudo e viver de salada. O jeito é trocar o esforço de lugar:",
+      "itens": [
+        {
+          "lead": "Proteína em toda refeição",
+          "texto": "pra segurar o músculo que o corpo quer perder"
+        },
+        {
+          "lead": "Treino de força",
+          "texto": "e não só esteira. Aeróbica dos anos 80 era ótima, mas sozinha não resolve"
+        },
+        {
+          "lead": "Dormir como prioridade",
+          "texto": "e, quando faz sentido, reposição ou medicação com acompanhamento"
+        }
+      ]
+    },
+    {
+      "tipo": "fecho2",
+      "titulo": "Seu corpo não parou. Ele mudou de regra.",
+      "texto": "Eu atendo em Araguari e a gente descobre juntas o que o seu corpo está pedindo agora.",
+      "ctas": [
+        "Me conta nos comentários o que mudou pra você",
+        "Salva e manda pra uma amiga",
+        "Consulta pelo link na bio"
+      ],
+      "foto": "doutora"
+    }
+  ],
+  "legenda": [
+    "Se você passou dos 40 e sente que come menos, treina mais e mesmo assim o corpo não responde como antes, não é falta de disciplina. Depois dos 40 o estrogênio começa a cair e a gordura muda de lugar, o músculo vai embora devagar e leva junto o gasto de energia, e o sono pior faz o cortisol subir e a fome de doce aparecer no fim da tarde. Nenhuma dessas coisas se resolve só com força de vontade.",
+    "Na consulta eu olho tireoide, hormônios, vitamina D, ferritina e quanto de músculo você tem, não só quanto você pesa. Depois a gente troca o esforço de lugar: proteína em toda refeição, treino de força, sono como prioridade e, quando faz sentido, reposição ou medicação com acompanhamento. Me conta nos comentários o que mudou pra você depois dos 40. Eu leio tudo. E se você tem uma amiga que vive dizendo que o metabolismo parou, manda esse post pra ela.",
+    "Fontes: Volpi et al., 2004 (perda de massa muscular de 3 a 8% por década a partir dos 30); Sociedade Brasileira de Endocrinologia e Metabologia, 2025. Imagens: Pinterest."
+  ]
+}
