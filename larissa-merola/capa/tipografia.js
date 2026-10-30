@@ -26,10 +26,11 @@
 
 // Sem palavra curta solta no fim da linha ("E", "a", "de", "que", "pra"...): cola no termo seguinte com espaço fixo.
 (function () {
-  const curtas = /(^|\s)([AEOaeo]|[Dd][aeo]s?|[Ee]m|[Nn][ao]s?|[Uu]ma?|[Pp]ra|[Pp]or|[Pp]el[ao]s?|[Qq]ue|[Ss]e|[Cc]om|[Aa]os?|[Àà]s?|[Oo]u|[Mm]as)\s(?=\S)/g;
+  // lookbehind no início: o espaço anterior não é consumido, então cadeias ("e a pele") colam numa passada só
+  const curtas = /(?<=^|\s)([AEOaeo]|[Dd][aeo]s?|[Ee]m|[Nn][ao]s?|[Uu]ma?|[Pp]ra|[Pp]or|[Pp]el[ao]s?|[Qq]ue|[Ss]e|[Cc]om|[Aa]os?|[Àà]s?|[Oo]u|[Mm]as)\s(?=\S)/g;
   const alvos = document.querySelectorAll('.slide p, .slide .texto, .slide .convite, .slide li, .slide .sub, .slide h1, .slide h2, .slide .rotulo-caixa');
   alvos.forEach(el => {
     const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-    let n; while ((n = w.nextNode())) { if (n.nodeValue.trim()) n.nodeValue = n.nodeValue.replace(curtas, '$1$2\u00a0'); }
+    let n; while ((n = w.nextNode())) { if (n.nodeValue.trim()) n.nodeValue = n.nodeValue.replace(curtas, '$1\u00a0'); }
   });
 })();
