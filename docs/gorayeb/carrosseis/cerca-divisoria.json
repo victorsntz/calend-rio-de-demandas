@@ -1,8 +1,8 @@
 {
   "id": "cerca-divisoria",
   "titulo": "Cerca divisória: quem paga a conta",
-  "nota": "Fotos do banco da Gorayeb no escritório (quadro, Fernando, chapéu) e do Pinterest no campo. Ver _creditos.json: as do Pinterest precisam de licença conferida antes de publicar.",
-  "legenda_instagram": "A cerca caiu. E agora, quem paga?\n\nNo meio rural essa conta sempre vira discussão de vizinho. Mas o Código Civil já respondeu isso faz tempo: a cerca que separa duas propriedades é dos dois. Construir, consertar e manter é despesa dividida meio a meio (art. 1.297).\n\nTem um detalhe que muda tudo: isso vale pra cerca que fica em cima da divisa. Se você levantou a cerca dentro da sua terra, ela é sua e a conta também.\n\nE se o vizinho se recusa a pagar a parte dele? Dá pra cobrar. Mas antes de chamar advogado, junte o que prova: orçamento, foto, nota do material e a conversa onde vocês combinaram.\n\nCerca é limite de terra, não de relação. Resolve cedo, enquanto ainda dá pra conversar na porteira.",
+  "nota": "Revisado em 30/10 pela Dra. Elisa. Três pontos dela: a cerca especial do art. 1.297, §3º, que faltava; o meio a meio não é absoluto, é presunção até prova em contrário e segue o costume da região; e avisar o vizinho antes, por escrito, senão o reembolso cai. Somei a culpa (arts. 186 e 927) e o Juizado Especial. Fotos do banco da casa e do Pinterest: ver _creditos.json, as do Pinterest precisam de licença conferida antes de publicar.",
+  "legenda_instagram": "A CERCA CAIU. E AGORA, QUEM PAGA?\n\nNo meio rural essa conta sempre vira discussão de vizinho. Mas o Código Civil já respondeu isso faz tempo: a cerca que separa duas propriedades é, em regra, dos dois. Construir, consertar e manter é despesa dividida meio a meio, salvo acordo diferente ou costume da região (art. 1.297, §1º).\n\nTem um detalhe que muda tudo: isso vale pra cerca que fica em cima da divisa. Se você levantou a cerca dentro da sua terra, ela é sua e a conta também.\n\nE TEM MAIS UMA EXCEÇÃO. Se a cerca precisa ser reforçada pra segurar porco, carneiro, galinha ou outro animal pequeno, quem tem a criação paga sozinho (art. 1.297, §3º). O vizinho não é obrigado a dividir um reforço que só serve pros bichos do outro.\n\nE se a cerca caiu por culpa de alguém, como gado que arrebentou, árvore do vizinho ou máquina que bateu, quem causou o estrago responde por ele.\n\nO vizinho se recusa a pagar a parte dele? Dá pra cobrar. Mas o erro mais comum é fazer o serviço primeiro e cobrar depois. Antes de mexer na cerca, avise o vizinho por escrito (uma mensagem já serve) e mande o orçamento. Depois, guarde foto, nota do material e a conversa. Se o valor for pequeno, dá pra cobrar no Juizado Especial Cível sem advogado (até 20 salários mínimos).\n\nCerca é limite de terra, não de relação. Resolve cedo, enquanto ainda dá pra conversar na porteira.\n\nFontes: art. 1.297, §§1º e 3º, e arts. 186 e 927 do Código Civil; Lei 9.099/95.",
   "slides": [
     {
       "tipo": "capa-foto",
@@ -15,10 +15,10 @@
     {
       "tipo": "corpo-foto",
       "foto": "../img/cavalo-codigo-civil.jpg",
-      "titulo": "Cerca de divisa\nnão é sua.",
+      "titulo": "Cerca de divisa\nnão é só sua.",
       "paragrafos": [
-        "O muro, a cerca e a vala que separam duas propriedades pertencem aos dois vizinhos em comum. Está no art. 1.297 do Código Civil.",
-        "Levantar, consertar e manter: as três despesas saem metade de cada um."
+        "O muro, a cerca e a vala que separam duas propriedades pertencem, em regra, aos dois vizinhos. Está no art. 1.297 do Código Civil.",
+        "Levantar, consertar e manter: as três despesas saem meio a meio, salvo acordo diferente ou costume da região."
       ]
     },
     {
@@ -27,7 +27,7 @@
       "titulo": "Metade é sua.\nMetade é dele.",
       "rotuloA": "metade é sua",
       "rotuloB": "metade é dele",
-      "legenda": "Vale pra cerca que está em cima da linha de divisa, não pra que você levantou pra dentro.",
+      "legenda": "Vale pra cerca que está em cima da linha de divisa, não pra que você levantou pra dentro. E é presunção: acordo, escritura ou costume da região podem mudar a conta.",
       "fonte": "art. 1.297 do Código Civil",
       "alt": "Cerca de arame cortada ao meio pelo marco da divisa, metade de cada vizinho",
       "textura": "listras"
@@ -48,12 +48,12 @@
         },
         {
           "criterio": "Quem levanta",
-          "a": "os dois, meio a meio",
+          "a": "os dois, em regra meio a meio",
           "b": "você"
         },
         {
           "criterio": "Quem conserta",
-          "a": "os dois, meio a meio",
+          "a": "os dois, em regra meio a meio",
           "b": "você"
         },
         {
@@ -67,6 +67,20 @@
       "borda": "dourada"
     },
     {
+      "tipo": "tese",
+      "fundo": "bordo",
+      "tese": "Cerca reforçada pra segurar porco, carneiro ou galinha? Quem tem a criação paga sozinho.",
+      "texto": "É o art. 1.297, §3º do Código Civil. Se a cerca comum precisa virar cerca especial para conter animal de pequeno porte, a despesa do reforço é de quem tem os bichos. O vizinho não divide um reforço que só serve para a criação do outro."
+    },
+    {
+      "tipo": "foto-texto",
+      "foto": "../img/nelore-dupla.jpg",
+      "veu": "verde",
+      "foco": "center 45%",
+      "titulo": "Caiu por culpa\nde alguém? Não divide.",
+      "texto": "Gado que arrebentou, árvore do vizinho que tombou, máquina que bateu. Quando o estrago tem um responsável, quem causou é quem responde, pelos arts. 186 e 927 do Código Civil. A divisão meio a meio é pro desgaste do tempo."
+    },
+    {
       "tipo": "foto-texto",
       "titulo": "Fora da linha,\no vizinho não deve nada",
       "texto": "Antes de levantar, confira onde a divisa passa de verdade. Matrícula, memorial e, quando existe, o georreferenciamento.",
@@ -75,13 +89,13 @@
     },
     {
       "tipo": "lista",
-      "titulo": "Se o vizinho\nnão quiser pagar",
+      "titulo": "Antes de mexer\nna cerca",
       "itens": [
-        "Orçamento e nota do material usado",
+        "Avise por escrito, com o orçamento",
         "Foto do antes e do depois, com data",
-        "A conversa onde combinaram a obra"
+        "Nota do material e a resposta dele"
       ],
-      "remate": "Sem prova, a cobrança vira a sua palavra contra a dele.",
+      "remate": "Sem o aviso antes, o reembolso costuma cair.",
       "meiaFoto": true,
       "foto": "../img/fernando-assinando.jpg"
     },

@@ -520,3 +520,36 @@ Só a assinatura.
 
 Os três vídeos de setembro e o da área, de 28/10, já foram ao ar com o nome
 antigo na narração. Ficam como estão: são registro do que foi publicado.
+
+**02/11/2026 · revisão da Dra. Elisa em duas peças**
+
+Ela revisou a legenda do carrossel da cerca e do estático do patrimônio, com o
+motivo de cada ajuste. As observações batem na arte também, não só no texto.
+
+**Cerca divisória.** O carrossel foi de 7 para 9 telas.
+- Faltava a **cerca especial do art. 1.297, §3º**: se o reforço é pra segurar
+  porco, carneiro ou galinha, quem tem a criação paga sozinho. Virou tela própria,
+  em bordô. É a regra que mais aparece no campo.
+- **Meio a meio não é absoluto.** É presunção até prova em contrário e segue o
+  costume da região. "Cerca de divisa não é sua" virou "não é só sua", e a tabela
+  passou a dizer "os dois, em regra meio a meio".
+- **Avisar antes.** Tribunal costuma negar reembolso de obra feita sem combinar.
+  A lista virou "Antes de mexer na cerca", com o aviso por escrito e o orçamento
+  em primeiro lugar.
+- Somei a **culpa** (gado, árvore, máquina: arts. 186 e 927) numa tela nova, e o
+  **Juizado Especial** na legenda.
+
+**Patrimônio do produtor PF.** Já foi ao ar em 30/10, então só a legenda muda de
+fato; a arte fica pronta pra repostagem.
+- A **subsistência saiu**: não é requisito autônomo. São duas condições, pequena
+  e trabalhada pela família.
+- **Quem prova a exploração familiar é o produtor** (STJ, Tema 1.234).
+- Os quatro módulos vêm da **Lei 8.629/93**; o Tema 961 fala em área inferior a
+  quatro.
+- A proteção com o imóvel em garantia está nos **fundamentos** do Tema 961, não
+  na tese.
+- O título ganhou **"a compra dela"**: "financiou ela" fazia parecer que qualquer
+  financiamento derruba a proteção, quando o que derruba é só a dívida da compra.
+
+As duas artes continuam saindo com a logo e o @ antigos. Só vão pro feed depois
+que a logo da FTG chegar.
