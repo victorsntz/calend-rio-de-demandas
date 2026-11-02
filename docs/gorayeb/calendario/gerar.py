@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gera o Excel do calendário editorial para mandar ao marketing da Gorayeb.
+"""Gera o Excel do calendário editorial para mandar ao marketing da FTG.
 
 Uso:  python3 docs/gorayeb/calendario/gerar.py [pasta de saída]
 

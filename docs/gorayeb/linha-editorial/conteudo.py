@@ -25,7 +25,7 @@ def _carrega(caminho, nome):
 HOJE = datetime.date(2026, 10, 28)
 SLUG = "linha-editorial"
 ARQUIVO = "Linha_Editorial_Gorayeb"
-TITULO_DOC = "Linha editorial · Gorayeb Advocacia"
+TITULO_DOC = "Linha editorial · FTG Advogados"
 
 PREV = _carrega(os.path.join(GORAYEB, "lancamento-previdenciario", "conteudo.py"), "prev")
 AMB = _carrega(os.path.join(AQUI, "agro_ambiental.py"), "amb")
@@ -80,7 +80,7 @@ def _json(nome):
 VIDEO_AREA = dict(data="28/10 · quarta", formato="Vídeo · 90 segundos", pilar="Previdenciário",
  quem="Narração institucional, sem gravação",
  titulo="Vídeo da área previdenciária",
- objetivo="Informar que a Gorayeb agora atua em Direito Previdenciário e mostrar a área inteira, no campo e na cidade: aposentadorias, planejamento, BPC/LOAS, benefícios da família e revisão.",
+ objetivo="Informar que a FTG agora atua em Direito Previdenciário e mostrar a área inteira, no campo e na cidade: aposentadorias, planejamento, BPC/LOAS, benefícios da família e revisão.",
  tabela=(["Tempo","Cena","Na tela","Narração"],[
   ("0–5s","Campo ao amanhecer: estrada de terra, porteira.","A logo se formando.","(Trilha.)"),
   ("5–14s","Lavoura, gado, a cidade de longe.","","Há mais de vinte e cinco anos, a Gorayeb Advocacia caminha junto com quem produz e com as empresas da nossa região. Cuidando da terra, dos contratos, da família."),
@@ -273,4 +273,4 @@ PRECISAMOS = [
  "<b>Aviso de qualquer mudança de rota</b> com pelo menos 2 dias úteis antes da data do post.",
  "Se algum vídeo levar as fotos dos advogados, <b>o número da OAB do Dr. Gustavo</b>.",
 ]
-RODAPE = "Gorayeb Advocacia · Linha editorial"
+RODAPE = "FTG Advogados · Linha editorial"

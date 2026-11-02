@@ -1,5 +1,5 @@
 # Bloco trabalhista rural: NR-31 e acerto de safra.
-# Roteiros para aprovação da Gorayeb Advocacia. Fatos conferidos em fonte oficial em 23/10/2026.
+# Roteiros para aprovação da FTG Advogados. Fatos conferidos em fonte oficial em 23/10/2026.
 
 FONTES = {
     "nr31": (

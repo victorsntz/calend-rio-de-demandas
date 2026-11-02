@@ -495,3 +495,28 @@ Tipos de slide, figuras e ícones estão na tabela do `README.md`.
   passou a "roteiro aprovado · produzir a arte"; os três vídeos de setembro e o dos
   60 e 55 ficaram "aprovado · pronto para publicar".
 - O vídeo da área sai hoje. Legenda em `linha-editorial/01-legenda-28-10.txt`.
+
+**02/11/2026 · troca de nome**
+
+O escritório deixou de ser **Gorayeb Advocacia** e passou a ser **FTG Advogados**.
+O @ do Instagram já mudou. O sobrenome Gorayeb continua existindo nas pessoas
+(Dr. Fernando Torbay Gorayeb), então nada de troca cega no texto.
+
+Feito agora: nome do escritório trocado no título e no rodapé do PDF, no texto do
+objetivo do vídeo da área e nos comentários dos geradores.
+
+**Travado, esperando material do Victor:**
+
+1. **Logo novo**, horizontal claro e escuro. Hoje `assets/logo-horizontal-*.png`
+   traz o lockup com "GORAYEB ADVOCACIA" escrito. Enquanto não trocar, toda arte
+   renderizada sai com o nome velho. É o bloqueio de verdade.
+2. **O @ exato**, pra trocar a constante `ARROBA` em `render.mjs` e a regra no
+   `formato-01.md`.
+3. **Post fixado "Gorayeb em números"**, que o Victor vai mandar. Não está neste
+   repositório nem no acervo desta conta.
+
+O que **não** muda: o símbolo F|T|G, a paleta, as fotos e os 17 roteiros aprovados.
+Só a assinatura.
+
+Os três vídeos de setembro e o da área, de 28/10, já foram ao ar com o nome
+antigo na narração. Ficam como estão: são registro do que foi publicado.

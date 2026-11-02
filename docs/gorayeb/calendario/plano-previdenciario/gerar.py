@@ -234,7 +234,7 @@ def html_doc():
     if hasattr(M, "CAPA"):
         return html_doc_m()
     capa = f"""<section class="pag capa"><div class="listras"></div>
-  <img class="logo" src="../assets/logo-horizontal-claro.png" alt="Gorayeb Advocacia">
+  <img class="logo" src="../assets/logo-horizontal-claro.png" alt="FTG Advogados">
   <div class="meio">
     <p class="eyebrow">Plano de conteúdo · Instagram</p>
     <h1>Direito<br><em>Previdenciário</em></h1>
@@ -293,7 +293,7 @@ def html_doc():
 def html_doc_m():
     c = M.CAPA
     capa = f"""<section class="pag capa"><div class="listras"></div>
-  <img class="logo" src="../assets/logo-horizontal-claro.png" alt="Gorayeb Advocacia">
+  <img class="logo" src="../assets/logo-horizontal-claro.png" alt="FTG Advogados">
   <div class="meio">
     <p class="eyebrow">{c['eyebrow']}</p>
     <h1>{c['titulo']}</h1>
@@ -375,7 +375,7 @@ const pw = require('/opt/node-tools/node_modules/playwright');
   await p.evaluate(() => document.fonts.ready);
   await p.pdf({{path:'{pdf}', format:'A4', printBackground:true, preferCSSPageSize:true,
     displayHeaderFooter:true, headerTemplate:'<span></span>',
-    footerTemplate:'<div style="width:100%;font-family:Helvetica,Arial;font-size:7px;color:#8a8a7a;padding:0 20mm;display:flex;justify-content:space-between"><span>{getattr(M, 'RODAPE', 'Gorayeb Advocacia · Direito Previdenciário')}</span><span class="pageNumber"></span></div>',
+    footerTemplate:'<div style="width:100%;font-family:Helvetica,Arial;font-size:7px;color:#8a8a7a;padding:0 20mm;display:flex;justify-content:space-between"><span>{getattr(M, 'RODAPE', 'FTG Advogados · Direito Previdenciário')}</span><span class="pageNumber"></span></div>',
     }});
   await b.close();
 }})();"""
