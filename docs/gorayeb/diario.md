@@ -624,3 +624,25 @@ sem mudar o conteúdo.
 
 Falta foto de pessoa idosa e de pessoa com deficiência no banco. A peça se
 apoiou na casa de roça, no peão com o balde e na porteira.
+
+**03/11/2026 · estático de 13/11, georreferenciamento**
+
+Antes de desenhar, mandei reconferir o prazo, porque a peça se apoia numa
+liminar. Conferido em 03/11:
+
+- O **Decreto 12.689/2025** segue sendo a última alteração do Decreto 4.449/2002.
+  Nenhum decreto novo no DOU entre 22/10/2025 e hoje. A data correta é **21 de
+  outubro de 2029**; vários escritórios publicaram "21 de novembro", que vem do
+  Decreto 7.620, de 21/11/2011, revogado por este.
+- A **liminar de 07/05/2026** (Ação Popular 1086967-47.2025.4.01.3700) continua
+  sem sentença, sem suspensão e sem agravo conhecido. Última movimentação vista:
+  conclusão para decisão em 01/07/2026. Ressalva honesta: a base pública do CNJ
+  está defasada desde 17/08, e o DJEN bloqueia este ambiente. Nada apareceu na
+  imprensa registral até 30/10, que cobriu cada passo anterior em um dia.
+- **Armadilha de número:** a decisão fala em "inferior a 101 hectares", mas a
+  orientação aos cartórios manda aplicar "100 hectares ou mais". A legenda
+  passou a dizer "cerca de 100 hectares para cima", e a arte não promete prazo
+  nenhum, de propósito.
+
+Escala `curta` nova no `.frase`, de 58px: "georreferenciamento" não cabia nem no
+menor. A regra de duas linhas no apoio valeu de novo.

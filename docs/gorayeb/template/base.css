@@ -681,6 +681,8 @@
 }
 .frase.menor { font-size: 68px; }
 .frase.maior { font-size: 96px; }
+/* palavra comprida, tipo georreferenciamento, não cabe nem no menor */
+.frase.curta { font-size: 58px; }
 /* a segunda metade da frase é a virada: vai em caixa alta e dourada */
 .frase strong {
   font-weight: 700; text-transform: uppercase;
