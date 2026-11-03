@@ -78,15 +78,15 @@
     },
     {
       "tipo": "lista",
-      "titulo": "O PRA,\npasso a passo",
-      "meiaFoto": true,
-      "foto": "../img/fernando-assinando.jpg",
+      "titulo": "Quando falta mata,\nentra o PRA",
+      "textura": "listras",
       "itens": [
-        "O órgão analisa e aponta o passivo",
-        "Você tem 1 ano para aderir ao PRA",
-        "Assina o termo e cumpre o prazo"
+        "PRA é o Programa de Regularização Ambiental",
+        "O órgão analisa o seu CAR e aponta o passivo",
+        "Você é notificado e tem 1 ano para aderir",
+        "Assina o termo de compromisso e cumpre"
       ],
-      "remate": "Multa por desmate até 22/07/2008 vira serviço ambiental."
+      "remate": "Cumprido o termo, a multa por desmate anterior a 22/07/2008 vira serviço ambiental."
     },
     {
       "tipo": "fecho",

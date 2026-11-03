@@ -114,6 +114,17 @@ A cor sai sozinha do texto do selo. Pra forçar outra, `seloCor`. **O selo só e
 na capa**, nunca no miolo, e quando ele aparece a etiqueta de assunto da capa 1 é
 opcional: as duas juntas pesam.
 
+## Sigla
+
+**Sigla nova aparece explicada na mesma tela**, sempre. O Victor leu "O PRA,
+passo a passo" como "o para, passo a passo", e tinha razão: em português a
+sigla some dentro da preposição, e ninguém tem obrigação de saber o que é
+Programa de Regularização Ambiental.
+
+CAR e INSS já estão na boca do público e passam. APP passa porque a peça
+inteira explica. PRA, PGRTR, PPP, CNIS e CadÚnico não passam: ou vêm por
+extenso, ou vêm com a tradução do lado, na mesma tela.
+
 ## Quando o texto encolhe
 
 Tela não é lugar de apertar texto. Mas quando ele não cabe, **corta item, nunca
