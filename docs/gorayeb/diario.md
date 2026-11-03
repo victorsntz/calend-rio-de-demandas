@@ -553,3 +553,23 @@ fato; a arte fica pronta pra repostagem.
 
 As duas artes continuam saindo com a logo e o @ antigos. Só vão pro feed depois
 que a logo da FTG chegar.
+
+**03/11/2026 · logo nova no sistema**
+
+Chegou o pacote da FTG. Instalado:
+
+- `assets/logo-horizontal-claro.png` e `-escuro.png`, `logo-empilhado.png` e
+  `logo-empilhado-escuro.png`. Timbrado e cartão de visita em `assets/marca/`,
+  só como referência.
+- O símbolo F|G não mudou. A paleta não mudou. Mudou a palavra do lado.
+- **O lockup novo é mais baixo:** 3 por 1, contra 4,4 por 1 do antigo, porque a
+  palavra virou uma linha só. Na altura antiga, "ADVOGADOS" ficava ilegível.
+  Entrou `ESCALA_LOGO = 1.45` no `render.mjs` e a capa do PDF subiu de 15 para
+  21 mm. É um lugar só nos dois casos.
+- `@ftgadvogados` no topo de todo slide, na constante `PERFIL` do `render.mjs`.
+  **Grafia a confirmar com o Victor.**
+- Tudo que estava pronto foi renderizado de novo e reempacotado: cerca,
+  patrimônio, cooperativas, recuperação judicial, vaga, pecuária e escala 6x1.
+  O PDF da linha editorial também.
+
+Regra de marca escrita no `formato-01.md`, na seção A marca.

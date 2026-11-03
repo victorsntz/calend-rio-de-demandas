@@ -53,7 +53,10 @@ const rico = (s = "", agressivo = false) =>
 /* títulos, teses e frases curtas levam costura agressiva */
 const titulo = (s) => rico(s, true);
 
-const ARROBA = '<div class="arroba">@gorayebadvocacia</div>';
+/* o @ mudou com o nome novo, em 02/11/2026. Um lugar só: muda aqui e sai em
+   todo slide. CONFERIR a grafia exata com o Victor antes de publicar. */
+const PERFIL = "@ftgadvogados";
+const ARROBA = `<div class="arroba">${PERFIL}</div>`;
 
 /* selo de área, no alto à direita da capa: diz de que área é o conteúdo.
    A cor sai da área, pra dar pra reconhecer o assunto de longe no feed. */
@@ -88,8 +91,13 @@ const CAIXA = (c) =>
     </div>`;
 /* Logos oficiais da pasta ENTREGA > LOGOS E SÍMBOLOS do Drive. Nunca
    redesenhar: é só escolher a versão certa pro fundo. */
+/* O lockup da FTG é mais baixo que o da marca antiga: ali a palavra vinha em
+   duas linhas, aqui vem em uma só, do lado do símbolo. Na mesma altura de
+   antes, "ADVOGADOS" sai pequeno demais pra ler. O fator devolve ao logo a
+   largura óptica que ele tinha, sem precisar mexer em cada chamada. */
+const ESCALA_LOGO = 1.45;
 const LOCKUP = (altura = 74, claro = true) =>
-  `<img class="logo" style="height:${altura}px" alt="Gorayeb Advocacia"
+  `<img class="logo" style="height:${Math.round(altura * ESCALA_LOGO)}px" alt="FTG Advogados"
      src="../assets/logo-horizontal-${claro ? "claro" : "escuro"}.png">`;
 
 /* estes montam a imagem dentro do corpo, então não levam foto de fundo */

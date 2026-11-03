@@ -52,7 +52,7 @@ b,strong{font-weight:500;color:var(--tinta)}
 
 /* capa */
 .capa{page:capa;width:210mm;height:297mm;overflow:hidden;background:var(--verde);color:var(--creme);display:flex;flex-direction:column;padding:26mm 22mm}
-.capa .logo{height:15mm;align-self:flex-start}
+.capa .logo{height:21mm;align-self:flex-start}  /* lockup novo da FTG: mais baixo, pede mais altura */
 .capa .meio{margin-top:auto;margin-bottom:auto}
 .capa .eyebrow{color:var(--dourado)}
 .capa h1{color:var(--creme);font-size:40pt;line-height:1.05;margin-bottom:7mm}

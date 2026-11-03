@@ -18,7 +18,7 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Logo** | Só na **capa** e no **último slide**. Nunca no miolo. |
 | **Assinatura** | "Do agro, pelo agro." **não entra em lugar nenhum**: nem na arte, nem na legenda do post. |
 | **Alinhamento** | **Tudo à esquerda**, por padrão. Inclusive o fecho. O único centro que sobra é o número dentro do donut, que é composição do gráfico. |
-| **@gorayebadvocacia** | Topo, à esquerda, alinhado com o resto. Com folga de 46 px abaixo. |
+| **@ftgadvogados** | Topo, à esquerda, alinhado com o resto. Com folga de 46 px abaixo. |
 | **Marca d'água** | A chapa do `corpo-foto` fica em **cor sólida**. A marca ao fundo só entra se for pedida. |
 | **Listras** | Textura, não padrão. Escala grande, contraste baixo, esmaecendo na diagonal. Nunca em todo slide do carrossel. |
 | **Viúvas** | Palavra sozinha fechando linha **não passa**. O render costura sozinho; se ainda ficar feia, encurtar a frase. |
@@ -32,6 +32,28 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **"Agrário" e "Agronegócio"** | Não listar os dois juntos: pra cliente são a mesma coisa. O termo da casa é **Direito do Agronegócio**. Regra da Dra. Elisa, 21/10. |
 | **"Conta ponto"** | Fora. Diferencial de vaga vai sob o rótulo **Desejável**. Regra da Dra. Elisa, 21/10. |
 | **Barra de progresso** | **Não usar.** Existe no template (`progresso: true`), mas ficou de fora por decisão do Victor. |
+
+## A marca
+
+Em **02/11/2026** o escritório deixou de ser Gorayeb Advocacia e passou a ser
+**FTG Advogados**. O símbolo F|G continua igual, a paleta continua igual. Mudou
+só a palavra do lado dele, e o @ do Instagram.
+
+| | |
+| --- | --- |
+| **Nome** | FTG Advogados. Nunca mais "Gorayeb Advocacia" em peça nova. |
+| **Sobrenome** | "Gorayeb" continua existindo nas pessoas: Dr. Fernando Torbay Gorayeb. Isso não se troca. |
+| **Logo claro** | `assets/logo-horizontal-claro.png`, palavra em creme, pra fundo escuro. |
+| **Logo escuro** | `assets/logo-horizontal-escuro.png`, palavra em verde, pra fundo claro. |
+| **Empilhado** | `assets/logo-empilhado.png` (claro) e `logo-empilhado-escuro.png`. |
+| **Papelaria** | Timbrado e cartão em `assets/marca/`, só referência. |
+
+**O lockup novo é mais baixo que o antigo.** Antes a palavra vinha em duas
+linhas e o conjunto era 4,4 por 1; agora vem em uma linha só e o conjunto é 3
+por 1. Na mesma altura de antes, "ADVOGADOS" sai pequeno demais pra ler. Por
+isso o `render.mjs` tem `ESCALA_LOGO = 1.45`, que devolve ao logo a largura
+óptica de antes. Mexer ali, não em cada chamada. No PDF, a altura da capa subiu
+de 15 mm para 21 mm pelo mesmo motivo.
 
 ## A capa
 
