@@ -18,7 +18,7 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Logo** | Só na **capa** e no **último slide**. Nunca no miolo. |
 | **Assinatura** | "Do agro, pelo agro." **não entra em lugar nenhum**: nem na arte, nem na legenda do post. |
 | **Alinhamento** | **Tudo à esquerda**, por padrão. Inclusive o fecho. O único centro que sobra é o número dentro do donut, que é composição do gráfico. |
-| **@ftgadvogados** | Topo, à esquerda, alinhado com o resto. Com folga de 46 px abaixo. |
+| **@ftgadvogados_** | Topo, à esquerda, alinhado com o resto. Com folga de 46 px abaixo. |
 | **Marca d'água** | A chapa do `corpo-foto` fica em **cor sólida**. A marca ao fundo só entra se for pedida. |
 | **Listras** | Textura, não padrão. Escala grande, contraste baixo, esmaecendo na diagonal. Nunca em todo slide do carrossel. |
 | **Viúvas** | Palavra sozinha fechando linha **não passa**. O render costura sozinho; se ainda ficar feia, encurtar a frase. |

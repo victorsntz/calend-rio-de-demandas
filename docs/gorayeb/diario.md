@@ -573,3 +573,15 @@ Chegou o pacote da FTG. Instalado:
   O PDF da linha editorial também.
 
 Regra de marca escrita no `formato-01.md`, na seção A marca.
+
+**03/11/2026 · o @ certo e o Instagram**
+
+O perfil é **@ftgadvogados_**, com underline no fim. Eu tinha posto sem. Corrigido
+na constante `PERFIL` do `render.mjs` e no `formato-01.md`, e todas as peças foram
+renderizadas e reempacotadas de novo.
+
+**Não consigo abrir o Instagram daqui.** O endereço não resolve nesta sessão: o
+instagram.com não está na lista de domínios liberados. Mesmo liberado, o perfil
+público costuma devolver só a tela de login para quem não está logado. Então o
+que está no ar eu só sei pelo que o Victor contar. O controle do que saiu
+continua sendo a coluna Status da aba Agenda, no Excel.

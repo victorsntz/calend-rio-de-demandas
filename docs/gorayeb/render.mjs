@@ -54,8 +54,8 @@ const rico = (s = "", agressivo = false) =>
 const titulo = (s) => rico(s, true);
 
 /* o @ mudou com o nome novo, em 02/11/2026. Um lugar só: muda aqui e sai em
-   todo slide. CONFERIR a grafia exata com o Victor antes de publicar. */
-const PERFIL = "@ftgadvogados";
+   todo slide. Confirmado pelo Victor em 03/11: tem underline no fim. */
+const PERFIL = "@ftgadvogados_";
 const ARROBA = `<div class="arroba">${PERFIL}</div>`;
 
 /* selo de área, no alto à direita da capa: diz de que área é o conteúdo.
