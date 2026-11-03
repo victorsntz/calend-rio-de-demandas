@@ -1,0 +1,102 @@
+{
+  "id": "reserva-legal-app",
+  "titulo": "Reserva Legal e APP: como funciona dentro do CAR",
+  "nota": "Post de 06/11. Roteiro aprovado pela Dra. Elisa em 28/10. Capa 3, tipográfica, pela rotação de capas. Selo de Agronegócio. Sem foto de rio ou de mata no banco, então a peça se apoia na figura da margem e na tipografia.",
+  "legenda_instagram": "RESERVA LEGAL E APP: AS DUAS ÁREAS QUE TODO CAR PRECISA MOSTRAR NO MAPA.\n\nQuem faz o cadastro desenha as duas. Quem analisa confere se o desenho bate com a lei e com a realidade do imóvel.\n\nA RESERVA LEGAL. Fora da Amazônia Legal, como aqui no Triângulo Mineiro, a lei pede 20% do imóvel com vegetação nativa. No Cerrado dentro da Amazônia Legal, são 35%. A APP pode entrar nessa conta, desde que esteja conservada e que isso não sirva para abrir área nova.\n\nA APP. Em rio com menos de 10 metros de largura, são 30 metros de mata em cada margem, medidos da margem e não da cerca. A faixa aumenta com a largura do rio e chega a 500 metros. Em volta de nascente e de olho d'água, o raio protegido é de 50 metros. Na vereda, tão comum no Cerrado, são 50 metros a partir do brejo.\n\nÁREA ABERTA ANTES DE 2008. Onde a terra já estava em uso até 22 de julho de 2008, a faixa a recompor é menor e depende do tamanho do imóvel. É o que a lei chama de área rural consolidada.\n\nO CARTÓRIO SAIU DA HISTÓRIA. Com a Reserva Legal registrada no CAR, a averbação na matrícula deixou de ser exigida. Quem já averbou antes pode usar a certidão do cartório no próprio cadastro.\n\nFALTOU RESERVA? São três caminhos na lei: recompor a área em até 20 anos, deixar a mata voltar sozinha pela regeneração natural, ou compensar em outra área. Imóvel de até 4 módulos fiscais em 22/07/2008 fica com a vegetação nativa que tinha naquele dia.\n\nE O PRA. O órgão ambiental analisa o CAR, aponta o passivo e notifica o produtor. A partir da notificação, é 1 ano para aderir ao Programa de Regularização Ambiental. Assinado e cumprido o termo de compromisso, a multa por desmate anterior a 22/07/2008 vira serviço ambiental.\n\nSalve este carrossel e confira o seu CAR com calma.\n\nFontes: Lei 12.651/2012, arts. 4º, 12, 15, 18, 30, 59, 61-A, 66, 67 e 68; Lei 14.595/2023.",
+  "slides": [
+    {
+      "tipo": "capa-tipo",
+      "selo": "Agronegócio",
+      "textura": "listras",
+      "kicker": "Código Florestal",
+      "titulo": "Reserva Legal\ne *APP*.",
+      "sub": "As duas áreas que todo CAR precisa mostrar no mapa. E que o órgão ambiental confere na análise."
+    },
+    {
+      "tipo": "cifra",
+      "fundo": "creme",
+      "etiqueta": "Reserva Legal",
+      "numero": "20%",
+      "leitura": "da área do imóvel, com vegetação nativa",
+      "texto": "É o que a lei pede fora da Amazônia Legal, como aqui no Triângulo Mineiro. No Cerrado dentro da Amazônia Legal, são 35%. A APP pode entrar nessa conta, desde que esteja conservada e isso não sirva para abrir área nova.",
+      "fonte": "arts. 12 e 15 da Lei 12.651/2012"
+    },
+    {
+      "tipo": "figura",
+      "figura": "margem",
+      "fundo": "offwhite",
+      "titulo": "Trinta metros\nem cada margem",
+      "faixa": "30 m",
+      "rotuloRio": "o rio",
+      "legenda": "Em rio com menos de 10 metros, são 30 metros de mata em cada margem. A faixa aumenta com a largura do rio e chega a 500 metros.",
+      "fonte": "art. 4º, I da Lei 12.651/2012",
+      "alt": "Vista de cima de um rio estreito com 30 metros de mata protegida de cada lado"
+    },
+    {
+      "tipo": "foto-texto",
+      "foto": "../img/cafezal-minas.png",
+      "veu": "verde",
+      "foco": "center 55%",
+      "titulo": "Área aberta antes\nde 2008 tem regra própria",
+      "texto": "Onde a terra já estava em uso até 22 de julho de 2008, a faixa a recompor é menor e depende do tamanho do imóvel. É o que a lei chama de área rural consolidada."
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../img/capa-cerrado-divisa.jpg",
+      "foco": "center 52%",
+      "titulo": "Cinquenta metros\nem volta da água.",
+      "paragrafos": [
+        "Em volta de nascente e olho d'água, o raio protegido é de 50 metros.",
+        "Na vereda, tão comum no Cerrado, a faixa é de 50 metros a partir do brejo. A conta começa na água, não na cerca."
+      ]
+    },
+    {
+      "tipo": "tese",
+      "fundo": "bordo",
+      "tese": "Averbar a Reserva Legal no cartório não é mais obrigatório.",
+      "texto": "Com ela registrada no CAR, a averbação na matrícula deixou de ser exigida. Quem já averbou antes pode usar a certidão do cartório no próprio cadastro."
+    },
+    {
+      "tipo": "itens",
+      "etiqueta": "Faltou reserva",
+      "titulo": "Três caminhos\nna lei",
+      "itens": [
+        {
+          "icone": "relogio",
+          "texto": "Recompor a área, em até 20 anos"
+        },
+        {
+          "icone": "folha",
+          "texto": "Deixar a mata voltar sozinha, pela regeneração natural"
+        },
+        {
+          "icone": "mapa",
+          "texto": "Compensar em outra área"
+        }
+      ],
+      "remate": "Imóvel de até 4 módulos fiscais em 22/07/2008 fica com a vegetação nativa que tinha naquele dia."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "O PRA,\npasso a passo",
+      "meiaFoto": true,
+      "foto": "../img/fernando-assinando.jpg",
+      "itens": [
+        "O órgão analisa e aponta o passivo",
+        "Você tem 1 ano para aderir",
+        "Assina o termo e cumpre o combinado"
+      ],
+      "remate": "A multa antiga vira serviço ambiental."
+    },
+    {
+      "tipo": "fecho",
+      "foto": "../img/estrada-cerrado-cerca.jpg",
+      "veu": "verde",
+      "sintese": "Reserva e APP\nno lugar certo do mapa.",
+      "paragrafos": [
+        "O órgão ambiental confere isso na análise do cadastro. Quem desenhou errado descobre tarde, quando o crédito trava."
+      ],
+      "salvar": "*Salve este carrossel* e confira o seu CAR com calma."
+    }
+  ]
+}

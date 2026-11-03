@@ -585,3 +585,26 @@ instagram.com não está na lista de domínios liberados. Mesmo liberado, o perf
 público costuma devolver só a tela de login para quem não está logado. Então o
 que está no ar eu só sei pelo que o Victor contar. O controle do que saiu
 continua sendo a coluna Status da aba Agenda, no Excel.
+
+**03/11/2026 · carrossel de 06/11, Reserva Legal e APP**
+
+Primeira peça desenhada com a marca nova. 9 telas, capa 3 (tipográfica), selo de
+Agronegócio, roteiro aprovado pela Dra. Elisa em 28/10 sem mudar uma vírgula.
+
+**Figura nova: `margem`.** Vista de cima de um rio com a faixa de mata de cada
+lado e a medida embaixo. Primeiro desenhei em corte, visto de lado, e a água
+virava um balde marrom no meio da tela. De cima funciona melhor, e é como a área
+aparece no mapa do CAR, que é justamente o assunto da peça.
+
+Duas correções de percurso que valem pras próximas:
+
+- O título era "A faixa cresce com o rio" e o desenho mostrava um caso só.
+  Prometia o que não entregava. Virou "Trinta metros em cada margem", e o
+  crescimento ficou na legenda da figura.
+- `itens` com dois itens deixa meia tela vazia. A tela da nascente e da vereda
+  virou `corpo-foto`.
+- **Em `lista` com `meiaFoto`, item passa de 35 caracteres já quebra em duas
+  linhas e o remate cai pra fora da tela.** Terceira vez que isso acontece.
+
+Não há foto de rio, nascente ou mata ciliar no banco. A peça se segura na figura
+e na tipografia. Vale pedir ao escritório, ou garimpar, fotos de água e de mata.

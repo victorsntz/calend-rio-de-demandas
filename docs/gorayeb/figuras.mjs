@@ -1,5 +1,5 @@
-/* Figuras dos carrosséis: donut, barras, mapa, números, tabela, cerca e
- * linha do tempo.
+/* Figuras dos carrosséis: donut, barras, mapa, números, tabela, cerca,
+ * margem de rio e linha do tempo.
  *
  * Regras que valem pra todas:
  *  - no máximo dois dados coloridos por figura; o resto é neutro;
@@ -432,5 +432,57 @@ export function cerca(f) {
   </div>`;
 }
 
-export const FIGURAS = { donut, blocos, barras, mapa, numeros, tabela, cerca, linha, semana };
+
+/* ---- margem de rio -----------------------------------------------------
+   Corte do terreno visto de lado: o rio no meio e a faixa de mata que a lei
+   protege em cada margem. Ilustração, não gráfico: mostra de onde se mede,
+   que é onde quase todo mundo erra, medindo da cerca em vez da margem.  */
+export function margem(f) {
+  /* Visto de cima, que é como a área aparece no mapa do CAR: o rio desce no
+     meio e a mata protegida corre dos dois lados dele. Em corte, a água
+     virava um balde marrom no meio da tela e não lia como rio.          */
+  const topo = 92, base = 480;
+  const rioA = 462, rioB = 538;
+  const faixaL = 190, faixaR = 810;
+
+  /* copa vista de cima: círculos de dois tamanhos, posição fixa pra figura
+     sair igual em toda renderização */
+  const copas = (a, b) => {
+    const out = [];
+    const col = 4, lin = 6, dx = (b - a) / col, dy = (base - topo) / lin;
+    for (let i = 0; i < col; i++)
+      for (let j = 0; j < lin; j++) {
+        const x = a + dx * (i + 0.5) + ((j % 2) ? dx * 0.22 : -dx * 0.18);
+        const y = topo + dy * (j + 0.5);
+        const r = (i + j) % 3 === 0 ? 26 : (i + j) % 3 === 1 ? 21 : 17;
+        out.push(`<circle cx="${n2(x)}" cy="${n2(y)}" r="${r}" fill="var(--dado-1)" opacity="${(i + j) % 2 ? 0.78 : 1}"/>`);
+      }
+    return out.join("");
+  };
+  const medida = (a, b, rot) => `
+      <path d="M${a},${base + 36} v20 H${b} v-20" fill="none" stroke="var(--dado-1)" stroke-width="3.5" opacity=".7"/>
+      <text x="${(a + b) / 2}" y="${base + 128}" class="rot-num" style="font-size:70px" text-anchor="middle" fill="var(--dado-1)">${esc(rot)}</text>`;
+
+  return `
+  <div class="figura">
+    <svg viewBox="0 0 1000 660" role="img" aria-label="${esc(f.alt || "Vista de cima de um rio com a faixa de mata protegida de cada lado")}">
+      <rect x="${rioA}" y="${topo}" width="${rioB - rioA}" height="${base - topo}" fill="var(--dado-2)" opacity=".9"/>
+      <path d="M500,${topo} q-26,60 0,120 q26,60 0,120 q-26,60 0,120 q26,60 0,110" fill="none"
+            stroke="var(--areia)" stroke-width="4" opacity=".45"/>
+      ${copas(faixaL, rioA - 16)}
+      ${copas(rioB + 16, faixaR)}
+      <line x1="${rioA}" y1="${topo - 8}" x2="${rioA}" y2="${base + 30}" stroke="var(--areia)" stroke-width="2" stroke-dasharray="9 13" opacity=".55"/>
+      <line x1="${rioB}" y1="${topo - 8}" x2="${rioB}" y2="${base + 30}" stroke="var(--areia)" stroke-width="2" stroke-dasharray="9 13" opacity=".55"/>
+      <line x1="${faixaL}" y1="${topo - 8}" x2="${faixaL}" y2="${base + 30}" stroke="var(--areia)" stroke-width="2" stroke-dasharray="9 13" opacity=".4"/>
+      <line x1="${faixaR}" y1="${topo - 8}" x2="${faixaR}" y2="${base + 30}" stroke="var(--areia)" stroke-width="2" stroke-dasharray="9 13" opacity=".4"/>
+      ${medida(faixaL, rioA, f.faixa || "30 m")}
+      ${medida(rioB, faixaR, f.faixa || "30 m")}
+      <text x="500" y="${topo - 20}" class="rot-txt" text-anchor="middle">${esc(f.rotuloRio || "o rio")}</text>
+    </svg>
+    ${f.legenda ? `<p class="figura-legenda">${ec(f.legenda)}</p>` : ""}
+    ${f.fonte ? `<p class="fonte">Fonte: ${esc(f.fonte)}</p>` : ""}
+  </div>`;
+}
+
+export const FIGURAS = { donut, blocos, barras, mapa, numeros, tabela, cerca, margem, linha, semana };
 
