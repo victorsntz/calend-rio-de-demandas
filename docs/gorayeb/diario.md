@@ -608,3 +608,19 @@ Duas correções de percurso que valem pras próximas:
 
 Não há foto de rio, nascente ou mata ciliar no banco. A peça se segura na figura
 e na tipografia. Vale pedir ao escritório, ou garimpar, fotos de água e de mata.
+
+**03/11/2026 · carrossel de 11/11, BPC/LOAS**
+
+8 telas, capa 4 (clara), selo de Área Previdenciária, roteiro aprovado em 28/10
+sem mudar o conteúdo.
+
+- A sigla vem traduzida na tarja da capa, "BPC, o Benefício de Prestação
+  Continuada", antes de aparecer sozinha em qualquer tela. É a regra nova,
+  aplicada pela primeira vez.
+- A tela 2 abre negando: "O BPC não é aposentadoria." É a confusão número um
+  do tema, e tirá-la do caminho cedo faz o resto ser lido direito.
+- A tela da pessoa com deficiência ficou com três itens mais um remate. Com
+  quatro itens e sem remate, sobra um vão no pé da tela: nada ancora embaixo.
+
+Falta foto de pessoa idosa e de pessoa com deficiência no banco. A peça se
+apoiou na casa de roça, no peão com o balde e na porteira.
