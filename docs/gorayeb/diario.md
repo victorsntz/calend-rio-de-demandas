@@ -646,3 +646,19 @@ liminar. Conferido em 03/11:
 
 Escala `curta` nova no `.frase`, de 58px: "georreferenciamento" não cabia nem no
 menor. A regra de duas linhas no apoio valeu de novo.
+
+**03/11/2026 · foto do escritório no estático de 13/11**
+
+Pedido do Victor: trocar a paisagem por foto do escritório. Ficou a sala de
+reuniões, que combina com o recado da peça, que é sentar e perguntar antes de
+mexer na terra. Fachada e o F|G na madeira ficaram como alternativa.
+
+Duas coisas que apareceram na busca:
+
+- **`img/pasta-gorayeb.jpg` está queimada.** Mostra "GORAYEB ADVOCACIA" impresso
+  na papelaria. Não entra em peça nenhuma enquanto não houver papelaria nova.
+- **O banco do escritório só tem detalhe e objeto.** Fachada, mesa vazia, madeira
+  com o símbolo, dama da justiça, alfinete. Nenhuma pessoa. Por isso as peças
+  caem em paisagem toda vez que pedem presença humana, e o bloco previdenciário
+  inteiro fala de gente. Vale meia hora de fotógrafo no escritório: atendimento,
+  mãos sobre documento, conversa na mesa. Com a marca nova, é a hora.
