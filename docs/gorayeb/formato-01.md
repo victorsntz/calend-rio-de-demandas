@@ -114,6 +114,26 @@ A cor sai sozinha do texto do selo. Pra forçar outra, `seloCor`. **O selo só e
 na capa**, nunca no miolo, e quando ele aparece a etiqueta de assunto da capa 1 é
 opcional: as duas juntas pesam.
 
+## Quando o texto encolhe
+
+Tela não é lugar de apertar texto. Mas quando ele não cabe, **corta item, nunca
+condição**. Em 03/11 a tela do PRA perdeu o "anterior a 22/07/2008" pra caber, e
+com ele perdeu o sentido: sem a data, parecia que qualquer multa velha vira
+serviço ambiental. O Victor pegou.
+
+A ordem pra encurtar é esta:
+
+1. Tirar palavra que não carrega informação ("o próprio", "na prática").
+2. Tirar um item inteiro da lista.
+3. Mudar o tipo da tela, que é o que costuma resolver de verdade.
+
+Data, prazo, percentual e condição são a informação. Se eles não couberem, a
+tela está errada, não o texto.
+
+**Medidas que já doeram:** em `lista` com `meiaFoto`, item acima de 35
+caracteres quebra em duas linhas, e o remate acima de 45 cai pra fora da tela.
+Em `itens`, menos de três itens deixa meia tela vazia.
+
 ## O que entra no miolo
 
 Alternar. Nenhum fundo repete dentro do mesmo carrossel.
