@@ -1,0 +1,258 @@
+/* Sistema v2 "estáticos compilados": cada slide se sustenta sozinho (cabeçalho, conteúdo, assinatura).
+   Base: o que funciona nos criativos 2024–2026 (sálvia com textura, blocos musgo com creme, células,
+   linha-árvore, numeral gigante, foto com tarja, fecho com a Dra.) + o que é só da marca e sumiu
+   (serifa da logo nos títulos, padrão de folhas, isótipo em traço). Sem colchetes, sem emoji, sem caps bold. */
+:root {
+  --v: 48,36,26;             /* cor do véu das fotos: marrom (padrão); .v-musgo troca pra verde escuro */
+  --vf: 36,27,20;            /* fim do véu */
+  --musgo: #2B3629;          /* fundo escuro (medido nos slides 2026: #243023–#2D3B2D) */
+  --musgo-texto: #343B30;    /* texto escuro (manual) */
+  --salvia: #A7B39C;         /* fundo sálvia claro (OUT/2026) */
+  --salvia-escuro: #76806D;  /* sálvia média (manual: verde claro) */
+  --saude: #CCD77F;
+  --papel: #EFE8DC;          /* creme quente com textura (amarronzado) */
+  --creme: #E8E2D4;          /* texto sobre musgo */
+  --marrom: #4D392A;
+  --marrom-claro: #B8A08A;
+  --branco: #FFFFFF;
+  --serif: 'Gloock', 'DM Serif Display', Georgia, serif;
+  --sans: 'Sora', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --textura: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>");
+}
+html, body { margin: 0; background: #ddd; }
+.slide { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--papel); color: var(--musgo-texto); font-family: var(--sans); }
+.slide img { display: block; }
+h1, h2, h3, p { margin: 0; }
+h2 { font-family: var(--serif); font-weight: 400; font-size: 76px; line-height: 1.04; letter-spacing: -0.015em; text-wrap: balance; }
+p { font-size: 29px; line-height: 1.45; font-weight: 300; }
+p b, li b { font-weight: 600; }
+.grifo { text-decoration: underline; text-decoration-color: var(--saude); text-decoration-thickness: 4px; text-underline-offset: 8px; }
+
+/* textura de papel nos fundos claros e sálvia */
+.t-salvia::before, .t-papel::before, .t-marromclaro::before { content: ""; position: absolute; inset: 0; background-image: var(--textura); opacity: .16; mix-blend-mode: multiply; pointer-events: none; z-index: 0; }
+.slide > * { position: relative; z-index: 1; }
+
+/* cabeçalho e assinatura: todo slide carrega os dois, pra valer sozinho como estático */
+.cabecalho { position: absolute; top: 54px; left: 0; width: 100%; text-align: center; font-size: 17px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--salvia-escuro); }
+.cabecalho i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--saude); margin: 0 18px; vertical-align: middle; }
+.rodape-padrao { position: absolute; left: 0; bottom: 0; width: 1080px; height: 36px; display: block; }
+.deslize { position: absolute; right: 96px; bottom: 74px; font-size: 17px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--salvia-escuro); }
+.fonte { font-size: 17px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: var(--salvia-escuro); }
+
+/* temas */
+.t-musgo { background: var(--musgo); color: var(--creme); }
+.t-musgo .cabecalho, .t-musgo .deslize, .t-musgo .fonte { color: var(--salvia); }
+.t-marrom { background: var(--marrom); color: var(--creme); }
+.t-marrom .cabecalho, .t-marrom .deslize, .t-marrom .fonte { color: var(--marrom-claro); }
+.t-salvia { background: var(--salvia); color: var(--musgo-texto); }
+.t-salvia .cabecalho, .t-salvia .deslize, .t-salvia .fonte { color: var(--musgo); }
+.t-marromclaro { background: var(--marrom-claro); color: var(--marrom); }
+.t-marromclaro .cabecalho, .t-marromclaro .deslize, .t-marromclaro .fonte { color: var(--marrom); }
+.t-branco { background: var(--branco); }
+
+/* ---- capa-foto: foto inteira, véu, título em serifa, logo branca ---- */
+.capa-foto .foto { position: absolute; inset: 0; z-index: 0; }
+.capa-foto .foto img { width: 100%; height: 100%; object-fit: cover; }
+.capa-foto .veu { position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(var(--v),.18) 0%, rgba(var(--v),.08) 35%, rgba(var(--v),.84) 72%, rgba(var(--v),.97) 100%); }
+.capa-foto .cabecalho { color: rgba(255,255,255,.85); }
+.capa-foto .cabecalho i { background: var(--saude); }
+.capa-foto .bloco { position: absolute; left: 96px; right: 96px; bottom: 250px; color: var(--branco); display: flex; flex-direction: column; gap: 30px; }
+.capa-foto .rotulo { font-size: 19px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; color: var(--saude); }
+.capa-foto h1 { font-family: var(--serif); font-weight: 400; font-size: 104px; line-height: 1.0; letter-spacing: -0.02em; text-wrap: balance; }
+.capa-foto .sub { font-size: 31px; font-weight: 300; line-height: 1.4; max-width: 760px; color: rgba(255,255,255,.92); }
+.capa-foto .logo { position: absolute; left: 96px; bottom: 96px; }
+.capa-foto .logo img { height: 84px; }
+.capa-foto .deslize { color: rgba(255,255,255,.8); bottom: 118px; }
+.capa-foto .credito { position: absolute; right: 36px; top: 110px; font-size: 15px; letter-spacing: 0.1em; color: rgba(255,255,255,.7); }
+
+/* ---- noticia: print real num cartão ---- */
+.noticia .cartao { position: absolute; left: 72px; right: 72px; top: 132px; border-radius: 22px; overflow: hidden; background: #fff; box-shadow: 0 24px 60px rgba(43,54,41,.22); }
+.noticia .faixa { height: 96px; background: var(--musgo); color: var(--creme); display: flex; align-items: center; justify-content: center; gap: 24px; font-family: var(--serif); font-size: 46px; letter-spacing: 0.04em; }
+.noticia .faixa i { width: 12px; height: 12px; border-radius: 50%; background: var(--saude); }
+.noticia .print { width: 936px; height: auto; display: block; }
+.noticia .legenda { position: absolute; left: 96px; right: 96px; bottom: 96px; display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center; }
+.noticia .legenda p { font-size: 27px; }
+
+/* ---- celulas: título serifa + lista em células contornadas ---- */
+.celulas .miolo { position: absolute; left: 96px; right: 96px; top: 180px; bottom: 150px; display: flex; flex-direction: column; gap: 40px; }
+.celulas h2 { font-size: 72px; }
+.celulas ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.celulas li { border: 1.5px solid currentColor; padding: 30px 36px; font-size: 30px; line-height: 1.35; font-weight: 300; display: flex; gap: 26px; align-items: baseline; }
+.celulas li .n { font-family: var(--serif); font-size: 34px; min-width: 44px; color: var(--salvia-escuro); }
+.t-musgo.celulas li .n, .t-marrom.celulas li .n { color: var(--saude); }
+.t-salvia.celulas li .n { color: var(--musgo); }
+.celulas .fonte { margin-top: auto; }
+
+/* ---- dado: numeral gigante em serifa ---- */
+.dado .miolo { position: absolute; left: 96px; right: 96px; top: 200px; bottom: 150px; display: flex; flex-direction: column; }
+.dado .numero { font-family: var(--serif); font-size: 420px; line-height: .86; letter-spacing: -0.04em; margin-left: -14px; }
+.t-musgo.dado .numero, .t-marrom.dado .numero { color: var(--saude); }
+.t-salvia.dado .numero, .t-papel.dado .numero { color: var(--musgo); }
+.dado h2 { font-family: var(--sans); font-weight: 500; font-size: 40px; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.02em; margin-top: 28px; padding-top: 28px; border-top: 2px solid currentColor; max-width: 820px; }
+.dado p { margin-top: 36px; max-width: 800px; }
+.dado .fonte { margin-top: auto; }
+
+/* ---- cards: ícones de linha em caixas ---- */
+.cards .miolo { position: absolute; left: 96px; right: 96px; top: 180px; bottom: 150px; display: flex; flex-direction: column; gap: 44px; }
+.cards h2 { font-size: 72px; }
+.cards .lista { display: flex; flex-direction: column; gap: 24px; }
+.cards .card { display: flex; align-items: center; gap: 36px; border: 1.5px solid currentColor; padding: 34px 38px; }
+.cards .card svg { flex: none; width: 104px; height: 104px; stroke: currentColor; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.t-musgo.cards .card svg, .t-marrom.cards .card svg { stroke: var(--saude); }
+.cards .card .t { font-size: 31px; line-height: 1.35; font-weight: 300; }
+.cards .card .t b { display: block; font-weight: 600; font-size: 24px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+.cards p { font-size: 27px; }
+.cards .fonte { margin-top: auto; }
+
+/* ---- passos: linha-árvore vertical numerada ---- */
+.passos .miolo { position: absolute; left: 96px; right: 96px; top: 180px; bottom: 150px; display: flex; flex-direction: column; gap: 48px; }
+.passos h2 { font-size: 72px; }
+.passos ol { list-style: none; margin: 0; padding: 0 0 0 34px; border-left: 1.5px solid currentColor; display: flex; flex-direction: column; gap: 48px; }
+.passos li { position: relative; display: flex; gap: 28px; align-items: baseline; font-size: 32px; line-height: 1.4; font-weight: 300; }
+.passos li::before { content: ""; position: absolute; left: -43px; top: 16px; width: 16px; height: 16px; border-radius: 50%; background: var(--saude); border: 2px solid currentColor; }
+.passos li .n { font-family: var(--serif); font-size: 50px; min-width: 64px; line-height: 1; }
+.passos p { font-size: 27px; }
+
+/* ---- foto-frase: foto inteira + tarja com frase em serifa ---- */
+.foto-frase .foto { position: absolute; inset: 0; z-index: 0; }
+.foto-frase .foto img { width: 100%; height: 100%; object-fit: cover; }
+.foto-frase .tarja { position: absolute; left: 0; right: 0; bottom: 0; padding: 72px 96px 120px; background: var(--musgo); color: var(--creme); display: flex; flex-direction: column; gap: 24px; }
+.foto-frase .tarja h2 { font-size: 64px; }
+.foto-frase .tarja p { color: var(--creme); }
+.foto-frase .cabecalho { color: rgba(255,255,255,.9); }
+.foto-frase .credito { position: absolute; right: 36px; top: 110px; font-size: 15px; letter-spacing: 0.1em; color: rgba(255,255,255,.7); }
+
+/* ---- fecho: Dra. em foto inteira à direita, logo e CTA ---- */
+.fecho { background: var(--musgo); color: var(--creme); }
+.fecho .foto { position: absolute; right: 0; top: 0; width: 520px; height: 1350px; overflow: hidden; z-index: 0; }
+.fecho .foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
+.fecho .foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--musgo) 0%, rgba(43,54,41,0) 22%); }
+.fecho .cabecalho { text-align: left; left: 96px; width: auto; color: var(--salvia); }
+.fecho .miolo { position: absolute; left: 96px; top: 230px; width: 470px; display: flex; flex-direction: column; gap: 36px; }
+.fecho h2 { font-size: 78px; }
+.fecho p { color: var(--creme); }
+.fecho .cta { display: inline-flex; align-items: center; gap: 16px; padding: 20px 30px; border: 1.5px solid var(--saude); color: var(--saude); font-size: 21px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; width: max-content; margin-top: 10px; }
+.fecho .cta svg { width: 26px; height: 26px; stroke: currentColor; fill: none; stroke-width: 2.6; }
+.fecho .logo { position: absolute; left: 96px; bottom: 96px; }
+.fecho .logo img { height: 96px; }
+.fecho .arroba { position: absolute; left: 96px; bottom: 212px; font-size: 22px; color: var(--salvia); font-weight: 500; letter-spacing: 0.04em; }
+.fecho .marca { color: var(--saude); }
+
+/* marca do isótipo em traço, discreta, nos slides de texto */
+.marca { position: absolute; right: 96px; bottom: 130px; color: var(--salvia-escuro); opacity: .6; }
+.t-musgo .marca, .t-marrom .marca { color: var(--saude); opacity: .7; }
+.t-salvia .marca { color: var(--musgo); opacity: .45; }
+
+/* tema taupe (entre o marrom e a sálvia): mais um tom quente pra tirar o "verde demais" */
+.t-taupe { background: #8C7B6B; color: var(--papel); }
+.t-taupe::before { content: ""; position: absolute; inset: 0; background-image: var(--textura); opacity: .14; mix-blend-mode: multiply; pointer-events: none; z-index: 0; }
+.t-taupe .cabecalho, .t-taupe .deslize, .t-taupe .fonte { color: var(--papel); opacity: .85; }
+.t-taupe.celulas li .n, .t-taupe.dado .numero, .t-taupe .marca, .t-taupe.cards .card svg { color: var(--saude); stroke: var(--saude); }
+.t-marromclaro.celulas li .n, .t-marromclaro.dado .numero { color: var(--marrom); }
+.t-marromclaro .marca { color: var(--marrom); opacity: .5; }
+
+/* ================= TIPO 2 (inspiração: perfil real, foto inteira + chip de perfil + frase forte) ================= */
+.chip { position: absolute; left: 72px; top: 64px; display: flex; align-items: center; gap: 16px; color: var(--branco); text-shadow: 0 1px 10px rgba(0,0,0,.45); }
+.chip .avatar { width: 74px; height: 74px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(255,255,255,.85); }
+.chip .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 10%; }
+.chip .nome { font-size: 24px; font-weight: 600; line-height: 1.1; }
+.chip .arroba { font-size: 19px; font-weight: 300; opacity: .9; }
+.chip .selo { display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: var(--saude); margin-left: 8px; vertical-align: -2px; }
+
+.tipo2 { background: rgb(var(--vf)); color: var(--branco); }
+.v-musgo { --v: 36,46,34; --vf: 28,36,26; }
+.v-musgo .rotulo-caixa { background: var(--saude); color: var(--musgo); }
+.v-musgo.capa-colagem .grade, .v-musgo.mosaico .grade, .v-musgo.corpo-foto.duas .foto { background: var(--musgo); }
+.tipo2 .foto { position: absolute; inset: 0; z-index: 0; }
+.tipo2 .foto img { width: 100%; height: 100%; object-fit: cover; }
+.tipo2 .veu { position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(var(--v),.10) 0%, rgba(var(--v),.20) 40%, rgba(var(--v),.88) 70%, rgba(var(--vf),.97) 100%); }
+.tipo2 .bloco { position: absolute; left: 72px; right: 72px; bottom: 96px; display: flex; flex-direction: column; gap: 26px; }
+.tipo2 h1 { font-family: var(--sans); font-weight: 700; font-size: 92px; line-height: .98; letter-spacing: -0.035em; text-wrap: balance; text-shadow: 0 2px 20px rgba(0,0,0,.35); }
+.tipo2 h1 u { text-decoration: underline; text-decoration-color: var(--saude); text-decoration-thickness: 7px; text-underline-offset: 10px; }
+.tipo2 h1 i { font-style: italic; font-weight: 600; }
+.tipo2 .convite { font-size: 31px; line-height: 1.35; font-weight: 300; letter-spacing: 0.02em; max-width: 900px; }
+.tipo2 .convite b { font-weight: 600; }
+.tipo2 .convite .seta { display: inline-block; width: 34px; height: 34px; vertical-align: middle; margin-left: 10px; stroke: var(--saude); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+
+/* caixa-rótulo (o retângulo rosa da inspiração vira marrom-claro da paleta) */
+.rotulo-caixa { display: inline; background: var(--marrom-claro); color: var(--marrom); font-weight: 700; font-size: 46px; line-height: 1.32; letter-spacing: -0.01em; text-transform: uppercase; padding: 4px 14px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+/* capa colagem: duas fotos em cima, uma embaixo, texto sobre a de baixo */
+.capa-colagem .grade { position: absolute; inset: 0; z-index: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 560px 1fr; gap: 6px; background: rgb(var(--vf)); }
+.capa-colagem .grade div { overflow: hidden; }
+.capa-colagem .grade div:nth-child(3) { grid-column: 1 / -1; }
+.capa-colagem .grade img { width: 100%; height: 100%; object-fit: cover; }
+.capa-colagem .veu { background: linear-gradient(180deg, rgba(var(--v),0) 0%, rgba(var(--v),0) 42%, rgba(var(--v),.80) 62%, rgba(var(--vf),.97) 100%); }
+.capa-colagem .bloco { bottom: 84px; gap: 30px; text-align: left; align-items: flex-start; }
+.capa-colagem .rotulo-caixa { font-size: 62px; line-height: 1.22; }
+.capa-colagem .texto { font-size: 30px; line-height: 1.4; font-weight: 300; letter-spacing: 0.03em; max-width: 880px; }
+.capa-colagem .texto b { font-weight: 600; }
+
+/* corpo foto: foto inteira, rótulo em caixa, texto corrido e itens com seta */
+.corpo-foto .veu { background: linear-gradient(180deg, rgba(var(--v),.08) 0%, rgba(var(--v),.22) 34%, rgba(var(--v),.88) 56%, rgba(var(--vf),.98) 100%); }
+.corpo-foto .bloco { bottom: 96px; gap: 30px; }
+.corpo-foto .rotulo-caixa { font-size: 42px; align-self: flex-start; }
+.corpo-foto .texto { font-size: 30px; line-height: 1.42; font-weight: 300; letter-spacing: 0.03em; }
+.corpo-foto .texto b { font-weight: 600; }
+.corpo-foto ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 20px; }
+.corpo-foto li { display: flex; gap: 18px; align-items: flex-start; font-size: 29px; line-height: 1.4; font-weight: 300; letter-spacing: 0.02em; }
+.corpo-foto li svg { flex: none; width: 34px; height: 34px; margin-top: 6px; stroke: var(--saude); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.corpo-foto li b { font-weight: 600; }
+.corpo-foto .deslize { color: rgba(255,255,255,.8); bottom: 50px; }
+
+/* fecho tipo 2: a Dra. inteira, CTA em três linhas fortes */
+.fecho2 .veu { background: linear-gradient(180deg, rgba(var(--v),.05) 0%, rgba(var(--v),.25) 45%, rgba(var(--v),.9) 70%, rgba(var(--vf),.98) 100%); }
+.fecho2 .foto img { object-position: 50% 10%; }
+.fecho2 .bloco { bottom: 110px; gap: 28px; }
+.fecho2 h1 { font-size: 78px; }
+.fecho2 .ctas { display: flex; flex-direction: column; gap: 16px; }
+.fecho2 .cta { display: flex; align-items: center; gap: 18px; font-size: 30px; font-weight: 500; }
+.fecho2 .cta svg { width: 36px; height: 36px; stroke: var(--saude); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.fecho2 .logo { position: absolute; right: 72px; bottom: 96px; }
+.fecho2 .logo img { height: 72px; opacity: .95; }
+
+/* corpo-foto com duas fotos empilhadas (mais imagem): foto de cima livre, foto de baixo recebe o texto */
+.corpo-foto.duas .foto { display: grid; grid-template-rows: 46% 1fr; gap: 6px; background: rgb(var(--vf)); }
+.corpo-foto.duas .foto div { overflow: hidden; }
+.corpo-foto.duas .foto img { width: 100%; height: 100%; object-fit: cover; }
+.corpo-foto.duas .veu { background: linear-gradient(180deg, rgba(var(--v),0) 0%, rgba(var(--v),0) 46%, rgba(var(--v),.22) 54%, rgba(var(--v),.82) 70%, rgba(var(--vf),.96) 100%); }
+
+/* mosaico: quatro fotos em grade, frase no meio em caixa */
+.mosaico .grade { position: absolute; inset: 0; z-index: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 6px; background: rgb(var(--vf)); }
+.mosaico .grade div { overflow: hidden; }
+.mosaico .grade img { width: 100%; height: 100%; object-fit: cover; }
+.mosaico .veu { background: radial-gradient(95% 62% at 40% 55%, rgba(var(--vf),.8) 0%, rgba(var(--vf),.55) 48%, rgba(var(--vf),.15) 100%); }
+.mosaico .bloco { top: 50%; bottom: auto; transform: translateY(-50%); align-items: flex-start; text-align: left; gap: 26px; }
+.mosaico .rotulo-caixa { font-size: 46px; }
+.mosaico .texto { font-size: 31px; line-height: 1.4; font-weight: 300; letter-spacing: 0.03em; max-width: 820px; text-shadow: 0 1px 12px rgba(0,0,0,.5); }
+.mosaico .texto b { font-weight: 600; }
+.mosaico .deslize { color: rgba(255,255,255,.8); bottom: 50px; }
+.tipo2 .credito { position: absolute; right: 28px; bottom: 22px; font-size: 14px; letter-spacing: 0.06em; color: rgba(255,255,255,.65); text-align: right; max-width: 700px; }
+
+/* mosaico com itens: texto desce pra base, véu mais forte embaixo, lista com setas como no corpo */
+.mosaico.com-itens .veu { background: linear-gradient(180deg, rgba(var(--v),.10) 0%, rgba(var(--v),.30) 32%, rgba(var(--v),.88) 52%, rgba(var(--vf),.98) 100%); }
+.mosaico.com-itens .bloco { top: auto; bottom: 96px; transform: none; gap: 24px; }
+.mosaico.com-itens .rotulo-caixa { font-size: 42px; }
+.mosaico.com-itens .texto { font-size: 29px; text-shadow: none; }
+.mosaico ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+.mosaico li { display: flex; gap: 18px; align-items: flex-start; font-size: 29px; line-height: 1.4; font-weight: 300; letter-spacing: 0.02em; }
+.mosaico li svg { flex: none; width: 34px; height: 34px; margin-top: 6px; stroke: var(--saude); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.mosaico li b { font-weight: 600; }
+
+/* chip junto do texto (capa colagem e fecho): dentro do bloco, logo acima do título */
+.chip.chip-junto { position: static; margin-bottom: 6px; }
+.capa-colagem .bloco, .fecho2 .bloco { gap: 24px; }
+
+/* parede de fotos (pedido de 30/10: "exagera, 6 a 8 fotos por slide"). Duas fileiras cheias em cima,
+   o véu escurece a segunda fileira e o texto fica sobre ela. Serve pra capa-colagem, capa-frase e corpo-foto
+   quando o JSON traz 5 ou mais fotos. */
+.tipo2 .parede { position: absolute; inset: 0; z-index: 0; display: flex; flex-direction: column; gap: 6px; background: rgb(var(--vf)); }
+.tipo2 .parede .fileira { display: flex; gap: 6px; flex: none; }
+.tipo2 .parede .fileira:nth-child(1) { height: 520px; }
+.tipo2 .parede .fileira:nth-child(2) { height: 470px; }
+.tipo2 .parede .fileira div { flex: 1; min-width: 0; overflow: hidden; }
+.tipo2 .parede img { width: 100%; height: 100%; object-fit: cover; }
+.v-musgo .parede { background: var(--musgo); }
+.tipo2.com-parede .veu { background: linear-gradient(180deg, rgba(var(--v),0) 0%, rgba(var(--v),.06) 36%, rgba(var(--v),.72) 56%, rgba(var(--vf),.96) 72%, rgb(var(--vf)) 100%); }
+.capa-frase.com-parede .veu { background: linear-gradient(180deg, rgba(var(--v),.10) 0%, rgba(var(--v),.22) 28%, rgba(var(--v),.86) 48%, rgba(var(--vf),.97) 64%, rgb(var(--vf)) 100%); }
+.capa-frase.com-parede .chip { text-shadow: 0 1px 12px rgba(0,0,0,.6); }
