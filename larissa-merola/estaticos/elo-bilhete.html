@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Elo Lipedema, bilhete</title>
+<link rel="stylesheet" href="../capa/fonts/fonts.css">
+<link rel="stylesheet" href="../capa/tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
+<style>
+  /* Bilhete A5 em pé (148 x 210 mm) a 300 dpi = 1748 x 2480 px. Tudo centralizado.
+     Frente: papel off-white, texto verde musgo, símbolo em destaque em cima, assinatura embaixo.
+     Verso: verde musgo, logo do Elo centralizada, nada mais. */
+  :root { --papel: #EFE8DC; --ital: 'Fraunces', Georgia, serif; }
+  html, body { margin: 0; background: #ddd; }
+  .slide { width: 1748px; height: 2480px; position: relative; overflow: hidden; font-family: var(--sans); margin-bottom: 40px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .slide::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .08; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>"); }
+
+  /* ---- frente ---- */
+  .frente { background: var(--papel); color: var(--musgo); padding: 0 200px; box-sizing: border-box; }
+  .frente .iso { width: 230px; height: auto; display: block; margin: 0 auto 60px; }
+  .frente .selo { font-size: 30px; letter-spacing: 0.42em; text-transform: uppercase; font-weight: 500; padding-left: 0.42em; margin-bottom: 70px; }
+  .frente h1 { font-family: var(--serif); font-weight: 400; font-size: 138px; line-height: 1.04; letter-spacing: -0.01em; margin: 0 0 80px; text-wrap: balance; }
+  .frente p { font-size: 44px; line-height: 1.55; font-weight: 300; margin: 0 0 44px; max-width: 1240px; letter-spacing: 0.01em; }
+  .frente p b { font-weight: 600; }
+  .frente .risco { width: 140px; height: 6px; background: var(--saude); margin: 40px auto 70px; }
+  .frente .receita { font-family: var(--ital); font-style: italic; font-weight: 400; font-variation-settings: "opsz" 144; font-size: 52px; line-height: 1.3; margin: 0 0 60px; max-width: 1200px; }
+  .frente .assinatura { font-family: var(--ital); font-style: italic; font-weight: 300; font-variation-settings: "opsz" 144; font-size: 140px; line-height: 1; letter-spacing: -0.02em; transform: rotate(-4deg); margin: 0 0 48px; }
+  .frente .quem { font-size: 27px; letter-spacing: 0.32em; text-transform: uppercase; font-weight: 500; padding-left: 0.32em; }
+  .frente .quem i { font-style: normal; color: var(--saude); margin: 0 14px; }
+
+  /* ---- verso ---- */
+  .verso { background: var(--musgo); color: #FFFFFF; }
+  .verso::after { mix-blend-mode: screen; opacity: .07; }
+  .verso .iso { width: 230px; height: auto; display: block; margin: 0 auto 60px; }
+  .verso .elo { font-family: var(--serif); font-size: 520px; line-height: .86; letter-spacing: 0.02em; }
+  .verso .lipedema { font-size: 100px; font-weight: 300; letter-spacing: 0.44em; text-transform: uppercase; padding-left: 0.44em; margin-top: 40px; }
+  .verso .risco { width: 120px; height: 6px; background: var(--saude); margin: 80px auto 60px; }
+  .verso .por { font-size: 42px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; padding-left: 0.3em; }
+</style>
+</head>
+<body>
+
+<div class="slide frente" id="bilhete-frente">
+  <img class="iso" src="../capa/isotipo.svg" alt="">
+  <div class="selo">Elo Lipedema</div>
+  <h1>Você disse sim<br>pra cuidar de você.</h1>
+  <p>Eu sei o quanto isso custa quando o corpo dói, cansa e parece que ninguém entende. Por isso o Elo existe: pra você não precisar entender tudo sozinha.</p>
+  <p><b>A parte técnica é comigo.</b> A sua parte é aparecer, do seu jeito, no seu tempo.</p>
+  <div class="risco"></div>
+  <div class="receita">Essa é a única receita que eu assino sem pedir exame antes:</div>
+  <div class="assinatura">Larissa Merola</div>
+  <div class="quem">Dra. Larissa Merola <i>·</i> Nutrologia</div>
+</div>
+
+<div class="slide verso" id="bilhete-verso">
+  <img class="iso" src="../capa/isotipo-branco.svg" alt="">
+  <div class="elo">ELO</div>
+  <div class="lipedema">Lipedema</div>
+  <div class="risco"></div>
+  <div class="por">por Dra. Larissa Merola</div>
+</div>
+
+<script src="../capa/tipografia.js"></script>
+</body>
+</html>
