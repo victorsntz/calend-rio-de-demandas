@@ -934,3 +934,39 @@ saiu amostrada de cada peça.
 Pendente com o Victor: a chapa da capa saiu verde e o post original era bordô. A
 `capa-faixa` força `bg-verde` no render; pra fazer bordô é liberar o campo
 `fundo` nesse tipo, que mexe em todas as capas 2.
+
+**05/11/2026 · capa do institucional no bordô, com a seta e mais respiro**
+
+Três pedidos do Victor na mesma rodada, todos medidos na peça publicada.
+
+**Cor.** A chapa saiu do verde pro bordô da referência. Medi a peça original: a
+chapa varia de `#360f00` a `#441606`, que é a base `#441606` com as listras
+escurecendo por cima. O `--bordo` que a casa já usava nas teses é `#63260f`,
+bem mais claro e mais laranja, e não serve. Token novo: `--bordo-escuro:
+#441606`, com a classe `.bg-bordo-escuro`. O `--bordo` das teses não mudou.
+
+**A `capa-faixa` passou a aceitar `fundo`.** Ela forçava `bg-verde` no
+`render.mjs`, o que impedia qualquer outra chapa. Agora cai na mesma cadeia de
+fundo dos outros slides e o verde continua sendo o padrão quando não se diz
+nada, então nenhuma peça antiga muda.
+
+**Seta.** Campo novo `seta: true` na `capa-faixa`, desenhada em SVG com as
+medidas da peça publicada: 53 por 46, traço de 7, pontas retas e junta em
+esquadro, na cor dourada. Fiz em desenho e não em glifo de fonte porque a
+original é geométrica demais pra ser caractere. Entrou em `.seta-capa` com
+`height: .70em`, que é o que reproduz a proporção da referência (a seta tem
+0,61 da altura de caixa alta do título).
+
+**Respiro.** Dois ajustes na `capa-faixa`, dos números da peça original: a
+entrelinha do título foi de 1.04 pra 1.13, e o vão entre o título e a linha de
+apoio foi de 24 pra 44 px. Medido depois: título em 79 px de linha contra 87 da
+referência, e vão de 51 contra 46. O resto da diferença é tamanho de fonte, não
+espaçamento: o título da referência tem caixa alta de 76 px e o nosso 69. Não
+mexi no corpo, que já está aprovado em outras peças.
+
+Essas duas mudanças de espaçamento **valem pra toda capa 2**, incluindo o BPC e
+as capas do institucional com os sócios. Vale re-renderizar e olhar.
+
+O selo de Institucional ficou na peça, embora a original não tenha selo nenhum:
+a regra do selo é de 26/10, posterior ao post. Se o Victor quiser a capa idêntica
+à publicada, é só tirar o campo.

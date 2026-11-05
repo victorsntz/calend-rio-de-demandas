@@ -15,6 +15,7 @@
   --verde: #1b2316;
   --areia: #d4c9aa;
   --bordo: #63260f;
+  --bordo-escuro: #441606;       /* a chapa do institucional publicado */
   --marrom: #6c4d2e;
   --dourado: #b8943d;
   --verde-claro: #6ebb50;
@@ -73,6 +74,9 @@
 .bg-creme  { background: var(--creme);  color: var(--verde); }
 .bg-areia  { background: var(--areia);  color: var(--verde); }
 .bg-bordo  { background: var(--bordo); }
+/* o bordô da chapa do institucional publicado, medido na peça: mais fechado
+   que o --bordo das teses. */
+.bg-bordo-escuro { background: var(--bordo-escuro); }
 .bg-foto   { background: #000; }
 
 .foto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
@@ -814,14 +818,20 @@
   font-size: 22px; letter-spacing: .16em; text-transform: uppercase;
   color: var(--dourado); margin-bottom: 26px;
 }
-.capa-faixa .titulo-capa { font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 86px; line-height: 1.04; letter-spacing: -.02em; }
+/* entrelinha e vão medidos no institucional publicado: o título respira mais
+   que a versão anterior (1.04) e a linha de apoio desgruda dele. */
+.capa-faixa .titulo-capa { font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 86px; line-height: 1.13; letter-spacing: -.02em; }
+.capa-faixa .titulo-capa .seta-capa {
+  height: .70em; width: auto; color: var(--dourado);
+  margin-left: .30em; vertical-align: -.04em;
+}
 .capa-faixa .titulo-capa.menor { font-size: 70px; }
 .capa-faixa .titulo-capa strong { color: var(--dourado); font-weight: 700; }
 .capa-faixa .pe-capa { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; }
 .capa-faixa .pe-capa .fonte { text-align: right; flex: none; max-width: 46%; }
 .capa-faixa .sub-capa {
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 300;
-  font-size: 36px; line-height: 1.34; margin-top: 24px; max-width: 23em; opacity: .92;
+  font-size: 36px; line-height: 1.34; margin-top: 44px; max-width: 23em; opacity: .92;
 }
 .capa-faixa .pe-capa { margin-top: auto; padding-top: 46px; }
 

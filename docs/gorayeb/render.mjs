@@ -101,6 +101,13 @@ const LOCKUP = (altura = 74, claro = true) =>
      src="../assets/logo-horizontal-${claro ? "claro" : "escuro"}.png">`;
 
 /* estes montam a imagem dentro do corpo, então não levam foto de fundo */
+/* a seta de arraste da capa 2, medida no institucional publicado: 53 por 46,
+   traço de 7, pontas retas. Vai no fim do título, com `seta: true`. */
+const SETA = `<svg class="seta-capa" viewBox="0 0 53 46" aria-hidden="true">
+  <path d="M1 23 H48 M30 5 L48 23 L30 41" fill="none" stroke="currentColor"
+        stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter"/>
+</svg>`;
+
 const FOTO_PROPRIA = new Set(["corpo-foto", "capa-faixa", "capa-clara"]);
 const semFundo = (s) => FOTO_PROPRIA.has(s.tipo) || (s.tipo === "capa-video" && s.retrato);
 
@@ -127,6 +134,7 @@ function monta(s, i = 0, total = 0) {
   else if (s.fundo === "offwhite") cls.push("bg-offwhite");
   else if (s.fundo === "branco") cls.push("bg-branco");
   else if (s.fundo === "bordo") cls.push("bg-bordo");
+  else if (s.fundo === "bordo-escuro") cls.push("bg-bordo-escuro");
   else if (s.fundo === "marrom") cls.push("bg-marrom");
   else cls.push("bg-verde");
 
@@ -146,7 +154,9 @@ function monta(s, i = 0, total = 0) {
   if (s.tipo === "capa-video") cls.push("capa-video");
   if (s.tipo === "capa-video" && s.retrato) cls.push("retrato");
   if (s.tipo === "capa-foto" || s.tipo === "perspectiva") cls.push("capa-foto", "bg-foto");
-  if (s.tipo === "capa-faixa") cls.push("capa-faixa", "bg-verde");
+  /* a capa 2 é verde por padrão, mas aceita `fundo` como qualquer outro slide:
+     o institucional publicado usa a chapa em bordô escuro. */
+  if (s.tipo === "capa-faixa") cls.push("capa-faixa");
   if (s.tipo === "capa-tipo") cls.push("capa-tipo");
   if (s.tipo === "capa-clara") cls.push("capa-clara");
   if (s.tipo === "corpo-foto") cls.push("corpo-foto", "bg-verde");
@@ -301,7 +311,7 @@ function monta(s, i = 0, total = 0) {
         </div>
         <div class="chapa-capa">
           ${s.kicker ? `<p class="kicker">${esc(s.kicker)}</p>` : ""}
-          <h1 class="titulo-capa ${s.escala || ""}">${titulo(s.titulo)}</h1>
+          <h1 class="titulo-capa ${s.escala || ""}">${titulo(s.titulo)}${s.seta ? SETA : ""}</h1>
           ${s.sub ? `<p class="sub-capa">${titulo(s.sub)}</p>` : ""}
           <div class="pe-capa">${LOGO(74)}${s.fonte ? `<p class="fonte">${esc(s.fonte)}</p>` : ""}</div>
         </div>`;
