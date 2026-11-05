@@ -779,3 +779,9 @@ Enquanto não reconectar, a rotina roda do mesmo jeito, mas sem marcar nada: ela
 devolve o que venceu sem confirmação, o que sai em 7 dias com arte pronta, o que
 sai em 15 dias sem arte e as reconferências com data. A regra de 05/11 continua
 valendo: publicado só entra com confirmação, do conector ou da boca do Victor.
+
+**Correção, no mesmo dia.** O Victor não quis o caminho do conector. Ele manda
+print ou escreve o que saiu, e eu marco. A rotina das 17h54 fica, só mudou o que
+ela faz: devolve a conferência seca (vencido sem confirmação, o que sai em 7 dias
+com arte, o que sai em 15 sem arte, reconferências da semana) e espera a palavra
+dele pra marcar qualquer coisa.
