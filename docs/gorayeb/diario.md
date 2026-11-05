@@ -675,3 +675,27 @@ a foto continua aparecendo. Sem isso a tarja dourada sumia no céu claro.
 Três opções de frase em `carrosseis/capa-institucional.json`, cada uma no feed e
 na thumb, para o Victor escolher. Ainda não sei o que o vídeo fala: as frases
 saíram do posicionamento, não do roteiro dele.
+
+**05/11/2026 · status da agenda**
+
+Marquei como publicados os posts de 26/10 a 02/11: cooperativas (26/10), vídeo
+da área previdenciária (28/10), patrimônio do produtor PF (30/10) e vídeo do CAR
+(02/11). `atualizado_em` em 05/11 e Excel regerado.
+
+O vídeo dos 60 e 55 anos, de 04/11, eu também tinha marcado como publicado, mas
+aquilo era dedução de resumo, não palavra do Victor. Voltou para "aprovado ·
+publicação a confirmar com o Victor".
+
+**Regra nova: publicado só entra com a confirmação do Victor.** O Instagram não
+abre nesta sessão, então a coluna Status é o único controle do que saiu, e
+dedução ali contamina o Excel que vai pra Dra. Elisa.
+
+Onde o calendário está: dos 24 posts, 8 confirmados no ar. A agenda está coberta
+com arte ou vídeo pronto até 16/11. O primeiro vão é **18/11**, com dois
+carrosséis seguidos só com roteiro aprovado: documentos que provam atividade
+rural (18/11) e consulta do CAR pelo CPF (20/11).
+
+Reconferências em pé: a liminar do georreferenciamento na semana do post, por
+volta de 11 ou 12/11 (a última foi em 03/11 e seguia de pé), e o ITCD de Minas
+na semana de 11/12. Seguem parados a OAB do Dr. Gustavo e a sessão de fotos com
+gente, que os previdenciários de 18/11, 25/11 e 02/12 vão pedir.
