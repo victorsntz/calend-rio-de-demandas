@@ -699,3 +699,23 @@ Reconferências em pé: a liminar do georreferenciamento na semana do post, por
 volta de 11 ou 12/11 (a última foi em 03/11 e seguia de pé), e o ITCD de Minas
 na semana de 11/12. Seguem parados a OAB do Dr. Gustavo e a sessão de fotos com
 gente, que os previdenciários de 18/11, 25/11 e 02/12 vão pedir.
+**05/11/2026 · capas do institucional com os sócios**
+
+O Victor mandou a foto dos quatro sócios, em `img/socios-ftg.jpg`. Peça em
+`carrosseis/capa-institucional-socios.json`.
+
+- **Feed:** meia-folha, foto em cima e chapa embaixo. Ninguém fica atrás de texto.
+- **Thumb do YouTube:** layout novo `retrato` no `capa-video`, duas colunas, texto
+  à esquerda e a foto em pé à direita, com fio dourado na emenda.
+
+Três tentativas até acertar a thumb, e o motivo de cada uma vale registrar:
+
+1. Foto em quadro cheio com véu pesado à esquerda: o véu enterrou dois dos quatro
+   sócios. Numa foto de grupo, véu sobre gente é inaceitável.
+2. Recorte da cabeça à cintura em quadro cheio: rosto maior, mas o mesmo problema
+   do véu continuou.
+3. Duas colunas, coluna da foto em 620 px: os quatro aparecem, ninguém é coberto.
+   O título teve que cair para 54 px, porque sobram 552 px de coluna de texto.
+
+**Regra:** foto de pessoa não leva texto por cima. Ou a pessoa tem a sua área e o
+texto tem a dele, ou escolhe-se outra foto.

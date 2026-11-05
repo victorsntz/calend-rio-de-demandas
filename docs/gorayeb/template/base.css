@@ -909,3 +909,19 @@
   background: linear-gradient(100deg, rgba(16,22,13,.90) 0%, rgba(16,22,13,.78) 42%,
                                       rgba(16,22,13,.40) 74%, rgba(16,22,13,.18) 100%);
 }
+
+/* retrato de grupo numa tela deitada: o texto fica numa coluna e a foto na
+   outra. Em quadro cheio a foto em pé corta cabeça e perna. */
+.capa-video.retrato { display: grid; grid-template-columns: 1fr 620px; gap: 44px; padding-right: 0; }
+.capa-video.retrato .col-texto { display: flex; flex-direction: column; min-width: 0; }
+.capa-video.retrato .col-foto { position: relative; overflow: hidden; margin: calc(var(--pad-v, 58px) * -1) 0; }
+.capa-video.retrato .col-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* fio dourado separando a coluna da foto do bloco de texto */
+.capa-video.retrato .col-foto::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--dourado); z-index: 2; }
+.slide.youtube.capa-video.retrato { padding: 58px 0 58px 64px; }
+.capa-video.retrato .meio-video { margin-top: auto; margin-bottom: auto; }
+
+/* na thumb de duas colunas o texto tem pouco mais de 550 px: o título cede */
+.slide.youtube.capa-video.retrato .titulo-video { font-size: 64px; }
+.slide.youtube.capa-video.retrato .titulo-video.menor { font-size: 54px; }
+.slide.youtube.capa-video.retrato .sub-video { font-size: 28px; max-width: 100%; }

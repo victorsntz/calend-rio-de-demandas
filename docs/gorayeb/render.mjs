@@ -102,9 +102,10 @@ const LOCKUP = (altura = 74, claro = true) =>
 
 /* estes montam a imagem dentro do corpo, então não levam foto de fundo */
 const FOTO_PROPRIA = new Set(["corpo-foto", "capa-faixa", "capa-clara"]);
+const semFundo = (s) => FOTO_PROPRIA.has(s.tipo) || (s.tipo === "capa-video" && s.retrato);
 
 function foto(s) {
-  if (!s.foto || FOTO_PROPRIA.has(s.tipo)) return "";
+  if (!s.foto || semFundo(s)) return "";
   const img = `<img class="foto" src="${esc(s.foto)}" alt="" style="object-position:${esc(s.foco || "center")}">`;
   /* capa e perspectiva trazem o próprio véu, em dois gradientes */
   if (s.veu === "nenhum" || s.tipo === "capa-foto" || s.tipo === "perspectiva") return img;
@@ -120,7 +121,7 @@ function monta(s, i = 0, total = 0) {
   const claro = s.tipo === "capa-clara" ? false : !CLAROS.has(s.fundo) || !!s.foto;
   const LOGO = (h) => LOCKUP(h, claro);
   const cls = ["slide", "vinheta"];
-  if (s.foto && !s.meiaFoto && !FOTO_PROPRIA.has(s.tipo)) cls.push("bg-foto");
+  if (s.foto && !s.meiaFoto && !semFundo(s)) cls.push("bg-foto");
   else if (s.fundo === "creme") cls.push("bg-creme");
   else if (s.fundo === "areia") cls.push("bg-areia");
   else if (s.fundo === "offwhite") cls.push("bg-offwhite");
@@ -143,6 +144,7 @@ function monta(s, i = 0, total = 0) {
   if (s.formato === "stories") cls.push("stories");
   if (s.formato === "youtube") cls.push("youtube");
   if (s.tipo === "capa-video") cls.push("capa-video");
+  if (s.tipo === "capa-video" && s.retrato) cls.push("retrato");
   if (s.tipo === "capa-foto" || s.tipo === "perspectiva") cls.push("capa-foto", "bg-foto");
   if (s.tipo === "capa-faixa") cls.push("capa-faixa", "bg-verde");
   if (s.tipo === "capa-tipo") cls.push("capa-tipo");
@@ -334,6 +336,20 @@ function monta(s, i = 0, total = 0) {
     /* capa de vídeo: a mesma arte serve o feed (1080×1350) e a thumb do
        YouTube (1280×720). Na thumb o arroba sai: lá o perfil já aparece. */
     case "capa-video":
+      if (s.retrato) {
+        corpo += `
+        <div class="col-texto">
+          ${s.formato === "youtube" ? "" : ARROBA}
+          <div class="meio-video">
+            ${s.kicker ? `<p class="kicker-video">${esc(s.kicker)}</p>` : ""}
+            <h1 class="titulo-video ${s.escala || ""}">${titulo(s.titulo)}</h1>
+            ${s.sub ? `<p class="sub-video">${titulo(s.sub)}</p>` : ""}
+          </div>
+          <div class="pe-video">${LOGO(s.formato === "youtube" ? 58 : 74)}</div>
+        </div>
+        <div class="col-foto"><img src="${esc(s.foto || "")}" alt="" style="object-position:${esc(s.foco || "center")}"></div>`;
+        break;
+      }
       corpo += `
         ${s.formato === "youtube" ? "" : ARROBA}
         <div class="meio-video">
