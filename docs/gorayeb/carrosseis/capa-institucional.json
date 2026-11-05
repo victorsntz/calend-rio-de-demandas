@@ -1,0 +1,69 @@
+{
+  "id": "capa-institucional",
+  "titulo": "Capa do vídeo institucional, feed e YouTube",
+  "nota": "Três opções de frase, cada uma no feed e na thumb do YouTube. Peça interna, para o Victor escolher.",
+  "legenda_instagram": "Peça interna, não vai para o feed.",
+  "slides": [
+    {
+      "tipo": "capa-video",
+      "foto": "../img/capa-cerca-entardecer.jpg",
+      "veu": "verde",
+      "foco": "center 55%",
+      "kicker": "FTG Advogados",
+      "titulo": "Da porteira\nà *aposentadoria*.",
+      "sub": "Conheça o escritório que caminha junto com quem produz."
+    },
+    {
+      "tipo": "capa-video",
+      "formato": "youtube",
+      "foto": "../img/faixa-porteira-pasto.jpg",
+      "veu": "verde",
+      "foco": "center 60%",
+      "kicker": "FTG Advogados",
+      "titulo": "Da porteira\nà *aposentadoria*.",
+      "sub": "O escritório que caminha junto com quem produz."
+    },
+    {
+      "tipo": "capa-video",
+      "foto": "../img/colheita-aerea.jpg",
+      "veu": "verde",
+      "foco": "center 50%",
+      "kicker": "FTG Advogados",
+      "titulo": "O escritório\nque entende o\n*calendário da safra*.",
+      "escala": "menor",
+      "sub": "Araguari, Triângulo Mineiro. Há mais de 25 anos."
+    },
+    {
+      "tipo": "capa-video",
+      "formato": "youtube",
+      "foto": "../img/fachada.jpg",
+      "veu": "verde",
+      "foco": "center 58%",
+      "kicker": "FTG Advogados",
+      "titulo": "Quem entende o\n*calendário da safra*.",
+      "escala": "menor",
+      "sub": "Araguari, Triângulo Mineiro. Há mais de 25 anos."
+    },
+    {
+      "tipo": "capa-video",
+      "foto": "../img/sala-reunioes.jpg",
+      "veu": "verde",
+      "foco": "center 50%",
+      "kicker": "Conheça a FTG",
+      "titulo": "Vinte e cinco anos\nao lado de *quem produz*.",
+      "escala": "menor",
+      "sub": "Agronegócio, empresarial e previdenciário."
+    },
+    {
+      "tipo": "capa-video",
+      "formato": "youtube",
+      "foto": "../img/silos-aereo.jpg",
+      "veu": "verde",
+      "foco": "center 45%",
+      "kicker": "Conheça a FTG",
+      "titulo": "25 anos ao lado\nde *quem produz*.",
+      "escala": "menor",
+      "sub": "Agronegócio, empresarial e previdenciário."
+    }
+  ]
+}

@@ -35,7 +35,7 @@ def empacota(spec_path, destino=None):
         for i in range(1, len(pngs) + 1)
     ]
 
-    MEDIDA = {"stories": "1080 x 1920"}
+    MEDIDA = {"stories": "1080 x 1920", "youtube": "1280 x 720"}
     medidas = sorted({MEDIDA.get(f, "1080 x 1350") for f in formatos} or {"1080 x 1350"})
 
     legenda = spec.get("legenda_instagram", "").strip()

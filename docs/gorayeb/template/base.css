@@ -872,3 +872,40 @@
   font-size: 36px; line-height: 1.34; margin-top: 24px; max-width: 17em; opacity: .8;
 }
 .capa-clara .pe-capa { margin-top: auto; }
+
+/* ======================================================================
+   CAPA DE VÍDEO — a mesma arte no feed (1080×1350) e na thumb do YouTube
+   (1280×720). Na thumb tudo cresce, porque ela é lida em 320 px de largura.
+   ====================================================================== */
+.slide.youtube { width: 1280px; height: 720px; padding: 58px 64px; }
+.capa-video { display: flex; flex-direction: column; }
+.capa-video .meio-video { margin-top: auto; margin-bottom: auto; }
+.capa-video .kicker-video {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 700;
+  font-size: 24px; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--dourado); margin-bottom: 26px;
+}
+.capa-video .titulo-video {
+  font-family: "Arvo", Georgia, serif; font-weight: 700;
+  font-size: 104px; line-height: 1.02; letter-spacing: -.025em;
+}
+.capa-video .titulo-video.menor { font-size: 84px; }
+.capa-video .titulo-video strong { color: var(--dourado); font-weight: 700; }
+.capa-video .sub-video {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 300;
+  font-size: 38px; line-height: 1.3; margin-top: 28px; max-width: 20em; opacity: .9;
+}
+.capa-video .pe-video { margin-top: auto; }
+/* na thumb o título sobe de corpo: em 320 px de largura, 104 px vira 26 */
+.slide.youtube.capa-video .titulo-video { font-size: 96px; }
+.slide.youtube.capa-video .titulo-video.menor { font-size: 76px; }
+.slide.youtube.capa-video .sub-video { font-size: 32px; margin-top: 20px; max-width: 24em; }
+.slide.youtube.capa-video .kicker-video { font-size: 21px; margin-bottom: 20px; }
+.slide.youtube .selo { top: 58px; right: 64px; }
+
+/* o texto da capa de vídeo mora à esquerda, então o véu pesa desse lado e
+   abre do outro: a foto continua aparecendo e a tarja dourada se lê */
+.capa-video .veu-verde {
+  background: linear-gradient(100deg, rgba(16,22,13,.90) 0%, rgba(16,22,13,.78) 42%,
+                                      rgba(16,22,13,.40) 74%, rgba(16,22,13,.18) 100%);
+}

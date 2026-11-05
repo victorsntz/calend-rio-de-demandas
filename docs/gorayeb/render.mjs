@@ -141,6 +141,8 @@ function monta(s, i = 0, total = 0) {
   if (s.tipo === "foto-texto" && s.foto) cls.push("foto-texto");
   if (s.tipo === "vaga") cls.push("vaga");
   if (s.formato === "stories") cls.push("stories");
+  if (s.formato === "youtube") cls.push("youtube");
+  if (s.tipo === "capa-video") cls.push("capa-video");
   if (s.tipo === "capa-foto" || s.tipo === "perspectiva") cls.push("capa-foto", "bg-foto");
   if (s.tipo === "capa-faixa") cls.push("capa-faixa", "bg-verde");
   if (s.tipo === "capa-tipo") cls.push("capa-tipo");
@@ -329,6 +331,19 @@ function monta(s, i = 0, total = 0) {
         <div class="pe-capa">${LOGO(74)}</div>`;
       break;
 
+    /* capa de vídeo: a mesma arte serve o feed (1080×1350) e a thumb do
+       YouTube (1280×720). Na thumb o arroba sai: lá o perfil já aparece. */
+    case "capa-video":
+      corpo += `
+        ${s.formato === "youtube" ? "" : ARROBA}
+        <div class="meio-video">
+          ${s.kicker ? `<p class="kicker-video">${esc(s.kicker)}</p>` : ""}
+          <h1 class="titulo-video ${s.escala || ""}">${titulo(s.titulo)}</h1>
+          ${s.sub ? `<p class="sub-video">${titulo(s.sub)}</p>` : ""}
+        </div>
+        <div class="pe-video">${LOGO(s.formato === "youtube" ? 58 : 74)}</div>`;
+      break;
+
     /* corpo de foto: foto em cima, chapa embaixo com a marca d'água da casa */
     case "corpo-foto": {
       const [l1, l2] = String(s.titulo || "").split("\n");
@@ -476,7 +491,9 @@ writeFileSync(htmlPath, html);
 
 const browser = await chromium.launch();
 const alturaMax = Math.max(1350, ...spec.slides.map((s) => (s.formato === "stories" ? 1920 : 1350)));
-const page = await browser.newPage({ viewport: { width: 1080, height: alturaMax }, deviceScaleFactor: 1 });
+/* a thumb do YouTube é mais larga que o feed: a janela abre no maior dos dois */
+const larguraMax = Math.max(1080, ...spec.slides.map((s) => (s.formato === "youtube" ? 1280 : 1080)));
+const page = await browser.newPage({ viewport: { width: larguraMax, height: alturaMax }, deviceScaleFactor: 1 });
 await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "networkidle" });
 await page.evaluate(() => document.fonts.ready);
 /* centra o jugo exatamente no vão entre o F e o G de cada lockup */

@@ -662,3 +662,16 @@ Duas coisas que apareceram na busca:
   caem em paisagem toda vez que pedem presença humana, e o bloco previdenciário
   inteiro fala de gente. Vale meia hora de fotógrafo no escritório: atendimento,
   mãos sobre documento, conversa na mesa. Com a marca nova, é a hora.
+
+**05/11/2026 · capas do vídeo institucional**
+
+Tipo novo no render, `capa-video`, e formato novo, `youtube`, de 1280x720. A
+mesma arte serve o feed e a thumb; na thumb o arroba sai, o título cresce e a
+logo diminui, porque ela é lida em 320 px de largura.
+
+O véu da capa de vídeo pesa à esquerda e abre à direita: o texto fica legível e
+a foto continua aparecendo. Sem isso a tarja dourada sumia no céu claro.
+
+Três opções de frase em `carrosseis/capa-institucional.json`, cada uma no feed e
+na thumb, para o Victor escolher. Ainda não sei o que o vídeo fala: as frases
+saíram do posicionamento, não do roteiro dele.
