@@ -785,3 +785,51 @@ print ou escreve o que saiu, e eu marco. A rotina das 17h54 fica, só mudou o qu
 ela faz: devolve a conferência seca (vencido sem confirmação, o que sai em 7 dias
 com arte, o que sai em 15 sem arte, reconferências da semana) e espera a palavra
 dele pra marcar qualquer coisa.
+
+**05/11/2026 · carrossel de 18/11, documentos da atividade rural**
+
+8 telas, capa 2 (meia-folha), selo de Área Previdenciária, pela rotação do
+plano. Roteiro aprovado pela Dra. Elisa em 28/10, sem mudar fato nenhum.
+Arquivo: `carrosseis/documentos-atividade-rural.json`.
+
+**A peça não foi renderizada.** Nesta sessão o `node render.mjs` foi barrado pela
+permissão, e `img/` está no `.gitignore`, então o container chegou sem uma foto
+sequer. As três fotos do JSON foram escolhidas pelo nome do arquivo, sem ter
+visto nenhuma. Antes de entregar, é obrigatório renderizar, olhar tela a tela e
+conferir o `foco` de cada foto.
+
+Decisões de diagramação, pra não refazer o raciocínio depois:
+
+- A tela "Antes de tudo" do roteiro virou `tabela`: até 2022 contra 2023 em
+  diante. É a única estrutura de verdade da peça e cumpre a figura obrigatória
+  do miolo. De cifra ficaria igual à tela e sem comparação.
+- "Da terra" ficou em `lista` sem `meiaFoto`, que é a de tela cheia e aguenta
+  item longo. "Da produção" ficou em `itens` com 3 mais remate, a mesma forma da
+  tela da pessoa com deficiência no BPC.
+- "Da cooperativa" tinha só dois fatos. Em `itens` daria meia tela vazia, então
+  virou `foto-texto`, que a foto preenche. Mesmo movimento da nascente e da
+  vereda na Reserva Legal.
+- ITR vem explicado na própria linha, "Recibo do ITR, o imposto da terra", pela
+  regra da sigla.
+
+**Erro achado no BPC, que sai dia 11/11.** Em
+`carrosseis/bpc-quem-tem-direito.json`, tela 6, o remate "Há ainda avaliação
+médica e social." está caindo pra fora da peça. É `lista` com `meiaFoto` e os
+três itens têm 36, 44 e 38 caracteres: dois quebram em duas linhas, a terceira
+linha empurra o remate e ele sai pela borda de baixo. Está visível em
+`saida/bpc-quem-tem-direito/pag-06.png`. A regra dos 35 caracteres é a mesma de
+03/11; é a quarta vez.
+
+O conserto é encurtar os três itens pra caber em uma linha cada, por exemplo
+"Família inscrita no Cadastro Único", "Cadastro atualizado há menos de 2 anos" e
+"Pedido pelo Meu INSS ou pelo 135". Nenhum deles é condição que possa sair.
+
+Mesma varredura nas outras peças: `dia-da-pecuaria` tela 3,
+`disputas-cooperativas` tela 7, `fim-da-escala-6x1` tela 9 e
+`recuperacao-judicial` tela 8 também passam dos 35 caracteres em `lista` com
+`meiaFoto`. Nessas quatro não tem remate, então o texto fica apertado mas dentro
+da peça. Só o BPC está cortando.
+
+**Vale um guarda-costas no `empacota.py`:** recusar o empacotamento quando
+`lista` com `meiaFoto` tiver item acima de 35 ou remate acima de 45. A regra já
+quebrou quatro vezes e só se vê olhando a imagem.
