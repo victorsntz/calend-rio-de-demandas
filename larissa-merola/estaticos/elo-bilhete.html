@@ -19,7 +19,7 @@
 
   /* ---- frente ---- */
   .frente { background: var(--papel); color: var(--musgo); padding: 0 200px; box-sizing: border-box; }
-  .frente .iso { width: 230px; height: auto; display: block; margin: 0 auto 60px; }
+  .frente .iso { width: 230px; height: auto; display: block; margin: 0 auto 90px; }
   .frente .selo { font-size: 30px; letter-spacing: 0.42em; text-transform: uppercase; font-weight: 500; padding-left: 0.42em; margin-bottom: 70px; }
   .frente h1 { font-family: var(--serif); font-weight: 400; font-size: 138px; line-height: 1.04; letter-spacing: -0.01em; margin: 0 0 80px; text-wrap: balance; }
   .frente p { font-size: 44px; line-height: 1.55; font-weight: 300; margin: 0 0 44px; max-width: 1240px; letter-spacing: 0.01em; }
@@ -33,6 +33,7 @@
   /* ---- verso ---- */
   .verso { background: var(--musgo); color: #FFFFFF; }
   .verso::after { mix-blend-mode: screen; opacity: .07; }
+  .verso .logo-a { width: 820px; height: auto; display: block; }
   .verso .iso { width: 170px; height: auto; display: block; margin: 0 auto 44px; }
   .verso .elo { font-family: var(--serif); font-size: 360px; line-height: .86; letter-spacing: 0.02em; }
   .verso .lipedema { font-size: 70px; font-weight: 300; letter-spacing: 0.44em; text-transform: uppercase; padding-left: 0.44em; margin-top: 40px; }
@@ -44,7 +45,6 @@
 
 <div class="slide frente" id="bilhete-frente">
   <img class="iso" src="../capa/isotipo.svg" alt="">
-  <div class="selo">Elo Lipedema</div>
   <h1>Agora você<br>faz parte do Elo.</h1>
   <p>A partir de hoje você não cuida de você sozinha. Aqui tem mulheres com o mesmo corpo, as mesmas dores e o mesmo direito de ser levada a sério. Ninguém precisa explicar o que sente: a gente já sabe.</p>
   <p><b>A parte técnica é comigo.</b> A sua parte é aparecer, do seu jeito, no seu tempo.</p>
@@ -55,11 +55,8 @@
 </div>
 
 <div class="slide verso" id="bilhete-verso">
-  <img class="iso" src="../capa/isotipo-branco.svg" alt="">
-  <div class="elo">ELO</div>
-  <div class="lipedema">Lipedema</div>
-  <div class="risco"></div>
-  <div class="por">por Dra. Larissa Merola</div>
+  <!-- versão A da logo (a dos mockups das camisetas), já em curvas -->
+  <img class="logo-a" src="../capa/elo-logo-branca-versaoA.svg" alt="Elo Lipedema, por Dra. Larissa Merola">
 </div>
 
 <script src="../capa/tipografia.js"></script>
