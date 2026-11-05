@@ -900,3 +900,37 @@ que pega todas as peças.
 A chapa saiu verde, porque a `capa-faixa` força `bg-verde` no render. O post
 original era bordô. Perguntei ao Victor antes de generalizar o campo `fundo`
 nesse tipo de capa.
+
+**05/11/2026 · listras na escala certa e o arroba do carrossel "quem cuida"**
+
+**As listras estavam 2,4 vezes maiores que o arquivo da marca.** O Victor mandou
+o PNG oficial e eu medi: período de 188 px, escuro 43, claro 15, escuro 44,
+claro 86, com o escuro em `#141813` sobre o verde `#1b2217`, que dá exatamente a
+opacidade .26 que o CSS já usava. O `.listras::before` estava em período de 452
+px, que é o mesmo ritmo esticado, e ainda levava uma máscara diagonal que
+apagava a textura da direita pra esquerda. No arquivo oficial o contraste é
+igual de ponta a ponta.
+
+Corrigido no `template/base.css`. **Pega todas as peças**, não só esta: qualquer
+carrossel com `textura: "listras"` muda de cara na próxima renderização. A linha
+do `formato-01.md` que diz "escala grande, contraste baixo, esmaecendo na
+diagonal" ficou errada e precisa ser reescrita.
+
+**Carrossel "Conheça quem cuida do seu sossego", 10 telas.** A capa foi refeita
+no template, com a foto nova e agora com as listras. As nove telas de pessoa
+**não deu pra refazer no template**, e o motivo é concreto: nos JPGs publicados
+o retrato está composto com um degradê que vai do fundo chapado até a foto, e
+esse degradê cobre de x≈480 a x≈750, enquanto o corpo da pessoa começa em
+x≈520. Não existe recorte limpo. Rebuild de verdade só com os retratos
+originais.
+
+O que dava pra fazer, e foi feito: **troquei o arroba nas nove**. A caixa do
+texto é igual em todas, x 101 a 331 e y 1226 a 1247, e a tipografia bateu exata
+em Arvo Bold 21 px com 0,5 px de entreletra (reproduzi `@gorayebadvocacia` com
+230x21 px, o mesmo do original). O fundo ao redor é chapado, confirmado medindo
+x 70, 360 e 420 na mesma linha, então a limpeza é preenchimento liso. A tinta
+saiu amostrada de cada peça.
+
+Pendente com o Victor: a chapa da capa saiu verde e o post original era bordô. A
+`capa-faixa` força `bg-verde` no render; pra fazer bordô é liberar o campo
+`fundo` nesse tipo, que mexe em todas as capas 2.

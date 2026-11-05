@@ -7,6 +7,7 @@
     {
       "tipo": "capa-faixa",
       "selo": "Institucional",
+      "textura": "listras",
       "foto": "../img/socios-sofa.jpg",
       "foco": "center 52%",
       "alturaFoto": 720,

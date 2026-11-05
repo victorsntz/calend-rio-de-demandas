@@ -47,24 +47,23 @@
 }
 
 /* ---- listras verticais (elemento da marca, Asset 51) --------------------
-   Período de 468px no arquivo de 2161px de largura. Em 1080px o período
-   fica em 234px: escuro 54, claro 19.5, escuro 54, claro 106.5.          */
+   Medido no arquivo que o Victor mandou em 05/11, já em 1080px de largura:
+   período de 188px, escuro 43, claro 15, escuro 44, claro 86.            */
 .listras::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* mesmo ritmo do Asset 51, mas numa escala bem maior: o olho lê como
-     textura, não como padrão. */
+  /* o ritmo do arquivo oficial, medido no PNG que o Victor mandou em 05/11:
+     período de 188px, escuro 43, claro 15, escuro 44, claro 86. A opacidade
+     .26 é a que reproduz #141813 sobre o verde #1b2217 do próprio arquivo. */
   background: repeating-linear-gradient(
     90deg,
-    rgba(0,0,0,.26) 0px,    rgba(0,0,0,.26) 104px,
-    rgba(0,0,0,0)   104px,  rgba(0,0,0,0)   142px,
-    rgba(0,0,0,.26) 142px,  rgba(0,0,0,.26) 246px,
-    rgba(0,0,0,0)   246px,  rgba(0,0,0,0)   452px
+    rgba(0,0,0,.26) 0px,    rgba(0,0,0,.26) 43px,
+    rgba(0,0,0,0)   43px,   rgba(0,0,0,0)   58px,
+    rgba(0,0,0,.26) 58px,   rgba(0,0,0,.26) 102px,
+    rgba(0,0,0,0)   102px,  rgba(0,0,0,0)   188px
   );
-  /* e esmaece de um lado pro outro, pra não ficar carimbado */
-  -webkit-mask-image: linear-gradient(104deg, #000 0%, rgba(0,0,0,.42) 48%, rgba(0,0,0,.06) 100%);
-          mask-image: linear-gradient(104deg, #000 0%, rgba(0,0,0,.42) 48%, rgba(0,0,0,.06) 100%);
+  /* sem esmaecer: no arquivo oficial o contraste é igual de ponta a ponta */
   z-index: 0;
 }
 .slide > * { position: relative; z-index: 1; }
