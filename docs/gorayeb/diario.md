@@ -746,3 +746,20 @@ conferência.
 Sobre as fotos: `img/` está no `.gitignore` e não existe neste clone. Quem tem o
 banco de imagens é a sessão que renderiza, não o repositório. Vale resolver isso,
 porque hoje nenhuma sessão nova consegue refazer uma arte sozinha.
+**05/11/2026 · duas falhas minhas, apontadas pela sessão de arte**
+
+**1. O carrossel do BPC foi entregue quebrado.** Na tela 6, lista com `meiaFoto`,
+o remate caía pra fora da peça. Dois itens tinham 44 e 38 caracteres e quebravam
+em duas linhas. Eu conferi a peça numa visão geral de miniaturas, onde isso não
+aparece, e entreguei assim. Corrigido: itens em 36, 29 e 32, todos numa linha.
+
+**A conferência de peça se faz no PNG em tamanho cheio, tela por tela.** Visão
+geral serve pra ver ritmo e cor, nunca pra validar texto.
+
+**2. `docs/gorayeb/img/` está no .gitignore e não existe no remoto.** São 57
+fotos e 123 MB que só vivem nesta máquina. As outras duas sessões não conseguem
+renderizar peça nenhuma com foto, que é quase toda peça.
+
+Pelo `_creditos.json`: 25 fotos são do banco do próprio cliente e podem publicar;
+27 vieram do Pinterest e a licença nunca foi conferida. Era por isso que a pasta
+estava ignorada. Decisão é do Victor.
