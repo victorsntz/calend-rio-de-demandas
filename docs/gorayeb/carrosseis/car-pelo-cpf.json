@@ -1,0 +1,124 @@
+{
+  "id": "car-pelo-cpf",
+  "titulo": "Passo a passo para consultar seu CAR pelo CPF",
+  "nota": "Post de 20/11. Roteiro aprovado pela Dra. Elisa em 28/10. Capa 3 (tipográfica) e selo de Agronegócio, pela rotação do plano. Peça desenhada DE PROPÓSITO sem nenhuma foto, porque img/ não existe nesta sessão: assim ela renderiza inteira quando o render for liberado. A figura do miolo é o mapa dos dois estados com sistema próprio, que é a condição que o roteiro traz e que se perde quando vira rodapé. NÃO RENDERIZADA, nenhuma tela foi olhada.",
+  "legenda_instagram": "SEU CAR PELO CPF.\n\nO cadastro da sua fazenda está num sistema que você mesmo abre. Dá para ver a situação dele, se o mapa invade a terra do vizinho e se o órgão ambiental mandou alguma mensagem.\n\nPASSO 1. Tenha a conta gov.br. Desde 19 de dezembro de 2024, a Central do CAR só abre com ela. Quem ainda não tem cria a sua no site gov.br.\n\nPASSO 2. Entre no car.gov.br, clique em Central do Proprietário/Possuidor e depois em Entrar com gov.br. Em Goiás e Mato Grosso o CAR tem sistema próprio, no site do órgão ambiental do estado. Minas usa o sistema federal.\n\nPASSO 3. Escolha o imóvel. Aparecem os imóveis em que o seu CPF está declarado como proprietário, possuidor ou representante. Se o CAR está no nome de outra pessoa da família, ela pode vincular você pela própria Central.\n\nPASSO 4. A situação do cadastro: ativo, pendente, suspenso ou cancelado. Pendente aparece quando há declaração errada, sobreposição ou notificação ainda não atendida.\n\nPASSO 5. Olhe as sobreposições. No demonstrativo, um quadro mostra se o mapa invade outro CAR, terra indígena, unidade de conservação ou área embargada. Ali estão a área e o percentual de cada uma.\n\nPASSO 6. Leia as mensagens. Na Central de Mensagens chegam as notificações do órgão ambiental, que em Minas é o IEF, o Instituto Estadual de Florestas. Achou erro no cadastro? A correção se chama retificação e é feita pela aba Retificação da própria Central.\n\nNotificação tem prazo, e prazo perdido pode levar ao cancelamento do CAR. Salve este passo a passo e mande para quem precisa.\n\nFontes: SICAR, Central do Proprietário/Possuidor; Serviço Florestal Brasileiro, Manual da Central do Proprietário/Possuidor (2023); Agência Minas, sobre a análise do CAR pelo IEF.",
+  "slides": [
+    {
+      "tipo": "capa-tipo",
+      "selo": "Agronegócio",
+      "textura": "listras",
+      "kicker": "Cadastro Ambiental Rural",
+      "titulo": "Seu CAR\npelo *CPF*.",
+      "sub": "Você abre o cadastro da fazenda e lê o que o órgão ambiental diz dele."
+    },
+    {
+      "tipo": "itens",
+      "fundo": "offwhite",
+      "etiqueta": "O caminho",
+      "titulo": "Quatro passos,\ndo começo ao fim",
+      "numerada": true,
+      "itens": [
+        {
+          "texto": "Ter a conta gov.br"
+        },
+        {
+          "texto": "Entrar no car.gov.br"
+        },
+        {
+          "texto": "Escolher o imóvel ligado ao seu CPF"
+        },
+        {
+          "texto": "Ler o demonstrativo do cadastro"
+        }
+      ],
+      "remate": "Tudo isso você faz sozinho, de casa, sem pedir nada a ninguém."
+    },
+    {
+      "tipo": "tese",
+      "tese": "Desde 19/12/2024, a Central do CAR só abre com a conta gov.br.",
+      "texto": "Quem ainda não tem cria a sua no site gov.br, de graça. É a chave de entrada do cadastro, e sem ela a Central não passa da porta."
+    },
+    {
+      "tipo": "figura",
+      "figura": "mapa",
+      "mapa": "brasil",
+      "fundo": "branco",
+      "altura": 560,
+      "titulo": "Dois estados\ntêm sistema próprio",
+      "pontos": [
+        {
+          "lon": -55.9,
+          "lat": -12.9,
+          "rotulo": "Mato Grosso"
+        },
+        {
+          "lon": -49.6,
+          "lat": -15.9,
+          "rotulo": "Goiás"
+        }
+      ],
+      "legenda": "Nesses dois, o CAR é declarado no site do órgão ambiental do estado. Minas usa o sistema federal, no car.gov.br.",
+      "fonte": "SICAR · estados com sistema próprio",
+      "alt": "Mapa do Brasil com Mato Grosso e Goiás destacados"
+    },
+    {
+      "tipo": "tese",
+      "fundo": "bordo",
+      "tese": "CAR no nome de outra pessoa da família? Ela pode vincular você.",
+      "texto": "Na Central aparecem os imóveis em que o seu CPF está declarado como proprietário, possuidor ou representante. O vínculo se faz ali mesmo, pela própria Central."
+    },
+    {
+      "tipo": "lista",
+      "fundo": "marrom",
+      "titulo": "A situação\ndo cadastro",
+      "itens": [
+        "Ativo",
+        "Pendente",
+        "Suspenso",
+        "Cancelado"
+      ],
+      "remate": "Pendente aparece quando há declaração errada, sobreposição ou notificação ainda não atendida."
+    },
+    {
+      "tipo": "itens",
+      "fundo": "creme",
+      "etiqueta": "No demonstrativo",
+      "titulo": "Olhe as\nsobreposições",
+      "itens": [
+        {
+          "icone": "mapa",
+          "texto": "Outro CAR desenhado sobre o seu"
+        },
+        {
+          "icone": "folha",
+          "texto": "Terra indígena ou unidade de conservação"
+        },
+        {
+          "icone": "documento",
+          "texto": "Área embargada"
+        }
+      ],
+      "remate": "O quadro traz a área e o percentual de cada sobreposição."
+    },
+    {
+      "tipo": "lista",
+      "fundo": "areia",
+      "titulo": "Leia as\nmensagens",
+      "itens": [
+        "As notificações chegam na Central de Mensagens",
+        "Em Minas, quem notifica é o IEF, o Instituto Estadual de Florestas",
+        "Achou erro no cadastro? A correção se chama retificação"
+      ],
+      "remate": "A retificação é feita pela aba Retificação, na própria Central."
+    },
+    {
+      "tipo": "fecho",
+      "sintese": "Notificação tem prazo.",
+      "paragrafos": [
+        "Prazo perdido pode levar ao cancelamento do CAR. Quem abre a Central de vez em quando descobre o problema enquanto ele ainda é pequeno."
+      ],
+      "salvar": "*Salve este passo a passo* e mande para quem precisa."
+    }
+  ]
+}

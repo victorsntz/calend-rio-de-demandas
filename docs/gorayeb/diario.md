@@ -833,3 +833,33 @@ da peça. Só o BPC está cortando.
 **Vale um guarda-costas no `empacota.py`:** recusar o empacotamento quando
 `lista` com `meiaFoto` tiver item acima de 35 ou remate acima de 45. A regra já
 quebrou quatro vezes e só se vê olhando a imagem.
+
+**05/11/2026 · carrossel de 20/11, consulta do CAR pelo CPF**
+
+9 telas, capa 3 (tipográfica), selo de Agronegócio, pela rotação do plano.
+Roteiro aprovado em 28/10. Arquivo: `carrosseis/car-pelo-cpf.json`.
+**Também não renderizada**, pelos mesmos dois motivos do 18/11.
+
+Desenhada de propósito **sem nenhuma foto**, nem no fecho. Como a pasta `img/`
+não existe nesta sessão, uma peça sem foto é a única que renderiza inteira no
+minuto em que o render for liberado. Se o banco voltar, vale pôr foto no fecho.
+
+A figura do miolo é o `mapa` com Mato Grosso e Goiás destacados, os dois estados
+que têm sistema próprio de CAR. O roteiro trazia isso como observação de rodapé,
+e rodapé é onde condição morre. No mapa ela é a primeira coisa que se vê, e o
+produtor de Minas descobre na mesma tela que o sistema dele é o federal.
+
+Duas tentativas de figura que não foram em frente, pra ninguém repetir:
+
+- `linha` com os quatro passos numerados. A figura põe o `numero` em 70 px e o
+  `rotulo` em 29 px, então o herói da tela vira um "1" e a informação some no
+  cinza. Na escala 6x1 funciona porque o número é 44h, 42h, 40h, que é o
+  conteúdo. Passo numerado não tem número que valha tela. Virou `itens` com
+  `numerada`, que é a forma feita pra isso.
+- `tabela` das quatro situações do cadastro. O roteiro só explica o que é
+  "pendente"; preencher as outras três linhas seria inventar. Virou `lista` com
+  as quatro palavras curtas e o remate explicando a pendente.
+
+O `mapa` sem `valor` nos pontos desenha bolha lisa e joga os nomes na legenda de
+baixo, sem texto solto dentro do desenho. É o jeito seguro quando não há número
+pra comparar.
