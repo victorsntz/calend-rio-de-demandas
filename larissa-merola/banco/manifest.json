@@ -2686,5 +2686,22 @@
     ],
     "credito": "Imagem: Pinterest",
     "usar": true
+  },
+  {
+    "arquivo": "doutora/doutora-05.jpg",
+    "grupo": "doutora",
+    "origem": "enviada pelo Victor em 05/11 (DSC09316.jpg)",
+    "drive_id": null,
+    "largura": 2000,
+    "altura": 3000,
+    "orientacao": "retrato",
+    "tags": [
+      "consultorio",
+      "corpo inteiro",
+      "sorriso",
+      "colete bege"
+    ],
+    "credito": "",
+    "usar": true
   }
 ]
