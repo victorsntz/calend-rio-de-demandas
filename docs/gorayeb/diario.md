@@ -970,3 +970,14 @@ as capas do institucional com os sócios. Vale re-renderizar e olhar.
 O selo de Institucional ficou na peça, embora a original não tenha selo nenhum:
 a regra do selo é de 26/10, posterior ao post. Se o Victor quiser a capa idêntica
 à publicada, é só tirar o campo.
+
+**05/11/2026 · arroba escuro na capa 2**
+
+O arroba sumia no canto claro da estante. O `.arroba` da `capa-faixa` é creme
+com opacidade .9 e uma sombra, e sombra não segura texto claro sobre madeira
+clara. Campo novo `arroba: "escuro"`, que põe ele em `--bordo-escuro`, opacidade
+cheia e sem sombra. É opcional: sem o campo, continua creme como em todas as
+peças antigas.
+
+A escolha de pôr marrom e não só reforçar a sombra é do Victor, e é a certa:
+chapinha atrás do arroba sujaria o canto da foto.

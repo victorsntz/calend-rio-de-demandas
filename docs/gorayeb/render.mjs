@@ -305,7 +305,7 @@ function monta(s, i = 0, total = 0) {
        A emenda é reta, com um fio dourado, em vez do degradê da capa 1. */
     case "capa-faixa":
       corpo += `
-        <div class="meia-img">
+        <div class="meia-img${s.arroba === "escuro" ? " arroba-escuro" : ""}">
           <img src="${esc(s.foto || "")}" alt="" style="object-position:${esc(s.foco || "center")}">
           ${ARROBA}
         </div>

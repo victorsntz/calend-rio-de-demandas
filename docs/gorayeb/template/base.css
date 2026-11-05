@@ -807,6 +807,11 @@
   position: absolute; top: var(--margem); left: var(--margem); margin: 0;
   color: var(--creme); opacity: .9; text-shadow: 0 2px 18px rgba(16,22,13,.55);
 }
+/* foto de canto claro come o arroba creme. `arroba: "escuro"` põe ele em
+   marrom, sem brilho por trás, que é o que lê em cima de madeira e parede. */
+.capa-faixa .meia-img.arroba-escuro .arroba {
+  color: var(--bordo-escuro); opacity: 1; text-shadow: none;
+}
 /* fio dourado marcando a emenda entre a foto e a chapa */
 .capa-faixa .meia-img::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: var(--dourado); }
 .capa-faixa .chapa-capa {
