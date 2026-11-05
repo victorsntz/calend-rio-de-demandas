@@ -763,3 +763,19 @@ renderizar peça nenhuma com foto, que é quase toda peça.
 Pelo `_creditos.json`: 25 fotos são do banco do próprio cliente e podem publicar;
 27 vieram do Pinterest e a licença nunca foi conferida. Era por isso que a pasta
 estava ignorada. Decisão é do Victor.
+
+**05/11/2026 · conferência diária do feed**
+
+Pedido do Victor: olhar o Instagram uma vez por dia e ir atualizando a coluna
+Status sozinha. Rotina criada, roda todo dia às 17h54 no horário de Brasília.
+
+**O Instagram agora responde nesta sessão**, o que não acontecia em 03/11.
+Continua esbarrando na tela de login do perfil público, e forçar a passagem não
+é caminho. A via boa são os conectores: **Meta API** e **Windsor.ai** já estão
+instalados na conta, os dois com Instagram, os dois pedindo reconexão. Só o
+Victor pode reconectar, pelas configurações de conectores do claude.ai.
+
+Enquanto não reconectar, a rotina roda do mesmo jeito, mas sem marcar nada: ela
+devolve o que venceu sem confirmação, o que sai em 7 dias com arte pronta, o que
+sai em 15 dias sem arte e as reconferências com data. A regra de 05/11 continua
+valendo: publicado só entra com confirmação, do conector ou da boca do Victor.
