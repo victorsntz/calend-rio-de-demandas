@@ -719,3 +719,30 @@ Três tentativas até acertar a thumb, e o motivo de cada uma vale registrar:
 
 **Regra:** foto de pessoa não leva texto por cima. Ou a pessoa tem a sua área e o
 texto tem a dele, ou escolhe-se outra foto.
+
+**05/11/2026 · o BPC de 11/11 não pode sair como está**
+
+A sessão de arte apontou e eu conferi na peça e no render. Em
+`carrosseis/bpc-quem-tem-direito.json`, tela 6, os três itens têm 36, 44 e 38
+caracteres. Dois quebram em duas linhas e empurram o remate "Há ainda avaliação
+médica e social." pela borda de baixo. Em `saida/bpc-quem-tem-direito/pag-06.png`
+a última linha sai cortada no pé.
+
+É a regra de `lista` com `meiaFoto`: item acima de 35 caracteres quebra. O diário
+já registrou isso três vezes, em 03/11. **Esta é a quarta e passou pela revisão.**
+
+Status de 11/11 rebaixado para "arte a corrigir · tela 6 corta o remate". O post
+não sai antes do conserto.
+
+Varri os outros carrosséis com a mesma combinação. Quatro telas passam dos 35
+caracteres: pecuária 3, cooperativas 7, escala 6x1 9 e recuperação judicial 8.
+Nenhuma tem remate, então ficam apertadas e dentro da peça. **Só corta quando há
+remate embaixo**, e isso é o que vale checar antes de fechar arte.
+
+O de 18/11, documentos da atividade rural, está montado em JSON mas sem nenhuma
+tela renderizada. Fica em "roteiro aprovado · produzir a arte" até render e
+conferência.
+
+Sobre as fotos: `img/` está no `.gitignore` e não existe neste clone. Quem tem o
+banco de imagens é a sessão que renderiza, não o repositório. Vale resolver isso,
+porque hoje nenhuma sessão nova consegue refazer uma arte sozinha.
