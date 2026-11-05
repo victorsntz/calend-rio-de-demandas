@@ -1,0 +1,18 @@
+{
+  "id": "capa-sossego",
+  "titulo": "Conheça quem cuida do seu sossego (capa refeita)",
+  "nota": "Refação do slide publicado em 2026 com a marca antiga (Gorayeb Advocacia, @gorayebadvocacia). Mesmo texto, foto nova do sofá e a marca FTG atual. Pedido do Victor em 05/11.",
+  "legenda_instagram": "Peça refeita, a legenda segue a do post original.",
+  "slides": [
+    {
+      "tipo": "capa-faixa",
+      "selo": "Institucional",
+      "foto": "../img/socios-sofa.jpg",
+      "foco": "center 52%",
+      "alturaFoto": 720,
+      "titulo": "Conheça quem cuida\ndo seu sossego.",
+      "escala": "menor",
+      "sub": "Um time de especialistas para defender o produtor rural."
+    }
+  ]
+}

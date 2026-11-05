@@ -863,3 +863,40 @@ Duas tentativas de figura que não foram em frente, pra ninguém repetir:
 O `mapa` sem `valor` nos pontos desenha bolha lisa e joga os nomes na legenda de
 baixo, sem texto solto dentro do desenho. É o jeito seguro quando não há número
 pra comparar.
+
+**05/11/2026 · capa "Conheça quem cuida do seu sossego" refeita**
+
+O Victor mandou o post publicado (ainda com Gorayeb Advocacia e
+@gorayebadvocacia) e uma foto nova, e pediu a mesma peça com a imagem trocada.
+Arquivo: `carrosseis/capa-sossego.json`. Renderizada e olhada.
+
+Texto igual ao original, palavra por palavra. Mudou a foto, e a marca veio
+atualizada sozinha pelo render: logo da FTG e `@ftgadvogados_`.
+
+**Foto nova no banco: `img/socios-sofa.jpg`.** Canon EOS R, tratada no Lightroom,
+2560x3840, do próprio escritório. Reduzida pra 1620 px de largura. É foto do
+cliente, publica sem ressalva. Resolve em parte a falta registrada em 03/11, que
+o banco só tinha detalhe e objeto: agora tem gente. Continua faltando pessoa
+idosa fora do escritório e pessoa com deficiência, que os previdenciários pedem.
+
+**Enquadramento, que é onde estava a decisão.** A foto é 2 por 3 em pé e a faixa
+da capa 2 é deitada, então o que entra é uma fatia. Três testes:
+
+- `alturaFoto` 720 com `foco` center 52%: entregue. Mesma proporção do post
+  original (a emenda dourada dele cai em 712 px), folga acima das cabeças, selo
+  longe de todo mundo e o arroba legível.
+- `alturaFoto` 720 com `foco` center 58%: **descartado**, o selo de área cai em
+  cima do chapéu do Dr. Fernando pai. Selo sobre pessoa não passa, pela mesma
+  regra que a sessão principal escreveu hoje sobre texto em foto de gente.
+- `alturaFoto` 800 com `foco` center 54%: foto melhor, entra o sofá inteiro e a
+  quina da mesa, e a chapa fecha mais junta. Mas o arroba cai numa parte clara
+  da estante e quase some. Ficou como opção B pro Victor escolher.
+
+**Limite do template que apareceu aqui:** o `.arroba` da `capa-faixa` só tem
+`text-shadow`, que não segura o branco sobre foto clara. Vale uma chapinha atrás
+dele, ou escolher foto com canto superior esquerdo escuro. Não mexi: é mudança
+que pega todas as peças.
+
+A chapa saiu verde, porque a `capa-faixa` força `bg-verde` no render. O post
+original era bordô. Perguntei ao Victor antes de generalizar o campo `fundo`
+nesse tipo de capa.
