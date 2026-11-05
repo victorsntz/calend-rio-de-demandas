@@ -981,3 +981,21 @@ peças antigas.
 
 A escolha de pôr marrom e não só reforçar a sombra é do Victor, e é a certa:
 chapinha atrás do arroba sujaria o canto da foto.
+
+**05/11/2026 · a tela do Fernando faltava no carrossel institucional**
+
+O zip que o Victor mandou com o post publicado tinha 9 telas de pessoa, e
+nenhuma era a do Dr. Fernando Torbay Gorayeb, sócio-fundador e nome do
+escritório. A capa mostra dez pessoas e o carrossel apresentava nove. Apontei, e
+ele mandou a tela, que existia e tinha ficado de fora do download.
+
+Arroba trocado nela também: mesma caixa das outras (x 101 a 331, y 1226 a 1247),
+fundo verde chapado, mesma Arvo Bold 21px.
+
+Carrossel fechado em **11 telas**, com o Fernando em segundo, logo depois da
+capa, por ser o sócio titular. Ordem: capa, Fernando, Jéssica, Elisa, Tathiana,
+Gustavo, Gilberto, Fabiana, Bárbara, Janaina e Tais.
+
+Lição que vale pra qualquer refação a partir de post publicado: **contar as
+pessoas da capa e conferir contra o número de telas** antes de empacotar. O
+download do Instagram perdeu uma e ninguém teria notado pela quantidade.
