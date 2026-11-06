@@ -33,6 +33,8 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **"Conta ponto"** | Fora. Diferencial de vaga vai sob o rótulo **Desejável**. Regra da Dra. Elisa, 21/10. |
 | **Tela vazia** | Não passa. Se o conteúdo ocupa só o alto, o desenho cresce ou o bloco centraliza: `cifra` com `escala: "gigante"` e `centro: true`; em `itens` a lista vai pro meio do espaço. Pedido do Victor em 06/11. |
 | **Texto pregado** | Título em caixa alta com entrelinha 1.12, pílulas com vão de 30 px. Acento não encosta na linha de cima. Pedido do Victor em 06/11. |
+| **Rosto** | Degradê, véu ou texto não passam por cima de rosto. Foto de pessoa entra onde o rosto fica limpo, e o escurecimento fica antes dele. Pedido do Victor em 06/11. |
+| **Nova IDV** | `"idv": 2` no topo do JSON. Helvetica Bold em caixa baixa nos títulos, etiqueta pequena dourada, grão de filme, listras só quando a tela pede. Aprovada pelo Victor em 06/11. |
 | **Barra de progresso** | **Não usar.** Existe no template (`progresso: true`), mas ficou de fora por decisão do Victor. |
 
 ## A marca

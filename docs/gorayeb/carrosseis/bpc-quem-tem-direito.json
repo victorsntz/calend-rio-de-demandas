@@ -7,8 +7,8 @@
     {
       "tipo": "capa-clara",
       "selo": "Área Previdenciária",
-      "foto": "../img/casa-roca-familia.jpg",
-      "foco": "center 42%",
+      "foto": "../img/casa-roca-familia-recorte.jpg",
+      "foco": "center 50%",
       "kicker": "BPC, o Benefício de Prestação Continuada",
       "titulo": "Um salário mínimo\npor mês.",
       "escala": "menor",
@@ -34,7 +34,6 @@
       "tipo": "itens",
       "etiqueta": "Quem pode · pessoa com deficiência",
       "titulo": "Qualquer idade,\ninclusive criança",
-      "textura": "listras",
       "itens": [
         {
           "icone": "relogio",
@@ -61,31 +60,30 @@
       "tipo": "lista",
       "titulo": "O primeiro passo\né o CadÚnico",
       "meiaFoto": true,
-      "foto": "../img/peao-balde-pasto.jpg",
+      "foto": "../img/peao-balde-pasto-recorte.jpg",
       "itens": [
         "A família inscrita no Cadastro Único",
         "Atualizado nos últimos 2 anos",
         "Pedido pelo Meu INSS ou pelo 135"
       ],
-      "remate": "Há ainda avaliação médica e social."
+      "remate": "Há ainda avaliação médica e social.",
+      "foco": "center 50%"
     },
     {
       "tipo": "foto-texto",
-      "foto": "../img/porteira-madeira.jpg",
-      "veu": "verde",
-      "foco": "center 55%",
       "titulo": "Não paga 13º\ne não deixa pensão",
-      "texto": "São as duas diferenças que mais pegam a família de surpresa. Por isso vale conferir antes se a pessoa não tem direito a uma aposentadoria, que tem as duas coisas."
+      "texto": "São as duas diferenças que mais pegam a família de surpresa. Por isso vale conferir antes se a pessoa não tem direito a uma aposentadoria, que tem as duas coisas.",
+      "fundo": "bordo"
     },
     {
       "tipo": "fecho",
-      "foto": "../img/estrada-amanhecer.jpg",
-      "veu": "verde",
       "sintese": "Benefício que muita família\nnem sabe que existe.",
       "paragrafos": [
         "Quem cuida de um idoso ou de uma pessoa com deficiência em casa costuma descobrir tarde, ou não descobrir."
       ],
-      "salvar": "*Salve este carrossel* e mande para quem precisa saber."
+      "salvar": "*Salve este carrossel* e mande para quem precisa saber.",
+      "textura": "listras"
     }
-  ]
+  ],
+  "idv": 2
 }

@@ -951,3 +951,41 @@
 .slide.youtube.capa-video.retrato .titulo-video { font-size: 64px; }
 .slide.youtube.capa-video.retrato .titulo-video.menor { font-size: 54px; }
 .slide.youtube.capa-video.retrato .sub-video { font-size: 28px; max-width: 100%; }
+
+
+/* ======================================================================
+   NOVA IDV — 06/11/2026, pedido do Victor a partir de referências de
+   social media: "nosso design está muito duro". Liga com "idv": 2 no topo
+   do JSON. Mesma paleta e mesmas fontes; muda o tom:
+   - título em Helvetica Bold, caixa baixa, entrelinha curta;
+   - etiqueta pequena e quadrada em dourado, em vez da pílula grande;
+   - grão de filme por cima de tudo, que amacia foto e chapa;
+   - verde mais fechado; listras só quando a tela pede.
+   ====================================================================== */
+.idv2 .grao {
+  position: absolute; inset: 0; z-index: 6; pointer-events: none;
+  opacity: .16; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>");
+}
+.idv2.bg-verde:not(.capa-clara) { background: #12160f; }
+.idv2 .titulo, .idv2 .tese, .idv2 .frase, .idv2 .titulo-capa,
+.idv2 .cifra, .idv2 .cifra-leitura {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 700;
+  text-transform: none; letter-spacing: -.035em;
+}
+.idv2 .titulo { font-size: 84px; line-height: 1.04; }
+.idv2 .titulo.menor { font-size: 74px; }
+.idv2 .tese { font-size: 62px; line-height: 1.1; max-width: 15.5em; }
+.idv2 .titulo-capa { line-height: 1.02; }
+.idv2 .titulo strong, .idv2 .tese strong, .idv2 .titulo-capa strong { color: var(--dourado); }
+.idv2.bg-creme .titulo strong, .idv2.bg-areia .titulo strong,
+.idv2.bg-offwhite .titulo strong, .idv2.bg-branco .titulo strong { color: var(--bordo); }
+.idv2 .etiqueta-pill {
+  padding: 11px 20px; border-radius: 8px; font-size: 20px; letter-spacing: .14em;
+  background: var(--dourado); color: var(--verde);
+}
+.idv2 .cifra-num { background: none; padding: 0; }
+.idv2 .cifra { letter-spacing: -.05em; }
+.idv2 .cifra-leitura { font-weight: 500; }
+.idv2 .corpo { line-height: 1.48; }
+.idv2 .pilulas li { border-radius: 18px; }

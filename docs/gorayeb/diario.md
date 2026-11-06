@@ -1065,3 +1065,34 @@ banco de fotos original, ficam nítidas.
 
 Quebra de regra deliberada na tela 5: texto centralizado, como na referência.
 O formato 01 manda tudo à esquerda. Só vira regra se o Victor aprovar.
+
+**06/11/2026 · tudo na nova IDV**
+
+O Victor aprovou a linha do estudo e pediu todas as peças nela.
+
+**A nova IDV virou tema do template:** `"idv": 2` no topo do JSON. O `render.mjs`
+passa a IDV pra cada slide, que ganha a classe `idv2` e uma camada de grão. O
+`base.css` tem o bloco "NOVA IDV" no fim: títulos, tese, frase, cifra e capa em
+Helvetica Bold, caixa baixa, entrelinha curta; etiqueta pequena e quadrada em
+dourado; verde mais fechado (`#12160f`); sem o marca-texto atrás da cifra;
+listras só quando o JSON pede. A capa clara continua creme (`:not(.capa-clara)`).
+Peça sem `idv` sai como antes.
+
+- **20/11 CAR:** renderizado na nova IDV. Listras só na capa.
+- **11/11 BPC:** renderizado na nova IDV. Duas fotos recuperadas das telas
+  publicadas na mesma medida em que entram (`img/casa-roca-familia-recorte.jpg`
+  e `img/peao-balde-pasto-recorte.jpg`). A porteira (tela 7) e a estrada (tela 8)
+  não dá pra recuperar, porque têm texto em cima; as duas ficaram sem foto, a 7
+  em bordô e a 8 com listras.
+- **13/11 georreferenciamento:** fica a prévia em Helvetica, sem a foto.
+- **Institucional:** feito fora do template, em HTML (`ref/inst/inst.html` no
+  scratchpad), porque as telas de pessoa partem dos JPGs publicados.
+
+**Regra que o Victor deu: degradê não passa por cima de rosto.** Na primeira
+versão eu escureci a foto com um degradê meu e ele pegava metade da cara de
+quase todo mundo. A saída foi manter cada pessoa no fundo da tela original
+(verde `#1c2218`, bordô `#390f01`, areia `#d5c8a8`) e encaixar a foto a partir
+de x 600, onde o degradê original já está quase no fundo, com uma máscara de
+80 px. O rosto fica idêntico ao publicado. Cortar antes de x 600 traz restos do
+texto antigo (o "Tathiana N. M." chegava a x 595). Nome de pessoa não leva
+espaço rígido: quebra dentro da coluna de 470 px pra não invadir a foto.

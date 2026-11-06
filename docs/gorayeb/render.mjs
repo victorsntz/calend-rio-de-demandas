@@ -487,6 +487,8 @@ function monta(s, i = 0, total = 0) {
     default:
       throw new Error(`tipo de slide desconhecido: ${s.tipo}`);
   }
+  /* nova IDV, 06/11: Helvetica, etiqueta pequena e grão de filme por cima */
+  if (s._idv === 2) { cls.push("idv2"); corpo += `<div class="grao"></div>`; }
   if (s.tipo === "corpo-foto" || s.tipo === "capa-faixa") {
     return `<div class="${cls.join(" ")}"${estilo}>${PASSO(i, total)}${corpo}</div>`;
   }
@@ -511,7 +513,7 @@ mkdirSync(saida, { recursive: true });
 
 const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
 <link rel="stylesheet" href="base.css"></head><body style="background:#333">
-${spec.slides.map((s, i) => monta(s, i, spec.progresso ? spec.slides.length : 0)).join("\n")}
+${spec.slides.map((s, i) => monta({ ...s, _idv: spec.idv }, i, spec.progresso ? spec.slides.length : 0)).join("\n")}
 </body></html>`;
 const htmlPath = join(AQUI, "template", `_${nome}.html`);
 writeFileSync(htmlPath, html);
