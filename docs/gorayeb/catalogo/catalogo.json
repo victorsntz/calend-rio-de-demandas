@@ -162,15 +162,6 @@
   "img": "catalogo/F1.jpg"
  },
  {
-  "codigo": "F2",
-  "grupo": "Fecho",
-  "nome": "Marca grande, creme",
-  "quando": "Fecho calmo: símbolo FTG grande e apagado ao fundo, frase-síntese com peso misturado, ícones de salvar e enviar.",
-  "como": "HTML (modelos/fechos.html, #f2)",
-  "usado": "estudo",
-  "img": "catalogo/F2.jpg"
- },
- {
   "codigo": "F3",
   "grupo": "Fecho",
   "nome": "Foto com botões",
@@ -178,14 +169,5 @@
   "como": "HTML (modelos/fechos.html, #f3)",
   "usado": "estudo",
   "img": "catalogo/F3.jpg"
- },
- {
-  "codigo": "F4",
-  "grupo": "Fecho",
-  "nome": "Pergunta e marcação",
-  "quando": "Fecho que puxa comentário: pergunta grande, caixa imitando comentário pedindo pra marcar alguém. Bordô com listras.",
-  "como": "HTML (modelos/fechos.html, #f4)",
-  "usado": "estudo",
-  "img": "catalogo/F4.jpg"
  }
 ]
