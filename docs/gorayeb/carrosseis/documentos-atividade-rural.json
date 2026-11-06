@@ -81,7 +81,7 @@
     },
     {
       "tipo": "corpo-foto",
-      "foto": "../img/enxada-lavoura-recorte.jpg",
+      "foto": "../img/maos-plantio.jpg",
       "foco": "center 45%",
       "titulo": "A certidão também\né prova.",
       "paragrafos": [
@@ -93,8 +93,8 @@
       "tipo": "lista",
       "meiaFoto": true,
       "fundo": "creme",
-      "foto": "../img/armazem-graos-recorte.jpg",
-      "foco": "center 55%",
+      "foto": "../img/silos-soja.jpg",
+      "foco": "center 30%",
       "titulo": "Da cooperativa,\no vínculo no papel",
       "itens": [
         "A ficha de associado",

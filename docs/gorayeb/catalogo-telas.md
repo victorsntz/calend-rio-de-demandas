@@ -18,7 +18,9 @@ ajustados na sessão que for usar).
   ou M9) por carrossel. **Foto em pelo menos metade das telas** (pedido do
   Victor em 06/11: "muita tela sem imagem"), com foto boa do Pinterest ou do
   banco do escritório, nunca recorte de arte antiga. Tese, pílulas e lista
-  também podem sair sobre foto escurecida.
+  também podem sair sobre foto escurecida. **Foto mais escura** (pedido de
+  06/11): brilho em torno de 85%, contraste 110%, saturação 95%, pro texto ler.
+  Na busca do Pinterest, descartar marca d'água e cara de IA.
 - **Fecho:** alterna entre F1 e F3, nunca o mesmo em dois posts seguidos.
 - Nada passa por cima de rosto. Tela vazia não passa.
 

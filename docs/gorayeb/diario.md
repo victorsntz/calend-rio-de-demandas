@@ -1192,3 +1192,29 @@ Os modelos feitos fora do template estavam só no scratchpad da sessão, que som
 Copiei os HTML pra `modelos/`, pra não perder. O próximo passo de verdade é
 levar C1, C2, C3, C5, C6, M9 e M10 pro `render.mjs`, pra que saiam do JSON como
 o resto.
+
+**06/11/2026 · fotos do Pinterest, enfim**
+
+O Victor não queria baixar foto ele mesmo ("faço assim em outros e dá certo").
+A rede desta sessão já era livre; o que travava era o jeito de buscar. Pelo
+Chromium da sessão (Playwright, `scripts/pinlote.cjs` no scratchpad) a busca
+abre e as imagens baixam em resolução original. Garimpei 11 buscas, 88 fotos,
+e descartei as com marca d'água (`@fazendasantiga`), as com cara de IA (casa
+no pôr do sol perfeito, agricultores posados, irrigação simétrica demais) e a
+família posando com cachorro no carrinho de mão, que parecia ensaio de moda.
+
+Entraram, todas com brilho 84%, contraste 110% e cor 95% (pedido do Victor:
+"fotos mais escuras pra garantir o contraste"):
+- `img/cerrado-estrada.jpg`: georreferenciamento 13/11 (busca "cerrado
+  mineiro paisagem fazenda").
+- `img/casa-roca-pedra.jpg`: capa do BPC 11/11 ("casa de fazenda simples
+  minas gerais").
+- `img/horta-familiar.jpg`: BPC tela 6 ("pequeno produtor rural horta minas
+  gerais"), pessoa de costas, sem rosto.
+- `img/maos-plantio.jpg`: 18/11 tela 5 ("mãos de agricultor terra").
+- `img/silos-soja.jpg`: 18/11 tela 6 ("armazem de graos cooperativa brasil").
+
+Procedência: Pinterest, pela busca citada. Os links de origem não foram
+guardados nesta rodada; a próxima busca deve gravar a URL de cada foto. A
+licença das fotos de Pinterest continua pendente com o Victor, como sempre foi.
+Zips de 11/11, 13/11 e 18/11 refeitos.

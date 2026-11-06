@@ -60,14 +60,14 @@
       "tipo": "lista",
       "titulo": "O primeiro passo\né o CadÚnico",
       "meiaFoto": true,
-      "foto": "../img/peao-balde-pasto-recorte.jpg",
+      "foto": "../img/horta-familiar.jpg",
       "itens": [
         "A família inscrita no Cadastro Único",
         "Atualizado nos últimos 2 anos",
         "Pedido pelo Meu INSS ou pelo 135"
       ],
       "remate": "Há ainda avaliação médica e social.",
-      "foco": "center 50%"
+      "foco": "center 55%"
     },
     {
       "tipo": "foto-texto",
