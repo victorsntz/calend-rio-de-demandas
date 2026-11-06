@@ -894,3 +894,17 @@ do art. 66.
 
 **Lição:** revisão de cliente que chega "só de legenda" tem que ser conferida
 contra a arte, tela por tela. O fato é o mesmo nos dois lugares.
+
+**06/11/2026 · ajuste da Dra. Elisa na legenda do vídeo do CAR (09/11)**
+
+"Quem prova a propriedade é a matrícula, com o georreferenciamento certificado"
+dava a entender que matrícula sem georreferenciamento não prova nada. Virou, na
+redação dela: "Quem prova a propriedade é a matrícula no cartório. E quem mostra
+com precisão onde fica a divisa é o georreferenciamento certificado."
+
+Legenda em `linha-editorial/03-legenda-09-11.txt`.
+
+**A frase antiga está falada dentro do vídeo**, que foi gravado em setembro. A
+narração em `linha-editorial/conteudo.py` fica como está, porque é registro do
+que foi ao ar. Se um dia esse vídeo for reeditado ou legendado na tela, é aqui
+que está a redação certa.
