@@ -1218,3 +1218,19 @@ Procedência: Pinterest, pela busca citada. Os links de origem não foram
 guardados nesta rodada; a próxima busca deve gravar a URL de cada foto. A
 licença das fotos de Pinterest continua pendente com o Victor, como sempre foi.
 Zips de 11/11, 13/11 e 18/11 refeitos.
+
+**06/11/2026 · foto em metade das telas, e capa do CAR com quadro**
+
+O Victor: "nem precisa perguntar". Regra cumprida nas três peças da semana:
+- **20/11 CAR:** foto nas telas 1, 3, 5, 7 e 9. Capa tipográfica ganhou um quadro
+  de foto em cima do bloco de texto (campo novo `quadro` na `capa-tipo`, 420 px
+  de altura, cantos de 22 px; o fio dourado some quando há quadro), com uma
+  vista aérea de fazenda. A tela 6 chegou a ir pra `meiaFoto` e o remate de 92
+  caracteres caiu pra fora: voltou pra marrom sem foto, e a foto foi pra tela 5.
+- **11/11 BPC:** foto nas telas 1, 2, 5, 6 e 8.
+- **18/11 Documentos:** foto nas telas 3, 5, 6, 7 e 8 (a tese da testemunha
+  sobre papel antigo, com véu marrom).
+
+Onze fotos novas do Pinterest, todas escurecidas no mesmo padrão. A partir
+desta rodada a origem fica gravada em `img/_creditos-pinterest.tsv` (arquivo,
+busca e URL). Zips das três peças refeitos.

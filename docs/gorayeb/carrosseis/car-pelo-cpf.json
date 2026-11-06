@@ -10,7 +10,9 @@
       "textura": "listras",
       "kicker": "Cadastro Ambiental Rural",
       "titulo": "Seu CAR\npelo *CPF*.",
-      "sub": "Você abre o cadastro da fazenda e lê o que o órgão ambiental diz dele."
+      "sub": "Você abre o cadastro da fazenda e lê o que o órgão ambiental diz dele.",
+      "quadro": "../img/aerea-fazenda.jpg",
+      "foco": "center 40%"
     },
     {
       "tipo": "itens",
@@ -37,7 +39,10 @@
     {
       "tipo": "tese",
       "tese": "Desde 19/12/2024, a Central do CAR só abre com a conta gov.br.",
-      "texto": "Quem ainda não tem cria a sua no site gov.br, de graça. É a chave de entrada do cadastro, e sem ela a Central não passa da porta."
+      "texto": "Quem ainda não tem cria a sua no site gov.br, de graça. É a chave de entrada do cadastro, e sem ela a Central não passa da porta.",
+      "foto": "../img/celular-lavoura.jpg",
+      "veu": "verde",
+      "foco": "center 50%"
     },
     {
       "tipo": "figura",
@@ -64,13 +69,14 @@
     },
     {
       "tipo": "tese",
-      "fundo": "bordo",
       "tese": "CAR no nome de outra pessoa da família? Ela pode vincular você.",
-      "texto": "Na Central aparecem os imóveis em que o seu CPF está declarado como proprietário, possuidor ou representante. O vínculo se faz ali mesmo, pela própria Central."
+      "texto": "Na Central aparecem os imóveis em que o seu CPF está declarado como proprietário, possuidor ou representante. O vínculo se faz ali mesmo, pela própria Central.",
+      "foto": "../img/aerea-talhoes.jpg",
+      "veu": "verde",
+      "foco": "center 50%"
     },
     {
       "tipo": "lista",
-      "fundo": "marrom",
       "titulo": "A situação\ndo cadastro",
       "itens": [
         "Ativo",
@@ -78,11 +84,11 @@
         "Suspenso",
         "Cancelado"
       ],
-      "remate": "Pendente aparece quando há declaração errada, sobreposição ou notificação ainda não atendida."
+      "remate": "Pendente aparece quando há declaração errada, sobreposição ou notificação ainda não atendida.",
+      "fundo": "marrom"
     },
     {
       "tipo": "itens",
-      "fundo": "creme",
       "etiqueta": "No demonstrativo",
       "titulo": "Olhe as\nsobreposições",
       "itens": [
@@ -99,7 +105,10 @@
           "texto": "Área embargada"
         }
       ],
-      "remate": "O quadro traz a área e o percentual de cada sobreposição."
+      "remate": "O quadro traz a área e o percentual de cada sobreposição.",
+      "foto": "../img/rio-mata-aerea.jpg",
+      "veu": "verde",
+      "foco": "center 50%"
     },
     {
       "tipo": "lista",
@@ -118,7 +127,10 @@
       "paragrafos": [
         "Prazo perdido pode levar ao cancelamento do CAR. Quem abre a Central de vez em quando descobre o problema enquanto ele ainda é pequeno."
       ],
-      "salvar": "*Salve este passo a passo* e mande para quem precisa."
+      "salvar": "*Salve este passo a passo* e mande para quem precisa.",
+      "foto": "../img/por-do-sol-cerca.jpg",
+      "veu": "verde",
+      "foco": "center 60%"
     }
   ],
   "idv": 2

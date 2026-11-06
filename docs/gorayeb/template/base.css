@@ -996,3 +996,7 @@
 .idv2 .titulo-corpo .l1 { font-weight: 300; }
 .idv2 .titulo-corpo .l2 { font-weight: 700; font-style: normal; color: var(--dourado); }
 .idv2 .tabela thead th { font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 700; }
+
+/* capa tipográfica com um quadro de foto em cima do texto (pedido de 06/11) */
+.capa-tipo .quadro { display: block; width: 100%; height: 420px; object-fit: cover; border-radius: 22px; margin-bottom: 52px; }
+.capa-tipo .quadro + .fio-capa { display: none; }

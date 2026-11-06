@@ -323,6 +323,7 @@ function monta(s, i = 0, total = 0) {
       corpo += `
         ${ARROBA}
         <div class="meio-tipo">
+          ${s.quadro ? `<img class="quadro" src="${esc(s.quadro)}" alt="" style="object-position:${esc(s.foco || "center")}">` : ""}
           <hr class="fio-capa">
           ${s.kicker ? `<p class="kicker">${esc(s.kicker)}</p>` : ""}
           <h1 class="titulo-capa ${s.escala || ""}">${titulo(s.titulo)}</h1>

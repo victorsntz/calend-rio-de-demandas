@@ -17,7 +17,10 @@
     {
       "tipo": "tese",
       "tese": "O BPC não é aposentadoria. É um benefício assistencial do INSS.",
-      "texto": "Paga um salário mínimo por mês ao idoso ou à pessoa com deficiência de família de baixa renda. Não é preciso ter contribuído para o INSS em momento nenhum da vida."
+      "texto": "Paga um salário mínimo por mês ao idoso ou à pessoa com deficiência de família de baixa renda. Não é preciso ter contribuído para o INSS em momento nenhum da vida.",
+      "foto": "../img/idoso-caminho.jpg",
+      "veu": "verde",
+      "foco": "center 40%"
     },
     {
       "tipo": "cifra",
@@ -52,9 +55,11 @@
     },
     {
       "tipo": "tese",
-      "fundo": "bordo",
       "tese": "A conta da renda é por pessoa da casa: até 1/4 do salário mínimo para cada um.",
-      "texto": "O INSS calcula com os dados do CadÚnico e dos próprios sistemas. BPC ou aposentadoria de até um salário mínimo de outro idoso ou pessoa com deficiência da casa não entra nessa conta."
+      "texto": "O INSS calcula com os dados do CadÚnico e dos próprios sistemas. BPC ou aposentadoria de até um salário mínimo de outro idoso ou pessoa com deficiência da casa não entra nessa conta.",
+      "foto": "../img/pasto-entardecer.jpg",
+      "veu": "verde",
+      "foco": "center 50%"
     },
     {
       "tipo": "lista",
@@ -82,7 +87,9 @@
         "Quem cuida de um idoso ou de uma pessoa com deficiência em casa costuma descobrir tarde, ou não descobrir."
       ],
       "salvar": "*Salve este carrossel* e mande para quem precisa saber.",
-      "textura": "listras"
+      "foto": "../img/sol-no-pasto.jpg",
+      "veu": "verde",
+      "foco": "center 60%"
     }
   ],
   "idv": 2
