@@ -1262,3 +1262,8 @@ virou "Agronegócio", e "Do agro. Pelo agro." saiu da arte e da legenda, como
 manda o formato 01. O mapa ganhou pinos em Araguari, sul de Goiás e Mato
 Grosso. Números (450% desde 2019, R$ 5,9 bi) são do escritório, como no post
 publicado; a fonte na arte diz "Dados do escritório".
+- **A FTG em números, revisão.** Tela 3 com a foto em tela cheia e degradê. Tela
+  4 com o mapa em 3D (camadas empilhadas em perspectiva, sombra), sem a foto
+  pequena da águia, e rótulos planos ligados aos pinos por fio tracejado.
+  Título e texto equilibrados. Tela 5 refeita: foto cheia com degradê, síntese
+  com peso misturado e os botões do fecho F3.
