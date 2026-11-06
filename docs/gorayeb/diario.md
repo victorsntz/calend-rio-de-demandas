@@ -868,3 +868,29 @@ entrega.
 
 Decisão do Victor: a produção pode usar foto do Pinterest com pessoas, e a peça
 vai pra aprovação do cliente antes de sair. Quem aprova a foto é o escritório.
+
+**06/11/2026 · revisão da Dra. Elisa no Reserva Legal, e o que ela pegou na arte**
+
+O Victor mandou a revisão como se fosse só de legenda. **Três dos cinco pontos
+estavam também na arte**, e a peça sai hoje. Corrigidos os dois.
+
+1. **APP na conta da Reserva Legal (art. 15).** Faltavam dois dos três requisitos.
+   Agora: conservada **ou em recuperação**, com o **pedido feito no CAR**, e sem
+   abrir área nova. Estava na tela 2 e na legenda.
+2. **Onde se mede a APP de rio (art. 4º, I).** É da **borda do leito regular**, não
+   da margem que se vê na cheia nem da cerca. Entrou no rótulo da figura da tela 3.
+3. **"30 metros de mata" virou "30 metros de vegetação nativa".** No Cerrado a
+   faixa pode ser campo ou vereda. A legenda ganhou um parágrafo explicando a
+   troca de palavra, porque a diferença muda o que o produtor acha que pode cortar.
+4. **PRA:** acrescentado "desde que o CAR tenha sido feito no prazo da lei".
+5. **A multa não "vira" serviço ambiental de cara.** Enquanto o termo é cumprido,
+   as sanções ficam **suspensas** e o produtor não pode ser autuado. A conversão
+   só vem **depois de cumprido**. Virou item próprio na tela 8 e dois parágrafos
+   na legenda.
+
+Confirmados por ela e mantidos: 20% e 35%, a faixa de 30 a 500 m, a vereda com
+50 m do brejo, o marco de 22/07/2008, a dispensa de averbação e os três caminhos
+do art. 66.
+
+**Lição:** revisão de cliente que chega "só de legenda" tem que ser conferida
+contra a arte, tela por tela. O fato é o mesmo nos dois lugares.
