@@ -1096,3 +1096,17 @@ de x 600, onde o degradê original já está quase no fundo, com uma máscara de
 80 px. O rosto fica idêntico ao publicado. Cortar antes de x 600 traz restos do
 texto antigo (o "Tathiana N. M." chegava a x 595). Nome de pessoa não leva
 espaço rígido: quebra dentro da coluna de 470 px pra não invadir a foto.
+- **Institucional, opção B sem degradê.** Pedido do Victor: "um outro que não
+  seja desse jeito com degradê, que eu preserve a foto". A foto de cada pessoa
+  vai num cartão de canto arredondado (354 por 1060, x 640), recortada a partir
+  de x 690 da tela publicada, onde não sobra degradê nem texto antigo. Nenhuma
+  camada por cima. As duas versões estão na página pra ele escolher.
+- **Capa do institucional, que vai ficar fixada.** Pedido: "mais bonita, com
+  elementos a mais". Entraram nome e cargo dos três sob a foto, "Quem somos"
+  entre fios dourados, as três áreas numa linha, moldura dourada fina na tela
+  toda e listras suaves na parte escura (aqui fazem sentido: é a peça de
+  marca). Texto do título igual ao publicado.
+- **Georreferenciamento, terceira versão.** O Victor não gostou nem da antiga
+  nem da prévia em Helvetica. A nova está na nova IDV: paisagem do cerrado em
+  cima, título com peso misturado (light na primeira frase, bold dourado na
+  virada), fonte no rodapé. Foto recortada de peça antiga e ampliada.
