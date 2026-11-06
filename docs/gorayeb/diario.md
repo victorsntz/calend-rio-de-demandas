@@ -852,3 +852,14 @@ dizer quando sobe.
 fraco. Pinterest não abre lá e o conector do Drive não serve para imagem. O
 caminho que funcionou foi o Victor mandar o arquivo na conversa, como fez com a
 foto do sofá e a do Roberto. É assim que as próximas têm que chegar.
+
+**Correção da ressalva acima, no mesmo dia.** Escrevi que, se o container da
+sessão de arte cair, some tudo. Não é verdade e a própria sessão corrigiu. Os
+zips com os JPGs finais e a legenda de 11/11, 13/11, 18/11 e 20/11, mais as 12
+telas do institucional, já estão com o Victor. **A arte publicável está salva.**
+
+O que existe num container só é o código: a identidade nova no `base.css` e no
+`render.mjs`, o catálogo de capas, os modelos em HTML e os JSONs refeitos. Se
+isso se perder, o feed da semana sai do mesmo jeito, mas nenhuma sessão consegue
+refazer ou ajustar peça no padrão novo. O prejuízo é de capacidade, não de
+entrega.
