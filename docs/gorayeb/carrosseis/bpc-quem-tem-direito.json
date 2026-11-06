@@ -1,0 +1,96 @@
+{
+  "id": "bpc-quem-tem-direito",
+  "titulo": "BPC/LOAS: quem tem direito",
+  "nota": "Post de 11/11. Roteiro aprovado pela Dra. Elisa em 28/10, oito telas, sem mudar o conteúdo. Capa 4, clara, pela rotação. Selo de Área Previdenciária. A sigla BPC vem traduzida já na capa.",
+  "legenda_instagram": "UM SALÁRIO MÍNIMO POR MÊS, PARA QUEM NUNCA CONTRIBUIU COM O INSS.\n\nO nome dele é BPC, Benefício de Prestação Continuada, e vem da LOAS, a Lei Orgânica da Assistência Social. Não é aposentadoria: é um benefício assistencial, pago a quem precisa, sem exigir tempo de contribuição.\n\nQUEM PODE PEDIR. A pessoa idosa, com 65 anos ou mais, brasileira nata ou naturalizada, ou portuguesa com residência fixa no Brasil. E a pessoa com deficiência, de qualquer idade, inclusive criança, com impedimento de longo prazo de pelo menos dois anos, de natureza física, mental, intelectual ou sensorial. A pessoa com autismo entra aqui, por lei.\n\nA RENDA DA FAMÍLIA. A conta é por pessoa da casa: até 1/4 do salário mínimo para cada um. O INSS calcula com os dados do CadÚnico e dos próprios sistemas. E tem uma regra que ajuda muita família: o BPC ou a aposentadoria de até um salário mínimo de outro idoso ou pessoa com deficiência da casa não entra nessa conta.\n\nO PRIMEIRO PASSO É O CADÚNICO. A família precisa estar inscrita no Cadastro Único e com o cadastro atualizado nos últimos dois anos. Sem isso, o pedido não anda. Depois, a solicitação é feita pelo Meu INSS ou pelo telefone 135. Quando o pedido é por deficiência, ainda há avaliação médica e social.\n\nDUAS COISAS QUE O BPC NÃO TEM. Ele não paga 13º e não deixa pensão por morte. São as diferenças que mais pegam a família de surpresa. Por isso, antes de pedir, vale conferir se a pessoa não tem direito a uma aposentadoria, que tem as duas coisas.\n\nSalve este carrossel e mande para quem cuida de um idoso ou de uma pessoa com deficiência em casa.\n\nFontes: INSS, páginas do BPC/LOAS à pessoa idosa e à pessoa com deficiência; Lei 8.742/1993, art. 20, §14; Lei 12.764/2012, art. 1º, §2º.",
+  "slides": [
+    {
+      "tipo": "capa-clara",
+      "selo": "Área Previdenciária",
+      "foto": "../img/casa-roca-familia-recorte.jpg",
+      "foco": "center 50%",
+      "kicker": "BPC, o Benefício de Prestação Continuada",
+      "titulo": "Um salário mínimo\npor mês.",
+      "escala": "menor",
+      "sub": "Para quem tem direito, *sem nunca ter contribuído*."
+    },
+    {
+      "tipo": "tese",
+      "tese": "O BPC não é aposentadoria. É um benefício assistencial do INSS.",
+      "texto": "Paga um salário mínimo por mês ao idoso ou à pessoa com deficiência de família de baixa renda. Não é preciso ter contribuído para o INSS em momento nenhum da vida.",
+      "foto": "../img/idoso-caminho.jpg",
+      "veu": "verde",
+      "foco": "center 40%"
+    },
+    {
+      "tipo": "cifra",
+      "fundo": "creme",
+      "etiqueta": "Quem pode · pessoa idosa",
+      "numero": "65",
+      "leitura": "anos ou mais",
+      "texto": "Brasileiro, nato ou naturalizado, ou português com residência fixa no Brasil.",
+      "fonte": "INSS, BPC/LOAS à pessoa idosa",
+      "escala": "gigante",
+      "centro": true
+    },
+    {
+      "tipo": "itens",
+      "etiqueta": "Quem pode · pessoa com deficiência",
+      "titulo": "Qualquer idade,\ninclusive criança",
+      "itens": [
+        {
+          "icone": "relogio",
+          "texto": "Impedimento de longo prazo: 2 anos ou mais"
+        },
+        {
+          "icone": "pessoas",
+          "texto": "Físico, mental, intelectual ou sensorial"
+        },
+        {
+          "icone": "check",
+          "texto": "A pessoa com autismo entra aqui, por lei"
+        }
+      ],
+      "remate": "Vale para criança: não há idade mínima."
+    },
+    {
+      "tipo": "tese",
+      "tese": "A conta da renda é por pessoa da casa: até 1/4 do salário mínimo para cada um.",
+      "texto": "O INSS calcula com os dados do CadÚnico e dos próprios sistemas. BPC ou aposentadoria de até um salário mínimo de outro idoso ou pessoa com deficiência da casa não entra nessa conta.",
+      "foto": "../img/pasto-entardecer.jpg",
+      "veu": "verde",
+      "foco": "center 50%"
+    },
+    {
+      "tipo": "lista",
+      "titulo": "O primeiro passo\né o CadÚnico",
+      "meiaFoto": true,
+      "foto": "../img/horta-familiar.jpg",
+      "itens": [
+        "A família inscrita no Cadastro Único",
+        "Atualizado nos últimos 2 anos",
+        "Pedido pelo Meu INSS ou pelo 135"
+      ],
+      "remate": "Há ainda avaliação médica e social.",
+      "foco": "center 55%"
+    },
+    {
+      "tipo": "foto-texto",
+      "titulo": "Não paga 13º\ne não deixa pensão",
+      "texto": "São as duas diferenças que mais pegam a família de surpresa. Por isso vale conferir antes se a pessoa não tem direito a uma aposentadoria, que tem as duas coisas.",
+      "fundo": "bordo"
+    },
+    {
+      "tipo": "fecho",
+      "sintese": "Benefício que muita família\nnem sabe que existe.",
+      "paragrafos": [
+        "Quem cuida de um idoso ou de uma pessoa com deficiência em casa costuma descobrir tarde, ou não descobrir."
+      ],
+      "salvar": "*Salve este carrossel* e mande para quem precisa saber.",
+      "foto": "../img/sol-no-pasto.jpg",
+      "veu": "verde",
+      "foco": "center 60%"
+    }
+  ],
+  "idv": 2
+}

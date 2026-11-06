@@ -1,0 +1,57 @@
+{
+  "id": "teste-modelos",
+  "titulo": "Teste dos três modelos novos",
+  "slides": [
+    {
+      "tipo": "capa-foto",
+      "foto": "../img/bois-estante.jpg",
+      "etiqueta": "Direito agrário.",
+      "titulo": "Cerca de divisa\nnão é só sua.",
+      "escala": "menor",
+      "sub": "Quem paga a conta *está no Código Civil* desde sempre."
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../img/curral-nelore.jpg",
+      "titulo": "A lei divide\nmeio a meio.",
+      "paragrafos": [
+        "O muro, a cerca e a vala que separam duas propriedades pertencem aos dois vizinhos em comum.",
+        "Levantar, consertar e manter: as três despesas saem metade de cada um."
+      ]
+    },
+    {
+      "tipo": "perspectiva",
+      "foto": "../img/cafezal-minas.png",
+      "titulo": "O café que sai\ndaqui, em números",
+      "itens": [
+        {
+          "numero": "1 em 3",
+          "rotulo": "cafés do mundo é brasileiro"
+        },
+        {
+          "numero": "6 mi",
+          "rotulo": "sacas por ano no Cerrado Mineiro"
+        },
+        {
+          "numero": "55",
+          "rotulo": "municípios na denominação"
+        },
+        {
+          "numero": "11%",
+          "rotulo": "a mais no preço de exportação"
+        }
+      ],
+      "guia": {
+        "x0": 9,
+        "y0": 28,
+        "x1": 44,
+        "y1": 60,
+        "giro": 13,
+        "incl": -8,
+        "escala0": 1,
+        "escala1": 0.52
+      },
+      "fonte": "Cecafé e Federação dos Cafeicultores do Cerrado"
+    }
+  ]
+}

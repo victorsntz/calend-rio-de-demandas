@@ -1,0 +1,118 @@
+{
+  "id": "dia-da-pecuaria",
+  "titulo": "Dia da Pecuária: os primeiros",
+  "nota": "Formato 01, recorte nacional: nada do escritório na arte. Fotos do Pinterest, licença a conferir antes de publicar (ver _creditos.json). Todo número tem fonte na peça.",
+  "legenda_instagram": "14 de outubro é o Dia Nacional da Pecuária. E vale lembrar como isso tudo começou.\n\nEm 16 de fevereiro de 1919, em Uberaba, um grupo de criadores fundou o Herd Book da Raça Zebu. A ideia era simples e ninguém tinha feito antes: anotar de onde vinha cada bezerro. Geraldino Rodrigues da Cunha e Joaquim Machado Borges assinaram aquele começo e hoje estão na galeria de presidentes da ABCZ.\n\nDepois vieram outros. Adir do Carmo Leonel entrou na atividade em 1958 e virou um dos jurados mais respeitados do zebu. E vieram os milhares que nunca entraram em livro nenhum, mas abriram pasto onde só tinha mato.\n\nO resultado está aí: 234,3 milhões de cabeças. Mato Grosso, Pará, Goiás, Minas e Mato Grosso do Sul juntos guardam mais da metade disso. E de janeiro a setembro saíram 2,43 milhões de toneladas de carne, US$ 14,17 bilhões de receita.\n\nO que mudou foi o resto. O primeiro pecuarista não tinha livro, nem lei, nem prazo. Hoje tem os três, e cada um com uma exigência diferente.\n\nMas o começo do dia é o mesmo de sempre. Rebanho grande não se faz sozinho. Se faz de gente que não falta.\n\nMarca aqui o pecuarista que te ensinou o ofício.\n\nFontes: ABCZ, IBGE (Pesquisa da Pecuária Municipal 2025) e ABIEC/Secex.",
+  "slides": [
+    {
+      "tipo": "capa-foto",
+      "foto": "../img/boiada-estrada.jpg",
+      "etiqueta": "14 de outubro.",
+      "titulo": "Ninguém começa\ncom 234 milhões.",
+      "escala": "menor",
+      "sub": "Dia da Pecuária. *O rebanho brasileiro* começou com um punhado de teimosos."
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../img/vaqueiro-boiada.jpg",
+      "titulo": "Os primeiros\nnão tinham mercado.",
+      "paragrafos": [
+        "Tinham gado vindo da Índia, sertão sem estrada e ninguém pra garantir que ia dar certo.",
+        "Em 16 de fevereiro de 1919, em Uberaba, um grupo de criadores fundou o Herd Book da Raça Zebu pra registrar de onde vinha cada bezerro."
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Quem assinou\no começo",
+      "itens": [
+        "Geraldino Rodrigues da Cunha e Joaquim Machado Borges, que fundaram o Herd Book em 1919",
+        "Adir do Carmo Leonel, criador desde 1958 e jurado da ABCZ",
+        "E os milhares que nunca entraram em livro nenhum"
+      ],
+      "meiaFoto": true,
+      "foto": "../img/comitiva-vaqueiros.jpg",
+      "foco": "center 30%"
+    },
+    {
+      "tipo": "figura",
+      "figura": "mapa",
+      "titulo": "Onde o rebanho\nestá hoje",
+      "mapa": "brasil",
+      "altura": 600,
+      "pontos": [
+        {
+          "lon": -55.4,
+          "lat": -12.8,
+          "valor": "31,6 mi",
+          "rotulo": "Mato Grosso"
+        },
+        {
+          "lon": -52.5,
+          "lat": -4.8,
+          "valor": "25,6 mi",
+          "rotulo": "Pará"
+        },
+        {
+          "lon": -49.6,
+          "lat": -15.9,
+          "valor": "22,5 mi",
+          "rotulo": "Goiás"
+        },
+        {
+          "lon": -44.5,
+          "lat": -18.6,
+          "valor": "22,1 mi",
+          "rotulo": "Minas Gerais"
+        },
+        {
+          "lon": -54.6,
+          "lat": -20.5,
+          "valor": "17,9 mi",
+          "rotulo": "Mato Grosso do Sul"
+        }
+      ],
+      "legenda": "Os cinco juntos dão 119,7 milhões de cabeças, mais da metade do rebanho. São Félix do Xingu, no Pará, é o município com mais gado: 2,7 milhões.",
+      "fonte": "IBGE, Pesquisa da Pecuária Municipal 2025",
+      "alt": "Mapa do Brasil com os cinco maiores rebanhos estaduais em bolhas proporcionais",
+      "fundo": "offwhite"
+    },
+    {
+      "tipo": "figura",
+      "figura": "numeros",
+      "titulo": "O que esse\ntrabalho move",
+      "itens": [
+        {
+          "numero": "234,3 mi",
+          "rotulo": "cabeças no rebanho brasileiro",
+          "icone": "boi"
+        },
+        {
+          "numero": "2,43 mi t",
+          "rotulo": "de carne embarcada de janeiro a setembro",
+          "icone": "navio"
+        },
+        {
+          "numero": "US$ 14,17 bi",
+          "rotulo": "de receita no período, 14,1% acima de 2025",
+          "icone": "dinheiro"
+        }
+      ],
+      "fonte": "IBGE (PPM 2025) e ABIEC/Secex",
+      "textura": "listras"
+    },
+    {
+      "tipo": "foto-texto",
+      "titulo": "O rebanho cresceu.\nA papelada também.",
+      "texto": "Hoje o mesmo trabalho vem com CAR, ITR, guia de trânsito, contrato de arrendamento e sucessão. O gado continua sendo gado. O que mudou é que agora tudo tem prazo.",
+      "foto": "../img/gado-por-do-sol.jpg",
+      "veu": "marrom"
+    },
+    {
+      "tipo": "fecho",
+      "foto": "../img/nelore-rebanho.jpg",
+      "veu": "verde",
+      "sintese": "Rebanho grande\nnão se faz sozinho.\nSe faz de gente\nque não falta.",
+      "cta": "Marca aqui o pecuarista que te ensinou o ofício."
+    }
+  ]
+}
