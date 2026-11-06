@@ -1132,3 +1132,13 @@ Essas quatro telas (capa fixada, opção B, mapa e capa do BPC) estão em HTML
 solto no scratchpad (`ref/`), não no template. Se forem aprovadas, o passo
 seguinte é levar os dois desenhos novos (cartão de foto e mapa com pinos) pro
 `render.mjs`.
+- **Opção B, enquadramento pessoa por pessoa.** Lista do Victor: Fernando com
+  rosto descentralizado; Roberto com zoom de uns 50%; Jéssica com 20%; Tathiana,
+  Gustavo, Fabiana, Bárbara e Tais com um pouco mais. Centro do rosto medido
+  numa grade sobre cada tela publicada, recorte centrado nele com o rosto a 34%
+  da altura do cartão, zoom 1,15 (Fernando), 1,2 (Jéssica) e 1,3 (os outros
+  cinco). O Roberto sai da foto grande, com 1,5. **Limite:** à esquerda de
+  x 600 a tela publicada já tem o degradê antigo, então Fernando (41%), Jéssica
+  (44%) e Janaina (44%) ficam um pouco à esquerda do centro. E o zoom amplia o
+  JPG publicado de 1080 px, o que amolece de leve. Com as fotos originais da
+  sessão, os dois problemas somem.
