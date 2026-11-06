@@ -19,6 +19,8 @@ ajustados na sessão que for usar).
   Victor em 06/11: "muita tela sem imagem"), com foto boa do Pinterest ou do
   banco do escritório, nunca recorte de arte antiga. Tese, pílulas e lista
   também podem sair sobre foto escurecida.
+- **Fecho:** roda entre F1 e F4 sem repetir nos últimos 3 posts. F4 quando o post
+  pede comentário.
 - Nada passa por cima de rosto. Tela vazia não passa.
 
 ## Modelos
@@ -49,6 +51,9 @@ ajustados na sessão que for usar).
 ### Fecho
 
 - **F1 · Fecho com listras.** Frase-síntese, um parágrafo, caixa de salvar e logo. Listras no fundo verde. Como: template: fecho, textura listras. Já usado: Documentos tela 8.
+- **F2 · Marca grande, creme.** Fecho calmo: símbolo FTG grande e apagado ao fundo, frase-síntese com peso misturado, ícones de salvar e enviar. Como: HTML (modelos/fechos.html, #f2). Já usado: estudo.
+- **F3 · Foto com botões.** Faixa de foto em cima, síntese, dois botões de ação (salvar, mandar pra família). Como: HTML (modelos/fechos.html, #f3). Já usado: estudo.
+- **F4 · Pergunta e marcação.** Fecho que puxa comentário: pergunta grande, caixa imitando comentário pedindo pra marcar alguém. Bordô com listras. Como: HTML (modelos/fechos.html, #f4). Já usado: estudo.
 
 ## Rodízio de capas até 18/12
 
