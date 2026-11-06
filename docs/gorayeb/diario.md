@@ -932,3 +932,10 @@ Pendências que a conferência deixou: o que o STF decidiu nas ADIs 4.901, 4.902
 4.903 e 4.937 e na ADC 42 sobre os §§4º e 5º do art. 59, e as ementas das Leis
 15.228/2025 e 15.430/2026, que constam como norma complementar sem alterar
 esses artigos.
+
+**06/11/2026 · mais duas peças**
+
+25/11, "Seu benefício foi calculado certo?", arte pronta na identidade nova,
+capa C6. Extra pronto, fora da agenda: "A FTG em números", 5 telas, post fixado,
+sem data. Junta-se ao institucional "Quem cuida" esperando o Victor dizer quando
+os fixados sobem.
