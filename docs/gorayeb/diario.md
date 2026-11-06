@@ -1110,3 +1110,25 @@ espaço rígido: quebra dentro da coluna de 470 px pra não invadir a foto.
   nem da prévia em Helvetica. A nova está na nova IDV: paisagem do cerrado em
   cima, título com peso misturado (light na primeira frase, bold dourado na
   virada), fonte no rodapé. Foto recortada de peça antiga e ampliada.
+- **Opção B reenquadrada.** O Victor apontou espaço grande em cima e fotos
+  desenquadradas. Cartão agora 440 por 880 em y 150, recorte a partir de x 640
+  na resolução original, com o rosto posto a 32% da altura do cartão em todas
+  as pessoas (altura do rosto medida em cada tela publicada). Texto
+  centralizado na altura do cartão. A detecção automática de rosto por cor de
+  pele errou (pegava braço e colo); as alturas foram marcadas à mão.
+- **Capa fixada:** nomes dos três tirados, a pedido. O resto aprovado ("ficou
+  show").
+- **Georreferenciamento v3 aprovado** ("agora ficou top"). Trocar o recorte
+  pela foto original quando ela chegar.
+- **CAR tela 4, o mapa.** "Deixe esse mapinha melhor." Mapa em areia com
+  contorno fino, pinos dourados em MT e GO com o nome do estado, pino vazado em
+  Minas com "sistema federal", rótulos com contorno da cor do fundo pra ler em
+  cima da linha do mapa.
+- **BPC capa.** "A disposição de texto não ficou interessante." Virou foto em
+  cartão largo, título grande em Helvetica com peso misturado ("Um salário
+  mínimo" light, "por mês." bold bordô), apoio, logo e "Deslize".
+
+Essas quatro telas (capa fixada, opção B, mapa e capa do BPC) estão em HTML
+solto no scratchpad (`ref/`), não no template. Se forem aprovadas, o passo
+seguinte é levar os dois desenhos novos (cartão de foto e mapa com pinos) pro
+`render.mjs`.
