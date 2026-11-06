@@ -785,3 +785,29 @@ print ou escreve o que saiu, e eu marco. A rotina das 17h54 fica, só mudou o qu
 ela faz: devolve a conferência seca (vencido sem confirmação, o que sai em 7 dias
 com arte, o que sai em 15 sem arte, reconferências da semana) e espera a palavra
 dele pra marcar qualquer coisa.
+
+**06/11/2026 · BPC consertado, zips de 11 e 13/11 entregues**
+
+A sessão principal consertou a tela 6 do BPC em dc8c835. Conferi o JSON e abri o
+`pag-06.png`: os três itens agora cabem em uma linha e o remate está inteiro
+dentro da peça, com folga no pé. Status de 11/11 de volta para "arte pronta ·
+com a legenda".
+
+**A regra dos 35 caracteres é mais folgada do que está escrita.** O item que
+ficou tem 36 e coube numa linha só. O que quebra de verdade está mais perto de
+40. O número exato importa menos que o sinal: quando a tela tem remate embaixo,
+item longo empurra o remate pra fora, e é aí que corta. Sem remate, só aperta.
+
+Os dois zips, 11/11 e 13/11, foram direto ao Victor pela sessão de arte, cada um
+com a legenda solta.
+
+**Defeito pequeno no estático de 13/11, decisão do Victor.** O título quebra com
+"O prazo" sozinho na primeira linha, e a segunda chega a uns 50px da borda
+direita contra 85 da margem esquerda. Não corta nada, fica desequilibrado. O
+conserto é uma quebra manual no JSON, mas a peça usa foto e nenhuma sessão com
+render tem o `img/`, então ninguém consegue renderizar de novo.
+
+**O que segue travando a produção de arte:** o `img/` fora do repositório, e o
+push negado na sessão de arte, que tem 7 commits parados, incluindo a escala das
+listras no `base.css`. Enquanto não sobem, render feito a partir do remoto sai
+com as listras antigas.
