@@ -1234,3 +1234,14 @@ O Victor: "nem precisa perguntar". Regra cumprida nas três peças da semana:
 Onze fotos novas do Pinterest, todas escurecidas no mesmo padrão. A partir
 desta rodada a origem fica gravada em `img/_creditos-pinterest.tsv` (arquivo,
 busca e URL). Zips das três peças refeitos.
+
+**06/11/2026 · carrossel de 23/11, NR-31, na nova IDV**
+
+8 telas, roteiro aprovado em 28/10. Capa C5 em HTML (`modelos/nr31-capa.html`):
+colheitadeira no entardecer, faixa verde com listras no pé, selo de Área
+Trabalhista. Fecho F1. Foto em 4 das 8 telas, todas do Pinterest, escurecidas
+e com origem no `_creditos-pinterest.tsv`. Siglas explicadas na própria tela:
+NR (no kicker da capa), PGRTR, CIPATR, SESTR e EPI. A figura é a linha
+com os três patamares de empregados (11 a 50, 20 ou mais, 51 ou mais). O
+"3 anos" estourou a tela no tamanho gigante: virou "3" com "anos" na leitura.
+A linha do tempo ganhou Helvetica no número com o tema novo.

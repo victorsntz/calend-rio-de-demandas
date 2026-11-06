@@ -1,0 +1,127 @@
+{
+  "id": "nr31-o-que-e",
+  "idv": 2,
+  "titulo": "NR-31: o que é e para quem essa norma se aplica",
+  "nota": "Post de 23/11. Roteiro aprovado pela Dra. Elisa em 28/10. Capa C5 (foto cheia com faixa) e fecho F1, pelo rodízio do catálogo. Selo de Área Trabalhista. Siglas explicadas na mesma tela: NR, PGRTR, CIPATR, SESTR, EPI.",
+  "legenda_instagram": "NR-31: O QUE É E PARA QUEM VALE.\n\nÉ a norma de segurança e saúde do trabalho rural. A Lei 5.889/1973, a lei do trabalho rural, manda seguir as regras fixadas pelo Ministério do Trabalho, e essas regras estão na NR-31. O texto atual veio da Portaria SEPRT 22.677/2020 e vale desde 27 de outubro de 2021.\n\nONDE VALE. Agricultura, pecuária, silvicultura, exploração florestal e aquicultura. Entra também a atividade industrial feita dentro da propriedade rural, e a frente de trabalho conta como parte da fazenda.\n\nQUEM RESPONDE. O empregador rural, pessoa física ou empresa, proprietário ou arrendatário. Quem presta serviço no campo para terceiros com equipe própria também responde.\n\nO PGRTR. Cada propriedade precisa do seu Programa de Gerenciamento de Riscos no Trabalho Rural, com inventário de riscos e plano de ação, revisto a cada três anos. Com até 50 empregados, dá para montar numa ferramenta gratuita do governo.\n\nPELO TAMANHO. Com 20 ou mais empregados fixos, a fazenda monta a CIPATR, a comissão de prevenção de acidentes e de assédio. De 11 a 50, o SESTR fica dispensado se o empregador ou um preposto fizer a capacitação. Com 51 ou mais, o SESTR com profissional de segurança é obrigatório, e na safra o temporário entra na soma.\n\nNA PRÁTICA. Exame médico antes de começar e uma vez por ano. EPI de graça e treinamento antes da função, com certificado. Água potável e fresca, banheiro na frente de trabalho e material de primeiros socorros.\n\nO risco é da lida. O cuidado é do empregador. Salve este carrossel e mande para quem contrata no campo.\n\nFontes: Lei 5.889/1973; Portaria SEPRT 22.677/2020; NR-31, texto consolidado do MTE (última alteração: Portaria MTE 342/2024); Decreto 10.854/2021.",
+  "slides": [
+    {
+      "tipo": "capa-tipo",
+      "titulo": "capa em HTML (modelos/nr31-capa.html)"
+    },
+    {
+      "tipo": "tese",
+      "foto": "../img/cortador-cana.jpg",
+      "veu": "verde",
+      "foco": "center 45%",
+      "tese": "Uma norma do Ministério do Trabalho.",
+      "texto": "A Lei 5.889/1973, a lei do trabalho rural, manda seguir as regras de segurança fixadas pelo Ministério. Essas regras estão na NR-31. O texto atual veio da Portaria SEPRT 22.677/2020 e vale desde 27 de outubro de 2021."
+    },
+    {
+      "tipo": "itens",
+      "fundo": "creme",
+      "etiqueta": "Onde vale",
+      "titulo": "Cinco atividades\nno mesmo campo",
+      "itens": [
+        {
+          "icone": "trator",
+          "texto": "Agricultura"
+        },
+        {
+          "icone": "boi",
+          "texto": "Pecuária"
+        },
+        {
+          "icone": "folha",
+          "texto": "Silvicultura"
+        },
+        {
+          "icone": "mapa",
+          "texto": "Exploração florestal"
+        },
+        {
+          "icone": "navio",
+          "texto": "Aquicultura"
+        }
+      ],
+      "remate": "Entra também a indústria feita dentro da propriedade. E a frente de trabalho conta como fazenda."
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../img/curral-aereo.jpg",
+      "foco": "center 55%",
+      "titulo": "Quem responde:\no empregador rural.",
+      "paragrafos": [
+        "É quem toca a atividade com ajuda de empregados, pessoa física ou empresa, proprietário ou arrendatário.",
+        "Quem presta serviço no campo para terceiros com equipe própria também responde."
+      ]
+    },
+    {
+      "tipo": "cifra",
+      "fundo": "offwhite",
+      "escala": "gigante",
+      "centro": true,
+      "etiqueta": "PGRTR",
+      "numero": "3",
+      "leitura": "anos é o prazo pra revisar o programa",
+      "texto": "PGRTR é o Programa de Gerenciamento de Riscos no Trabalho Rural: inventário de riscos e plano de ação, um por propriedade. Com até 50 empregados, dá pra montar numa ferramenta gratuita do governo.",
+      "fonte": "NR-31, texto consolidado do MTE"
+    },
+    {
+      "tipo": "figura",
+      "figura": "linha",
+      "titulo": "O que muda com\no número de empregados",
+      "itens": [
+        {
+          "numero": "11 a 50",
+          "rotulo": "SESTR dispensado se o empregador\nou um preposto fizer a capacitação"
+        },
+        {
+          "numero": "20 ou mais",
+          "rotulo": "fixos: a fazenda monta a CIPATR, a comissão\nde prevenção de acidentes e de assédio"
+        },
+        {
+          "numero": "51 ou mais",
+          "rotulo": "SESTR obrigatório, com\nprofissional de segurança"
+        }
+      ],
+      "legenda": "SESTR é o serviço especializado em segurança e saúde no trabalho rural. Na safra, o temporário entra na soma.",
+      "fonte": "NR-31, itens 31.4 e 31.5"
+    },
+    {
+      "tipo": "itens",
+      "foto": "../img/pulverizacao-epi.jpg",
+      "veu": "verde",
+      "foco": "center 40%",
+      "etiqueta": "Na prática",
+      "titulo": "O que a norma\ncobra no dia a dia",
+      "itens": [
+        {
+          "icone": "check",
+          "texto": "Exame médico antes de começar e uma vez por ano"
+        },
+        {
+          "icone": "pessoas",
+          "texto": "EPI, o equipamento de proteção, de graça"
+        },
+        {
+          "icone": "documento",
+          "texto": "Treinamento antes da função, com certificado"
+        },
+        {
+          "icone": "folha",
+          "texto": "Água fresca, banheiro e primeiros socorros na frente de trabalho"
+        }
+      ]
+    },
+    {
+      "tipo": "fecho",
+      "textura": "listras",
+      "sintese": "O risco é da lida.\nO cuidado é do empregador.",
+      "paragrafos": [
+        "Conhecer a NR-31 é o primeiro passo para pôr a fazenda em dia."
+      ],
+      "salvar": "*Salve este carrossel* e mande para quem contrata no campo."
+    }
+  ]
+}
