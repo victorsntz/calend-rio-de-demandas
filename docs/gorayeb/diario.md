@@ -908,3 +908,27 @@ Legenda em `linha-editorial/03-legenda-09-11.txt`.
 narração em `linha-editorial/conteudo.py` fica como está, porque é registro do
 que foi ao ar. Se um dia esse vídeo for reeditado ou legendado na tela, é aqui
 que está a redação certa.
+
+**06/11/2026 · o prazo do PRA conferido, e ele muda o recado**
+
+A Dra. Elisa mandou conferir o art. 29, §4º antes de citar data. Conferido no
+texto compilado oficial da Câmara. Achado importante:
+
+- O §4º **não** é prazo para inscrever no CAR. Inscrever é obrigatório e **sem
+  prazo** (§3º). O §4º fixa a data que dá **direito de aderir ao PRA**.
+- São duas datas: **31/12/2023** para imóvel acima de 4 módulos fiscais e
+  **31/12/2025** para os de até 4 módulos e para o agricultor familiar.
+- **As duas já venceram.** Nenhuma prorrogação encontrada na ficha oficial.
+
+Entrou na legenda como parágrafo próprio e na arte como item ("Vale para quem
+inscreveu o CAR no prazo"). Dizer só "no prazo da lei" dava esperança a quem já
+está fora.
+
+Também afinado: o art. 59 tem três marcos, não dois. Não autuação (§4º),
+suspensão das sanções a partir da assinatura (§5º, 1ª parte) e conversão da
+multa depois de cumprido (§5º, 2ª parte). A legenda passou a separar os três.
+
+Pendências que a conferência deixou: o que o STF decidiu nas ADIs 4.901, 4.902,
+4.903 e 4.937 e na ADC 42 sobre os §§4º e 5º do art. 59, e as ementas das Leis
+15.228/2025 e 15.430/2026, que constam como norma complementar sem alterar
+esses artigos.
