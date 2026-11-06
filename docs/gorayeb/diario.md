@@ -1029,3 +1029,11 @@ comenta tela por tela. Cada mudança é republicada na hora.
 - **Georreferenciamento: título mal diagramado.** "O prazo" sozinho em cima e a
   linha seguinte encostando na margem. Precisa de quebra manual, mas a peça usa
   `img/sala-reunioes-madeira.jpg`, que não está nesta sessão. Pedido ao Victor.
+- **Georreferenciamento todo em Helvetica.** Pedido do Victor: "use tudo
+  helvetica nessa". Opção nova no `estatico`, `tipografia: "helvetica"`:
+  HelveticaNeue Bold 72, entrelinha 1.1, a virada dourada em caixa alta também
+  em Helvetica. Frase quebrada à mão em "O prazo do / georreferenciamento /
+  mudou." O JSON da peça já está com isso. A prévia saiu sobre chapa verde, sem
+  a foto, que continua faltando nesta sessão; a final só sai com
+  `img/sala-reunioes-madeira.jpg`. Até lá, o `pag-01.png` no repositório
+  continua sendo a versão antiga.

@@ -10,10 +10,10 @@
       "foto": "../img/sala-reunioes-madeira.jpg",
       "veu": "verde",
       "foco": "center 55%",
-      "frase": "O prazo do georreferenciamento mudou.\n*E a Justiça ainda está discutindo.*",
-      "escala": "curta",
+      "frase": "O prazo do\ngeorreferenciamento\nmudou.\n*E a Justiça ainda*\n*está discutindo.*",
       "apoio": "Antes de vender, dividir ou transferir, pergunte ao cartório o que ele exige hoje.",
-      "fonte": "Decreto 12.689/2025 · Justiça Federal/MA, maio de 2026"
+      "fonte": "Decreto 12.689/2025 · Justiça Federal/MA, maio de 2026",
+      "tipografia": "helvetica"
     }
   ]
 }

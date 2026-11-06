@@ -699,6 +699,13 @@
 .bg-offwhite .frase strong, .bg-branco .frase strong,
 .bg-creme .frase strong, .bg-areia .frase strong { color: var(--bordo); }
 .frase em { font-style: italic; font-weight: 400; }
+/* estático todo em Helvetica, pedido do Victor em 06/11 no georreferenciamento:
+   a Arvo pesa demais quando a frase é longa e tem palavra comprida. */
+.frase.helvetica {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 700;
+  font-size: 72px; line-height: 1.1; letter-spacing: -.025em;
+}
+.frase.helvetica strong { letter-spacing: -.01em; }
 
 /* ======================================================================
    VAGA — anúncio de contratação. O mesmo slide serve o feed (1080×1350)

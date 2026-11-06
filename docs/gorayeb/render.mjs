@@ -265,7 +265,7 @@ function monta(s, i = 0, total = 0) {
         ${ARROBA}
         ${s.etiqueta ? `${ETIQUETA(s.etiqueta)}` : ""}
         <div class="meio">
-          <p class="frase ${s.escala || ""}">${titulo(s.frase)}</p>
+          <p class="frase ${s.escala || ""}${s.tipografia === "helvetica" ? " helvetica" : ""}">${titulo(s.frase)}</p>
           ${s.apoio ? `<div class="espaco"></div><p class="corpo menor">${rico(s.apoio)}</p>` : ""}
         </div>
         <div class="rodape">${LOGO(66)}${s.fonte ? `<p class="fonte">${esc(s.fonte)}</p>` : ""}</div>`;
