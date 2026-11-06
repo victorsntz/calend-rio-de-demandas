@@ -1275,3 +1275,157 @@ publicado; a fonte na arte diz "Dados do escritório".
 (Pinterest, escurecidas, origem no `_creditos-pinterest.tsv`). Prazos em número
 gigante: 10 anos (art. 103 da Lei 8.213/91) e 30 dias de recurso. CNIS e PPP
 explicados na tela.
+
+**06/11/2026 · BPC consertado, zips de 11 e 13/11 entregues**
+
+A sessão principal consertou a tela 6 do BPC em dc8c835. Conferi o JSON e abri o
+`pag-06.png`: os três itens agora cabem em uma linha e o remate está inteiro
+dentro da peça, com folga no pé. Status de 11/11 de volta para "arte pronta ·
+com a legenda".
+
+**A regra dos 35 caracteres é mais folgada do que está escrita.** O item que
+ficou tem 36 e coube numa linha só. O que quebra de verdade está mais perto de
+40. O número exato importa menos que o sinal: quando a tela tem remate embaixo,
+item longo empurra o remate pra fora, e é aí que corta. Sem remate, só aperta.
+
+Os dois zips, 11/11 e 13/11, foram direto ao Victor pela sessão de arte, cada um
+com a legenda solta.
+
+**Defeito pequeno no estático de 13/11, decisão do Victor.** O título quebra com
+"O prazo" sozinho na primeira linha, e a segunda chega a uns 50px da borda
+direita contra 85 da margem esquerda. Não corta nada, fica desequilibrado. O
+conserto é uma quebra manual no JSON, mas a peça usa foto e nenhuma sessão com
+render tem o `img/`, então ninguém consegue renderizar de novo.
+
+**O que segue travando a produção de arte:** o `img/` fora do repositório, e o
+push negado na sessão de arte, que tem 7 commits parados, incluindo a escala das
+listras no `base.css`. Enquanto não sobem, render feito a partir do remoto sai
+com as listras antigas.
+
+**06/11/2026 · identidade nova e catálogo de capas**
+
+O Victor aprovou uma identidade nova, a partir de referências de social media
+que ele mandou, com o diagnóstico de que "nosso design está muito duro".
+Títulos em Helvetica Bold, caixa baixa, com peso misturado. Etiqueta dourada
+pequena, grão de filme, verde mais fechado, listras só quando a tela pede. No
+JSON é `"idv": 2`. Regras novas: degradê nunca por cima de rosto, e tela vazia
+não passa. As listras foram corrigidas para a escala do arquivo oficial.
+
+**Vale de 06/11 em diante.** As peças de 26/10 a 09/11 saíram na identidade
+antiga e ficam como estão: são registro do que foi publicado, não se reescreve.
+
+**Catálogo de capas, pedido do Victor.** A rotação automática de quatro modelos
+deu lugar a oito com código: C1 foto em cartão, C2 foto escurecendo, C3 objeto
+desenhado, C4 tipográfica escura, C5 foto cheia com faixa, C6 céu aberto, C7
+mapa só território, CF institucional fixada. A capa não repete o modelo dos
+últimos três posts. A escolha de cada post virou `CAPA_POR_DATA` em
+`linha-editorial/conteudo.py`, no lugar do contador `_giro`. Conferi a lista
+contra a própria regra dos três posts e ela fecha.
+
+Status novos, pela sessão de arte: 18/11 e 20/11 passam a arte pronta, as duas
+já na identidade nova. 11/11 e 13/11 refeitos também, o georreferenciamento na
+terceira versão, que o Victor aprovou.
+
+**Ressalva que precisa estar escrita.** Nada disso está no repositório. A sessão
+de arte tem 19 commits presos porque o push continua negado, e eu não consigo
+abrir nenhuma dessas peças para conferir. Marquei pela palavra dela, que é a
+dona da arte, e porque o Victor revisou ao vivo. Mas enquanto o push não sair, o
+Excel diz "arte pronta" para peças que existem num container só. Se aquele
+container cair, some tudo.
+
+**Institucional "Conheça quem cuida do seu sossego", 12 telas**, com o Dr.
+Fernando e o Roberto Gorayeb, pai e sócio consultor. Não tem data e não entra na
+agenda: post fixado não ocupa slot de feed. Fica aqui registrado até o Victor
+dizer quando sobe.
+
+**Fotos.** A sessão de arte recortou foto de campo de artes antigas e ficou
+fraco. Pinterest não abre lá e o conector do Drive não serve para imagem. O
+caminho que funcionou foi o Victor mandar o arquivo na conversa, como fez com a
+foto do sofá e a do Roberto. É assim que as próximas têm que chegar.
+
+**Correção da ressalva acima, no mesmo dia.** Escrevi que, se o container da
+sessão de arte cair, some tudo. Não é verdade e a própria sessão corrigiu. Os
+zips com os JPGs finais e a legenda de 11/11, 13/11, 18/11 e 20/11, mais as 12
+telas do institucional, já estão com o Victor. **A arte publicável está salva.**
+
+O que existe num container só é o código: a identidade nova no `base.css` e no
+`render.mjs`, o catálogo de capas, os modelos em HTML e os JSONs refeitos. Se
+isso se perder, o feed da semana sai do mesmo jeito, mas nenhuma sessão consegue
+refazer ou ajustar peça no padrão novo. O prejuízo é de capacidade, não de
+entrega.
+
+**06/11/2026 · foto do Pinterest com gente**
+
+Decisão do Victor: a produção pode usar foto do Pinterest com pessoas, e a peça
+vai pra aprovação do cliente antes de sair. Quem aprova a foto é o escritório.
+
+**06/11/2026 · revisão da Dra. Elisa no Reserva Legal, e o que ela pegou na arte**
+
+O Victor mandou a revisão como se fosse só de legenda. **Três dos cinco pontos
+estavam também na arte**, e a peça sai hoje. Corrigidos os dois.
+
+1. **APP na conta da Reserva Legal (art. 15).** Faltavam dois dos três requisitos.
+   Agora: conservada **ou em recuperação**, com o **pedido feito no CAR**, e sem
+   abrir área nova. Estava na tela 2 e na legenda.
+2. **Onde se mede a APP de rio (art. 4º, I).** É da **borda do leito regular**, não
+   da margem que se vê na cheia nem da cerca. Entrou no rótulo da figura da tela 3.
+3. **"30 metros de mata" virou "30 metros de vegetação nativa".** No Cerrado a
+   faixa pode ser campo ou vereda. A legenda ganhou um parágrafo explicando a
+   troca de palavra, porque a diferença muda o que o produtor acha que pode cortar.
+4. **PRA:** acrescentado "desde que o CAR tenha sido feito no prazo da lei".
+5. **A multa não "vira" serviço ambiental de cara.** Enquanto o termo é cumprido,
+   as sanções ficam **suspensas** e o produtor não pode ser autuado. A conversão
+   só vem **depois de cumprido**. Virou item próprio na tela 8 e dois parágrafos
+   na legenda.
+
+Confirmados por ela e mantidos: 20% e 35%, a faixa de 30 a 500 m, a vereda com
+50 m do brejo, o marco de 22/07/2008, a dispensa de averbação e os três caminhos
+do art. 66.
+
+**Lição:** revisão de cliente que chega "só de legenda" tem que ser conferida
+contra a arte, tela por tela. O fato é o mesmo nos dois lugares.
+
+**06/11/2026 · ajuste da Dra. Elisa na legenda do vídeo do CAR (09/11)**
+
+"Quem prova a propriedade é a matrícula, com o georreferenciamento certificado"
+dava a entender que matrícula sem georreferenciamento não prova nada. Virou, na
+redação dela: "Quem prova a propriedade é a matrícula no cartório. E quem mostra
+com precisão onde fica a divisa é o georreferenciamento certificado."
+
+Legenda em `linha-editorial/03-legenda-09-11.txt`.
+
+**A frase antiga está falada dentro do vídeo**, que foi gravado em setembro. A
+narração em `linha-editorial/conteudo.py` fica como está, porque é registro do
+que foi ao ar. Se um dia esse vídeo for reeditado ou legendado na tela, é aqui
+que está a redação certa.
+
+**06/11/2026 · o prazo do PRA conferido, e ele muda o recado**
+
+A Dra. Elisa mandou conferir o art. 29, §4º antes de citar data. Conferido no
+texto compilado oficial da Câmara. Achado importante:
+
+- O §4º **não** é prazo para inscrever no CAR. Inscrever é obrigatório e **sem
+  prazo** (§3º). O §4º fixa a data que dá **direito de aderir ao PRA**.
+- São duas datas: **31/12/2023** para imóvel acima de 4 módulos fiscais e
+  **31/12/2025** para os de até 4 módulos e para o agricultor familiar.
+- **As duas já venceram.** Nenhuma prorrogação encontrada na ficha oficial.
+
+Entrou na legenda como parágrafo próprio e na arte como item ("Vale para quem
+inscreveu o CAR no prazo"). Dizer só "no prazo da lei" dava esperança a quem já
+está fora.
+
+Também afinado: o art. 59 tem três marcos, não dois. Não autuação (§4º),
+suspensão das sanções a partir da assinatura (§5º, 1ª parte) e conversão da
+multa depois de cumprido (§5º, 2ª parte). A legenda passou a separar os três.
+
+Pendências que a conferência deixou: o que o STF decidiu nas ADIs 4.901, 4.902,
+4.903 e 4.937 e na ADC 42 sobre os §§4º e 5º do art. 59, e as ementas das Leis
+15.228/2025 e 15.430/2026, que constam como norma complementar sem alterar
+esses artigos.
+
+**06/11/2026 · mais duas peças**
+
+25/11, "Seu benefício foi calculado certo?", arte pronta na identidade nova,
+capa C6. Extra pronto, fora da agenda: "A FTG em números", 5 telas, post fixado,
+sem data. Junta-se ao institucional "Quem cuida" esperando o Victor dizer quando
+os fixados sobem.

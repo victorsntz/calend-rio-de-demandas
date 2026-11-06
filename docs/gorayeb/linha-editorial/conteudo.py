@@ -157,7 +157,7 @@ CAR2 = _gravado("09/11 · segunda", "O CAR pode revelar um conflito de terra",
   "Quem prova a propriedade é a matrícula, com o georreferenciamento certificado. O CAR é o alarme. A matrícula é a prova."],
  ["O CAR DO VIZINHO PODE ESTAR DESENHADO DENTRO DA SUA TERRA.",
   "Quando dois cadastros ocupam a mesma área, o sistema aponta sobreposição. Pode ser erro de quem desenhou o mapa ou alguém declarando como dele uma parte da sua terra. Descoberto cedo, dá para resolver com a correção do cadastro, antes de virar briga de divisa.",
-  "Mas o CAR não é documento de propriedade. O próprio Código Florestal diz que ele não serve como título. Quem prova a propriedade é a matrícula, com o georreferenciamento certificado.",
+  "Mas o CAR não é documento de propriedade. O próprio Código Florestal diz que ele não serve como título. Quem prova a propriedade é a matrícula no cartório. E quem mostra com precisão onde fica a divisa é o georreferenciamento certificado.",
   "O CAR é o alarme. A matrícula é a prova.",
   "Segundo vídeo da série sobre o CAR. O terceiro, na segunda que vem, fala de quando a posse ainda não está no papel.",
   "Marque aqui quem nunca conferiu o mapa do próprio CAR."],
@@ -219,15 +219,41 @@ CAPAS = ["1 · foto", "2 · meia-folha", "3 · tipográfica", "4 · clara"]
 SELOS = {"Agronegócio": "Agronegócio", "Empresarial": "Área Empresarial",
          "Previdenciário": "Área Previdenciária"}
 
+# Em 06/11 a nova identidade entrou e a rotação de quatro modelos deu lugar a um
+# catálogo de oito, com código. Quem escolhe peça a peça é a sessão de arte.
+# Regra do Victor: a capa não repete o modelo dos últimos três posts.
+CATALOGO_CAPA = {
+    "C1": "foto em cartão",
+    "C2": "foto escurecendo",
+    "C3": "objeto desenhado",
+    "C4": "tipográfica escura",
+    "C5": "foto cheia com faixa",
+    "C6": "céu aberto",
+    "CF": "institucional fixada",
+}
+# As peças de 26/10 a 09/11 saíram na identidade antiga e ficam com o rótulo
+# antigo: é registro do que foi publicado, não se reescreve.
+CAPA_POR_DATA = {
+    "11/11": "C1", "13/11": "C2", "18/11": "C3", "20/11": "C4",
+    "23/11": "C5", "25/11": "C6", "27/11": "C1", "30/11": "C2",
+    "02/12": "C4", "04/12": "C3", "07/12": "C5", "09/12": "C6",
+    "11/12": "C1", "14/12": "C2", "16/12": "C4", "18/12": "C3",
+}
+
 _giro = 0
 for _p in PECAS:
     _selo = ("Área Trabalhista" if "Trabalhista" in _p.get("pilar", "")
              else SELOS.get(_area(_p), "Institucional"))
-    if _fmt(_p) in ("Carrossel", "Estático"):
+    _dia = _p["data"].split(" · ")[0]
+    _cod = CAPA_POR_DATA.get(_dia)
+    if _cod:
+        _p["arte"] = f"Capa {_cod} · {CATALOGO_CAPA[_cod]} · selo {_selo}"
+    elif _fmt(_p) in ("Carrossel", "Estático"):
         _p["arte"] = f"Capa {CAPAS[_giro % len(CAPAS)]} · selo {_selo}"
-        _giro += 1
     else:
         _p["arte"] = f"Selo {_selo}, se entrar capa"
+    if _fmt(_p) in ("Carrossel", "Estático"):
+        _giro += 1
 
 GRADE = [(p["data"].split(" · ")[0], p["data"].split(" · ")[1][:3], _fmt(p), p["titulo"],
           "lanc" if p is VIDEO_AREA else "", _area(p)) for p in PECAS]
