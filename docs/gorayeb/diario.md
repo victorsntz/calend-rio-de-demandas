@@ -1267,3 +1267,11 @@ publicado; a fonte na arte diz "Dados do escritório".
   pequena da águia, e rótulos planos ligados aos pinos por fio tracejado.
   Título e texto equilibrados. Tela 5 refeita: foto cheia com degradê, síntese
   com peso misturado e os botões do fecho F3.
+
+**06/11/2026 · carrossel de 25/11, revisão de benefício**
+
+8 telas na nova IDV, roteiro aprovado em 28/10. Capa C6 (céu aberto, em HTML,
+`modelos/revisao-capa.html`), selo de Área Previdenciária. Foto em 5 telas
+(Pinterest, escurecidas, origem no `_creditos-pinterest.tsv`). Prazos em número
+gigante: 10 anos (art. 103 da Lei 8.213/91) e 30 dias de recurso. CNIS e PPP
+explicados na tela.
