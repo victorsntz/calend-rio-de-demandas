@@ -811,3 +811,44 @@ render tem o `img/`, então ninguém consegue renderizar de novo.
 push negado na sessão de arte, que tem 7 commits parados, incluindo a escala das
 listras no `base.css`. Enquanto não sobem, render feito a partir do remoto sai
 com as listras antigas.
+
+**06/11/2026 · identidade nova e catálogo de capas**
+
+O Victor aprovou uma identidade nova, a partir de referências de social media
+que ele mandou, com o diagnóstico de que "nosso design está muito duro".
+Títulos em Helvetica Bold, caixa baixa, com peso misturado. Etiqueta dourada
+pequena, grão de filme, verde mais fechado, listras só quando a tela pede. No
+JSON é `"idv": 2`. Regras novas: degradê nunca por cima de rosto, e tela vazia
+não passa. As listras foram corrigidas para a escala do arquivo oficial.
+
+**Vale de 06/11 em diante.** As peças de 26/10 a 09/11 saíram na identidade
+antiga e ficam como estão: são registro do que foi publicado, não se reescreve.
+
+**Catálogo de capas, pedido do Victor.** A rotação automática de quatro modelos
+deu lugar a oito com código: C1 foto em cartão, C2 foto escurecendo, C3 objeto
+desenhado, C4 tipográfica escura, C5 foto cheia com faixa, C6 céu aberto, C7
+mapa só território, CF institucional fixada. A capa não repete o modelo dos
+últimos três posts. A escolha de cada post virou `CAPA_POR_DATA` em
+`linha-editorial/conteudo.py`, no lugar do contador `_giro`. Conferi a lista
+contra a própria regra dos três posts e ela fecha.
+
+Status novos, pela sessão de arte: 18/11 e 20/11 passam a arte pronta, as duas
+já na identidade nova. 11/11 e 13/11 refeitos também, o georreferenciamento na
+terceira versão, que o Victor aprovou.
+
+**Ressalva que precisa estar escrita.** Nada disso está no repositório. A sessão
+de arte tem 19 commits presos porque o push continua negado, e eu não consigo
+abrir nenhuma dessas peças para conferir. Marquei pela palavra dela, que é a
+dona da arte, e porque o Victor revisou ao vivo. Mas enquanto o push não sair, o
+Excel diz "arte pronta" para peças que existem num container só. Se aquele
+container cair, some tudo.
+
+**Institucional "Conheça quem cuida do seu sossego", 12 telas**, com o Dr.
+Fernando e o Roberto Gorayeb, pai e sócio consultor. Não tem data e não entra na
+agenda: post fixado não ocupa slot de feed. Fica aqui registrado até o Victor
+dizer quando sobe.
+
+**Fotos.** A sessão de arte recortou foto de campo de artes antigas e ficou
+fraco. Pinterest não abre lá e o conector do Drive não serve para imagem. O
+caminho que funcionou foi o Victor mandar o arquivo na conversa, como fez com a
+foto do sofá e a do Roberto. É assim que as próximas têm que chegar.

@@ -173,7 +173,7 @@
       "tipo": "Relevante",
       "tema": "Quais documentos provam a atividade rural",
       "origem": "cronograma previdenciário da Dra. Elisa",
-      "status": "roteiro aprovado · produzir a arte",
+      "status": "arte pronta · com a legenda",
       "formato": "carrossel"
     },
     {
@@ -183,7 +183,7 @@
       "tipo": "Relevante",
       "tema": "Passo a passo para consultar seu CAR pelo CPF",
       "origem": "item 4",
-      "status": "roteiro aprovado · produzir a arte",
+      "status": "arte pronta · com a legenda",
       "formato": "carrossel"
     },
     {
@@ -542,5 +542,7 @@
     "previdenciario_janeiro_2027": "previdenciário, janeiro de 2027",
     "lancamento_suspenso": "lançamento suspenso"
   },
-  "aprovacao": "Dra. Elisa aprovou a linha editorial inteira em 28/10/2026, por e-mail. Os roteiros estão liberados; o que falta em cada peça é a arte."
+  "aprovacao": "Dra. Elisa aprovou a linha editorial inteira em 28/10/2026, por e-mail. Os roteiros estão liberados; o que falta em cada peça é a arte.",
+  "idv": "A partir de 06/11/2026 as peças saem na identidade nova, aprovada pelo Victor: títulos em Helvetica Bold caixa baixa com peso misturado, etiqueta dourada pequena, grão de filme, verde mais fechado, listras só quando a tela pede. No JSON é \"idv\": 2. As peças de 26/10 a 09/11 saíram na identidade antiga e ficam como estão: são registro do que foi publicado.",
+  "capas": "A rotação de quatro modelos de 26/10 deu lugar a um catálogo de oito com código (C1 foto em cartão, C2 foto escurecendo, C3 objeto desenhado, C4 tipográfica escura, C5 foto cheia com faixa, C6 céu aberto, C7 mapa, CF institucional fixada). A capa de cada post está em CAPA_POR_DATA, em linha-editorial/conteudo.py. Regra: não repetir o modelo dos últimos três posts."
 }
