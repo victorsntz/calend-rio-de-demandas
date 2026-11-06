@@ -1037,3 +1037,31 @@ comenta tela por tela. Cada mudança é republicada na hora.
   a foto, que continua faltando nesta sessão; a final só sai com
   `img/sala-reunioes-madeira.jpg`. Até lá, o `pag-01.png` no repositório
   continua sendo a versão antiga.
+
+**06/11/2026 · estudo de estilo a partir de referências de social media**
+
+O Victor achou o nosso desenho "muito duro" e mandou cinco posts de outros
+perfis do agro (Alvorada, agrotudo, AgroFort, Armazém). Pediu as mesmas telas
+com as nossas fontes, listras só onde fizer sentido.
+
+O que essas referências fazem e o nosso formato não fazia:
+- foto em tela cheia, com o texto em cima da parte escura da própria foto,
+  em vez de chapa sólida separada;
+- título em caixa baixa, com peso misturado na mesma frase (regular e bold);
+- etiqueta pequena em cima do título e logo pequena no pé, com o site ao lado;
+- grão de filme por cima, que amacia a imagem.
+
+As cinco telas, todas com texto de peças já aprovadas: CAR com o mapa e os
+pinos em MT e GO; o Roberto em retrato escuro; a cerca com foto do gado,
+tags em contorno e faixa de rodapé (a única com listras, na faixa); a
+cooperativa com os silos e o céu; a capa "Conheça quem cuida" centralizada,
+com "Deslize para o lado". Helvetica em quase tudo, Arvo só no mapa e na capa.
+
+**É estudo, não peça.** Montado em HTML solto no scratchpad da sessão
+(`ref/telas.html`), fora do `render.mjs`. As fotos de campo saíram recortadas
+das peças já renderizadas, porque os originais não estão nesta sessão, e por
+isso ficaram um pouco moles quando ampliadas; o grão ajuda a esconder. Com o
+banco de fotos original, ficam nítidas.
+
+Quebra de regra deliberada na tela 5: texto centralizado, como na referência.
+O formato 01 manda tudo à esquerda. Só vira regra se o Victor aprovar.
