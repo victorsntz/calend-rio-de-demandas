@@ -13,8 +13,7 @@ ajustados na sessão que for usar).
 
 - **Capa:** nunca o mesmo modelo nos últimos 3 posts. Entre os que podem, vai o
   que está há mais tempo sem sair.
-- **C7 mapa** só quando a pauta é território. **C3 objeto desenhado** só quando
-  existe coisa concreta pra desenhar. **CF** só o institucional fixado.
+- **C3 objeto desenhado** só quando existe coisa concreta pra desenhar. **CF** só o institucional fixado.
 - **Miolo:** nenhum modelo duas vezes seguidas; pelo menos uma figura (M2, M8
   ou M9) por carrossel; no máximo duas telas com foto (M6, M7) por post.
 - Nada passa por cima de rosto. Tela vazia não passa.
@@ -29,7 +28,6 @@ ajustados na sessão que for usar).
 - **C4 · Tipográfica escura.** Pauta de pergunta ou frase forte, sem imagem que ajude. Verde fechado, listras, palavra em dourado. Como: template: capa-tipo + idv 2. Já usado: CAR 20/11.
 - **C5 · Foto cheia com faixa.** Foto forte de campo ou rebanho. Título com seta e tags em contorno; faixa verde com listras no rodapé. Como: HTML (modelos/estudo.html, #t3). Já usado: estudo.
 - **C6 · Céu aberto.** Foto com céu limpo em cima. Etiqueta, título em light com o trecho-chave em bold, texto de apoio embaixo à esquerda. Como: HTML (modelos/estudo.html, #t4). Já usado: estudo.
-- **C7 · Mapa.** Só quando a pauta é território: onde vale, quais estados. Mapa em linha sobre a foto, pinos dourados. Como: HTML (modelos/estudo.html, #t1). Já usado: estudo.
 - **CF · Institucional fixada.** Peça de marca, não entra no rodízio. Foto do time, moldura dourada, 'Quem somos', as três áreas. Como: HTML (modelos/capa-institucional.html). Já usado: Quem cuida do seu sossego.
 
 ### Miolo
@@ -73,3 +71,5 @@ ajustados na sessão que for usar).
 
 Atualizar esta tabela a cada post produzido: a capa usada vira "feita" e
 o resto do rodízio se ajusta pela regra dos 3 posts.
+
+C7 (mapa sobre foto) saiu do catálogo em 06/11, a pedido do Victor: "não ficou legal". O mapa continua existindo no miolo, como M9.

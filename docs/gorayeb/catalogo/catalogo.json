@@ -54,15 +54,6 @@
   "img": "catalogo/C6.jpg"
  },
  {
-  "codigo": "C7",
-  "grupo": "Capa",
-  "nome": "Mapa",
-  "quando": "Só quando a pauta é território: onde vale, quais estados. Mapa em linha sobre a foto, pinos dourados.",
-  "como": "HTML (modelos/estudo.html, #t1)",
-  "usado": "estudo",
-  "img": "catalogo/C7.jpg"
- },
- {
   "codigo": "CF",
   "grupo": "Capa",
   "nome": "Institucional fixada",
