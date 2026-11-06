@@ -863,3 +863,8 @@ O que existe num container só é o código: a identidade nova no `base.css` e n
 isso se perder, o feed da semana sai do mesmo jeito, mas nenhuma sessão consegue
 refazer ou ajustar peça no padrão novo. O prejuízo é de capacidade, não de
 entrega.
+
+**06/11/2026 · foto do Pinterest com gente**
+
+Decisão do Victor: a produção pode usar foto do Pinterest com pessoas, e a peça
+vai pra aprovação do cliente antes de sair. Quem aprova a foto é o escritório.
