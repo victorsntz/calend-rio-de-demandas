@@ -61,6 +61,9 @@ de 15 mm para 21 mm pelo mesmo motivo.
 
 ## A capa
 
+**Desde 06/11 a capa sai do rodízio do `catalogo-telas.md`**, com a nova IDV.
+Os quatro modelos abaixo são do formato anterior e valem pra peças antigas.
+
 São **quatro modelos**, e eles se revezam. Pedido do Victor em 26/10: o feed
 estava ficando com todas as capas parecidas. A regra é simples, **não repetir o
 mesmo modelo em dois posts seguidos**. Dá pra ver os quatro lado a lado em

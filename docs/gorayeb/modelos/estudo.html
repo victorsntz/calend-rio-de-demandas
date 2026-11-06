@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><style>
+@font-face{font-family:Arvo;src:url(file:///home/user/calendario/docs/gorayeb/fontes/arvo/Arvo-Bold.ttf);font-weight:700}
+@font-face{font-family:Arvo;src:url(file:///home/user/calendario/docs/gorayeb/fontes/arvo/Arvo-Regular.ttf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueLight.otf);font-weight:300}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueRoman.otf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueMedium.otf);font-weight:500}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueBold.otf);font-weight:700}
+:root{--verde:#1b2316;--fundo:#12160f;--creme:#ebe3c8;--dourado:#b8943d;--areia:#d4c9aa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#888;font-family:HN,Helvetica,sans-serif;color:var(--creme)}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;margin:20px;background:var(--fundo)}
+.foto{position:absolute;left:0;width:100%;object-fit:cover;display:block}
+.grao::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;mix-blend-mode:overlay;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+.arroba{position:absolute;top:70px;left:86px;font:400 26px Arvo;opacity:.9}
+.tag{display:inline-block;font:700 21px HN;letter-spacing:.14em;text-transform:uppercase;padding:11px 22px;border-radius:8px;background:var(--dourado);color:var(--verde)}
+.tag.linha{background:transparent;color:var(--creme);border:2px solid rgba(235,227,200,.7);border-radius:999px;letter-spacing:.2em;font-size:19px;padding:14px 34px}
+.logo{height:64px;display:block}
+.listras{background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.26) 0 43px,transparent 43px 58px,rgba(0,0,0,.26) 58px 102px,transparent 102px 188px)}
+
+/* 1 · mapa, referência Alvorada */
+#t1 .foto{top:0;height:900px;object-position:center 40%;filter:saturate(.9)}
+#t1 .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,15,.10) 0%,rgba(18,22,15,.35) 35%,rgba(18,22,15,.85) 62%,var(--fundo) 72%)}
+#t1 svg.mapa{position:absolute;right:-40px;top:120px;width:760px}
+#t1 .mapa path{fill:none;stroke:var(--creme);stroke-width:4.5;stroke-linejoin:round;opacity:.92}
+#t1 h1{position:absolute;left:86px;top:560px;font:700 112px/1.0 Arvo;letter-spacing:-.025em}
+#t1 h1 small{display:block;font:700 54px/1.2 Arvo;color:var(--dourado);margin-top:14px;letter-spacing:-.01em}
+#t1 .lista{position:absolute;left:86px;top:910px;font:500 30px/1.42 HN;max-width:560px}
+#t1 .lista b{font-weight:700}
+#t1 .pe{position:absolute;left:0;right:0;bottom:70px;display:flex;flex-direction:column;align-items:center;gap:22px}
+#t1 .pe p{font:300 26px HN;opacity:.85}
+
+/* 2 · pessoa, referência agrotudo */
+#t2 .foto{top:0;left:auto;right:-120px;width:900px;height:1350px;object-position:center 30%}
+#t2 .veu{position:absolute;inset:0;background:linear-gradient(90deg,var(--fundo) 0%,rgba(18,22,15,.92) 28%,rgba(18,22,15,.35) 55%,rgba(18,22,15,0) 75%),linear-gradient(0deg,rgba(18,22,15,.9) 0%,rgba(18,22,15,0) 30%)}
+#t2 .bloco{position:absolute;left:86px;top:600px;width:560px}
+#t2 h1{font:700 104px/1.0 HN;letter-spacing:-.035em;margin:26px 0 30px}
+#t2 .bloco p{font:300 34px/1.38 HN}
+#t2 .bloco p b{font-weight:500}
+#t2 .pe{position:absolute;left:86px;right:86px;bottom:80px;display:flex;justify-content:space-between;align-items:center}
+#t2 .site{font:500 24px HN;letter-spacing:.12em}
+
+/* 3 · gado, referência AgroFort */
+#t3 .foto{top:0;height:1060px;object-position:center 40%}
+#t3 .veu{position:absolute;left:0;right:0;top:0;height:1060px;background:linear-gradient(180deg,rgba(18,22,15,0) 30%,rgba(18,22,15,.55) 55%,rgba(18,22,15,.92) 100%)}
+#t3 .seta{position:absolute;left:86px;top:520px;width:58px;height:58px;border-radius:12px;background:var(--dourado);display:flex;align-items:center;justify-content:center}
+#t3 h1{position:absolute;left:86px;top:604px;font:700 88px/1.04 HN;letter-spacing:-.035em;width:940px}
+#t3 h1 span{color:var(--dourado)}
+#t3 .apoio{position:absolute;left:86px;top:830px;width:480px;font:400 30px/1.4 HN}
+#t3 .apoio b{font-weight:700}
+#t3 .tags{position:absolute;right:86px;top:838px;display:flex;flex-direction:column;gap:18px;align-items:stretch}
+#t3 .faixa{position:absolute;left:0;right:0;bottom:0;height:290px;background:var(--verde);display:flex;align-items:center;justify-content:space-between;padding:0 86px}
+#t3 .faixa .fio{position:absolute;top:0;left:0;right:0;height:5px;background:var(--dourado)}
+#t3 .faixa p{font:400 26px Arvo;position:relative}
+
+/* 4 · céu, referência irrigação */
+#t4 .foto{top:0;height:860px;object-position:center 35%}
+#t4 .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,15,.25) 0%,rgba(18,22,15,0) 25%,rgba(18,22,15,.25) 45%,rgba(18,22,15,.92) 63%,var(--fundo) 70%)}
+#t4 .bloco{position:absolute;left:86px;top:760px;width:820px}
+#t4 h1{font:300 82px/1.08 HN;letter-spacing:-.03em;margin-top:28px}
+#t4 h1 b{font-weight:700}
+#t4 .bloco p{font:300 32px/1.4 HN;margin-top:28px;width:640px;opacity:.92}
+#t4 .pe{position:absolute;left:86px;right:86px;bottom:80px;display:flex;justify-content:space-between;align-items:center}
+#t4 .site{font:500 24px HN;letter-spacing:.12em}
+
+/* 5 · capa central com deslize, referência Armazém */
+#t5 .foto{top:0;height:860px;object-position:50% 34%}
+#t5 .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,15,.55) 0%,rgba(18,22,15,0) 16%,rgba(18,22,15,0) 46%,rgba(18,22,15,.9) 62%,var(--fundo) 66%)}
+#t5 .topo{position:absolute;top:70px;left:0;right:0;display:flex;justify-content:center}
+#t5 h1{position:absolute;left:60px;right:60px;top:930px;text-align:center;font:700 90px/1.04 Arvo;letter-spacing:-.02em}
+#t5 h1 span{color:var(--dourado)}
+#t5 .deslize{position:absolute;left:0;right:0;bottom:96px;display:flex;justify-content:center;align-items:center;gap:16px;font:400 30px HN}
+#t5 .deslize i{width:46px;height:46px;border-radius:10px;background:var(--dourado);display:flex;align-items:center;justify-content:center}
+</style></head><body>
+
+<div class="s grao" id="t1">
+ <img class="foto" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ref/p_cerrado.jpg"><div class="veu"></div>
+ <div class="arroba">@ftgadvogados_</div>
+ <svg class="mapa" viewBox="0 0 1000 1049"><path d="M525.1,1048.6 L518.0,1031.3 L529.3,1016.9 L514.5,996.3 L468.3,960.7 L458.9,961.6 L433.3,938.7 L416.8,941.9 L450.8,901.9 L479.5,873.8 L518.1,846.3 L518.6,823.6 L505.8,807.3 L493.2,812.7 L501.7,779.8 L501.7,764.4 L492.5,759.4 L483.0,763.9 L473.5,762.6 L468.1,726.5 L463.3,718.3 L446.1,710.9 L435.7,716.2 L408.8,711.0 L410.5,673.8 L403.0,658.7 L411.0,653.1 L408.5,637.7 L415.5,625.9 L420.0,604.7 L414.0,588.1 L400.1,580.6 L397.4,570.0 L401.1,554.7 L352.3,553.6 L342.5,522.8 L349.9,522.4 L349.6,511.0 L344.6,503.3 L343.5,488.1 L328.7,480.4 L312.7,480.6 L302.1,473.0 L284.9,467.8 L274.9,458.1 L246.3,453.8 L218.7,430.4 L220.7,413.0 L217.6,403.1 L220.3,383.7 L187.0,388.0 L173.6,397.8 L151.3,408.3 L145.6,416.1 L113.5,414.5 L99.2,418.9 L87.6,416.0 L89.3,376.6 L68.4,391.9 L45.9,391.2 L36.3,377.4 L19.4,375.9 L24.8,364.8 L10.6,349.2 L0.0,326.0 L6.7,321.3 L6.7,310.4 L22.1,303.0 L19.6,289.2 L26.1,280.3 L27.9,268.3 L57.0,250.9 L77.9,246.0 L81.3,242.2 L104.3,243.4 L116.3,162.4 L112.3,147.8 L101.0,138.5 L101.2,120.0 L115.5,115.8 L120.6,118.4 L121.5,108.7 L106.5,106.0 L106.2,90.1 L155.9,90.7 L164.3,81.9 L171.4,90.0 L176.3,105.0 L181.1,101.9 L195.2,115.3 L215.0,113.7 L219.9,105.9 L249.3,95.7 L252.3,85.0 L270.5,77.7 L269.1,72.3 L247.5,70.2 L244.0,54.1 L245.0,37.0 L233.6,30.4 L238.4,28.0 L277.5,37.7 L284.9,31.6 L331.7,18.1 L341.0,8.3 L337.6,1.1 L350.9,0.0 L356.8,5.9 L353.5,17.1 L362.2,21.0 L368.1,32.9 L361.0,41.9 L356.9,63.6 L363.5,76.5 L365.3,88.3 L381.0,100.2 L393.5,101.5 L396.3,96.5 L415.9,90.9 L424.2,84.1 L458.3,87.5 L460.6,82.3 L456.3,77.2 L458.9,69.8 L469.1,72.1 L481.2,69.5 L506.9,80.1 L514.8,73.2 L520.5,74.3 L523.9,81.5 L536.1,79.6 L545.9,70.0 L553.7,51.2 L568.8,27.8 L577.5,26.6 L598.1,85.3 L611.7,89.5 L612.4,107.1 L593.2,128.1 L601.1,135.8 L646.2,139.8 L647.1,165.3 L666.4,148.6 L740.8,173.3 L753.2,188.2 L749.1,202.4 L778.7,194.5 L828.2,208.0 L866.3,207.0 L904.0,228.1 L936.5,256.7 L956.1,264.1 L977.9,265.1 L987.1,273.2 L1000.0,321.3 L989.9,363.9 L976.9,380.7 L941.0,416.8 L924.8,446.2 L905.9,468.8 L899.5,469.3 L892.4,488.6 L894.2,537.9 L884.4,596.5 L876.4,607.1 L871.8,643.1 L846.0,678.5 L841.7,706.8 L821.1,718.7 L815.1,735.2 L787.4,735.2 L747.4,745.8 L729.4,758.2 L700.9,766.3 L670.9,788.6 L649.4,816.6 L645.6,837.8 L649.9,853.6 L645.1,882.6 L639.3,896.7 L621.5,912.8 L593.3,964.6 L570.9,988.3 L553.6,1002.3 L541.9,1031.1 L525.1,1048.6 Z"/>
+  <g fill="#b8943d" stroke="#12160f" stroke-width="3"><path transform="translate(460.7 465.4)" d="M0 0 C-22 -30 -38 -46 -38 -66 A38 38 0 1 1 38 -66 C38 -46 22 -30 0 0Z"/><path transform="translate(621.2 544.3)" d="M0 0 C-22 -30 -38 -46 -38 -66 A38 38 0 1 1 38 -66 C38 -46 22 -30 0 0Z"/></g>
+  <g fill="#12160f"><circle cx="460.7" cy="399.4" r="13"/><circle cx="621.2" cy="478.3" r="13"/></g>
+ </svg>
+ <h1>Em dois estados,<small>o CAR é outro.</small></h1>
+ <p class="lista"><b>Goiás e Mato Grosso</b> têm sistema próprio, no site do órgão ambiental do estado. Minas usa o federal, no car.gov.br.</p>
+ <div class="pe"><img class="logo" src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png"><p>Direito do Agronegócio</p></div>
+</div>
+
+<div class="s grao" id="t2">
+ <img class="foto" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ref/p_roberto.jpg"><div class="veu"></div>
+ <div class="arroba">@ftgadvogados_</div>
+ <div class="bloco"><span class="tag">Sócio consultor</span><h1>Roberto Gorayeb</h1>
+ <p>Advogado desde 1970. Ajudou a organizar a classe produtora e <b>é o nome que deu origem à FTG.</b></p></div>
+ <div class="pe"><img class="logo" src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png"><span class="site">grupoftg.com.br</span></div>
+</div>
+
+<div class="s grao" id="t3">
+ <img class="foto" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ref/p_boiada.jpg"><div class="veu"></div>
+ <div class="arroba">@ftgadvogados_</div>
+ <div class="seta"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M4 4 L22 22 M22 9 V22 H9" fill="none" stroke="#1b2316" stroke-width="4"/></svg></div>
+ <h1>A cerca caiu.<br><span>E agora, quem&nbsp;paga?</span></h1>
+ <p class="apoio">Em regra, <b>os dois vizinhos dividem a conta</b>, meio a meio. Está no Código Civil.</p>
+ <div class="tags"><span class="tag linha">Agronegócio</span><span class="tag linha">Vizinhança</span></div>
+ <div class="faixa listras"><div class="fio"></div><img class="logo" src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png" style="position:relative"><p>@ftgadvogados_</p></div>
+</div>
+
+<div class="s grao" id="t4">
+ <img class="foto" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ref/p_silos.jpg"><div class="veu"></div>
+ <div class="arroba">@ftgadvogados_</div>
+ <div class="bloco"><span class="tag">Crédito rural</span>
+ <h1>Na cooperativa, <b>você não é cliente.</b></h1>
+ <p>É dono. E isso muda os seus direitos quando dá problema.</p></div>
+ <div class="pe"><img class="logo" src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png"><span class="site">grupoftg.com.br</span></div>
+</div>
+
+<div class="s grao" id="t5">
+ <img class="foto" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ref/p_trio.jpg"><div class="veu"></div>
+ <div class="topo"><img class="logo" src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png" style="height:58px"></div>
+ <h1>Conheça quem cuida<br><span>do seu sossego.</span></h1>
+ <div class="deslize">Deslize para o lado <i><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 3 L14 10 L7 17" fill="none" stroke="#1b2316" stroke-width="3.5"/></svg></i></div>
+</div>
+</body></html>

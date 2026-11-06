@@ -1,0 +1,173 @@
+[
+ {
+  "codigo": "C1",
+  "grupo": "Capa",
+  "nome": "Foto em cartão",
+  "quando": "Pauta com uma boa foto de cenário. Foto em cartão arredondado em cima, título grande com peso misturado embaixo, fundo creme.",
+  "como": "HTML (modelos/mapa-pinos-e-capa-cartao.html, #bpc1)",
+  "usado": "BPC 11/11",
+  "img": "catalogo/C1.jpg"
+ },
+ {
+  "codigo": "C2",
+  "grupo": "Capa",
+  "nome": "Foto escurecendo",
+  "quando": "Foto de paisagem que segura a metade de cima; o texto entra na parte escura. Serve pra capa e pra estático.",
+  "como": "HTML (modelos/capa-escurece.html)",
+  "usado": "Georreferenciamento 13/11",
+  "img": "catalogo/C2.jpg"
+ },
+ {
+  "codigo": "C3",
+  "grupo": "Capa",
+  "nome": "Objeto desenhado",
+  "quando": "Quando a pauta tem uma coisa concreta (documento, cerca, porteira) e não há foto boa. Fundo creme, o objeto desenhado em destaque.",
+  "como": "HTML (modelos/capa-objeto.html)",
+  "usado": "Documentos 18/11",
+  "img": "catalogo/C3.jpg"
+ },
+ {
+  "codigo": "C4",
+  "grupo": "Capa",
+  "nome": "Tipográfica escura",
+  "quando": "Pauta de pergunta ou frase forte, sem imagem que ajude. Verde fechado, listras, palavra em dourado.",
+  "como": "template: capa-tipo + idv 2",
+  "usado": "CAR 20/11",
+  "img": "catalogo/C4.jpg"
+ },
+ {
+  "codigo": "C5",
+  "grupo": "Capa",
+  "nome": "Foto cheia com faixa",
+  "quando": "Foto forte de campo ou rebanho. Título com seta e tags em contorno; faixa verde com listras no rodapé.",
+  "como": "HTML (modelos/estudo.html, #t3)",
+  "usado": "estudo",
+  "img": "catalogo/C5.jpg"
+ },
+ {
+  "codigo": "C6",
+  "grupo": "Capa",
+  "nome": "Céu aberto",
+  "quando": "Foto com céu limpo em cima. Etiqueta, título em light com o trecho-chave em bold, texto de apoio embaixo à esquerda.",
+  "como": "HTML (modelos/estudo.html, #t4)",
+  "usado": "estudo",
+  "img": "catalogo/C6.jpg"
+ },
+ {
+  "codigo": "C7",
+  "grupo": "Capa",
+  "nome": "Mapa",
+  "quando": "Só quando a pauta é território: onde vale, quais estados. Mapa em linha sobre a foto, pinos dourados.",
+  "como": "HTML (modelos/estudo.html, #t1)",
+  "usado": "estudo",
+  "img": "catalogo/C7.jpg"
+ },
+ {
+  "codigo": "CF",
+  "grupo": "Capa",
+  "nome": "Institucional fixada",
+  "quando": "Peça de marca, não entra no rodízio. Foto do time, moldura dourada, 'Quem somos', as três áreas.",
+  "como": "HTML (modelos/capa-institucional.html)",
+  "usado": "Quem cuida do seu sossego",
+  "img": "catalogo/CF.jpg"
+ },
+ {
+  "codigo": "M1",
+  "grupo": "Miolo",
+  "nome": "Tese entre fios",
+  "quando": "A frase-chave do post, com um parágrafo de explicação embaixo.",
+  "como": "template: tese",
+  "usado": "BPC tela 2",
+  "img": "catalogo/M1.jpg"
+ },
+ {
+  "codigo": "M2",
+  "grupo": "Miolo",
+  "nome": "Número gigante",
+  "quando": "Quando um número é a informação inteira (idade, prazo, percentual). Ocupa a tela.",
+  "como": "template: cifra, escala gigante, centro",
+  "usado": "BPC tela 3",
+  "img": "catalogo/M2.jpg"
+ },
+ {
+  "codigo": "M3",
+  "grupo": "Miolo",
+  "nome": "Pílulas com ícone",
+  "quando": "Três ou quatro itens curtos que pedem leitura rápida.",
+  "como": "template: itens",
+  "usado": "BPC tela 4",
+  "img": "catalogo/M3.jpg"
+ },
+ {
+  "codigo": "M4",
+  "grupo": "Miolo",
+  "nome": "Passo a passo numerado",
+  "quando": "Sequência de ações, na ordem.",
+  "como": "template: itens, numerada",
+  "usado": "CAR tela 2",
+  "img": "catalogo/M4.jpg"
+ },
+ {
+  "codigo": "M5",
+  "grupo": "Miolo",
+  "nome": "Lista com remate",
+  "quando": "Lista de documentos ou requisitos, fechando com a frase que amarra.",
+  "como": "template: lista",
+  "usado": "Documentos tela 4",
+  "img": "catalogo/M5.jpg"
+ },
+ {
+  "codigo": "M6",
+  "grupo": "Miolo",
+  "nome": "Lista com meia foto",
+  "quando": "Lista curta com foto em cima. Item até 35 caracteres, remate até 45.",
+  "como": "template: lista, meiaFoto",
+  "usado": "Documentos tela 6",
+  "img": "catalogo/M6.jpg"
+ },
+ {
+  "codigo": "M7",
+  "grupo": "Miolo",
+  "nome": "Foto e chapa",
+  "quando": "Foto em cima, título de uma linha e dois parágrafos na chapa.",
+  "como": "template: corpo-foto",
+  "usado": "Documentos tela 5",
+  "img": "catalogo/M7.jpg"
+ },
+ {
+  "codigo": "M8",
+  "grupo": "Miolo",
+  "nome": "Tabela antes e depois",
+  "quando": "Comparar dois cenários (antes e depois de uma data, cliente e cooperado).",
+  "como": "template: figura tabela",
+  "usado": "Documentos tela 2",
+  "img": "catalogo/M8.jpg"
+ },
+ {
+  "codigo": "M9",
+  "grupo": "Miolo",
+  "nome": "Mapa com pinos",
+  "quando": "Situar no território: estados, regiões, onde a regra muda.",
+  "como": "HTML (modelos/mapa-pinos-e-capa-cartao.html, #car4)",
+  "usado": "CAR tela 4",
+  "img": "catalogo/M9.jpg"
+ },
+ {
+  "codigo": "M10",
+  "grupo": "Miolo",
+  "nome": "Pessoa em cartão",
+  "quando": "Apresentar alguém do escritório. Foto inteira em cartão, rosto no mesmo tamanho em todas, cargo em etiqueta.",
+  "como": "HTML (modelos/pessoa-cartao.html)",
+  "usado": "Institucional",
+  "img": "catalogo/M10.jpg"
+ },
+ {
+  "codigo": "F1",
+  "grupo": "Fecho",
+  "nome": "Fecho com listras",
+  "quando": "Frase-síntese, um parágrafo, caixa de salvar e logo. Listras no fundo verde.",
+  "como": "template: fecho, textura listras",
+  "usado": "Documentos tela 8",
+  "img": "catalogo/F1.jpg"
+ }
+]

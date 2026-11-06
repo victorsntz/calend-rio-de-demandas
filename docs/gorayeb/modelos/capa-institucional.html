@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Arvo;src:url(file:///home/user/calendario/docs/gorayeb/fontes/arvo/Arvo-Bold.ttf);font-weight:700}
+@font-face{font-family:Arvo;src:url(file:///home/user/calendario/docs/gorayeb/fontes/arvo/Arvo-Regular.ttf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueLight.otf);font-weight:300}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueRoman.otf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueMedium.otf);font-weight:500}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueBold.otf);font-weight:700}
+*{box-sizing:border-box;margin:0;padding:0} body{background:#777;color:#ebe3c8;font-family:HN}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;margin:20px;background:#12160f}
+.s::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;mix-blend-mode:overlay;z-index:9;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+.listras{position:absolute;left:0;right:0;top:760px;bottom:0;
+ background:repeating-linear-gradient(90deg,rgba(0,0,0,.26) 0 43px,transparent 43px 58px,rgba(0,0,0,.26) 58px 102px,transparent 102px 188px);
+ -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 220px);mask-image:linear-gradient(180deg,transparent 0,#000 220px)}
+.foto{position:absolute;top:0;left:0;width:100%;height:930px;object-fit:cover;object-position:50% 36%}
+.veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,15,.85) 0%,rgba(18,22,15,.35) 11%,rgba(18,22,15,0) 20%,rgba(18,22,15,0) 44%,rgba(18,22,15,.85) 60%,#12160f 67%)}
+.moldura{position:absolute;inset:34px;border:1.5px solid rgba(184,148,61,.55);border-radius:6px;pointer-events:none;z-index:4}
+.topo{position:absolute;top:66px;left:0;right:0;display:flex;justify-content:center;z-index:5}
+.topo img{height:56px}
+.nomes{position:absolute;top:720px;left:0;right:0;z-index:5}
+.nome{position:absolute;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.nome b{display:block;font:700 24px HN;letter-spacing:-.01em}
+.nome i{display:block;font:normal 400 15px HN;letter-spacing:.16em;text-transform:uppercase;color:#b8943d;margin-top:6px}
+.meio{position:absolute;left:70px;right:70px;top:880px;text-align:center;z-index:5}
+.kicker{display:flex;align-items:center;justify-content:center;gap:22px;font:700 19px HN;letter-spacing:.3em;text-transform:uppercase;color:#b8943d}
+.kicker::before,.kicker::after{content:"";width:70px;height:1.5px;background:#b8943d}
+h1{font:700 86px/1.04 Arvo;letter-spacing:-.02em;margin-top:26px}
+h1 span{color:#b8943d}
+.areas{margin-top:30px;font:300 28px HN;letter-spacing:.02em;display:flex;justify-content:center;gap:18px;align-items:center}
+.areas em{width:7px;height:7px;border-radius:50%;background:#b8943d;display:inline-block}
+.pe{position:absolute;left:0;right:0;bottom:84px;display:flex;justify-content:center;align-items:center;gap:16px;font:400 27px HN;z-index:5}
+.pe i{width:44px;height:44px;border-radius:10px;background:#b8943d;display:flex;align-items:center;justify-content:center}
+.arroba{position:absolute;bottom:92px;left:86px;font:400 22px Arvo;opacity:.75;z-index:5}
+</style></head><body>
+<div class="s" id="capa">
+ <img class="foto" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ref/p_trio.jpg"><div class="veu"></div><div class="listras"></div><div class="moldura"></div>
+ <div class="topo"><img src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png"></div>
+ 
+ <div class="meio"><div class="kicker">Quem somos</div>
+  <h1>Conheça quem cuida<br><span>do seu sossego.</span></h1>
+  <div class="areas">Agronegócio <em></em> Empresarial <em></em> Previdenciário</div></div>
+ <div class="pe">Deslize para conhecer o time <i><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7 3 L14 10 L7 17" fill="none" stroke="#1b2316" stroke-width="3.5"/></svg></i></div>
+</div></body></html>

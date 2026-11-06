@@ -1178,3 +1178,17 @@ zip, como fez com o sofá e o Roberto, que chegaram em resolução cheia.
   pauta tem coisa concreta, desenha a coisa", e ainda escapa da foto pobre.
   Sequência de capas agora: 11/11 cartão de foto, 13/11 foto escurecendo,
   18/11 documentos desenhados, 20/11 tipográfica escura.
+
+**06/11/2026 · catálogo de telas**
+
+Pedido do Victor: um catálogo dos modelos de tela pra guardar e fazer o rodízio
+sempre. Feito em `catalogo-telas.md` (memória), com dados em `catalogo/` e o
+artefato visual "FTG Advogados · catálogo de telas". São 19 modelos: 7 capas de
+rodízio (C1 a C7), a capa institucional fixada (CF), 10 de miolo (M1 a M10) e o
+fecho (F1). Rodízio de capas sugerido até 18/12, com a regra de não repetir
+modelo nos últimos 3 posts.
+
+Os modelos feitos fora do template estavam só no scratchpad da sessão, que some.
+Copiei os HTML pra `modelos/`, pra não perder. O próximo passo de verdade é
+levar C1, C2, C3, C5, C6, M9 e M10 pro `render.mjs`, pra que saiam do JSON como
+o resto.
