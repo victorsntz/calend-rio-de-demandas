@@ -1152,3 +1152,21 @@ seguinte é levar os dois desenhos novos (cartão de foto e mapa com pinos) pro
 - **Entregue em zip, JPG numerado com a legenda dentro:** institucional (12,
   sem legenda: é o post publicado), BPC 11/11 (8), georreferenciamento 13/11
   (1) e CAR 20/11 (9). O 18/11 ainda não tem arte.
+
+**06/11/2026 · 18/11 na nova IDV, e o problema das fotos**
+
+Carrossel de 18/11 renderizado com `"idv": 2`, capa em HTML no padrão da capa
+nova do BPC (foto em cartão, título com peso misturado). Fotos recuperadas de
+peças antigas: saco de café, enxada e armazém (`img/*-recorte.jpg`). A tela da
+cooperativa virou `lista` com `meiaFoto` (itens de 20 e 33, remate de 38). O
+título do `corpo-foto` e o cabeçalho da tabela também passaram pra Helvetica no
+tema novo. Zip entregue.
+
+O Victor achou as imagens "pobrinhas", e tem razão: são recortes ampliados de
+JPG já publicado. **Pinterest não abre daqui**: a página carrega, mas o servidor
+de imagens (`i.pinimg.com`) devolve 403 no proxy e a busca automática foi
+barrada pela permissão da sessão. O Drive tem as pastas `FOTOS GORAYEB` e
+`FOTOS GORAYEB IMERSÃO` (originais da câmera, 2,5 a 3,7 MB cada), mas o
+conector entrega o arquivo como texto dentro da conversa, o que não dá pra
+fazer foto por foto. O caminho que funciona é o Victor mandar as escolhidas em
+zip, como fez com o sofá e o Roberto, que chegaram em resolução cheia.

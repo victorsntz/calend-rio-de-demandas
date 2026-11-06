@@ -989,3 +989,10 @@
 .idv2 .cifra-leitura { font-weight: 500; }
 .idv2 .corpo { line-height: 1.48; }
 .idv2 .pilulas li { border-radius: 18px; }
+/* nova IDV também no título da chapa de foto e no cabeçalho da tabela */
+.idv2 .corpo-foto .titulo-corpo, .idv2.corpo-foto .titulo-corpo {
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; letter-spacing: -.03em;
+}
+.idv2 .titulo-corpo .l1 { font-weight: 300; }
+.idv2 .titulo-corpo .l2 { font-weight: 700; font-style: normal; color: var(--dourado); }
+.idv2 .tabela thead th { font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; font-weight: 700; }

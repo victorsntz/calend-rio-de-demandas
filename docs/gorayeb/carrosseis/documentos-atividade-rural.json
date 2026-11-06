@@ -7,12 +7,13 @@
     {
       "tipo": "capa-faixa",
       "selo": "Área Previdenciária",
-      "foto": "../img/cafe-peneira.jpg",
-      "foco": "center 50%",
+      "foto": "../img/saco-cafe-recorte.jpg",
+      "foco": "center 40%",
       "kicker": "Atividade rural",
       "titulo": "O que prova\nseu tempo de roça.",
       "escala": "menor",
-      "sub": "A lista do que guardar, *separada por onde procurar*."
+      "sub": "A lista do que guardar, *separada por onde procurar*.",
+      "alturaFoto": 560
     },
     {
       "tipo": "figura",
@@ -80,7 +81,7 @@
     },
     {
       "tipo": "corpo-foto",
-      "foto": "../img/casa-roca-familia.jpg",
+      "foto": "../img/enxada-lavoura-recorte.jpg",
       "foco": "center 45%",
       "titulo": "A certidão também\né prova.",
       "paragrafos": [
@@ -89,12 +90,17 @@
       ]
     },
     {
-      "tipo": "foto-texto",
-      "foto": "../img/armazem-graos.jpg",
-      "veu": "verde",
-      "foco": "center 50%",
-      "titulo": "A cooperativa guarda\no seu vínculo",
-      "texto": "Ficha de associado e as notas de entrega de cada safra. Uma safra entregue é um ano de roça com data e papel, fora da sua gaveta."
+      "tipo": "lista",
+      "meiaFoto": true,
+      "fundo": "creme",
+      "foto": "../img/armazem-graos-recorte.jpg",
+      "foco": "center 55%",
+      "titulo": "Da cooperativa,\no vínculo no papel",
+      "itens": [
+        "A ficha de associado",
+        "As notas de entrega de cada safra"
+      ],
+      "remate": "Cada safra entregue é um ano no papel."
     },
     {
       "tipo": "tese",
@@ -104,13 +110,13 @@
     },
     {
       "tipo": "fecho",
-      "foto": "../img/estrada-amanhecer.jpg",
-      "veu": "verde",
       "sintese": "Pasta de papel velho\né patrimônio.",
       "paragrafos": [
         "Quem guardou nota, contrato e certidão prova o tempo de roça sem depender da memória de ninguém."
       ],
-      "salvar": "*Salve este carrossel* e confira a sua."
+      "salvar": "*Salve este carrossel* e confira a sua.",
+      "textura": "listras"
     }
-  ]
+  ],
+  "idv": 2
 }
