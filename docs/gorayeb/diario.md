@@ -1142,3 +1142,13 @@ seguinte é levar os dois desenhos novos (cartão de foto e mapa com pinos) pro
   (44%) e Janaina (44%) ficam um pouco à esquerda do centro. E o zoom amplia o
   JPG publicado de 1080 px, o que amolece de leve. Com as fotos originais da
   sessão, os dois problemas somem.
+- **Opção B aprovada, com um padrão só de rosto.** Medi a distância do olho ao
+  queixo em cada cartão e ajustei o zoom pra todo mundo ficar com 172 px. Zoom
+  final: Fernando 1,66, Jéssica 1,56, Fabiana 1,42, Tais 1,30, Tathiana e
+  Bárbara 1,26, Gustavo 1,21, Janaina 1,19, Gilberto 1,09, Elisa 1,00; Roberto
+  da foto grande. Com zoom maior o recorte fica mais estreito e todos
+  centralizam (só Tathiana e Gustavo a 44%). Fernando e Jéssica são os que mais
+  ampliam o JPG publicado e ficam um pouco moles.
+- **Entregue em zip, JPG numerado com a legenda dentro:** institucional (12,
+  sem legenda: é o post publicado), BPC 11/11 (8), georreferenciamento 13/11
+  (1) e CAR 20/11 (9). O 18/11 ainda não tem arte.
