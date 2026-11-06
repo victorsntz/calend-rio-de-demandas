@@ -15,7 +15,10 @@ ajustados na sessão que for usar).
   que está há mais tempo sem sair.
 - **C3 objeto desenhado** só quando existe coisa concreta pra desenhar. **CF** só o institucional fixado.
 - **Miolo:** nenhum modelo duas vezes seguidas; pelo menos uma figura (M2, M8
-  ou M9) por carrossel; no máximo duas telas com foto (M6, M7) por post.
+  ou M9) por carrossel. **Foto em pelo menos metade das telas** (pedido do
+  Victor em 06/11: "muita tela sem imagem"), com foto boa do Pinterest ou do
+  banco do escritório, nunca recorte de arte antiga. Tese, pílulas e lista
+  também podem sair sobre foto escurecida.
 - Nada passa por cima de rosto. Tela vazia não passa.
 
 ## Modelos
