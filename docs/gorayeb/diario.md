@@ -1170,3 +1170,11 @@ barrada pela permissão da sessão. O Drive tem as pastas `FOTOS GORAYEB` e
 conector entrega o arquivo como texto dentro da conversa, o que não dá pra
 fazer foto por foto. O caminho que funciona é o Victor mandar as escolhidas em
 zip, como fez com o sofá e o Roberto, que chegaram em resolução cheia.
+- **Capa do 18/11 trocada: não repetir modelo.** A primeira repetia o cartão de
+  foto da capa do BPC, uma semana antes. A nova é sem foto, em creme: título
+  grande em Helvetica com peso misturado e três documentos desenhados sobre a
+  "mesa" (contrato de parceria, bloco de notas do produtor, certidão com
+  carimbo de cartório), cada um com a etiqueta da origem. É a regra "quando a
+  pauta tem coisa concreta, desenha a coisa", e ainda escapa da foto pobre.
+  Sequência de capas agora: 11/11 cartão de foto, 13/11 foto escurecendo,
+  18/11 documentos desenhados, 20/11 tipográfica escura.
