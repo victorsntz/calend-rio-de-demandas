@@ -229,7 +229,6 @@ CATALOGO_CAPA = {
     "C4": "tipográfica escura",
     "C5": "foto cheia com faixa",
     "C6": "céu aberto",
-    "C7": "mapa, só território",
     "CF": "institucional fixada",
 }
 # As peças de 26/10 a 09/11 saíram na identidade antiga e ficam com o rótulo
