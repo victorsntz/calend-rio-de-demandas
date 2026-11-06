@@ -1,0 +1,74 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Arvo;src:url(file:///home/user/calendario/docs/gorayeb/fontes/arvo/Arvo-Regular.ttf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueLight.otf);font-weight:300}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueRoman.otf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueMedium.otf);font-weight:500}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueBold.otf);font-weight:700}
+*{box-sizing:border-box;margin:0;padding:0} body{background:#777;font-family:HN;color:#ebe3c8}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;margin:20px;background:#12160f}
+.s::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;mix-blend-mode:overlay;z-index:9;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+.arroba{position:absolute;top:70px;left:86px;font:400 26px Arvo;z-index:3}
+.tag{white-space:nowrap;font:700 19px HN;letter-spacing:.14em;text-transform:uppercase;padding:10px 18px;border-radius:8px;background:#b8943d;color:#1b2316}
+.cartao{position:absolute;object-fit:cover;border-radius:22px}
+.pe{position:absolute;left:86px;right:86px;bottom:74px;display:flex;justify-content:space-between;align-items:center}
+.pe img{height:58px} .pe span{font:400 20px HN;opacity:.6}
+.fonte{font:400 20px HN;opacity:.55}
+/* 1 */
+#g1 .selo{position:absolute;top:62px;right:86px}
+#g1 .cartao{top:140px;left:60px;width:960px;height:470px}
+#g1 .bloco{position:absolute;left:86px;right:86px;top:690px}
+#g1 .kicker{font:700 20px HN;letter-spacing:.2em;text-transform:uppercase;color:#b8943d}
+#g1 h1{font:700 132px/0.96 HN;letter-spacing:-.05em;margin-top:24px} #g1 h1 span{color:#b8943d;font-weight:300}
+#g1 .sub{font:300 34px/1.4 HN;margin-top:30px;width:860px}
+#g1 .desl{display:flex;align-items:center;gap:14px;font:400 26px HN}
+#g1 .desl i{width:42px;height:42px;border-radius:10px;background:#b8943d;display:flex;align-items:center;justify-content:center}
+/* 2 */
+#g2 .foto{position:absolute;top:0;left:0;width:100%;height:520px;object-fit:cover}
+#g2 .veu{position:absolute;left:0;right:0;top:0;height:520px;background:linear-gradient(180deg,rgba(18,22,15,.85) 0,rgba(18,22,15,.2) 25%,rgba(18,22,15,.2) 55%,#12160f 100%)}
+#g2 .num{position:absolute;left:78px;top:410px;font:700 250px/1 HN;letter-spacing:-.06em;color:#b8943d}
+#g2 .leit{position:absolute;left:86px;top:670px;font:300 40px HN}
+#g2 .barras{position:absolute;left:86px;right:86px;bottom:250px;height:280px;display:flex;align-items:flex-end;gap:22px}
+#g2 .barras div{flex:1;background:#b8943d;border-radius:8px 8px 0 0} #g2 .barras div:not(:last-child){opacity:.55}
+#g2 .anos{position:absolute;left:86px;right:86px;bottom:210px;display:flex;justify-content:space-between;font:500 22px HN;opacity:.7}
+#g2 .rod{position:absolute;left:86px;right:86px;bottom:80px;display:flex;justify-content:space-between;align-items:flex-end;font:300 28px HN}
+/* 3 */
+#g3 .cartao{top:140px;left:60px;width:960px;height:640px}
+#g3 .num{position:absolute;left:78px;top:830px;font:700 190px/1 HN;letter-spacing:-.055em;color:#b8943d}
+#g3 .leit{position:absolute;left:86px;top:1035px;font:300 40px/1.3 HN;width:800px}
+#g3 .fonte{position:absolute;left:86px;bottom:74px}
+/* 4 */
+#g4 h1{position:absolute;left:86px;top:150px;font:700 82px/1.02 HN;letter-spacing:-.04em;width:620px} #g4 h1 span{font-weight:300}
+#g4 .cartao{top:150px;right:60px;width:270px;height:560px}
+#g4 svg{position:absolute;left:130px;top:400px;width:580px;overflow:visible}
+#g4 .pais{fill:#2a3322;stroke:#ebe3c8;stroke-width:2.4;stroke-linejoin:round}
+#g4 .rot{font:700 58px HN;fill:#ebe3c8;paint-order:stroke;stroke:#12160f;stroke-width:10px;stroke-linejoin:round}
+#g4 .txt{position:absolute;left:86px;right:86px;top:1110px;font:300 32px/1.42 HN} #g4 .txt b{font-weight:700;color:#b8943d}
+#g4 .fonte{position:absolute;left:86px;bottom:74px}
+/* 5 */
+#g5 .foto{position:absolute;left:0;right:0;bottom:0;width:100%;height:560px;object-fit:cover}
+#g5 .veu{position:absolute;left:0;right:0;bottom:0;height:560px;background:linear-gradient(0deg,rgba(18,22,15,.35) 0,rgba(18,22,15,.2) 50%,#12160f 100%)}
+#g5 .fio{position:absolute;left:86px;top:190px;width:90px;height:5px;background:#b8943d}
+#g5 h1{position:absolute;left:86px;right:86px;top:236px;font:300 88px/1.06 HN;letter-spacing:-.04em} #g5 h1 b{font-weight:700;color:#b8943d}
+#g5 .pe{z-index:3}
+</style></head><body>
+<div class="s" id="g1"><div class="arroba">@ftgadvogados_</div><span class="tag selo">Institucional</span>
+ <img class="cartao" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ig/foto01.jpg">
+ <div class="bloco"><div class="kicker">FTG Advogados</div><h1>A FTG<br><span>em números.</span></h1>
+ <p class="sub">O tamanho da confiança de quem vive do Agronegócio.</p></div>
+ <div class="pe"><img src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png"><span class="desl" style="opacity:1">Deslize <i><svg width="18" height="18" viewBox="0 0 20 20"><path d="M7 3 L14 10 L7 17" fill="none" stroke="#1b2316" stroke-width="3.5"/></svg></i></span></div></div>
+<div class="s" id="g2"><img class="foto" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ig/foto02.jpg"><div class="veu"></div><div class="arroba">@ftgadvogados_</div>
+ <div class="num">+450%</div><div class="leit">de crescimento da carteira desde 2019.</div>
+ <div class="barras"><div style="height:57.2px"></div><div style="height:78.0px"></div><div style="height:104.0px"></div><div style="height:135.20000000000002px"></div><div style="height:166.4px"></div><div style="height:208.0px"></div><div style="height:260.0px"></div></div><div class="anos"><span>2019</span><span>2025</span></div>
+ <div class="rod"><span>E 2026 já caminha pra superar 2025.</span><span class="fonte">Dados do escritório</span></div></div>
+<div class="s" id="g3"><div class="arroba">@ftgadvogados_</div><img class="cartao" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ig/foto03.jpg">
+ <div class="num">R$ 5,9 bi</div><div class="leit">em valor de causa sob a nossa responsabilidade.</div><div class="fonte">Dados do escritório</div></div>
+<div class="s" id="g4"><div class="arroba">@ftgadvogados_</div><h1>Atendimento próximo <span>e presencial.</span></h1>
+ <img class="cartao" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ig/foto04.jpg">
+ <svg viewBox="0 0 1000 1049"><path class="pais" d="M525.1,1048.6 L518.0,1031.3 L529.3,1016.9 L514.5,996.3 L468.3,960.7 L458.9,961.6 L433.3,938.7 L416.8,941.9 L450.8,901.9 L479.5,873.8 L518.1,846.3 L518.6,823.6 L505.8,807.3 L493.2,812.7 L501.7,779.8 L501.7,764.4 L492.5,759.4 L483.0,763.9 L473.5,762.6 L468.1,726.5 L463.3,718.3 L446.1,710.9 L435.7,716.2 L408.8,711.0 L410.5,673.8 L403.0,658.7 L411.0,653.1 L408.5,637.7 L415.5,625.9 L420.0,604.7 L414.0,588.1 L400.1,580.6 L397.4,570.0 L401.1,554.7 L352.3,553.6 L342.5,522.8 L349.9,522.4 L349.6,511.0 L344.6,503.3 L343.5,488.1 L328.7,480.4 L312.7,480.6 L302.1,473.0 L284.9,467.8 L274.9,458.1 L246.3,453.8 L218.7,430.4 L220.7,413.0 L217.6,403.1 L220.3,383.7 L187.0,388.0 L173.6,397.8 L151.3,408.3 L145.6,416.1 L113.5,414.5 L99.2,418.9 L87.6,416.0 L89.3,376.6 L68.4,391.9 L45.9,391.2 L36.3,377.4 L19.4,375.9 L24.8,364.8 L10.6,349.2 L0.0,326.0 L6.7,321.3 L6.7,310.4 L22.1,303.0 L19.6,289.2 L26.1,280.3 L27.9,268.3 L57.0,250.9 L77.9,246.0 L81.3,242.2 L104.3,243.4 L116.3,162.4 L112.3,147.8 L101.0,138.5 L101.2,120.0 L115.5,115.8 L120.6,118.4 L121.5,108.7 L106.5,106.0 L106.2,90.1 L155.9,90.7 L164.3,81.9 L171.4,90.0 L176.3,105.0 L181.1,101.9 L195.2,115.3 L215.0,113.7 L219.9,105.9 L249.3,95.7 L252.3,85.0 L270.5,77.7 L269.1,72.3 L247.5,70.2 L244.0,54.1 L245.0,37.0 L233.6,30.4 L238.4,28.0 L277.5,37.7 L284.9,31.6 L331.7,18.1 L341.0,8.3 L337.6,1.1 L350.9,0.0 L356.8,5.9 L353.5,17.1 L362.2,21.0 L368.1,32.9 L361.0,41.9 L356.9,63.6 L363.5,76.5 L365.3,88.3 L381.0,100.2 L393.5,101.5 L396.3,96.5 L415.9,90.9 L424.2,84.1 L458.3,87.5 L460.6,82.3 L456.3,77.2 L458.9,69.8 L469.1,72.1 L481.2,69.5 L506.9,80.1 L514.8,73.2 L520.5,74.3 L523.9,81.5 L536.1,79.6 L545.9,70.0 L553.7,51.2 L568.8,27.8 L577.5,26.6 L598.1,85.3 L611.7,89.5 L612.4,107.1 L593.2,128.1 L601.1,135.8 L646.2,139.8 L647.1,165.3 L666.4,148.6 L740.8,173.3 L753.2,188.2 L749.1,202.4 L778.7,194.5 L828.2,208.0 L866.3,207.0 L904.0,228.1 L936.5,256.7 L956.1,264.1 L977.9,265.1 L987.1,273.2 L1000.0,321.3 L989.9,363.9 L976.9,380.7 L941.0,416.8 L924.8,446.2 L905.9,468.8 L899.5,469.3 L892.4,488.6 L894.2,537.9 L884.4,596.5 L876.4,607.1 L871.8,643.1 L846.0,678.5 L841.7,706.8 L821.1,718.7 L815.1,735.2 L787.4,735.2 L747.4,745.8 L729.4,758.2 L700.9,766.3 L670.9,788.6 L649.4,816.6 L645.6,837.8 L649.9,853.6 L645.1,882.6 L639.3,896.7 L621.5,912.8 L593.3,964.6 L570.9,988.3 L553.6,1002.3 L541.9,1031.1 L525.1,1048.6 Z"/><path transform="translate(657.1 617.7)" d="M0 0 C-20 -28 -34 -42 -34 -60 A34 34 0 1 1 34 -60 C34 -42 20 -28 0 0Z" fill="#b8943d" stroke="#12160f" stroke-width="4"/><circle cx="657.1" cy="557.7" r="12" fill="#12160f"/><path transform="translate(587.3 594.6)" d="M0 0 C-20 -28 -34 -42 -34 -60 A34 34 0 1 1 34 -60 C34 -42 20 -28 0 0Z" fill="#b8943d" stroke="#12160f" stroke-width="4"/><circle cx="587.3" cy="534.6" r="12" fill="#12160f"/><path transform="translate(455.6 536.4)" d="M0 0 C-20 -28 -34 -42 -34 -60 A34 34 0 1 1 34 -60 C34 -42 20 -28 0 0Z" fill="#b8943d" stroke="#12160f" stroke-width="4"/><circle cx="455.6" cy="476.4" r="12" fill="#12160f"/><text class="rot" x="697.1" y="627.7" text-anchor="start">Araguari · MG</text><text class="rot" x="543.3" y="634.6" text-anchor="end">Sul de Goiás</text><text class="rot" x="411.6" y="506.4" text-anchor="end">Mato Grosso</text></svg>
+ <p class="txt">Base em <b>Araguari</b>. Presença no Triângulo Mineiro, no sul de Goiás e no Mato Grosso.</p>
+ <p class="fonte">Perto do produtor, não de um escritório em capital.</p></div>
+<div class="s" id="g5"><img class="foto" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ig/foto05.jpg"><div class="veu"></div><div class="arroba">@ftgadvogados_</div>
+ <div class="fio"></div><h1>O escritório jurídico que entende <b>o calendário da safra,</b> não só a lei.</h1>
+ <div class="pe"><img src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png"><span>grupoftg.com.br</span></div></div>
+</body></html>

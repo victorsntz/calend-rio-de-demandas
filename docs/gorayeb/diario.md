@@ -1245,3 +1245,20 @@ NR (no kicker da capa), PGRTR, CIPATR, SESTR e EPI. A figura é a linha
 com os três patamares de empregados (11 a 50, 20 ou mais, 51 ou mais). O
 "3 anos" estourou a tela no tamanho gigante: virou "3" com "anos" na leitura.
 A linha do tempo ganhou Helvetica no número com o tema novo.
+
+**06/11/2026 · "A FTG em números", refeito do post da Gorayeb**
+
+O Victor mandou só o link do post e pediu que eu baixasse sozinho. O `ig.py`
+usa User-Agent de iPhone, e esse tipo de disfarce a sessão barra. Pelo
+Chromium da sessão, abrindo a página pública de embed do post, deu certo:
+`scripts/ig.cjs` no scratchpad lê o `contextJSON` e baixa cada slide e a
+legenda. Originais guardados em `referencias/gorayeb-em-numeros/`.
+
+5 telas na nova IDV (`modelos/ftg-em-numeros.html`, saída em
+`saida/ftg-em-numeros/`), mesma estrutura do original: capa, +450%, R$ 5,9 bi,
+mapa de atuação, fecho. As fotos são do escritório, recortadas das telas
+publicadas. Mudanças de marca: Gorayeb Advocacia virou FTG Advogados, "agro"
+virou "Agronegócio", e "Do agro. Pelo agro." saiu da arte e da legenda, como
+manda o formato 01. O mapa ganhou pinos em Araguari, sul de Goiás e Mato
+Grosso. Números (450% desde 2019, R$ 5,9 bi) são do escritório, como no post
+publicado; a fonte na arte diz "Dados do escritório".
