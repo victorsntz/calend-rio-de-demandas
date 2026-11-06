@@ -999,3 +999,33 @@ Gustavo, Gilberto, Fabiana, Bárbara, Janaina e Tais.
 Lição que vale pra qualquer refação a partir de post publicado: **contar as
 pessoas da capa e conferir contra o número de telas** antes de empacotar. O
 download do Instagram perdeu uma e ninguém teria notado pela quantidade.
+
+**06/11/2026 · revisão do Victor pela página de comentários**
+
+O Victor pediu que toda alteração vá pra memória. Esta é a memória: cada
+rodada entra aqui, e o que vira regra sobe pro `formato-01.md`.
+
+As peças estão numa página de revisão publicada como artefato, que o Victor
+comenta tela por tela. Cada mudança é republicada na hora.
+
+- **Tela do Roberto Gorayeb, pai do Fernando.** Nova, no mesmo desenho das telas
+  de pessoa publicadas, em fundo creme `#ebe3c8`. Montada em Python a partir
+  das medidas das telas publicadas (nome Arvo Bold 65, entrelinha 73; texto
+  Helvetica 32, entrelinha 39,5; margem 101; arroba Arvo Bold 21 em y 1226),
+  porque o template não tem esse tipo. Texto feito a partir do que o Victor
+  passou e do card do site: sócio consultor, advogado desde 1970, sindicatos
+  rurais, Federação da Agricultura em 1992 com a expansão de 29 para 59
+  sindicatos, juiz classista, o nome que deu origem à FTG. Entra como tela 3,
+  depois do Fernando. Carrossel institucional fechado em 12 telas.
+- **BPC tela 3: tela vazia não passa.** O 65 ocupava o terço de cima e sobrava
+  meia tela. Opção nova na `cifra`: `escala: "gigante"` (400 px) com
+  `centro: true`, que centraliza o bloco entre a etiqueta e a fonte.
+- **BPC tela 4: texto pregado.** `.titulo` de entrelinha 1.02 para 1.12 (o
+  acento em caixa alta encostava na linha de cima). Pílulas: vão de 18 para 30,
+  texto 32 para 35 com entrelinha 1.32, ícone 72 para 82. Em `itens` a lista
+  fica no meio do espaço entre o título e o remate. Item 1 virou
+  "Impedimento de longo prazo: 2 anos ou mais", pra "2 anos" não cair sozinho.
+  **Vale pra toda tela com título em caixa alta e com pílulas.**
+- **Georreferenciamento: título mal diagramado.** "O prazo" sozinho em cima e a
+  linha seguinte encostando na margem. Precisa de quebra manual, mas a peça usa
+  `img/sala-reunioes-madeira.jpg`, que não está nesta sessão. Pedido ao Victor.

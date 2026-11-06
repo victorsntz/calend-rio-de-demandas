@@ -26,7 +26,9 @@
       "numero": "65",
       "leitura": "anos ou mais",
       "texto": "Brasileiro, nato ou naturalizado, ou português com residência fixa no Brasil.",
-      "fonte": "INSS, BPC/LOAS à pessoa idosa"
+      "fonte": "INSS, BPC/LOAS à pessoa idosa",
+      "escala": "gigante",
+      "centro": true
     },
     {
       "tipo": "itens",
@@ -36,7 +38,7 @@
       "itens": [
         {
           "icone": "relogio",
-          "texto": "Impedimento de longo prazo, de pelo menos 2 anos"
+          "texto": "Impedimento de longo prazo: 2 anos ou mais"
         },
         {
           "icone": "pessoas",

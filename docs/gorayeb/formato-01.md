@@ -20,7 +20,7 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Alinhamento** | **Tudo à esquerda**, por padrão. Inclusive o fecho. O único centro que sobra é o número dentro do donut, que é composição do gráfico. |
 | **@ftgadvogados_** | Topo, à esquerda, alinhado com o resto. Com folga de 46 px abaixo. |
 | **Marca d'água** | A chapa do `corpo-foto` fica em **cor sólida**. A marca ao fundo só entra se for pedida. |
-| **Listras** | Textura, não padrão. Escala grande, contraste baixo, esmaecendo na diagonal. Nunca em todo slide do carrossel. |
+| **Listras** | Textura, não padrão. Na escala do arquivo oficial: período de 188 px (escuro 43, claro 15, escuro 44, claro 86), contraste igual de ponta a ponta. Nunca em todo slide do carrossel. |
 | **Viúvas** | Palavra sozinha fechando linha **não passa**. O render costura sozinho; se ainda ficar feia, encurtar a frase. |
 | **Respiro** | Corpo em 34 px, entrelinha 1,58, medida de 19 caracteres. Nada espremido. Todo slide de figura leva folga entre o título e o desenho. |
 | **Fecho** | Honra quem faz, não vende serviço. A chamada pede marcação, que puxa mais comentário que pergunta. |
@@ -31,6 +31,8 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **"Agro"** | **Nunca abreviado.** Sempre **Agronegócio**, na arte e na legenda. Regra da Dra. Elisa, 21/10. |
 | **"Agrário" e "Agronegócio"** | Não listar os dois juntos: pra cliente são a mesma coisa. O termo da casa é **Direito do Agronegócio**. Regra da Dra. Elisa, 21/10. |
 | **"Conta ponto"** | Fora. Diferencial de vaga vai sob o rótulo **Desejável**. Regra da Dra. Elisa, 21/10. |
+| **Tela vazia** | Não passa. Se o conteúdo ocupa só o alto, o desenho cresce ou o bloco centraliza: `cifra` com `escala: "gigante"` e `centro: true`; em `itens` a lista vai pro meio do espaço. Pedido do Victor em 06/11. |
+| **Texto pregado** | Título em caixa alta com entrelinha 1.12, pílulas com vão de 30 px. Acento não encosta na linha de cima. Pedido do Victor em 06/11. |
 | **Barra de progresso** | **Não usar.** Existe no template (`progresso: true`), mas ficou de fora por decisão do Victor. |
 
 ## A marca

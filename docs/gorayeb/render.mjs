@@ -436,12 +436,12 @@ function monta(s, i = 0, total = 0) {
         ${ARROBA}
         ${s.mapa ? mapinha(s.mapa) : ""}
         ${s.etiqueta ? `<div class="espaco-sm"></div>${ETIQUETA(s.etiqueta)}` : ""}
-        <div class="espaco-sm"></div>
+        ${s.centro ? `<div class="empurra"></div>` : `<div class="espaco-sm"></div>`}
         <p class="cifra ${s.escala || ""}"><span class="cifra-num">${titulo(s.numero)}</span></p>
         ${s.leitura ? `<p class="cifra-leitura">${titulo(s.leitura)}</p>` : ""}
         ${s.texto ? `<div class="espaco-sm"></div><p class="corpo menor">${rico(s.texto)}</p>` : ""}
         ${s.caixa ? `<div class="espaco"></div>${CAIXA(s.caixa)}` : ""}
-        ${s.foto ? `<div class="empurra"></div>` : `<div class="espaco"></div>`}
+        ${s.foto || s.centro ? `<div class="empurra"></div>` : `<div class="espaco"></div>`}
         ${s.fonte ? `<p class="fonte">Fonte: ${esc(s.fonte)}</p>` : ""}
         ${s.nota ? `<p class="nota-pe">${rico(s.nota)}</p>` : ""}`;
       break;
@@ -453,6 +453,7 @@ function monta(s, i = 0, total = 0) {
         ${s.etiqueta ? `${ETIQUETA(s.etiqueta)}<div class="espaco-sm"></div>` : ""}
         <h2 class="titulo menor">${titulo(s.titulo)}</h2>
         <div class="espaco"></div>
+        <div class="empurra"></div>
         <ul class="pilulas">
           ${(s.itens || [])
             .slice(0, 6)

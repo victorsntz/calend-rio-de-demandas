@@ -103,7 +103,7 @@
   font-weight: 700;
   text-transform: uppercase;
   font-size: 82px;
-  line-height: 1.02;
+  line-height: 1.12;   /* era 1.02: em caixa alta, o acento de uma linha encostava na de cima */
   letter-spacing: -0.015em;
 }
 .titulo.menor  { font-size: 64px; }
@@ -569,6 +569,11 @@
 }
 .cifra.menor { font-size: 126px; }
 .cifra.maior { font-size: 184px; }
+/* quando o número é tudo que a tela tem: ocupa a tela, em vez de deixar meia
+   página vazia embaixo. Pedido do Victor em 06/11. */
+.cifra.gigante { font-size: 400px; line-height: .9; margin-top: 0; }
+.cifra.gigante + .cifra-leitura { font-size: 58px; margin-top: 26px; }
+.cifra.gigante ~ .corpo.menor { font-size: 38px; }
 .bg-offwhite .cifra, .bg-branco .cifra,
 .bg-creme .cifra, .bg-areia .cifra { color: var(--verde); }
 /* marca-texto atrás da metade de baixo do número, como caneta marcadora */
@@ -620,21 +625,21 @@
 .nota-pe strong { font-weight: 700; opacity: 1; }
 
 /* lista em pílulas, com ícone ou número na frente */
-.pilulas { list-style: none; display: flex; flex-direction: column; gap: 18px; flex: none; }
+.pilulas { list-style: none; display: flex; flex-direction: column; gap: 30px; flex: none; }
 /* a pílula abraça o texto, não estica até a margem */
 .pilulas li {
   display: flex; align-items: center; gap: 24px;
   width: fit-content; max-width: 100%;
   background: rgba(235,227,200,.12); border-radius: 999px;
-  padding: 14px 32px 14px 14px;
+  padding: 20px 38px 20px 18px;
 }
 .bg-offwhite .pilulas li, .bg-branco .pilulas li,
 .bg-creme .pilulas li, .bg-areia .pilulas li { background: rgba(27,35,22,.07); }
 .pilula-icone {
-  flex: none; width: 72px; height: 72px; border-radius: 50%;
+  flex: none; width: 82px; height: 82px; border-radius: 50%;
   background: var(--verde); display: flex; align-items: center; justify-content: center;
 }
-.pilula-icone svg.icone { width: 40px; height: 40px; stroke: var(--dourado); }
+.pilula-icone svg.icone { width: 44px; height: 44px; stroke: var(--dourado); }
 .pilula-icone.numero {
   background: var(--dourado); color: var(--verde);
   font-family: "Arvo", Georgia, serif; font-weight: 700; font-size: 34px;
@@ -646,7 +651,7 @@
 .pilula-txt {
   flex: 1;
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-weight: 400; font-size: 32px; line-height: 1.25;
+  font-weight: 400; font-size: 35px; line-height: 1.32;
 }
 .pilula-marca { flex: none; margin-left: 10px; }
 .pilula-marca svg.icone { width: 36px; height: 36px; stroke: var(--dourado-caixa); }
