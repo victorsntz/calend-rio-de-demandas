@@ -157,6 +157,16 @@
       "formato": "estático"
     },
     {
+      "data": "2026-11-15",
+      "slot": "institucional",
+      "pilar": "Institucional",
+      "tipo": "Extra",
+      "tema": "Proclamação da República, feriado nacional",
+      "origem": "data comemorativa, pedido do Victor em 09/11, fora da cadência",
+      "status": "a produzir · aprovar com a Dra. Elisa",
+      "formato": "estático"
+    },
+    {
       "data": "2026-11-16",
       "slot": "segunda",
       "pilar": "Agronegócio · Ambiental e fundiário",
