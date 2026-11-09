@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-06",
+  "atualizado_em": "2026-11-09",
   "origem": "Calendario_Editorial_Instagram_Agro.xlsx, remanejado em 16/10/2026",
   "cadencia": "De 26/10 a 18/12: segunda, quarta e sexta. Quarta é do previdenciário, uma vez por semana. Segunda e sexta são do agronegócio e do empresarial. Quem aprova as peças é a Dra. Elisa.",
   "deslocamento": "O pilar trabalhista (itens 25 em diante) correu 28 dias para frente: a NR-31 abre em 24/11 em vez de 27/10. O que ocupou o lugar foi o estoque de vídeo gravado mais o bloco ambiental que o acompanha.",
@@ -187,6 +187,16 @@
       "formato": "carrossel"
     },
     {
+      "data": "2026-11-20",
+      "slot": "institucional",
+      "pilar": "Institucional",
+      "tipo": "Extra",
+      "tema": "Dia da Consciência Negra, feriado nacional",
+      "origem": "data comemorativa, pedido do Victor em 09/11, fora da cadência",
+      "status": "a produzir · aprovar com a Dra. Elisa",
+      "formato": "estático"
+    },
+    {
       "data": "2026-11-23",
       "slot": "segunda",
       "pilar": "Agronegócio · Trabalhista rural",
@@ -237,6 +247,16 @@
       "formato": "carrossel"
     },
     {
+      "data": "2026-12-03",
+      "slot": "institucional",
+      "pilar": "Previdenciário",
+      "tipo": "Extra",
+      "tema": "Dia Internacional da Pessoa com Deficiência: os direitos previdenciários da pessoa com deficiência",
+      "origem": "data comemorativa, pedido do Victor em 09/11, fora da cadência",
+      "status": "a produzir · aprovar com a Dra. Elisa",
+      "formato": "estático"
+    },
+    {
       "data": "2026-12-04",
       "slot": "sexta",
       "pilar": "Agronegócio · Trabalhista rural",
@@ -247,6 +267,16 @@
       "formato": "estático"
     },
     {
+      "data": "2026-12-05",
+      "slot": "institucional",
+      "pilar": "Agronegócio · Ambiental",
+      "tipo": "Extra",
+      "tema": "Dia Mundial do Solo: a terra é o patrimônio do produtor",
+      "origem": "data comemorativa, pedido do Victor em 09/11, fora da cadência",
+      "status": "a produzir · aprovar com a Dra. Elisa",
+      "formato": "estático"
+    },
+    {
       "data": "2026-12-07",
       "slot": "segunda",
       "pilar": "Empresarial · Sucessão e holding rural",
@@ -254,6 +284,16 @@
       "tema": "Fim de ano, reunião de família: o momento certo para falar de sucessão",
       "origem": "item 45",
       "status": "roteiro aprovado · produzir a arte",
+      "formato": "estático"
+    },
+    {
+      "data": "2026-12-08",
+      "slot": "institucional",
+      "pilar": "Institucional",
+      "tipo": "Extra",
+      "tema": "Dia da Justiça",
+      "origem": "data comemorativa, pedido do Victor em 09/11, fora da cadência",
+      "status": "a produzir · aprovar com a Dra. Elisa",
       "formato": "estático"
     },
     {
@@ -334,6 +374,16 @@
       "tema": "Mensagem de virada de ano",
       "origem": "pauta nova",
       "status": "a produzir",
+      "formato": "estático"
+    },
+    {
+      "data": "2027-01-24",
+      "slot": "institucional",
+      "pilar": "Previdenciário",
+      "tipo": "Extra",
+      "tema": "Dia do Aposentado",
+      "origem": "data comemorativa, pedido do Victor em 09/11, fora da cadência",
+      "status": "a produzir · aprovar com a Dra. Elisa",
       "formato": "estático"
     }
   ],
@@ -544,5 +594,6 @@
   },
   "aprovacao": "Dra. Elisa aprovou a linha editorial inteira em 28/10/2026, por e-mail. Os roteiros estão liberados; o que falta em cada peça é a arte.",
   "idv": "A partir de 06/11/2026 as peças saem na identidade nova, aprovada pelo Victor: títulos em Helvetica Bold caixa baixa com peso misturado, etiqueta dourada pequena, grão de filme, verde mais fechado, listras só quando a tela pede. No JSON é \"idv\": 2. As peças de 26/10 a 09/11 saíram na identidade antiga e ficam como estão: são registro do que foi publicado.",
-  "capas": "A rotação de quatro modelos de 26/10 deu lugar a um catálogo de sete com código (C1 foto em cartão, C2 foto escurecendo, C3 objeto desenhado, C4 tipográfica escura, C5 foto cheia com faixa, C6 céu aberto, CF institucional fixada). A capa de cada post está em CAPA_POR_DATA, em linha-editorial/conteudo.py. Regra: não repetir o modelo dos últimos três posts. Fecho alterna F1 e F3. Em 06/11 saíram C7, F2 e F4."
+  "capas": "A rotação de quatro modelos de 26/10 deu lugar a um catálogo de sete com código (C1 foto em cartão, C2 foto escurecendo, C3 objeto desenhado, C4 tipográfica escura, C5 foto cheia com faixa, C6 céu aberto, CF institucional fixada). A capa de cada post está em CAPA_POR_DATA, em linha-editorial/conteudo.py. Regra: não repetir o modelo dos últimos três posts. Fecho alterna F1 e F3. Em 06/11 saíram C7, F2 e F4.",
+  "datas_comemorativas": "Pedido do Victor em 09/11: as datas comemorativas pertinentes entram na linha editorial como extra, fora da cadência de segunda, quarta e sexta, sem tirar post aprovado do lugar. Critério: só data que conversa com agronegócio, previdenciário, empresarial ou com o escritório. Natal e virada de ano já estavam na agenda."
 }

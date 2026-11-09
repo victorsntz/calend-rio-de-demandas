@@ -1429,3 +1429,17 @@ esses artigos.
 capa C6. Extra pronto, fora da agenda: "A FTG em números", 5 telas, post fixado,
 sem data. Junta-se ao institucional "Quem cuida" esperando o Victor dizer quando
 os fixados sobem.
+
+**09/11/2026 · datas comemorativas na linha editorial**
+
+Pedido do Victor. Entram como extra, fora da cadência, sem mexer em post
+aprovado, e todas passam pela Dra. Elisa:
+
+- 20/11 Dia da Consciência Negra, feriado nacional (cai no mesmo dia do CAR pelo CPF)
+- 03/12 Dia Internacional da Pessoa com Deficiência, puxando o previdenciário
+- 05/12 Dia Mundial do Solo, pelo agronegócio
+- 08/12 Dia da Justiça, institucional
+- 24/01/2027 Dia do Aposentado
+
+Ficaram de fora por não conversar com o feed: 15/11 Proclamação da República,
+19/11 Dia da Bandeira, 10/12 Direitos Humanos.
