@@ -1443,3 +1443,5 @@ aprovado, e todas passam pela Dra. Elisa:
 
 Ficaram de fora por não conversar com o feed: 15/11 Proclamação da República,
 19/11 Dia da Bandeira, 10/12 Direitos Humanos.
+
+Victor cortou 20/11 (Consciência Negra) e 03/12 (Pessoa com Deficiência): "tem que ser mais pertinentes". Ficam Dia Mundial do Solo, Dia da Justiça e Dia do Aposentado.
