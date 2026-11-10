@@ -1486,3 +1486,7 @@ legenda do estático de 15/11 também foi escrita (texto meu, pra Dra. Elisa).
 - 20/11 CAR e 25/11 revisão: os textos chegaram cortados na notificação; pedi o texto completo ao orquestrador.
 - 25/11 revisão: refeito com o texto da FTG, 7 telas. O texto veio cortado no slide 7 ("BENEFÍCIO CONCED"); completei com "Benefício concedido também se confere", o fecho que já existia, com o aval do Victor ("faça da forma que você acha").
 - 20/11 CAR: virou "Seu CAR pelo celular", 7 telas. Os prints pedidos viraram telas de celular desenhadas e marcadas "Ilustração" (modelos/car-celular.html). Legenda completada a partir do que as telas dizem, com o mesmo aval.
+
+**10/11/2026 · ajustes da FTG**
+
+A FTG pediu ajustes em seis peças (11, 13, 18, 20, 23 e 25/11), feitos pela produção em bd19448. O BPC ficou com 6 telas, o CAR de 20/11 virou "Seu CAR pelo celular" com 7 telas e a revisão de 25/11 ficou com 7. Título de 20/11 atualizado na agenda.
