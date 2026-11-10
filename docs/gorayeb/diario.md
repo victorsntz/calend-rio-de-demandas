@@ -1475,3 +1475,4 @@ legenda do estático de 15/11 também foi escrita (texto meu, pra Dra. Elisa).
 - 8 telas na nova IDV, texto do roteiro aprovado sem mudança. Capa C2 (foto escurecendo) em HTML, `modelos/nr31-atualizacoes-capa.html`, selo Área Trabalhista. Fecho F1 com listras.
 - Prazos da cabine fechada viraram barras (120, 96, 84 e 60 meses por área). Foto em 4 telas, todas novas do Pinterest, créditos em `img/_creditos-pinterest.tsv`.
 - Balanceamento aplicado: apoio da capa em 28px pra não sobrar "aberto"; remate da tela 5 quebrado na vírgula; lista da tela 5 virou pílulas com ícone pra não sobrar "do vento".
+- 30/11, tela 3: foto do atomizador trocada a pedido do Victor (estava ruim) por trator de cabine fechada aplicando, img/trator-cabine-nevoa.jpg.
