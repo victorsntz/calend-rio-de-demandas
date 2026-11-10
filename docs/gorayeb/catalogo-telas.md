@@ -82,3 +82,23 @@ o resto do rodízio se ajusta pela regra dos 3 posts.
 C7 (mapa sobre foto) saiu do catálogo em 06/11, a pedido do Victor: "não ficou legal". O mapa continua existindo no miolo, como M9.
 
 F2 (marca grande, creme) e F4 (pergunta e marcação) saíram em 06/11: o Victor achou feios. Ficam F1 e F3.
+
+## Balanceamento de texto (regra do Victor, 10/11)
+
+Quebra de linha se decide por frase, não pela largura da caixa. Antes de
+entregar, olhar cada bloco de texto e quebrar à mão:
+
+1. **Uma frase por linha** quando o bloco tem duas frases curtas. A segunda
+   frase nunca começa no fim da linha de cima ("...do acerto. Cada" / "verba
+   tem..."): ela desce inteira.
+2. **Título com peso misturado:** a parte em regular numa linha, a parte em
+   bold (ou dourada) na de baixo. "O que fechar / com o safrista."
+3. **Nenhuma palavra sozinha** fechando bloco, e nenhuma linha com menos de um
+   terço da largura da de cima.
+4. **Se a frase não cabe numa linha**, alargar a caixa ou diminuir um ponto o
+   corpo antes de deixar ela quebrar. Se ainda assim quebrar, as linhas ficam
+   com largura parecida.
+5. Conferir no PNG em tamanho cheio, bloco por bloco, antes do zip.
+
+Exemplos que o Victor corrigiu: "Da porteira ao tribunal" (15/11) e "Cada verba
+tem sua regra e sua data" (27/11), as duas descendo pra linha de baixo inteiras.

@@ -1467,3 +1467,5 @@ dia." Neutro, sem posição política. Modelo em `modelos/proclamacao-republica.
 colheita), selo de Área Trabalhista. Foto em 5 telas, todas do Pinterest e
 escurecidas. Conferido: 20/12/2026 cai num domingo, como diz o roteiro. A
 legenda do estático de 15/11 também foi escrita (texto meu, pra Dra. Elisa).
+
+**10/11/2026 · regra de balanceamento de texto.** Depois de duas correções iguais do Victor (15/11 e 27/11), a regra foi escrita no `formato-01.md` e no `catalogo-telas.md`: uma frase por linha, título com o peso de baixo inteiro na segunda linha, nada de palavra sozinha, alargar antes de quebrar.
