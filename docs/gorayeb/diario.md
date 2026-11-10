@@ -1451,3 +1451,12 @@ Entrou também 15/11, Proclamação da República, a pedido do Victor.
 **10/11/2026 · status**
 
 O Victor confirmou: saíram o vídeo de 04/11, a Reserva Legal de 06/11 e o vídeo do conflito de terra de 09/11. Excel de 10/11 regerado para o envio à Dra. Elisa.
+
+**10/11/2026 · estático de 15/11, Proclamação da República**
+
+Data comemorativa pedida pelo Victor, sem roteiro aprovado: o texto é meu e
+precisa passar pela Dra. Elisa. Foto do Pinterest (porteira pintada com a
+bandeira e o nelore na estrada), escurecida, origem no `_creditos-pinterest.tsv`.
+Selo Institucional, moldura dourada. Texto: "Uma República vive de leis que
+valem pra todos. Da porteira ao tribunal, é isso que a gente defende todo
+dia." Neutro, sem posição política. Modelo em `modelos/proclamacao-republica.html`.
