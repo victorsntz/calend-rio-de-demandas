@@ -29,7 +29,7 @@ ajustados na sessão que for usar).
 ### Capa
 
 - **C1 · Foto em cartão.** Pauta com uma boa foto de cenário. Foto em cartão arredondado em cima, título grande com peso misturado embaixo, fundo creme. Como: HTML (modelos/mapa-pinos-e-capa-cartao.html, #bpc1). Já usado: BPC 11/11.
-- **C2 · Foto escurecendo.** Foto de paisagem que segura a metade de cima; o texto entra na parte escura. Serve pra capa e pra estático. Como: HTML (modelos/capa-escurece.html). Já usado: Georreferenciamento 13/11.
+- **C2 · Foto escurecendo.** Foto de paisagem que segura a metade de cima; o texto entra na parte escura. Serve pra capa e pra estático. Como: HTML (modelos/capa-escurece.html). Já usado: Georreferenciamento 13/11, NR-31 atualizações 30/11.
 - **C3 · Objeto desenhado.** Quando a pauta tem uma coisa concreta (documento, cerca, porteira) e não há foto boa. Fundo creme, o objeto desenhado em destaque. Como: HTML (modelos/capa-objeto.html). Já usado: Documentos 18/11.
 - **C4 · Tipográfica escura.** Pauta de pergunta ou frase forte, sem imagem que ajude. Verde fechado, listras, palavra em dourado. Como: template: capa-tipo + idv 2. Já usado: CAR 20/11.
 - **C5 · Foto cheia com faixa.** Foto forte de campo ou rebanho. Título com seta e tags em contorno; faixa verde com listras no rodapé. Como: HTML (modelos/estudo.html, #t3). Já usado: estudo.
@@ -66,7 +66,7 @@ ajustados na sessão que for usar).
 | 23/11 | NR-31: o que é | C5 · Foto cheia com faixa | sugerida: trabalhador no campo, foto forte |
 | 25/11 | Seu benefício foi calculado certo? | C6 · Céu aberto | sugerida |
 | 27/11 | 13º, férias e rescisão do safrista | C1 · Foto em cartão | sugerida |
-| 30/11 | Atualizações da NR-31 | C2 · Foto escurecendo | sugerida |
+| 30/11 | Atualizações da NR-31 | C2 · Foto escurecendo | feita |
 | 02/12 | Pensão por morte | C4 · Tipográfica escura | sugerida |
 | 04/12 | EPI (estático) | C3 · Objeto desenhado | sugerida: capacete, luva e bota desenhados |
 | 07/12 | Fim de ano, reunião de família (estático) | C5 · Foto cheia com faixa | sugerida |

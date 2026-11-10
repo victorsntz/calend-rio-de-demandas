@@ -1469,3 +1469,9 @@ escurecidas. Conferido: 20/12/2026 cai num domingo, como diz o roteiro. A
 legenda do estático de 15/11 também foi escrita (texto meu, pra Dra. Elisa).
 
 **10/11/2026 · regra de balanceamento de texto.** Depois de duas correções iguais do Victor (15/11 e 27/11), a regra foi escrita no `formato-01.md` e no `catalogo-telas.md`: uma frase por linha, título com o peso de baixo inteiro na segunda linha, nada de palavra sozinha, alargar antes de quebrar.
+
+### 10/11 · Arte do 30/11, Atualizações da NR-31 (sessão de arte)
+
+- 8 telas na nova IDV, texto do roteiro aprovado sem mudança. Capa C2 (foto escurecendo) em HTML, `modelos/nr31-atualizacoes-capa.html`, selo Área Trabalhista. Fecho F1 com listras.
+- Prazos da cabine fechada viraram barras (120, 96, 84 e 60 meses por área). Foto em 4 telas, todas novas do Pinterest, créditos em `img/_creditos-pinterest.tsv`.
+- Balanceamento aplicado: apoio da capa em 28px pra não sobrar "aberto"; remate da tela 5 quebrado na vírgula; lista da tela 5 virou pílulas com ícone pra não sobrar "do vento".

@@ -1,0 +1,107 @@
+{
+  "id": "nr31-atualizacoes",
+  "idv": 2,
+  "titulo": "Atualizações da NR-31 e prazos de adequação",
+  "nota": "Post de 30/11. Roteiro aprovado pela Dra. Elisa em 28/10, 8 telas. Capa C2 (foto escurecendo) em HTML (modelos/nr31-atualizacoes-capa.html), fecho F1. Selo de Área Trabalhista. Foto em 4 telas, prazos em barras.",
+  "legenda_instagram": "NR-31: O QUE MUDOU E QUE PRAZO AINDA CORRE.\n\nA norma nova vale desde outubro de 2021. Depois disso ganhou ajustes, e um prazo de adequação segue aberto.\n\nCOMISSÃO. Desde 20 de março de 2023, a CIPATR é a Comissão Interna de Prevenção de Acidentes e de Assédio do Trabalho Rural. Vale para a fazenda com 20 ou mais empregados fixos. O treinamento dos membros inclui prevenção ao assédio sexual e a outras violências.\n\nAGROTÓXICO. Desde janeiro de 2023, o atomizador mecanizado só aplica agrotóxico em máquina com cabine fechada, original ou adaptada. A adaptada precisa de estrutura de proteção contra capotagem. O prazo para adequar depende da área aplicada.\n\nPRAZOS. Até 25 hectares, 120 meses; até 50 hectares, 96 meses. De 51 a 100 hectares, 84 meses. Mais de 100 hectares, 60 meses. Vale conferir com o responsável pela segurança em que ponto a sua fazenda está.\n\nENQUANTO O PRAZO CORRE. O PGRTR precisa explicar por que a cabine ainda não é viável e como o operador fica protegido. É proibido o atomizador acoplado e a aplicação no mesmo sentido do vento. Se a névoa atingir o operador, a aplicação para na hora.\n\nDIREITO DE RECUSA. Desde março de 2024, o trabalhador pode interromper a tarefa quando vê risco grave e iminente, avisando o superior na hora. O empregador só pode exigir a volta depois de corrigir o problema. E quem parou por motivo razoável fica protegido de punição injustificada.\n\nMULTA. A Portaria MTE 104/2026 mudou a NR-28: infração da NR-31 passou a seguir o cálculo da Lei 5.889/1973, por empregado em situação irregular. Vale para autos lavrados desde 30 de janeiro de 2026.\n\nPrazo longo também vence. Vale conferir a data do último PGRTR, a máquina de aplicação e a ficha de EPI. Salve este carrossel e mande para quem cuida da segurança na fazenda.\n\nFontes: Portaria SEPRT 22.677/2020; Portarias MTP 4.219/2022, 4.223/2022 e 4.371/2022; Portaria MTE 342/2024; Portaria MTE 104/2026; NR-31, texto consolidado do MTE; Lei 5.889/1973.",
+  "slides": [
+    {
+      "tipo": "capa-tipo",
+      "titulo": "capa em HTML (modelos/nr31-atualizacoes-capa.html)"
+    },
+    {
+      "tipo": "tese",
+      "foto": "../img/equipe-carregando-lavoura.jpg",
+      "veu": "verde",
+      "foco": "center 55%",
+      "tese": "A CIPATR passou a cuidar de assédio.",
+      "texto": "Desde 20 de março de 2023, ela é a Comissão Interna de Prevenção de Acidentes e de Assédio do Trabalho Rural. Vale para a fazenda com 20 ou mais empregados fixos. O treinamento dos membros inclui prevenção ao assédio sexual e a outras violências."
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../img/atomizador-pomar.jpg",
+      "foco": "center 50%",
+      "titulo": "Atomizador só\ncom cabine fechada.",
+      "paragrafos": [
+        "Desde janeiro de 2023, o atomizador mecanizado só aplica agrotóxico em máquina com cabine fechada, original ou adaptada.",
+        "A adaptada precisa de estrutura de proteção contra capotagem. O prazo para adequar depende da área aplicada."
+      ]
+    },
+    {
+      "tipo": "figura",
+      "figura": "barras",
+      "fundo": "offwhite",
+      "titulo": "Quanto tempo\ncada fazenda tem",
+      "itens": [
+        {
+          "rotulo": "Até 25 hectares",
+          "valor": 120,
+          "valorTexto": "120 meses",
+          "destaque": true
+        },
+        {
+          "rotulo": "Até 50 hectares",
+          "valor": 96,
+          "valorTexto": "96 meses"
+        },
+        {
+          "rotulo": "De 51 a 100 hectares",
+          "valor": 84,
+          "valorTexto": "84 meses"
+        },
+        {
+          "rotulo": "Mais de 100 hectares",
+          "valor": 60,
+          "valorTexto": "60 meses"
+        }
+      ],
+      "legenda": "Vale conferir com o responsável pela segurança em que ponto a sua fazenda está.",
+      "fonte": "Portaria MTP 4.223/2022",
+      "alt": "Barras com o prazo de adequação da cabine fechada por tamanho da área aplicada"
+    },
+    {
+      "tipo": "itens",
+      "fundo": "creme",
+      "etiqueta": "Enquanto o prazo corre",
+      "titulo": "Sem cabine, só com\ncuidado registrado",
+      "itens": [
+        {
+          "icone": "documento",
+          "texto": "PGRTR explicando por que a cabine ainda não é viável e como o operador fica protegido"
+        },
+        {
+          "icone": "trator",
+          "texto": "Proibido o atomizador acoplado"
+        },
+        {
+          "icone": "folha",
+          "texto": "Proibido aplicar no mesmo sentido do vento"
+        }
+      ],
+      "remate": "Se a névoa atingir o operador,\na aplicação para na hora."
+    },
+    {
+      "tipo": "tese",
+      "foto": "../img/produtor-olhando-trator.jpg",
+      "veu": "marrom",
+      "foco": "center 35%",
+      "tese": "Com risco grave, o trabalhador pode parar.",
+      "texto": "Desde março de 2024, ele pode interromper a tarefa quando vê risco grave e iminente, avisando o superior na hora. O empregador só pode exigir a volta depois de corrigir o problema. E quem parou por motivo razoável fica protegido de punição injustificada."
+    },
+    {
+      "tipo": "tese",
+      "fundo": "bordo",
+      "tese": "Desde janeiro de 2026, a multa conta por empregado.",
+      "texto": "A Portaria MTE 104/2026 mudou a NR-28: infração da NR-31 passou a seguir o cálculo da Lei 5.889/1973, por empregado em situação irregular. Vale para autos lavrados desde 30 de janeiro de 2026."
+    },
+    {
+      "tipo": "fecho",
+      "textura": "listras",
+      "sintese": "Prazo longo\ntambém vence.",
+      "paragrafos": [
+        "Vale conferir a data do último PGRTR, a máquina de aplicação e a ficha de EPI."
+      ],
+      "salvar": "*Salve este carrossel* e mande para quem cuida da segurança na fazenda."
+    }
+  ]
+}
