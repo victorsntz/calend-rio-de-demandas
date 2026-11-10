@@ -1476,3 +1476,11 @@ legenda do estático de 15/11 também foi escrita (texto meu, pra Dra. Elisa).
 - Prazos da cabine fechada viraram barras (120, 96, 84 e 60 meses por área). Foto em 4 telas, todas novas do Pinterest, créditos em `img/_creditos-pinterest.tsv`.
 - Balanceamento aplicado: apoio da capa em 28px pra não sobrar "aberto"; remate da tela 5 quebrado na vírgula; lista da tela 5 virou pílulas com ícone pra não sobrar "do vento".
 - 30/11, tela 3: foto do atomizador trocada a pedido do Victor (estava ruim) por trator de cabine fechada aplicando, img/trator-cabine-nevoa.jpg.
+
+### 10/11 · Ajustes pedidos pela FTG no /demandas/ (sessão de arte)
+
+- 11/11 BPC: refeito com o texto da FTG, 6 telas, sem nenhuma imagem de agro. Capa "Seu pai tem 65 anos e nunca contribuiu com o INSS?" com foto de pai e filha em casa; fotos de família e mãos, legenda nova.
+- 13/11 geo: legenda trocada pela da FTG. A arte perdeu "E a Justiça ainda está discutindo" e ganhou a data nova, 21/10/2029.
+- 18/11 documentos: a pergunta "Trabalhou a vida inteira na roça e o INSS diz que falta prova?" entrou na capa, em cima do título. Legenda nova.
+- 23/11 NR-31: SESTR com 51 ou mais, "com equipe própria ou empresa especializada; temporários da safra entram na soma enquanto durar o contrato", na tela 6 e na legenda.
+- 20/11 CAR e 25/11 revisão: os textos chegaram cortados na notificação; pedi o texto completo ao orquestrador.

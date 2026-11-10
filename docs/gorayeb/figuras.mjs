@@ -342,7 +342,7 @@ export function linha(f) {
 
   return `
   <div class="figura">
-    <svg viewBox="0 0 1000 660" role="img" aria-label="${esc(f.alt || "Linha do tempo das etapas")}">
+    <svg viewBox="0 0 1000 ${f.vb || 660}" role="img" aria-label="${esc(f.alt || "Linha do tempo das etapas")}">
       <line x1="${x}" y1="${y0}" x2="${x}" y2="${y1}" stroke="var(--dado-1)" stroke-width="4" opacity=".45"/>
       ${marcas}
     </svg>
