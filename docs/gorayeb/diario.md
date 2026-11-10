@@ -1484,3 +1484,5 @@ legenda do estático de 15/11 também foi escrita (texto meu, pra Dra. Elisa).
 - 18/11 documentos: a pergunta "Trabalhou a vida inteira na roça e o INSS diz que falta prova?" entrou na capa, em cima do título. Legenda nova.
 - 23/11 NR-31: SESTR com 51 ou mais, "com equipe própria ou empresa especializada; temporários da safra entram na soma enquanto durar o contrato", na tela 6 e na legenda.
 - 20/11 CAR e 25/11 revisão: os textos chegaram cortados na notificação; pedi o texto completo ao orquestrador.
+- 25/11 revisão: refeito com o texto da FTG, 7 telas. O texto veio cortado no slide 7 ("BENEFÍCIO CONCED"); completei com "Benefício concedido também se confere", o fecho que já existia, com o aval do Victor ("faça da forma que você acha").
+- 20/11 CAR: virou "Seu CAR pelo celular", 7 telas. Os prints pedidos viraram telas de celular desenhadas e marcadas "Ilustração" (modelos/car-celular.html). Legenda completada a partir do que as telas dizem, com o mesmo aval.
