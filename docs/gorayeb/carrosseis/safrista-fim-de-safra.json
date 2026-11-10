@@ -1,0 +1,65 @@
+{
+  "id": "safrista-fim-de-safra",
+  "idv": 2,
+  "titulo": "13º, férias e rescisão do trabalhador de safra: o que fechar antes do fim do ano",
+  "nota": "Post de 27/11. Roteiro aprovado pela Dra. Elisa em 28/10. Capa C1 (foto em cartão) em HTML, selo de Área Trabalhista. Foto em 5 telas.",
+  "legenda_instagram": "FIM DE SAFRA: O QUE FECHAR COM O SAFRISTA.\n\n13º, férias, indenização, FGTS e o prazo do acerto. Cada verba tem sua regra e sua data.\n\nO CONTRATO. Contrato de safra dura conforme a estação, do preparo do solo até a colheita. Quando a safra acaba, o contrato acaba junto, e a conta precisa fechar.\n\n13º SALÁRIO. É proporcional: 1/12 do salário por mês, e 15 dias ou mais contam como mês cheio. Quem segue na fazenda recebe a primeira parcela até 30 de novembro e a segunda até 20 de dezembro, que este ano cai num domingo. Se a safra acabou antes, o proporcional vai no acerto, descontado o que já foi adiantado.\n\nFÉRIAS. Contrato a prazo que termina antes de 12 meses dá direito a férias proporcionais: 1/12 por mês, e a fração acima de 14 dias conta como mês. Em cima vem o terço constitucional.\n\nINDENIZAÇÃO. No fim normal do contrato, a Lei 5.889/1973 garante 1/12 do salário mensal por mês de serviço, ou fração acima de 14 dias. Para o Ministério do Trabalho e para o TST, ela se soma ao FGTS, não entra no lugar dele.\n\nFGTS. 8% todo mês, inclusive sobre o 13º, com depósito até o dia 20 do mês seguinte. No acerto entram o mês da saída e o anterior, se ainda não pagos. No fim normal da safra não há a multa de 40%, e o trabalhador pode sacar o saldo.\n\nPRAZO. Verbas pagas e documentos entregues em até 10 dias do fim do contrato, com o desligamento informado no eSocial no mesmo prazo. O exame demissional também é feito em até 10 dias, salvo exame clínico com menos de 90 dias. Atrasar o acerto gera multa a favor do trabalhador, no valor de um salário.\n\nSafra fechada, conta fechada. Salve este carrossel e mande para quem contrata na safra.\n\nFontes: Lei 5.889/1973; Decreto 10.854/2021; Leis 4.090/1962 e 4.749/1965; CLT, arts. 147, 158, 161, 166 e 477; CF, art. 7º, XVII; Súmula 328 do TST; Precedente Administrativo 65 da SIT/MTE; Lei 8.036/1990; NR-31; Manual do eSocial, evento S-2299.",
+  "slides": [
+    { "tipo": "capa-tipo", "titulo": "capa em HTML (modelos/safrista-capa.html)" },
+    {
+      "tipo": "tese",
+      "foto": "../img/silhueta-plantio.jpg", "veu": "verde", "foco": "center 50%",
+      "tese": "Contrato de safra tem começo e fim.",
+      "texto": "Dura conforme a estação, do preparo do solo até a colheita. Quando a safra acaba, o contrato acaba junto, e a conta precisa fechar."
+    },
+    {
+      "tipo": "cifra", "fundo": "offwhite", "centro": true,
+      "etiqueta": "13º salário",
+      "numero": "1/12",
+      "leitura": "do salário por mês trabalhado",
+      "texto": "15 dias ou mais contam como mês cheio. Quem segue na fazenda recebe a 1ª parcela até 30/11 e a 2ª até 20/12, que este ano cai num domingo. Se a safra acabou antes, o proporcional vai no acerto, descontado o adiantado.",
+      "fonte": "Leis 4.090/1962 e 4.749/1965"
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../img/peneira-cafe-sol.jpg", "foco": "center 40%",
+      "titulo": "Férias proporcionais,\ncom um terço.",
+      "paragrafos": [
+        "Contrato a prazo que termina antes de 12 meses dá direito a férias proporcionais: 1/12 por mês, e a fração acima de 14 dias conta como mês.",
+        "Em cima desse valor vem o terço constitucional."
+      ]
+    },
+    {
+      "tipo": "tese", "fundo": "bordo",
+      "tese": "A indenização é só do safrista. E não substitui o FGTS.",
+      "texto": "No fim normal do contrato, a Lei 5.889/1973 garante 1/12 do salário mensal por mês de serviço, ou fração acima de 14 dias. Para o Ministério do Trabalho e para o TST, ela se soma ao FGTS."
+    },
+    {
+      "tipo": "cifra", "fundo": "creme", "escala": "gigante", "centro": true,
+      "etiqueta": "FGTS",
+      "numero": "8%",
+      "leitura": "todo mês, inclusive sobre o 13º",
+      "texto": "Depósito até o dia 20 do mês seguinte. No fim normal da safra não há a multa de 40%, e o trabalhador pode sacar o saldo.",
+      "fonte": "Lei 8.036/1990"
+    },
+    {
+      "tipo": "itens",
+      "foto": "../img/sacas-cafe-pe.jpg", "veu": "verde", "foco": "center 50%",
+      "etiqueta": "Prazo",
+      "titulo": "Dez dias pra\nfechar tudo",
+      "itens": [
+        { "icone": "dinheiro", "texto": "Verbas pagas e documentos entregues" },
+        { "icone": "documento", "texto": "Desligamento informado no eSocial" },
+        { "icone": "check", "texto": "Exame demissional, salvo exame com menos de 90 dias" }
+      ],
+      "remate": "Atrasou o acerto: multa a favor do trabalhador, no valor de um salário."
+    },
+    {
+      "tipo": "fecho",
+      "foto": "../img/silhueta-enxada-por-do-sol.jpg", "veu": "verde",
+      "sintese": "Safra fechada,\nconta fechada.",
+      "paragrafos": ["Quem acerta no prazo começa a próxima safra sem pendência."],
+      "salvar": "*Salve este carrossel* e mande pra quem contrata na safra."
+    }
+  ]
+}

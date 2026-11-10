@@ -1460,3 +1460,10 @@ bandeira e o nelore na estrada), escurecida, origem no `_creditos-pinterest.tsv`
 Selo Institucional, moldura dourada. Texto: "Uma República vive de leis que
 valem pra todos. Da porteira ao tribunal, é isso que a gente defende todo
 dia." Neutro, sem posição política. Modelo em `modelos/proclamacao-republica.html`.
+
+**10/11/2026 · carrossel de 27/11, safrista, na nova IDV**
+
+8 telas, roteiro aprovado em 28/10. Capa C1 (foto em cartão, laranjal na
+colheita), selo de Área Trabalhista. Foto em 5 telas, todas do Pinterest e
+escurecidas. Conferido: 20/12/2026 cai num domingo, como diz o roteiro. A
+legenda do estático de 15/11 também foi escrita (texto meu, pra Dra. Elisa).
