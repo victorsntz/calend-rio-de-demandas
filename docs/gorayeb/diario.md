@@ -1447,3 +1447,7 @@ Ficaram de fora por não conversar com o feed: 15/11 Proclamação da República
 Victor cortou 20/11 (Consciência Negra) e 03/12 (Pessoa com Deficiência): "tem que ser mais pertinentes". Ficam Dia Mundial do Solo, Dia da Justiça e Dia do Aposentado.
 
 Entrou também 15/11, Proclamação da República, a pedido do Victor.
+
+**10/11/2026 · status**
+
+O Victor confirmou: saíram o vídeo de 04/11, a Reserva Legal de 06/11 e o vídeo do conflito de terra de 09/11. Excel de 10/11 regerado para o envio à Dra. Elisa.
