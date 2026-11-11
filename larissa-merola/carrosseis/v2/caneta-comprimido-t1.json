@@ -1,0 +1,69 @@
+{
+  "slug": "t1-caneta-comprimido",
+  "arroba": "@dralarissamerola",
+  "seed": 16,
+  "slides": [
+    {
+      "tipo": "capa-pergunta",
+      "foto": "../../banco/post/post-159.jpg",
+      "pergunta": "Aprovaram a caneta em comprimido. Posso trocar a minha?"
+    },
+    {
+      "tipo": "foto-topico",
+      "foto": "../../banco/post/post-160.jpg",
+      "titulo": "Sim, a notícia é <b>verdadeira</b>",
+      "texto": "No dia 4 de novembro a Anvisa aprovou o primeiro comprimido de semaglutida para tratar obesidade no Brasil. É a mesma substância da caneta, agora em pílula."
+    },
+    {
+      "tipo": "partida",
+      "fotos": [
+        "../../banco/post/post-149.jpg",
+        "../../banco/post/post-163.jpg"
+      ],
+      "legendas": [
+        {
+          "topo": "A caneta",
+          "forte": "Uma vez por semana"
+        },
+        {
+          "topo": "O comprimido",
+          "forte": "Todos os dias"
+        }
+      ]
+    },
+    {
+      "tipo": "foto-topico",
+      "foto": "../../banco/post/post-162.jpg",
+      "titulo": "O que <b>não muda</b>",
+      "itens": [
+        "A substância é a mesma: <b>semaglutida</b>",
+        "O efeito no apetite e no corpo segue igual",
+        "Continua sendo <b>remédio com receita</b> e acompanhamento"
+      ]
+    },
+    {
+      "tipo": "foto-topico",
+      "foto": "../../banco/post/post-115.jpg",
+      "titulo": "Então eu <b>posso trocar?</b>",
+      "texto": "A própria Anvisa diz que a troca entre as duas formas é possível quando existe indicação clínica. Quem decide isso é a consulta, olhando a sua dose, a sua resposta e a sua rotina.",
+      "itens": [
+        "E ainda não chegou às farmácias: a previsão é <b>entre o fim deste trimestre e o começo de 2027</b>"
+      ]
+    },
+    {
+      "tipo": "fecho-t1",
+      "foto": "doutora",
+      "titulo": "A forma mudou.<br>A investigação, não.",
+      "texto": "Antes de escolher entre caneta e comprimido, eu preciso saber o que está acontecendo aí dentro. Tireoide, glicemia, insulina, músculo e sono.",
+      "cta": "Consulta pelo link na bio"
+    }
+  ],
+  "legenda": [
+    "A Anvisa aprovou no dia 4 de novembro o primeiro comprimido de semaglutida para tratar obesidade no Brasil. É a mesma substância da caneta, agora em pílula, e a pergunta chegou rápido no meu direct: posso trocar a minha?",
+    "A diferença mais visível é o ritmo. A caneta é uma aplicação por semana. O comprimido é todo dia. O que não muda é o resto: a substância é a mesma, o efeito no apetite é o mesmo e continua sendo um remédio que precisa de receita e de acompanhamento.",
+    "A própria Anvisa diz que a troca entre as duas formas é possível quando existe indicação clínica. Ou seja: quem decide é a consulta, olhando a sua dose, como o seu corpo respondeu até aqui e a sua rotina. Tem gente que esquece comprimido diário e se dá melhor com a aplicação semanal. Tem gente que tem medo de agulha e vai melhor com a pílula.",
+    "E tem uma parte prática: ainda não chegou às farmácias. A previsão é entre o fim deste trimestre e o começo de 2027, e o preço não foi divulgado.",
+    "Se você já usa caneta ou está pensando em começar, a conversa continua sendo a mesma de sempre. A forma mudou, a investigação não. Me conta nos comentários: você trocaria a injeção pelo comprimido? Consulta pelo link na bio.",
+    "Fontes: Anvisa, registro do Wegovy em comprimido publicado no Diário Oficial da União em 4 de novembro de 2026; estudo OASIS 4, New England Journal of Medicine. Imagens: Pinterest."
+  ]
+}

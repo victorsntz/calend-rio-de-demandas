@@ -7,7 +7,7 @@
     let n; while ((n = w.nextNode())) if (n.nodeValue.trim()) out.push(n);
     return out;
   }
-  document.querySelectorAll('h1 span, h1, h2, h3, .rotulo-caixa, .cards .card b, .fecho2 .cta span, .sem-viuva').forEach(el => {
+  document.querySelectorAll('h1 span, h1, h2, h3, .rotulo-caixa, .cards .card b, .fecho2 .cta span, .sem-viuva, .caixa .q, .pergunta, .frase, .apoio, .virada, .promessa, .legendas span, .legendas b').forEach(el => {
     const nos = nosDeTexto(el);
     if (!nos.length) return;
     const total = nos.map(n => n.nodeValue.trim().split(/\s+/).length).reduce((a, b) => a + b, 0);
@@ -28,7 +28,7 @@
 (function () {
   // lookbehind no início: o espaço anterior não é consumido, então cadeias ("e a pele") colam numa passada só
   const curtas = /(?<=^|\s)([AEOaeo]|[Dd][aeo]s?|[Ee]m|[Nn][ao]s?|[Uu]ma?|[Pp]ra|[Pp]or|[Pp]el[ao]s?|[Qq]ue|[Ss]e|[Cc]om|[Aa]os?|[Àà]s?|[Oo]u|[Mm]as)\s(?=\S)/g;
-  const alvos = document.querySelectorAll('.slide p, .slide .texto, .slide .convite, .slide li, .slide .sub, .slide h1, .slide h2, .slide .rotulo-caixa');
+  const alvos = document.querySelectorAll('.slide p, .slide .texto, .slide .convite, .slide li, .slide .sub, .slide h1, .slide h2, .slide .rotulo-caixa, .slide .caixa .q, .slide .pergunta, .slide .frase, .slide .apoio, .slide .virada, .slide .promessa, .slide .legendas span, .slide .legendas b');
   alvos.forEach(el => {
     const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
     let n; while ((n = w.nextNode())) { if (n.nodeValue.trim()) n.nodeValue = n.nodeValue.replace(curtas, '$1\u00a0'); }

@@ -8,6 +8,13 @@
 //        passos    { titulo, passos: [..], texto? }
 //        foto-frase{ foto, titulo, texto?, credito? }
 //        fecho     { titulo, texto, cta?, foto? }                  (sempre o último)
+// TIPO 1 EDUCATIVO (capas de 11/11; foto inteira, Sora, logo no pé):
+//        capa-pergunta { foto, pergunta }                      caixinha "Faça uma pergunta" do Instagram
+//        capa-objecao  { foto, titulo (aceita <b>), virada }    "Ah, mas..." com a frase de virada embaixo
+//        capa-citacao  { foto, titulo, promessa? }              frase da paciente entre aspas
+//        partida       { fotos: [2], legendas: [{topo, forte}] } tela partida comparando
+//        foto-topico   { foto, titulo, texto?, itens?: [..] }   miolo educativo
+//        fecho-t1      { foto?, titulo, texto?, cta? }          fecho com a Dra.
 // TIPO 2 (inspiração em perfil real; chip de perfil sobre a foto, sem cabeçalho):
 //        capa-colagem { fotos: [3 ou 6-8], titulo, texto }   capa-frase { foto | fotos: [6-8], titulo (aceita <u> e <i>), convite }
 //        corpo-foto   { foto | fotos: [2 ou 6-8], rotulo, texto?, itens: [{lead, texto}] }   fecho2 { titulo, texto?, ctas?: [..], foto? }
@@ -87,7 +94,7 @@ dados.slides.forEach((s, i) => {
   const ultimo = i === dados.slides.length - 1;
   const tema = s.tema ?? (s.tipo === 'fecho' ? 'musgo' : 'salvia');
   // tipo 2: véu das fotos alterna marrom (padrão, ~60%) e verde escuro (~40%); `tom: "musgo"|"marrom"` força
-  const tom = s.tom ?? (s.tipo === 'fecho2' ? 'musgo' : (i % 3 === 1 ? 'musgo' : 'marrom'));   // ~40% verde: slides 2, 5 e fecho
+  const tom = s.tom ?? ((s.tipo === 'fecho2' || s.tipo === 'fecho-t1') ? 'musgo' : (i % 3 === 1 ? 'musgo' : 'marrom'));   // ~40% verde: slides 2, 5 e fecho
   const vcls = tom === 'musgo' ? ' v-musgo' : '';
   const cls = `slide ${s.tipo} t-${tema}`;
   const deslize = ultimo ? '' : '<div class="deslize">Deslize</div>';
@@ -156,6 +163,36 @@ dados.slides.forEach((s, i) => {
     const ctas = (s.ctas ?? ['Me conta nos comentários', 'Salva e manda pra uma amiga', 'Consulta pelo link na bio']).map(t => `<div class="cta">${SETA}<span>${esc(t)}</span></div>`).join('');
     partes.push(`<section class="slide tipo2 fecho2${vcls}"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>
   <div class="bloco">${chip.replace('class="chip"', 'class="chip chip-junto"')}<h1>${s.titulo}</h1>${s.texto ? `<div class="convite">${s.texto}</div>` : ''}<div class="ctas">${ctas}</div></div>
+  <div class="logo"><img src="${rel('logo-branca.png')}" alt=""></div></section>`);
+  } else if (s.tipo === 'capa-pergunta' || s.tipo === 'capa-objecao' || s.tipo === 'capa-citacao') {
+    // TIPO 1 EDUCATIVO, capas: foto inteira, "deslize para o lado" e logo no pé
+    const f = foto(s.foto, 'post');
+    const cred = s.credito ?? creditoDe(f);
+    const miolo = s.tipo === 'capa-pergunta'
+      ? `<div class="caixa"><div class="cab">${esc(s.rotulo ?? 'Faça uma pergunta')}</div><div class="q">${esc(s.pergunta)}</div></div>`
+      : `<div class="bloco"><h1>${s.titulo}</h1>${s.promessa ? `<div class="promessa">${s.promessa}</div>` : ''}</div>${s.virada ? `<div class="virada">${s.virada}</div>` : ''}`;
+    partes.push(`<section class="slide t1e ${s.tipo}${vcls}"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>
+  ${miolo}<div class="deslize">Deslize para o lado</div>
+  <div class="logo"><img src="${rel('logo-branca.png')}" alt=""></div>${cred ? `<div class="credito">${esc(cred)}</div>` : ''}</section>`);
+  } else if (s.tipo === 'partida') {
+    // TIPO 1 EDUCATIVO, tela partida: duas fotos comparando
+    const fs = (s.fotos ?? ['post', 'post']).map(r => foto(r, 'post'));
+    const legs = (s.legendas ?? []).map(l => `<div><span>${l.topo}</span><b>${l.forte}</b></div>`).join('');
+    partes.push(`<section class="slide t1e partida${vcls}"><div class="duas">${fs.map(f => `<div>${f ? `<img src="${esc(f)}" alt="">` : ''}</div>`).join('')}</div><div class="veu"></div>
+  <div class="marca">Larissa Merola · Nutrologia</div><div class="legendas">${legs}</div>${creditosDe(fs) ? `<div class="credito">${esc(creditosDe(fs))}</div>` : ''}${deslize}</section>`);
+  } else if (s.tipo === 'foto-topico') {
+    // TIPO 1 EDUCATIVO, miolo: foto inteira, título em caixa alta e texto ou itens
+    const f = foto(s.foto, 'post');
+    const itens = (s.itens ?? []).map(it => `<li><i></i><span>${it}</span></li>`).join('');
+    partes.push(`<section class="slide t1e foto-topico${vcls}"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>
+  <div class="marca">Larissa Merola · Nutrologia</div>
+  <div class="bloco"><h2>${s.titulo}</h2>${s.texto ? `<p>${s.texto}</p>` : ''}${itens ? `<ul>${itens}</ul>` : ''}</div>
+  ${creditoDe(f) ? `<div class="credito">${esc(creditoDe(f))}</div>` : ''}${deslize}</section>`);
+  } else if (s.tipo === 'fecho-t1') {
+    // TIPO 1 EDUCATIVO, fecho: a Dra. com a chamada
+    const f = foto(s.foto, 'doutora');
+    partes.push(`<section class="slide t1e fecho-t1${vcls}"><div class="foto">${f ? `<img src="${esc(f)}" alt="">` : ''}</div><div class="veu"></div>
+  <div class="bloco"><h2>${s.titulo}</h2>${s.texto ? `<p>${s.texto}</p>` : ''}<div class="cta">${SETA}<span>${esc(s.cta ?? 'Link na bio')}</span></div></div>
   <div class="logo"><img src="${rel('logo-branca.png')}" alt=""></div></section>`);
   } else if (s.tipo === 'fecho') {
     const f = foto(s.foto, 'doutora');

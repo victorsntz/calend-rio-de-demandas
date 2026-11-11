@@ -2507,7 +2507,8 @@
       "salvar pins"
     ],
     "credito": "Imagem: Pinterest",
-    "usar": true
+    "usar": false,
+    "obs": "marca de medicamento legível na foto; não usar em arte"
   },
   {
     "arquivo": "post/post-148.jpg",
@@ -2523,7 +2524,8 @@
       "salvar pins"
     ],
     "credito": "Imagem: Pinterest",
-    "usar": true
+    "usar": false,
+    "obs": "marca de medicamento legível na foto; não usar em arte"
   },
   {
     "arquivo": "post/post-149.jpg",
@@ -2685,7 +2687,8 @@
       "salvar pins"
     ],
     "credito": "Imagem: Pinterest",
-    "usar": true
+    "usar": false,
+    "obs": "marca de medicamento legível na foto; não usar em arte"
   },
   {
     "arquivo": "doutora/doutora-05.jpg",
@@ -2700,6 +2703,96 @@
       "sorriso"
     ],
     "credito": "",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-159.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/6f/f7/82/6ff782250e806ffd72a5b143f23bc4a0.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 1104,
+    "orientacao": "retrato",
+    "tags": [
+      "comprimido",
+      "mulher",
+      "manha",
+      "luz",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-160.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/91/85/9f/91859f297f917ed00a80f76e6d631040.jpg",
+    "drive_id": null,
+    "largura": 735,
+    "altura": 490,
+    "orientacao": "paisagem",
+    "tags": [
+      "comprimido",
+      "mao",
+      "creme",
+      "minimal",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-161.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/87/58/ab/8758abdb2a58f9c3c1c3db9324bc22ff.jpg",
+    "drive_id": null,
+    "largura": 676,
+    "altura": 1200,
+    "orientacao": "retrato",
+    "tags": [
+      "comprimido",
+      "copo",
+      "mesa",
+      "sombra",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-162.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/1e/f9/12/1ef912daa0cf0f88d8f37f4e4a761b59.jpg",
+    "drive_id": null,
+    "largura": 608,
+    "altura": 762,
+    "orientacao": "retrato",
+    "tags": [
+      "comprimido",
+      "capsulas",
+      "mesa",
+      "mulher",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-163.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/e3/2f/d2/e32fd28279f35e06836009a8ab0ecb77.jpg",
+    "drive_id": null,
+    "largura": 735,
+    "altura": 1105,
+    "orientacao": "retrato",
+    "tags": [
+      "comprimido",
+      "mao",
+      "copo",
+      "cama",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
     "usar": true
   }
 ]

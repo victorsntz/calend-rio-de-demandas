@@ -256,3 +256,64 @@ p b, li b { font-weight: 600; }
 .tipo2.com-parede .veu { background: linear-gradient(180deg, rgba(var(--v),0) 0%, rgba(var(--v),.06) 36%, rgba(var(--v),.72) 56%, rgba(var(--vf),.96) 72%, rgb(var(--vf)) 100%); }
 .capa-frase.com-parede .veu { background: linear-gradient(180deg, rgba(var(--v),.10) 0%, rgba(var(--v),.22) 28%, rgba(var(--v),.86) 48%, rgba(var(--vf),.97) 64%, rgb(var(--vf)) 100%); }
 .capa-frase.com-parede .chip { text-shadow: 0 1px 12px rgba(0,0,0,.6); }
+
+/* ===== TIPO 1 EDUCATIVO (referências de 11/11): foto inteira, texto em Sora, logo no pé ===== */
+.t1e { background: rgb(var(--vf)); color: var(--branco); }
+.t1e .foto { position: absolute; inset: 0; z-index: 0; }
+.t1e .foto img { width: 100%; height: 100%; object-fit: cover; }
+.t1e .veu { position: absolute; inset: 0; z-index: 0; }
+.t1e .marca { position: absolute; top: 56px; left: 0; right: 0; text-align: center; font-size: 21px; letter-spacing: 0.34em; text-transform: uppercase; font-weight: 500; color: rgba(255,255,255,.88); text-shadow: 0 1px 12px rgba(0,0,0,.45); z-index: 3; }
+.t1e .deslize { position: absolute; left: 0; right: 0; text-align: center; font-size: 20px; letter-spacing: 0.4em; text-transform: uppercase; font-weight: 400; color: rgba(255,255,255,.78); text-shadow: 0 1px 10px rgba(0,0,0,.4); z-index: 3; }
+.t1e .logo { position: absolute; left: 0; right: 0; bottom: 70px; display: flex; justify-content: center; z-index: 3; }
+.t1e .logo img { height: 92px; opacity: .97; }
+.t1e .bloco { position: absolute; left: 88px; right: 88px; z-index: 3; display: flex; flex-direction: column; gap: 26px; }
+.t1e h2 { font-family: var(--sans); font-weight: 300; font-size: 62px; line-height: 1.14; letter-spacing: -0.01em; text-transform: uppercase; margin: 0; text-shadow: 0 2px 18px rgba(0,0,0,.4); }
+.t1e h2 b { font-weight: 700; }
+.t1e p { margin: 0; font-size: 31px; line-height: 1.46; font-weight: 300; letter-spacing: 0.01em; text-shadow: 0 1px 14px rgba(0,0,0,.4); }
+.t1e p b { font-weight: 600; }
+.t1e ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 20px; }
+.t1e li { display: flex; gap: 18px; align-items: flex-start; font-size: 30px; line-height: 1.4; font-weight: 300; text-shadow: 0 1px 14px rgba(0,0,0,.4); }
+.t1e li i { flex: none; width: 13px; height: 13px; border-radius: 50%; background: var(--saude); margin-top: 16px; }
+.t1e li b { font-weight: 600; }
+
+/* capa com a caixinha de pergunta do Instagram */
+.capa-pergunta .veu { background: linear-gradient(180deg, rgba(var(--v),.30) 0%, rgba(var(--v),.10) 34%, rgba(var(--v),.20) 70%, rgba(var(--vf),.72) 100%); }
+.capa-pergunta .caixa { position: absolute; left: 150px; right: 150px; top: 220px; border-radius: 26px; overflow: hidden; box-shadow: 0 22px 60px rgba(0,0,0,.28); z-index: 3; }
+.capa-pergunta .caixa .cab { background: #16181A; color: #fff; text-align: center; font-size: 25px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 26px 20px; }
+.capa-pergunta .caixa .q { background: var(--papel); color: #16181A; text-align: center; font-size: 36px; line-height: 1.34; font-weight: 400; padding: 40px 36px; }
+.capa-pergunta .deslize { top: 560px; }
+
+/* capa com a objeção ("Ah, mas...") e capa de citação de paciente */
+.capa-objecao .veu, .capa-citacao .veu { background: linear-gradient(180deg, rgba(var(--v),.46) 0%, rgba(var(--v),.20) 45%, rgba(var(--v),.30) 72%, rgba(var(--vf),.78) 100%); }
+.capa-objecao .bloco, .capa-citacao .bloco { top: 170px; bottom: auto; gap: 18px; }
+.capa-objecao h1, .capa-citacao h1 { font-family: var(--sans); font-weight: 300; font-size: 74px; line-height: 1.1; letter-spacing: -0.015em; text-transform: uppercase; margin: 0; text-shadow: 0 2px 20px rgba(0,0,0,.45); }
+.capa-objecao h1 b, .capa-citacao h1 b { font-weight: 700; }
+.capa-objecao .virada { position: absolute; right: 88px; bottom: 300px; left: 40%; text-align: right; font-size: 32px; line-height: 1.4; font-weight: 300; z-index: 3; text-shadow: 0 1px 14px rgba(0,0,0,.45); }
+.capa-citacao .promessa { font-size: 30px; font-weight: 300; margin-top: 22px; }
+.capa-citacao .promessa b { font-weight: 600; }
+.capa-objecao .deslize, .capa-citacao .deslize { bottom: 200px; }
+
+/* tela partida: duas fotos comparando */
+.partida .duas { position: absolute; inset: 0; z-index: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: rgb(var(--vf)); }
+.partida .duas div { overflow: hidden; }
+.partida .duas img { width: 100%; height: 100%; object-fit: cover; }
+.partida .veu { background: linear-gradient(180deg, rgba(var(--v),.30) 0%, rgba(var(--v),.06) 40%, rgba(var(--v),.55) 76%, rgba(var(--vf),.86) 100%); }
+.partida .legendas { position: absolute; left: 0; right: 0; bottom: 150px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; z-index: 3; }
+.partida .legendas div { padding: 0 44px; }
+.partida .legendas span { display: block; font-size: 40px; font-weight: 300; line-height: 1.16; text-transform: uppercase; letter-spacing: -0.01em; text-shadow: 0 2px 18px rgba(0,0,0,.5); }
+.partida .legendas b { display: block; font-size: 42px; font-weight: 700; line-height: 1.16; text-transform: uppercase; letter-spacing: -0.015em; text-shadow: 0 2px 18px rgba(0,0,0,.5); }
+
+/* miolo educativo: foto inteira com texto embaixo */
+.foto-topico .veu { background: linear-gradient(180deg, rgba(var(--v),.26) 0%, rgba(var(--v),.10) 28%, rgba(var(--v),.80) 58%, rgba(var(--vf),.97) 82%, rgb(var(--vf)) 100%); }
+.foto-topico .bloco { bottom: 112px; }
+.foto-topico .deslize { bottom: 52px; }
+
+/* fecho do tipo 1 */
+.fecho-t1 .veu { background: linear-gradient(180deg, rgba(var(--v),.18) 0%, rgba(var(--v),.12) 32%, rgba(var(--v),.82) 58%, rgba(var(--vf),.98) 80%, rgb(var(--vf)) 100%); }
+.fecho-t1 .foto img { object-position: 50% 12%; }
+.fecho-t1 .bloco { bottom: 210px; gap: 24px; }
+.fecho-t1 h2 { font-family: var(--serif); font-weight: 400; text-transform: none; font-size: 74px; line-height: 1.06; }
+.fecho-t1 .cta { display: inline-flex; align-items: center; gap: 16px; font-size: 28px; font-weight: 500; letter-spacing: 0.04em; margin-top: 6px; }
+.fecho-t1 .cta svg { width: 34px; height: 34px; stroke: var(--saude); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.t1e .credito { position: absolute; right: 30px; bottom: 20px; font-size: 14px; letter-spacing: 0.06em; color: rgba(255,255,255,.6); z-index: 3; }
+.fecho-t1 .credito, .capa-pergunta .credito, .capa-objecao .credito, .capa-citacao .credito { bottom: 180px; }
