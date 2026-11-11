@@ -1502,3 +1502,7 @@ das 17h54 passou a olhar o feed e marcar sozinha o que aparece.
 
 No feed hoje: os dois fixados ("A FTG em números" e "Quem cuida do seu sossego")
 já estão no ar, junto com o BPC, o vídeo do conflito de terra e a Reserva Legal.
+
+**11/11/2026 · pensão por morte vira vídeo**
+
+Pedido do Victor: o 02/12 sai em vídeo ilustrado narrado, na pegada dos que performaram bem. Mesmo conteúdo do carrossel aprovado. Roteiro em `linha-editorial/video-02-12-pensao-por-morte.md`.
