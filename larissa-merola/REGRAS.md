@@ -21,6 +21,19 @@ Quando o Victor jogar um tema aqui, antes de produzir, perguntar qual tipo ele q
 Se ele já disser o tipo na mensagem, não perguntar. Se não disser, perguntar com uma linha de
 explicação de cada um.
 
+## 1b. Estáticos: 01 notícia, 02 frase (11/11)
+
+O Victor gosta muito dos estáticos de notícia e quer mais deles. Nomes fixos:
+
+- **Estático 01, notícia.** Faixa "NOTÍCIA" no topo (verde-saúde com letra musgo, ou vinho quando o tom é alerta) e a Dra. assinando no pé.
+  - **01a, print real:** print da matéria (veículo, título, linha fina e foto) dentro do cartão. Gerador: `estaticos/noticia.mjs`.
+  - **01b, card de manchete:** manchete reescrita em caixa alta com a virada em negrito ("Exercício não é complemento do tratamento. **É o tratamento.**"), uma linha de dado embaixo ("128 mil pessoas. 1.000 estudos.") e foto na metade de baixo.
+- **Estático 02, frase.** Foto inteira com a mensagem por cima.
+  - **02a, frase ou dado:** frase grande e uma linha de apoio ("49 milhões de brasileiros têm apneia do sono. A maioria nem sabe.").
+  - **02b, gancho "leia a legenda":** números ou opções grandes à esquerda, pergunta curta ao lado e "Leia a legenda" ("5 mg, 10 mg, 15 mg. Quais os resultados esperados de cada dose?"). A resposta fica inteira na legenda.
+
+Notícia sempre com veículo e data na legenda. Nada de preço de medicamento na arte.
+
 ## 2. Cor: mais marrom, menos verde
 
 Feedback de 28/10: "tá verde demais, falta amarronzar". Ajuste de 28/10 à noite: marrom predominante, uns 60%, e o verde
