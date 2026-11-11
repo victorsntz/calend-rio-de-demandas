@@ -1,0 +1,13 @@
+{
+  "slug": "injecao-ou-comprimido",
+  "tipo": "02b",
+  "tom": "marrom",
+  "foto": "../../banco/post/post-162.jpg",
+  "opcoes": [
+    "Injeção.",
+    "Comprimido."
+  ],
+  "pergunta": "Qual é <b>melhor pra mim?</b>",
+  "gancho": "Leia a legenda",
+  "enquadramento": "50% 62%"
+}

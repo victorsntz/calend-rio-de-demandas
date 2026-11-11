@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Elo Lipedema, evento 14/11</title>
+<link rel="stylesheet" href="../capa/fonts/fonts.css">
+<link rel="stylesheet" href="../capa/tokens.css">
+<style>
+  /* Lançamento do Elo Lipedema: anúncio (feed + stories), arte da sacola e arte da camiseta, com mockups. */
+  html, body { margin: 0; background: #ddd; }
+  .slide { position: relative; overflow: hidden; font-family: var(--sans); color: var(--branco); background: var(--musgo); margin-bottom: 40px; }
+  .feed { width: 1080px; height: 1350px; }
+  .stories { width: 1080px; height: 1920px; }
+  .textura::before { content: ""; position: absolute; inset: 0; opacity: .14; mix-blend-mode: multiply; pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>"); }
+  .degrade { background: radial-gradient(120% 95% at 88% 8%, #5E6C58 0%, #3B4738 45%, #2B3629 100%); }
+  .anel { position: absolute; left: 50%; top: 50%; border: 2px solid rgba(204,215,127,.55); border-radius: 50%; transform: translate(-50%, -50%); }
+  .anel.a1 { width: 1180px; height: 1180px; }
+  .anel.a2 { width: 1120px; height: 1120px; border-color: rgba(204,215,127,.22); border-width: 1px; }
+  .topo { position: absolute; top: 72px; left: 0; width: 100%; text-align: center; font-size: 19px; letter-spacing: 0.34em; text-transform: uppercase; font-weight: 500; color: var(--saude); }
+  .centro { position: absolute; left: 96px; right: 96px; top: 50%; transform: translateY(-54%); display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .vem { font-family: var(--serif); font-size: 60px; line-height: 1; color: var(--saude); letter-spacing: 0.01em; }
+  .elo { font-family: var(--serif); font-size: 300px; line-height: .84; letter-spacing: 0.02em; margin-top: 26px; }
+  .lipedema { margin-top: 24px; font-size: 56px; font-weight: 300; letter-spacing: 0.46em; text-transform: uppercase; padding-left: 0.46em; }
+  .risco { width: 72px; height: 3px; background: var(--saude); margin: 44px 0 36px; }
+  .frase { font-family: var(--serif); font-size: 50px; line-height: 1.14; letter-spacing: -0.01em; text-wrap: balance; max-width: 860px; }
+  .detalhes { margin-top: 34px; font-size: 27px; line-height: 1.5; font-weight: 300; max-width: 760px; color: rgba(255,255,255,.9); }
+  .detalhes b { font-weight: 600; color: var(--saude); }
+  .data { margin-top: 36px; display: flex; gap: 26px; align-items: center; font-size: 24px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; }
+  .data i { width: 6px; height: 6px; border-radius: 50%; background: var(--saude); }
+  .cta { margin-top: 44px; padding: 20px 40px; border: 2px solid var(--saude); color: var(--saude); font-size: 21px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+  .rodape { position: absolute; left: 0; right: 0; bottom: 64px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .rodape img { height: 64px; }
+  .rodape span { font-size: 20px; letter-spacing: 0.1em; color: rgba(255,255,255,.7); }
+  .stories .elo { font-size: 340px; }
+  .stories .centro { transform: translateY(-52%); }
+  .stories .topo { top: 150px; }
+  .stories .rodape { bottom: 150px; }
+
+  /* ---- arte da sacola e da camiseta: 1 cor, fundo transparente (render em PNG) ---- */
+  .arte { width: 2400px; height: 2400px; background: transparent; color: var(--musgo); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; margin-bottom: 40px; }
+  .arte.branca { color: var(--branco); }
+  .arte .iso { width: 300px; height: auto; }
+  .arte .elo { font-size: 720px; margin-top: 60px; }
+  .arte .lipedema { font-size: 140px; margin-top: 50px; }
+  .arte .risco { width: 160px; height: 7px; background: currentColor; margin: 100px 0 70px; }
+  .arte .por { font-size: 58px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; }
+  .arte.peito { width: 1200px; height: 600px; flex-direction: row; gap: 40px; justify-content: flex-start; padding-left: 40px; box-sizing: border-box; }
+  .arte.peito .iso { width: 150px; }
+  .arte.peito .elo { font-size: 300px; margin: 0; line-height: 1; }
+  .arte.peito .l2 { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+  .arte.peito .lipedema { font-size: 56px; margin-top: 10px; padding-left: 0; letter-spacing: 0.4em; }
+  .arte.costas { width: 2400px; height: 2600px; }
+  .arte.costas .frase { font-family: var(--serif); font-size: 112px; line-height: 1.1; margin-top: 60px; max-width: 1900px; }
+
+  /* ---- mockups (só pra visualizar; a arte final é o PNG/PDF) ---- */
+  .mock { width: 1600px; height: 1200px; background: #E9E4DA; display: flex; align-items: center; justify-content: center; gap: 80px; margin-bottom: 40px; }
+  .sacola { position: relative; width: 620px; height: 720px; background: #D9CDB6; border-radius: 10px 10px 18px 18px; box-shadow: inset 0 -40px 60px rgba(0,0,0,.06), 0 30px 50px rgba(0,0,0,.12); display: flex; align-items: center; justify-content: center; }
+  .sacola.musgo { background: var(--musgo); }
+  .sacola::before, .sacola::after { content: ""; position: absolute; top: -150px; width: 170px; height: 220px; border: 22px solid #CBBF9F; border-bottom: none; border-radius: 100px 100px 0 0; }
+  .sacola.musgo::before, .sacola.musgo::after { border-color: #3F4B3C; }
+  .sacola::before { left: 110px; } .sacola::after { right: 110px; }
+  .sacola img { width: 380px; height: auto; }
+  .camiseta { position: relative; width: 720px; height: 820px; display: flex; align-items: center; justify-content: center; }
+  .camiseta svg.forma { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .camiseta img { position: relative; z-index: 1; }
+  .camiseta.frente img { width: 230px; margin: -220px 0 0 -230px; }
+  .camiseta.costas img { width: 400px; margin-top: -40px; }
+</style>
+</head>
+<body>
+
+<!-- 1a. Anúncio, feed: versão completa (data e local) -->
+<div class="slide feed degrade textura">
+  <div class="anel a1"></div><div class="anel a2"></div>
+  <div class="topo">Vem aí · Novembro</div>
+  <div class="centro">
+    <div class="vem sem-viuva">Uma novidade para quem vive com lipedema</div>
+    <div class="elo">ELO</div>
+    <div class="lipedema">Lipedema</div>
+    <div class="risco"></div>
+    <div class="frase sem-viuva">Uma manhã de aula funcional, cuidado do lipedema e um momento de espiritualidade.</div>
+    <div class="detalhes sem-viuva">Quais exercícios <b>podem</b> e quais <b>não podem</b> quando se tem lipedema, na prática, com acompanhamento da Dra. Larissa.</div>
+    <div class="data"><span>14 de novembro</span><i></i><span>Condomínio Ventana</span></div>
+    <div class="cta">Em breve, inscrições</div>
+  </div>
+  <div class="rodape"><img src="../capa/logo-branca.png" alt=""><span>@larissamerola · Araguari, MG</span></div>
+</div>
+
+<!-- 1b. Anúncio, feed: teaser sem data -->
+<div class="slide feed degrade textura">
+  <div class="anel a1"></div><div class="anel a2"></div>
+  <div class="topo">Vem aí · Novembro</div>
+  <div class="centro">
+    <div class="vem sem-viuva">Uma novidade para quem vive com lipedema</div>
+    <div class="elo">ELO</div>
+    <div class="lipedema">Lipedema</div>
+    <div class="risco"></div>
+    <div class="frase sem-viuva">Movimento, cuidado e um momento só seu. Em novembro, em Araguari.</div>
+    <div class="detalhes sem-viuva">Um encontro presencial com a Dra. Larissa pra entender, no corpo, o que o lipedema pede e o que ele não aceita.</div>
+    <div class="cta">Fique de olho</div>
+  </div>
+  <div class="rodape"><img src="../capa/logo-branca.png" alt=""><span>@larissamerola · Araguari, MG</span></div>
+</div>
+
+<!-- 1c. Anúncio, stories -->
+<div class="slide stories degrade textura">
+  <div class="anel a1"></div><div class="anel a2"></div>
+  <div class="topo">Vem aí · Novembro</div>
+  <div class="centro">
+    <div class="vem sem-viuva">Uma novidade para quem vive com lipedema</div>
+    <div class="elo">ELO</div>
+    <div class="lipedema">Lipedema</div>
+    <div class="risco"></div>
+    <div class="frase sem-viuva">Aula funcional, cuidado do lipedema e um momento de espiritualidade.</div>
+    <div class="data"><span>14 de novembro</span><i></i><span>Condomínio Ventana</span></div>
+    <div class="cta">Em breve, inscrições</div>
+  </div>
+  <div class="rodape"><img src="../capa/logo-branca.png" alt=""><span>@larissamerola · Araguari, MG</span></div>
+</div>
+
+<!-- 2. Sacola: arte 1 cor (musgo) e versão branca -->
+<div class="slide arte" id="sacola-musgo">
+  <img class="iso" src="../capa/isotipo.svg" alt="">
+  <div class="elo">ELO</div>
+  <div class="lipedema">Lipedema</div>
+  <div class="risco"></div>
+  <div class="por">por Dra. Larissa Merola</div>
+</div>
+<div class="slide arte branca" id="sacola-branca">
+  <img class="iso" src="../capa/isotipo-branco.svg" alt="">
+  <div class="elo">ELO</div>
+  <div class="lipedema">Lipedema</div>
+  <div class="risco"></div>
+  <div class="por">por Dra. Larissa Merola</div>
+</div>
+
+<!-- 3. Camiseta: peito (pequeno) e costas (grande) -->
+<div class="slide arte peito" id="camiseta-peito-musgo">
+  <img class="iso" src="../capa/isotipo.svg" alt="">
+  <div class="l2"><div class="elo">ELO</div><div class="lipedema">Lipedema</div></div>
+</div>
+<div class="slide arte peito branca" id="camiseta-peito-branca">
+  <img class="iso" src="../capa/isotipo-branco.svg" alt="">
+  <div class="l2"><div class="elo">ELO</div><div class="lipedema">Lipedema</div></div>
+</div>
+<div class="slide arte costas" id="camiseta-costas-musgo">
+  <div class="elo">ELO</div>
+  <div class="lipedema">Lipedema</div>
+  <div class="risco"></div>
+  <div class="frase sem-viuva">Movimento que cuida.</div>
+  <div class="por" style="margin-top:70px">Dra. Larissa Merola · Araguari</div>
+</div>
+<div class="slide arte costas branca" id="camiseta-costas-branca">
+  <div class="elo">ELO</div>
+  <div class="lipedema">Lipedema</div>
+  <div class="risco"></div>
+  <div class="frase sem-viuva">Movimento que cuida.</div>
+  <div class="por" style="margin-top:70px">Dra. Larissa Merola · Araguari</div>
+</div>
+
+<!-- Mockups -->
+<div class="slide mock" id="mock-sacolas">
+  <div class="sacola"><img src="mock-sacola-musgo.png" alt=""></div>
+  <div class="sacola musgo"><img src="mock-sacola-branca.png" alt=""></div>
+</div>
+<div class="slide mock" id="mock-camisetas">
+  <div class="camiseta frente">
+    <svg class="forma" viewBox="0 0 720 820"><path d="M250 40 L360 90 L470 40 L690 130 L640 290 L560 260 L560 790 L160 790 L160 260 L80 290 L30 130 Z" fill="#F1ECE2" stroke="#D8D2C4" stroke-width="3"/></svg>
+    <img src="mock-peito-musgo.png" alt="">
+  </div>
+  <div class="camiseta costas">
+    <svg class="forma" viewBox="0 0 720 820"><path d="M250 40 L360 70 L470 40 L690 130 L640 290 L560 260 L560 790 L160 790 L160 260 L80 290 L30 130 Z" fill="#2B3629" stroke="#1E261D" stroke-width="3"/></svg>
+    <img src="mock-costas-branca.png" alt="">
+  </div>
+</div>
+
+<script src="../capa/tipografia.js"></script>
+</body>
+</html>

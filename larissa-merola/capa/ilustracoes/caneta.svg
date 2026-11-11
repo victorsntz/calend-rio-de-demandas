@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 620" width="980" height="620">
+  <!-- Caneta injetora dentro do sinal de proibido. Flat, traço musgo, cores da marca. -->
+  <defs>
+    <clipPath id="corpo"><rect x="0" y="-46" width="640" height="92" rx="34"/></clipPath>
+  </defs>
+  <g transform="translate(490 318)">
+    <!-- anel do sinal -->
+    <circle r="268" fill="none" stroke="#343B30" stroke-width="22"/>
+    <g transform="rotate(-24)">
+      <!-- agulha -->
+      <rect x="-392" y="-7" width="90" height="14" fill="#343B30"/>
+      <path d="M-318 -26h36l10 52h-46z" fill="#F7F6F2" stroke="#343B30" stroke-width="6" stroke-linejoin="round"/>
+      <!-- rosca -->
+      <rect x="-282" y="-34" width="34" height="68" rx="6" fill="#B8A08A" stroke="#343B30" stroke-width="6"/>
+      <!-- corpo -->
+      <g transform="translate(-248 0)">
+        <rect x="0" y="-46" width="640" height="92" rx="34" fill="#F7F6F2" stroke="#343B30" stroke-width="6"/>
+        <!-- reflexo -->
+        <rect x="26" y="-30" width="520" height="12" rx="6" fill="#FFFFFF" opacity=".9"/>
+        <!-- janela de dose -->
+        <rect x="300" y="-26" width="118" height="52" rx="8" fill="#CCD77F" stroke="#343B30" stroke-width="5"/>
+        <g stroke="#343B30" stroke-width="4" stroke-linecap="round">
+          <line x1="322" y1="-10" x2="322" y2="10"/><line x1="344" y1="-14" x2="344" y2="14"/><line x1="366" y1="-10" x2="366" y2="10"/><line x1="388" y1="-14" x2="388" y2="14"/>
+        </g>
+        <!-- etiqueta -->
+        <rect x="70" y="-46" width="200" height="92" fill="#78856F" clip-path="url(#corpo)"/>
+        <rect x="70" y="-46" width="200" height="92" fill="none" stroke="#343B30" stroke-width="6" clip-path="url(#corpo)"/>
+        <g stroke="#F7F6F2" stroke-width="6" stroke-linecap="round" opacity=".9">
+          <line x1="100" y1="-12" x2="236" y2="-12"/><line x1="100" y1="8" x2="196" y2="8"/><line x1="100" y1="26" x2="216" y2="26"/>
+        </g>
+      </g>
+      <!-- botão/seletor de dose -->
+      <rect x="392" y="-54" width="46" height="108" rx="10" fill="#343B30"/>
+      <rect x="436" y="-38" width="58" height="76" rx="12" fill="#CCD77F" stroke="#343B30" stroke-width="6"/>
+      <g stroke="#343B30" stroke-width="4" stroke-linecap="round"><line x1="454" y1="-22" x2="454" y2="22"/><line x1="470" y1="-22" x2="470" y2="22"/></g>
+    </g>
+    <!-- barra do sinal, por cima -->
+    <line x1="-190" y1="-190" x2="190" y2="190" stroke="#343B30" stroke-width="22" stroke-linecap="round"/>
+  </g>
+  <!-- cursor do mouse: a "caneta de internet" -->
+  <g transform="translate(790 470)">
+    <path d="M0 0v96l24-22 18 42 20-9-18-42h32z" fill="#FFFFFF" stroke="#343B30" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+  <!-- carrinho com preço riscado -->
+  <g transform="translate(96 440)" fill="none" stroke="#343B30" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M0 0h26l18 78h96l16-54H52"/>
+    <circle cx="56" cy="104" r="10"/><circle cx="128" cy="104" r="10"/>
+  </g>
+</svg>

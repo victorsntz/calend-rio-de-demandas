@@ -1,0 +1,135 @@
+{
+  "slug": "tipo2-flacidez-emagreceu",
+  "arroba": "@larissamerola",
+  "seed": 52,
+  "slides": [
+    {
+      "tipo": "capa-colagem",
+      "fotos": [
+        "../../banco/post/post-101.jpg",
+        "../../banco/post/post-102.jpg",
+        "../../banco/post/post-122.jpg",
+        "../../banco/post/post-119.jpg",
+        "../../banco/post/post-120.jpg",
+        "../../banco/post/post-30.jpg",
+        "../../banco/post/post-121.jpg",
+        "../../banco/post/post-103.jpg"
+      ],
+      "titulo": "Se você emagreceu e a pele sobrou,<br>salva esse post",
+      "texto": "Porque muita mulher acha que <b>fez alguma coisa errada</b>. Não fez. A pele da barriga só não acompanhou a pressa."
+    },
+    {
+      "tipo": "capa-frase",
+      "titulo": "A pele não ficou <u>sobrando</u> por <i>falta de treino</i>, por <i>falta de creme</i> e nem por <i>culpa sua</i>",
+      "convite": "Me conta nos comentários se isso aconteceu com você e <b>manda pra aquela amiga que emagreceu e não conseguiu comemorar</b>",
+      "fotos": [
+        "../../banco/post/post-104.jpg",
+        "../../banco/post/post-108.jpg",
+        "../../banco/post/post-123.jpg",
+        "../../banco/post/post-109.jpg",
+        "../../banco/post/post-124.jpg",
+        "../../banco/post/post-125.jpg"
+      ]
+    },
+    {
+      "tipo": "corpo-foto",
+      "fotos": [
+        "../../banco/post/post-105.jpg",
+        "../../banco/post/post-127.jpg",
+        "../../banco/post/post-128.jpg",
+        "../../banco/post/post-129.jpg",
+        "../../banco/post/post-106.jpg",
+        "../../banco/post/post-130.jpg",
+        "../../banco/post/post-131.jpg"
+      ],
+      "rotulo": "Por que a pele sobra?",
+      "texto": "Pensa num balão. Ficou meses cheio e aí esvaziou de uma vez. A borracha não volta igual. <b>Com a pele é parecido:</b>",
+      "itens": [
+        {
+          "lead": "Quem segura a pele firme é o colágeno,",
+          "texto": "uma armação que a própria pele fabrica"
+        },
+        {
+          "lead": "Essa armação cansa:",
+          "texto": "cada gestação estica tudo de novo e os anos diminuem a produção"
+        },
+        {
+          "lead": "Emagrecer rápido",
+          "texto": "é esvaziar o balão de uma vez. A pele não tem tempo de acompanhar"
+        }
+      ]
+    },
+    {
+      "tipo": "corpo-foto",
+      "fotos": [
+        "../../banco/post/post-107.jpg",
+        "../../banco/post/post-132.jpg",
+        "../../banco/post/post-133.jpg",
+        "../../banco/post/post-134.jpg",
+        "../../banco/post/post-126.jpg",
+        "../../banco/post/post-11.jpg",
+        "../../banco/post/post-12.jpg"
+      ],
+      "rotulo": "E depois da menopausa acelera",
+      "texto": "Nos primeiros cinco anos sem estrogênio a pele pode perder <b>até 30% do colágeno</b>. Não é descuido seu, é hormônio.",
+      "itens": [
+        {
+          "lead": "O estrogênio cai",
+          "texto": "e leva junto boa parte da firmeza"
+        },
+        {
+          "lead": "Creme hidrata,",
+          "texto": "mas não refaz a armação por dentro"
+        },
+        {
+          "lead": "Músculo é o que segura a pele por baixo,",
+          "texto": "e ele também vai embora quando a dieta é só corte"
+        }
+      ]
+    },
+    {
+      "tipo": "corpo-foto",
+      "fotos": [
+        "../../banco/post/post-135.jpg",
+        "../../banco/post/post-33.jpg",
+        "../../banco/post/post-27.jpg",
+        "../../banco/post/post-18.jpg",
+        "../../banco/post/post-36.jpg",
+        "../../banco/post/post-37.jpg"
+      ],
+      "rotulo": "O que eu converso na consulta",
+      "texto": "Antes de qualquer tratamento, eu quero saber <b>quanto de pele sobrou e o que ela ainda consegue recuperar</b>:",
+      "itens": [
+        {
+          "lead": "Flacidez leve ou moderada:",
+          "texto": "o bioestimulador faz a pele voltar a fabricar o próprio colágeno, aos poucos"
+        },
+        {
+          "lead": "Sobrou muita pele:",
+          "texto": "a conversa muda, e às vezes o caminho mais honesto é a cirurgia"
+        },
+        {
+          "lead": "Em todos os casos:",
+          "texto": "proteína, treino de força e respeitar o tempo do seu corpo enquanto o peso desce"
+        }
+      ]
+    },
+    {
+      "tipo": "fecho2",
+      "titulo": "Emagrecer correndo é esvaziar o balão de uma vez.",
+      "texto": "Eu atendo em Araguari e a gente cuida da sua pele enquanto o peso desce, sem pressa e sem culpa.",
+      "ctas": [
+        "Me conta nos comentários o que mudou no seu corpo",
+        "Salva e manda pra uma amiga",
+        "Consulta pelo link na bio"
+      ],
+      "foto": "doutora"
+    }
+  ],
+  "legenda": [
+    "A calça voltou a fechar e a pele da barriga ficou sobrando? Você não fez nada errado. A pele funciona como a borracha de um balão: quando o corpo esvazia rápido, ela estica, perde o ritmo e nem sempre volta pro tamanho de antes. Quem segura essa borracha firme é o colágeno, uma armação que a própria pele fabrica. Cada gestação estica tudo de novo, os anos diminuem a produção e, nos primeiros cinco anos depois da menopausa, a pele pode perder até 30% do colágeno.",
+    "Na consulta a gente começa avaliando quanto de pele sobrou e o que ela ainda consegue recuperar. Quando a flacidez é leve ou moderada, o bioestimulador ajuda a pele a voltar a produzir o próprio colágeno, e o efeito aparece aos poucos, nas semanas seguintes. Quando sobra muita pele, eu falo com sinceridade: às vezes o caminho mais honesto é a cirurgia. Em todos os casos, o que mais protege a sua pele enquanto o peso desce é cuidar do músculo e respeitar o tempo do seu corpo.",
+    "Me conta nos comentários o que mudou no seu corpo depois que você emagreceu. Eu leio tudo. E se você tem uma amiga que emagreceu e não conseguiu comemorar, manda esse post pra ela. Consulta pelo link na bio.",
+    "Fontes: Brincat et al., British Medical Journal, 1987 (perda de colágeno da pele nos primeiros anos após a menopausa); Sociedade Brasileira de Dermatologia. Imagens: Pinterest."
+  ]
+}

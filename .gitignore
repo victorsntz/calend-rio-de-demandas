@@ -27,3 +27,8 @@ next-env.d.ts
 # artifact build outputs
 /artifact/app.js
 /artifact/calendario.html
+
+# Larissa Merola: renders e originais do banco ficam fora do git
+larissa-merola/saida/
+larissa-merola/banco/raw/
+larissa-merola/entregas/
