@@ -18,11 +18,21 @@ Quando o Victor jogar um tema aqui, antes de produzir, perguntar qual tipo ele q
   com X pelo A, pelo B e nem pelo C"). A Dra. nunca na capa; ela fecha, com CTA em três linhas.
   (`capa/montar2.mjs`, tipos capa-colagem, capa-frase, corpo-foto, fecho2.)
 
-**Capa do tipo 1 (referência de 11/11, "Ah, mas ser saudável é muito caro..."):** foto inteira e
-clara, a objeção que a seguidora fala em caixa alta (Sora leve, branca, canto superior esquerdo),
-"DESLIZE PARA O LADO" pequeno e espaçado no canto superior direito, uma frase de virada no canto
-inferior direito e a logo centralizada no pé. O miolo é educativo: explica, desmonta a crença e
-fecha com a Dra. O Victor quer o tipo 1 nesse formato alternando com o tipo 2 (parede de fotos).
+**Tipo 1 é a família educativa (referências de 11/11).** Foto inteira e clara, texto em Sora
+(caixa alta leve com a parte forte em negrito), "DESLIZE PARA O LADO" pequeno e espaçado, logo
+centralizada no pé. O miolo explica, compara e desmonta a crença, e fecha com a Dra. Quatro capas:
+
+- **"Ah, mas..."**: a objeção da seguidora em caixa alta e uma frase de virada no canto de baixo
+  ("Ah, mas ser saudável é muito caro..." / "Nem tudo que seu corpo precisa vem de uma farmácia").
+- **Caixa de pergunta**: a caixinha "FAÇA UMA PERGUNTA" do Instagram com a dúvida real
+  ("Tomo vitamina D, mas os níveis continuam baixos. Por quê?") sobre a foto.
+- **Tela partida**: duas fotos lado a lado comparando, uma frase em cada metade com a palavra forte
+  em negrito ("Refrigerante/doces **destroem músculo**" × "Ovos/frango **constroem músculo**").
+- **Citação de paciente**: a frase entre aspas como ela chega no consultório, com o fim em negrito,
+  e uma linha de promessa ("Meu marido fez a mesma dieta e perdeu 10 kg... **eu perdi 1 kg**" /
+  "A **injustiça** tem nome e explicação científica!").
+
+O Victor quer o tipo 1 alternando com o tipo 2 (parede de fotos), variando as quatro capas.
 
 Se ele já disser o tipo na mensagem, não perguntar. Se não disser, perguntar com uma linha de
 explicação de cada um.
