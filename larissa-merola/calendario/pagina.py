@@ -4,6 +4,7 @@ import sys, re, html, os
 
 ENTRADA, SAIDA = sys.argv[1], sys.argv[2]
 md = open(ENTRADA).read()
+periodo = re.search(r'^## (.+)$', md, flags=re.M).group(1)
 
 def ricos(s):
     s = html.escape(s)
@@ -89,6 +90,7 @@ body{{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font
 header{{display:flex;flex-direction:column;gap:12px;border-bottom:1px solid var(--line);padding-bottom:24px}}
 h1{{font-family:var(--serif);font-weight:400;font-size:clamp(32px,5vw,52px);line-height:1.04;margin:0}}
 .sub{{color:var(--muted);margin:0;max-width:70ch}}
+.periodo{{margin:0;font-size:15px;font-weight:500;letter-spacing:.02em}}
 .ritmo{{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}}
 .ritmo div{{background:var(--card);border:1px solid var(--line);padding:14px 16px;display:flex;flex-direction:column;gap:6px}}
 .ritmo b{{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}}
@@ -118,10 +120,32 @@ a{{color:inherit}}
 .resumo{{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}}
 .resumo div{{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--line);padding:12px 14px}}
 .resumo span{{display:block;font-family:var(--serif);font-size:34px;line-height:1}}
+@media print{{
+  @page{{size:A4;margin:14mm 12mm}}
+  :root{{--bg:#fff;--card:#fff;--line:#CFC7B8;--fg:#2E332A;--muted:#5F6358}}
+  body{{padding:0;font-size:10.5pt;background:#fff}}
+  .wrap{{max-width:none;gap:16pt}}
+  h1{{font-size:26pt}}
+  h2{{font-size:9pt;margin-bottom:8pt}}
+  .posts{{grid-template-columns:repeat(3,1fr);gap:8pt}}
+  .ritmo{{grid-template-columns:repeat(3,1fr);gap:8pt}}
+  .ritmo.dois{{grid-template-columns:repeat(2,1fr)}}
+  .post{{padding:8pt 10pt;gap:4pt;border-top-width:3pt}}
+  .post h3{{font-size:12.5pt}}
+  .angulo{{font-size:9pt}}
+  .pilar{{font-size:8pt}}
+  .semana{{break-inside:avoid;page-break-inside:avoid}}
+  button{{display:none}}
+  a{{text-decoration:none}}
+  header{{break-after:avoid}}
+  .sub{{display:none}}
+  .periodo{{font-size:11pt}}
+}}
 </style></head><body><div class="wrap">
 <header>
 <h1>Calendário de postagens</h1>
-<p class="sub">Dra. Larissa Merola · @dralarissamerola. Cada post tem botão Comentar: clique nele, ou abra o modo de comentários e clique no ponto exato.</p>
+<p class="periodo">Dra. Larissa Merola · @dralarissamerola · {html.escape(periodo)}</p>
+<p class="sub">Cada post tem botão Comentar: clique nele, ou abra o modo de comentários e clique no ponto exato.</p>
 <div class="ritmo">{"".join(f'<div><b>{d}</b><span class="forma"><em>{ricos(o)}</em></span><span>{ricos(obs)}</span></div>' for d, o, obs in ritmo)}</div>
 </header>
 {bloco_est}
