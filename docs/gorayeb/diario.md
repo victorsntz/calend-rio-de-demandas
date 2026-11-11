@@ -1490,3 +1490,5 @@ legenda do estático de 15/11 também foi escrita (texto meu, pra Dra. Elisa).
 **10/11/2026 · ajustes da FTG**
 
 A FTG pediu ajustes em seis peças (11, 13, 18, 20, 23 e 25/11), feitos pela produção em bd19448. O BPC ficou com 6 telas, o CAR de 20/11 virou "Seu CAR pelo celular" com 7 telas e a revisão de 25/11 ficou com 7. Título de 20/11 atualizado na agenda.
+
+**11/11/2026** · O Victor confirmou: o BPC saiu hoje.
