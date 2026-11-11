@@ -1,6 +1,6 @@
 # Pensão por morte: quem recebe
 
-**Quarta, 02/12** · vídeo ilustrado de 60 segundos · narração no ElevenLabs, ninguém aparece
+**Quarta, 02/12** · vídeo ilustrado de 65 segundos · narração no ElevenLabs, ninguém aparece
 
 Era carrossel de 8 telas, aprovado pela Dra. Elisa em 28/10. Virou vídeo a pedido do
 Victor em 11/11, na pegada dos vídeos ilustrados que performaram bem. O conteúdo é o
@@ -21,7 +21,8 @@ de costas, mãos, casa de roça, documentos na mesa.
 | 35 a 45s | Ampulheta ou calendário de parede. | A partir de 45 anos: vitalícia · Mais novo: de 3 a 20 anos | Para o cônjuge, quanto tempo dura depende da idade. A partir de quarenta e cinco anos, é para a vida toda. Mais novo, tem prazo, de três a vinte anos. |
 | 45 a 50s | Fundo chapado da paleta. | **4 meses** | Mas sem dezoito contribuições ou dois anos de união, a pensão dura só quatro meses. A não ser que a morte tenha sido por acidente. |
 | 50 a 56s | Mesa com documentos e um calendário marcado. | **Peça em até 90 dias** | E o prazo que mais pesa: pedindo em até noventa dias, a pensão é paga desde a data da morte. |
-| 56 a 60s | Porteira; logo da FTG. | Ninguém quer pensar nisso. Mas vale saber. | Ninguém quer pensar nisso. Mas vale saber. Salva esse vídeo. |
+| 56 a 60s | Porteira se abrindo. | Ninguém quer pensar nisso. Mas vale saber. | Ninguém quer pensar nisso. Mas vale saber. Salva esse vídeo. |
+| 60 a 65s | Fundo verde da marca. | Logo da FTG Advogados · Da porteira à aposentadoria. | FTG Advogados. Da porteira à aposentadoria. |
 
 ## Narração pro ElevenLabs
 
@@ -59,6 +60,10 @@ de costas, mãos, casa de roça, documentos na mesa.
 [pause]
 
 [warm][soft] Ninguém quer pensar nisso. [pause] Mas vale saber. [pause] Salva esse vídeo.
+
+[pause]
+
+[confident][warm] FTG Advogados. [pause] Da porteira à aposentadoria.
 ```
 
 O bloco que segura o vídeo: `pedindo em até noventa dias, a pensão é paga desde a data
