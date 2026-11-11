@@ -42,6 +42,12 @@ if (fotoPath) {
   await p.waitForTimeout(800);
 }
 await p.evaluate(() => window.scrollTo(0, 0));
+// logo e imagens do cabeçalho costumam ficar em lazy load e saem brancas no print: força o carregamento
+await p.evaluate(async () => {
+  for (const i of document.querySelectorAll('img')) { i.loading = 'eager'; if (i.dataset.src && !i.src) i.src = i.dataset.src; }
+  await Promise.all([...document.querySelectorAll('img')].map(i => i.complete ? null : new Promise(r => { i.onload = i.onerror = r; setTimeout(r, 2500); })));
+});
+await p.waitForTimeout(1200);
 let altura = alturaFixa;
 if (!altura) {
   altura = await p.evaluate(() => {
@@ -63,11 +69,12 @@ const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><tit
 <link rel="stylesheet" href="${rel('fonts/fonts.css')}"><link rel="stylesheet" href="${rel('tokens.css')}">
 <style>
   html, body { margin: 0; background: #ddd; }
-  .slide { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--papel); color: var(--musgo); font-family: var(--sans); }
-  .cartao { position: absolute; left: 60px; right: 60px; top: 64px; border-radius: 26px; overflow: hidden; background: #fff; box-shadow: 0 18px 50px rgba(52,59,48,.16); }
+  .slide { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--papel); color: var(--musgo); font-family: var(--sans);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box; padding: 64px 60px 230px; }   /* cartão centralizado no ar que sobra */
+  .cartao { width: 100%; border-radius: 26px; overflow: hidden; background: #fff; box-shadow: 0 18px 50px rgba(52,59,48,.16); }
   .faixa { height: 104px; background: var(--musgo); color: var(--branco); display: flex; align-items: center; justify-content: center; font-size: 58px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
   .faixa i { width: 14px; height: 14px; border-radius: 50%; background: var(--saude); margin-right: 26px; }
-  .print { display: block; width: 960px; height: auto; }
+  .print { display: block; width: 100%; height: auto; }
   .assina { position: absolute; left: 60px; right: 60px; bottom: 76px; display: flex; flex-direction: column; align-items: center; gap: 18px; }
   .assina .nome { font-size: 26px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--musgo); }
   .assina .chamada { font-size: 30px; font-weight: 400; color: var(--musgo); text-align: center; max-width: 820px; line-height: 1.35; }
