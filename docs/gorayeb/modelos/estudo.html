@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><style>
+@font-face{font-family:Arvo;src:url(file:///home/user/calendario/docs/gorayeb/fontes/arvo/Arvo-Bold.ttf);font-weight:700}
+@font-face{font-family:Arvo;src:url(file:///home/user/calendario/docs/gorayeb/fontes/arvo/Arvo-Regular.ttf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueLight.otf);font-weight:300}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueRoman.otf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueMedium.otf);font-weight:500}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueBold.otf);font-weight:700}
+:root{--verde:#1b2316;--fundo:#12160f;--creme:#ebe3c8;--dourado:#b8943d;--areia:#d4c9aa}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#888;font-family:HN,Helvetica,sans-serif;color:var(--creme)}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;margin:20px;background:var(--fundo)}
+.foto{position:absolute;left:0;width:100%;object-fit:cover;display:block}
+.grao::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;mix-blend-mode:overlay;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+.arroba{position:absolute;top:70px;left:86px;font:400 26px Arvo;opacity:.9}
+.tag{display:inline-block;font:700 21px HN;letter-spacing:.14em;text-transform:uppercase;padding:11px 22px;border-radius:8px;background:var(--dourado);color:var(--verde)}
+.tag.linha{background:transparent;color:var(--creme);border:2px solid rgba(235,227,200,.7);border-radius:999px;letter-spacing:.2em;font-size:19px;padding:14px 34px}
+.logo{height:64px;display:block}
+.listras{background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.26) 0 43px,transparent 43px 58px,rgba(0,0,0,.26) 58px 102px,transparent 102px 188px)}
+
+/* 1 · mapa, referência Alvorada */
+#t1 .foto{top:0;height:900px;object-position:center 40%;filter:saturate(.9)}
+#t1 .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,15,.10) 0%,rgba(18,22,15,.35) 35%,rgba(18,22,15,.85) 62%,var(--fundo) 72%)}
+#t1 svg.mapa{position:absolute;right:-40px;top:120px;width:760px}
+#t1 .mapa path{fill:none;stroke:var(--creme);stroke-width:4.5;stroke-linejoin:round;opacity:.92}
+#t1 h1{position:absolute;left:86px;top:560px;font:700 112px/1.0 Arvo;letter-spacing:-.025em}
+#t1 h1 small{display:block;font:700 54px/1.2 Arvo;color:var(--dourado);margin-top:14px;letter-spacing:-.01em}
+#t1 .lista{position:absolute;left:86px;top:910px;font:500 30px/1.42 HN;max-width:560px}
+#t1 .lista b{font-weight:700}
+#t1 .pe{position:absolute;left:0;right:0;bottom:70px;display:flex;flex-direction:column;align-items:center;gap:22px}
+#t1 .pe p{font:300 26px HN;opacity:.85}
+
+/* 2 · pessoa, referência agrotudo */
+#t2 .foto{top:0;left:auto;right:-120px;width:900px;height:1350px;object-position:center 30%}
+#t2 .veu{position:absolute;inset:0;background:linear-gradient(90deg,var(--fundo) 0%,rgba(18,22,15,.92) 28%,rgba(18,22,15,.35) 55%,rgba(18,22,15,0) 75%),linear-gradient(0deg,rgba(18,22,15,.9) 0%,rgba(18,22,15,0) 30%)}
+#t2 .bloco{position:absolute;left:86px;top:600px;width:560px}
+#t2 h1{font:700 104px/1.0 HN;letter-spacing:-.035em;margin:26px 0 30px}
+#t2 .bloco p{font:300 34px/1.38 HN}
+#t2 .bloco p b{font-weight:500}
+#t2 .pe{position:absolute;left:86px;right:86px;bottom:80px;display:flex;justify-content:space-between;align-items:center}
+#t2 .site{font:500 24px HN;letter-spacing:.12em}
+
+/* 3 · gado, referência AgroFort */
+#t3 .foto{top:0;height:1060px;object-position:center 40%}
+#t3 .veu{position:absolute;left:0;right:0;top:0;height:1060px;background:linear-gradient(180deg,rgba(18,22,15,0) 30%,rgba(18,22,15,.55) 55%,rgba(18,22,15,.92) 100%)}
+#t3 .seta{position:absolute;left:86px;top:520px;width:58px;height:58px;border-radius:12px;background:var(--dourado);display:flex;align-items:center;justify-content:center}
+#t3 h1{position:absolute;left:86px;top:604px;font:700 88px/1.04 HN;letter-spacing:-.035em;width:940px}
+#t3 h1 span{color:var(--dourado)}
+#t3 .apoio{position:absolute;left:86px;top:830px;width:480px;font:400 30px/1.4 HN}
+#t3 .apoio b{font-weight:700}
+#t3 .tags{position:absolute;right:86px;top:838px;display:flex;flex-direction:column;gap:18px;align-items:stretch}
+#t3 .faixa{position:absolute;left:0;right:0;bottom:0;height:290px;background:var(--verde);display:flex;align-items:center;justify-content:space-between;padding:0 86px}
+#t3 .faixa .fio{position:absolute;top:0;left:0;right:0;height:5px;background:var(--dourado)}
+#t3 .faixa p{font:400 26px Arvo;position:relative}
+
+/* 4 · céu, referência irrigação */
+#t4 .foto{top:0;height:860px;object-position:center 35%}
+#t4 .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,15,.25) 0%,rgba(18,22,15,0) 25%,rgba(18,22,15,.25) 45%,rgba(18,22,15,.92) 63%,var(--fundo) 70%)}
+#t4 .bloco{position:absolute;left:86px;top:760px;width:820px}
+#t4 h1{font:300 82px/1.08 HN;letter-spacing:-.03em;margin-top:28px}
+#t4 h1 b{font-weight:700}
+#t4 .bloco p{font:300 32px/1.4 HN;margin-top:28px;width:640px;opacity:.92}
+#t4 .pe{position:absolute;left:86px;right:86px;bottom:80px;display:flex;justify-content:space-between;align-items:center}
+#t4 .site{font:500 24px HN;letter-spacing:.12em}
+
+/* 5 · capa central com deslize, referência Armazém */
+#t5 .foto{top:0;height:860px;object-position:50% 34%}
+#t5 .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,15,.55) 0%,rgba(18,22,15,0) 16%,rgba(18,22,15,0) 46%,rgba(18,22,15,.9) 62%,var(--fundo) 66%)}
+#t5 .topo{position:absolute;top:70px;left:0;right:0;display:flex;justify-content:center}
+#t5 h1{position:absolute;left:60px;right:60px;top:930px;text-align:center;font:700 90px/1.04 Arvo;letter-spacing:-.02em}
+#t5 h1 span{color:var(--dourado)}
+#t5 .deslize{position:absolute;left:0;right:0;bottom:96px;display:flex;justify-content:center;align-items:center;gap:16px;font:400 30px HN}
+#t5 .deslize i{width:46px;height:46px;border-radius:10px;background:var(--dourado);display:flex;align-items:center;justify-content:center}
+</style></head><body>
+
+
+<div class="s grao" id="t2">
+ <img class="foto" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ref/p_roberto.jpg"><div class="veu"></div>
+ <div class="arroba">@ftgadvogados_</div>
+ <div class="bloco"><span class="tag">Sócio consultor</span><h1>Roberto Gorayeb</h1>
+ <p>Advogado desde 1970. Ajudou a organizar a classe produtora e <b>é o nome que deu origem à FTG.</b></p></div>
+ <div class="pe"><img class="logo" src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png"><span class="site">grupoftg.com.br</span></div>
+</div>
+
+<div class="s grao" id="t3">
+ <img class="foto" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ref/p_boiada.jpg"><div class="veu"></div>
+ <div class="arroba">@ftgadvogados_</div>
+ <div class="seta"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M4 4 L22 22 M22 9 V22 H9" fill="none" stroke="#1b2316" stroke-width="4"/></svg></div>
+ <h1>A cerca caiu.<br><span>E agora, quem&nbsp;paga?</span></h1>
+ <p class="apoio">Em regra, <b>os dois vizinhos dividem a conta</b>, meio a meio. Está no Código Civil.</p>
+ <div class="tags"><span class="tag linha">Agronegócio</span><span class="tag linha">Vizinhança</span></div>
+ <div class="faixa listras"><div class="fio"></div><img class="logo" src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png" style="position:relative"><p>@ftgadvogados_</p></div>
+</div>
+
+<div class="s grao" id="t4">
+ <img class="foto" src="file:///tmp/claude-0/-home-user/26273b3c-5a63-5858-8d58-9c11ac53aa52/scratchpad/ref/p_silos.jpg"><div class="veu"></div>
+ <div class="arroba">@ftgadvogados_</div>
+ <div class="bloco"><span class="tag">Crédito rural</span>
+ <h1>Na cooperativa, <b>você não é cliente.</b></h1>
+ <p>É dono. E isso muda os seus direitos quando dá problema.</p></div>
+ <div class="pe"><img class="logo" src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png"><span class="site">grupoftg.com.br</span></div>
+</div>
+
+</body></html>

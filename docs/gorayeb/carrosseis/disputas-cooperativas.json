@@ -1,0 +1,127 @@
+{
+  "id": "disputas-cooperativas",
+  "titulo": "Disputas com cooperativas: o que fazer quando o produtor se sente lesado",
+  "nota": "Item 20 do calendário, para 29/10. Registro longo, 8 slides. Ficou fora da arte o teto de 1% ao mês da lei de usura: a jurisprudência é dividida, tem julgado equiparando a cooperativa de crédito a instituição financeira. Foi pra legenda com a ressalva. Fotos de assembleia e de roda de produtores foram trocadas por fotos sem rosto identificável. Fotos do Pinterest, licença a conferir.",
+  "legenda_instagram": "NA COOPERATIVA, VOCÊ NÃO É CLIENTE. É DONO. E ISSO MUDA OS SEUS DIREITOS QUANDO DÁ PROBLEMA.\n\nMuito produtor chega no escritório reclamando da cooperativa como se reclamasse de uma loja. E aí começa pelo caminho errado.\n\nO QUE A LEI CHAMA DISSO. A operação entre a cooperativa e o cooperado é ato cooperativo, previsto no art. 79 da Lei 5.764/71. Não é compra e venda nem prestação de serviço. Por isso o STJ afasta o Código de Defesa do Consumidor nessas relações: quem está do outro lado do balcão não é fornecedor, é a sociedade da qual você mesmo é dono.\n\nNão é pior nem melhor. É outro jogo, com outras regras. No lugar do Procon, a assembleia. No lugar do contrato de adesão, o estatuto. E o seu peso na decisão não depende do tamanho da sua cota: é um voto por cooperado.\n\nUM PONTO QUE PEGA MUITA GENTE. O STJ decidiu em 2024, na 3ª Turma, que crédito originado de ato cooperado não se sujeita aos efeitos da recuperação judicial. Ou seja: a dívida com a cooperativa fica de fora, junto com a CPR de liquidação física e o barter.\n\nONDE A DISPUTA COSTUMA NASCER. Juros e encargos acima do que o contrato previa. Retenção de grãos depositados para cobrir dívida de terceiro. Desconto sobre a produção sem a conta aberta. Rateio de perdas cobrado sem passar pela aprovação da assembleia. Exclusão do quadro de associados sem o processo que o estatuto manda. Na maioria dos casos o começo é o mesmo: ninguém leu o estatuto.\n\nPOR QUE A ASSEMBLEIA NÃO É FORMALIDADE. O STJ já decidiu que o cooperado, sozinho, não tem legitimidade para exigir prestação de contas da cooperativa. Quem examina e aprova as contas é a assembleia geral, por previsão do art. 68, IX da Lei 5.764/71. Faltar nela é abrir mão do único lugar onde a sua voz pesa igual à dos outros.\n\nSOBRE OS JUROS. Existe decisão do STJ aplicando às cooperativas de crédito o limite de 1% ao mês da lei de usura, por não serem instituições financeiras. Mas o entendimento não é pacífico: há julgados que as equiparam a instituição financeira para esse fim. Então juros altos são motivo para discutir, não garantia de vitória. O que se analisa primeiro é o contrato e o estatuto.\n\nO QUE JUNTAR ANTES DE CONVERSAR COM UM ADVOGADO: o estatuto e as atas das últimas assembleias, o extrato da sua conta de cooperado com as notas de entrega, e os contratos e CPRs assinados com a cooperativa.\n\nSalva esse carrossel e manda pra quem é cooperado.\n\nFontes: Lei 5.764/71, arts. 68 e 79; STJ, 3ª Turma, REsp 2.091.441 e REsp 2.110.361; STJ, REsp 1.102.688/RS.",
+  "slides": [
+    {
+      "tipo": "capa-foto",
+      "foto": "../img/caminhao-silos.jpg",
+      "etiqueta": "Cooperativismo.",
+      "titulo": "Na cooperativa,\nvocê não é cliente.",
+      "escala": "menor",
+      "sub": "É dono. E isso muda *os seus direitos* quando dá problema."
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../img/armazem-graos.jpg",
+      "titulo": "O que a lei\nchama disso.",
+      "paragrafos": [
+        "A operação entre a cooperativa e o cooperado é ato cooperativo, previsto no art. 79 da Lei 5.764/71. Não é compra e venda nem prestação de serviço.",
+        "Por isso o STJ afasta o Código de Defesa do Consumidor nessas relações. Quem reclama como consumidor começa pelo caminho errado."
+      ]
+    },
+    {
+      "tipo": "figura",
+      "figura": "tabela",
+      "titulo": "Cliente ou\ncooperado",
+      "colunas": [
+        "Se fosse cliente",
+        "Como cooperado"
+      ],
+      "realce": "b",
+      "linhas": [
+        {
+          "criterio": "A regra que vale",
+          "a": "Código de Defesa do Consumidor",
+          "b": "Lei 5.764/71 e o estatuto"
+        },
+        {
+          "criterio": "Onde se decide",
+          "a": "balcão, Procon, juizado",
+          "b": "assembleia da cooperativa"
+        },
+        {
+          "criterio": "Peso na decisão",
+          "a": "nenhum",
+          "b": "um voto, qualquer que seja a cota"
+        },
+        {
+          "criterio": "Inversão do ônus da prova",
+          "a": "sim",
+          "b": "não"
+        }
+      ],
+      "legenda": "Não é pior nem melhor. É outro jogo, com outras regras.",
+      "fonte": "Lei 5.764/71",
+      "alt": "Tabela comparando a relação de consumo com a relação cooperativa",
+      "fundo": "offwhite"
+    },
+    {
+      "tipo": "tese",
+      "tese": "Na recuperação judicial, a dívida da cooperativa fica de fora.",
+      "texto": "O STJ decidiu em 2024, na 3ª Turma, que crédito originado de ato cooperado não se sujeita aos efeitos da recuperação. Ele fica de fora, junto com a CPR de liquidação física e o barter. Para quem está reorganizando a dívida, isso muda a conta inteira.",
+      "fundo": "bordo"
+    },
+    {
+      "tipo": "itens",
+      "etiqueta": "Na prática",
+      "titulo": "Onde a disputa\ncostuma nascer",
+      "itens": [
+        {
+          "icone": "dinheiro",
+          "texto": "Juros e encargos acima do que o contrato previa"
+        },
+        {
+          "icone": "documento",
+          "texto": "Retenção de grãos para cobrir dívida de terceiro"
+        },
+        {
+          "icone": "grafico",
+          "texto": "Desconto sobre a produção sem a conta aberta"
+        },
+        {
+          "icone": "balanca",
+          "texto": "Rateio de perdas cobrado sem aprovação em assembleia"
+        },
+        {
+          "icone": "pessoas",
+          "texto": "Exclusão do quadro de associados sem o processo do estatuto"
+        }
+      ],
+      "remate": "Na maioria dos casos o começo é o mesmo: ninguém leu o estatuto.",
+      "textura": "listras"
+    },
+    {
+      "tipo": "foto-texto",
+      "titulo": "Por que a assembleia\nnão é formalidade.",
+      "texto": "O STJ já decidiu que o cooperado, sozinho, não tem legitimidade para exigir prestação de contas da cooperativa. Quem examina e aprova as contas é a assembleia geral, por previsão do art. 68, IX da Lei 5.764/71. Faltar nela é abrir mão do único lugar onde a sua voz pesa igual à dos outros.",
+      "foto": "../img/assembleia-mangueira.jpg",
+      "veu": "verde",
+      "foco": "center 58%"
+    },
+    {
+      "tipo": "lista",
+      "titulo": "O que juntar\nantes da conversa",
+      "itens": [
+        "O estatuto e as atas das últimas assembleias",
+        "Extrato da sua conta de cooperado e as notas de entrega",
+        "Contratos e CPRs assinados com a cooperativa"
+      ],
+      "meiaFoto": true,
+      "foto": "../img/saco-cafe.jpg",
+      "foco": "center 38%"
+    },
+    {
+      "tipo": "fecho",
+      "foto": "../img/caminhao-entardecer.jpg",
+      "veu": "verde",
+      "sintese": "A regra do jogo\nestá no estatuto.\nQuase ninguém\nleu o dele.",
+      "paragrafos": [
+        "É nele que estão o prazo de entrega, a forma de desconto, o processo de exclusão e o que a cooperativa pode reter.",
+        "Ler antes do problema é uma tarde de trabalho. Depois, já é discussão."
+      ],
+      "salvar": "*Salva esse carrossel* e manda pra quem é cooperado."
+    }
+  ]
+}

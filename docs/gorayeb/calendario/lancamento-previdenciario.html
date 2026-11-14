@@ -1,0 +1,314 @@
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Lançamento Previdenciário Fortunato</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;700&display=swap">
+<style>
+  /* Layout: coluna única de slides, cada um com a arte e a ficha ao lado.
+     Paleta e tipos são os da própria Gorayeb, pra revisar no contexto certo. */
+  :root {
+    --verde: #1b2316;
+    --areia: #d4c9aa;
+    --dourado: #b8943d;
+    --bordo: #63260f;
+
+    --bg: #f3f0e6;
+    --superficie: #fbf9f3;
+    --tinta: #1b2316;
+    --tinta-fraca: #5d6450;
+    --linha: #ddd6c2;
+    --realce: #8a6f32;
+
+    --display: "Arvo", Georgia, "Times New Roman", serif;
+    --corpo: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12170f;
+      --superficie: #1b2316;
+      --tinta: #ebe3c8;
+      --tinta-fraca: #9aa088;
+      --linha: #2c3526;
+      --realce: #c8a44e;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12170f;
+    --superficie: #1b2316;
+    --tinta: #ebe3c8;
+    --tinta-fraca: #9aa088;
+    --linha: #2c3526;
+    --realce: #c8a44e;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--tinta);
+    font-family: var(--corpo);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .env {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 0;
+  }
+
+  /* ---- cabeçalho ---- */
+  header { padding-block: 56px 40px; border-bottom: 1px solid var(--linha); }
+  .eyebrow {
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--realce); font-weight: 500; margin: 0 0 14px;
+  }
+  h1 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(30px, 5.2vw, 46px); line-height: 1.08;
+    margin: 0 0 16px; text-wrap: balance; letter-spacing: -.015em;
+  }
+  .resumo { margin: 0; max-width: 62ch; color: var(--tinta-fraca); font-size: 16px; }
+  .ficha-topo {
+    display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 26px;
+    font-size: 13px; color: var(--tinta-fraca);
+  }
+  .ficha-topo b { color: var(--tinta); font-weight: 500; }
+
+  .aviso {
+    margin-top: 26px; padding: 16px 18px; border-left: 3px solid var(--dourado);
+    background: var(--superficie); border-radius: 0 8px 8px 0;
+    font-size: 14px; color: var(--tinta-fraca); max-width: 70ch;
+  }
+  .aviso b { color: var(--tinta); font-weight: 500; }
+
+  /* ---- slides ---- */
+  .slides { padding-block: 8px 48px; display: flex; flex-direction: column; }
+  .slide {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+    gap: 36px; align-items: start;
+    padding-block: 44px; border-bottom: 1px solid var(--linha);
+  }
+  .arte { min-width: 0; }
+  .arte img {
+    display: block; width: 100%; max-width: 100%; height: auto;
+    border-radius: 6px; background: var(--superficie);
+    box-shadow: 0 1px 2px rgba(27,35,22,.10), 0 10px 30px rgba(27,35,22,.10);
+  }
+  .ficha { min-width: 0; }
+  .num {
+    display: inline-flex; align-items: baseline; gap: 9px;
+    font-family: var(--display); font-weight: 700; font-size: 13px;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--realce);
+    margin-bottom: 12px;
+  }
+  .num .barra { width: 22px; height: 2px; background: var(--dourado); transform: translateY(-4px); }
+  .ficha h2 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(19px, 2.3vw, 23px); line-height: 1.22;
+    margin: 0 0 14px; text-wrap: balance;
+  }
+  .ficha p { margin: 0 0 14px; color: var(--tinta-fraca); max-width: 46ch; }
+  .ficha p.texto-peca { color: var(--tinta); }
+
+  dl { margin: 18px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; font-size: 13px; }
+  dt { color: var(--tinta-fraca); white-space: nowrap; }
+  dd { margin: 0; color: var(--tinta); }
+  .tag {
+    display: inline-block; padding: 2px 9px; border-radius: 99px;
+    font-size: 12px; line-height: 1.7; font-weight: 500;
+    border: 1px solid var(--linha); background: var(--superficie);
+  }
+  .tag.casa { border-color: var(--dourado); color: var(--realce); }
+
+  /* ---- legenda ---- */
+  .legenda { padding-block: 48px 72px; }
+  .legenda h2 {
+    font-family: var(--display); font-weight: 700; font-size: 24px;
+    margin: 0 0 6px;
+  }
+  .legenda .sub { margin: 0 0 22px; color: var(--tinta-fraca); font-size: 14px; }
+  .legenda pre {
+    margin: 0; padding: 26px 28px; background: var(--superficie);
+    border: 1px solid var(--linha); border-radius: 8px;
+    font-family: var(--corpo); font-size: 15px; line-height: 1.68;
+    white-space: pre-wrap; overflow-wrap: break-word; max-width: 68ch;
+  }
+
+  @media (max-width: 760px) {
+    .slide { grid-template-columns: 1fr; gap: 22px; padding-block: 34px; }
+    header { padding-block: 40px 30px; }
+  }
+
+  /* página de plano, não de artes: coluna única e tabela de grade */
+  .bloco { padding-block: 40px; border-top: 1px solid var(--linha); }
+  .bloco:first-of-type { border-top: 0; }
+  .bloco h2 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(20px, 3vw, 26px); line-height: 1.2;
+    margin: 0 0 6px; color: var(--tinta);
+  }
+  .bloco .sub { margin: 0 0 20px; color: var(--realce); font-size: 13px;
+    letter-spacing: .08em; text-transform: uppercase; font-weight: 500; }
+  .bloco p { margin: 0 0 14px; color: var(--tinta-fraca); max-width: 64ch; }
+  .bloco p b, .bloco li b { color: var(--tinta); font-weight: 500; }
+  .bloco ol, .bloco ul { margin: 0 0 14px; padding-left: 20px; color: var(--tinta-fraca); max-width: 64ch; }
+  .bloco li { margin-bottom: 8px; }
+  table.grade { width: 100%; border-collapse: collapse; font-size: 14px; margin: 4px 0 18px; }
+  table.grade th { text-align: left; font-weight: 500; color: var(--realce);
+    font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+    padding: 0 12px 10px 0; border-bottom: 1px solid var(--linha); }
+  table.grade td { padding: 11px 12px 11px 0; border-bottom: 1px solid var(--linha);
+    color: var(--tinta-fraca); vertical-align: top; }
+  table.grade tr.prev td { color: var(--tinta); }
+  table.grade tr.prev td.dia { font-weight: 700; }
+  table.grade tr.outro td { opacity: .58; font-style: italic; }
+  table.grade td.dia { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  table.grade td.fmt { white-space: nowrap; }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 999px;
+    font-size: 11px; letter-spacing: .07em; text-transform: uppercase;
+    border: 1px solid var(--linha); color: var(--tinta-fraca); }
+  .pill.v { border-color: var(--realce); color: var(--realce); }
+  .num-grande { font-family: var(--display); font-weight: 700; color: var(--tinta);
+    font-size: 30px; line-height: 1; }
+  .tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 6px 0 22px; }
+  .tres div { border-left: 2px solid var(--dourado); padding-left: 14px; }
+  .tres p { margin: 6px 0 0; font-size: 14px; }
+  @media (max-width: 720px) { .tres { grid-template-columns: 1fr; } }
+  .roteiro { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 4px 0 18px; }
+  .roteiro th { text-align: left; font-weight: 500; color: var(--realce);
+    font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+    padding: 0 12px 10px 0; border-bottom: 1px solid var(--linha); }
+  .roteiro td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--linha);
+    color: var(--tinta-fraca); vertical-align: top; }
+  .roteiro td.t { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--realce); }
+  .roteiro td.tela { color: var(--tinta); }
+  .roteiro td.tela b { font-weight: 700; }
+  .pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11px;letter-spacing:.04em;
+    border:1px solid var(--linha);color:var(--tinta-fraca);white-space:nowrap}
+  .pill.ok{border-color:#5f8f4a;color:#5f8f4a}
+  .pill.meio{border-color:var(--realce);color:var(--realce)}
+  .pill.novo{border-color:#a8552c;color:#a8552c}
+  .pill.ev{border-style:dashed}
+  table.grade td.sem{white-space:nowrap;font-weight:700;color:var(--tinta)}
+  table.grade td small{display:block;color:var(--tinta-fraca);font-size:12.5px;margin-top:3px}
+  .tag2{font-size:12px;color:var(--tinta-fraca)}
+  @media (max-width:720px){
+    table.grade, table.roteiro, table.grade tbody, table.roteiro tbody,
+    table.grade tr, table.roteiro tr, table.grade td, table.roteiro td{display:block;width:auto}
+    table.grade thead, table.roteiro thead{display:none}
+    table.grade tr, table.roteiro tr{padding:12px 0;border-bottom:1px solid var(--linha)}
+    table.grade td, table.roteiro td{border:0;padding:2px 0;white-space:normal}
+    table.roteiro td.t{font-weight:700}
+    .ficha-topo{flex-wrap:wrap}
+  }
+</style>
+<div class="env">
+<header>
+  <p class="eyebrow">Plano da Dra. Elisa · o que é da Fortunato</p>
+  <h1>Lançamento da Área Previdenciária</h1>
+  <p class="resumo">Leitura do plano de marketing que ela mandou: as suas atribuições, o que a gente já tem pra
+  cada uma, o que falta, e o roteiro do vídeo de lançamento no formato que ela pediu. Comente em qualquer ponto.</p>
+  <div class="ficha-topo">
+    <span><b>6</b> entregas da Fortunato</span><span><b>18</b> posts em 6 semanas</span>
+    <span><b>3</b> por semana: seg, qua, sex</span><span><b>1</b> já pronto e aprovado</span>
+  </div>
+  <p class="aviso" style="border-left-color:var(--bordo)"><b>A informação que trava tudo: a data da semana 1.</b>
+  O plano conta as semanas, mas não diz quando a semana 1 começa. E diz que site, perfis e os primeiros posts
+  precisam estar prontos e aprovados antes dela, com até 2 dias úteis de aprovação. Sem essa data, não dá pra
+  fechar o calendário nem saber se o lançamento ainda sai nesta semana.</p>
+</header>
+
+<div class="bloco">
+  <p class="sub">Suas atribuições</p>
+  <h2>Seis entregas com o nome Fortunato</h2>
+  <table class="grade"><thead><tr><th>Entrega</th><th>Prazo</th><th>O que já temos</th><th>O que falta</th></tr></thead>
+  <tbody><tr><td><b>Identidade visual da área</b><small>selo, cores e modelos de post</small></td><td class="sem">Antes da semana 1</td>
+<td>A identidade da Gorayeb inteira: logo, paleta, tipografia e o modelo de post que a gente já usa. E a frase-guia que ela definiu, <i>Da porteira à aposentadoria</i>, que vira o selo.</td><td>Nada de informação. Dá pra começar já.</td></tr><tr><td><b>Ajuste de perfis</b><small>bio, destaques e Google Meu Negócio</small></td><td class="sem">Antes da semana 1</td>
+<td>O texto institucional da área, que ela mandou pronto, e a lista de serviços.</td><td>Acesso ao Instagram, ao Facebook e ao Google Meu Negócio. E saber se o Facebook está ativo, porque o plano manda postar lá também.</td></tr><tr><td><b>Banco de 18 posts</b><small>as 6 semanas</small></td><td class="sem">Antes da semana 1</td>
+<td>Um post já pronto e aprovado (o vídeo do segurado especial), roteiro pesquisado pra outros 4 e base pronta pra mais 4. O roteiro do vídeo de lançamento está neste documento.</td><td>Pesquisa de 3 temas novos (BPC, BPC para crianças com TEA e aposentadoria especial). Datas e locais dos eventos, pros 5 posts que dependem deles. Gravação com os advogados pros 3 vídeos.</td></tr><tr><td><b>Cartilha <i>Previdência do Produtor Rural</i></b><small>impressa e PDF</small></td><td class="sem">Semana 2</td>
+<td>Todo o conteúdo apurado do bloco rural: quem tem direito, idade, tempo, prova, documentos, cadastro de 2023, pensão, salário-maternidade. É a base inteira da cartilha.</td><td>Formato, número de páginas, tiragem e gráfica. Impressão costuma levar de 5 a 7 dias úteis, então o arquivo precisa fechar no começo da semana 2.</td></tr><tr><td><b>Apresentação institucional da área</b></td><td class="sem">Semana 2</td>
+<td>Texto institucional, serviços, públicos e a frase-guia.</td><td>Onde ela vai ser usada (no café, nas reuniões com os 20 clientes, nas palestras), quanto tempo dura e se é em PowerPoint, Keynote ou PDF.</td></tr><tr><td><b>Cartilha <i>BPC/LOAS: quem tem direito</i></b></td><td class="sem">Semana 3</td>
+<td>As regras básicas, conferidas hoje no site do INSS.</td><td>A pesquisa completa, que vai junto com os posts de BPC. Formato e tiragem, como na outra cartilha.</td></tr></tbody></table>
+  <p><b>Duas coisas que não estão com o seu nome, mas vão cair em você:</b></p>
+  <ul>
+    <li><b>O vídeo de lançamento.</b> Ela mandou a estrutura, mas não pôs responsável. Produção e edição são suas na prática. O roteiro está abaixo.</li>
+    <li><b>A parte visual do evento.</b> No item 9 do plano, &ldquo;o marketing&rdquo; cuida de convites digitais e impressos, banner, cartilhas impressas, crachás, fotos e vídeo com autorização de imagem, e do envio dos slides depois. Na tabela de prazos, convites e logística estão com a Gestão Geral. Vale confirmar com ela: provavelmente a arte é sua e o envio e a lista são da gestão.</li>
+  </ul>
+  <p>O kit de palestra para cooperativas e sindicatos está com a Gestão Geral, mas palestra pede slide. Se pedirem pra você diagramar, ele entra na mesma linha da apresentação institucional.</p>
+</div>
+
+<div class="bloco">
+  <p class="sub">Banco de 18 posts</p>
+  <h2>Os temas dela, na grade dela, com o que a gente já tem</h2>
+  <p>Ela sugeriu um tema pra cada dia e disse que podem ser trocados. Mantive todos. O formato de cada um é sugestão nossa, ela só definiu dois vídeos e um carrossel.</p>
+  <table class="grade"><thead><tr><th>Semana</th><th>Formato</th><th>Tema</th><th>Situação</th></tr></thead>
+  <tbody><tr><td class="sem">S1 <span class="tag2">seg</span></td><td class="fmt">Vídeo</td>
+<td><b>Apresentação da nova área e da equipe</b><small>Vídeo de lançamento com o Dr. Fernando e o Dr. Gustavo.</small></td><td><span class="pill ok">roteiro abaixo</span></td></tr><tr><td class="sem">S1 <span class="tag2">qua</span></td><td class="fmt">Vídeo</td>
+<td><b>Trabalho no campo conta para a aposentadoria?</b><small>O vídeo do segurado especial (60 e 55 anos, 15 anos de roça, “trabalho, não contribuição”), já feito e aprovado. É exatamente o tema que ela sugeriu pra esse dia.</small></td><td><span class="pill ok" style="background:#5f8f4a;color:#fff">pronto e aprovado</span></td></tr><tr><td class="sem">S1 <span class="tag2">sex</span></td><td class="fmt">Vídeo</td>
+<td><b>O que é planejamento previdenciário</b><small>Base pronta (cadastro rural, extrato do INSS, contribuição por conta própria, aposentadoria híbrida). Falta o roteiro de fala do advogado.</small></td><td><span class="pill meio">parcial</span></td></tr><tr><td class="sem">S2 <span class="tag2">seg</span></td><td class="fmt">Carrossel</td>
+<td><b>Quais documentos provam a atividade rural</b><small>É o carrossel 3 do bloco rural.</small></td><td><span class="pill ok">roteiro pronto</span></td></tr><tr><td class="sem">S2 <span class="tag2">qua</span></td><td class="fmt">Carrossel</td>
+<td><b>BPC/LOAS: quem tem direito</b><small>Regra básica já conferida no INSS: 65 anos ou deficiência, renda de até 1/4 do salário mínimo por pessoa, CadÚnico em dia.</small></td><td><span class="pill novo">tema novo</span></td></tr><tr><td class="sem">S2 <span class="tag2">sex</span></td><td class="fmt">Carrossel</td>
+<td><b>Seu benefício foi calculado certo?</b><small>Parte do carrossel de revisão (prazo de 10 anos). Falta a parte de erro de cálculo.</small></td><td><span class="pill meio">parcial</span></td></tr><tr><td class="sem">S3 <span class="tag2">seg</span></td><td class="fmt">Estático</td>
+<td><b>Auxílio-doença mudou de nome</b><small>A regra está na página do INSS e no carrossel da família rural.</small></td><td><span class="pill meio">parcial</span></td></tr><tr><td class="sem">S3 <span class="tag2">qua</span></td><td class="fmt">Carrossel</td>
+<td><b>Pensão por morte: quem recebe</b><small>Vem do vídeo da pensão: dependentes, 18 meses, 2 anos, tabela por idade.</small></td><td><span class="pill ok">roteiro pronto</span></td></tr><tr><td class="sem">S3 <span class="tag2">sex</span></td><td class="fmt">Estático</td>
+<td><b>Chamada para o evento de lançamento</b><small>Precisa de data, horário e local do café.</small></td><td><span class="pill ev">depende do evento</span></td></tr><tr><td class="sem">S4 <span class="tag2">seg</span></td><td class="fmt">Fotos</td>
+<td><b>Bastidores do evento de lançamento</b><small>Cobertura de foto e vídeo no café.</small></td><td><span class="pill ev">depende do evento</span></td></tr><tr><td class="sem">S4 <span class="tag2">qua</span></td><td class="fmt">Carrossel</td>
+<td><b>BPC para crianças com TEA: como funciona</b><small>Pesquisar a lei do autismo e a avaliação do INSS.</small></td><td><span class="pill novo">tema novo</span></td></tr><tr><td class="sem">S4 <span class="tag2">sex</span></td><td class="fmt">Vídeo</td>
+<td><b>Dúvidas frequentes sobre aposentadoria rural</b><small>As respostas já estão apuradas no bloco rural. Falta o roteiro de fala.</small></td><td><span class="pill meio">parcial</span></td></tr><tr><td class="sem">S5 <span class="tag2">seg</span></td><td class="fmt">Fotos</td>
+<td><b>Registro da palestra na cooperativa</b></td><td><span class="pill ev">depende do evento</span></td></tr><tr><td class="sem">S5 <span class="tag2">qua</span></td><td class="fmt">Carrossel</td>
+<td><b>Aposentadoria especial: quem trabalha com insalubridade</b><small>Pesquisar as regras depois da Reforma.</small></td><td><span class="pill novo">tema novo</span></td></tr><tr><td class="sem">S5 <span class="tag2">sex</span></td><td class="fmt">Carrossel</td>
+<td><b>Salário-maternidade para trabalhadora rural</b><small>Vem do carrossel da família rural, com a ressalva do STF.</small></td><td><span class="pill ok">roteiro pronto</span></td></tr><tr><td class="sem">S6 <span class="tag2">seg</span></td><td class="fmt">Fotos</td>
+<td><b>Registro do café com contadores</b></td><td><span class="pill ev">depende do evento</span></td></tr><tr><td class="sem">S6 <span class="tag2">qua</span></td><td class="fmt">Carrossel</td>
+<td><b>Aposentadoria por idade urbana x rural</b><small>Vem do estático da idade e do vídeo da híbrida.</small></td><td><span class="pill ok">roteiro pronto</span></td></tr><tr><td class="sem">S6 <span class="tag2">sex</span></td><td class="fmt">Fotos</td>
+<td><b>Registro da palestra no sindicato rural</b></td><td><span class="pill ev">depende do evento</span></td></tr></tbody></table>
+  <p><b>Na conta:</b> 1 já pronto e aprovado, 4 com roteiro pronto, 4 com base pronta, 3 temas novos pra pesquisar, 5 que dependem dos eventos, e o vídeo de lançamento, com roteiro neste documento.</p><p>A semana 1 fica com três vídeos: lançamento, segurado especial e planejamento. Pra estreia de uma área é bom, abre com rosto, explica o principal e já mostra o serviço de mais valor.</p>
+  <p><b>Atenção na ordem dos posts de evento.</b> Do jeito que está, o registro do evento sai na segunda da mesma semana em que o evento acontece: os bastidores do café na segunda da semana 4, e o café é na semana 4. O registro da palestra da cooperativa e o do café com os contadores têm o mesmo problema. Ou os eventos acontecem no começo da semana, ou esses registros passam pra sexta, ou pra segunda da semana seguinte.</p>
+  <p><b>E a chamada para o evento</b> (sexta da semana 3): se o café for só para convidados da lista dos sócios, o post vira anúncio do lançamento, sem convite aberto. Vale confirmar.</p>
+</div>
+
+<div class="bloco">
+  <p class="sub">Primeiro post · roteiro no formato dela</p>
+  <h2>Vídeo de lançamento</h2>
+  <p>Cerca de 75 segundos. Segue a estrutura que ela mandou: o Dr. Fernando abre e fecha falando da relação do escritório com o agro e com as empresas, e o Dr. Gustavo explica a área no meio, com a prova do tempo na roça, o BPC e a revisão. As animações são as que ela listou.</p>
+  <table class="roteiro"><thead><tr><th>Tempo</th><th>Cena</th><th>Animação</th><th>Fala</th></tr></thead>
+  <tbody><tr><td class="t">0–5s</td><td>Imagens do campo ao amanhecer: estrada de terra, lavoura, porteira.</td><td class="tela">A logo da Gorayeb se formando sobre a imagem.</td><td>(Sem fala, só trilha.)</td></tr><tr><td class="t">5–18s</td><td>Dr. Fernando no escritório, plano médio, olhando pra câmera.</td><td class="tela">Tarja: Dr. Fernando [sobrenome] · OAB/MG [número].</td><td>A Gorayeb caminha junto com o produtor rural e com as empresas da nossa região. A gente cuida da terra, dos contratos, da família. Mas tem um momento que chega pra todo mundo que produz: o dia de parar.</td></tr><tr><td class="t">18–24s</td><td>Volta pro campo: trabalhador rural mais velho, de costas, olhando a lavoura.</td><td class="tela">Texto sobre a imagem: <b>Direito Previdenciário</b>.</td><td>Dr. Fernando, em off: Por isso, agora a Gorayeb também atua em Direito Previdenciário.</td></tr><tr><td class="t">24–40s</td><td>Dr. Gustavo, plano médio.</td><td class="tela">Tarja: Dr. Gustavo [sobrenome] · OAB/MG [número]. Depois, uma linha do tempo com ícones de documentos rurais entrando um por um: nota do produtor, contrato de parceria, ITR, certidão.</td><td>Quem trabalha na roça com a família tem direito a se aposentar, mesmo sem ter pago o INSS todo mês. O que decide é a prova: nota de venda da produção, contrato de parceria, ITR, certidão com a profissão de lavrador. A gente ajuda a juntar e organizar esses documentos.</td></tr><tr><td class="t">40–50s</td><td>Dr. Gustavo.</td><td class="tela">Ícone do BPC.</td><td>Também orientamos sobre o BPC, o benefício de um salário mínimo para idosos a partir de sessenta e cinco anos e para pessoas com deficiência, inclusive com autismo, de famílias de baixa renda.</td></tr><tr><td class="t">50–58s</td><td>Dr. Gustavo.</td><td class="tela">Ícone de revisão.</td><td>E revisamos aposentadorias e pensões já concedidas, pra conferir se o cálculo e o tempo de trabalho foram reconhecidos do jeito certo.</td></tr><tr><td class="t">58–66s</td><td>Fundo verde da marca.</td><td class="tela">Os serviços entrando um a um, com ícone: aposentadoria rural e urbana, planejamento previdenciário, BPC/LOAS, pensão por morte, auxílio-doença e salário-maternidade, revisão de benefícios.</td><td>(Sem fala, só trilha.)</td></tr><tr><td class="t">66–75s</td><td>Dr. Fernando fecha.</td><td class="tela">Encerramento: <b>Da porteira à aposentadoria.</b> e a logo.</td><td>Se você ou alguém da sua família tem dúvida sobre aposentadoria ou benefício do INSS, conversa com a gente. Gorayeb Advocacia. Protegemos o patrimônio e o futuro de quem produz, da porteira à aposentadoria.</td></tr></tbody></table>
+  <p><b>Linguagem:</b> usei &ldquo;quem trabalha na roça com a família&rdquo; no lugar de &ldquo;segurado especial&rdquo;, como ela pediu, e a frase-guia dela no fechamento. Nenhuma promessa de resultado, nenhum valor, nenhuma comparação com outro escritório.</p>
+  <p><b>O que foi conferido:</b> as regras citadas pelo Dr. Gustavo estão nas páginas oficiais do INSS. Aposentadoria do trabalhador rural sem contribuição mensal e a prova por documento; BPC de um salário mínimo para idoso a partir de 65 anos ou pessoa com deficiência, com renda de até 1/4 do salário mínimo por pessoa.</p>
+  <p><b>Pra gravar:</b> os dois no mesmo dia, no escritório. Uns 20 minutos de cada um, falando por blocos curtos. As imagens de campo e as animações entram na edição.</p>
+</div>
+
+<div class="bloco">
+  <p class="sub">O que muda no que a gente fez ontem</p>
+  <h2>O plano dela substitui o nosso bloco</h2>
+  <ul>
+    <li><b>Dias:</b> segunda, quarta e sexta, não terça, quinta e sábado.</li>
+    <li><b>Tamanho:</b> 18 posts em 6 semanas, não 13 em 4.</li>
+    <li><b>Público:</b> ela mistura rural, BPC, urbano e aposentados. O nosso recorte só rural sai; o rural continua sendo a maior parte, porque o público número 1 do plano é o produtor com mais de 50 anos.</li>
+    <li><b>Vídeos:</b> os novos são com advogado na frente da câmera, e o motion entra como apoio: tarjas, ícones, linha do tempo. O do segurado especial, já feito em motion e aprovado, entra na quarta da semana 1.</li>
+    <li><b>Lançamento:</b> sai o nosso narrado, sem rosto, e entra o dela, com os dois advogados.</li>
+    <li><b>Texto:</b> &ldquo;quem trabalha na roça com a família&rdquo; no lugar de &ldquo;segurado especial&rdquo;, sempre que der.</li>
+  </ul>
+  <p>Nada da pesquisa se perde. Dos 13 roteiros de ontem, um já virou vídeo aprovado, outros 8 viram base de posts dela, e o resto vira conteúdo da cartilha do produtor rural. Se você já mandou o PDF de ontem pra ela, vale avisar que ele foi substituído por este plano.</p>
+</div>
+
+<div class="bloco">
+  <p class="sub">Pra fechar a estrutura</p>
+  <h2>O que precisamos da Dra. Elisa</h2>
+  <ol>
+    <li><b>A data de início da semana 1.</b></li>
+    <li><b>Se o feed do agro pausa nessas 6 semanas.</b> Os 18 posts ocupam os 3 dias da semana. Se pausar, o calendário de crédito rural, trabalhista e sucessão anda 6 semanas. Se não pausar, são 6 posts por semana.</li>
+    <li><b>Datas, horários e locais</b> do café de lançamento, da palestra na cooperativa, do café com contadores e da palestra no sindicato.</li>
+    <li><b>Nome completo e número da OAB</b> do Dr. Fernando e do Dr. Gustavo, pras tarjas.</li>
+    <li><b>Quem é o coordenador da área</b>, que aprova as peças junto com a gestão.</li>
+    <li><b>Dia de gravação</b> do vídeo de lançamento com os dois, e dos vídeos de planejamento e de dúvidas.</li>
+    <li><b>Acesso</b> ao Instagram, ao Facebook e ao Google Meu Negócio.</li>
+    <li><b>Cartilhas:</b> formato, número de páginas, tiragem e se já existe gráfica.</li>
+    <li><b>Apresentação institucional:</b> onde vai ser usada e em que formato.</li>
+    <li><b>Evento:</b> o que da parte visual é seu e o que é da Gestão Geral.</li>
+    <li><b>Fotos da equipe da área</b> pro post de apresentação: no banco tem foto do Dr. Fernando, mas não do Dr. Gustavo.</li>
+  </ol>
+</div>
+</div>

@@ -1,0 +1,137 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Arvo;src:url(file:///home/user/calendario/docs/gorayeb/fontes/arvo/Arvo-Regular.ttf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueLight.otf);font-weight:300}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueRoman.otf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueMedium.otf);font-weight:500}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueBold.otf);font-weight:700}
+*{box-sizing:border-box;margin:0;padding:0} body{background:#777;font-family:HN}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;margin:20px;color:#1b2316;background:#e9e1c6}
+.s::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;mix-blend-mode:multiply;z-index:9;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+.escuro{background:#12160f;color:#ebe3c8}
+.escuro::after{mix-blend-mode:overlay;opacity:.18}
+.arroba{position:absolute;top:70px;left:86px;font:400 26px Arvo}
+.tag{display:inline-block;white-space:nowrap;font:700 18px HN;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;border-radius:7px;background:#b8943d;color:#1b2316}
+.selo{position:absolute;top:62px;right:86px}
+.topo{position:absolute;left:86px;right:86px;top:150px}
+h1{font:700 64px/1.06 HN;letter-spacing:-.035em;margin-top:22px}
+.txt{font:300 30px/1.42 HN;margin-top:22px}
+.txt b{font-weight:700}
+.trilha{display:flex;align-items:center;gap:8px;margin-top:24px;flex-wrap:nowrap}
+.trilha span{font:500 21px HN;background:#f6f1e3;border-radius:999px;padding:12px 16px;white-space:nowrap}
+.trilha i{font-style:normal;color:#8a6c22;font:700 26px HN}
+.nota{font:400 23px/1.4 HN;margin-top:20px;color:#4a4636}
+.chaves{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.chave{display:flex;align-items:center;gap:14px;font:400 26px HN}
+.chave b{font-weight:700}
+.dot{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font:700 17px HN;flex:none}
+.verde{background:#3d6b3a}.ambar{background:#b8862f}.verm{background:#8a2b14}
+/* celular */
+.cel{position:absolute;width:520px;height:1000px;border-radius:70px;background:#1b2316;padding:18px;box-shadow:0 40px 80px rgba(27,35,22,.35)}
+.tela{width:100%;height:100%;border-radius:54px;background:#fbfaf6;overflow:hidden;position:relative;color:#1b2316}
+.ilha{position:absolute;top:16px;left:50%;transform:translateX(-50%);width:130px;height:34px;border-radius:20px;background:#1b2316}
+.barra{padding:70px 30px 0}
+.url{background:#eeebe2;border-radius:16px;padding:12px 18px;font:400 19px HN;color:#5c5a50;display:flex;gap:10px;align-items:center}
+.cab{margin-top:26px;font:700 27px/1.2 HN}
+.sub{font:400 18px HN;color:#77746a;margin-top:6px}
+.ilust{position:absolute;top:74px;right:26px;font:700 13px HN;letter-spacing:.12em;text-transform:uppercase;color:#9a8f6c}
+.botao{margin:40px 30px 0;border-radius:18px;background:#1b2316;color:#fff;font:700 26px HN;padding:26px;text-align:center;position:relative}
+.botao::after{content:"";position:absolute;inset:-12px;border:4px solid #b8943d;border-radius:26px}
+.toque{position:absolute;width:74px;height:74px;border-radius:50%;background:rgba(184,148,61,.45);border:3px solid #b8943d}
+.lin{height:14px;border-radius:7px;background:#e7e3d8;margin:14px 30px 0}
+.item{margin:16px 26px 0;border:2px solid #e7e3d8;border-radius:18px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
+.item .n{font:700 22px HN}.item .m{font:400 17px HN;color:#77746a;margin-top:5px}
+.selo-st{font:700 15px HN;letter-spacing:.06em;text-transform:uppercase;color:#fff;padding:8px 12px;border-radius:8px}
+.item.foco{border-color:#b8943d;background:#fbf4e1}
+.quadro{margin:18px 26px 0;border-radius:16px;border:2px solid #e7e3d8;overflow:hidden}
+.quadro .h{background:#f1ede3;font:700 17px HN;padding:12px 16px;letter-spacing:.04em;text-transform:uppercase;color:#5c5a50}
+.quadro .r{display:flex;justify-content:space-between;padding:13px 16px;font:400 19px HN;border-top:1px solid #ece8de}
+.quadro .r b{font-weight:700;color:#8a2b14}
+.msg{margin:14px 26px 0;border-radius:16px;padding:16px 18px;background:#f4f1e9;display:flex;gap:14px}
+.msg .p{width:14px;height:14px;border-radius:50%;margin-top:6px;flex:none;background:#c9c4b5}
+.msg .t{font:700 20px HN}.msg .d{font:400 17px/1.35 HN;color:#77746a;margin-top:4px}
+.msg.alerta{background:#fbeee6;border:2px solid #8a2b14}.msg.alerta .p{background:#8a2b14}
+.prazo{display:inline-block;margin-top:8px;font:700 15px HN;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:#8a2b14;padding:6px 10px;border-radius:6px}
+/* capa */
+.capa h1{font:300 82px/1.04 HN;letter-spacing:-.04em;margin-top:26px}
+.capa h1 b{display:block;font-weight:700;color:#b8943d}
+.capa .txt{font-size:31px;opacity:.92;width:540px}
+.pe{position:absolute;left:86px;bottom:78px;display:flex;align-items:flex-end}
+.pe img{height:58px}
+.desl{position:absolute;left:86px;bottom:170px;display:flex;align-items:center;gap:14px;font:400 26px HN}
+.desl i{width:42px;height:42px;border-radius:10px;background:#b8943d;display:flex;align-items:center;justify-content:center}
+</style></head><body>
+
+<!-- 1 · capa -->
+<div class="s escuro capa" id="c1"><div class="arroba">@ftgadvogados_</div><span class="tag selo">Agronegócio</span>
+ <div class="topo" style="top:170px"><span class="tag" style="background:transparent;border:2px solid #b8943d;color:#b8943d">Cadastro Ambiental Rural</span>
+  <h1>Seu CAR pode<br>estar pendente <b>e você nem sabe.</b></h1>
+  <p class="txt">Veja como conferir pelo celular,<br>em poucos minutos.</p></div>
+ <div class="cel" style="left:560px;top:700px;transform:rotate(-7deg)"><div class="tela"><div class="ilha"></div>
+  <div class="barra"><div class="url">🔒 car.gov.br</div><div class="cab">Meus imóveis</div><div class="sub">CPF ***.***.***-**</div></div>
+  <div class="item foco"><div><div class="n">Sítio Boa Vista</div><div class="m">Situação do cadastro</div></div><span class="selo-st ambar">Pendente</span></div>
+  <div class="lin" style="width:70%"></div><div class="lin" style="width:50%"></div></div></div>
+ <span class="desl">Deslize <i><svg width="18" height="18" viewBox="0 0 20 20"><path d="M7 3 L14 10 L7 17" fill="none" stroke="#1b2316" stroke-width="3.5"/></svg></i></span>
+ <div class="pe"><img src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png"></div>
+</div>
+
+<!-- 3 · passo 1 -->
+<div class="s" id="c3"><div class="arroba">@ftgadvogados_</div>
+ <div class="topo"><span class="tag">Passo 1</span><h1>Entre na Central</h1>
+  <p class="txt">Tenha a conta gov.br. <b>Desde 19/12/2024, só se entra com ela.</b></p>
+  <div class="trilha"><span>car.gov.br</span><i>→</i><span>Central do Proprietário/Possuidor</span><i>→</i><span>Entrar com gov.br</span></div>
+  <p class="nota">Em Minas, o acesso é pelo car.gov.br.<br>Em outros estados, confira no órgão ambiental.</p></div>
+ <div class="cel" style="left:280px;top:735px"><div class="tela"><div class="ilha"></div><div class="ilust">Ilustração</div>
+  <div class="barra"><div class="url">🔒 car.gov.br</div><div class="cab">Central do<br>Proprietário/Possuidor</div></div>
+  <div class="botao">Entrar com gov.br</div><div class="toque" style="left:330px;top:300px"></div>
+  <div class="lin" style="margin-top:50px"></div><div class="lin" style="width:60%"></div></div></div>
+</div>
+
+<!-- 4 · passo 2 -->
+<div class="s" id="c4"><div class="arroba">@ftgadvogados_</div>
+ <div class="topo"><span class="tag">Passo 2</span><h1>Escolha o imóvel<br>e veja a situação</h1>
+  <p class="txt">Aparecem os CARs ligados ao seu CPF.</p>
+  <div class="chaves">
+   <div class="chave"><span class="dot verde">✔</span><span><b>Ativo:</b> tudo certo</span></div>
+   <div class="chave"><span class="dot ambar">!</span><span><b>Pendente:</b> tem algo para resolver</span></div>
+   <div class="chave"><span class="dot verm">✘</span><span><b>Suspenso ou cancelado:</b> procure ajuda</span></div></div>
+  <p class="nota">O CAR está no nome de um familiar? Ele pode vincular você<br>pela aba “Gerenciar Vínculos”.</p></div>
+ <div class="cel" style="left:280px;top:850px"><div class="tela"><div class="ilha"></div><div class="ilust">Ilustração</div>
+  <div class="barra"><div class="url">🔒 car.gov.br</div><div class="cab">Meus imóveis</div></div>
+  <div class="item"><div><div class="n">Fazenda Santa Rita</div><div class="m">MG</div></div><span class="selo-st verde">Ativo</span></div>
+  <div class="item foco"><div><div class="n">Sítio Boa Vista</div><div class="m">MG</div></div><span class="selo-st ambar">Pendente</span></div>
+  <div class="item"><div><div class="n">Chácara do Córrego</div><div class="m">MG</div></div><span class="selo-st verm">Cancelado</span></div></div></div>
+</div>
+
+<!-- 5 · passo 3 -->
+<div class="s" id="c5"><div class="arroba">@ftgadvogados_</div>
+ <div class="topo"><span class="tag">Passo 3</span><h1>Confira as sobreposições</h1>
+  <p class="txt">No demonstrativo, veja se o seu mapa se sobrepõe a outro imóvel, terra indígena, unidade de conservação ou área embargada.</p>
+  <p class="txt"><b>Sobreposição deixa o CAR pendente.</b></p></div>
+ <div class="cel" style="left:280px;top:720px"><div class="tela"><div class="ilha"></div><div class="ilust">Ilustração</div>
+  <div class="barra"><div class="url">🔒 car.gov.br</div><div class="cab">Demonstrativo</div></div>
+  <svg viewBox="0 0 440 230" style="display:block;margin:16px 26px 0;width:432px;background:#eef0e6;border-radius:16px">
+   <defs><pattern id="h" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="12" fill="#8a2b14" opacity=".35"/></pattern></defs>
+   <path d="M70 40 L250 25 L290 120 L230 200 L90 190 L50 110 Z" fill="#3d6b3a" fill-opacity=".18" stroke="#3d6b3a" stroke-width="4"/>
+   <path d="M235 70 L380 55 L400 170 L260 185 Z" fill="url(#h)" stroke="#8a2b14" stroke-width="4" stroke-dasharray="10 7"/>
+   <text x="120" y="120" font-family="HN" font-weight="700" font-size="20" fill="#3d6b3a">Seu imóvel</text>
+   <text x="300" y="135" font-family="HN" font-weight="700" font-size="18" fill="#8a2b14">Outro CAR</text></svg>
+  <div class="quadro"><div class="h">Sobreposições</div>
+   <div class="r"><span>Outro imóvel</span><b>sobrepõe</b></div>
+   <div class="r"><span>Terra indígena</span><span>não</span></div>
+   <div class="r"><span>Unidade de conservação</span><span>não</span></div>
+   <div class="r"><span>Área embargada</span><span>não</span></div></div></div></div>
+</div>
+
+<!-- 6 · passo 4 -->
+<div class="s" id="c6"><div class="arroba">@ftgadvogados_</div>
+ <div class="topo"><span class="tag">Passo 4</span><h1>Leia as mensagens</h1>
+  <p class="txt">As notificações do órgão ambiental (em Minas, o IEF) chegam na aba de mensagens, <b>com o prazo.</b></p>
+  <p class="nota" style="font-size:25px;margin-top:24px"><b>Documentos:</b> aba “Envio de Documentos”.<br><b>Correção:</b> feita no Módulo de Cadastro e enviada pela aba “Retificar”.</p></div>
+ <div class="cel" style="left:280px;top:760px"><div class="tela"><div class="ilha"></div><div class="ilust">Ilustração</div>
+  <div class="barra"><div class="url">🔒 car.gov.br</div><div class="cab">Mensagens</div></div>
+  <div class="msg alerta"><span class="p"></span><div><div class="t">Notificação do órgão ambiental</div><div class="d">Há pendências na análise do seu cadastro.</div><span class="prazo">Responder no prazo</span></div></div>
+  <div class="msg"><span class="p"></span><div><div class="t">Cadastro recebido</div><div class="d">Seu CAR foi inscrito.</div></div></div>
+  <div class="msg"><span class="p"></span><div><div class="t">Retificação enviada</div><div class="d">Aguardando análise.</div></div></div></div></div>
+</div>
+</body></html>

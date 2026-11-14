@@ -1,0 +1,52 @@
+{
+  "id": "capa-institucional-socios",
+  "titulo": "Capa do vídeo institucional com os sócios",
+  "nota": "Feed em meia-folha, com a foto dos quatro sócios em cima e a chapa embaixo. Thumb do YouTube em duas colunas, texto à esquerda e a foto em pé à direita, porque foto vertical em quadro deitado corta cabeça e perna.",
+  "legenda_instagram": "Peça interna, não vai para o feed.",
+  "slides": [
+    {
+      "tipo": "capa-faixa",
+      "selo": "Institucional",
+      "foto": "../img/socios-ftg.jpg",
+      "foco": "center 20%",
+      "alturaFoto": 790,
+      "kicker": "FTG Advogados",
+      "titulo": "Da porteira\nà *aposentadoria*.",
+      "escala": "menor",
+      "sub": "Conheça o escritório que caminha junto com quem produz."
+    },
+    {
+      "tipo": "capa-video",
+      "formato": "youtube",
+      "foto": "../img/socios-ftg.jpg",
+      "foco": "center 18%",
+      "kicker": "FTG Advogados",
+      "titulo": "Da porteira\nà *aposentadoria*.",
+      "escala": "menor",
+      "sub": "O escritório que caminha junto com quem produz.",
+      "retrato": true
+    },
+    {
+      "tipo": "capa-faixa",
+      "selo": "Institucional",
+      "foto": "../img/socios-ftg.jpg",
+      "foco": "center 20%",
+      "alturaFoto": 790,
+      "kicker": "Conheça a FTG",
+      "titulo": "Vinte e cinco anos\nao lado de *quem produz*.",
+      "escala": "menor",
+      "sub": "Agronegócio, empresarial e previdenciário."
+    },
+    {
+      "tipo": "capa-video",
+      "formato": "youtube",
+      "foto": "../img/socios-ftg.jpg",
+      "foco": "center 18%",
+      "kicker": "Conheça a FTG",
+      "titulo": "25 anos ao lado\nde *quem produz*.",
+      "escala": "menor",
+      "sub": "Agronegócio, empresarial e previdenciário.",
+      "retrato": true
+    }
+  ]
+}

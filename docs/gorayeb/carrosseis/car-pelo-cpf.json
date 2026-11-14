@@ -1,0 +1,46 @@
+{
+  "id": "car-pelo-cpf",
+  "titulo": "Seu CAR pelo celular",
+  "nota": "Post de 20/11. Refeito em 10/11 pelo texto da FTG (Demandas), 7 telas. Os prints pedidos viraram telas de celular desenhadas, marcadas como ilustração (modelos/car-celular.html, #c1 #c3 #c4 #c5 #c6). A legenda chegou cortada em 'Atenção': completei com o que as telas já dizem, com o aval do Victor.",
+  "legenda_instagram": "Seu CAR pode estar pendente e você nem saber.\n\nPela Central do Proprietário/Possuidor, você confere pelo celular:\n\n✅ a situação do cadastro (ativo, pendente, suspenso ou cancelado)\n✅ se o mapa se sobrepõe a outro imóvel ou área protegida\n✅ se o órgão ambiental mandou alguma notificação\n\nAtenção: notificação tem prazo. Se ele passar, o CAR pode ser cancelado. E CAR com problema pode atrapalhar crédito rural e licenças.\n\nSalve este passo a passo e mande para quem tem imóvel rural.\n\nFicou com dúvida? Pergunte nos comentários.\n\n#CAR #CadastroAmbientalRural #ProdutorRural #ImóvelRural #DireitoAmbiental #Agro\n\nFontes: gov.br/CAR, Perguntas Frequentes e SICAR nos estados; SEMAD-MG; FAEMG.",
+  "slides": [
+    {
+      "tipo": "capa-tipo",
+      "titulo": "capa em HTML (modelos/car-celular.html, #c1)"
+    },
+    {
+      "tipo": "tese",
+      "foto": "../img/aerea-talhoes.jpg",
+      "veu": "verde",
+      "foco": "center 50%",
+      "tese": "CAR com problema pode atrapalhar\ncrédito rural e licenças.",
+      "texto": "E se uma notificação do órgão ambiental perder o prazo, o CAR pode ser cancelado."
+    },
+    {
+      "tipo": "capa-tipo",
+      "titulo": "passo 1 em HTML (#c3)"
+    },
+    {
+      "tipo": "capa-tipo",
+      "titulo": "passo 2 em HTML (#c4)"
+    },
+    {
+      "tipo": "capa-tipo",
+      "titulo": "passo 3 em HTML (#c5)"
+    },
+    {
+      "tipo": "capa-tipo",
+      "titulo": "passo 4 em HTML (#c6)"
+    },
+    {
+      "tipo": "fecho",
+      "textura": "listras",
+      "sintese": "Notificação tem prazo.",
+      "paragrafos": [
+        "Confira seu CAR hoje."
+      ],
+      "salvar": "*Salve este passo a passo* e mande para quem tem imóvel rural."
+    }
+  ],
+  "idv": 2
+}

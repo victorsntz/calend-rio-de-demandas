@@ -1,0 +1,20 @@
+{
+  "id": "patrimonio-produtor-pf",
+  "titulo": "Produtor pessoa física: a proteção do patrimônio",
+  "nota": "Item 21 do calendário, publicado em 30/10. Modelo de capa 2 (meia-folha), selo de Agronegócio. Revisado em 30/10 pela Dra. Elisa: a subsistência não é requisito autônomo, são duas condições; quem prova a exploração familiar é o produtor (STJ, Tema 1.234); o parâmetro de quatro módulos é da Lei 8.629/93; e a proteção com o imóvel em garantia está nos fundamentos do Tema 961, não na tese. O título ganhou 'a compra dela', senão sugere que qualquer financiamento derruba a proteção. A arte foi ao ar com o título antigo; esta versão vale para repostagem.",
+  "legenda_instagram": "A PEQUENA PROPRIEDADE RURAL É IMPENHORÁVEL. MENOS PRA QUEM FINANCIOU A COMPRA DELA.\n\nNa pessoa física não existe a separação que existe na empresa. O produtor responde pelas dívidas da atividade com o patrimônio dele. Mas a Constituição abriu uma exceção que muita gente não conhece.\n\nO artigo 5º, inciso XXVI, diz que a pequena propriedade rural, desde que trabalhada pela família, não é penhorada para pagar dívida da atividade produtiva.\n\nDUAS CONDIÇÕES. A área precisa ser pequena, e o parâmetro usado é o da Lei 8.629/93: até quatro módulos fiscais do município onde ela fica. E a exploração precisa ser feita pela família. Atenção: quem tem que provar isso é o produtor. O STJ já decidiu que a exploração familiar não se presume.\n\nO STF já decidiu, no Tema 961, que a proteção vale mesmo quando a pequena propriedade é formada por mais de um terreno, desde que sejam contínuos e que a soma fique abaixo dos quatro módulos. No mesmo julgamento, a maioria dos ministros entendeu que a proteção prevalece mesmo quando o imóvel foi dado em garantia. Ou seja: hipotecar a terra num financiamento de custeio, por si só, não derruba a proteção.\n\nA EXCEÇÃO. O Código de Processo Civil, no art. 833, §1º, diz que essa proteção não vale contra a dívida do próprio imóvel, inclusive a que foi feita para comprá-lo. Em outras palavras: a terra está protegida da dívida de insumo e de fornecedor. Não está protegida da dívida que pagou a compra dela.\n\nTrês coisas decidem o caso concreto: quantos módulos fiscais tem a propriedade no seu município, se dá para provar que a família trabalha nela e de onde veio a dívida. São perguntas que se responde com a matrícula e a documentação da atividade na mão.\n\nComente aqui se você sabe quantos módulos fiscais tem a sua propriedade.\n\nFontes: art. 5º, XXVI da Constituição Federal; art. 4º, II da Lei 8.629/93; STF, Tema 961 (ARE 1.038.507); STJ, Tema 1.234 (recursos repetitivos); art. 833, VIII e §1º do Código de Processo Civil.",
+  "slides": [
+    {
+      "tipo": "capa-faixa",
+      "selo": "Agronegócio",
+      "foto": "../img/enxada-lavoura.jpg",
+      "foco": "center 0%",
+      "alturaFoto": 560,
+      "kicker": "Dívida no campo",
+      "titulo": "A pequena propriedade\nrural é impenhorável.\n*Menos pra quem financiou\na compra dela.*",
+      "escala": "menor",
+      "sub": "A Constituição protege até quatro módulos fiscais trabalhados pela família.",
+      "fonte": "Art. 5º, XXVI da CF · Art. 833, §1º do CPC"
+    }
+  ]
+}
