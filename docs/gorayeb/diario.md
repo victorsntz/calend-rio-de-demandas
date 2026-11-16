@@ -1549,3 +1549,7 @@ A narração do vídeo de pensão por morte, de 02/12, tem a mesma imprecisão d
 - 04/12 EPI: tirei o chapéu da ficha porque ele não é EPI e não tem CA, e entrou o respirador. A frase agora diz "risco grave e iminente" e o CA vem traduzido. Notas de fonte no JSON.
 - 27/11 safrista: troquei as fotos da capa e da tela 4 (uma tinha marca d'água do DeviantArt, a outra cara de IA). Sobre o domingo de 20/12, recomendo pagar até 18/12, e isso é pendência com a Dra. Elisa. O saque do FGTS ficou ressalvado pra quem aderiu ao saque-aniversário, saiu a menção ao TST e o exame demissional ficou na redação da NR-31. As datas que faltam nas notas estão sendo conferidas.
 - 02/12 pensão: a legenda está no arquivo do orquestrador, então repassei a devolutiva pra ele.
+
+**16/11/2026 · revisão de 27/11, 30/11 e 04/12 aplicada**
+
+Pendências para a Dra. Elisa: no 30/11, o marco de janeiro de 2023 dos prazos e o que significam "tracionado" e "acoplado"; no 27/11, se o pagamento fica até 18/12 porque o dia 20 cai num domingo.
