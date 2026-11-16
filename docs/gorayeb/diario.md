@@ -1553,3 +1553,5 @@ A narração do vídeo de pensão por morte, de 02/12, tem a mesma imprecisão d
 **16/11/2026 · revisão de 27/11, 30/11 e 04/12 aplicada**
 
 Pendências para a Dra. Elisa: no 30/11, o marco de janeiro de 2023 dos prazos e o que significam "tracionado" e "acoplado"; no 27/11, se o pagamento fica até 18/12 porque o dia 20 cai num domingo.
+
+**16/11/2026, conferência** · Vi no feed o vídeo do usucapião ("A terra não está no seu nome?"). Marcado como publicado.
