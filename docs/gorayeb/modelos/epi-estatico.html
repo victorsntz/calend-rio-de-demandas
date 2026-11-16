@@ -1,0 +1,62 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Arvo;src:url(file:///home/user/calendario/docs/gorayeb/fontes/arvo/Arvo-Regular.ttf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueLight.otf);font-weight:300}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueRoman.otf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueMedium.otf);font-weight:500}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueBold.otf);font-weight:700}
+*{box-sizing:border-box;margin:0;padding:0} body{background:#777;font-family:HN}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;margin:20px;color:#1b2316;background:#e9e1c6}
+.s::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;mix-blend-mode:multiply;z-index:9;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+.arroba{position:absolute;top:70px;left:86px;font:400 26px Arvo}
+.tag{display:inline-block;white-space:nowrap;font:700 18px HN;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;border-radius:7px;background:#6c4d2e;color:#ebe3c8}
+.selo{position:absolute;top:62px;right:86px}
+.topo{position:absolute;left:86px;right:86px;top:168px}
+h1{font:300 58px/1.12 HN;letter-spacing:-.04em;white-space:nowrap}
+h1 b{display:block;font-weight:700;color:#63260f}
+.apoio{font:300 30px/1.42 HN;margin-top:28px}
+.ficha{position:absolute;left:150px;top:520px;width:780px;height:670px;background:#fbf8ef;border-radius:18px;padding:38px 44px;transform:rotate(-2.5deg);
+ box-shadow:0 22px 50px rgba(40,30,10,.22),0 2px 4px rgba(40,30,10,.12)}
+.ficha .cab{display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid #1b2316;padding-bottom:16px}
+.ficha .cab b{font:700 24px HN;letter-spacing:.14em;text-transform:uppercase}
+.ficha .cab span{font:400 19px HN;color:#77746a}
+.linha{display:grid;grid-template-columns:88px 1fr 170px 60px;align-items:center;gap:16px;padding:14px 0;border-bottom:2px solid #ece4cf}
+.linha svg{width:84px;height:74px}
+.linha .n{font:700 27px HN}
+.linha .ca{font:500 19px HN;color:#77746a;display:flex;align-items:center;gap:8px}
+.linha .ca i{display:inline-block;width:90px;border-top:2px solid #c8bd9f;margin-top:12px}
+.ok{width:46px;height:46px;border-radius:50%;background:#3d6b3a;display:flex;align-items:center;justify-content:center}
+.ass{position:absolute;left:44px;bottom:40px;font:400 18px HN;color:#77746a}
+.ass i{display:block;width:260px;border-top:2px solid #c8bd9f;margin-bottom:8px}
+.ass svg{position:absolute;left:20px;top:-58px}
+.carimbo{position:absolute;right:44px;bottom:26px;width:122px;height:122px;border:3px solid rgba(99,38,15,.55);border-radius:50%;
+ display:flex;align-items:center;justify-content:center;font:700 14px HN;letter-spacing:.08em;color:rgba(99,38,15,.75);transform:rotate(-12deg);text-align:center;line-height:1.15}
+.pe{position:absolute;left:86px;right:86px;bottom:66px;display:flex;justify-content:space-between;align-items:flex-end}
+.pe img{height:56px}
+.pe span{font:400 18px/1.35 HN;color:#6f6a58;text-align:right}
+</style></head><body>
+<div class="s" id="epi"><div class="arroba">@ftgadvogados_</div><span class="tag selo">Área Trabalhista</span>
+ <div class="topo">
+  <h1>Faltou EPI, vem a multa.<b>Risco grave, vem a interdição.</b></h1>
+  <p class="apoio">Pela NR-31, o EPI é gratuito, tem CA, a entrega fica<br>registrada e o uso é exigido pelo empregador.</p>
+ </div>
+ <div class="ficha">
+  <div class="cab"><b>Ficha de entrega de EPI</b><span>Trabalhador rural</span></div>
+  <div class="linha">
+   <svg viewBox="0 0 70 62"><path d="M8 40 Q8 18 35 16 Q62 18 62 40 Z" fill="#d9c38a" stroke="#1b2316" stroke-width="3"/><path d="M2 42 H68" stroke="#1b2316" stroke-width="4" stroke-linecap="round"/><path d="M14 30 Q35 24 56 30" fill="none" stroke="#8a6c22" stroke-width="2.5"/></svg>
+   <span class="n">Chapéu</span><span class="ca">CA <i></i></span><span class="ok"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M4 10 L8.5 14.5 L16 6" fill="none" stroke="#fff" stroke-width="3"/></svg></span></div>
+  <div class="linha">
+   <svg viewBox="0 0 70 62"><path d="M20 58 V30 Q16 22 18 10 Q20 6 24 10 L26 24 L28 6 Q31 2 34 6 L34 24 L37 4 Q40 1 43 5 L42 24 L46 9 Q49 6 52 10 L48 32 Q56 26 60 30 Q62 34 54 40 L46 52 V58 Z" fill="#c9a24e" stroke="#1b2316" stroke-width="3" stroke-linejoin="round"/></svg>
+   <span class="n">Luva</span><span class="ca">CA <i></i></span><span class="ok"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M4 10 L8.5 14.5 L16 6" fill="none" stroke="#fff" stroke-width="3"/></svg></span></div>
+  <div class="linha">
+   <svg viewBox="0 0 70 62"><path d="M18 4 H38 V36 Q58 38 64 48 V56 H8 V40 Q12 38 18 36 Z" fill="#6c4d2e" stroke="#1b2316" stroke-width="3" stroke-linejoin="round"/><path d="M8 50 H64" stroke="#1b2316" stroke-width="3"/><path d="M18 14 H38 M18 22 H38" stroke="#e9e1c6" stroke-width="2.5"/></svg>
+   <span class="n">Bota</span><span class="ca">CA <i></i></span><span class="ok"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M4 10 L8.5 14.5 L16 6" fill="none" stroke="#fff" stroke-width="3"/></svg></span></div>
+  <div class="linha" style="border-bottom:0">
+   <svg viewBox="0 0 70 62"><path d="M6 26 Q6 20 12 20 H58 Q64 20 64 26 V34 Q64 44 52 44 H44 Q38 44 36 36 H34 Q32 44 26 44 H18 Q6 44 6 34 Z" fill="#cfe0e6" fill-opacity=".7" stroke="#1b2316" stroke-width="3" stroke-linejoin="round"/></svg>
+   <span class="n">Óculos</span><span class="ca">CA <i></i></span><span class="ok"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M4 10 L8.5 14.5 L16 6" fill="none" stroke="#fff" stroke-width="3"/></svg></span></div>
+  <div class="ass"><svg width="220" height="60" viewBox="0 0 220 60"><path d="M6 44 Q30 6 44 36 T80 30 Q96 18 110 40 Q130 52 150 22 Q164 8 176 34 Q186 46 210 30" fill="none" stroke="#2c3a5a" stroke-width="3" stroke-linecap="round"/></svg><i></i>Assinatura do trabalhador</div>
+  <div class="carimbo">ENTREGA<br>REGISTRADA</div>
+ </div>
+ <div class="pe"><img src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-escuro.png"><span>NR-31 · NR-3 · NR-6<br>Portaria MTE 104/2026</span></div>
+</div>
+</body></html>

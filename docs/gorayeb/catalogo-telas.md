@@ -68,7 +68,7 @@ ajustados na sessão que for usar).
 | 27/11 | 13º, férias e rescisão do safrista | C1 · Foto em cartão | sugerida |
 | 30/11 | Atualizações da NR-31 | C2 · Foto escurecendo | feita |
 | 02/12 | Pensão por morte | C4 · Tipográfica escura | sugerida |
-| 04/12 | EPI (estático) | C3 · Objeto desenhado | sugerida: capacete, luva e bota desenhados |
+| 04/12 | EPI (estático) | C3 · Objeto desenhado | feita: ficha de entrega de EPI desenhada |
 | 07/12 | Fim de ano, reunião de família (estático) | C5 · Foto cheia com faixa | sugerida |
 | 09/12 | Auxílio-doença mudou de nome (estático) | C6 · Céu aberto | sugerida |
 | 11/12 | Holding x inventário | C1 · Foto em cartão | sugerida |
