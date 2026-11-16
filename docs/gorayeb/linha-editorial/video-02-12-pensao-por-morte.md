@@ -17,7 +17,7 @@ de costas, mãos, casa de roça, documentos na mesa.
 | 5 a 9s | Mãos segurando uma carteira de trabalho antiga. | quem recebe, e por quanto tempo | Quem tem direito à pensão. E por quanto tempo. |
 | 9 a 19s | Família de costas, olhando o pasto. | Cônjuge e filhos até 21 anos · depois os pais · depois os irmãos | Primeiro vêm o marido ou a esposa, o companheiro e os filhos até vinte e um anos, ou com deficiência. Se não houver, os pais. Depois, os irmãos. |
 | 19 a 26s | Casal de mãos dadas, só as mãos. | União estável vale. Mas precisa provar. | União estável também vale. Mas precisa provar: filho em comum, mesmo endereço, conta conjunta. |
-| 26 a 35s | Lavoura; depois uma rua de cidade. | Na roça: um salário mínimo · Na cidade: metade + 10% por dependente | Para quem trabalhava na roça com a família, a pensão é de um salário mínimo. Nos outros casos, é metade da aposentadoria, mais dez por cento para cada dependente. |
+| 26 a 35s | Lavoura; depois uma rua de cidade. | Na roça: um salário mínimo · Na cidade: metade + 10% por dependente | Para quem trabalhava na roça com a família, a pensão é de um salário mínimo. Nos outros casos, é metade da aposentadoria que ele recebia, ou da que teria direito, mais dez por cento para cada dependente. |
 | 35 a 45s | Ampulheta ou calendário de parede. | A partir de 45 anos: vitalícia · Mais novo: de 3 a 20 anos | Para o cônjuge, quanto tempo dura depende da idade. A partir de quarenta e cinco anos, é para a vida toda. Mais novo, tem prazo, de três a vinte anos. |
 | 45 a 50s | Fundo chapado da paleta. | **4 meses** | Mas sem dezoito contribuições ou dois anos de união, a pensão dura só quatro meses. A não ser que a morte tenha sido por acidente. |
 | 50 a 56s | Mesa com documentos e um calendário marcado. | **Peça em até 90 dias** | E o prazo que mais pesa: pedindo em até noventa dias, a pensão é paga desde a data da morte. |
@@ -43,7 +43,7 @@ de costas, mãos, casa de roça, documentos na mesa.
 
 [pause]
 
-[educational][calm] Para quem trabalhava na roça com a família, a pensão é de um salário mínimo. [pause] Nos outros casos, é metade da aposentadoria, [pause] mais dez por cento para cada dependente.
+[educational][calm] Para quem trabalhava na roça com a família, a pensão é de um salário mínimo. [pause] Nos outros casos, é metade da aposentadoria que ele recebia, [pause] ou da que teria direito, [pause] mais dez por cento para cada dependente.
 
 [pause]
 
@@ -72,11 +72,15 @@ ou ficar sem peso, gera só esse bloco de novo.
 
 ## Legenda
 
+Revisada em 16/11: entrou a união estável e o valor passou a cobrir quem morre ainda trabalhando.
+
 QUEM RECEBE A PENSÃO POR MORTE, E POR QUANTO TEMPO?
 
-Primeiro o cônjuge ou companheiro e os filhos até 21 anos, ou com invalidez ou deficiência. Se não houver, os pais. Depois, os irmãos nas mesmas condições. Para cônjuge e filhos, a dependência é presumida; para pais e irmãos, precisa ser comprovada.
+Primeiro o cônjuge ou companheiro e os filhos até 21 anos, ou com invalidez ou deficiência. Se não houver, os pais. Depois, os irmãos nas mesmas condições. Para cônjuge, companheiro e filhos, a dependência é presumida; para pais e irmãos, precisa ser comprovada.
 
-Para quem trabalhava na roça com a família, a pensão é de um salário mínimo. Nos demais casos, metade da aposentadoria do falecido, mais 10% por dependente, até 100%, e nunca menos que um salário mínimo.
+A união estável vale, mas precisa ser provada com documento: filho em comum, mesmo endereço, conta conjunta.
+
+Para quem trabalhava na roça com a família, a pensão é de um salário mínimo. Nos demais casos, é metade da aposentadoria do falecido, ou da aposentadoria por incapacidade a que ele teria direito se ainda trabalhava, mais 10% por dependente, até 100%. Nunca menos que um salário mínimo.
 
 Para o cônjuge, com pelo menos 18 contribuições (ou 18 meses de trabalho rural) e 2 anos de casamento ou união, a pensão é vitalícia a partir dos 45 anos. Mais novo, dura de 3 a 20 anos. Sem esses requisitos, dura quatro meses, a não ser que a morte tenha sido por acidente.
 
@@ -90,3 +94,15 @@ Manda para quem precisa saber disso.
 - INSS, pensão por morte do segurado especial: https://www.gov.br/inss/pt-br/direitos-e-deveres/pensoes/pensao-por-morte-do-a-segurado-a-especial
 - INSS, valor da pensão por morte: https://www.gov.br/inss/pt-br/direitos-e-deveres/pensoes/valor-da-pensao-por-morte
 - Lei 8.213/91, art. 74, I (pensão desde o óbito se pedida em até 90 dias; 180 dias para filhos menores de 16)
+
+## Notas de fonte (da revisão de 16/11)
+
+- Ordem dos dependentes: Lei 8.213/1991, art. 16, I a III; INSS, página "Pensão por morte".
+- Dependência presumida da classe I, prova para pais e irmãos: Lei 8.213/1991, art. 16, §4º.
+- União estável precisa ser provada: Lei 8.213/1991, art. 16, §5º, redação da Lei 13.846/2019.
+- Um salário mínimo na roça: Lei 8.213/1991, art. 39, I; INSS, página "Pensão por morte do segurado especial".
+- 50% mais 10% por dependente, até 100%, da aposentadoria recebida ou da que teria por incapacidade permanente: EC 103/2019, art. 23 (óbitos a partir de 14/11/2019); INSS, página "Valor da pensão por morte".
+- Nunca menos que um salário mínimo: Constituição Federal, art. 201, §2º.
+- Quatro meses, tabela por idade, vitalícia aos 45, exceção por acidente: Lei 8.213/1991, art. 77, §2º; Portaria ME 424/2020, em vigor desde 01/01/2021.
+- 18 meses de trabalho rural no lugar das 18 contribuições: INSS, página "Pensão por morte do segurado especial".
+- 90 dias, e 180 para filhos menores de 16: Lei 8.213/1991, art. 74, I, redação da Lei 13.846/2019.
