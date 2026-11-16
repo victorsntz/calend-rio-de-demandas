@@ -1543,3 +1543,9 @@ em 2026 cai num domingo.
 
 A narração do vídeo de pensão por morte, de 02/12, tem a mesma imprecisão da
 "metade da aposentadoria" que foi corrigida na legenda. O vídeo está gravado.
+### 16/11 · Primeira rodada da revisão (sessão FTG · Revisão de conteúdos)
+
+- 30/11 NR-31 atualizações: reprovado na forma anterior porque o roteiro errava contra a Portaria 4.223/2022. Apliquei tudo: o prazo conta pela área aplicada com atomizador, não pelo tamanho da fazenda; a faixa ficou "de 26 a 50"; as datas de vencimento contam de jan/2023 (é pendência com a Dra. Elisa, porque o marco é leitura e não está escrito); entrou a exceção permanente onde a cabine não cabe, com as quatro condições e o PGRTR traduzido; o direito de parar já existia antes de 2024; a multa vale pra toda infração rural de segurança e saúde. A tela 3 ganhou foto de atomizador com cabine em pomar. Notas de fonte no JSON.
+- 04/12 EPI: tirei o chapéu da ficha porque ele não é EPI e não tem CA, e entrou o respirador. A frase agora diz "risco grave e iminente" e o CA vem traduzido. Notas de fonte no JSON.
+- 27/11 safrista: troquei as fotos da capa e da tela 4 (uma tinha marca d'água do DeviantArt, a outra cara de IA). Sobre o domingo de 20/12, recomendo pagar até 18/12, e isso é pendência com a Dra. Elisa. O saque do FGTS ficou ressalvado pra quem aderiu ao saque-aniversário, saiu a menção ao TST e o exame demissional ficou na redação da NR-31. As datas que faltam nas notas estão sendo conferidas.
+- 02/12 pensão: a legenda está no arquivo do orquestrador, então repassei a devolutiva pra ele.
