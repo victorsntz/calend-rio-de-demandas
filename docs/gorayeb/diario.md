@@ -1512,3 +1512,34 @@ Pedido do Victor: o 02/12 sai em vídeo ilustrado narrado, na pegada dos que per
 ### 16/11 · Arte do 04/12, EPI (estático)
 
 - Capa C3 em HTML (`modelos/epi-estatico.html`): a frase do roteiro em cima, uma frase por linha, e uma ficha de entrega de EPI desenhada (chapéu, luva, bota, óculos, CA, assinatura e carimbo). Liga com o apoio: CA e entrega registrada. Texto e legenda do roteiro aprovado, sem mudança.
+
+**16/11/2026 · revisão, primeira rodada**
+
+A revisão entrou e conferiu as quatro peças da semana. Resultado: uma reprovada
+e três aprovadas com ajuste obrigatório. Nenhuma das quatro tinha `notas`.
+
+**O erro mais caro da semana estava no roteiro aprovado, não na arte.** A peça
+da NR-31 de 30/11 copiou certo um roteiro que lia a Portaria 4.223/2022 pelo
+**tamanho da fazenda**, quando a norma conta pela **área aplicada com
+atomizador**. Também faltava o marco inicial do prazo, sumiu a exceção
+permanente de onde a cabine não cabe na lavoura, e caiu uma das quatro condições
+da transição.
+
+**Roteiro aprovado não é fonte. A fonte é a norma.** A revisão confere a arte
+contra o roteiro e o roteiro contra a norma. O aval da Dra. Elisa em 28/10 não
+cobre o que a norma diz hoje.
+
+Dois outros padrões da mesma rodada:
+
+- **A condição que some na simplificação.** "Grave" sem "iminente" em duas peças,
+  a exceção permanente da cabine, a ressalva do saque-aniversário no FGTS. É o
+  mesmo erro do PRA em 03/11 e do "financiou ela" em 30/10. Já é o padrão mais
+  repetido do projeto.
+- **Foto com marca d'água passou de novo**, agora do DeviantArt, na tela 4 do
+  safrista. Terceira vez que licença de imagem vira problema.
+
+Pendência que subiu pra Dra. Elisa: a segunda parcela do 13º vence em 20/12, que
+em 2026 cai num domingo.
+
+A narração do vídeo de pensão por morte, de 02/12, tem a mesma imprecisão da
+"metade da aposentadoria" que foi corrigida na legenda. O vídeo está gravado.
