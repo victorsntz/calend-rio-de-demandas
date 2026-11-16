@@ -1506,3 +1506,5 @@ já estão no ar, junto com o BPC, o vídeo do conflito de terra e a Reserva Leg
 **11/11/2026 · pensão por morte vira vídeo**
 
 Pedido do Victor: o 02/12 sai em vídeo ilustrado narrado, na pegada dos que performaram bem. Mesmo conteúdo do carrossel aprovado. Roteiro em `linha-editorial/video-02-12-pensao-por-morte.md`.
+
+**16/11/2026** · O Victor confirmou na sessão de produção que postou tudo até 15/11. Marcados o georreferenciamento (13/11) e a Proclamação (15/11).
