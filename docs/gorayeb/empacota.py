@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fecha um carrossel pra entrega: as artes em PNG e a legenda em TXT, num zip só.
+"""Fecha um carrossel pra entrega: as artes em PNG, a legenda e as notas de fonte em TXT, num zip só.
 
 Uso:  python3 docs/gorayeb/empacota.py <carrossel.json> [pasta de saída]
 
@@ -49,21 +49,44 @@ def empacota(spec_path, destino=None):
         f"{legenda}\n"
     )
 
+    # notas de fonte: de onde saiu cada informação e quando a fonte foi
+    # publicada. Pedido do Victor em 16/11, pra peça sair amparada.
+    notas = spec.get("notas") or []
+    if notas:
+        texto_notas = (
+            f"{titulo}\n"
+            f"Notas de fonte\n"
+            f"{'-' * 60}\n\n"
+            + "\n\n".join(notas).strip() + "\n"
+        )
+
     destino = destino or os.path.join(AQUI, "entrega")
     os.makedirs(destino, exist_ok=True)
-    zip_path = os.path.join(destino, f"gorayeb-{nome}.zip")
+    zip_path = os.path.join(destino, f"ftg-{nome}.zip")
 
     with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
         for f, destino_png in zip(pngs, nomes):
             z.write(os.path.join(artes, f), f"{nome}/{destino_png}")
         z.writestr(f"{nome}/legenda.txt", texto)
+        if notas:
+            z.writestr(f"{nome}/notas-de-fonte.txt", texto_notas)
 
-    txt_path = os.path.join(destino, f"gorayeb-{nome}-legenda.txt")
+    txt_path = os.path.join(destino, f"ftg-{nome}-legenda.txt")
     open(txt_path, "w", encoding="utf8").write(texto)
 
+    notas_path = None
+    if notas:
+        notas_path = os.path.join(destino, f"ftg-{nome}-notas-de-fonte.txt")
+        open(notas_path, "w", encoding="utf8").write(texto_notas)
+
     tamanho = os.path.getsize(zip_path) / 1024 / 1024
-    print(f"{zip_path}  ({len(pngs)} artes + legenda, {tamanho:.1f} MB)")
+    conteudo = "artes + legenda" + (" + notas" if notas else "")
+    print(f"{zip_path}  ({len(pngs)} {conteudo}, {tamanho:.1f} MB)")
     print(txt_path)
+    if notas_path:
+        print(notas_path)
+    else:
+        print("ATENÇÃO: esta peça não tem 'notas' no JSON. Sem notas de fonte ela não sobe.")
     return zip_path, txt_path
 
 

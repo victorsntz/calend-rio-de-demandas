@@ -37,6 +37,47 @@ Cada uma veio de um pedido dele na revisão. Não voltar atrás sem ele mandar.
 | **Nova IDV** | `"idv": 2` no topo do JSON. Helvetica Bold em caixa baixa nos títulos, etiqueta pequena dourada, grão de filme, listras só quando a tela pede. Aprovada pelo Victor em 06/11. |
 | **Barra de progresso** | **Não usar.** Existe no template (`progresso: true`), mas ficou de fora por decisão do Victor. |
 
+## Notas de fonte
+
+Pedido da Dra. Elisa, por meio do Victor, em 16/11/2026. **Toda peça sobe com um
+arquivo de notas de fonte**, além da legenda. Serve pra amparar o escritório: se
+alguém questionar uma informação, a resposta está no arquivo, não na memória de
+quem escreveu.
+
+Campo `notas` no JSON da peça, uma linha por informação. Cada linha traz:
+
+1. **A informação**, na forma como ela aparece na peça.
+2. **A fonte**, com artigo e inciso quando for lei.
+3. **A data de publicação da fonte.** Não é a data em que a gente consultou, é a
+   data em que aquilo foi publicado. Se a redação atual veio de uma lei posterior,
+   é a data dessa lei que vale, e vale dizer as duas.
+4. **O link**, quando houver.
+
+O `empacota.py` escreve `notas-de-fonte.txt` dentro do zip e ao lado dele. Peça
+sem `notas` ainda empacota, mas o script avisa, e ela **não sobe pra pasta**.
+
+Exemplo, de `carrosseis/reserva-legal-app.json`:
+
+> Prazo de 1 ano para aderir ao PRA, contado da notificação: Lei 12.651/2012,
+> art. 59, §2º, na redação da Lei 14.595, publicada no DOU em 06/06/2023.
+
+Número sem fonte não entra na arte, e isso já valia. A nota é a outra metade:
+agora a fonte sai junto com a peça, em arquivo.
+
+## O caminho de uma peça
+
+Desde 16/11/2026 a peça não vai direto da produção pro cliente:
+
+1. **Produção** monta a arte, a legenda e as notas de fonte.
+2. **Revisão** confere tudo, aponta o que estiver errado e decide se aprova.
+3. **Produção** aplica os ajustes e fecha o zip.
+4. Só então a peça sobe pra pasta e vai pra Dra. Elisa.
+
+A revisão acontece **uma vez por peça**. Ela aponta tudo o que tiver pra apontar
+naquela passada, e o que ela aprovou não volta pra revisar de novo. Se a produção
+mudar algo que a revisão não viu, isso é problema da produção, não motivo pra
+uma segunda rodada.
+
 ## A marca
 
 Em **02/11/2026** o escritório deixou de ser Gorayeb Advocacia e passou a ser
