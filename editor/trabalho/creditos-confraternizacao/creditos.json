@@ -1,0 +1,33 @@
+{
+ "projeto": "creditos-confraternizacao",
+ "_leia": "Créditos de fim de filme: nomes rolando à esquerda, quadro de fotos e clipes à direita.",
+ "formato": {
+  "largura": 1920,
+  "altura": 1080,
+  "fps": 30
+ },
+ "fundo": "#011A3D",
+ "nomes": "trabalho/creditos-confraternizacao/nomes.json",
+ "coluna": {
+  "centro": 960,
+  "largura": 800,
+  "tamanho": 38,
+  "entrelinha": 59,
+  "cabecalho": 220,
+  "tamanhoCabecalho": 22,
+  "agradecimento": {
+   "destaque": "GRATIDÃO",
+   "tamanhoDestaque": 104,
+   "frase": "Por trás de uma cidade que funciona\nestá a nossa gente.",
+   "tamanhoFrase": 34,
+   "altura": 1200
+  }
+ },
+ "mescla": 1,
+ "entrada": 1.5,
+ "esperaAntes": 2,
+ "esperaDepois": 6,
+ "fecho": 1.5,
+ "duracao": 127,
+ "saida": "renders/creditos-confraternizacao.mp4"
+}

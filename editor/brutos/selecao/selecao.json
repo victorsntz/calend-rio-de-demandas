@@ -1,0 +1,25 @@
+{
+  "_leia": "Os 13 clipes que o cliente selecionou, com o que cada um mostra e o que precisa pra entrar no telão. Conferido quadro a quadro em 19/out/2026.",
+  "origem": "Drive · Norte Sul / BANCO DE DADOS / SELEÇÃO DE VÍDEOS / VÍDEOS NORTE SUL",
+  "clipes": [
+    { "arquivo": "C0001.MP4", "dur": 6.0, "mostra": "Retroescavadeira CASE com operador de uniforme Norte Sul na cabine", "girar": "esquerda", "serve": ["missao", "valores"] },
+    { "arquivo": "C0005.MP4", "dur": 6.0, "mostra": "Operário dentro da vala puxando cabo, terra vermelha, rede exposta", "girar": "esquerda", "serve": ["missao"] },
+    { "arquivo": "C0016.MP4", "dur": 4.5, "mostra": "Equipe e retroescavadeira em obra de rua", "girar": "esquerda", "serve": ["missao", "valores"] },
+    { "arquivo": "C0017.MP4", "dur": 7.5, "mostra": "Equipe e retroescavadeira, parede de tijolo ao fundo", "girar": "esquerda", "serve": ["valores"] },
+    { "arquivo": "C0070.MP4", "dur": 8.0, "mostra": "Operário manobrando mangueira no caminhão de sucção", "girar": "esquerda", "serve": ["missao", "valores"] },
+    { "arquivo": "IMG_3905.MOV", "dur": 14.7, "mostra": "Caminhão tanque da prefeitura do Rio, chegada em operação", "hdr": true, "serve": ["abertura", "encerramento"] },
+    { "arquivo": "IMG_3913.MOV", "dur": 10.1, "mostra": "Mangueiras descendo no poço de visita, água escura", "vertical": true, "serve": [], "_nota": "1080x1920 em pé. Não cabe no telão 3:2 sem perder quase tudo. Fora da edição." },
+    { "arquivo": "IMG_3915.MOV", "dur": 32.9, "mostra": "Poço de visita aberto com mangueiras do hidrojato trabalhando", "hdr": true, "serve": ["missao", "visao"] },
+    { "arquivo": "IMG_3942.MOV", "dur": 13.5, "mostra": "Hidrojato estacionado em operação, mangueiras estendidas na calçada", "hdr": true, "serve": ["abertura", "missao"] },
+    { "arquivo": "VIDEO-2025-10-22-17-40-11.MP4", "dur": 4.3, "mostra": "Caminhão tanque novo, lateral, céu azul", "serve": ["encerramento"] },
+    { "arquivo": "VIDEO-2025-10-22-17-40-13-4.MP4", "dur": 53.9, "mostra": "Drone sobre o canteiro: frota, equipe e estrutura vistas de cima", "serve": ["encerramento", "valores"] },
+    { "arquivo": "VIDEO-2025-10-22-17-40-16-3.MP4", "dur": 88.0, "mostra": "Drone acompanhando caminhão na avenida, cidade em movimento", "serve": ["abertura"] },
+    { "arquivo": "Video-08-parte-01.mov", "dur": 183.3, "mostra": "Prancha técnica de rede sendo desenhada à mão, traço vermelho", "serve": ["visao"] }
+  ],
+  "avisos": [
+    "Os cinco arquivos C0*.MP4 vieram da Sony girados 90 graus e sem etiqueta de rotação: o ffmpeg não corrige sozinho. O montador gira com \"girar\": \"esquerda\".",
+    "Três arquivos IMG_*.MOV são HDR de iPhone. O montador converte com \"hdr\": true.",
+    "IMG_3913.MOV está em pé e ficou de fora.",
+    "Os C0*.MP4 são 24 fps e a entrega é 30: o montador reamostra."
+  ]
+}
