@@ -1557,3 +1557,5 @@ Pendências para a Dra. Elisa: no 30/11, o marco de janeiro de 2023 dos prazos e
 **16/11/2026, conferência** · Vi no feed o vídeo do usucapião ("A terra não está no seu nome?"). Marcado como publicado.
 
 **18/11/2026, conferência** · Vi no feed o carrossel dos documentos rurais ("O que prova seu tempo de roça"). Marcado como publicado.
+
+**20/11/2026, conferência** · Vi no feed o CAR pelo celular ("Seu CAR pode estar pendente e você nem sabe"). Marcado como publicado.
