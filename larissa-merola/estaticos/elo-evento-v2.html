@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Elo Lipedema, evento 14/11, v2</title>
+<link rel="stylesheet" href="../capa/fonts/fonts.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap">
+<style>
+  /* Conceito: "Elo" é laço. Texto todo à esquerda, um detalhe à direita, a ligação entre os três momentos
+     da manhã desenhada como uma linha com nós. Serifa Fraunces (ótica 144, itálico) pro "tchan", Sora no apoio. */
+  :root {
+    --musgo: #2B3629; --musgo2: #3B4738; --papel: #EFE8DC; --papel2: #E6DECF; --saude: #CCD77F; --marrom: #4D392A; --marromclaro: #B8A08A; --branco: #FFFFFF;
+    --disp: 'Fraunces', 'Gloock', Georgia, serif; --sans: 'Sora', system-ui, sans-serif;
+    --textura: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>");
+  }
+  html, body { margin: 0; background: #ddd; }
+  .slide { position: relative; width: 1080px; height: 1350px; overflow: hidden; font-family: var(--sans); margin-bottom: 40px; background: var(--papel); color: var(--musgo); }
+  .slide > * { position: relative; z-index: 1; }
+  .textura::before { content: ""; position: absolute; inset: 0; background-image: var(--textura); opacity: .14; mix-blend-mode: multiply; pointer-events: none; z-index: 0; }
+  .disp { font-family: var(--disp); font-optical-sizing: auto; font-variation-settings: "opsz" 144; }
+  .ital { font-family: var(--disp); font-style: italic; font-weight: 400; font-variation-settings: "opsz" 144; }
+  .micro { font-size: 16px; letter-spacing: 0.32em; text-transform: uppercase; font-weight: 500; }
+  .elo { font-family: var(--disp); font-weight: 400; font-variation-settings: "opsz" 144; letter-spacing: -0.01em; line-height: .82; }
+  .lip { font-size: 30px; letter-spacing: 0.44em; text-transform: uppercase; font-weight: 300; }
+  .frase { font-family: var(--disp); font-style: italic; font-weight: 400; font-variation-settings: "opsz" 144; line-height: 1.12; text-wrap: balance; }
+  .elos { display: flex; flex-direction: column; gap: 0; }
+  .elos .no { display: flex; gap: 22px; align-items: center; height: 58px; }
+  .elos .no i { flex: none; width: 14px; height: 14px; border-radius: 50%; border: 2px solid currentColor; background: var(--saude); }
+  .elos .no span { font-size: 22px; letter-spacing: 0.06em; font-weight: 400; }
+  .elos .no span b { font-weight: 600; }
+  .elos .no + .no { position: relative; }
+  .elos .no + .no::before { content: ""; position: absolute; left: 7px; top: -36px; height: 36px; border-left: 1.5px solid currentColor; opacity: .7; }
+  .iso { height: 44px; width: auto; }
+  .detalhe-v { position: absolute; right: 60px; top: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; }
+  .detalhe-v span { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 17px; letter-spacing: 0.34em; text-transform: uppercase; font-weight: 500; white-space: nowrap; }
+  .detalhe-v i { width: 1.5px; height: 220px; background: currentColor; opacity: .6; }
+
+  /* ---------- A. "Mãos": foto do laço em cima, painel papel embaixo ---------- */
+  .a .foto { position: absolute; left: 0; top: 0; width: 1080px; height: 620px; z-index: 0; }
+  .a .foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+  .a .foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(43,54,41,.35) 0%, rgba(43,54,41,0) 30%, rgba(43,54,41,0) 70%, rgba(239,232,220,1) 100%); }
+  .a .cab { position: absolute; left: 72px; top: 64px; color: var(--branco); display: flex; align-items: center; gap: 18px; }
+  .a .painel { position: absolute; left: 72px; right: 72px; top: 612px; bottom: 72px; display: flex; flex-direction: column; }
+  .a .vem { font-size: 46px; color: var(--marrom); }
+  .a .elo { font-size: 210px; margin-top: 4px; }
+  .a .lipl { display: flex; align-items: baseline; gap: 26px; margin-top: 2px; }
+  .a .frase { font-size: 36px; margin-top: 26px; max-width: 760px; }
+  .a .elos { margin-top: 22px; }
+  .a .rodape { margin-top: auto; display: flex; align-items: flex-end; justify-content: space-between; }
+  .a .quando { font-size: 22px; letter-spacing: 0.1em; line-height: 1.5; }
+  .a .quando b { font-weight: 600; }
+  .a .data { font-family: var(--disp); font-variation-settings: "opsz" 144; font-size: 124px; line-height: .8; color: var(--marrom); display: flex; align-items: flex-end; gap: 12px; }
+  .a .data small { font-family: var(--sans); font-size: 18px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; writing-mode: vertical-rl; transform: rotate(180deg); margin-bottom: 8px; color: var(--musgo); }
+
+  /* ---------- B. "Manhã": foto inteira, coluna à esquerda, detalhe vertical à direita ---------- */
+  .b { background: var(--musgo); color: var(--branco); }
+  .b .foto { position: absolute; inset: 0; z-index: 0; }
+  .b .foto img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; }
+  .b .foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(43,54,41,.97) 0%, rgba(43,54,41,.88) 40%, rgba(43,54,41,.30) 66%, rgba(43,54,41,.10) 100%); }
+  .b .col { position: absolute; left: 72px; top: 72px; bottom: 72px; width: 640px; display: flex; flex-direction: column; }
+  .b .cab { display: flex; align-items: center; gap: 18px; }
+  .b .vem { font-size: 48px; color: var(--saude); margin-top: 150px; }
+  .b .elo { font-size: 280px; margin-top: 10px; }
+  .b .lipl { display: flex; align-items: baseline; gap: 26px; }
+  .b .frase { font-size: 44px; margin-top: 34px; max-width: 620px; }
+  .b .elos { margin-top: 34px; }
+  .b .elos .no i { border-color: var(--branco); }
+  .b .rodape { margin-top: auto; display: flex; flex-direction: column; gap: 18px; }
+  .b .quando { font-size: 22px; letter-spacing: 0.1em; line-height: 1.5; }
+  .b .quando b { font-weight: 600; color: var(--saude); }
+  .b .cta { width: max-content; padding: 18px 30px; border: 1.5px solid var(--saude); color: var(--saude); font-size: 18px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 500; }
+  .b .detalhe-v { color: var(--branco); }
+
+  /* ---------- C. "Convite": papel, texto à esquerda, bloco de foto à direita com sombra deslocada ---------- */
+  .c .col { position: absolute; left: 72px; top: 72px; bottom: 72px; width: 520px; display: flex; flex-direction: column; }
+  .c .cab { display: flex; align-items: center; gap: 18px; }
+  .c .vem { font-size: 44px; color: var(--marrom); margin-top: 120px; }
+  .c .elo { font-size: 230px; margin-top: 8px; }
+  .c .lipl { display: flex; flex-direction: column; gap: 10px; }
+  .c .frase { font-size: 40px; margin-top: 34px; }
+  .c .elos { margin-top: 34px; }
+  .c .rodape { margin-top: auto; display: flex; flex-direction: column; gap: 16px; }
+  .c .quando { font-size: 22px; letter-spacing: 0.1em; line-height: 1.5; }
+  .c .quando b { font-weight: 600; }
+  .c .cta { width: max-content; padding: 18px 30px; border: 1.5px solid var(--musgo); color: var(--musgo); font-size: 18px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 500; }
+  .c .bloco { position: absolute; left: 640px; top: 110px; width: 368px; height: 1130px; }
+  .c .bloco .sombra { position: absolute; left: 26px; top: 26px; width: 100%; height: 100%; background: var(--musgo); }
+  .c .bloco .img { position: absolute; inset: 0; overflow: hidden; }
+  .c .bloco .img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
+  .c .bloco .tag { position: absolute; left: -1px; bottom: 60px; background: var(--saude); color: var(--musgo); padding: 14px 22px; font-size: 16px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 600; }
+  .c .padrao { position: absolute; right: 72px; top: 72px; }
+  /* stories do B */
+  .b.stories { height: 1920px; }
+  .b.stories .col { top: 150px; bottom: 150px; }
+  .b.stories .vem { margin-top: 330px; }
+  .b.stories .elo { font-size: 300px; }
+  .b.stories .foto img { object-position: 62% 50%; }
+</style>
+</head>
+<body>
+
+<!-- A -->
+<div class="slide a textura">
+  <div class="foto"><img src="../banco/post/post-59.jpg" alt=""></div>
+  <div class="cab"><img class="iso" src="../capa/isotipo-branco.svg" alt=""><span class="micro">Dra. Larissa Merola · Nutrologia</span></div>
+  <div class="detalhe-v" style="height:620px;bottom:auto;color:#fff;gap:16px"><span>Araguari · MG</span><i style="height:110px"></i><span>Novembro 2026</span></div>
+  <div class="painel">
+    <div class="vem ital">Vem aí, em novembro.</div>
+    <div class="lipl"><div class="elo">ELO</div><div class="lip">Lipedema</div></div>
+    <div class="frase">Uma manhã para o corpo, o cuidado e a fé, com quem entende o que o lipedema pede.</div>
+    <div class="elos">
+      <div class="no"><i></i><span><b>Aula funcional</b> adaptada ao lipedema</span></div>
+      <div class="no"><i></i><span><b>O que pode e o que não pode</b> no treino</span></div>
+      <div class="no"><i></i><span><b>Um momento de espiritualidade</b> pra fechar</span></div>
+    </div>
+    <div class="rodape">
+      <div class="quando"><b>Sábado, 14 de novembro</b><br>Condomínio Ventana · Araguari<br>Inscrições em breve · @larissamerola</div>
+      <div class="data">14<small>nov</small></div>
+    </div>
+  </div>
+</div>
+
+<!-- B -->
+<div class="slide b">
+  <div class="foto"><img src="../banco/post/post-61.jpg" alt=""></div>
+  <div class="col">
+    <div class="cab"><img class="iso" src="../capa/isotipo-branco.svg" alt=""><span class="micro">Dra. Larissa Merola · Nutrologia</span></div>
+    <div class="vem ital">Vem aí, em novembro.</div>
+    <div class="lipl"><div class="elo">ELO</div><div class="lip">Lipedema</div></div>
+    <div class="frase">Uma manhã para o corpo, o cuidado e a fé.</div>
+    <div class="elos">
+      <div class="no"><i></i><span><b>Aula funcional</b> adaptada ao lipedema</span></div>
+      <div class="no"><i></i><span><b>O que pode e o que não pode</b> no treino</span></div>
+      <div class="no"><i></i><span><b>Um momento de espiritualidade</b> pra fechar</span></div>
+    </div>
+    <div class="rodape">
+      <div class="quando"><b>Sábado, 14 de novembro</b><br>Condomínio Ventana · Araguari</div>
+      <div class="cta">Inscrições em breve</div>
+    </div>
+  </div>
+  <div class="detalhe-v"><span>14 · 11 · 2026</span><i></i><span>Condomínio Ventana</span></div>
+</div>
+
+<!-- C -->
+<div class="slide c textura">
+  <div class="col">
+    <div class="cab"><img class="iso" src="../capa/isotipo.svg" alt=""><span class="micro">Dra. Larissa Merola · Nutrologia</span></div>
+    <div class="vem ital">Vem aí, em novembro.</div>
+    <div class="lipl"><div class="elo">ELO</div><div class="lip">Lipedema</div></div>
+    <div class="frase">Uma manhã para o corpo, o cuidado e a fé.</div>
+    <div class="elos">
+      <div class="no"><i></i><span><b>Aula funcional</b> adaptada ao lipedema</span></div>
+      <div class="no"><i></i><span><b>O que pode e o que não pode</b></span></div>
+      <div class="no"><i></i><span><b>Momento de espiritualidade</b></span></div>
+    </div>
+    <div class="rodape">
+      <div class="quando"><b>Sábado, 14 de novembro</b><br>Condomínio Ventana · Araguari</div>
+      <div class="cta">Inscrições em breve</div>
+    </div>
+  </div>
+  <div class="bloco">
+    <div class="sombra"></div>
+    <div class="img"><img src="../banco/doutora/doutora-01.jpg" alt=""></div>
+    <div class="tag">Com a Dra. Larissa</div>
+  </div>
+</div>
+
+
+<!-- B stories -->
+<div class="slide b stories">
+  <div class="foto"><img src="../banco/post/post-61.jpg" alt=""></div>
+  <div class="col">
+    <div class="cab"><img class="iso" src="../capa/isotipo-branco.svg" alt=""><span class="micro">Dra. Larissa Merola · Nutrologia</span></div>
+    <div class="vem ital">Vem aí, em novembro.</div>
+    <div class="lipl"><div class="elo">ELO</div><div class="lip">Lipedema</div></div>
+    <div class="frase">Uma manhã para o corpo, o cuidado e a fé.</div>
+    <div class="elos">
+      <div class="no"><i></i><span><b>Aula funcional</b> adaptada ao lipedema</span></div>
+      <div class="no"><i></i><span><b>O que pode e o que não pode</b> no treino</span></div>
+      <div class="no"><i></i><span><b>Um momento de espiritualidade</b> pra fechar</span></div>
+    </div>
+    <div class="rodape">
+      <div class="quando"><b>Sábado, 14 de novembro</b><br>Condomínio Ventana · Araguari</div>
+      <div class="cta">Inscrições em breve</div>
+    </div>
+  </div>
+  <div class="detalhe-v"><span>14 · 11 · 2026</span><i></i><span>Condomínio Ventana</span></div>
+</div>
+
+<script src="../capa/tipografia.js"></script>
+</body>
+</html>

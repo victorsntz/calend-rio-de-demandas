@@ -1,0 +1,110 @@
+{
+  "slug": "tipo2-perna-inchada-calor",
+  "arroba": "@larissamerola",
+  "seed": 14,
+  "slides": [
+    {
+      "tipo": "capa-colagem",
+      "fotos": [
+        "../../banco/post/post-168.jpg",
+        "../../banco/post/post-165.jpg",
+        "../../banco/post/post-15.jpg",
+        "../../banco/post/post-164.jpg",
+        "../../banco/post/post-13.jpg",
+        "../../banco/post/post-06.jpg",
+        "../../banco/post/post-14.jpg",
+        "../../banco/post/post-08.jpg"
+      ],
+      "titulo": "Se a sandália começou a apertar no calor,<br>salva esse post",
+      "texto": "Inchar um pouco no verão é normal. <b>Doer, pesar o dia inteiro e aparecer roxo sem motivo, não.</b>"
+    },
+    {
+      "tipo": "capa-frase",
+      "fotos": [
+        "../../banco/post/post-164.jpg",
+        "../../banco/post/post-05.jpg",
+        "../../banco/post/post-13.jpg",
+        "../../banco/post/post-10.jpg",
+        "../../banco/post/post-07.jpg",
+        "../../banco/post/post-06.jpg"
+      ],
+      "titulo": "A sua perna não dói só <u>por causa do calor</u>, nem por <i>sal</i>, nem por <i>ficar em pé</i>",
+      "convite": "Me conta nos comentários se a sua perna piora no verão e <b>manda pra aquela amiga que vive ouvindo que é só retenção</b>"
+    },
+    {
+      "tipo": "corpo-foto",
+      "fotos": [
+        "../../banco/post/post-168.jpg",
+        "../../banco/post/post-165.jpg",
+        "../../banco/post/post-15.jpg",
+        "../../banco/post/post-167.jpg",
+        "../../banco/post/post-166.jpg",
+        "../../banco/post/post-164.jpg"
+      ],
+      "rotulo": "O que é normal no calor",
+      "texto": "Com o calor os vasos dilatam e o corpo segura mais água. Até aí, tudo bem. <b>O inchaço normal tem três marcas:</b>",
+      "itens": [
+        { "lead": "Aparece no fim do dia", "texto": "e some depois de uma noite de sono" },
+        { "lead": "Melhora quando você levanta a perna", "texto": "ou quando a temperatura cai" },
+        { "lead": "Incomoda, mas não dói", "texto": "é peso, não é dor ao toque" }
+      ]
+    },
+    {
+      "tipo": "corpo-foto",
+      "fotos": [
+        "../../banco/post/post-06.jpg",
+        "../../banco/post/post-13.jpg",
+        "../../banco/post/post-14.jpg",
+        "../../banco/post/post-05.jpg",
+        "../../banco/post/post-07.jpg",
+        "../../banco/post/post-10.jpg",
+        "../../banco/post/post-08.jpg"
+      ],
+      "rotulo": "Quando acende o alerta",
+      "texto": "Aí a conversa muda, e vale investigar <b>lipedema</b>, que é um acúmulo de gordura nas pernas e no quadril que dói e não responde à dieta como o resto do corpo:",
+      "itens": [
+        { "lead": "Dói ao toque,", "texto": "e um esbarrão que não machucaria ninguém deixa marca em você" },
+        { "lead": "Aparece roxo sem você ter batido", "texto": "em nada" },
+        { "lead": "Pesa o dia inteiro,", "texto": "não só no fim da tarde" },
+        { "lead": "O corpo todo emagrece", "texto": "e a perna continua igual" }
+      ]
+    },
+    {
+      "tipo": "corpo-foto",
+      "fotos": [
+        "../../banco/post/post-166.jpg",
+        "../../banco/post/post-167.jpg",
+        "../../banco/post/post-15.jpg",
+        "../../banco/post/post-168.jpg",
+        "../../banco/post/post-164.jpg",
+        "../../banco/post/post-165.jpg"
+      ],
+      "rotulo": "Enquanto você investiga",
+      "texto": "Nada disso trata lipedema, mas ajuda o corpo a segurar menos líquido e a perna a doer menos no calor:",
+      "itens": [
+        { "lead": "Água ao longo do dia", "texto": "e menos sal no tempero" },
+        { "lead": "Movimento,", "texto": "porque a panturrilha é a bomba que empurra o líquido de volta" },
+        { "lead": "Pernas pra cima", "texto": "por alguns minutos no fim do dia" }
+      ]
+    },
+    {
+      "tipo": "fecho2",
+      "titulo": "O calor não explica tudo.",
+      "texto": "Uma em cada oito brasileiras pode ter lipedema, e a maioria passa anos ouvindo que é retenção. Eu atendo em Araguari e a gente olha a sua perna de perto.",
+      "ctas": [
+        "Me conta nos comentários como a sua perna fica no verão",
+        "Salva e manda pra uma amiga",
+        "Consulta pelo link na bio"
+      ],
+      "foto": "doutora"
+    }
+  ],
+  "legenda": [
+    "Esquentou, a sandália começou a marcar e você achou que era só o calor. Às vezes é mesmo. No verão os vasos dilatam, o corpo segura mais água e a perna incha um pouco no fim do dia. Esse inchaço melhora com a noite de sono, melhora quando você levanta a perna e incomoda sem doer.",
+    "O alerta acende quando a perna dói ao toque, pesa o dia inteiro, aparece roxo sem você ter batido em nada e o corpo todo emagrece enquanto a perna continua igual. Esse conjunto pede investigação de lipedema, que é um acúmulo de gordura nas pernas e no quadril que dói e não responde à dieta como o resto do corpo.",
+    "Uma em cada oito brasileiras pode ter lipedema, segundo o consenso brasileiro da Sociedade Brasileira de Angiologia e Cirurgia Vascular. Mesmo sendo comum, ele raramente é identificado na primeira consulta, e muita mulher passa anos achando que perna pesada e dolorida é normal.",
+    "Enquanto você investiga, três coisas ajudam a perna a sofrer menos no calor: beber água ao longo do dia e maneirar no sal, se movimentar, porque a panturrilha funciona como a bomba que empurra o líquido de volta, e deitar com as pernas pra cima por alguns minutos no fim do dia. Nada disso trata lipedema, mas alivia.",
+    "Me conta nos comentários como a sua perna fica no verão. E se você tem uma amiga que vive ouvindo que é só retenção, manda esse post pra ela. Consulta pelo link na bio.",
+    "Fonte: Consenso Brasileiro de Lipedema, Sociedade Brasileira de Angiologia e Cirurgia Vascular, Jornal Vascular Brasileiro. Imagens: banco de imagens e Pinterest."
+  ]
+}
