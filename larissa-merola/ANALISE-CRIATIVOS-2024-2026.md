@@ -43,7 +43,7 @@ Philipe (mar a jul/25) e Lívian (abr a out/26). Cada troca de mão trocou o tem
    tarja e par crença/virada) em 9 a 10 slides. Set: eixo celebridade (Adele, Angelina, Beyoncé,
    Kate Moss, Fátima, Fernanda, Femproporex). Out: virada infográfica, numerais gigantes
    (78.610, 13%, 59%), cards com ícones de linha, diagramas, "Fonte: INCA". Fecho sempre a Dra.
-   com logo serifada e botões pílula "👉 Link na bio" / "📷 @dralarissamerola".
+   com logo serifada e botões pílula "👉 Link na bio" / "📷 @larissamerola".
 
 ## 3. Tipografia (o que se vê, não o que está no arquivo)
 
@@ -87,7 +87,7 @@ papel e a sálvia clara são a contribuição mais recente e mais elegante.
 - Copy: segunda pessoa, provocador-didático, par "crença popular / verdade clínica", frases-assinatura
   ("Eu não trato peso. Eu trato o que faz o peso não responder.", "Não é fraqueza. É bioquímica.",
   "Investigar antes de tratar."). CTA "Se você [situação], me segue." + link na bio.
-- Legenda (out/26): abre "Primeiro: siga @dralarissamerola", 2 a 3 parágrafos, "Clica no link da
+- Legenda (out/26): abre "Primeiro: siga @larissamerola", 2 a 3 parágrafos, "Clica no link da
   bio.", bloco "Fontes:". Hashtags nos estáticos.
 - **Regra editorial escrita** (`AGOSTO/ESTÁTICOS/legenda 2.txt`): dentro do CFM e da Anvisa,
   informativo, sem promessa de resultado, sem preço de medicamento de prescrição, sem antes/depois;
@@ -106,7 +106,7 @@ foto (Ozempic, Mounjaro, Coca-Cola, Cheetos, Kirkland); fotos com cara de IA; tr
 diferentes convivendo em 2026; arquivos duplicados e páginas faltando no Drive; legendas só
 salvas a partir de ago/26.
 
-**Discrepância a resolver:** as artes e legendas de 2026 usam `@dralarissamerola`; 2024 e 2025 e
+**Discrepância a resolver:** as artes e legendas de 2026 usam `@larissamerola`; 2024 e 2025 e
 o briefing deste repositório usam `@larissamerola`. Confirmar qual está ativo antes de publicar.
 
 ## 7. O sistema v2 deste repositório ("estáticos compilados")

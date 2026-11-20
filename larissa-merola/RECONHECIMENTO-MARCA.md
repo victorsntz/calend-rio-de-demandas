@@ -71,7 +71,7 @@ Formato recorrente, 7 a 10 slides:
    2020 e o mundo aplaudiu sem perguntar como", "Kate Moss, heroin chic e
    body positive", "Femproporex e as fórmulas de farmácia dos anos 90").
 2. **Citação com fonte**: fala da celebridade ou recorte de imprensa
-   (NYT, British Vogue, CFM), com cabeçalho "LARISSA MEROLA · @dralarissamerola ·
+   (NYT, British Vogue, CFM), com cabeçalho "LARISSA MEROLA · @larissamerola ·
    PÓS-GRADUADA EM NUTROLOGIA". Rótulos de imagem apontam colagem,
    revista, screenshot de notícia.
 3 a 6. **Desenvolvimento**: 2 a 4 frases curtas por slide, um dado com
@@ -82,7 +82,7 @@ Formato recorrente, 7 a 10 slides:
 7. **Virada**: o slide onde a Dra. entra em primeira pessoa
    ("É isso que eu quero pra cada paciente que senta na minha frente").
 8. **Fechamento**: foto da Dra. + "Me segue pra entender o que faz o seu
-   peso não responder." + "Link na bio." + "@dralarissamerola".
+   peso não responder." + "Link na bio." + "@larissamerola".
 
 Imagens recorrentes (pelos rótulos): foto editorial da celebridade,
 capa de revista, print de manchete, documento/receituário, consultório,
@@ -107,7 +107,7 @@ editorial + dado em destaque + fundo verde**.
 - Conteúdo informativo, dentro do CFM e da Anvisa.
 - Sem promessa de resultado, sem antes/depois, sem preço de medicamento
   de prescrição na peça (RDC 96/2008).
-- Hashtags de praxe: #dralarissamerola #araguari #nutrologia + tema.
+- Hashtags de praxe: #larissamerola #araguari #nutrologia + tema.
 
 ## 5. Pilares editoriais que se repetem
 
@@ -191,7 +191,7 @@ instagram`, `torn paper collage`: isso é o carrossel atual.
 - [ ] Pelo menos um dado com fonte e ano, em destaque.
 - [ ] Paleta só nos quatro verdes + branco (acento quente opcional, um por carrossel).
 - [ ] Rodapé "DRA. LARISSA MEROLA | NUTROLOGIA" ou assinatura equivalente.
-- [ ] Slide final com a Dra. em primeira pessoa + "Link na bio" + @dralarissamerola.
+- [ ] Slide final com a Dra. em primeira pessoa + "Link na bio" + @larissamerola.
 - [ ] Zero promessa, zero antes/depois, zero preço de remédio.
 - [ ] Celebridade como gancho, nunca como alvo.
 
@@ -286,4 +286,4 @@ serifa) terminando em interrogação, ilustração figurativa grande, logo horiz
 menor embaixo. Sem emoji em nenhum slide.
 
 **Pendência:** o @ da capa antiga é `@larissamerola`; os carrosséis de set/2026
-assinam `@dralarissamerola`. Confirmar qual vale antes do primeiro carrossel.
+assinam `@larissamerola`. Confirmar qual vale antes do primeiro carrossel.

@@ -118,5 +118,8 @@ sem repetir (`banco/uso.json`).
 ## 5. Entrega
 
 Zip com PNGs numerados + `legenda.txt` (primeira linha "Siga @larissamerola", parágrafos, bloco
-de fontes). Preview na página de revisão com comentários. Confirmar o @ ativo
-(`@larissamerola` × `@dralarissamerola`) antes de publicar.
+de fontes). Preview na página de revisão com comentários.
+
+**O @ é `@larissamerola`** (confirmado pelo Victor em 20/11). Não é `@dralarissamerola`: esse chegou a
+entrar em algumas legendas e foi corrigido. Vale pro chip do tipo 2, pra primeira linha da legenda
+("Siga @larissamerola") e pro @ do pé das artes de evento.
