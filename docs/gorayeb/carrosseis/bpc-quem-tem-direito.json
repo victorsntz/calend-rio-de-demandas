@@ -1,0 +1,86 @@
+{
+  "id": "bpc-quem-tem-direito",
+  "titulo": "BPC/LOAS: quem tem direito",
+  "nota": "Post de 11/11. Refeito em 10/11 pelo texto da FTG (Demandas): 6 telas, sem nenhuma imagem de agro. Capa C1 em HTML (modelos/mapa-pinos-e-capa-cartao.html, #bpc1). Selo de Área Previdenciária.",
+  "legenda_instagram": "Um salário mínimo por mês, mesmo sem nunca ter contribuído com o INSS.\n\nO BPC/LOAS é um benefício assistencial pago a:\n\nidosos com 65 anos ou mais\npessoas com deficiência de qualquer idade, inclusive crianças e pessoas com autismo\n\nPara ter direito, a renda da família precisa ser de até 1/4 do salário mínimo por pessoa. E o primeiro passo é sempre o mesmo: CadÚnico atualizado.\n\nMas atenção: o BPC não paga 13º e não deixa pensão por morte. Por isso, antes de pedir, vale conferir se a pessoa não tem direito a uma aposentadoria.\n\nSalve para consultar depois e mande para quem precisa saber disso.\n\nFicou com dúvida? Deixe nos comentários.\n\n#BPC #LOAS #INSS #DireitoPrevidenciário #PessoaIdosa #PessoaComDeficiência #Autismo #CadÚnico",
+  "slides": [
+    {
+      "tipo": "capa-tipo",
+      "titulo": "capa em HTML (modelos/mapa-pinos-e-capa-cartao.html, #bpc1)"
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../img/tres-geracoes-poltrona.jpg",
+      "foco": "center 35%",
+      "titulo": "Quem pode pedir",
+      "paragrafos": [
+        "Idoso com 65 anos ou mais, brasileiro ou estrangeiro que more no Brasil.",
+        "Pessoa com deficiência de qualquer idade, inclusive criança e pessoa com autismo, com impedimento de pelo menos 2 anos.",
+        "Não precisa ter contribuído."
+      ]
+    },
+    {
+      "tipo": "cifra",
+      "fundo": "creme",
+      "escala": "gigante",
+      "centro": true,
+      "etiqueta": "A renda da família",
+      "numero": "1/4",
+      "leitura": "do salário mínimo por pessoa da casa",
+      "texto": "O BPC, a aposentadoria ou a pensão de até 1 salário mínimo de outro idoso (65+) ou pessoa com deficiência da casa não entra na conta.",
+      "fonte": "INSS, BPC/LOAS"
+    },
+    {
+      "tipo": "itens",
+      "foto": "../img/maos-idosa-cuidado.jpg",
+      "veu": "verde",
+      "foco": "center 50%",
+      "etiqueta": "Como pedir",
+      "titulo": "Três passos\nantes do pedido",
+      "itens": [
+        {
+          "icone": "check",
+          "texto": "CadÚnico atualizado nos últimos 2 anos"
+        },
+        {
+          "icone": "documento",
+          "texto": "CPF de todos e biometria cadastrada"
+        },
+        {
+          "icone": "pessoas",
+          "texto": "Pedido pelo Meu INSS ou pelo 135"
+        }
+      ],
+      "remate": "Se o pedido for por deficiência, há avaliação médica e social."
+    },
+    {
+      "tipo": "itens",
+      "fundo": "bordo",
+      "etiqueta": "Atenção",
+      "titulo": "O que o BPC\nnão tem",
+      "itens": [
+        {
+          "icone": "dinheiro",
+          "texto": "13º"
+        },
+        {
+          "icone": "pessoas",
+          "texto": "Pensão por morte"
+        },
+        {
+          "icone": "documento",
+          "texto": "Pagamento junto com\naposentadoria ou pensão"
+        }
+      ],
+      "remate": "Antes de pedir, veja se a pessoa tem direito a uma aposentadoria."
+    },
+    {
+      "tipo": "fecho",
+      "foto": "../img/maos-dadas-idoso.jpg",
+      "veu": "verde",
+      "foco": "center 50%",
+      "sintese": "Salve e mande\npara quem cuida\nde um idoso ou de uma\npessoa com deficiência\nem casa."
+    }
+  ],
+  "idv": 2
+}

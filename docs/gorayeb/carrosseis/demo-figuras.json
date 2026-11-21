@@ -1,0 +1,68 @@
+{
+  "id": "demo-figuras",
+  "titulo": "Demonstração das figuras (donut, barras, mapa, números)",
+  "nota": "Carrossel de teste dos tipos de figura. Todos os números vêm de conteúdo que a própria Gorayeb já publicou, com a fonte citada. Sem foto ainda: o Pinterest segue bloqueado nesta sessão.",
+  "slides": [
+    {
+      "tipo": "capa",
+      "titulo": "O agro em\nnúmeros",
+      "escala": "maior",
+      "gancho": "Quatro recortes que explicam o tamanho do jogo.",
+      "arraste": "Arrasta pro lado"
+    },
+    {
+      "tipo": "figura",
+      "figura": "donut",
+      "titulo": "Golpe no produtor:\no que vira processo",
+      "valor": 3,
+      "destaque": "3%",
+      "rotulo": "chegam à Justiça",
+      "resto": "os outros 97% param antes",
+      "legenda": "Em 2025 o Brasil registrou 2,26 milhões de golpes. Só 63.771 viraram processo.",
+      "fonte": "Anuário Brasileiro de Segurança Pública, 2025",
+      "alt": "Donut mostrando que menos de 3% dos golpes registrados chegam à Justiça"
+    },
+    {
+      "tipo": "figura",
+      "figura": "barras",
+      "titulo": "A safra que a\nciência destravou",
+      "itens": [
+        { "rotulo": "Anos 1970", "valor": 40, "valorTexto": "40 Mt" },
+        { "rotulo": "Hoje", "valor": 300, "valorTexto": "+300 Mt", "destaque": true }
+      ],
+      "legenda": "A produção de grãos passou de 40 para mais de 300 milhões de toneladas, com expansão de área muito menor que a da produção.",
+      "fonte": "Embrapa",
+      "alt": "Barras comparando a safra brasileira de grãos dos anos 1970 com a atual"
+    },
+    {
+      "tipo": "figura",
+      "figura": "mapa",
+      "mapa": "brasil",
+      "titulo": "Vinte municípios\nem emergência",
+      "pontos": [
+        { "lon": -46.8, "lat": -18.6, "raio": 54, "rotulo": "Triângulo e Alto Paranaíba" }
+      ],
+      "legenda": "Entre 11 de agosto e 11 de setembro de 2026, 20 municípios mineiros decretaram emergência econômica por endividamento rural.",
+      "fonte": "decretos municipais publicados no período",
+      "alt": "Mapa do Brasil com destaque na região do Triângulo Mineiro e Alto Paranaíba"
+    },
+    {
+      "tipo": "figura",
+      "figura": "numeros",
+      "fundo": "creme",
+      "titulo": "A casa, em números",
+      "itens": [
+        { "numero": "976", "rotulo": "processos ativos, cada um com uma família atrás" },
+        { "numero": "450%", "rotulo": "de crescimento da carteira desde 2019" },
+        { "numero": "20+", "rotulo": "estados com processo em andamento" }
+      ],
+      "fonte": "dados internos do escritório"
+    },
+    {
+      "tipo": "fecho",
+      "fundo": "creme",
+      "sintese": "Número sem contexto é ruído.\nCom contexto, vira decisão.",
+      "cta": "Qual desses te surpreendeu mais?"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "documentos-atividade-rural",
+  "titulo": "Quais documentos provam a atividade rural",
+  "nota": "Post de 18/11. Roteiro aprovado pela Dra. Elisa em 28/10, 8 telas. Capa 2 (meia-folha) e selo de Área Previdenciária, pela rotação do plano. NÃO RENDERIZADO NESTA SESSÃO: o render foi bloqueado pela permissão e a pasta img/ está no .gitignore, então nenhuma foto existe aqui. As três fotos escolhidas são palpite pelo nome do arquivo, sem ter visto nenhuma delas, e o foco de cada uma precisa ser conferido olhando a arte. Ajuste da FTG em 10/11 (Demandas): pergunta 'Trabalhou a vida inteira na roça e o INSS diz que falta prova?' entrou na capa e legenda trocada pela da FTG.",
+  "legenda_instagram": "Trabalhou a vida inteira na roça e o INSS diz que falta prova?\n\nMuito pedido de aposentadoria rural trava por falta de papel, não de trabalho. Por isso, vale montar a pasta antes de pedir.\n\nO que pode entrar nela:\n\n✅ cadastro rural no INSS e autodeclaração\n✅ notas do produtor e notas de venda da produção\n✅ contratos de arrendamento, parceria ou comodato, e ITR\n✅ certidões de casamento ou de nascimento dos filhos com a profissão “lavrador”\n✅ ficha e notas de entrega da cooperativa\n\nOs papéis precisam ser da época do trabalho. Também não é preciso ter um documento para cada ano: alguns papéis espalhados pelo período, junto com a testemunha, podem fechar a prova.\n\nSalve este carrossel e confira a sua pasta hoje.\n\nFicou com dúvida sobre algum documento? Pergunte nos comentários.\n\n#AposentadoriaRural #INSS #TrabalhadorRural #SeguradoEspecial #DireitoPrevidenciário #ProdutorRural #Agro",
+  "slides": [
+    {
+      "tipo": "capa-faixa",
+      "selo": "Área Previdenciária",
+      "foto": "../img/saco-cafe-recorte.jpg",
+      "foco": "center 40%",
+      "kicker": "Atividade rural",
+      "titulo": "O que prova\nseu tempo de roça.",
+      "escala": "menor",
+      "sub": "A lista do que guardar, *separada por onde procurar*.",
+      "alturaFoto": 560
+    },
+    {
+      "tipo": "figura",
+      "figura": "tabela",
+      "fundo": "offwhite",
+      "titulo": "Antes de tudo,\no cadastro",
+      "colunas": [
+        "Até 2022",
+        "De 2023 em diante"
+      ],
+      "realce": "b",
+      "linhas": [
+        {
+          "criterio": "O que prova o tempo",
+          "a": "a autodeclaração",
+          "b": "o cadastro rural no INSS"
+        },
+        {
+          "criterio": "Quem confere",
+          "a": "o INSS, nas bases do governo",
+          "b": "o próprio cadastro"
+        },
+        {
+          "criterio": "Se a base não bater",
+          "a": "entram os documentos",
+          "b": "—"
+        }
+      ],
+      "legenda": "Para o tempo anterior a 2023 a autodeclaração ainda vale, e os documentos entram quando a base do governo não confirma.",
+      "fonte": "arts. 38-A e 38-B da Lei 8.213/91",
+      "alt": "Tabela comparando como se prova o tempo de roça até 2022 e de 2023 em diante"
+    },
+    {
+      "tipo": "itens",
+      "etiqueta": "Da produção",
+      "titulo": "O que mostra\nque você vendia",
+      "itens": [
+        {
+          "icone": "documento",
+          "texto": "Bloco de notas do produtor"
+        },
+        {
+          "icone": "dinheiro",
+          "texto": "Nota fiscal de venda da produção"
+        },
+        {
+          "icone": "pessoas",
+          "texto": "Comprovante de entrega na cooperativa"
+        }
+      ],
+      "remate": "Cada papel guardado mostra que você trabalhou na terra naquele ano.",
+      "foto": "../img/sacas-cafe.jpg",
+      "veu": "verde",
+      "foco": "center 50%"
+    },
+    {
+      "tipo": "lista",
+      "fundo": "marrom",
+      "titulo": "O que mostra\nonde você trabalhava",
+      "itens": [
+        "Contrato de arrendamento ou de parceria",
+        "Contrato de comodato",
+        "Recibo do ITR, o imposto da terra",
+        "Documento do imóvel rural"
+      ],
+      "remate": "Serve o papel da terra onde você trabalhou, mesmo que ela não seja sua."
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../img/maos-plantio.jpg",
+      "foco": "center 45%",
+      "titulo": "A certidão também\né prova.",
+      "paragrafos": [
+        "Certidão de casamento ou de nascimento dos filhos com a profissão de lavrador escrita nela.",
+        "Documentos no nome dos pais ou do cônjuge também contam, quando a família trabalhava junto."
+      ]
+    },
+    {
+      "tipo": "lista",
+      "meiaFoto": true,
+      "fundo": "creme",
+      "foto": "../img/silos-soja.jpg",
+      "foco": "center 30%",
+      "titulo": "Da cooperativa,\no vínculo no papel",
+      "itens": [
+        "A ficha de associado",
+        "As notas de entrega de cada safra"
+      ],
+      "remate": "Cada safra entregue é um ano no papel."
+    },
+    {
+      "tipo": "tese",
+      "tese": "Testemunha sozinha não fecha a prova.",
+      "texto": "Ela precisa vir junto de um começo de prova no papel. Mas não é preciso ter um documento para cada ano: alguns papéis espalhados pelo período, somados à testemunha, podem fechar a prova.",
+      "foto": "../img/papel-antigo.jpg",
+      "veu": "marrom",
+      "foco": "center 50%"
+    },
+    {
+      "tipo": "fecho",
+      "sintese": "Pasta de papel velho\né patrimônio.",
+      "paragrafos": [
+        "Quem guardou nota, contrato e certidão prova o tempo de roça sem depender da memória de ninguém."
+      ],
+      "salvar": "*Salve este carrossel* e confira a sua.",
+      "foto": "../img/gado-por-do-sol.jpg",
+      "veu": "verde",
+      "foco": "center 55%"
+    }
+  ],
+  "idv": 2
+}
