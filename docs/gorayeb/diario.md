@@ -1563,3 +1563,4 @@ Pendências para a Dra. Elisa: no 30/11, o marco de janeiro de 2023 dos prazos e
 ### 21/11 · Kapôt Nhĩnore (pedido do Dr. Fernando, fora do calendário)
 
 - Carrossel de 7 telas na IDV nova, em HTML (`modelos/kapot-nhinore.html`), a partir do rascunho e do levantamento do Dr. Fernando (`referencias/kapot-nhinore/`). Texto e números são dele. Mudei uma frase, a do direito de retenção, que agora fala só de quem tem direito à indenização. Fotos novas do Pinterest. As notas de fonte estão no JSON. Mandei pra revisão com pedido de urgência.
+- Revisão urgente aplicada. Os itens 1, 2 e 3 eram obrigatórios: a permanência no imóvel, os 120 dias que são só do mandado de segurança e o fecho sem frase de oferta, por causa da OAB. Também apliquei a condição da posse antes de 1988, a tradução de CCIR e ITR, a fonte da tela 2, a legenda nos termos da casa e uma foto nova no fecho. Ficam pendentes a data de publicação no DOU e o aval do Dr. Fernando às mudanças no texto dele.
