@@ -1,0 +1,161 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Arvo;src:url(file:///home/user/calendario/docs/gorayeb/fontes/arvo/Arvo-Regular.ttf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueLight.otf);font-weight:300}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueRoman.otf);font-weight:400}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueMedium.otf);font-weight:500}
+@font-face{font-family:HN;src:url(file:///home/user/calendario/docs/gorayeb/fontes/helvetica/HelveticaNeueBold.otf);font-weight:700}
+*{box-sizing:border-box;margin:0;padding:0} body{background:#777;font-family:HN}
+.s{position:relative;width:1080px;height:1350px;overflow:hidden;margin:20px;background:#12160f;color:#ebe3c8}
+.s::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;mix-blend-mode:overlay;z-index:9;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+.claro{background:#e9e1c6;color:#1b2316}.claro::after{mix-blend-mode:multiply;opacity:.14}
+.bordo{background:#441606}
+.arroba{position:absolute;top:70px;left:86px;font:400 26px Arvo;z-index:3}
+.tag{display:inline-block;white-space:nowrap;font:700 18px HN;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;border-radius:7px;background:#b8943d;color:#1b2316}
+.tag.linha{background:transparent;border:2px solid #b8943d;color:#b8943d}
+.selo{position:absolute;top:62px;right:86px;z-index:3}
+.bloco{position:absolute;left:86px;right:86px;z-index:3}
+h1{font:700 66px/1.06 HN;letter-spacing:-.035em;margin-top:22px}
+h1 .l{font-weight:300}
+h1 .d{color:#b8943d}.claro h1 .d{color:#63260f}
+.txt{font:300 30px/1.42 HN;margin-top:24px}
+.txt b{font-weight:700}
+.fonte{position:absolute;left:86px;right:86px;bottom:64px;font:400 18px/1.35 HN;opacity:.62;z-index:3}
+.foto{position:absolute;left:0;top:0;width:100%;object-fit:cover}
+/* capa */
+#k1 .foto{height:820px;object-position:center 30%}
+#k1 .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,15,.45) 0%,rgba(18,22,15,0) 18%,rgba(18,22,15,.15) 36%,rgba(18,22,15,.92) 55%,#12160f 61%)}
+#k1 h1{font-size:76px;line-height:1.04}
+#k1 .pe{position:absolute;left:86px;right:86px;bottom:74px;display:flex;justify-content:space-between;align-items:center;z-index:3}
+#k1 .pe img{height:58px}
+.desl{display:flex;align-items:center;gap:14px;font:400 26px HN}
+.desl i{width:42px;height:42px;border-radius:10px;background:#b8943d;display:flex;align-items:center;justify-content:center}
+/* números */
+.cards{display:flex;flex-direction:column;gap:22px;margin-top:44px}
+.card{background:#f6f1e3;border-radius:22px;padding:30px 36px}
+.card .n{font:700 92px/1 HN;letter-spacing:-.04em;color:#63260f}
+.card .r{font:700 30px/1.25 HN;margin-top:12px}
+.card .m{font:400 23px/1.35 HN;color:#5c5a50;margin-top:6px}
+/* etapas */
+#k3 .foto{height:100%;object-position:center 40%}
+#k3 .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,15,.78),rgba(18,22,15,.86) 50%,rgba(18,22,15,.95))}
+.passos{margin-top:40px;display:flex;flex-direction:column;gap:40px}
+.passo{display:flex;gap:24px;align-items:flex-start}
+.passo .c{flex:none;width:70px;height:70px;border-radius:50%;background:#b8943d;color:#1b2316;font:700 28px HN;display:flex;align-items:center;justify-content:center}
+.passo b{display:block;font:700 40px/1.2 HN}
+.passo span{display:block;font:300 30px/1.38 HN;margin-top:4px;opacity:.9}
+.mini{font:400 28px HN;opacity:.8;margin-top:40px}
+/* boa-fé */
+.alerta{background:#b8943d;color:#1b2316;border-radius:22px;padding:44px 44px;margin-top:8px}
+.alerta .tag{background:#1b2316;color:#e9e1c6}
+.alerta h2{font:700 60px/1.08 HN;letter-spacing:-.03em;margin-top:18px}
+.alerta p{font:400 29px/1.4 HN;margin-top:16px}
+.check{margin-top:60px}
+.check h3{font:700 42px HN}
+.check li{list-style:none;display:flex;gap:20px;align-items:center;font:400 35px/1.3 HN;margin-top:28px}
+.check li svg{flex:none}
+/* indenização */
+.cx{background:rgba(235,227,200,.08);border:1.5px solid rgba(184,148,61,.45);border-radius:20px;padding:36px 38px;margin-top:26px}
+.cx b{display:block;font:700 40px HN;color:#b8943d}
+.cx span{display:block;font:300 31px/1.4 HN;margin-top:8px}
+.obs{font:400 28px/1.42 HN;opacity:.85;margin-top:40px}
+/* prazo */
+.gig{font:700 360px/0.9 HN;letter-spacing:-.06em;color:#b8943d;margin-top:30px}
+.leit{font:700 62px/1.1 HN;letter-spacing:-.03em;margin-top:14px}
+.aviso{margin-top:56px;border:2px solid #b8943d;border-radius:20px;padding:34px 38px;font:400 32px/1.42 HN}
+.aviso b{font-weight:700}
+/* fecho */
+#k7 .foto{height:640px;object-position:center 55%}
+#k7 .veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,15,.35) 0%,rgba(18,22,15,0) 20%,rgba(18,22,15,.55) 38%,#12160f 48%)}
+.contato{margin-top:40px;background:rgba(235,227,200,.08);border:1.5px solid rgba(184,148,61,.45);border-radius:22px;padding:34px 38px;display:flex;gap:34px;align-items:center}
+.contato img{height:96px}
+.contato .t{font:700 36px HN}
+.contato .e{font:300 25px/1.4 HN;margin-top:6px;opacity:.9}
+.compart{position:absolute;left:86px;right:86px;bottom:70px;font:400 24px HN;opacity:.75;border-top:1px solid rgba(235,227,200,.25);padding-top:24px;z-index:3}
+</style></head><body>
+
+<!-- 1 capa -->
+<div class="s" id="k1"><img class="foto" src="file:///home/user/calendario/docs/gorayeb/img/fazenda-divisa-floresta.jpg"><div class="veu"></div>
+ <div class="arroba">@ftgadvogados_</div><span class="tag selo">Agronegócio</span>
+ <div class="bloco" style="top:690px"><span class="tag linha">Alerta ao produtor rural</span>
+  <h1><span class="l">Terra Indígena Kapôt Nhĩnore:</span><br><span class="d">o que muda para<br>quem produz.</span></h1>
+  <p class="txt">Portaria declaratória assinada em 19/11/2026.<br>Atinge Santa Cruz do Xingu e Vila Rica (MT) e São Félix do Xingu (PA).</p></div>
+ <div class="pe"><img src="file:///home/user/calendario/docs/gorayeb/assets/logo-horizontal-claro.png"><span class="desl">Deslize <i><svg width="18" height="18" viewBox="0 0 20 20"><path d="M7 3 L14 10 L7 17" fill="none" stroke="#1b2316" stroke-width="3.5"/></svg></i></span></div>
+</div>
+
+<!-- 2 números -->
+<div class="s claro" id="k2"><div class="arroba">@ftgadvogados_</div>
+ <div class="bloco" style="top:150px"><span class="tag">Os números</span>
+  <h1>Cerca de 200 fazendas<br><span class="d">dentro do perímetro.</span></h1>
+  <div class="cards">
+   <div class="card"><div class="n">362.243 ha</div><div class="r">declarados como terra indígena</div><div class="m">83% da área com cobertura florestal</div></div>
+   <div class="card"><div class="n">201</div><div class="r">ocupações não indígenas, segundo a Funai</div><div class="m">153 propriedades, 32 posses e 16 sem informação</div></div>
+   <div class="card"><div class="n">~40%</div><div class="r">do território de Santa Cruz do Xingu</div><div class="m">Cerca de 218 mil hectares do município</div></div>
+  </div></div>
+ <p class="fonte">Fonte: Funai, levantamento fundiário · Kapôt Nhĩnore, portaria de 19/11/2026</p>
+</div>
+
+<!-- 3 etapas -->
+<div class="s" id="k3"><img class="foto" src="file:///home/user/calendario/docs/gorayeb/img/pasto-sede-aerea.jpg"><div class="veu"></div>
+ <div class="arroba">@ftgadvogados_</div>
+ <div class="bloco" style="top:150px"><span class="tag">Precisa sair agora?</span>
+  <h1>Não. A portaria não<br><span class="d">manda ninguém desocupar.</span></h1>
+  <p class="mini">Ainda faltam estas etapas:</p>
+  <div class="passos">
+   <div class="passo"><span class="c">1</span><div><b>Demarcação física</b><span>A Funai coloca os marcos no terreno.</span></div></div>
+   <div class="passo"><span class="c">2</span><div><b>Levantamento das benfeitorias</b><span>Avaliação de cada imóvel para calcular a indenização.</span></div></div>
+   <div class="passo"><span class="c">3</span><div><b>Homologação</b><span>Decreto do Presidente da República.</span></div></div>
+   <div class="passo"><span class="c">4</span><div><b>Indenização e desocupação</b><span>Só depois do pagamento. Quem tem direito à indenização<br>pode ficar no imóvel até receber.</span></div></div>
+  </div></div>
+ <p class="fonte">Fontes: Decreto 1.775/1996; STF, ADC 87</p>
+</div>
+
+<!-- 4 boa-fé -->
+<div class="s claro" id="k4"><div class="arroba">@ftgadvogados_</div>
+ <div class="bloco" style="top:150px">
+  <div class="alerta"><span class="tag">Atenção</span>
+   <h2>A boa-fé acaba com a<br>publicação da portaria.</h2>
+   <p>Pelo entendimento do STF, o que for construído depois<br>pode não ser indenizado.</p></div>
+  <div class="check"><h3>Documente hoje:</h3><ul>
+   <li><svg width="34" height="34" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" fill="none" stroke="#63260f" stroke-width="2.6"/></svg>Ata notarial do estado da fazenda</li>
+   <li><svg width="34" height="34" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" fill="none" stroke="#63260f" stroke-width="2.6"/></svg>Fotos e voo de drone com data</li>
+   <li><svg width="34" height="34" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" fill="none" stroke="#63260f" stroke-width="2.6"/></svg>Notas fiscais de cada benfeitoria</li>
+   <li><svg width="34" height="34" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" fill="none" stroke="#63260f" stroke-width="2.6"/></svg>Cadeia de títulos até a origem</li>
+   <li><svg width="34" height="34" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" fill="none" stroke="#63260f" stroke-width="2.6"/></svg>CAR, CCIR, ITR e georreferenciamento</li>
+  </ul></div></div>
+ <p class="fonte">Fonte: STF, ADC 87 e ADIs 7.582, 7.583 e 7.586</p>
+</div>
+
+<!-- 5 indenização -->
+<div class="s" id="k5"><div class="arroba">@ftgadvogados_</div>
+ <div class="bloco" style="top:150px"><span class="tag">Indenização</span>
+  <h1>O valor da sua terra<br><span class="d">está em jogo no STF.</span></h1>
+  <div style="margin-top:24px">
+   <div class="cx"><b>Benfeitorias</b><span>Úteis e necessárias são indenizadas ao ocupante de boa-fé.</span></div>
+   <div class="cx"><b>Terra nua</b><span>Paga quando o reassentamento for inviável.<br>Critérios ainda em aberto.</span></div>
+   <div class="cx"><b>Posse antes de 1988</b><span>Com título do Estado, há caminho próprio<br>de indenização por erro do Estado.</span></div>
+  </div>
+  <p class="obs">O julgamento dos recursos está suspenso. Três ministros<br>já votaram para restringir o pagamento da terra nua.</p></div>
+ <p class="fonte">Fontes: STF, ADC 87 e ADIs 7.582, 7.583 e 7.586; Tema 1.031 (RE 1.017.365)</p>
+</div>
+
+<!-- 6 prazo -->
+<div class="s bordo" id="k6"><div class="arroba">@ftgadvogados_</div>
+ <div class="bloco" style="top:170px"><span class="tag">Prazo</span>
+  <div class="gig">120</div>
+  <div class="leit">dias para questionar<br>a portaria na Justiça.</div>
+  <p class="txt">Prazo do mandado de segurança, contado<br>da publicação no Diário Oficial da União.</p>
+  <div class="aviso"><b>Não assine acordo, não aceite reassentamento<br>e não desocupe</b> sem orientação jurídica.</div></div>
+ <p class="fonte">Fonte: Lei 12.016/2009, art. 23</p>
+</div>
+
+<!-- 7 fecho -->
+<div class="s" id="k7"><img class="foto" src="file:///home/user/calendario/docs/gorayeb/img/porteira-casa-por-do-sol.jpg"><div class="veu"></div>
+ <div class="arroba">@ftgadvogados_</div>
+ <div class="bloco" style="top:560px"><span class="tag">Proteja seu patrimônio</span>
+  <h1>Cada imóvel tem<br><span class="d">uma defesa própria.</span></h1>
+  <p class="txt">Analisamos títulos, posse, benfeitorias<br>e o melhor caminho para a sua indenização.</p>
+  <div class="contato"><img src="file:///home/user/calendario/docs/gorayeb/assets/logo-empilhado.png"><div><div class="t">(34) 3246-0017</div><div class="e">Rua Júlio César de Sousa, 2001<br>Araguari/MG</div></div></div></div>
+ <p class="compart">Compartilhe com quem tem terra na região do Xingu.</p>
+</div>
+</body></html>

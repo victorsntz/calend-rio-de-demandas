@@ -1559,3 +1559,7 @@ Pendências para a Dra. Elisa: no 30/11, o marco de janeiro de 2023 dos prazos e
 **18/11/2026, conferência** · Vi no feed o carrossel dos documentos rurais ("O que prova seu tempo de roça"). Marcado como publicado.
 
 **20/11/2026, conferência** · Vi no feed o CAR pelo celular ("Seu CAR pode estar pendente e você nem sabe"). Marcado como publicado.
+
+### 21/11 · Kapôt Nhĩnore (pedido do Dr. Fernando, fora do calendário)
+
+- Carrossel de 7 telas na IDV nova, em HTML (`modelos/kapot-nhinore.html`), a partir do rascunho e do levantamento do Dr. Fernando (`referencias/kapot-nhinore/`). Texto e números são dele. Mudei uma frase, a do direito de retenção, que agora fala só de quem tem direito à indenização. Fotos novas do Pinterest. As notas de fonte estão no JSON. Mandei pra revisão com pedido de urgência.
