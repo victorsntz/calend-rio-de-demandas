@@ -1,0 +1,51 @@
+{
+  "slug": "sinais-lipedema",
+  "foto": "../../banco/post/post-13.jpg",
+  "rotulo": "Lipedema",
+  "titulo": "Dá pra ver na <b>própria perna</b>",
+  "quadro": {
+    "left": 340,
+    "top": 300,
+    "w": 400,
+    "h": 734
+  },
+  "marcas": [
+    {
+      "lado": "esq",
+      "y": 452,
+      "ponto": [
+        0.2,
+        0.2
+      ],
+      "texto": "A pele faz <b>ondulações</b>, e dá pra sentir bolinhas por baixo"
+    },
+    {
+      "lado": "dir",
+      "y": 556,
+      "ponto": [
+        0.73,
+        0.3
+      ],
+      "texto": "Aspecto de <b>casca de laranja</b> que não some"
+    },
+    {
+      "lado": "dir",
+      "y": 782,
+      "ponto": [
+        0.715,
+        0.545
+      ],
+      "texto": "O <b>joelho perde a definição</b> e some num rolinho de gordura"
+    },
+    {
+      "lado": "esq",
+      "y": 880,
+      "ponto": [
+        0.22,
+        0.76
+      ],
+      "texto": "A perna engrossa <b>por igual</b>, da coxa à panturrilha"
+    }
+  ],
+  "fecho": "Se dói ao toque, aparece roxo sem pancada e não some nem emagrecendo, <b>não é retenção.</b>"
+}

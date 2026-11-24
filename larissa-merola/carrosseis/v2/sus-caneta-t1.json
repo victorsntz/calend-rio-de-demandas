@@ -1,0 +1,76 @@
+{
+  "slug": "t1-sus-caneta",
+  "arroba": "@larissamerola",
+  "seed": 33,
+  "slides": [
+    {
+      "tipo": "capa-objecao",
+      "foto": "../../banco/post/post-185.jpg",
+      "titulo": "\"Ah, mas agora o SUS<br><b>vai dar caneta pra todo mundo...\"</b>",
+      "virada": "Ainda não. E quando sair, <b>não vai ser pra todo mundo.</b>"
+    },
+    {
+      "tipo": "foto-topico",
+      "foto": "../../banco/post/post-186.jpg",
+      "titulo": "O que <b>realmente aconteceu</b>",
+      "texto": "Em setembro o Ministério da Saúde pediu à Conitec que avalie de novo a semaglutida e a liraglutida para obesidade. Pedido não é decisão.",
+      "itens": [
+        "A análise tem prazo de <b>até 180 dias</b>, e pode esticar mais 90"
+      ]
+    },
+    {
+      "tipo": "partida",
+      "fotos": [
+        "../../banco/post/post-187.jpg",
+        "../../banco/post/post-188.jpg"
+      ],
+      "legendas": [
+        {
+          "topo": "Em 2025 a resposta foi",
+          "forte": "Não, pelo preço"
+        },
+        {
+          "topo": "Em 2026 o preço caiu e",
+          "forte": "o pedido voltou"
+        }
+      ]
+    },
+    {
+      "tipo": "foto-topico",
+      "foto": "../../banco/post/post-115.jpg",
+      "titulo": "E já tem um <b>piloto rodando</b>",
+      "itens": [
+        "<b>250 pacientes do SUS</b> em Porto Alegre, acompanhados por dois anos",
+        "No Grupo Hospitalar Conceição, que é federal",
+        "A fila de prioridade é de quem <b>espera por bariátrica</b>",
+        "O estudo se chama Real-Bari e mede resultado, impacto e custo"
+      ]
+    },
+    {
+      "tipo": "foto-topico",
+      "foto": "../../banco/post/post-182.jpg",
+      "titulo": "Quando sair, <b>vai ter critério</b>",
+      "texto": "Nenhum país distribui caneta pra quem quer perder cinco quilos. Até o piloto já pede obesidade diagnosticada há pelo menos um ano e tratamento que não funcionou antes.",
+      "itens": [
+        "Enquanto a Conitec não decide, <b>o SUS não fornece</b> caneta pra obesidade"
+      ]
+    },
+    {
+      "tipo": "fecho-t1",
+      "foto": "../../banco/doutora/doutora-07.jpg",
+      "enquadramento": "64% 20%",
+      "titulo": "De graça ou pago,<br>o caminho é o mesmo.",
+      "texto": "A caneta é ferramenta, não atalho. Antes dela vem a investigação: tireoide, glicemia, insulina, músculo e sono. Sem isso, a caneta vira só uma conta mensal.",
+      "cta": "Consulta pelo link na bio"
+    }
+  ],
+  "legenda": [
+    "Toda semana chega alguém no direct dizendo que viu na internet que o SUS vai passar a dar caneta emagrecedora. Vamos separar o que é notícia do que é boato.",
+    "O que aconteceu de verdade: em setembro de 2026 o Ministério da Saúde pediu à Conitec, que é a comissão que decide o que entra no SUS, uma nova avaliação da semaglutida e da liraglutida para tratar obesidade. Isso é um pedido, não uma decisão. A análise tem prazo legal de até 180 dias, que pode ser prorrogado por mais 90, e passa por consulta pública antes de qualquer resposta.",
+    "Em 2025 a Conitec já tinha analisado e dito não, principalmente por causa do preço. O que mudou de lá pra cá foi justamente isso: o preço das canetas caiu muito no último ano, e por isso o assunto voltou pra mesa.",
+    "Enquanto isso, existe um projeto piloto rodando desde junho em Porto Alegre. São 250 pacientes do SUS acompanhados por dois anos no Grupo Hospitalar Conceição, com prioridade pra quem está na fila da cirurgia bariátrica. O estudo se chama Real-Bari e serve pra medir resultado clínico, impacto e custo antes de pensar em levar isso pro país inteiro.",
+    "E tem uma parte que quase ninguém comenta: se um dia entrar, não vai ser pra todo mundo. Nenhum país do mundo distribui caneta pra quem quer perder cinco quilos. Até no piloto o critério é apertado: obesidade diagnosticada há pelo menos um ano, tratamento clínico que já não funcionou e estrutura pra fazer a aplicação semanal direito.",
+    "Até lá, a conta é a mesma pra quem paga e pra quem espera: a caneta é ferramenta, não atalho. Antes dela vem a investigação. Me conta nos comentários se você já ouviu essa do SUS por aí. Consulta pelo link na bio.",
+    "Fontes: Ministério da Saúde, pedido de avaliação à Conitec em 24/09/2026; Conitec, Registro de Deliberação nº 1033/2025; Agência Gov, início do projeto piloto Real-Bari no Grupo Hospitalar Conceição em 26/06/2026. Imagens: Pinterest."
+  ]
+}

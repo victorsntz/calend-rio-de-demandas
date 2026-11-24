@@ -1,0 +1,71 @@
+{
+  "slug": "t1-festas-sem-sanfona",
+  "arroba": "@larissamerola",
+  "seed": 21,
+  "slides": [
+    {
+      "tipo": "capa-citacao",
+      "foto": "../../banco/post/post-176.jpg",
+      "titulo": "\"Me cuidei o ano inteiro...<br><b>e agora vem dezembro\"</b>",
+      "promessa": "Uma ceia não desfaz um ano. <b>O que desfaz é o que vem depois dela.</b>"
+    },
+    {
+      "tipo": "foto-topico",
+      "foto": "../../banco/post/post-169.jpg",
+      "titulo": "O que a ceia <b>realmente</b> faz",
+      "texto": "Um estudo clássico pesou 195 adultos antes e depois das festas. O ganho médio foi de <b>menos de meio quilo</b>. Bem menos do que o medo que a gente carrega.",
+      "itens": [
+        "O detalhe: meses depois, esse pouquinho <b>ainda estava lá</b>"
+      ]
+    },
+    {
+      "tipo": "foto-topico",
+      "foto": "../../banco/post/post-171.jpg",
+      "titulo": "Então o problema <b>não é a ceia</b>",
+      "texto": "É a frase que vem logo depois dela: <b>já que saí da dieta, agora só volto em janeiro.</b> É ela que transforma uma noite em duas semanas, e aí sim o corpo sente."
+    },
+    {
+      "tipo": "partida",
+      "fotos": [
+        "../../banco/post/post-172.jpg",
+        "../../banco/post/post-184.jpg"
+      ],
+      "legendas": [
+        {
+          "topo": "Começar o prato pela",
+          "forte": "salada e pela carne"
+        },
+        {
+          "topo": "Começar o prato pela",
+          "forte": "farofa"
+        }
+      ]
+    },
+    {
+      "tipo": "foto-topico",
+      "foto": "../../banco/post/post-175.jpg",
+      "titulo": "Três coisas que <b>eu faço funcionar</b>",
+      "itens": [
+        "Comer algo com <b>proteína antes de sair de casa</b>: um iogurte, um ovo",
+        "Um <b>copo de água entre uma taça e outra</b>",
+        "Se você usa caneta, <b>vá mais devagar</b>: o estômago esvazia mais lento e o mal-estar vem mais forte"
+      ]
+    },
+    {
+      "tipo": "fecho-t1",
+      "foto": "doutora",
+      "titulo": "O castigo do dia seguinte<br>faz mais estrago que a ceia.",
+      "texto": "Jejum por culpa só empurra você pro próximo exagero. O que segura o resultado é voltar pra rotina já no café da manhã.",
+      "cta": "Consulta pelo link na bio"
+    }
+  ],
+  "legenda": [
+    "Você se cuidou o ano inteiro e agora morre de medo de uma ceia. Eu escuto isso todo dezembro, então vamos aos números.",
+    "Um estudo clássico publicado no New England Journal of Medicine pesou 195 adultos antes e depois das festas. O ganho médio foi de 0,37 kg, menos de meio quilo. Bem menos do que a maioria imagina. Só que os pesquisadores viram um detalhe meses depois: esse pouquinho costuma ficar e vai somando de um ano pro outro.",
+    "Ou seja: uma ceia não estraga um ano de cuidado. O que estraga é a frase que vem depois dela, aquela de que já saiu da dieta e agora só volta em janeiro. É esse pensamento que transforma uma noite em duas semanas de exagero.",
+    "Três coisas que funcionam de verdade. Primeira: não chegar na festa morrendo de fome, comendo algo com proteína antes de sair de casa, como um iogurte natural ou um ovo cozido. Segunda: começar o prato pela salada e pela carne, deixando o resto pra depois, sem pressa de repetir. Terceira: um copo de água entre uma taça e outra, que ajuda a beber menos e a acordar melhor.",
+    "E se você usa caneta pra emagrecer, vá ainda mais devagar. O estômago esvazia mais lentamente e o mal-estar depois da ceia pode vir bem mais forte.",
+    "O castigo do dia seguinte faz mais estrago que a ceia. Voltar pra rotina já no café da manhã vale mais do que qualquer compensação. Me conta nos comentários qual é o prato que você não abre mão. Consulta pelo link na bio.",
+    "Fonte: Yanovski et al., A Prospective Study of Holiday Weight Gain, New England Journal of Medicine, 2000. Imagens: banco de imagens e Pinterest."
+  ]
+}

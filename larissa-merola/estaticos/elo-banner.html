@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Elo Lipedema, banner de entrada</title>
+<link rel="stylesheet" href="../capa/fonts/fonts.css">
+<link rel="stylesheet" href="../capa/tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
+<style>
+  /* Roll-up 80 x 200 cm. Aqui 1 px = 0,5 mm (1600 x 4000). Mesma família do verso do bilhete:
+     verde musgo chapado com textura leve, logo do Elo (versão A, em curvas) no alto, "Sejam bem-vindas." no meio,
+     frase em itálico, data e local no pé. Tudo centralizado. Margem de segurança: 120 px (6 cm) nas laterais. */
+  :root { --ital: 'Fraunces', Georgia, serif; }
+  html, body { margin: 0; background: #ddd; }
+  .slide { width: 1600px; height: 4000px; position: relative; overflow: hidden; background: var(--musgo); color: #FFFFFF; font-family: var(--sans);
+    display: flex; flex-direction: column; align-items: center; text-align: center; box-sizing: border-box; padding: 300px 120px 260px; }
+  .slide::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .07; mix-blend-mode: screen;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>"); }
+  .logo-a { width: 700px; height: auto; display: block; }
+  .meio { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 110px; }
+  h1 { font-family: var(--serif); font-weight: 400; font-size: 225px; line-height: 1.02; white-space: nowrap; letter-spacing: -0.015em; margin: 0; }
+  .frase { font-family: var(--ital); font-style: italic; font-weight: 400; font-variation-settings: "opsz" 144; font-size: 86px; line-height: 1.2; color: var(--saude); max-width: 1200px; }
+  .pe { display: flex; flex-direction: column; align-items: center; gap: 44px; }
+  .risco { width: 160px; height: 8px; background: var(--saude); }
+  .quando { font-size: 44px; letter-spacing: 0.28em; text-transform: uppercase; font-weight: 500; padding-left: 0.28em; line-height: 1.6; }
+  .arroba { font-size: 40px; font-weight: 300; letter-spacing: 0.04em; opacity: .9; }
+</style>
+</head>
+<body>
+<div class="slide" id="banner-entrada">
+  <img class="logo-a" src="../capa/elo-logo-branca-versaoA.svg" alt="Elo Lipedema, por Dra. Larissa Merola">
+  <div class="meio">
+    <h1>Sejam<br>bem‑vindas.</h1>
+    <div class="frase">Uma manhã para o corpo,<br>o cuidado e a fé.</div>
+  </div>
+  <div class="pe">
+    <div class="risco"></div>
+    <div class="quando">Sábado, 14 de novembro<br>Condomínio Ventana · Araguari</div>
+    <div class="arroba">@larissamerola</div>
+  </div>
+</div>
+<script src="../capa/tipografia.js"></script>
+</body>
+</html>
