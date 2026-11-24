@@ -82,7 +82,8 @@ const ICONES = {
 const icone = n => ICONES[n] ?? ICONES.site;
 const cabecalho = `<div class="cabecalho">Dra. Larissa Merola<i></i>Nutrologia</div>`;
 const rodape = (i) => padrao({ cols: 30, rows: 1, s: 36, seed: seed + i, classe: 'rodape-padrao', cores: dados.padrao ?? ['musgo', 'marrom', 'marromclaro', 'saude'] });   // amarronzado
-const chip = `<div class="chip"><div class="avatar"><img src="${rel('../banco/doutora/avatar.jpg')}" alt=""></div><div class="arroba">${esc(arroba)}<span class="selo"></span></div></div>`;
+const SELO = '<svg class="selo" viewBox="0 0 24 24" aria-hidden="true"><path d="M 12.00 0.00 L 14.48 2.73 L 18.00 1.61 L 18.79 5.21 L 22.39 6.00 L 21.27 9.52 L 24.00 12.00 L 21.27 14.48 L 22.39 18.00 L 18.79 18.79 L 18.00 22.39 L 14.48 21.27 L 12.00 24.00 L 9.52 21.27 L 6.00 22.39 L 5.21 18.79 L 1.61 18.00 L 2.73 14.48 L 0.00 12.00 L 2.73 9.52 L 1.61 6.00 L 5.21 5.21 L 6.00 1.61 L 9.52 2.73 Z" fill="#0095F6" stroke="#0095F6" stroke-width="1.1" stroke-linejoin="round"/><path d="M8.6 12.3 L11 14.7 L15.6 9.6" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>';   // selo de verificado do Instagram
+const chip = `<div class="chip"><div class="avatar"><img src="${rel('../banco/doutora/avatar.jpg')}" alt=""></div><div class="arroba">${esc(arroba)}${SELO}</div></div>`;
 const SETA = '<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 const SETA_BAIXO = '<svg class="seta" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg>';
 // parede: 5+ fotos em duas fileiras (a de cima leva a metade maior)
