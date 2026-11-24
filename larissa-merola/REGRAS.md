@@ -69,9 +69,10 @@ convive com slides também centralizados.
 
 ## 2b2. Chip de perfil (tipo 2)
 
-Avatar = foto do perfil real do Instagram (`banco/doutora/avatar.jpg`, @larissamerola). Na capa
-colagem e no fecho o chip fica junto do texto, logo acima do título; nos slides de miolo, no canto
-superior esquerdo.
+Avatar = foto do perfil real do Instagram (`banco/doutora/avatar.jpg`). Ao lado dele **só o @**,
+`@larissamerola`, com o selo verde-saúde (pedido do Victor em 24/11: o nome "Dra. Larissa Merola"
+saiu do chip). Na capa colagem e no fecho o chip fica junto do texto, logo acima do título; nos
+slides de miolo, no canto superior esquerdo.
 
 ## 2c. Viúvas: nunca
 

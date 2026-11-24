@@ -82,7 +82,7 @@ const ICONES = {
 const icone = n => ICONES[n] ?? ICONES.site;
 const cabecalho = `<div class="cabecalho">Dra. Larissa Merola<i></i>Nutrologia</div>`;
 const rodape = (i) => padrao({ cols: 30, rows: 1, s: 36, seed: seed + i, classe: 'rodape-padrao', cores: dados.padrao ?? ['musgo', 'marrom', 'marromclaro', 'saude'] });   // amarronzado
-const chip = `<div class="chip"><div class="avatar"><img src="${rel('../banco/doutora/avatar.jpg')}" alt=""></div><div><div class="nome">Dra. Larissa Merola<span class="selo"></span></div><div class="arroba">${esc(arroba)}</div></div></div>`;
+const chip = `<div class="chip"><div class="avatar"><img src="${rel('../banco/doutora/avatar.jpg')}" alt=""></div><div class="arroba">${esc(arroba)}<span class="selo"></span></div></div>`;
 const SETA = '<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 const SETA_BAIXO = '<svg class="seta" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg>';
 // parede: 5+ fotos em duas fileiras (a de cima leva a metade maior)
