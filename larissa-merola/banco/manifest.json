@@ -3038,5 +3038,42 @@
     ],
     "credito": "Imagem: Pinterest",
     "usar": true
+  },
+  {
+    "arquivo": "post/post-178.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/c7/2f/58/c72f58825f1f7213c53b928487cacbfa.jpg",
+    "drive_id": null,
+    "largura": 676,
+    "altura": 1201,
+    "orientacao": "retrato",
+    "tags": [
+      "pernas",
+      "sofa",
+      "tv",
+      "cotidiano",
+      "descanso",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-179.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/0b/e2/f0/0be2f0804587d7d8ce052439446e8627.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 981,
+    "orientacao": "retrato",
+    "tags": [
+      "pernas",
+      "sofa",
+      "caneca",
+      "cotidiano",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
   }
 ]

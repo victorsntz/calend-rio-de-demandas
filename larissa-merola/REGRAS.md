@@ -112,6 +112,12 @@ ambiente (28/10): `node capa/pinterest.mjs "termo ou link de pin/pasta" --n 10 -
 abre a grade pública num Chromium (sem login), baixa as imagens em 736px pra `banco/raw/pinterest/<slug>/`
 com `fontes.json` e, com `--banco`, registra no manifest com a URL de origem. As imagens em 736 px
 cobrem meio slide ou um mosaico com folga; em foto inteira ficam no limite, preferir pins grandes.
+**Nada de foto de IA e nada de estúdio posado** (pedido do Victor em 24/11). Antes de registrar no
+banco, descartar: pele plástica e luz irreal, mãos e dedos errados, comida perfeita demais, bokeh
+dourado exagerado, marca d'água "Made with AI", e também a foto de catálogo com modelo sorrindo pra
+câmera em fundo infinito. O que serve é foto de cotidiano: luz de casa, enquadramento imperfeito,
+pessoa vivendo a cena e não posando pra ela.
+
 Foto de famosa e foto de imprensa são de terceiros: usar como referência cultural, sempre com a
 origem registrada, como a agência já fazia em set/2026. A Dra. só no último slide. Rotação
 sem repetir (`banco/uso.json`).

@@ -1,0 +1,24 @@
+{
+  "slug": "inchaco-ou-lipedema",
+  "tipo": "02c",
+  "tom": "musgo",
+  "fotos": [
+    "../../banco/post/post-179.jpg",
+    "../../banco/post/post-15.jpg"
+  ],
+  "lados": [
+    {
+      "rotulo": "Inchou no calor",
+      "frase": "Amanhece <b>normal</b>"
+    },
+    {
+      "rotulo": "Pode ser lipedema",
+      "frase": "Dói e <b>não desincha</b>"
+    }
+  ],
+  "fecho": "Perna que pesa o dia inteiro, dói ao toque e aparece roxa sem você ter batido <b>não é retenção.</b>",
+  "enquadramentos": [
+    "50% 40%",
+    "50% 55%"
+  ]
+}

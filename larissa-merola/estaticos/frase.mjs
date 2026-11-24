@@ -1,6 +1,7 @@
 // Estático 02 (frase): foto inteira com a mensagem por cima. Dois formatos, conforme REGRAS.md §1b.
 //   02a, frase ou dado:      { tipo: "02a", foto, frase, apoio? }
 //   02b, gancho "leia a legenda": { tipo: "02b", foto, opcoes: [..], pergunta, gancho? }
+//   02c, comparação:         { tipo: "02c", fotos: [2], lados: [{rotulo, frase}], fecho? }
 // Uso: node frase.mjs ../estaticos/frases/x.json
 import { readFile, mkdir } from 'node:fs/promises';
 import { resolve, dirname, join, relative } from 'node:path';
@@ -17,10 +18,14 @@ await mkdir(saida, { recursive: true });
 
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const rel = f => relative(saida, resolve(aqui, '..', 'capa', f));
-const foto = relative(saida, resolve(dirname(entrada), d.foto));
+const foto = d.foto ? relative(saida, resolve(dirname(entrada), d.foto)) : '';
+const fotos = (d.fotos ?? []).map(f => relative(saida, resolve(dirname(entrada), f)));
 const musgo = d.tom === 'musgo';   // véu verde escuro; padrão é marrom (regra 60/40)
 
-const miolo = d.tipo === '02b'
+const miolo = d.tipo === '02c'
+  ? `<div class="lados">${(d.lados ?? []).map(l => `<div><span class="rot">${esc(l.rotulo)}</span><span class="fr">${l.frase}</span></div>`).join('')}</div>`
+    + (d.fecho ? `<div class="fecho">${d.fecho}</div>` : '')
+  : d.tipo === '02b'
   ? `<div class="bloco b2">
       <div class="opcoes">${(d.opcoes ?? []).map(o => `<span>${esc(o)}</span>`).join('')}</div>
       <div class="lado"><div class="pergunta">${d.pergunta ?? ''}</div><div class="gancho">${esc(d.gancho ?? 'Leia a legenda')}</div></div>
@@ -52,10 +57,23 @@ const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><tit
   .lado { padding-top: 14px; width: 330px; flex: none; display: flex; flex-direction: column; gap: 42px; }
   .pergunta { font-size: 36px; line-height: 1.32; font-weight: 300; text-shadow: 0 1px 14px rgba(0,0,0,.45); }
   .pergunta b { font-weight: 600; }
+  /* 02c: comparação lado a lado */
+  .duas { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: rgb(var(--vf)); }
+  .duas div { overflow: hidden; } .duas img { width: 100%; height: 100%; object-fit: cover; }
+  .slide:has(.duas) .veu { background: linear-gradient(180deg, rgba(var(--v),.52) 0%, rgba(var(--v),.22) 30%, rgba(var(--v),.76) 58%, rgba(var(--vf),.97) 82%, rgb(var(--vf)) 100%); }
+  .lados { position: absolute; left: 0; right: 0; bottom: 330px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+  .lados div { padding: 0 46px; display: flex; flex-direction: column; gap: 16px; }
+  .lados .rot { font-size: 25px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--saude); text-shadow: 0 1px 12px rgba(0,0,0,.5); }
+  .lados .fr { font-size: 44px; line-height: 1.14; font-weight: 300; letter-spacing: -0.015em; text-shadow: 0 2px 18px rgba(0,0,0,.5); }
+  .lados .fr b { font-weight: 700; }
+  .fecho { position: absolute; left: 88px; right: 88px; bottom: 200px; font-size: 33px; line-height: 1.38; font-weight: 300; text-align: center; }
+  .fecho b { font-weight: 600; }
   .gancho { font-size: 24px; font-weight: 400; letter-spacing: 0.04em; color: rgba(255,255,255,.82); white-space: nowrap; }
 </style></head><body>
 <div class="slide">
-  <div class="foto"><img src="${esc(foto)}" alt=""></div><div class="veu"></div>
+  ${d.tipo === '02c'
+    ? `<div class="duas">${fotos.map((f, k) => `<div><img src="${esc(f)}" alt="" style="object-position:${(d.enquadramentos ?? [])[k] ?? '50% 50%'}"></div>`).join('')}</div><div class="veu"></div>`
+    : `<div class="foto"><img src="${esc(foto)}" alt=""></div><div class="veu"></div>`}
   <div class="marca">Dra. Larissa Merola · Nutrologia</div>
   ${miolo}
   <div class="logo"><img src="${rel('logo-branca.png')}" alt=""></div>
