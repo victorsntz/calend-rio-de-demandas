@@ -265,15 +265,15 @@ p b, li b { font-weight: 600; }
 .t1e .deslize { position: absolute; left: 0; right: 0; text-align: center; font-size: 20px; letter-spacing: 0.4em; text-transform: uppercase; font-weight: 400; color: rgba(255,255,255,.78); text-shadow: 0 1px 10px rgba(0,0,0,.4); z-index: 3; }
 .t1e .logo { position: absolute; left: 0; right: 0; bottom: 70px; display: flex; justify-content: center; z-index: 3; }
 .t1e .logo img { height: 92px; opacity: .97; }
-.t1e .bloco { position: absolute; left: 88px; right: 88px; z-index: 3; display: flex; flex-direction: column; gap: 26px; }
-.t1e h2 { font-family: var(--sans); font-weight: 300; font-size: 62px; line-height: 1.14; letter-spacing: -0.01em; text-transform: uppercase; margin: 0; text-shadow: 0 2px 18px rgba(0,0,0,.4); }
-.t1e h2 b { font-weight: 700; }
-.t1e p { margin: 0; font-size: 31px; line-height: 1.46; font-weight: 300; letter-spacing: 0.01em; text-shadow: 0 1px 14px rgba(0,0,0,.4); }
-.t1e p b { font-weight: 600; }
-.t1e ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 20px; }
-.t1e li { display: flex; gap: 18px; align-items: flex-start; font-size: 30px; line-height: 1.4; font-weight: 300; text-shadow: 0 1px 14px rgba(0,0,0,.4); }
-.t1e li i { flex: none; width: 13px; height: 13px; border-radius: 50%; background: var(--saude); margin-top: 16px; }
-.t1e li b { font-weight: 600; }
+.t1e .bloco { position: absolute; left: 88px; right: 88px; z-index: 3; display: flex; flex-direction: column; gap: 30px; }
+.t1e h2 { font-family: var(--serif); font-weight: 400; font-size: 60px; line-height: 1.12; letter-spacing: -0.012em; margin: 0; text-shadow: 0 2px 16px rgba(0,0,0,.34); }
+.t1e h2 b { font-weight: 400; color: var(--saude); }
+.t1e p { margin: 0; font-size: 29px; line-height: 1.52; font-weight: 300; letter-spacing: 0.012em; text-shadow: 0 1px 12px rgba(0,0,0,.34); }
+.t1e p b { font-weight: 500; }
+.t1e ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 22px; }
+.t1e li { display: flex; gap: 20px; align-items: flex-start; font-size: 28px; line-height: 1.48; font-weight: 300; text-shadow: 0 1px 12px rgba(0,0,0,.34); }
+.t1e li i { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--saude); margin-top: 17px; }
+.t1e li b { font-weight: 500; }
 
 /* capa com a caixinha de pergunta do Instagram */
 .capa-pergunta .veu { background: linear-gradient(180deg, rgba(var(--v),.30) 0%, rgba(var(--v),.10) 34%, rgba(var(--v),.20) 70%, rgba(var(--vf),.72) 100%); }
@@ -299,8 +299,8 @@ p b, li b { font-weight: 600; }
 .partida .veu { background: linear-gradient(180deg, rgba(var(--v),.30) 0%, rgba(var(--v),.06) 40%, rgba(var(--v),.55) 76%, rgba(var(--vf),.86) 100%); }
 .partida .legendas { position: absolute; left: 0; right: 0; bottom: 150px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; z-index: 3; }
 .partida .legendas div { padding: 0 44px; }
-.partida .legendas span { display: block; font-size: 40px; font-weight: 300; line-height: 1.16; text-transform: uppercase; letter-spacing: -0.01em; text-shadow: 0 2px 18px rgba(0,0,0,.5); }
-.partida .legendas b { display: block; font-size: 42px; font-weight: 700; line-height: 1.16; text-transform: uppercase; letter-spacing: -0.015em; text-shadow: 0 2px 18px rgba(0,0,0,.5); }
+.partida .legendas span { display: block; font-size: 22px; font-weight: 500; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.2em; color: var(--saude); margin-bottom: 14px; text-shadow: 0 2px 14px rgba(0,0,0,.5); }
+.partida .legendas b { display: block; font-family: var(--serif); font-size: 46px; font-weight: 400; line-height: 1.1; letter-spacing: -0.012em; text-shadow: 0 2px 16px rgba(0,0,0,.45); }
 
 /* miolo educativo: foto inteira com texto embaixo */
 .foto-topico .veu { background: linear-gradient(180deg, rgba(var(--v),.26) 0%, rgba(var(--v),.10) 28%, rgba(var(--v),.80) 58%, rgba(var(--vf),.97) 82%, rgb(var(--vf)) 100%); }

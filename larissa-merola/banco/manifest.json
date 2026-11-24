@@ -3075,5 +3075,41 @@
     ],
     "credito": "Imagem: Pinterest",
     "usar": true
+  },
+  {
+    "arquivo": "doutora/doutora-06.jpg",
+    "grupo": "doutora",
+    "origem": "Drive, Fotos Outubro - 26 (DSC09339.jpg)",
+    "drive_id": "1lFbi-5dPCawQcLbvcHSyXMkWSyEYUY0c",
+    "largura": 2000,
+    "altura": 3000,
+    "orientacao": "retrato",
+    "tags": [
+      "consultorio",
+      "sorriso",
+      "meio corpo",
+      "outubro 26"
+    ],
+    "credito": "",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-180.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/736x/39/c5/dd/39c5dd3a63d8b372f5d9fc0142060835.jpg",
+    "drive_id": null,
+    "largura": 736,
+    "altura": 1102,
+    "orientacao": "retrato",
+    "tags": [
+      "comprimido",
+      "copo",
+      "mao",
+      "marrom",
+      "real",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
   }
 ]

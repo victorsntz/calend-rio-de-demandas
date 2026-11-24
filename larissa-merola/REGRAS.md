@@ -47,8 +47,11 @@ O Victor gosta muito dos estáticos de notícia e quer mais deles. Nomes fixos:
 - **Estático 02, frase.** Foto inteira com a mensagem por cima.
   - **02a, frase ou dado:** frase grande e uma linha de apoio ("49 milhões de brasileiros têm apneia do sono. A maioria nem sabe.").
   - **02b, gancho "leia a legenda":** números ou opções grandes à esquerda, pergunta curta ao lado e "Leia a legenda" ("5 mg, 10 mg, 15 mg. Quais os resultados esperados de cada dose?"). A resposta fica inteira na legenda.
+  - **02c, comparação:** duas fotos lado a lado com um rótulo e uma frase curta em cada lado, comparando o comportamento do sintoma, nunca dois corpos. Gerador: `estaticos/frase.mjs`.
+  - **02d, sinais anotados (24/11):** foto real num fundo papel, com linhas finas saindo de cada sinal pro rótulo ao lado, como a peça da Dra. Ingrid Leal que o Victor mandou de referência. Serve pra tudo que a pessoa consegue reconhecer olhando: sinais de lipedema, de insulina alta, de tireoide. Quatro marcas no máximo, texto curto, a frase que fecha vem embaixo. Gerador: `estaticos/sinais.mjs`, JSON em `estaticos/sinais/`. O ponto de cada marca vai em fração da imagem original (`"ponto": [0.20, 0.22]`), então mudar o enquadramento pede recalibrar.
 
 Notícia sempre com veículo e data na legenda. Nada de preço de medicamento na arte.
+O Victor pediu em 24/11 mais peça assim, visual: "algo visível para a pessoa entender melhor".
 
 ## 2. Cor: mais marrom, menos verde
 

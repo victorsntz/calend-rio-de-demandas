@@ -17,8 +17,8 @@
     {
       "tipo": "partida",
       "fotos": [
-        "../../banco/post/post-149.jpg",
-        "../../banco/post/post-163.jpg"
+        "../../banco/post/post-115.jpg",
+        "../../banco/post/post-180.jpg"
       ],
       "legendas": [
         {
@@ -43,7 +43,7 @@
     },
     {
       "tipo": "foto-topico",
-      "foto": "../../banco/post/post-115.jpg",
+      "foto": "../../banco/post/post-20.jpg",
       "titulo": "Então eu <b>posso trocar?</b>",
       "texto": "A própria Anvisa diz que a troca entre as duas formas é possível quando existe indicação clínica. Quem decide isso é a consulta, olhando a sua dose, a sua resposta e a sua rotina.",
       "itens": [
@@ -52,7 +52,7 @@
     },
     {
       "tipo": "fecho-t1",
-      "foto": "doutora",
+      "foto": "../../banco/doutora/doutora-06.jpg",
       "titulo": "A forma mudou.<br>A investigação, não.",
       "texto": "Antes de escolher entre caneta e comprimido, eu preciso saber o que está acontecendo aí dentro. Tireoide, glicemia, insulina, músculo e sono.",
       "cta": "Consulta pelo link na bio"
