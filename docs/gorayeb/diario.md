@@ -1568,3 +1568,4 @@ Pendências para a Dra. Elisa: no 30/11, o marco de janeiro de 2023 dos prazos e
 ### 24/11 · Vaga Contencioso Cível, novo processo seletivo (pedido da Dra. Elisa)
 
 - Feed e stories na IDV nova, em HTML (`modelos/vaga-contencioso-2611.html`), com o texto dela e as legendas do Instagram e do Facebook palavra por palavra. A foto é uma estante de livros jurídicos do Pinterest; a da estante do escritório tinha o ar-condicionado no meio. O "Até [data]" ficou fora da arte até ela passar a data. Fica pronta pra impulsionar em Araguari e Uberlândia.
+- Revisão da vaga aplicada: entrou a foto do escritório e o stories ganhou os blocos com o texto dela. O Presencial ficou, porque está no texto da Dra. Elisa e a revisão só tinha olhado as legendas.
