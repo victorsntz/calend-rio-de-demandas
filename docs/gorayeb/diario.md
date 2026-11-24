@@ -1571,3 +1571,4 @@ Pendências para a Dra. Elisa: no 30/11, o marco de janeiro de 2023 dos prazos e
 - Revisão da vaga aplicada: entrou a foto do escritório e o stories ganhou os blocos com o texto dela. O Presencial ficou, porque está no texto da Dra. Elisa e a revisão só tinha olhado as legendas.
 - Victor preferiu a foto da estante de livros à do escritório (24/11). Ela voltou, e a escolha dele vale por cima da regra de foto do escritório pra vaga.
 - Pedido da Dra. Elisa: saiu o selo Plano de carreira do canto, e o Estamos contratando ficou maior.
+- O e-mail da vaga agora é contato@grupoftg.com.br, na arte e nas duas legendas, a pedido do Victor. O Estamos contratando ficou ainda maior.
