@@ -44,8 +44,17 @@ console.log(`página: ${url}\nimagens na grade: ${porId.size}, baixando ${lista.
 const fontes = [];
 let k = 0;
 for (const v of lista) {
-  const grande = v.src.replace(/\/(236x|474x|564x)\//, '/736x/');
-  const alternativas = [grande, v.src.replace(/\/(236x|474x|564x|736x)\//, '/originals/'), v.src];
+  // o slide é 1080x1350, e a grade do Pinterest serve 736px: pega sempre a maior
+  // versão que existir (originals > 1200x > 736x), senão a foto chega esticada na arte.
+  const caminho = v.src.replace(/^.*\/(?:236x|474x|564x|736x|1200x|originals)\//, '');
+  const base = u => `https://i.pinimg.com/${u}/${caminho}`;
+  const semExt = caminho.replace(/\.\w+$/, '');
+  const alternativas = [
+    base('originals'),
+    `https://i.pinimg.com/originals/${semExt}.png`,
+    `https://i.pinimg.com/originals/${semExt}.webp`,
+    base('1200x'), base('736x'), v.src,
+  ];
   for (const u of alternativas) {
     try {
       // curl respeita o proxy do ambiente (o fetch do Node não)

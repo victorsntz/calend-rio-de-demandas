@@ -10,7 +10,7 @@
     },
     {
       "tipo": "foto-topico",
-      "foto": "../../banco/post/post-160.jpg",
+      "foto": "../../banco/post/post-181.jpg",
       "titulo": "Sim, a notícia é <b>verdadeira</b>",
       "texto": "No dia 4 de novembro a Anvisa aprovou o primeiro comprimido de semaglutida para tratar obesidade no Brasil. É a mesma substância da caneta, agora em pílula."
     },
@@ -33,7 +33,7 @@
     },
     {
       "tipo": "foto-topico",
-      "foto": "../../banco/post/post-162.jpg",
+      "foto": "../../banco/post/post-182.jpg",
       "titulo": "O que <b>não muda</b>",
       "itens": [
         "A substância é a mesma: <b>semaglutida</b>",
@@ -43,12 +43,13 @@
     },
     {
       "tipo": "foto-topico",
-      "foto": "../../banco/post/post-20.jpg",
+      "foto": "../../banco/doutora/doutora-08.jpg",
       "titulo": "Então eu <b>posso trocar?</b>",
       "texto": "A própria Anvisa diz que a troca entre as duas formas é possível quando existe indicação clínica. Quem decide isso é a consulta, olhando a sua dose, a sua resposta e a sua rotina.",
       "itens": [
         "E ainda não chegou às farmácias: a previsão é <b>entre o fim deste trimestre e o começo de 2027</b>"
-      ]
+      ],
+      "enquadramento": "50% 22%"
     },
     {
       "tipo": "fecho-t1",
