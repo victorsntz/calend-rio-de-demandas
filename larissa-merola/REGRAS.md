@@ -118,8 +118,12 @@ sem repetir (`banco/uso.json`).
 
 ## 5. Entrega
 
-Zip com PNGs numerados + `legenda.txt` (primeira linha "Siga @larissamerola", parágrafos, bloco
-de fontes). Preview na página de revisão com comentários.
+**Uma pasta por post, no formato `DD-MM (nome do post)`** (pedido do Victor em 24/11), com o zip de
+mesmo nome ao lado. Ex.: `25-11 (nenhum desconto vale uma caneta sem registro)`. Dentro: as artes
+numeradas (`01 - nome.png`), `legenda.txt` e `roteiro.txt` quando for carrossel. Monta com
+`node entregar.mjs 25-11 "nome do post" <pasta em saida/> [carrossel.json] [--legenda posts/x.txt]`.
+
+A legenda tem a primeira linha "Siga @larissamerola", depois os parágrafos e o bloco de fontes. Preview na página de revisão com comentários.
 
 **O @ é `@larissamerola`** (confirmado pelo Victor em 20/11). Não é `@dralarissamerola`: esse chegou a
 entrar em algumas legendas e foi corrigido. Vale pro chip do tipo 2, pra primeira linha da legenda
