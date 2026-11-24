@@ -3290,5 +3290,43 @@
     ],
     "credito": "Imagem: Pinterest",
     "usar": true
+  },
+  {
+    "arquivo": "post/post-189.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/originals/d4/23/bd/d423bd9b6f4a0dbf42be072099e5bc54.jpg",
+    "drive_id": null,
+    "largura": 1080,
+    "altura": 1920,
+    "orientacao": "retrato",
+    "tags": [
+      "cafe da manha",
+      "ovo",
+      "torrada",
+      "luz natural",
+      "real",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
+  },
+  {
+    "arquivo": "post/post-190.jpg",
+    "grupo": "post",
+    "origem": "Pinterest: https://i.pinimg.com/originals/3e/17/ae/3e17ae6869a35c10d493486e2ced259d.png",
+    "drive_id": null,
+    "largura": 1024,
+    "altura": 1536,
+    "orientacao": "retrato",
+    "tags": [
+      "cafe da manha",
+      "ovos",
+      "iogurte",
+      "frutas",
+      "real",
+      "salvar pins"
+    ],
+    "credito": "Imagem: Pinterest",
+    "usar": true
   }
 ]
