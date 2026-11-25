@@ -1,0 +1,45 @@
+{
+  "id": "demo-capas",
+  "titulo": "Quatro modelos de capa e o selo de área",
+  "nota": "Demonstração para o Victor. Cada slide é a capa de um post real da grade, em um modelo diferente, com o selo da área no canto.",
+  "legenda_instagram": "Peça interna, não vai para o feed.",
+  "slides": [
+    {
+      "tipo": "capa-foto",
+      "selo": "Agronegócio",
+      "foto": "../img/estrada-cerrado-cerca.jpg",
+      "foco": "center 60%",
+      "titulo": "Reserva Legal\ne APP.",
+      "escala": "menor",
+      "sub": "As duas áreas que todo CAR precisa *mostrar no mapa*."
+    },
+    {
+      "tipo": "capa-faixa",
+      "selo": "Área Previdenciária",
+      "foto": "../img/casa-roca-familia.jpg",
+      "foco": "center 45%",
+      "kicker": "Benefício assistencial",
+      "titulo": "BPC/LOAS:\num salário mínimo por mês.",
+      "escala": "menor",
+      "sub": "Para quem tem direito, *sem nunca ter contribuído*."
+    },
+    {
+      "tipo": "capa-tipo",
+      "selo": "Área Empresarial",
+      "textura": "listras",
+      "kicker": "Sucessão e holding",
+      "titulo": "Holding\nou *inventário*?",
+      "sub": "Os dois custam. Muda quando se paga, quanto tempo leva e quem decide."
+    },
+    {
+      "tipo": "capa-clara",
+      "selo": "Área Trabalhista",
+      "foto": "../img/colheita-milho.jpg",
+      "foco": "center 55%",
+      "kicker": "Fim de safra",
+      "titulo": "O que fechar\ncom o safrista.",
+      "escala": "menor",
+      "sub": "13º, férias, indenização, FGTS e o prazo do acerto."
+    }
+  ]
+}

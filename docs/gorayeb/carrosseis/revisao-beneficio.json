@@ -1,0 +1,98 @@
+{
+  "id": "revisao-beneficio",
+  "idv": 2,
+  "titulo": "Seu benefício foi calculado certo?",
+  "nota": "Post de 25/11. Refeito em 10/11 pelo texto da FTG (Demandas), 7 telas. O texto chegou cortado no slide 7 ('BENEFÍCIO CONCED'): completei com o fecho que já existia, 'Benefício concedido também se confere', com o aval do Victor. Capa C6 em HTML (modelos/revisao-capa.html). Selo de Área Previdenciária.",
+  "legenda_instagram": "Seu benefício foi calculado certo? Dá para conferir.\n\nMuitos erros no cálculo vêm de tempo que ficou de fora:\n\n⚠ tempo de roça\n⚠ emprego antigo que não aparece no sistema\n⚠ trabalho em condição insalubre\n⚠ salários registrados errado ou faltando\n\nPara conferir, ponha lado a lado a carta de concessão e o extrato do CNIS, que você tira no Meu INSS. Depois compare com a carteira de trabalho, os carnês e os documentos rurais.\n\n⏳ Atenção aos prazos:\n\nrevisão: em regra, até 10 anos depois do primeiro pagamento\nrecurso de pedido negado: 30 dias da ciência da decisão\n\nRevisão não é garantia de aumento: tudo depende do que está nos documentos.\n\nO pedido é feito pelo Meu INSS ou pelo 135.\n\nSalve e mande para quem já é aposentado.\n\nFicou com dúvida? Pergunte nos comentários.\n\n#INSS #Aposentadoria #RevisãoDoBenefício #CNIS #DireitoPrevidenciário #Aposentados #MeuINSS",
+  "slides": [
+    {
+      "tipo": "capa-tipo",
+      "titulo": "capa em HTML (modelos/revisao-capa.html)"
+    },
+    {
+      "tipo": "lista",
+      "meiaFoto": true,
+      "fundo": "creme",
+      "foto": "../img/senhor-estrada-casa.jpg",
+      "foco": "center 40%",
+      "titulo": "Onde está o erro",
+      "itens": [
+        "Tempo de roça",
+        "Emprego antigo fora do sistema",
+        "Trabalho insalubre",
+        "Salários errados ou faltando"
+      ],
+      "remate": "Quase sempre, em tempo que ficou de fora."
+    },
+    {
+      "tipo": "corpo-foto",
+      "foto": "../img/maos-documentos.jpg",
+      "foco": "center 50%",
+      "titulo": "Como conferir",
+      "paragrafos": [
+        "Ponha lado a lado a carta de concessão e o extrato do CNIS, que você tira no Meu INSS.",
+        "Compare com a carteira de trabalho, os carnês e os documentos rurais."
+      ]
+    },
+    {
+      "tipo": "itens",
+      "fundo": "offwhite",
+      "etiqueta": "Os prazos",
+      "titulo": "Dois prazos\npara não perder",
+      "itens": [
+        {
+          "icone": "relogio",
+          "texto": "Revisão: 10 anos, contados do dia 1º do mês seguinte ao primeiro pagamento"
+        },
+        {
+          "icone": "relogio",
+          "texto": "Pedido negado: 30 dias da ciência da decisão para recorrer"
+        }
+      ],
+      "remate": "Passados os 10 anos,\nem regra, não dá mais."
+    },
+    {
+      "tipo": "tese",
+      "foto": "../img/maos-foto-antiga.jpg",
+      "veu": "marrom",
+      "foco": "center 50%",
+      "tese": "Cuidado: revisão não é garantia de aumento.",
+      "texto": "Depende do que está nos documentos. E a revisão da vida toda não vale mais: o STF derrubou a tese em 2024."
+    },
+    {
+      "tipo": "itens",
+      "fundo": "creme",
+      "etiqueta": "O que separar",
+      "titulo": "Antes de\nqualquer pedido",
+      "itens": [
+        {
+          "icone": "documento",
+          "texto": "Carta de concessão"
+        },
+        {
+          "icone": "grafico",
+          "texto": "Cópia do processo e extrato do CNIS"
+        },
+        {
+          "icone": "salvar",
+          "texto": "Carteiras de trabalho e carnês"
+        },
+        {
+          "icone": "check",
+          "texto": "PPP e documentos rurais"
+        }
+      ],
+      "remate": "O pedido é feito pelo Meu INSS\nou pelo 135."
+    },
+    {
+      "tipo": "fecho",
+      "foto": "../img/casal-banco-entardecer.jpg",
+      "veu": "verde",
+      "sintese": "Benefício concedido\ntambém se confere.",
+      "paragrafos": [
+        "Ficou com dúvida? Pergunte nos comentários."
+      ],
+      "salvar": "*Salve* e mande para quem já é aposentado."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "epi-multa-interdicao",
+  "idv": 2,
+  "titulo": "Falta de EPI pode gerar multa e até interdição da fazenda",
+  "nota": "Post de 04/12, estático. Roteiro aprovado pela Dra. Elisa em 28/10. Capa C3 (objeto desenhado) em HTML, modelos/epi-estatico.html: ficha de entrega de EPI desenhada. Selo Área Trabalhista. Frase e apoio do roteiro sem mudança. Revisão de 16/11 aplicada: chapéu trocado por respirador na ficha (chapéu não é EPI e não tem CA, NR-31 31.6.2.2), 'risco grave e iminente' (NR-3 3.2.1), CA traduzido no apoio. Legenda sem mudança.",
+  "legenda_instagram": "FALTA DE EPI PODE GERAR MULTA E ATÉ INTERDIÇÃO NA FAZENDA\n\nO QUE A NORMA PEDE. A NR-31 manda o empregador rural fornecer o EPI de graça, adequado ao risco e em bom estado. Só vale equipamento com Certificado de Aprovação, o CA. A entrega fica registrada em ficha, livro ou sistema, e o uso precisa ser orientado e exigido. No campo entram também chapéu contra o sol, perneira contra animais peçonhentos e a roupa de aplicação de agrotóxico, conforme o risco de cada tarefa.\n\nA MULTA. Desde 30 de janeiro de 2026, com a Portaria MTE 104/2026, a infração de segurança no trabalho rural é multada pelo critério da Lei 5.889/1973, que calcula o valor por empregado em situação irregular. Quanto mais gente sem o equipamento, maior a conta. E os valores passam por reajuste todo ano.\n\nA INTERDIÇÃO. Quando o auditor-fiscal encontra risco grave e iminente, a NR-3 permite parar a atividade, a máquina, o setor ou o estabelecimento inteiro. A regra é interditar a menor parte onde está o risco. Enquanto a atividade fica parada, os salários continuam sendo pagos normalmente.\n\nO trabalhador também tem a sua parte. Recusar sem motivo o EPI fornecido é falta prevista na CLT e na própria NR-31. Por isso a ficha de entrega assinada e o certificado do treinamento valem tanto quanto o equipamento.\n\nFontes: NR-31 (itens 31.2.4, 31.6 e 31.7.6), NR-6, NR-3, NR-28 com a redação da Portaria MTE nº 104/2026, Lei 5.889/1973 (art. 18) e CLT (arts. 158, 161 e 166).",
+  "slides": [
+    {
+      "tipo": "estatico",
+      "frase": "arte em HTML (modelos/epi-estatico.html)"
+    }
+  ],
+  "notas": [
+    "EPI gratuito: NR-31, item 31.6.1, Portaria SEPRT 22.677/2020, publicada no DOU em 27/10/2020.",
+    "EPI só com Certificado de Aprovação: NR-6, item 6.4.1 (texto consolidado do MTE, redação da Portaria MTP 2.175, de 28/07/2022).",
+    "Entrega registrada em livro, ficha ou sistema: NR-6, item 6.5.1, alínea d.",
+    "Uso exigido e orientado pelo empregador: NR-31, itens 31.6.4 e 31.6.5.",
+    "Chapéu, perneira e roupas especiais conforme o risco (dispositivos de proteção pessoal, não EPI): NR-31, itens 31.6.2 e 31.6.2.2.",
+    "Multa rural pelo critério da Lei 5.889, por empregado em situação irregular, desde 30/01/2026: NR-28, item 28.3.2, redação da Portaria MTE 104, de 29/01/2026, publicada no DOU em 30/01/2026 (retificada em 19/02/2026), em vigor na publicação; Lei 5.889/1973, art. 18, caput.",
+    "Reajuste anual dos valores: NR-28, item 28.3.3, mesma portaria.",
+    "Interdição diante de grave e iminente risco: NR-3, itens 3.2.1 e 3.2.2.2, redação da Portaria SEPRT 1.068/2019, publicada no DOU em 24/09/2019.",
+    "Interditar a menor unidade onde está o risco: NR-3, item 3.2.2.3.1.",
+    "Salário pago durante a interdição: NR-3, item 3.5.5; CLT, art. 161, §6º.",
+    "Recusa injustificada do EPI é falta: CLT, art. 158, parágrafo único, b; NR-31, item 31.2.4, b."
+  ]
+}
