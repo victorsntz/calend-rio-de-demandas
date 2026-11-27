@@ -1574,3 +1574,5 @@ Pendências para a Dra. Elisa: no 30/11, o marco de janeiro de 2023 dos prazos e
 - O e-mail da vaga agora é contato@grupoftg.com.br, na arte e nas duas legendas, a pedido do Victor. O Estamos contratando ficou ainda maior.
 
 **24/11/2026, conferência** · Vi no feed o NR-31 ("NR-31: o que é e para quem vale"). Marcado como publicado. Apareceu também um post fora da agenda, entre o CAR de 20/11 e o NR-31: "Terra Indígena Kapôt Nhinore: o que muda para quem produz". Pauta de notícia, não está no plano. Sem data exata, não entrou na agenda.
+
+**27/11/2026, conferência** · Vi no feed a revisão do benefício (25/11) e o safrista (27/11). Marcados como publicados.
